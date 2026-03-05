@@ -36,7 +36,6 @@ function spiderfyAll(map) {
 function AutoSpiderfy() {
   useMapEvents({
     zoomend: (e) => { if (e.target.getZoom() === MAX_ZOOM) setTimeout(() => spiderfyAll(e.target), 100) },
-    moveend: (e) => { if (e.target.getZoom() === MAX_ZOOM) setTimeout(() => spiderfyAll(e.target), 100) },
   })
   return null
 }
@@ -70,6 +69,7 @@ export default function MapView({ deals, selectedDeal, onSelectDeal, usageMap })
           maxClusterRadius={40}
           spiderfyOnMaxZoom={true}
           showCoverageOnHover={false}
+          removeOutsideVisibleBounds={false}
         >
           {pins.map(({ deal, loc, usageState, key }) => (
             <BusinessMarker
