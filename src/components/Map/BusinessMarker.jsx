@@ -13,8 +13,9 @@ export default function BusinessMarker({ loc, items, isSelected, onClick }) {
       return createMarkerIcon(deal.category, usageState.status, isSelected)
     }
     const size = isSelected ? 38 : 30
+    const color = isExhausted ? '#94a3b8' : catColor
     return L.divIcon({
-      html: `<div class="ssc-marker${isSelected ? ' selected' : ''}" style="width:${size}px;height:${size}px;background:#0170B9;font-size:12px;">${items.length}</div>`,
+      html: `<div class="ssc-marker${isSelected ? ' selected' : ''}" style="width:${size}px;height:${size}px;background:${color};font-size:12px;">${items.length}</div>`,
       className: '',
       iconSize: [size, size],
       iconAnchor: [size / 2, size / 2],
@@ -70,17 +71,17 @@ export default function BusinessMarker({ loc, items, isSelected, onClick }) {
           </div>
         ) : (
           <div style={{ fontFamily: 'DM Sans, system-ui, sans-serif', width: '200px' }}>
-            <div style={{ height: '4px', background: '#0170B9' }} />
+            <div style={{ height: '4px', background: catColor }} />
             <div style={{ padding: '12px' }}>
               <div style={{ fontFamily: 'Sora, sans-serif', fontWeight: '700', fontSize: '14px', color: '#0f172a', marginBottom: '4px' }}>
-                {items.length} deals here
+                {deal.name}
               </div>
               <div style={{ fontSize: '12px', color: '#475569', marginBottom: '10px', lineHeight: '1.4' }}>
-                {loc.address}
+                {items.length} deals at this location
               </div>
               <button
                 onClick={onClick}
-                style={{ display: 'block', width: '100%', padding: '7px', background: '#0170B9', color: 'white', border: 'none', borderRadius: '8px', cursor: 'pointer', fontSize: '12px', fontWeight: '600', fontFamily: 'Sora, sans-serif', letterSpacing: '0.01em' }}
+                style={{ display: 'block', width: '100%', padding: '7px', background: catColor, color: 'white', border: 'none', borderRadius: '8px', cursor: 'pointer', fontSize: '12px', fontWeight: '600', fontFamily: 'Sora, sans-serif', letterSpacing: '0.01em' }}
               >
                 View All Deals →
               </button>

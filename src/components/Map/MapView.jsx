@@ -49,7 +49,7 @@ export default function MapView({ deals, selectedDeal, onSelectDeal, onSelectLoc
         ? deal.locations
         : (deal.lat != null ? [{ lat: deal.lat, lng: deal.lng, address: deal.address }] : [])
       locs.forEach(loc => {
-        const key = `${loc.lat},${loc.lng}`
+        const key = `${deal.name}__${loc.lat},${loc.lng}`
         if (!byCoord.has(key)) byCoord.set(key, { loc, items: [], key })
         byCoord.get(key).items.push({ deal, usageState })
       })

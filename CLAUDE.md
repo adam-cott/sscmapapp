@@ -42,8 +42,8 @@ starvingstudentcardmapapp/
 │   │   │   ├── SearchBar.jsx       # Text search input
 │   │   │   └── FilterPanel.jsx     # Category filter chips
 │   │   ├── Map/
-│   │   │   ├── MapView.jsx         # MapContainer; expands deals×locations into markers
-│   │   │   ├── BusinessMarker.jsx  # Single Leaflet Marker + Popup
+│   │   │   ├── MapView.jsx         # MapContainer; groups deals into one pin per business×location
+│   │   │   ├── BusinessMarker.jsx  # Leaflet Marker + Popup; handles single and multi-deal pins
 │   │   │   └── MapLegend.jsx       # Category color legend overlay
 │   │   ├── ListView/
 │   │   │   ├── ListView.jsx        # Scrollable list of DealCards
@@ -52,6 +52,8 @@ starvingstudentcardmapapp/
 │   │   │   └── DealModal.jsx       # Full deal detail — desktop (centered modal)
 │   │   ├── BottomSheet/
 │   │   │   └── BottomSheet.jsx     # Full deal detail — mobile (slides up from bottom)
+│   │   ├── LocationPicker/
+│   │   │   └── LocationPicker.jsx  # Multi-deal picker — lists all deals at one business location
 │   │   └── UI/
 │   │       ├── Badge.jsx           # Category color pill
 │   │       └── UsageTracker.jsx    # Dot-based usage indicator
@@ -157,15 +159,16 @@ Marker color follows category. Partially-used deals show amber (`#f59e0b`). Full
 
 ## How the Map Works
 
-`MapView.jsx` expands deals × locations into individual pins, then groups them with `MarkerClusterGroup`:
+`MapView.jsx` builds one pin per **business × location**, then groups nearby pins with `MarkerClusterGroup`:
 
-1. **Expand** — each deal's `locations[]` produces one pin per entry (one deal with 9 locations = 9 pins)
+1. **Group** — deals are grouped by `businessName + lat + lng`. A business with 3 deals at the same address = 1 pin. Two different businesses at the same geocoded coordinate = 2 separate pins (handled by spiderfy).
 2. **Cluster** — `react-leaflet-cluster` groups nearby pins into styled numbered bubbles. Clicking zooms in and splits them apart.
-3. **Spiderfy** — when the map is at max zoom (19) and a cluster contains pins at the exact same coordinate (e.g., multiple deals at University Place Mall), clicking the cluster fans all pins out with spider legs so each is individually tappable.
+3. **Spiderfy** — at max zoom (19), clusters fan out automatically via the `AutoSpiderfy` component (listens to `zoomend`, calls `spiderfy()` on all visible clusters). `removeOutsideVisibleBounds={false}` prevents the cluster group from re-rendering on pan, keeping the spider open while panning.
+4. **Multi-deal pins** — if a business has 2+ deals at one location, the pin shows a count badge in the business's category color. Tapping opens `LocationPicker` — a sheet (mobile) or modal (desktop) listing all deals for that business. User picks one → full deal detail opens.
 
-- `maxZoom={19}` is set on both `MapContainer` and `TileLayer` (OSM supports zoom 19)
-- `spiderfyOnMaxZoom={true}` on `MarkerClusterGroup` triggers the fan-out at zoom 19
-- Clicking any pin opens the modal showing that specific location's address
+- `maxZoom={19}` on both `MapContainer` and `TileLayer`
+- Single-deal pin tap → deal detail directly
+- Multi-deal pin tap → `LocationPicker` → deal detail
 - The sidebar list still shows each deal once
 
 Cluster bubbles use `L.divIcon` with `.ssc-cluster` CSS class — three tiers: sm (2–9, 34px), md (10–39, 42px), lg (40+, 50px) in SSC blue (`#0170B9` → `#014370`).

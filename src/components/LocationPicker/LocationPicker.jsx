@@ -27,10 +27,7 @@ function DealRow({ deal, usageState, loc, onSelect }) {
     >
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '8px' }}>
         <div style={{ flex: 1, minWidth: 0 }}>
-          <div style={{ fontFamily: 'Sora, sans-serif', fontWeight: '700', fontSize: '13px', color: '#0f172a', marginBottom: '2px' }}>
-            {deal.name}
-          </div>
-          <div className="line-clamp-2" style={{ fontSize: '12px', color: '#64748b', lineHeight: '1.4' }}>
+          <div className="line-clamp-2" style={{ fontSize: '13px', color: '#0f172a', lineHeight: '1.4' }}>
             {deal.deal.title}
           </div>
         </div>
@@ -72,16 +69,18 @@ export default function LocationPicker({ location, onSelectDeal, onClose }) {
     />
   )
 
+  const businessName = items[0].deal.name
+
   const header = (
     <div style={{ padding: '16px 20px 12px', borderBottom: '1px solid #f1f5f9' }}>
       <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '12px' }}>
         <div style={{ minWidth: 0 }}>
           <h2 style={{ fontFamily: 'Sora, sans-serif', fontWeight: '700', fontSize: '16px', color: '#0f172a', marginBottom: '2px' }}>
-            {items.length} deals at this location
+            {businessName}
           </h2>
-          {loc.address && (
-            <p style={{ fontSize: '12px', color: '#64748b', margin: 0 }}>{loc.address}</p>
-          )}
+          <p style={{ fontSize: '12px', color: '#64748b', margin: 0 }}>
+            {items.length} deals · {loc.address}
+          </p>
         </div>
         <button
           onClick={onClose}
