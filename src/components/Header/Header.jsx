@@ -64,29 +64,24 @@ export default function Header({ activeView, onViewToggle, onReset, filteredCoun
           )}
         </button>
 
-        {/* Reset */}
+        {/* Reset — icon-only, low prominence */}
         <button
           onClick={onReset}
-          className="flex items-center gap-1.5 text-xs font-semibold rounded-lg px-3 py-1.5 transition-all"
+          title="Reset usage history"
+          className="flex items-center justify-center rounded-lg transition-all"
           style={{
-            backgroundColor: 'rgba(239,68,68,0.12)',
-            color: '#fca5a5',
-            border: '1px solid rgba(239,68,68,0.2)',
-            fontFamily: 'Sora, sans-serif',
+            width: '32px',
+            height: '32px',
+            backgroundColor: 'transparent',
+            color: 'rgba(255,255,255,0.35)',
+            border: 'none',
           }}
-          onMouseEnter={e => {
-            e.currentTarget.style.backgroundColor = 'rgba(239,68,68,0.22)'
-            e.currentTarget.style.color = '#fecaca'
-          }}
-          onMouseLeave={e => {
-            e.currentTarget.style.backgroundColor = 'rgba(239,68,68,0.12)'
-            e.currentTarget.style.color = '#fca5a5'
-          }}
+          onMouseEnter={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.7)' }}
+          onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.35)' }}
         >
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
             <polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4.95"/>
           </svg>
-          <span className="hidden sm:inline">Reset</span>
         </button>
       </div>
     </header>

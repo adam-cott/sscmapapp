@@ -10,10 +10,12 @@ import ListView from './components/ListView/ListView'
 import DealModal from './components/Modal/DealModal'
 import BottomSheet from './components/BottomSheet/BottomSheet'
 import LocationPicker from './components/LocationPicker/LocationPicker'
+import ConfirmDialog from './components/UI/ConfirmDialog'
 
 export default function App() {
   const [selectedDeal, setSelectedDeal] = useState(null)
   const [selectedLocation, setSelectedLocation] = useState(null)
+  const [showResetConfirm, setShowResetConfirm] = useState(false)
   const [activeView, setActiveView] = useState('map')
 
   const { dealsWithUsage, usageMap, recordUse, resetAll } = useDeals(dealsData)
@@ -27,11 +29,12 @@ export default function App() {
     filteredDeals,
   } = useFilters(dealsWithUsage)
 
-  const handleReset = () => {
-    if (window.confirm('Clear all deal usage history? This cannot be undone.')) {
-      resetAll()
-      setSelectedDeal(null)
-    }
+  const handleReset = () => setShowResetConfirm(true)
+
+  const confirmReset = () => {
+    resetAll()
+    setSelectedDeal(null)
+    setShowResetConfirm(false)
   }
 
   const handleUse = (dealId) => {
@@ -161,6 +164,17 @@ export default function App() {
             onClose={() => setSelectedDeal(null)}
           />
         </div>
+      )}
+
+      {/* Reset confirmation dialog */}
+      {showResetConfirm && (
+        <ConfirmDialog
+          title="Reset all deal usage?"
+          message="This cannot be undone. All tracked usage history will be cleared."
+          confirmLabel="Reset"
+          onConfirm={confirmReset}
+          onCancel={() => setShowResetConfirm(false)}
+        />
       )}
 
       {/* Location picker — multiple deals at one pin */}
