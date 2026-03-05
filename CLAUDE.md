@@ -16,8 +16,8 @@ The physical card is a booklet of coupon-style deals (BOGO meals, free items, di
 
 | Layer | Choice | Notes |
 |---|---|---|
-| Framework | Vite + React 18 | `npm run dev` to start |
-| Map | react-leaflet v4 + Leaflet 1.9 | OpenStreetMap tiles, free |
+| Framework | Vite + React 19 | `npm run dev` to start |
+| Map | react-leaflet v4 + Leaflet 1.9 + react-leaflet-cluster | OpenStreetMap tiles, free |
 | Styling | Tailwind CSS v3 + inline styles | Sora font for headings, DM Sans for body |
 | Data | Static JSON (`src/data/deals.json`) | No backend, no API |
 | Persistence | `localStorage` | Key: `ssc_usage_v1` |
@@ -133,7 +133,7 @@ Every entry in `src/data/deals.json` represents **one deal offer** from the card
 - `contact.phone` / `contact.website` — currently null; awaiting `phone_website_needed.csv` fill-in
 - Multiple deals can share the same business name (e.g., Wendy's has 2 separate deals)
 
-**Stats:** 418 deals · 199 unique businesses · 817 map pins · 0 null coordinates
+**Stats:** 418 deals · 199 unique businesses · 819 map pins · 0 null coordinates
 
 ---
 
@@ -157,24 +157,25 @@ Marker color follows category. Partially-used deals show amber (`#f59e0b`). Full
 
 ## How the Map Works
 
-`MapView.jsx` receives the filtered deals array and expands it into individual markers:
+`MapView.jsx` expands deals × locations into individual pins, then groups them with `MarkerClusterGroup`:
+
+1. **Expand** — each deal's `locations[]` produces one pin per entry (one deal with 7 locations = 7 pins)
+2. **Jitter** — pins sharing the exact same lat/lng are spread in a tiny spiral ring (~20m radius, `JITTER_RADIUS = 0.00018`). This prevents exact duplicates from stacking invisibly while remaining invisible at normal zoom levels.
+3. **Cluster** — `react-leaflet-cluster` groups nearby pins into styled numbered bubbles. Clicking zooms in and splits them apart.
 
 ```js
-deals.flatMap(deal => {
-  const locs = deal.locations?.length
-    ? deal.locations
-    : [{ lat: deal.lat, lng: deal.lng, address: deal.address }]
-  return locs.map((loc, i) => (
-    <BusinessMarker
-      key={`${deal.id}-${i}`}
-      deal={{ ...deal, lat: loc.lat, lng: loc.lng, address: loc.address }}
-      onClick={() => onSelectDeal({ ...deal, lat: loc.lat, lng: loc.lng, address: loc.address })}
-    />
-  ))
-})
+// Jitter applied per coordinate group:
+const angle = (2 * Math.PI * idx) / group.length
+pin.mapLat = pin.loc.lat + R * Math.cos(angle)
+pin.mapLng = pin.loc.lng + (R / cosLat) * Math.sin(angle)
 ```
 
-This means: one deal with 7 locations = 7 pins. Clicking any pin opens the deal modal with the address of *that specific location*. The sidebar list still shows the deal once.
+- Pins render at jittered `mapLat`/`mapLng`
+- The deal modal always receives the **original** un-jittered coordinates (correct Google Maps link)
+- Clicking any pin opens the modal showing that specific location's address
+- The sidebar list still shows each deal once
+
+Cluster bubbles use `L.divIcon` with `.ssc-cluster` CSS class — three tiers: sm (2–9, 34px), md (10–39, 42px), lg (40+, 50px) in SSC blue (`#0170B9` → `#014370`).
 
 The map is centered on Provo (`[40.2468, -111.6490]`) at zoom 13 by default.
 
@@ -243,7 +244,9 @@ Matches each deal's business name to `starving_student_businesses.csv` (authorit
 Uses `NAME_OVERRIDES` dict to handle name mismatches between `deals.json` and the CSV (e.g., `"Ike's"` → `"Ike's Love & Sandwiches"`).
 
 ### Key script: `add_locations.py`
-Geocodes **all** rows in the CSV (not just the best-match per deal) and writes a `locations[]` array to every deal. This is what enables multi-pin display for chains like Jiffy Lube (14 locations), Chili's (11), Wendy's (7).
+Geocodes **all** rows in the CSV (not just the best-match per deal) and writes a `locations[]` array to every deal. This is what enables multi-pin display for chains like Jiffy Lube (14 locations), Chili's (11), Wendy's (9).
+
+**Note:** Some locations not in the CSV (e.g., 2 Provo Wendy's at 122 E 1230 N and 1066 S University Ave) were added manually directly to `deals.json` after the script ran.
 
 ### External data dependency:
 ```
