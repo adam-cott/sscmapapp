@@ -56,7 +56,8 @@ starvingstudentcardmapapp/
 │   │   │   └── LocationPicker.jsx  # Multi-deal picker — lists all deals at one business location
 │   │   └── UI/
 │   │       ├── Badge.jsx           # Category color pill
-│   │       └── UsageTracker.jsx    # Dot-based usage indicator
+│   │       ├── UsageTracker.jsx    # Dot-based usage indicator
+│   │       └── ConfirmDialog.jsx   # Reusable confirmation modal (used by Reset)
 │   ├── hooks/
 │   │   ├── useDeals.js             # Merges deals with localStorage usage state
 │   │   ├── useFilters.js           # Search + category filter logic (memoized)
@@ -130,7 +131,7 @@ Every entry in `src/data/deals.json` represents **one deal offer** from the card
 **Key design decisions:**
 
 - `lat`/`lng`/`address` — primary/best-match location (kept for direct access)
-- `locations[]` — **all** valid locations for this deal from the authoritative CSV; the map renders one pin per entry
+- `locations[]` — **all** valid locations for this deal from the authoritative CSV; the map renders one pin per business×location
 - `maxUses: null` means unlimited uses
 - `contact.phone` / `contact.website` — currently null; awaiting `phone_website_needed.csv` fill-in
 - Multiple deals can share the same business name (e.g., Wendy's has 2 separate deals)
@@ -161,15 +162,16 @@ Marker color follows category. Partially-used deals show amber (`#f59e0b`). Full
 
 `MapView.jsx` builds one pin per **business × location**, then groups nearby pins with `MarkerClusterGroup`:
 
-1. **Group** — deals are grouped by `businessName + lat + lng`. A business with 3 deals at the same address = 1 pin. Two different businesses at the same geocoded coordinate = 2 separate pins (handled by spiderfy).
-2. **Cluster** — `react-leaflet-cluster` groups nearby pins into styled numbered bubbles. Clicking zooms in and splits them apart.
-3. **Spiderfy** — at max zoom (19), clusters fan out automatically via the `AutoSpiderfy` component (listens to `zoomend`, calls `spiderfy()` on all visible clusters). `removeOutsideVisibleBounds={false}` prevents the cluster group from re-rendering on pan, keeping the spider open while panning.
-4. **Multi-deal pins** — if a business has 2+ deals at one location, the pin shows a count badge in the business's category color. Tapping opens `LocationPicker` — a sheet (mobile) or modal (desktop) listing all deals for that business. User picks one → full deal detail opens.
+1. **Filter fallbacks** — `FALLBACK_COORDS` (computed once at module load from the full dataset) identifies city-level geocoding fallbacks: any coordinate shared by 4+ different business names (to 4 decimal places ≈ 11m) is excluded from map rendering. Affected deals still appear in the sidebar list.
+2. **Group** — remaining locations are grouped by `businessName + lat + lng`. A business with 3 deals at the same address = 1 pin. Two different businesses at the same geocoded coordinate = 2 separate pins.
+3. **Cluster** — `react-leaflet-cluster` groups nearby pins into styled numbered bubbles. Clicking zooms in and splits them apart.
+4. **Spiderfy** — at max zoom (19), clusters fan out automatically via the `AutoSpiderfy` component (listens to `zoomend`, calls `spiderfy()` on all visible clusters). `removeOutsideVisibleBounds={false}` prevents the cluster group from re-rendering on pan, keeping the spider open while panning.
+5. **Multi-deal pins** — if a business has 2+ deals at one location, the pin shows a count badge in the business's category color. Tapping opens `LocationPicker` — a sheet (mobile) or modal (desktop) listing all deals for that business. User picks one → full deal detail opens.
 
 - `maxZoom={19}` on both `MapContainer` and `TileLayer`
 - Single-deal pin tap → deal detail directly
 - Multi-deal pin tap → `LocationPicker` → deal detail
-- The sidebar list still shows each deal once
+- The sidebar list still shows each deal once (including fallback-coordinate deals)
 
 Cluster bubbles use `L.divIcon` with `.ssc-cluster` CSS class — three tiers: sm (2–9, 34px), md (10–39, 42px), lg (40+, 50px) in SSC blue (`#0170B9` → `#014370`).
 
@@ -199,6 +201,8 @@ All state lives in `App.jsx`. No external state library.
 |---|---|---|
 | `usageMap` | `useLocalStorage('ssc_usage_v1', {})` | ✅ localStorage |
 | `selectedDeal` | `useState(null)` | ❌ |
+| `selectedLocation` | `useState(null)` | ❌ |
+| `showResetConfirm` | `useState(false)` | ❌ |
 | `activeView` | `useState('map')` | ❌ |
 | `searchQuery` | `useFilters` → `useState('')` | ❌ |
 | `activeCategories` | `useFilters` → `useState([])` | ❌ |
@@ -299,3 +303,5 @@ git add -A && git commit -m "..." && git push
 - **`contact.phone` and `contact.website` are null for all 199 businesses** — this is expected and intentional until the CSV is filled in
 - **Usage state is client-side only** — there is no backend; each user's usage history is isolated to their browser's localStorage
 - **The `locations[]` array is the canonical source for map pins** — `lat`/`lng` at the top level is just the primary location kept for convenience
+- **`CATEGORY_LETTERS` in `markerIcons.js` must match the 7 actual category keys** — (`pizza`, `restaurants`, `sandwiches`, `treats`, `free`, `entertainment`, `retail`). Using old keys causes "?" markers for all mismatched categories.
+- **`FALLBACK_COORDS` in `MapView.jsx` filters bad geocodes** — coordinates shared by 4+ different businesses are city-level fallbacks and are excluded from the map. Do not lower this threshold or legitimate mall clusters may be incorrectly filtered.
