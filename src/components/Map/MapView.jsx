@@ -5,8 +5,27 @@ import L from 'leaflet'
 import BusinessMarker from './BusinessMarker'
 import MapLegend from './MapLegend'
 import { getDealUsageState } from '../../utils/dealHelpers'
+import allDealsRaw from '../../data/deals.json'
 import 'react-leaflet-cluster/dist/assets/MarkerCluster.css'
 import 'react-leaflet-cluster/dist/assets/MarkerCluster.Default.css'
+
+// Pre-compute fallback coordinates: coords shared by 4+ different businesses
+// are city-level geocoding fallbacks, not real locations. Computed once from
+// the full dataset so filtering doesn't affect the detection.
+const FALLBACK_COORDS = (() => {
+  const coordToBiz = new Map()
+  allDealsRaw.forEach(deal => {
+    deal.locations?.forEach(loc => {
+      if (!loc.lat || !loc.lng) return
+      const key = `${loc.lat.toFixed(4)},${loc.lng.toFixed(4)}`
+      if (!coordToBiz.has(key)) coordToBiz.set(key, new Set())
+      coordToBiz.get(key).add(deal.name)
+    })
+  })
+  const bad = new Set()
+  coordToBiz.forEach((bizSet, key) => { if (bizSet.size >= 4) bad.add(key) })
+  return bad
+})()
 
 const PROVO_CENTER = [40.2468, -111.6490]
 const DEFAULT_ZOOM = 13
@@ -49,6 +68,9 @@ export default function MapView({ deals, selectedDeal, onSelectDeal, onSelectLoc
         ? deal.locations
         : (deal.lat != null ? [{ lat: deal.lat, lng: deal.lng, address: deal.address }] : [])
       locs.forEach(loc => {
+        if (!loc.lat || !loc.lng) return
+        const coordKey = `${loc.lat.toFixed(4)},${loc.lng.toFixed(4)}`
+        if (FALLBACK_COORDS.has(coordKey)) return
         const key = `${deal.name}__${loc.lat},${loc.lng}`
         if (!byCoord.has(key)) byCoord.set(key, { loc, items: [], key })
         byCoord.get(key).items.push({ deal, usageState })

@@ -2,11 +2,13 @@ import L from 'leaflet'
 import { CATEGORY_COLORS } from './categoryColors'
 
 const CATEGORY_LETTERS = {
-  food:          'F',
+  pizza:         'P',
+  restaurants:   'R',
+  sandwiches:    'S',
+  treats:        'T',
+  free:          'F',
   entertainment: 'E',
-  services:      'S',
   retail:        'R',
-  health:        'H',
 }
 
 export function createMarkerIcon(category, usageStatus, isSelected = false) {
