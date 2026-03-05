@@ -18,17 +18,23 @@ export default function MapView({ deals, selectedDeal, onSelectDeal, usageMap })
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        {deals.filter(d => d.lat != null && d.lng != null).map(deal => {
+        {deals.flatMap(deal => {
           const usageState = deal.usage ?? getDealUsageState(deal, usageMap)
-          return (
-            <BusinessMarker
-              key={deal.id}
-              deal={deal}
-              isSelected={selectedDeal?.id === deal.id}
-              usageState={usageState}
-              onClick={() => onSelectDeal(deal)}
-            />
-          )
+          const locs = deal.locations?.length
+            ? deal.locations
+            : (deal.lat != null ? [{ lat: deal.lat, lng: deal.lng, address: deal.address }] : [])
+          return locs.map((loc, i) => {
+            const locDeal = { ...deal, lat: loc.lat, lng: loc.lng, address: loc.address }
+            return (
+              <BusinessMarker
+                key={`${deal.id}-${i}`}
+                deal={locDeal}
+                isSelected={selectedDeal?.id === deal.id}
+                usageState={usageState}
+                onClick={() => onSelectDeal(locDeal)}
+              />
+            )
+          })
         })}
       </MapContainer>
       <MapLegend />
