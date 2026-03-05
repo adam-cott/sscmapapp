@@ -1,5 +1,5 @@
-import { useMemo } from 'react'
-import { MapContainer, TileLayer } from 'react-leaflet'
+import { useMemo, useRef, useCallback } from 'react'
+import { MapContainer, TileLayer, useMapEvents } from 'react-leaflet'
 import MarkerClusterGroup from 'react-leaflet-cluster'
 import L from 'leaflet'
 import BusinessMarker from './BusinessMarker'
@@ -10,6 +10,7 @@ import 'react-leaflet-cluster/dist/assets/MarkerCluster.Default.css'
 
 const PROVO_CENTER = [40.2468, -111.6490]
 const DEFAULT_ZOOM = 13
+const MAX_ZOOM = 19
 
 function createClusterIcon(cluster) {
   const count = cluster.getChildCount()
@@ -22,7 +23,24 @@ function createClusterIcon(cluster) {
   })
 }
 
+// Automatically spiderfies all visible clusters when at max zoom
+function AutoSpiderfy({ clusterRef }) {
+  const spiderfyVisible = useCallback(() => {
+    clusterRef.current?._featureGroup?.eachLayer(layer => {
+      if (typeof layer.spiderfy === 'function') layer.spiderfy()
+    })
+  }, [clusterRef])
+
+  useMapEvents({
+    zoomend:  (e) => { if (e.target.getZoom() === MAX_ZOOM) spiderfyVisible() },
+    moveend:  (e) => { if (e.target.getZoom() === MAX_ZOOM) spiderfyVisible() },
+  })
+  return null
+}
+
 export default function MapView({ deals, selectedDeal, onSelectDeal, usageMap }) {
+  const clusterRef = useRef(null)
+
   const pins = useMemo(() => deals.flatMap(deal => {
     const usageState = deal.usage ?? getDealUsageState(deal, usageMap)
     const locs = deal.locations?.length
@@ -36,15 +54,17 @@ export default function MapView({ deals, selectedDeal, onSelectDeal, usageMap })
       <MapContainer
         center={PROVO_CENTER}
         zoom={DEFAULT_ZOOM}
-        maxZoom={19}
+        maxZoom={MAX_ZOOM}
         style={{ height: '100%', width: '100%' }}
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          maxZoom={19}
+          maxZoom={MAX_ZOOM}
         />
+        <AutoSpiderfy clusterRef={clusterRef} />
         <MarkerClusterGroup
+          ref={clusterRef}
           iconCreateFunction={createClusterIcon}
           chunkedLoading
           maxClusterRadius={40}
