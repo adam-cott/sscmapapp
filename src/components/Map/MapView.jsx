@@ -1,5 +1,6 @@
 import { MapContainer, TileLayer } from 'react-leaflet'
 import MarkerClusterGroup from 'react-leaflet-cluster'
+import L from 'leaflet'
 import BusinessMarker from './BusinessMarker'
 import MapLegend from './MapLegend'
 import { getDealUsageState } from '../../utils/dealHelpers'
@@ -8,6 +9,17 @@ import 'react-leaflet-cluster/dist/assets/MarkerCluster.Default.css'
 
 const PROVO_CENTER = [40.2468, -111.6490]
 const DEFAULT_ZOOM = 13
+
+function createClusterIcon(cluster) {
+  const count = cluster.getChildCount()
+  const [tier, size] = count < 10 ? ['sm', 34] : count < 40 ? ['md', 42] : ['lg', 50]
+  return L.divIcon({
+    html: `<div class="ssc-cluster ssc-cluster-${tier}" style="width:${size}px;height:${size}px;">${count}</div>`,
+    className: '',
+    iconSize: [size, size],
+    iconAnchor: [size / 2, size / 2],
+  })
+}
 
 export default function MapView({ deals, selectedDeal, onSelectDeal, usageMap }) {
   return (
@@ -22,6 +34,7 @@ export default function MapView({ deals, selectedDeal, onSelectDeal, usageMap })
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <MarkerClusterGroup
+          iconCreateFunction={createClusterIcon}
           chunkedLoading
           maxClusterRadius={40}
           spiderfyOnMaxZoom={true}

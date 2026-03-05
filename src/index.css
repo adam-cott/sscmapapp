@@ -54,6 +54,29 @@ h1, h2, h3, h4, h5 {
   display: none;
 }
 
+/* ─── Cluster markers ────────────────────────────── */
+.ssc-cluster {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2.5px solid rgba(255,255,255,0.9);
+  box-shadow: 0 2px 12px rgba(1,112,185,0.35), 0 0 0 1px rgba(0,0,0,0.08);
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.ssc-cluster:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 16px rgba(1,112,185,0.45), 0 0 0 1px rgba(0,0,0,0.1);
+}
+.ssc-cluster-sm  { background: #0170B9; font-size: 12px; }
+.ssc-cluster-md  { background: #015a96; font-size: 13px; }
+.ssc-cluster-lg  { background: #014370; font-size: 14px; }
+
 /* ─── Custom markers ─────────────────────────────── */
 .ssc-marker {
   display: flex;
