@@ -8,6 +8,12 @@ export default function BusinessMarker({ loc, items, isSelected, onClick }) {
   const isSingle = items.length === 1
   const { deal, usageState } = items[0]
 
+  const catColor = CATEGORY_COLORS[deal.category] || '#64748b'
+  const catLight = CATEGORY_LIGHT[deal.category] || '#f8fafc'
+  const remaining = usageState.remaining
+  const isExhausted = usageState.status === 'exhausted'
+  const isUnlimited = deal.deal.maxUses === null
+
   const icon = useMemo(() => {
     if (isSingle) {
       return createMarkerIcon(deal.category, usageState.status, isSelected)
@@ -21,13 +27,7 @@ export default function BusinessMarker({ loc, items, isSelected, onClick }) {
       iconAnchor: [size / 2, size / 2],
       popupAnchor: [0, -(size / 2 + 6)],
     })
-  }, [isSingle, deal.category, usageState.status, isSelected, items.length])
-
-  const catColor = CATEGORY_COLORS[deal.category] || '#64748b'
-  const catLight = CATEGORY_LIGHT[deal.category] || '#f8fafc'
-  const remaining = usageState.remaining
-  const isExhausted = usageState.status === 'exhausted'
-  const isUnlimited = deal.deal.maxUses === null
+  }, [isSingle, deal.category, usageState.status, isSelected, items.length, isExhausted, catColor])
 
   return (
     <Marker
