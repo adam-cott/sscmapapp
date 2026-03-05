@@ -9,9 +9,11 @@ import MapView from './components/Map/MapView'
 import ListView from './components/ListView/ListView'
 import DealModal from './components/Modal/DealModal'
 import BottomSheet from './components/BottomSheet/BottomSheet'
+import LocationPicker from './components/LocationPicker/LocationPicker'
 
 export default function App() {
   const [selectedDeal, setSelectedDeal] = useState(null)
+  const [selectedLocation, setSelectedLocation] = useState(null)
   const [activeView, setActiveView] = useState('map')
 
   const { dealsWithUsage, usageMap, recordUse, resetAll } = useDeals(dealsData)
@@ -57,6 +59,15 @@ export default function App() {
     setSelectedDeal(deal)
   }
 
+  const handleSelectLocation = (location) => {
+    setSelectedLocation(location)
+  }
+
+  const handleSelectFromPicker = (deal) => {
+    setSelectedLocation(null)
+    setSelectedDeal(deal)
+  }
+
   return (
     <div className="flex flex-col h-screen overflow-hidden" style={{ backgroundColor: '#f0f4f8' }}>
       <Header
@@ -91,6 +102,7 @@ export default function App() {
               deals={filteredDeals}
               selectedDeal={selectedDeal}
               onSelectDeal={handleSelectDeal}
+              onSelectLocation={handleSelectLocation}
               usageMap={usageMap}
             />
           </div>
@@ -149,6 +161,15 @@ export default function App() {
             onClose={() => setSelectedDeal(null)}
           />
         </div>
+      )}
+
+      {/* Location picker — multiple deals at one pin */}
+      {selectedLocation && (
+        <LocationPicker
+          location={selectedLocation}
+          onSelectDeal={handleSelectFromPicker}
+          onClose={() => setSelectedLocation(null)}
+        />
       )}
     </div>
   )

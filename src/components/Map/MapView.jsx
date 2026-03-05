@@ -32,7 +32,6 @@ function spiderfyAll(map) {
   })
 }
 
-// Automatically spiderfies all visible clusters when at max zoom
 function AutoSpiderfy() {
   useMapEvents({
     zoomend: (e) => { if (e.target.getZoom() === MAX_ZOOM) setTimeout(() => spiderfyAll(e.target), 100) },
@@ -40,14 +39,23 @@ function AutoSpiderfy() {
   return null
 }
 
-export default function MapView({ deals, selectedDeal, onSelectDeal, usageMap }) {
-  const pins = useMemo(() => deals.flatMap(deal => {
-    const usageState = deal.usage ?? getDealUsageState(deal, usageMap)
-    const locs = deal.locations?.length
-      ? deal.locations
-      : (deal.lat != null ? [{ lat: deal.lat, lng: deal.lng, address: deal.address }] : [])
-    return locs.map((loc, i) => ({ deal, loc, usageState, key: `${deal.id}-${i}` }))
-  }), [deals, usageMap])
+export default function MapView({ deals, selectedDeal, onSelectDeal, onSelectLocation, usageMap }) {
+  // Group pins by unique coordinate — one pin per physical location
+  const pins = useMemo(() => {
+    const byCoord = new Map()
+    deals.forEach(deal => {
+      const usageState = deal.usage ?? getDealUsageState(deal, usageMap)
+      const locs = deal.locations?.length
+        ? deal.locations
+        : (deal.lat != null ? [{ lat: deal.lat, lng: deal.lng, address: deal.address }] : [])
+      locs.forEach(loc => {
+        const key = `${loc.lat},${loc.lng}`
+        if (!byCoord.has(key)) byCoord.set(key, { loc, items: [], key })
+        byCoord.get(key).items.push({ deal, usageState })
+      })
+    })
+    return [...byCoord.values()]
+  }, [deals, usageMap])
 
   return (
     <div style={{ height: '100%', width: '100%', position: 'relative' }}>
@@ -71,13 +79,19 @@ export default function MapView({ deals, selectedDeal, onSelectDeal, usageMap })
           showCoverageOnHover={false}
           removeOutsideVisibleBounds={false}
         >
-          {pins.map(({ deal, loc, usageState, key }) => (
+          {pins.map(({ loc, items, key }) => (
             <BusinessMarker
               key={key}
-              deal={{ ...deal, lat: loc.lat, lng: loc.lng, address: loc.address }}
-              isSelected={selectedDeal?.id === deal.id}
-              usageState={usageState}
-              onClick={() => onSelectDeal({ ...deal, lat: loc.lat, lng: loc.lng, address: loc.address })}
+              loc={loc}
+              items={items}
+              isSelected={items.some(i => i.deal.id === selectedDeal?.id)}
+              onClick={() => {
+                if (items.length === 1) {
+                  onSelectDeal({ ...items[0].deal, lat: loc.lat, lng: loc.lng, address: loc.address })
+                } else {
+                  onSelectLocation({ loc, items })
+                }
+              }}
             />
           ))}
         </MarkerClusterGroup>
