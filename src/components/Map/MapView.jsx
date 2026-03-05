@@ -23,7 +23,7 @@ const FALLBACK_COORDS = (() => {
     })
   })
   const bad = new Set()
-  coordToBiz.forEach((bizSet, key) => { if (bizSet.size >= 7) bad.add(key) })
+  coordToBiz.forEach((bizSet, key) => { if (bizSet.size >= 8) bad.add(key) })
   return bad
 })()
 
