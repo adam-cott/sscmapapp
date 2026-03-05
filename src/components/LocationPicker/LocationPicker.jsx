@@ -16,18 +16,18 @@ function DealRow({ deal, usageState, loc, onSelect }) {
         background: 'white',
         border: 'none',
         borderLeft: `3px solid ${isExhausted ? '#e2e8f0' : catColor}`,
-        borderRadius: '8px',
-        padding: '12px',
-        marginBottom: '8px',
+        borderRadius: '10px',
+        padding: '14px 14px',
+        marginBottom: '10px',
         cursor: 'pointer',
         opacity: isExhausted ? 0.65 : 1,
-        boxShadow: '0 1px 4px rgba(0,0,0,0.07)',
+        boxShadow: '0 1px 6px rgba(0,0,0,0.08)',
         transition: 'box-shadow 0.15s ease',
       }}
     >
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '8px' }}>
         <div style={{ flex: 1, minWidth: 0 }}>
-          <div className="line-clamp-2" style={{ fontSize: '13px', color: '#0f172a', lineHeight: '1.4' }}>
+          <div className="line-clamp-2" style={{ fontSize: '14px', color: '#0f172a', lineHeight: '1.45' }}>
             {deal.deal.title}
           </div>
         </div>

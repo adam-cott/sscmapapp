@@ -56,8 +56,8 @@ export default function DealModal({ deal, onUse, onClose }) {
               </div>
               <div className="min-w-0">
                 <h2
-                  className="font-bold leading-snug truncate"
-                  style={{ fontFamily: 'Sora, sans-serif', fontSize: '18px', color: '#0f172a' }}
+                  className="font-bold leading-snug"
+                  style={{ fontFamily: 'Sora, sans-serif', fontSize: '17px', color: '#0f172a' }}
                 >
                   {deal.name}
                 </h2>
