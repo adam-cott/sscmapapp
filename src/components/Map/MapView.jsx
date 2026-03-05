@@ -1,4 +1,4 @@
-import { useMemo, useRef, useCallback } from 'react'
+import { useMemo } from 'react'
 import { MapContainer, TileLayer, useMapEvents } from 'react-leaflet'
 import MarkerClusterGroup from 'react-leaflet-cluster'
 import L from 'leaflet'
@@ -23,24 +23,25 @@ function createClusterIcon(cluster) {
   })
 }
 
-// Automatically spiderfies all visible clusters when at max zoom
-function AutoSpiderfy({ clusterRef }) {
-  const spiderfyVisible = useCallback(() => {
-    clusterRef.current?._featureGroup?.eachLayer(layer => {
-      if (typeof layer.spiderfy === 'function') layer.spiderfy()
+function spiderfyAll(map) {
+  map.eachLayer(layer => {
+    if (!layer._featureGroup) return
+    layer._featureGroup.eachLayer(sub => {
+      if (typeof sub.spiderfy === 'function') sub.spiderfy()
     })
-  }, [clusterRef])
+  })
+}
 
+// Automatically spiderfies all visible clusters when at max zoom
+function AutoSpiderfy() {
   useMapEvents({
-    zoomend:  (e) => { if (e.target.getZoom() === MAX_ZOOM) spiderfyVisible() },
-    moveend:  (e) => { if (e.target.getZoom() === MAX_ZOOM) spiderfyVisible() },
+    zoomend: (e) => { if (e.target.getZoom() === MAX_ZOOM) setTimeout(() => spiderfyAll(e.target), 100) },
+    moveend: (e) => { if (e.target.getZoom() === MAX_ZOOM) setTimeout(() => spiderfyAll(e.target), 100) },
   })
   return null
 }
 
 export default function MapView({ deals, selectedDeal, onSelectDeal, usageMap }) {
-  const clusterRef = useRef(null)
-
   const pins = useMemo(() => deals.flatMap(deal => {
     const usageState = deal.usage ?? getDealUsageState(deal, usageMap)
     const locs = deal.locations?.length
@@ -62,9 +63,8 @@ export default function MapView({ deals, selectedDeal, onSelectDeal, usageMap })
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           maxZoom={MAX_ZOOM}
         />
-        <AutoSpiderfy clusterRef={clusterRef} />
+        <AutoSpiderfy />
         <MarkerClusterGroup
-          ref={clusterRef}
           iconCreateFunction={createClusterIcon}
           chunkedLoading
           maxClusterRadius={40}
