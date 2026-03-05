@@ -159,19 +159,12 @@ Marker color follows category. Partially-used deals show amber (`#f59e0b`). Full
 
 `MapView.jsx` expands deals × locations into individual pins, then groups them with `MarkerClusterGroup`:
 
-1. **Expand** — each deal's `locations[]` produces one pin per entry (one deal with 7 locations = 7 pins)
-2. **Jitter** — pins sharing the exact same lat/lng are spread in a tiny spiral ring (~20m radius, `JITTER_RADIUS = 0.00018`). This prevents exact duplicates from stacking invisibly while remaining invisible at normal zoom levels.
-3. **Cluster** — `react-leaflet-cluster` groups nearby pins into styled numbered bubbles. Clicking zooms in and splits them apart.
+1. **Expand** — each deal's `locations[]` produces one pin per entry (one deal with 9 locations = 9 pins)
+2. **Cluster** — `react-leaflet-cluster` groups nearby pins into styled numbered bubbles. Clicking zooms in and splits them apart.
+3. **Spiderfy** — when the map is at max zoom (19) and a cluster contains pins at the exact same coordinate (e.g., multiple deals at University Place Mall), clicking the cluster fans all pins out with spider legs so each is individually tappable.
 
-```js
-// Jitter applied per coordinate group:
-const angle = (2 * Math.PI * idx) / group.length
-pin.mapLat = pin.loc.lat + R * Math.cos(angle)
-pin.mapLng = pin.loc.lng + (R / cosLat) * Math.sin(angle)
-```
-
-- Pins render at jittered `mapLat`/`mapLng`
-- The deal modal always receives the **original** un-jittered coordinates (correct Google Maps link)
+- `maxZoom={19}` is set on both `MapContainer` and `TileLayer` (OSM supports zoom 19)
+- `spiderfyOnMaxZoom={true}` on `MarkerClusterGroup` triggers the fan-out at zoom 19
 - Clicking any pin opens the modal showing that specific location's address
 - The sidebar list still shows each deal once
 
