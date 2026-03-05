@@ -15273,6 +15273,16 @@
         "lat": 40.1556828,
         "lng": -111.6109588,
         "address": "1182 N Main St, Springville, UT 84663"
+      },
+      {
+        "lat": 40.2505403,
+        "lng": -111.6565773,
+        "address": "122 E 1230 N, Provo, UT 84604"
+      },
+      {
+        "lat": 40.2195968,
+        "lng": -111.6594816,
+        "address": "1066 S University Ave, Provo, UT 84601"
       }
     ]
   },
@@ -15335,6 +15345,16 @@
         "lat": 40.1556828,
         "lng": -111.6109588,
         "address": "1182 N Main St, Springville, UT 84663"
+      },
+      {
+        "lat": 40.2505403,
+        "lng": -111.6565773,
+        "address": "122 E 1230 N, Provo, UT 84604"
+      },
+      {
+        "lat": 40.2195968,
+        "lng": -111.6594816,
+        "address": "1066 S University Ave, Provo, UT 84601"
       }
     ]
   },

@@ -1,7 +1,10 @@
 import { MapContainer, TileLayer } from 'react-leaflet'
+import MarkerClusterGroup from 'react-leaflet-cluster'
 import BusinessMarker from './BusinessMarker'
 import MapLegend from './MapLegend'
 import { getDealUsageState } from '../../utils/dealHelpers'
+import 'react-leaflet-cluster/dist/assets/MarkerCluster.css'
+import 'react-leaflet-cluster/dist/assets/MarkerCluster.Default.css'
 
 const PROVO_CENTER = [40.2468, -111.6490]
 const DEFAULT_ZOOM = 13
@@ -18,24 +21,32 @@ export default function MapView({ deals, selectedDeal, onSelectDeal, usageMap })
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        {deals.flatMap(deal => {
-          const usageState = deal.usage ?? getDealUsageState(deal, usageMap)
-          const locs = deal.locations?.length
-            ? deal.locations
-            : (deal.lat != null ? [{ lat: deal.lat, lng: deal.lng, address: deal.address }] : [])
-          return locs.map((loc, i) => {
-            const locDeal = { ...deal, lat: loc.lat, lng: loc.lng, address: loc.address }
-            return (
-              <BusinessMarker
-                key={`${deal.id}-${i}`}
-                deal={locDeal}
-                isSelected={selectedDeal?.id === deal.id}
-                usageState={usageState}
-                onClick={() => onSelectDeal(locDeal)}
-              />
-            )
-          })
-        })}
+        <MarkerClusterGroup
+          chunkedLoading
+          maxClusterRadius={40}
+          spiderfyOnMaxZoom={true}
+          showCoverageOnHover={false}
+          disableClusteringAtZoom={17}
+        >
+          {deals.flatMap(deal => {
+            const usageState = deal.usage ?? getDealUsageState(deal, usageMap)
+            const locs = deal.locations?.length
+              ? deal.locations
+              : (deal.lat != null ? [{ lat: deal.lat, lng: deal.lng, address: deal.address }] : [])
+            return locs.map((loc, i) => {
+              const locDeal = { ...deal, lat: loc.lat, lng: loc.lng, address: loc.address }
+              return (
+                <BusinessMarker
+                  key={`${deal.id}-${i}`}
+                  deal={locDeal}
+                  isSelected={selectedDeal?.id === deal.id}
+                  usageState={usageState}
+                  onClick={() => onSelectDeal(locDeal)}
+                />
+              )
+            })
+          })}
+        </MarkerClusterGroup>
       </MapContainer>
       <MapLegend />
     </div>
