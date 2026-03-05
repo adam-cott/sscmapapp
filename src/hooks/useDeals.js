@@ -14,6 +14,17 @@ export function useDeals(deals) {
     }))
   }, [setUsageMap])
 
+  const undoUse = useCallback((dealId) => {
+    setUsageMap(prev => {
+      const current = prev[dealId] ?? 0
+      if (current <= 1) {
+        const { [dealId]: _, ...rest } = prev
+        return rest
+      }
+      return { ...prev, [dealId]: current - 1 }
+    })
+  }, [setUsageMap])
+
   const resetAll = useCallback(() => {
     setUsageMap({})
   }, [setUsageMap])
@@ -23,5 +34,5 @@ export function useDeals(deals) {
     usage: getDealUsageState(deal, usageMap),
   }))
 
-  return { dealsWithUsage, usageMap, recordUse, resetAll }
+  return { dealsWithUsage, usageMap, recordUse, undoUse, resetAll }
 }

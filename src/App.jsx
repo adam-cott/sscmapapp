@@ -11,14 +11,16 @@ import DealModal from './components/Modal/DealModal'
 import BottomSheet from './components/BottomSheet/BottomSheet'
 import LocationPicker from './components/LocationPicker/LocationPicker'
 import ConfirmDialog from './components/UI/ConfirmDialog'
+import UndoToast from './components/UI/UndoToast'
 
 export default function App() {
   const [selectedDeal, setSelectedDeal] = useState(null)
   const [selectedLocation, setSelectedLocation] = useState(null)
   const [showResetConfirm, setShowResetConfirm] = useState(false)
   const [activeView, setActiveView] = useState('map')
+  const [pendingUndo, setPendingUndo] = useState(null) // { dealId, prevDeal }
 
-  const { dealsWithUsage, usageMap, recordUse, resetAll } = useDeals(dealsData)
+  const { dealsWithUsage, usageMap, recordUse, undoUse, resetAll } = useDeals(dealsData)
 
   const {
     searchQuery,
@@ -47,7 +49,7 @@ export default function App() {
       const newUsedCount = (usageMap[dealId] ?? 0) + 1
       const isUnlimited = updated.deal.maxUses === null
       const newRemaining = isUnlimited ? null : Math.max(0, updated.deal.maxUses - newUsedCount)
-      return {
+      const nextDeal = {
         ...updated,
         usage: {
           usedCount: newUsedCount,
@@ -55,8 +57,19 @@ export default function App() {
           status: (!isUnlimited && newRemaining === 0) ? 'exhausted' : 'partial',
         },
       }
+      setPendingUndo({ dealId, prevDeal: prev })
+      return nextDeal
     })
   }
+
+  const handleUndo = () => {
+    if (!pendingUndo) return
+    undoUse(pendingUndo.dealId)
+    setSelectedDeal(pendingUndo.prevDeal)
+    setPendingUndo(null)
+  }
+
+  const dismissToast = () => setPendingUndo(null)
 
   const handleSelectDeal = (deal) => {
     setSelectedDeal(deal)
@@ -183,6 +196,15 @@ export default function App() {
           location={selectedLocation}
           onSelectDeal={handleSelectFromPicker}
           onClose={() => setSelectedLocation(null)}
+        />
+      )}
+
+      {/* Undo toast */}
+      {pendingUndo && (
+        <UndoToast
+          message="Deal marked as used"
+          onUndo={handleUndo}
+          onDismiss={dismissToast}
         />
       )}
     </div>
