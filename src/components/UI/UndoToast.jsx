@@ -33,9 +33,9 @@ export default function UndoToast({ message, onUndo, onDismiss, duration = 4000 
         left: '50%',
         transform: 'translateX(-50%)',
         zIndex: 1500,
-        backgroundColor: '#1e293b',
+        backgroundColor: '#ffffff',
         borderRadius: '12px',
-        boxShadow: '0 8px 32px rgba(0,0,0,0.3)',
+        boxShadow: '0 8px 32px rgba(0,0,0,0.12), 0 0 0 1px rgba(1,112,185,0.12)',
         overflow: 'hidden',
         minWidth: '280px',
         maxWidth: '360px',
@@ -43,8 +43,9 @@ export default function UndoToast({ message, onUndo, onDismiss, duration = 4000 
         animation: 'toast-in 0.2s ease',
       }}
     >
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '12px 14px', gap: '12px' }}>
-        <span style={{ fontSize: '14px', color: '#e2e8f0', fontFamily: 'DM Sans, sans-serif', flex: 1 }}>
+      <div style={{ height: '3px', backgroundColor: '#0170B9' }} />
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '11px 14px', gap: '12px' }}>
+        <span style={{ fontSize: '14px', color: '#1e293b', fontFamily: 'DM Sans, sans-serif', flex: 1 }}>
           {message}
         </span>
         <button
@@ -54,7 +55,7 @@ export default function UndoToast({ message, onUndo, onDismiss, duration = 4000 
             fontSize: '13px',
             fontWeight: '700',
             fontFamily: 'Sora, sans-serif',
-            color: '#38bdf8',
+            color: '#0170B9',
             background: 'none',
             border: 'none',
             cursor: 'pointer',
@@ -66,12 +67,12 @@ export default function UndoToast({ message, onUndo, onDismiss, duration = 4000 
         </button>
       </div>
       {/* Progress bar */}
-      <div style={{ height: '3px', backgroundColor: '#334155' }}>
+      <div style={{ height: '3px', backgroundColor: '#e6f2fb' }}>
         <div
           style={{
             height: '100%',
             width: `${progress}%`,
-            backgroundColor: '#38bdf8',
+            backgroundColor: '#0170B9',
             transition: 'width 0.05s linear',
           }}
         />

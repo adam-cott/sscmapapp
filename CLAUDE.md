@@ -304,4 +304,4 @@ git add -A && git commit -m "..." && git push
 - **Usage state is client-side only** — there is no backend; each user's usage history is isolated to their browser's localStorage
 - **The `locations[]` array is the canonical source for map pins** — `lat`/`lng` at the top level is just the primary location kept for convenience
 - **`CATEGORY_LETTERS` in `markerIcons.js` must match the 7 actual category keys** — (`pizza`, `restaurants`, `sandwiches`, `treats`, `free`, `entertainment`, `retail`). Using old keys causes "?" markers for all mismatched categories.
-- **`FALLBACK_COORDS` in `MapView.jsx` filters bad geocodes** — coordinates shared by 4+ different businesses are city-level fallbacks and are excluded from the map. Do not lower this threshold or legitimate mall clusters may be incorrectly filtered.
+- **`FALLBACK_COORDS` in `MapView.jsx` filters bad geocodes** — coordinates shared by 7+ different businesses are city-level fallbacks and are excluded from the map. Threshold is 7: lower values incorrectly filter legitimate mall clusters (4–6 businesses geocoded to mall entrance); city-level fallbacks have 8–13+ businesses at one point.
