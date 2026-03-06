@@ -809,8 +809,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2981599,
-        "lng": -111.6944313,
+        "lat": 40.2614699,
+        "lng": -111.7138956,
         "address": "573 W 1600 N, Orem, UT 84057"
       },
       {
@@ -835,8 +835,8 @@
     "name": "Pizza Pie Cafe",
     "category": "pizza",
     "address": "573 W 1600 N, Orem, UT 84057",
-    "lat": 40.2981599,
-    "lng": -111.6944313,
+    "lat": 40.2614699,
+    "lng": -111.7138956,
     "locationRestriction": "All UT County",
     "deal": {
       "title": "Buy 1 Buffet and 2 Drinks Get 1 Buffet FREE! All UT County",
@@ -856,8 +856,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2981599,
-        "lng": -111.6944313,
+        "lat": 40.2614699,
+        "lng": -111.7138956,
         "address": "573 W 1600 N, Orem, UT 84057"
       },
       {
@@ -882,8 +882,8 @@
     "name": "Pizza Pie Cafe",
     "category": "pizza",
     "address": "573 W 1600 N, Orem, UT 84057",
-    "lat": 40.2981599,
-    "lng": -111.6944313,
+    "lat": 40.2614699,
+    "lng": -111.7138956,
     "locationRestriction": "Orem",
     "deal": {
       "title": "FREE! Kid's Buffet w/ Paying Adult! Orem",
@@ -903,8 +903,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2981599,
-        "lng": -111.6944313,
+        "lat": 40.2614699,
+        "lng": -111.7138956,
         "address": "573 W 1600 N, Orem, UT 84057"
       },
       {
@@ -1720,8 +1720,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2981599,
-        "lng": -111.6944313,
+        "lat": 40.3063201,
+        "lng": -111.6994954,
         "address": "1194 N State St, Orem, UT 84057"
       },
       {
@@ -1730,8 +1730,8 @@
         "address": "1765 N Freedom Blvd, Provo, UT 84604"
       },
       {
-        "lat": 40.3881114,
-        "lng": -111.8486019,
+        "lat": 40.3893751,
+        "lng": -111.8270995,
         "address": "3536 N Maple Loop Dr, Lehi, UT 84043"
       },
       {
@@ -3545,8 +3545,8 @@
         "address": "541 S 500 E, American Fork, UT 84003"
       },
       {
-        "lat": 40.3881114,
-        "lng": -111.8486019,
+        "lat": 40.430637,
+        "lng": -111.827217,
         "address": "1402 E 3500 N Ste 101, Lehi, UT 84043"
       },
       {
@@ -3566,8 +3566,8 @@
     "name": "BYU Bowling & Games Center",
     "category": "entertainment",
     "address": "1171 Wilkinson Student Center, Provo, UT 84602",
-    "lat": 40.2337289,
-    "lng": -111.6587085,
+    "lat": 40.248403,
+    "lng": -111.647053,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Game of Bowling! M-Fri Before 6pm",
@@ -3587,8 +3587,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2337289,
-        "lng": -111.6587085,
+        "lat": 40.248403,
+        "lng": -111.647053,
         "address": "1171 Wilkinson Student Center, Provo, UT 84602"
       }
     ]
@@ -4593,8 +4593,8 @@
     "name": "Kreative Kiln",
     "category": "entertainment",
     "address": "1774 N University Pkwy Ste 18, Provo, UT 84604",
-    "lat": 40.2337289,
-    "lng": -111.6587085,
+    "lat": 40.257234,
+    "lng": -111.6602724,
     "locationRestriction": "",
     "deal": {
       "title": "Buy One Play in the Clay Session Get One FREE!",
@@ -4619,8 +4619,8 @@
         "address": "844 S 800 W Ste 201, Pleasant Grove, UT 84062"
       },
       {
-        "lat": 40.2337289,
-        "lng": -111.6587085,
+        "lat": 40.257234,
+        "lng": -111.6602724,
         "address": "1774 N University Pkwy Ste 18, Provo, UT 84604"
       }
     ]
@@ -5775,8 +5775,8 @@
     "name": "BYU Studio 1030",
     "category": "retail",
     "address": "1030 Wilkinson Student Center, Provo, UT 84602",
-    "lat": 40.2337289,
-    "lng": -111.6587085,
+    "lat": 40.248403,
+    "lng": -111.647053,
     "locationRestriction": "",
     "deal": {
       "title": "$10 OFF! Any Service! 25% OFF! Any Product!",
@@ -5796,8 +5796,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2337289,
-        "lng": -111.6587085,
+        "lat": 40.248403,
+        "lng": -111.647053,
         "address": "1030 Wilkinson Student Center, Provo, UT 84602"
       }
     ]
@@ -5807,8 +5807,8 @@
     "name": "BYU Studio 1030",
     "category": "retail",
     "address": "1030 Wilkinson Student Center, Provo, UT 84602",
-    "lat": 40.2337289,
-    "lng": -111.6587085,
+    "lat": 40.248403,
+    "lng": -111.647053,
     "locationRestriction": "",
     "deal": {
       "title": "$5 Haircut! Wash and Blow Dry Not Included",
@@ -5828,8 +5828,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2337289,
-        "lng": -111.6587085,
+        "lat": 40.248403,
+        "lng": -111.647053,
         "address": "1030 Wilkinson Student Center, Provo, UT 84602"
       }
     ]
@@ -5839,8 +5839,8 @@
     "name": "BYU Studio 1030",
     "category": "retail",
     "address": "1030 Wilkinson Student Center, Provo, UT 84602",
-    "lat": 40.2337289,
-    "lng": -111.6587085,
+    "lat": 40.248403,
+    "lng": -111.647053,
     "locationRestriction": "",
     "deal": {
       "title": "$5 OFF! Haircut Service! $5 OFF! Any Nail Service!",
@@ -5860,8 +5860,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2337289,
-        "lng": -111.6587085,
+        "lat": 40.248403,
+        "lng": -111.647053,
         "address": "1030 Wilkinson Student Center, Provo, UT 84602"
       }
     ]
@@ -5871,8 +5871,8 @@
     "name": "BYU Studio 1030",
     "category": "retail",
     "address": "1030 Wilkinson Student Center, Provo, UT 84602",
-    "lat": 40.2337289,
-    "lng": -111.6587085,
+    "lat": 40.248403,
+    "lng": -111.647053,
     "locationRestriction": "",
     "deal": {
       "title": "$5 OFF! Express Facial!",
@@ -5892,8 +5892,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2337289,
-        "lng": -111.6587085,
+        "lat": 40.248403,
+        "lng": -111.647053,
         "address": "1030 Wilkinson Student Center, Provo, UT 84602"
       }
     ]
@@ -6076,8 +6076,8 @@
     "name": "Fabulous Freddy's",
     "category": "retail",
     "address": "1195 E Main St, Lehi, UT 84043",
-    "lat": 40.3881114,
-    "lng": -111.8486019,
+    "lat": 40.389009,
+    "lng": -111.830869,
     "locationRestriction": "Lehi",
     "deal": {
       "title": "2-4-1! Basic Car Wash! Lehi",
@@ -6097,8 +6097,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3881114,
-        "lng": -111.8486019,
+        "lat": 40.389009,
+        "lng": -111.830869,
         "address": "1195 E Main St, Lehi, UT 84043"
       }
     ]
@@ -6108,8 +6108,8 @@
     "name": "Fabulous Freddy's",
     "category": "retail",
     "address": "1195 E Main St, Lehi, UT 84043",
-    "lat": 40.3881114,
-    "lng": -111.8486019,
+    "lat": 40.389009,
+    "lng": -111.830869,
     "locationRestriction": "Lehi",
     "deal": {
       "title": "2-4-1! VIP Car Wash! Lehi",
@@ -6129,8 +6129,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3881114,
-        "lng": -111.8486019,
+        "lat": 40.389009,
+        "lng": -111.830869,
         "address": "1195 E Main St, Lehi, UT 84043"
       }
     ]
@@ -6140,8 +6140,8 @@
     "name": "FORGE Jewelry Works",
     "category": "retail",
     "address": "2255 N University Pkwy Ste 17, Provo, UT 84604",
-    "lat": 40.2337289,
-    "lng": -111.6587085,
+    "lat": 40.262703,
+    "lng": -111.668601,
     "locationRestriction": "",
     "deal": {
       "title": "30% OFF! Any Jewelry Item! Excl. Loose Diamonds/Gemstones",
@@ -6161,8 +6161,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2337289,
-        "lng": -111.6587085,
+        "lat": 40.262703,
+        "lng": -111.668601,
         "address": "2255 N University Pkwy Ste 17, Provo, UT 84604"
       }
     ]
@@ -6406,8 +6406,8 @@
     "name": "Jiffy Lube",
     "category": "retail",
     "address": "3711 N 40 E, Provo, UT 84604",
-    "lat": 40.2337289,
-    "lng": -111.6587085,
+    "lat": 40.2831587,
+    "lng": -111.6581111,
     "locationRestriction": "All Utah",
     "deal": {
       "title": "$10 OFF! Vehicle Emissions! MSKCUZ",
@@ -6427,8 +6427,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2337289,
-        "lng": -111.6587085,
+        "lat": 40.2831587,
+        "lng": -111.6581111,
         "address": "3711 N 40 E, Provo, UT 84604"
       },
       {
@@ -6452,8 +6452,8 @@
         "address": "131 S State St, Orem, UT 84058"
       },
       {
-        "lat": 40.2981599,
-        "lng": -111.6944313,
+        "lat": 40.3123099,
+        "lng": -111.7021744,
         "address": "1136 N State St, Orem, UT 84057"
       },
       {
@@ -6482,8 +6482,8 @@
         "address": "230 S 2000 W, Springville, UT 84663"
       },
       {
-        "lat": 40.3881114,
-        "lng": -111.8486019,
+        "lat": 40.3869021,
+        "lng": -111.8362099,
         "address": "2079 N Gossling Ln, Lehi, UT 84043"
       },
       {
@@ -6503,8 +6503,8 @@
     "name": "Jiffy Lube",
     "category": "retail",
     "address": "3711 N 40 E, Provo, UT 84604",
-    "lat": 40.2337289,
-    "lng": -111.6587085,
+    "lat": 40.2831587,
+    "lng": -111.6581111,
     "locationRestriction": "All Utah",
     "deal": {
       "title": "$25 OFF! Any Oil Change! DBEUP2",
@@ -6524,8 +6524,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2337289,
-        "lng": -111.6587085,
+        "lat": 40.2831587,
+        "lng": -111.6581111,
         "address": "3711 N 40 E, Provo, UT 84604"
       },
       {
@@ -6549,8 +6549,8 @@
         "address": "131 S State St, Orem, UT 84058"
       },
       {
-        "lat": 40.2981599,
-        "lng": -111.6944313,
+        "lat": 40.3123099,
+        "lng": -111.7021744,
         "address": "1136 N State St, Orem, UT 84057"
       },
       {
@@ -6579,8 +6579,8 @@
         "address": "230 S 2000 W, Springville, UT 84663"
       },
       {
-        "lat": 40.3881114,
-        "lng": -111.8486019,
+        "lat": 40.3869021,
+        "lng": -111.8362099,
         "address": "2079 N Gossling Ln, Lehi, UT 84043"
       },
       {
@@ -7359,8 +7359,8 @@
     "name": "Burgers Supreme",
     "category": "free",
     "address": "1796 N University Pkwy, Provo, UT 84604",
-    "lat": 40.2337289,
-    "lng": -111.6587085,
+    "lat": 40.2582555,
+    "lng": -111.6615084,
     "locationRestriction": "",
     "deal": {
       "title": "FREE! Flavor Burst Ice Cream! Cone!",
@@ -7380,8 +7380,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2337289,
-        "lng": -111.6587085,
+        "lat": 40.2582555,
+        "lng": -111.6615084,
         "address": "1796 N University Pkwy, Provo, UT 84604"
       }
     ]
@@ -7614,8 +7614,8 @@
         "address": "1211 W 800 N, Orem, UT 84057"
       },
       {
-        "lat": 40.3881114,
-        "lng": -111.8486019,
+        "lat": 40.3881117,
+        "lng": -111.8284734,
         "address": "1374 E Main St, Lehi, UT 84043"
       }
     ]
@@ -7879,8 +7879,8 @@
     "name": "Fabulous Freddy's",
     "category": "free",
     "address": "1195 E Main St, Lehi, UT 84043",
-    "lat": 40.3881114,
-    "lng": -111.8486019,
+    "lat": 40.389009,
+    "lng": -111.830869,
     "locationRestriction": "Lehi",
     "deal": {
       "title": "FREE! Best Exterior Car Wash! Lehi",
@@ -7900,8 +7900,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3881114,
-        "lng": -111.8486019,
+        "lat": 40.389009,
+        "lng": -111.830869,
         "address": "1195 E Main St, Lehi, UT 84043"
       }
     ]
@@ -8123,8 +8123,8 @@
     "name": "Jamba Juice",
     "category": "free",
     "address": "1774 N University Pkwy Ste 60, Provo, UT 84604",
-    "lat": 40.2337289,
-    "lng": -111.6587085,
+    "lat": 40.2794106,
+    "lng": -111.7178868,
     "locationRestriction": "Provo (University PKWY) UVU Campus Draper & WJ",
     "deal": {
       "title": "FREE! Belgian Waffle Pretzel or Cheddar Tomato Twist!",
@@ -8144,13 +8144,13 @@
     ],
     "locations": [
       {
-        "lat": 40.2337289,
-        "lng": -111.6587085,
+        "lat": 40.2481866,
+        "lng": -111.654986,
         "address": "1774 N University Pkwy Ste 60, Provo, UT 84604"
       },
       {
-        "lat": 40.2981599,
-        "lng": -111.6944313,
+        "lat": 40.2794106,
+        "lng": -111.7178868,
         "address": "800 W University Pkwy (UVU Campus), Orem, UT 84058"
       },
       {
@@ -8249,8 +8249,8 @@
     "name": "Kreative Kiln",
     "category": "free",
     "address": "1774 N University Pkwy Ste 18, Provo, UT 84604",
-    "lat": 40.2337289,
-    "lng": -111.6587085,
+    "lat": 40.257234,
+    "lng": -111.6602724,
     "locationRestriction": "",
     "deal": {
       "title": "FREE! Open Studio Session!",
@@ -8275,8 +8275,8 @@
         "address": "844 S 800 W Ste 201, Pleasant Grove, UT 84062"
       },
       {
-        "lat": 40.2337289,
-        "lng": -111.6587085,
+        "lat": 40.257234,
+        "lng": -111.6602724,
         "address": "1774 N University Pkwy Ste 18, Provo, UT 84604"
       }
     ]
@@ -9315,8 +9315,8 @@
     "name": "Splash Drinks and Treats",
     "category": "free",
     "address": "1195 E Main St, Lehi, UT 84043",
-    "lat": 40.3881114,
-    "lng": -111.8486019,
+    "lat": 40.389009,
+    "lng": -111.830869,
     "locationRestriction": "Lehi",
     "deal": {
       "title": "FREE! One Bag of Cheddar Jalapeno or Butter Popcorn! Lehi",
@@ -9336,8 +9336,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3881114,
-        "lng": -111.8486019,
+        "lat": 40.389009,
+        "lng": -111.830869,
         "address": "1195 E Main St, Lehi, UT 84043"
       },
       {
@@ -10340,8 +10340,8 @@
     "name": "Bahama Buck's",
     "category": "treats",
     "address": "2265 N University Pkwy, Provo, UT 84604",
-    "lat": 40.2337289,
-    "lng": -111.6587085,
+    "lat": 40.263806,
+    "lng": -111.669533,
     "locationRestriction": "",
     "deal": {
       "title": "Buy 1 Shaved Ice or Smoothie Get 1 FREE!",
@@ -10361,8 +10361,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2337289,
-        "lng": -111.6587085,
+        "lat": 40.263806,
+        "lng": -111.669533,
         "address": "2265 N University Pkwy, Provo, UT 84604"
       },
       {
@@ -10606,8 +10606,8 @@
     "name": "Burgers Supreme",
     "category": "treats",
     "address": "1796 N University Pkwy, Provo, UT 84604",
-    "lat": 40.2337289,
-    "lng": -111.6587085,
+    "lat": 40.2582555,
+    "lng": -111.6615084,
     "locationRestriction": "",
     "deal": {
       "title": "Buy Any Shake Get 1 FREE!",
@@ -10627,8 +10627,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2337289,
-        "lng": -111.6587085,
+        "lat": 40.2582555,
+        "lng": -111.6615084,
         "address": "1796 N University Pkwy, Provo, UT 84604"
       }
     ]
@@ -10691,13 +10691,13 @@
     ],
     "locations": [
       {
-        "lat": 40.2981599,
-        "lng": -111.6944313,
+        "lat": 40.3215373,
+        "lng": -111.7063945,
         "address": "1331 N State St, Orem, UT 84057"
       },
       {
-        "lat": 40.3881114,
-        "lng": -111.8486019,
+        "lat": 40.3893751,
+        "lng": -111.8270995,
         "address": "3536 N Maple Loop Dr, Lehi, UT 84043"
       },
       {
@@ -10845,8 +10845,8 @@
     "name": "Cold Stone Creamery",
     "category": "treats",
     "address": "2302 N University Pkwy, Provo, UT 84604",
-    "lat": 40.2337289,
-    "lng": -111.6587085,
+    "lat": 40.2647753,
+    "lng": -111.6689179,
     "locationRestriction": "Provo & SF",
     "deal": {
       "title": "Buy 1 Love It or Gotta Have it Get 1 FREE!",
@@ -10866,8 +10866,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2337289,
-        "lng": -111.6587085,
+        "lat": 40.2647753,
+        "lng": -111.6689179,
         "address": "2302 N University Pkwy, Provo, UT 84604"
       },
       {
@@ -11036,8 +11036,8 @@
         "address": "1211 W 800 N, Orem, UT 84057"
       },
       {
-        "lat": 40.3881114,
-        "lng": -111.8486019,
+        "lat": 40.3881117,
+        "lng": -111.8284734,
         "address": "1374 E Main St, Lehi, UT 84043"
       }
     ]
@@ -11126,8 +11126,8 @@
     "name": "Dippin' Dots Fab Freddy's",
     "category": "treats",
     "address": "1195 E Main St, Lehi, UT 84043",
-    "lat": 40.3881114,
-    "lng": -111.8486019,
+    "lat": 40.389009,
+    "lng": -111.830869,
     "locationRestriction": "Lehi",
     "deal": {
       "title": "2-4-1! Regular Dippin' Dots!",
@@ -11147,8 +11147,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3881114,
-        "lng": -111.8486019,
+        "lat": 40.389009,
+        "lng": -111.830869,
         "address": "1195 E Main St, Lehi, UT 84043"
       }
     ]
@@ -11200,8 +11200,8 @@
     "name": "Freddy's Frozen Custard & Steakburgers",
     "category": "treats",
     "address": "1513 N Town Centre Blvd, Provo, UT 84604",
-    "lat": 40.2337289,
-    "lng": -111.6587085,
+    "lat": 40.2199248,
+    "lng": -111.6584076,
     "locationRestriction": "All UT Locs",
     "deal": {
       "title": "2-4-1! Custard Cone or Dish!",
@@ -11221,8 +11221,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2337289,
-        "lng": -111.6587085,
+        "lat": 40.2199248,
+        "lng": -111.6584076,
         "address": "1513 N Town Centre Blvd, Provo, UT 84604"
       },
       {
@@ -11380,8 +11380,8 @@
     "name": "Jamba Juice",
     "category": "treats",
     "address": "1774 N University Pkwy Ste 60, Provo, UT 84604",
-    "lat": 40.2337289,
-    "lng": -111.6587085,
+    "lat": 40.2794106,
+    "lng": -111.7178868,
     "locationRestriction": "Provo (Univ PKWY) UVU Campus Draper & WJ",
     "deal": {
       "title": "50% OFF! Any Menu Item!",
@@ -11401,13 +11401,13 @@
     ],
     "locations": [
       {
-        "lat": 40.2337289,
-        "lng": -111.6587085,
+        "lat": 40.2481866,
+        "lng": -111.654986,
         "address": "1774 N University Pkwy Ste 60, Provo, UT 84604"
       },
       {
-        "lat": 40.2981599,
-        "lng": -111.6944313,
+        "lat": 40.2794106,
+        "lng": -111.7178868,
         "address": "800 W University Pkwy (UVU Campus), Orem, UT 84058"
       },
       {
@@ -11427,8 +11427,8 @@
     "name": "Jamba Juice",
     "category": "treats",
     "address": "1774 N University Pkwy Ste 60, Provo, UT 84604",
-    "lat": 40.2337289,
-    "lng": -111.6587085,
+    "lat": 40.2794106,
+    "lng": -111.7178868,
     "locationRestriction": "Same Locations",
     "deal": {
       "title": "Buy Any Smoothie Get 1 FREE!",
@@ -11448,13 +11448,13 @@
     ],
     "locations": [
       {
-        "lat": 40.2337289,
-        "lng": -111.6587085,
+        "lat": 40.2481866,
+        "lng": -111.654986,
         "address": "1774 N University Pkwy Ste 60, Provo, UT 84604"
       },
       {
-        "lat": 40.2981599,
-        "lng": -111.6944313,
+        "lat": 40.2794106,
+        "lng": -111.7178868,
         "address": "800 W University Pkwy (UVU Campus), Orem, UT 84058"
       },
       {
@@ -12570,8 +12570,8 @@
     "name": "Splash Drinks and Treats",
     "category": "treats",
     "address": "1195 E Main St, Lehi, UT 84043",
-    "lat": 40.3881114,
-    "lng": -111.8486019,
+    "lat": 40.389009,
+    "lng": -111.830869,
     "locationRestriction": "Lehi",
     "deal": {
       "title": "2-4-1! Cookie!",
@@ -12591,8 +12591,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3881114,
-        "lng": -111.8486019,
+        "lat": 40.389009,
+        "lng": -111.830869,
         "address": "1195 E Main St, Lehi, UT 84043"
       },
       {
@@ -12607,8 +12607,8 @@
     "name": "Splash Drinks and Treats",
     "category": "treats",
     "address": "1195 E Main St, Lehi, UT 84043",
-    "lat": 40.3881114,
-    "lng": -111.8486019,
+    "lat": 40.389009,
+    "lng": -111.830869,
     "locationRestriction": "Lehi",
     "deal": {
       "title": "2-4-1! Drink! Lehi Excludes Energy Drink Mixers",
@@ -12628,8 +12628,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3881114,
-        "lng": -111.8486019,
+        "lat": 40.389009,
+        "lng": -111.830869,
         "address": "1195 E Main St, Lehi, UT 84043"
       },
       {
@@ -12883,8 +12883,8 @@
     "name": "Twisted Sugar",
     "category": "treats",
     "address": "2245 N University Pkwy, Provo, UT 84604",
-    "lat": 40.2337289,
-    "lng": -111.6587085,
+    "lat": 40.263299,
+    "lng": -111.668821,
     "locationRestriction": "PG & Saratoga Only",
     "deal": {
       "title": "2-4-1! Any Cookie or Drink!",
@@ -12904,8 +12904,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2337289,
-        "lng": -111.6587085,
+        "lat": 40.263299,
+        "lng": -111.668821,
         "address": "2245 N University Pkwy, Provo, UT 84604"
       },
       {
@@ -12945,8 +12945,8 @@
     "name": "Twisted Sugar",
     "category": "treats",
     "address": "2245 N University Pkwy, Provo, UT 84604",
-    "lat": 40.2337289,
-    "lng": -111.6587085,
+    "lat": 40.263299,
+    "lng": -111.668821,
     "locationRestriction": "PG & Saratoga Only",
     "deal": {
       "title": "2-4-1! Any Smoothie or Soda!",
@@ -12966,8 +12966,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2337289,
-        "lng": -111.6587085,
+        "lat": 40.263299,
+        "lng": -111.668821,
         "address": "2245 N University Pkwy, Provo, UT 84604"
       },
       {
@@ -13007,8 +13007,8 @@
     "name": "Twisted Sugar",
     "category": "treats",
     "address": "2245 N University Pkwy, Provo, UT 84604",
-    "lat": 40.2337289,
-    "lng": -111.6587085,
+    "lat": 40.263299,
+    "lng": -111.668821,
     "locationRestriction": "PG & Saratoga Only",
     "deal": {
       "title": "50% OFF! a Dozen Cookies!",
@@ -13028,8 +13028,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2337289,
-        "lng": -111.6587085,
+        "lat": 40.263299,
+        "lng": -111.668821,
         "address": "2245 N University Pkwy, Provo, UT 84604"
       },
       {
@@ -13483,8 +13483,8 @@
     "name": "Arby's",
     "category": "sandwiches",
     "address": "1474 S 40th E, Provo, UT 84606",
-    "lat": 40.2337289,
-    "lng": -111.6587085,
+    "lat": 40.2140518,
+    "lng": -111.6583366,
     "locationRestriction": "Participating Locations",
     "deal": {
       "title": "2-4-1! Beef N' Cheddar Sandwich! Valid Particip. Locations",
@@ -13514,8 +13514,8 @@
         "address": "1150 S State St, Orem, UT 84097"
       },
       {
-        "lat": 40.2337289,
-        "lng": -111.6587085,
+        "lat": 40.2140518,
+        "lng": -111.6583366,
         "address": "1474 S 40th E, Provo, UT 84606"
       },
       {
@@ -13530,8 +13530,8 @@
     "name": "Arby's",
     "category": "sandwiches",
     "address": "1474 S 40th E, Provo, UT 84606",
-    "lat": 40.2337289,
-    "lng": -111.6587085,
+    "lat": 40.2140518,
+    "lng": -111.6583366,
     "locationRestriction": "Participating Locations",
     "deal": {
       "title": "2-4-1! Classic Roast Beef Sandwich! Valid Particip. Locations",
@@ -13561,8 +13561,8 @@
         "address": "1150 S State St, Orem, UT 84097"
       },
       {
-        "lat": 40.2337289,
-        "lng": -111.6587085,
+        "lat": 40.2140518,
+        "lng": -111.6583366,
         "address": "1474 S 40th E, Provo, UT 84606"
       },
       {
@@ -13641,8 +13641,8 @@
     "name": "Burgers Supreme",
     "category": "sandwiches",
     "address": "1796 N University Pkwy, Provo, UT 84604",
-    "lat": 40.2337289,
-    "lng": -111.6587085,
+    "lat": 40.2582555,
+    "lng": -111.6615084,
     "locationRestriction": "",
     "deal": {
       "title": "Buy Any Burger or Sandwich Get 1 FREE!",
@@ -13662,8 +13662,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2337289,
-        "lng": -111.6587085,
+        "lat": 40.2582555,
+        "lng": -111.6615084,
         "address": "1796 N University Pkwy, Provo, UT 84604"
       }
     ]
@@ -13694,13 +13694,13 @@
     ],
     "locations": [
       {
-        "lat": 40.2981599,
-        "lng": -111.6944313,
+        "lat": 40.3215373,
+        "lng": -111.7063945,
         "address": "1331 N State St, Orem, UT 84057"
       },
       {
-        "lat": 40.3881114,
-        "lng": -111.8486019,
+        "lat": 40.3893751,
+        "lng": -111.8270995,
         "address": "3536 N Maple Loop Dr, Lehi, UT 84043"
       },
       {
@@ -13736,13 +13736,13 @@
     ],
     "locations": [
       {
-        "lat": 40.2981599,
-        "lng": -111.6944313,
+        "lat": 40.3215373,
+        "lng": -111.7063945,
         "address": "1331 N State St, Orem, UT 84057"
       },
       {
-        "lat": 40.3881114,
-        "lng": -111.8486019,
+        "lat": 40.3893751,
+        "lng": -111.8270995,
         "address": "3536 N Maple Loop Dr, Lehi, UT 84043"
       },
       {
@@ -13778,13 +13778,13 @@
     ],
     "locations": [
       {
-        "lat": 40.2981599,
-        "lng": -111.6944313,
+        "lat": 40.3215373,
+        "lng": -111.7063945,
         "address": "1331 N State St, Orem, UT 84057"
       },
       {
-        "lat": 40.3881114,
-        "lng": -111.8486019,
+        "lat": 40.3893751,
+        "lng": -111.8270995,
         "address": "3536 N Maple Loop Dr, Lehi, UT 84043"
       },
       {
@@ -13862,8 +13862,8 @@
         "address": "1211 W 800 N, Orem, UT 84057"
       },
       {
-        "lat": 40.3881114,
-        "lng": -111.8486019,
+        "lat": 40.3881117,
+        "lng": -111.8284734,
         "address": "1374 E Main St, Lehi, UT 84043"
       }
     ]
@@ -14199,8 +14199,8 @@
     "name": "Ike's",
     "category": "sandwiches",
     "address": "1195 E Main St, Lehi, UT 84043",
-    "lat": 40.3881114,
-    "lng": -111.8486019,
+    "lat": 40.389009,
+    "lng": -111.830869,
     "locationRestriction": "Lehi",
     "deal": {
       "title": "2-4-1! Sandwich!",
@@ -14220,8 +14220,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3881114,
-        "lng": -111.8486019,
+        "lat": 40.389009,
+        "lng": -111.830869,
         "address": "1195 E Main St, Lehi, UT 84043"
       }
     ]
@@ -14263,8 +14263,8 @@
     "name": "Jamba Juice",
     "category": "sandwiches",
     "address": "1774 N University Pkwy Ste 60, Provo, UT 84604",
-    "lat": 40.2337289,
-    "lng": -111.6587085,
+    "lat": 40.2794106,
+    "lng": -111.7178868,
     "locationRestriction": "Provo (University PKWY) UVU Campus Draper & WJ",
     "deal": {
       "title": "2-4-1! Sandwich or Wrap!",
@@ -14284,13 +14284,13 @@
     ],
     "locations": [
       {
-        "lat": 40.2337289,
-        "lng": -111.6587085,
+        "lat": 40.2481866,
+        "lng": -111.654986,
         "address": "1774 N University Pkwy Ste 60, Provo, UT 84604"
       },
       {
-        "lat": 40.2981599,
-        "lng": -111.6944313,
+        "lat": 40.2794106,
+        "lng": -111.7178868,
         "address": "800 W University Pkwy (UVU Campus), Orem, UT 84058"
       },
       {
@@ -15255,8 +15255,8 @@
         "address": "215 W Center St, Orem, UT 84058"
       },
       {
-        "lat": 40.2981599,
-        "lng": -111.6944313,
+        "lat": 40.2966929,
+        "lng": -111.7006966,
         "address": "997 N State St, Orem, UT 84057"
       },
       {
@@ -15327,8 +15327,8 @@
         "address": "215 W Center St, Orem, UT 84058"
       },
       {
-        "lat": 40.2981599,
-        "lng": -111.6944313,
+        "lat": 40.2966929,
+        "lng": -111.7006966,
         "address": "997 N State St, Orem, UT 84057"
       },
       {
