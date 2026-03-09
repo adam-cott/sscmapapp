@@ -4,6 +4,7 @@ import { ALL_CATEGORIES } from '../../constants/categories'
 export default function MapLegend() {
   return (
     <div
+      className="hidden md:block"
       style={{
         position: 'absolute',
         bottom: '28px',

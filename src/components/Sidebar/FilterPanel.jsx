@@ -14,8 +14,8 @@ export default function FilterPanel({ activeCategories, onToggle, onClear, compa
     })),
   ]
 
-  return (
-    <div className={`flex gap-1.5 ${compact ? 'overflow-x-auto' : 'flex-wrap'}`}
+  const chipRow = (
+    <div className={`flex gap-1.5 ${compact ? 'overflow-x-auto flex-nowrap' : 'flex-wrap'}`}
       style={{ scrollbarWidth: 'none' }}
     >
       {chips.map(({ key, label, icon, color }) => {
@@ -40,4 +40,9 @@ export default function FilterPanel({ activeCategories, onToggle, onClear, compa
       })}
     </div>
   )
+
+  if (compact) {
+    return <div className="filter-scroll-container">{chipRow}</div>
+  }
+  return chipRow
 }

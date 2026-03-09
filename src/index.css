@@ -33,6 +33,32 @@ h1, h2, h3, h4, h5 {
   display: none !important;
 }
 
+/* ─── Mobile: move zoom controls to bottom-right ─── */
+@media (max-width: 768px) {
+  .leaflet-top.leaflet-left {
+    top: auto;
+    left: auto;
+    bottom: 120px;
+    right: 10px;
+  }
+}
+
+/* ─── Filter chip scroll fade ────────────────────── */
+.filter-scroll-container {
+  position: relative;
+  overflow: hidden;
+}
+.filter-scroll-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 100%;
+  background: linear-gradient(to right, transparent, #ffffff);
+  pointer-events: none;
+}
+
 /* ─── Leaflet fixes ──────────────────────────────── */
 .leaflet-container img {
   max-width: none !important;
