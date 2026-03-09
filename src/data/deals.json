@@ -4950,8 +4950,8 @@
     "name": "Provo Canyon Adventures",
     "category": "entertainment",
     "address": "3249 E Provo Canyon Rd, Provo, UT 84604",
-    "lat": 40.2337289,
-    "lng": -111.6587085,
+    "lat": 40.3765955698895,
+    "lng": -111.55527264582324,
     "locationRestriction": "Provo Canyon",
     "deal": {
       "title": "2-4-1! Zipline Tour! Appt. Req. Please Tip",
@@ -4971,8 +4971,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2337289,
-        "lng": -111.6587085,
+        "lat": 40.3765955698895,
+        "lng": -111.55527264582324,
         "address": "3249 E Provo Canyon Rd, Provo, UT 84604"
       }
     ]
@@ -8571,8 +8571,8 @@
         "address": "863 S North County Blvd, Pleasant Grove, UT 84062"
       },
       {
-        "lat": 40.3881114,
-        "lng": -111.8486019,
+        "lat": 40.41223,
+        "lng": -111.77303,
         "address": "2851 W Club House Dr, Lehi, UT 84043"
       },
       {
@@ -11226,11 +11226,6 @@
         "address": "1513 N Town Centre Blvd, Provo, UT 84604"
       },
       {
-        "lat": 40.2981599,
-        "lng": -111.6944313,
-        "address": "1490 S State St, Orem, UT 84097"
-      },
-      {
         "lat": 40.3661727,
         "lng": -111.7407528,
         "address": "436 S Main St, Pleasant Grove, UT 84062"
@@ -11562,8 +11557,8 @@
         "address": "863 S North County Blvd, Pleasant Grove, UT 84062"
       },
       {
-        "lat": 40.3881114,
-        "lng": -111.8486019,
+        "lat": 40.41223,
+        "lng": -111.77303,
         "address": "2851 W Club House Dr, Lehi, UT 84043"
       },
       {
@@ -11604,8 +11599,8 @@
         "address": "863 S North County Blvd, Pleasant Grove, UT 84062"
       },
       {
-        "lat": 40.3881114,
-        "lng": -111.8486019,
+        "lat": 40.41223,
+        "lng": -111.77303,
         "address": "2851 W Club House Dr, Lehi, UT 84043"
       },
       {
@@ -14764,8 +14759,8 @@
         "address": "863 S North County Blvd, Pleasant Grove, UT 84062"
       },
       {
-        "lat": 40.3881114,
-        "lng": -111.8486019,
+        "lat": 40.41223,
+        "lng": -111.77303,
         "address": "2851 W Club House Dr, Lehi, UT 84043"
       },
       {
