@@ -13,6 +13,7 @@ import BottomSheet from './components/BottomSheet/BottomSheet'
 import LocationPicker from './components/LocationPicker/LocationPicker'
 import ConfirmDialog from './components/UI/ConfirmDialog'
 import UndoToast from './components/UI/UndoToast'
+import LocationPrompt from './components/UI/LocationPrompt'
 
 export default function App() {
   const [selectedDeal, setSelectedDeal] = useState(null)
@@ -26,7 +27,7 @@ export default function App() {
   // Geolocation: called once at the top level and threaded via props.
   // The tree is only 2 levels deep on each path (App → ListView → DealCard,
   // App → Sidebar → FilterPanel) so prop drilling is cleaner than a Context.
-  const { coords, loading: geoLoading, permissionDenied } = useGeolocation()
+  const { coords, loading: geoLoading, permissionDenied, hasRequested, requestLocation, decline } = useGeolocation()
 
   const {
     searchQuery,
@@ -226,6 +227,11 @@ export default function App() {
           onUndo={handleUndo}
           onDismiss={dismissToast}
         />
+      )}
+
+      {/* Location permission prompt — shown once on load before geo is requested */}
+      {!hasRequested && (
+        <LocationPrompt onAllow={requestLocation} onDecline={decline} />
       )}
     </div>
   )

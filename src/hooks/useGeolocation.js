@@ -1,18 +1,23 @@
-import { useState, useEffect } from 'react'
+import { useState, useCallback } from 'react'
 
 export function useGeolocation() {
   const [coords, setCoords] = useState(null)
   const [error, setError] = useState(null)
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
   const [permissionDenied, setPermissionDenied] = useState(false)
+  const [hasRequested, setHasRequested] = useState(false)
 
-  useEffect(() => {
+  // Call this when the user taps "Allow" on the in-app prompt.
+  // This triggers the browser's native permission popup.
+  const requestLocation = useCallback(() => {
+    setHasRequested(true)
+
     if (!navigator.geolocation) {
       setPermissionDenied(true)
-      setLoading(false)
       return
     }
 
+    setLoading(true)
     navigator.geolocation.getCurrentPosition(
       (pos) => {
         setCoords({ lat: pos.coords.latitude, lng: pos.coords.longitude })
@@ -30,5 +35,11 @@ export function useGeolocation() {
     )
   }, [])
 
-  return { coords, error, loading, permissionDenied }
+  // Call this when the user taps "Not now".
+  const decline = useCallback(() => {
+    setHasRequested(true)
+    setPermissionDenied(true)
+  }, [])
+
+  return { coords, error, loading, permissionDenied, hasRequested, requestLocation, decline }
 }
