@@ -1,6 +1,6 @@
 import DealCard from './DealCard'
 
-export default function ListView({ deals, onSelectDeal }) {
+export default function ListView({ deals, onSelectDeal, userCoords }) {
   if (deals.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center py-20 px-6 text-center">
@@ -31,7 +31,7 @@ export default function ListView({ deals, onSelectDeal }) {
           className="animate-slide-up"
           style={{ animationDelay: `${i * 30}ms` }}
         >
-          <DealCard deal={deal} onClick={() => onSelectDeal(deal)} />
+          <DealCard deal={deal} onClick={() => onSelectDeal(deal)} userCoords={userCoords} />
         </div>
       ))}
     </div>

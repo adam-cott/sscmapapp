@@ -1,12 +1,16 @@
 import { CATEGORY_COLORS, CATEGORY_LIGHT } from '../../utils/categoryColors'
+import { getNearestDistance, formatDistance } from '../../utils/dealHelpers'
 import Badge from '../UI/Badge'
 
-export default function DealCard({ deal, onClick }) {
+export default function DealCard({ deal, onClick, userCoords }) {
   const { usage } = deal
   const isExhausted = usage.status === 'exhausted'
   const isPartial   = usage.status === 'partial'
   const catColor    = CATEGORY_COLORS[deal.category] || '#64748b'
   const isUnlimited = deal.deal.maxUses === null
+
+  const distanceMiles = getNearestDistance(deal, userCoords)
+  const distanceStr   = distanceMiles !== null ? formatDistance(distanceMiles) : null
 
   return (
     <button
@@ -44,6 +48,13 @@ export default function DealCard({ deal, onClick }) {
           </span>
           <Badge category={deal.category} />
         </div>
+
+        {/* Distance badge */}
+        {distanceStr && (
+          <p className="text-xs mb-1" style={{ color: '#94a3b8' }}>
+            📍 {distanceStr}
+          </p>
+        )}
 
         {/* Deal title */}
         <p

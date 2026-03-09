@@ -3,6 +3,7 @@ import './App.css'
 import dealsData from './data/deals.json'
 import { useDeals } from './hooks/useDeals'
 import { useFilters } from './hooks/useFilters'
+import { useGeolocation } from './hooks/useGeolocation'
 import Header from './components/Header/Header'
 import Sidebar from './components/Sidebar/Sidebar'
 import MapView from './components/Map/MapView'
@@ -22,6 +23,11 @@ export default function App() {
 
   const { dealsWithUsage, usageMap, recordUse, undoUse, resetAll } = useDeals(dealsData)
 
+  // Geolocation: called once at the top level and threaded via props.
+  // The tree is only 2 levels deep on each path (App → ListView → DealCard,
+  // App → Sidebar → FilterPanel) so prop drilling is cleaner than a Context.
+  const { coords, loading: geoLoading, permissionDenied } = useGeolocation()
+
   const {
     searchQuery,
     setSearchQuery,
@@ -29,7 +35,9 @@ export default function App() {
     toggleCategory,
     clearFilters,
     filteredDeals,
-  } = useFilters(dealsWithUsage)
+    sortBy,
+    setSortBy,
+  } = useFilters(dealsWithUsage, coords)
 
   const handleReset = () => setShowResetConfirm(true)
 
@@ -103,10 +111,14 @@ export default function App() {
             onCategoryToggle={toggleCategory}
             onClearFilters={clearFilters}
             dealCount={filteredDeals.length}
+            sortBy={sortBy}
+            setSortBy={setSortBy}
+            permissionDenied={permissionDenied}
+            geoLoading={geoLoading}
           />
           {/* Desktop list view in sidebar */}
           <div className="flex-1 overflow-y-auto">
-            <ListView deals={filteredDeals} onSelectDeal={handleSelectDeal} />
+            <ListView deals={filteredDeals} onSelectDeal={handleSelectDeal} userCoords={coords} />
           </div>
         </aside>
 
@@ -134,10 +146,14 @@ export default function App() {
                 onCategoryToggle={toggleCategory}
                 onClearFilters={clearFilters}
                 dealCount={filteredDeals.length}
+                sortBy={sortBy}
+                setSortBy={setSortBy}
+                permissionDenied={permissionDenied}
+                geoLoading={geoLoading}
                 compact
               />
             </div>
-            <ListView deals={filteredDeals} onSelectDeal={handleSelectDeal} />
+            <ListView deals={filteredDeals} onSelectDeal={handleSelectDeal} userCoords={coords} />
           </div>
 
           {/* Mobile compact filter bar overlay on map */}
@@ -150,6 +166,10 @@ export default function App() {
                 onCategoryToggle={toggleCategory}
                 onClearFilters={clearFilters}
                 dealCount={filteredDeals.length}
+                sortBy={sortBy}
+                setSortBy={setSortBy}
+                permissionDenied={permissionDenied}
+                geoLoading={geoLoading}
                 compact
               />
             </div>

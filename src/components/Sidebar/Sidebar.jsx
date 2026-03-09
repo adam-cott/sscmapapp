@@ -1,5 +1,6 @@
 import SearchBar from './SearchBar'
 import FilterPanel from './FilterPanel'
+import SortControl from './SortControl'
 
 export default function Sidebar({
   searchQuery,
@@ -8,6 +9,10 @@ export default function Sidebar({
   onCategoryToggle,
   onClearFilters,
   dealCount,
+  sortBy,
+  setSortBy,
+  permissionDenied,
+  geoLoading,
   compact = false,
 }) {
   if (compact) {
@@ -19,6 +24,12 @@ export default function Sidebar({
           onToggle={onCategoryToggle}
           onClear={onClearFilters}
           compact
+        />
+        <SortControl
+          sortBy={sortBy}
+          setSortBy={setSortBy}
+          permissionDenied={permissionDenied}
+          geoLoading={geoLoading}
         />
       </div>
     )
@@ -32,7 +43,7 @@ export default function Sidebar({
       </div>
 
       {/* Filters */}
-      <div className="px-4 pb-4">
+      <div className="px-4 pb-3">
         <div
           className="text-xs font-semibold uppercase tracking-widest mb-2"
           style={{ color: '#94a3b8', fontFamily: 'Sora, sans-serif', fontSize: '10px' }}
@@ -43,6 +54,22 @@ export default function Sidebar({
           activeCategories={activeCategories}
           onToggle={onCategoryToggle}
           onClear={onClearFilters}
+        />
+      </div>
+
+      {/* Sort */}
+      <div className="px-4 pb-4">
+        <div
+          className="text-xs font-semibold uppercase tracking-widest mb-2"
+          style={{ color: '#94a3b8', fontFamily: 'Sora, sans-serif', fontSize: '10px' }}
+        >
+          Sort by
+        </div>
+        <SortControl
+          sortBy={sortBy}
+          setSortBy={setSortBy}
+          permissionDenied={permissionDenied}
+          geoLoading={geoLoading}
         />
       </div>
 
