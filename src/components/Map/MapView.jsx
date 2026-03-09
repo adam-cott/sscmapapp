@@ -100,6 +100,7 @@ export default function MapView({ deals, selectedDeal, onSelectDeal, onSelectLoc
           spiderfyOnMaxZoom={true}
           showCoverageOnHover={false}
           removeOutsideVisibleBounds={false}
+          circleSpiralSwitchover={1}
         >
           {pins.map(({ loc, items, key }) => (
             <BusinessMarker
