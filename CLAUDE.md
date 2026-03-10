@@ -1,5 +1,24 @@
 # Starving Student Card Map App — Project Guide
 
+## Product Overview
+
+**Job to be Done:**
+When I buy a Starving Student Card, I want to quickly find deals that are near me right now, so I can actually use the savings I already paid for — instead of forgetting the card exists or not knowing what's nearby.
+
+**Value Proposition:**
+The Starving Student Card Map App turns a physical coupon booklet into a live, location-aware deal finder. Students see all 418 deals on an interactive map, instantly filtered by category and sorted by distance, so they always know what's available nearby and never lose track of how many uses they have left.
+
+**Ideal Customer Profile (ICP):**
+- BYU or UVU student, age 18–24, living near or commuting to Utah County
+- Already purchased the Starving Student Card (~$25) for the academic year
+- Budget-conscious; eats out 3–5 times per week
+- Mobile-first (iPhone or Android); does not use a physical wallet for coupons
+- Pain point: bought the card but forgets to use it, or doesn't know which businesses are close
+
+**Target User:** A hungry college student standing on BYU campus at noon who wants to know — in under 10 seconds — what deals are within walking distance right now.
+
+---
+
 ## What This Is
 
 A mobile-first web app that turns the physical **Starving Student Discount Card** into an interactive map. Users browse 418 real deals across 199 businesses in Utah County and the Wasatch Front, see every valid location as a pin on the map, and track how many times they've used each deal.
