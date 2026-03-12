@@ -162,10 +162,22 @@ h1, h2, h3, h4, h5 {
   0%   { transform: scale(1);   opacity: 0.3; }
   100% { transform: scale(2.2); opacity: 0;   }
 }
-.location-pulse {
+.loc-dot {
+  position: absolute;
+  width: 16px; height: 16px;
+  left: 8px; top: 8px;
+  background: #2563eb;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 1px 6px rgba(37,99,235,0.5);
+}
+.loc-ring {
+  position: absolute;
+  width: 32px; height: 32px;
+  left: 0; top: 0;
+  background: rgba(37, 99, 235, 0.3);
+  border-radius: 50%;
   animation: location-pulse 2s ease-out infinite;
-  transform-box: fill-box;
-  transform-origin: center;
 }
 
 /* ─── Scrollbar styling ──────────────────────────── */
