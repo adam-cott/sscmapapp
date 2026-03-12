@@ -1,7 +1,7 @@
 import { ALL_CATEGORIES } from '../../constants/categories'
 import { CATEGORY_COLORS, CATEGORY_LABELS, CATEGORY_ICON } from '../../utils/categoryColors'
 
-export default function FilterPanel({ activeCategories, onToggle, onClear, compact = false }) {
+export default function FilterPanel({ activeCategories, onToggle, onClear, categoryCounts = {}, compact = false }) {
   const allActive = activeCategories.length === 0
 
   const chips = [
@@ -35,6 +35,7 @@ export default function FilterPanel({ activeCategories, onToggle, onClear, compa
           >
             <span style={{ fontSize: '10px' }}>{icon}</span>
             {label}
+            <span className="opacity-60 text-xs">({categoryCounts[key] ?? 0})</span>
           </button>
         )
       })}

@@ -39,6 +39,7 @@ export default function App() {
     filteredDeals,
     sortBy,
     setSortBy,
+    categoryCounts,
   } = useFilters(dealsWithUsage, coords)
 
   // When coords arrive after the user tapped "Nearest" without location, activate the sort.
@@ -133,6 +134,7 @@ export default function App() {
             geoLoading={geoLoading}
             hasCoords={!!coords}
             onNearestRequest={handleNearestRequest}
+            categoryCounts={categoryCounts}
           />
           {/* Desktop list view in sidebar */}
           <div className="flex-1 overflow-y-auto">
@@ -171,6 +173,7 @@ export default function App() {
                 geoLoading={geoLoading}
                 hasCoords={!!coords}
                 onNearestRequest={handleNearestRequest}
+                categoryCounts={categoryCounts}
                 compact
               />
             </div>
@@ -193,6 +196,7 @@ export default function App() {
                 geoLoading={geoLoading}
                 hasCoords={!!coords}
                 onNearestRequest={handleNearestRequest}
+                categoryCounts={categoryCounts}
                 compact
               />
             </div>

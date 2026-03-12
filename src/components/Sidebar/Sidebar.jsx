@@ -15,6 +15,7 @@ export default function Sidebar({
   geoLoading,
   hasCoords,
   onNearestRequest,
+  categoryCounts,
   compact = false,
 }) {
   if (compact) {
@@ -25,6 +26,7 @@ export default function Sidebar({
           activeCategories={activeCategories}
           onToggle={onCategoryToggle}
           onClear={onClearFilters}
+          categoryCounts={categoryCounts}
           compact
         />
         <SortControl
@@ -58,6 +60,7 @@ export default function Sidebar({
           activeCategories={activeCategories}
           onToggle={onCategoryToggle}
           onClear={onClearFilters}
+          categoryCounts={categoryCounts}
         />
       </div>
 

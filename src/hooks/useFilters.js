@@ -37,6 +37,17 @@ export function useFilters(deals, userCoords) {
     setActiveCategories([])
   }, [])
 
+  // Counts per category based on search query only (category filter excluded so
+  // each chip always shows how many deals exist in that category for the current search).
+  const categoryCounts = useMemo(() => {
+    const searchOnly = filterDeals(deals, searchQuery, [])
+    const counts = { all: searchOnly.length }
+    searchOnly.forEach(deal => {
+      counts[deal.category] = (counts[deal.category] ?? 0) + 1
+    })
+    return counts
+  }, [deals, searchQuery])
+
   const filteredDeals = useMemo(() => {
     const filtered = filterDeals(deals, searchQuery, activeCategories)
     const sorted = [...filtered]
@@ -79,5 +90,6 @@ export function useFilters(deals, userCoords) {
     filteredDeals,
     sortBy,
     setSortBy,
+    categoryCounts,
   }
 }
