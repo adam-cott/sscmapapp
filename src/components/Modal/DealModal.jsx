@@ -187,7 +187,7 @@ export default function DealModal({ deal, onUse, onClose }) {
             onMouseEnter={e => { if (!isExhausted) e.currentTarget.style.backgroundColor = '#047857' }}
             onMouseLeave={e => { if (!isExhausted) e.currentTarget.style.backgroundColor = '#059669' }}
           >
-            {isExhausted ? '✓ Fully Redeemed' : 'Use This Deal'}
+            {isExhausted ? 'No Uses Remaining' : 'Use This Deal'}
           </button>
         </div>
       </div>

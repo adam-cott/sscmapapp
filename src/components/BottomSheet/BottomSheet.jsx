@@ -162,7 +162,7 @@ export default function BottomSheet({ deal, onUse, onClose }) {
               cursor: isExhausted ? 'not-allowed' : 'pointer',
             }}
           >
-            {isExhausted ? '✓ Fully Redeemed' : 'Use This Deal'}
+            {isExhausted ? 'No Uses Remaining' : 'Use This Deal'}
           </button>
         </div>
       </div>

@@ -12,7 +12,7 @@ import DealModal from './components/Modal/DealModal'
 import BottomSheet from './components/BottomSheet/BottomSheet'
 import LocationPicker from './components/LocationPicker/LocationPicker'
 import ConfirmDialog from './components/UI/ConfirmDialog'
-import UndoToast from './components/UI/UndoToast'
+import UseToast from './components/UI/UseToast'
 import LocationPrompt from './components/UI/LocationPrompt'
 
 export default function App() {
@@ -20,9 +20,9 @@ export default function App() {
   const [selectedLocation, setSelectedLocation] = useState(null)
   const [showResetConfirm, setShowResetConfirm] = useState(false)
   const [activeView, setActiveView] = useState('map')
-  const [pendingUndo, setPendingUndo] = useState(null) // { dealId, prevDeal }
+  const [showUseToast, setShowUseToast] = useState(false)
 
-  const { dealsWithUsage, usageMap, recordUse, undoUse, resetAll } = useDeals(dealsData)
+  const { dealsWithUsage, usageMap, recordUse, resetAll } = useDeals(dealsData)
 
   // Geolocation: called once at the top level and threaded via props.
   // The tree is only 2 levels deep on each path (App → ListView → DealCard,
@@ -50,7 +50,6 @@ export default function App() {
 
   const handleUse = (dealId) => {
     recordUse(dealId)
-    // Update selectedDeal reference so modal reflects new usage immediately
     setSelectedDeal(prev => {
       if (!prev) return null
       const updated = dealsWithUsage.find(d => d.id === dealId)
@@ -58,7 +57,7 @@ export default function App() {
       const newUsedCount = (usageMap[dealId] ?? 0) + 1
       const isUnlimited = updated.deal.maxUses === null
       const newRemaining = isUnlimited ? null : Math.max(0, updated.deal.maxUses - newUsedCount)
-      const nextDeal = {
+      return {
         ...updated,
         usage: {
           usedCount: newUsedCount,
@@ -66,19 +65,9 @@ export default function App() {
           status: (!isUnlimited && newRemaining === 0) ? 'exhausted' : 'partial',
         },
       }
-      setPendingUndo({ dealId, prevDeal: prev })
-      return nextDeal
     })
+    setShowUseToast(true)
   }
-
-  const handleUndo = () => {
-    if (!pendingUndo) return
-    undoUse(pendingUndo.dealId)
-    setSelectedDeal(pendingUndo.prevDeal)
-    setPendingUndo(null)
-  }
-
-  const dismissToast = () => setPendingUndo(null)
 
   const handleSelectDeal = (deal) => {
     setSelectedDeal(deal)
@@ -220,13 +209,9 @@ export default function App() {
         />
       )}
 
-      {/* Undo toast */}
-      {pendingUndo && (
-        <UndoToast
-          message="Deal marked as used"
-          onUndo={handleUndo}
-          onDismiss={dismissToast}
-        />
+      {/* Use confirmation toast */}
+      {showUseToast && (
+        <UseToast onDismiss={() => setShowUseToast(false)} />
       )}
 
       {/* Location permission prompt — shown once on load before geo is requested */}
