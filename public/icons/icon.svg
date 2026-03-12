@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Background — full bleed so maskable safe zone (80%) is respected -->
+  <rect width="512" height="512" fill="#0170B9"/>
+  <!-- Map pin: body -->
+  <path d="M256 112c-66.3 0-120 53.7-120 120 0 83 120 196 120 196s120-113 120-196c0-66.3-53.7-120-120-120z" fill="white"/>
+  <!-- Map pin: inner circle cutout -->
+  <circle cx="256" cy="232" r="44" fill="#0170B9"/>
+</svg>

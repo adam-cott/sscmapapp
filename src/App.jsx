@@ -14,6 +14,7 @@ import LocationPicker from './components/LocationPicker/LocationPicker'
 import ConfirmDialog from './components/UI/ConfirmDialog'
 import UseToast from './components/UI/UseToast'
 import LocationPrompt from './components/UI/LocationPrompt'
+import UpdatePrompt from './components/UI/UpdatePrompt'
 
 export default function App() {
   const [selectedDeal, setSelectedDeal] = useState(null)
@@ -255,6 +256,9 @@ export default function App() {
       {!hasRequested && (
         <LocationPrompt onAllow={requestLocation} onDecline={decline} />
       )}
+
+      {/* PWA update prompt — shown when a new service worker is waiting */}
+      <UpdatePrompt />
     </div>
   )
 }
