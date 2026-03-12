@@ -123,13 +123,8 @@ export default function MapView({ deals, selectedDeal, onSelectDeal, onSelectLoc
               loc={loc}
               items={items}
               isSelected={items.some(i => i.deal.id === selectedDeal?.id)}
-              onClick={() => {
-                if (items.length === 1) {
-                  onSelectDeal({ ...items[0].deal, lat: loc.lat, lng: loc.lng, address: loc.address })
-                } else {
-                  onSelectLocation({ loc, items })
-                }
-              }}
+              onSelectDeal={onSelectDeal}
+              onSelectLocation={onSelectLocation}
             />
           ))}
         </MarkerClusterGroup>

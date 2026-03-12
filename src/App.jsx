@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import './App.css'
 import dealsData from './data/deals.json'
 import { useDeals } from './hooks/useDeals'
@@ -97,18 +97,18 @@ export default function App() {
     setShowUseToast(true)
   }
 
-  const handleSelectDeal = (deal) => {
+  const handleSelectDeal = useCallback((deal) => {
     setSelectedDeal(deal)
-  }
+  }, [])
 
-  const handleSelectLocation = (location) => {
+  const handleSelectLocation = useCallback((location) => {
     setSelectedLocation(location)
-  }
+  }, [])
 
-  const handleSelectFromPicker = (deal) => {
+  const handleSelectFromPicker = useCallback((deal) => {
     setSelectedLocation(null)
     setSelectedDeal(deal)
-  }
+  }, [])
 
   return (
     <div className="flex flex-col h-screen overflow-hidden" style={{ backgroundColor: '#f0f4f8' }}>

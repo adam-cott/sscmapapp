@@ -1,10 +1,10 @@
+import { memo, useMemo, useCallback } from 'react'
 import { Marker, Popup } from 'react-leaflet'
-import { useMemo } from 'react'
 import L from 'leaflet'
 import { createMarkerIcon } from '../../utils/markerIcons'
 import { CATEGORY_COLORS, CATEGORY_LABELS, CATEGORY_LIGHT } from '../../utils/categoryColors'
 
-export default function BusinessMarker({ loc, items, isSelected, onClick }) {
+const BusinessMarker = memo(function BusinessMarker({ loc, items, isSelected, onSelectDeal, onSelectLocation }) {
   const isSingle = items.length === 1
   const { deal, usageState } = items[0]
 
@@ -29,11 +29,22 @@ export default function BusinessMarker({ loc, items, isSelected, onClick }) {
     })
   }, [isSingle, deal.category, usageState.status, isSelected, items.length, isExhausted, catColor])
 
+  const handleClick = useCallback(() => {
+    if (isSingle) {
+      onSelectDeal({ ...deal, lat: loc.lat, lng: loc.lng, address: loc.address })
+    } else {
+      onSelectLocation({ loc, items })
+    }
+  }, [isSingle, deal, loc, items, onSelectDeal, onSelectLocation])
+
+  // Memoize the eventHandlers object so its reference is stable between renders.
+  const eventHandlers = useMemo(() => ({ click: handleClick }), [handleClick])
+
   return (
     <Marker
       position={[loc.lat, loc.lng]}
       icon={icon}
-      eventHandlers={{ click: onClick }}
+      eventHandlers={eventHandlers}
     >
       <Popup>
         {isSingle ? (
@@ -62,7 +73,7 @@ export default function BusinessMarker({ loc, items, isSelected, onClick }) {
                 )}
               </div>
               <button
-                onClick={onClick}
+                onClick={handleClick}
                 style={{ display: 'block', width: '100%', padding: '7px', background: isExhausted ? '#f1f5f9' : '#0170B9', color: isExhausted ? '#94a3b8' : 'white', border: 'none', borderRadius: '8px', cursor: isExhausted ? 'default' : 'pointer', fontSize: '12px', fontWeight: '600', fontFamily: 'Sora, sans-serif', letterSpacing: '0.01em' }}
               >
                 {isExhausted ? 'Fully Redeemed' : 'View Deal →'}
@@ -80,7 +91,7 @@ export default function BusinessMarker({ loc, items, isSelected, onClick }) {
                 {items.length} deals at this location
               </div>
               <button
-                onClick={onClick}
+                onClick={handleClick}
                 style={{ display: 'block', width: '100%', padding: '7px', background: catColor, color: 'white', border: 'none', borderRadius: '8px', cursor: 'pointer', fontSize: '12px', fontWeight: '600', fontFamily: 'Sora, sans-serif', letterSpacing: '0.01em' }}
               >
                 View All Deals →
@@ -91,4 +102,6 @@ export default function BusinessMarker({ loc, items, isSelected, onClick }) {
       </Popup>
     </Marker>
   )
-}
+})
+
+export default BusinessMarker
