@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import dealsData from './data/deals.json'
 import { useDeals } from './hooks/useDeals'
@@ -21,6 +21,7 @@ export default function App() {
   const [showResetConfirm, setShowResetConfirm] = useState(false)
   const [activeView, setActiveView] = useState('map')
   const [showUseToast, setShowUseToast] = useState(false)
+  const [pendingNearest, setPendingNearest] = useState(false)
 
   const { dealsWithUsage, usageMap, recordUse, resetAll } = useDeals(dealsData)
 
@@ -39,6 +40,31 @@ export default function App() {
     sortBy,
     setSortBy,
   } = useFilters(dealsWithUsage, coords)
+
+  // When coords arrive after the user tapped "Nearest" without location, activate the sort.
+  useEffect(() => {
+    if (coords && pendingNearest) {
+      setSortBy('nearest')
+      setPendingNearest(false)
+    }
+  }, [coords, pendingNearest])
+
+  // If permission gets denied while waiting, clear the pending flag.
+  useEffect(() => {
+    if (permissionDenied) setPendingNearest(false)
+  }, [permissionDenied])
+
+  // Wrap setSortBy so picking a non-nearest sort while pending cancels the pending request.
+  const handleSetSortBy = (val) => {
+    if (val !== 'nearest') setPendingNearest(false)
+    setSortBy(val)
+  }
+
+  // Called by SortControl when "Nearest" is tapped without coords available.
+  const handleNearestRequest = () => {
+    setPendingNearest(true)
+    if (!geoLoading) requestLocation()
+  }
 
   const handleReset = () => setShowResetConfirm(true)
 
@@ -102,9 +128,11 @@ export default function App() {
             onClearFilters={clearFilters}
             dealCount={filteredDeals.length}
             sortBy={sortBy}
-            setSortBy={setSortBy}
+            setSortBy={handleSetSortBy}
             permissionDenied={permissionDenied}
             geoLoading={geoLoading}
+            hasCoords={!!coords}
+            onNearestRequest={handleNearestRequest}
           />
           {/* Desktop list view in sidebar */}
           <div className="flex-1 overflow-y-auto">
@@ -138,9 +166,11 @@ export default function App() {
                 onClearFilters={clearFilters}
                 dealCount={filteredDeals.length}
                 sortBy={sortBy}
-                setSortBy={setSortBy}
+                setSortBy={handleSetSortBy}
                 permissionDenied={permissionDenied}
                 geoLoading={geoLoading}
+                hasCoords={!!coords}
+                onNearestRequest={handleNearestRequest}
                 compact
               />
             </div>
@@ -158,9 +188,11 @@ export default function App() {
                 onClearFilters={clearFilters}
                 dealCount={filteredDeals.length}
                 sortBy={sortBy}
-                setSortBy={setSortBy}
+                setSortBy={handleSetSortBy}
                 permissionDenied={permissionDenied}
                 geoLoading={geoLoading}
+                hasCoords={!!coords}
+                onNearestRequest={handleNearestRequest}
                 compact
               />
             </div>

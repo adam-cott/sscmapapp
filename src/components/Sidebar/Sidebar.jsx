@@ -13,6 +13,8 @@ export default function Sidebar({
   setSortBy,
   permissionDenied,
   geoLoading,
+  hasCoords,
+  onNearestRequest,
   compact = false,
 }) {
   if (compact) {
@@ -30,6 +32,8 @@ export default function Sidebar({
           setSortBy={setSortBy}
           permissionDenied={permissionDenied}
           geoLoading={geoLoading}
+          hasCoords={hasCoords}
+          onNearestRequest={onNearestRequest}
         />
       </div>
     )
@@ -70,6 +74,8 @@ export default function Sidebar({
           setSortBy={setSortBy}
           permissionDenied={permissionDenied}
           geoLoading={geoLoading}
+          hasCoords={hasCoords}
+          onNearestRequest={onNearestRequest}
         />
       </div>
 
