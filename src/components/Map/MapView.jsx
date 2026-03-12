@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import { MapContainer, TileLayer, useMapEvents } from 'react-leaflet'
+import { MapContainer, TileLayer, useMapEvents, CircleMarker, Pane } from 'react-leaflet'
 import MarkerClusterGroup from 'react-leaflet-cluster'
 import L from 'leaflet'
 import BusinessMarker from './BusinessMarker'
@@ -58,7 +58,7 @@ function AutoSpiderfy() {
   return null
 }
 
-export default function MapView({ deals, selectedDeal, onSelectDeal, onSelectLocation, usageMap }) {
+export default function MapView({ deals, selectedDeal, onSelectDeal, onSelectLocation, usageMap, userCoords }) {
   // Group pins by unique coordinate — one pin per physical location
   const pins = useMemo(() => {
     const byCoord = new Map()
@@ -93,6 +93,24 @@ export default function MapView({ deals, selectedDeal, onSelectDeal, onSelectLoc
           maxZoom={MAX_ZOOM}
         />
         <AutoSpiderfy />
+        <Pane name="location-dot" style={{ zIndex: 650 }}>
+          {userCoords && (
+            <>
+              <CircleMarker
+                center={[userCoords.lat, userCoords.lng]}
+                radius={16}
+                pathOptions={{ fillColor: '#2563eb', fillOpacity: 0.3, stroke: false, className: 'location-pulse' }}
+                interactive={false}
+              />
+              <CircleMarker
+                center={[userCoords.lat, userCoords.lng]}
+                radius={8}
+                pathOptions={{ fillColor: '#2563eb', fillOpacity: 1, color: 'white', weight: 2 }}
+                interactive={false}
+              />
+            </>
+          )}
+        </Pane>
         <MarkerClusterGroup
           iconCreateFunction={createClusterIcon}
           chunkedLoading

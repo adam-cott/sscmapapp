@@ -122,6 +122,7 @@ export default function App() {
               onSelectDeal={handleSelectDeal}
               onSelectLocation={handleSelectLocation}
               usageMap={usageMap}
+              userCoords={coords}
             />
           </div>
 
