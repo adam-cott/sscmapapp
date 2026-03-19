@@ -354,8 +354,8 @@
     "name": "Gurus Cafe",
     "category": "pizza",
     "address": "45 E Center St, Provo, UT 84606",
-    "lat": 40.2336801,
-    "lng": -111.6449393,
+    "lat": 40.2339466845662,
+    "lng": -111.6578233564704,
     "locationRestriction": "Provo Center St & UVU",
     "deal": {
       "title": "Buy 1 Pizza Get 1 FREE!",
@@ -375,8 +375,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2335632,
-        "lng": -111.6369158,
+        "lat": 40.2339466845662,
+        "lng": -111.6578233564704,
         "address": "45 E Center St, Provo, UT 84606"
       }
     ]
@@ -1301,8 +1301,8 @@
     "name": "Bumblebees KBBQ & Grill",
     "category": "restaurants",
     "address": "1254 N State St, Provo, UT 84604",
-    "lat": 40.2512738,
-    "lng": -111.6676584,
+    "lat": 40.25119584068885,
+    "lng": -111.6661052608262,
     "locationRestriction": "All Locations",
     "deal": {
       "title": "2-4-1! Any Entree or Menu Item! All Locations",
@@ -1327,8 +1327,8 @@
         "address": "7962 S State St, Midvale, UT 84047"
       },
       {
-        "lat": 40.2512738,
-        "lng": -111.6676584,
+        "lat": 40.25119584068885,
+        "lng": -111.6661052608262,
         "address": "1254 N State St, Provo, UT 84604"
       }
     ]
@@ -1338,8 +1338,8 @@
     "name": "Bumblebees KBBQ & Grill",
     "category": "restaurants",
     "address": "1254 N State St, Provo, UT 84604",
-    "lat": 40.2512738,
-    "lng": -111.6676584,
+    "lat": 40.25119584068885,
+    "lng": -111.6661052608262,
     "locationRestriction": "All Locations",
     "deal": {
       "title": "Buy 1 K-pop Fries K-Philly K-Noodles Or Dup Pop 2 Drinks Get 1 FREE!",
@@ -1364,8 +1364,8 @@
         "address": "7962 S State St, Midvale, UT 84047"
       },
       {
-        "lat": 40.2512738,
-        "lng": -111.6676584,
+        "lat": 40.25119584068885,
+        "lng": -111.6661052608262,
         "address": "1254 N State St, Provo, UT 84604"
       }
     ]
@@ -1375,8 +1375,8 @@
     "name": "Carrabba's Italian Grill",
     "category": "restaurants",
     "address": "683 University Pkwy, Orem, UT 84097",
-    "lat": 40.2732755,
-    "lng": -111.6792757,
+    "lat": 40.27365116178191,
+    "lng": -111.67942940091054,
     "locationRestriction": "",
     "deal": {
       "title": "Buy 2 Entrees Get a Dessert or Appetizer FREE!",
@@ -1396,8 +1396,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2732755,
-        "lng": -111.6792757,
+        "lat": 40.27365116178191,
+        "lng": -111.67942940091054,
         "address": "683 University Pkwy, Orem, UT 84097"
       }
     ]
@@ -1698,9 +1698,9 @@
     "id": "restaurants-046",
     "name": "Denny's",
     "category": "restaurants",
-    "address": "1765 N Freedom Blvd, Provo, UT 84604",
-    "lat": 40.2637838,
-    "lng": -111.6612798,
+    "address": "1680 Freedom Blvd 200 W, Provo, UT 84601",
+    "lat": 40.25685140156715,
+    "lng": -111.66152000437961,
     "locationRestriction": "Participating Locs",
     "deal": {
       "title": "Kids Eat FREE! Up to 2 Kids Per Paying Adult Anytime!",
@@ -1725,9 +1725,9 @@
         "address": "1194 N State St, Orem, UT 84057"
       },
       {
-        "lat": 40.2637838,
-        "lng": -111.6612798,
-        "address": "1765 N Freedom Blvd, Provo, UT 84604"
+        "lat": 40.25685140156715,
+        "lng": -111.66152000437961,
+        "address": "1680 Freedom Blvd 200 W, Provo, UT 84601"
       },
       {
         "lat": 40.3893751,
@@ -2160,8 +2160,8 @@
     "name": "Gurus Cafe",
     "category": "restaurants",
     "address": "45 E Center St, Provo, UT 84606",
-    "lat": 40.2336801,
-    "lng": -111.6449393,
+    "lat": 40.2339466845662,
+    "lng": -111.6578233564704,
     "locationRestriction": "Provo Center St & UVU",
     "deal": {
       "title": "Buy Any Breakfast Entree Get One FREE!",
@@ -2181,8 +2181,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2335632,
-        "lng": -111.6369158,
+        "lat": 40.2339466845662,
+        "lng": -111.6578233564704,
         "address": "45 E Center St, Provo, UT 84606"
       }
     ]
@@ -2192,8 +2192,8 @@
     "name": "Gurus Cafe",
     "category": "restaurants",
     "address": "45 E Center St, Provo, UT 84606",
-    "lat": 40.2336801,
-    "lng": -111.6449393,
+    "lat": 40.2339466845662,
+    "lng": -111.6578233564704,
     "locationRestriction": "Provo Center St & UVU",
     "deal": {
       "title": "Buy Lunch or Dinner Entree & 2 Drinks Get Entree FREE!",
@@ -2213,8 +2213,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2335632,
-        "lng": -111.6369158,
+        "lat": 40.2339466845662,
+        "lng": -111.6578233564704,
         "address": "45 E Center St, Provo, UT 84606"
       }
     ]
@@ -2426,8 +2426,8 @@
     "name": "Los Hermanos",
     "category": "restaurants",
     "address": "1 E Center St, Provo, UT 84606",
-    "lat": 40.2336801,
-    "lng": -111.6449393,
+    "lat": 40.23426538165347,
+    "lng": -111.6578900632151,
     "locationRestriction": "",
     "deal": {
       "title": "Buy 1 Entree & 2 Drinks Get One Entree FREE! Up to $15",
@@ -2447,8 +2447,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2336383,
-        "lng": -111.6410709,
+        "lat": 40.23426538165347,
+        "lng": -111.6578900632151,
         "address": "1 E Center St, Provo, UT 84606"
       },
       {
@@ -4982,8 +4982,8 @@
     "name": "Quarry Indoor Climbing Center",
     "category": "entertainment",
     "address": "2494 N University Pkwy, Provo, UT 84604",
-    "lat": 40.262524,
-    "lng": -111.6666108,
+    "lat": 40.26726310514774,
+    "lng": -111.66997377503452,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Day Pass! Not Valid Mon or Sat After 6pm",
@@ -5003,8 +5003,8 @@
     ],
     "locations": [
       {
-        "lat": 40.262524,
-        "lng": -111.6666108,
+        "lat": 40.26726310514774,
+        "lng": -111.66997377503452,
         "address": "2494 N University Pkwy, Provo, UT 84604"
       }
     ]
@@ -5902,9 +5902,9 @@
     "id": "retail-168",
     "name": "Chiropractic Access Accident Center",
     "category": "retail",
-    "address": "2230 N University Pkwy Bldg 5 Ste A, Provo, UT 84604",
-    "lat": 40.2626545,
-    "lng": -111.6670471,
+    "address": "2230 N University Pkwy Building 5 Ste A, Provo, UT 84604",
+    "lat": 40.26207632658109,
+    "lng": -111.66526782984613,
     "locationRestriction": "All Locations",
     "deal": {
       "title": "Buy 1 Chiropractic Adjustment or Acupuncture Treatment For Only $15!",
@@ -5924,9 +5924,9 @@
     ],
     "locations": [
       {
-        "lat": 40.2626545,
-        "lng": -111.6670471,
-        "address": "2230 N University Pkwy Bldg 5 Ste A, Provo, UT 84604"
+        "lat": 40.26207632658109,
+        "lng": -111.66526782984613,
+        "address": "2230 N University Pkwy Building 5 Ste A, Provo, UT 84604"
       },
       {
         "lat": 40.3810479,
@@ -5949,9 +5949,9 @@
     "id": "retail-169",
     "name": "Chiropractic Access Accident Center",
     "category": "retail",
-    "address": "2230 N University Pkwy Bldg 5 Ste A, Provo, UT 84604",
-    "lat": 40.2626545,
-    "lng": -111.6670471,
+    "address": "2230 N University Pkwy Building 5 Ste A, Provo, UT 84604",
+    "lat": 40.26207632658109,
+    "lng": -111.66526782984613,
     "locationRestriction": "All Locations",
     "deal": {
       "title": "Ozone Injection for Only $30!",
@@ -5971,9 +5971,9 @@
     ],
     "locations": [
       {
-        "lat": 40.2626545,
-        "lng": -111.6670471,
-        "address": "2230 N University Pkwy Bldg 5 Ste A, Provo, UT 84604"
+        "lat": 40.26207632658109,
+        "lng": -111.66526782984613,
+        "address": "2230 N University Pkwy Building 5 Ste A, Provo, UT 84604"
       },
       {
         "lat": 40.3810479,
@@ -6026,11 +6026,11 @@
   },
   {
     "id": "retail-171",
-    "name": "Durley Dry Cleaners",
+    "name": "Durfey Dry Cleaners",
     "category": "retail",
     "address": "445 N 900 E, Provo, UT 84606",
-    "lat": 40.2334109,
-    "lng": -111.6431945,
+    "lat": 40.240209852914134,
+    "lng": -111.64381544805768,
     "locationRestriction": "All UT Only",
     "deal": {
       "title": "2-4-1! Dry Cleaned or Laundered Item! Up to $20",
@@ -6060,8 +6060,8 @@
         "address": "325 S Main St, Pleasant Grove, UT 84062"
       },
       {
-        "lat": 40.2432398,
-        "lng": -111.6431545,
+        "lat": 40.240209852914134,
+        "lng": -111.64381544805768,
         "address": "445 N 900 E, Provo, UT 84606"
       },
       {
@@ -8762,8 +8762,8 @@
     "name": "Parlor Doughnuts",
     "category": "free",
     "address": "2319 N 400 W, Provo, UT 84604",
-    "lat": 40.2824014,
-    "lng": -111.6650592,
+    "lat": 40.26466998175994,
+    "lng": -111.66681093384041,
     "locationRestriction": "",
     "deal": {
       "title": "FREE! Carnival Doughnut!",
@@ -8783,8 +8783,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2824014,
-        "lng": -111.6650592,
+        "lat": 40.26466998175994,
+        "lng": -111.66681093384041,
         "address": "2319 N 400 W, Provo, UT 84604"
       },
       {
@@ -11311,8 +11311,8 @@
     "name": "Gurus Cafe",
     "category": "treats",
     "address": "45 E Center St, Provo, UT 84606",
-    "lat": 40.2336801,
-    "lng": -111.6449393,
+    "lat": 40.2339466845662,
+    "lng": -111.6578233564704,
     "locationRestriction": "Provo Cntr & UVU",
     "deal": {
       "title": "Buy Pastry or Cake by the Slice Get One FREE!",
@@ -11332,8 +11332,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2335632,
-        "lng": -111.6369158,
+        "lat": 40.2339466845662,
+        "lng": -111.6578233564704,
         "address": "45 E Center St, Provo, UT 84606"
       }
     ]
@@ -11965,8 +11965,8 @@
     "name": "Parlor Doughnuts",
     "category": "treats",
     "address": "2319 N 400 W, Provo, UT 84604",
-    "lat": 40.2824014,
-    "lng": -111.6650592,
+    "lat": 40.26466998175994,
+    "lng": -111.66681093384041,
     "locationRestriction": "",
     "deal": {
       "title": "Buy 1 Doughnut Get 1 FREE!",
@@ -11986,8 +11986,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2824014,
-        "lng": -111.6650592,
+        "lat": 40.26466998175994,
+        "lng": -111.66681093384041,
         "address": "2319 N 400 W, Provo, UT 84604"
       },
       {
@@ -14923,8 +14923,8 @@
     "name": "Parlor Doughnuts",
     "category": "sandwiches",
     "address": "2319 N 400 W, Provo, UT 84604",
-    "lat": 40.2824014,
-    "lng": -111.6650592,
+    "lat": 40.26466998175994,
+    "lng": -111.66681093384041,
     "locationRestriction": "",
     "deal": {
       "title": "Buy 1 Breakfast Sandwich Get 1 FREE!",
@@ -14944,8 +14944,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2824014,
-        "lng": -111.6650592,
+        "lat": 40.26466998175994,
+        "lng": -111.66681093384041,
         "address": "2319 N 400 W, Provo, UT 84604"
       },
       {
