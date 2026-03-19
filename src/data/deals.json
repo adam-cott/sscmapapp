@@ -105,7 +105,7 @@
     "locationRestriction": "Saratoga & Eagle Mtn",
     "deal": {
       "title": "2-4-1! Order of Wings! Carryout Only",
-      "description": "Valid at: Saratoga & Eagle Mtn • Carryout Only",
+      "description": "Valid at: Saratoga & Eagle Mtn \u00e2\u20ac\u00a2 Carryout Only",
       "restrictions": "Carryout Only",
       "value": "2 for 1",
       "maxUses": 3,
@@ -147,7 +147,7 @@
     "locationRestriction": "Saratoga & Eagle Mtn",
     "deal": {
       "title": "2-4-1! Pizza! Carryout Only",
-      "description": "Valid at: Saratoga & Eagle Mtn • Carryout Only",
+      "description": "Valid at: Saratoga & Eagle Mtn \u00e2\u20ac\u00a2 Carryout Only",
       "restrictions": "Carryout Only",
       "value": "2 for 1",
       "maxUses": 3,
@@ -189,7 +189,7 @@
     "locationRestriction": "Saratoga & Eagle Mtn",
     "deal": {
       "title": "2-4-1! Specialty Pizza! Carryout Only",
-      "description": "Valid at: Saratoga & Eagle Mtn • Carryout Only",
+      "description": "Valid at: Saratoga & Eagle Mtn \u00e2\u20ac\u00a2 Carryout Only",
       "restrictions": "Carryout Only",
       "value": "2 for 1",
       "maxUses": 3,
@@ -652,7 +652,7 @@
     "locationRestriction": "All Wasatch Front",
     "deal": {
       "title": "2-4-1! Med or Lrg Pizza! Carryout Only! All Wasatch Front Locations",
-      "description": "Valid at: All Wasatch Front • Carryout Only",
+      "description": "Valid at: All Wasatch Front \u00e2\u20ac\u00a2 Carryout Only",
       "restrictions": "Carryout Only",
       "value": "2 for 1",
       "maxUses": 1,
@@ -699,7 +699,7 @@
     "locationRestriction": "All Wasatch Front",
     "deal": {
       "title": "2-4-1! Order of Cheese Sticks! Carryout Only! All Wasatch Front Locs",
-      "description": "Valid at: All Wasatch Front • Carryout Only",
+      "description": "Valid at: All Wasatch Front \u00e2\u20ac\u00a2 Carryout Only",
       "restrictions": "Carryout Only",
       "value": "2 for 1",
       "maxUses": 3,
@@ -746,7 +746,7 @@
     "locationRestriction": "All Wasatch Front",
     "deal": {
       "title": "Buy Med or Lrg Pizza Get a Melt FREE! Carryout Only! All Wasatch",
-      "description": "Valid at: All Wasatch Front • Carryout Only",
+      "description": "Valid at: All Wasatch Front \u00e2\u20ac\u00a2 Carryout Only",
       "restrictions": "Carryout Only",
       "value": "Buy 1 Get 1 Free",
       "maxUses": 2,
@@ -1232,7 +1232,7 @@
     "locationRestriction": "Orem & Lehi",
     "deal": {
       "title": "FREE! Appetizer w/ Purchase $25 or More! Excl. Alcohol",
-      "description": "Valid at: Orem & Lehi • Excl. Alcohol",
+      "description": "Valid at: Orem & Lehi \u00e2\u20ac\u00a2 Excl. Alcohol",
       "restrictions": "Excl. Alcohol",
       "value": "Free Item",
       "maxUses": 3,
@@ -1269,7 +1269,7 @@
     "locationRestriction": "Orem & Lehi",
     "deal": {
       "title": "FREE! 6 Wings w/ Purchase $15 or More! Excl. Alcohol",
-      "description": "Valid at: Orem & Lehi • Excl. Alcohol",
+      "description": "Valid at: Orem & Lehi \u00e2\u20ac\u00a2 Excl. Alcohol",
       "restrictions": "Excl. Alcohol",
       "value": "Free Item",
       "maxUses": 3,
@@ -2101,7 +2101,7 @@
     "locationRestriction": "Orem",
     "deal": {
       "title": "2-4-1! Lunch Buffet! Mon-Fri. Before 4 PM Orem",
-      "description": "Valid at: Orem • Mon-Fri Before 4 PM",
+      "description": "Valid at: Orem \u00e2\u20ac\u00a2 Mon-Fri Before 4 PM",
       "restrictions": "Mon-Fri Before 4 PM",
       "value": "2 for 1",
       "maxUses": 2,
@@ -3294,7 +3294,7 @@
     "locationRestriction": "Orem & SF",
     "deal": {
       "title": "2-4-1! Entree! Max Discount $15!",
-      "description": "Valid at: Orem & SF • Max Discount $15",
+      "description": "Valid at: Orem & SF \u00e2\u20ac\u00a2 Max Discount $15",
       "restrictions": "Max Discount $15",
       "value": "2 for 1",
       "maxUses": 2,
@@ -3524,7 +3524,7 @@
     "locationRestriction": "All UT",
     "deal": {
       "title": "Buy 1 Hour Get 1 FREE! Code: SSCARD Bring Clubs",
-      "description": "Valid at: All UT • Code: SSCARD Bring Clubs",
+      "description": "Valid at: All UT \u00e2\u20ac\u00a2 Code: SSCARD Bring Clubs",
       "restrictions": "Code: SSCARD Bring Clubs",
       "value": "Buy 1 Get 1 Free",
       "maxUses": 3,
@@ -4145,7 +4145,7 @@
     "locationRestriction": "Provo",
     "deal": {
       "title": "50% OFF! Bowling! Before 8 PM Provo",
-      "description": "Valid at: Provo • Before 8 PM",
+      "description": "Valid at: Provo \u00e2\u20ac\u00a2 Before 8 PM",
       "restrictions": "Before 8 PM",
       "value": "50% Off",
       "maxUses": 3,
@@ -4406,7 +4406,7 @@
     "locationRestriction": "Provo Canyon",
     "deal": {
       "title": "2-4-1! River Tubing! Valid M-F Code SSC",
-      "description": "Valid at: Provo Canyon • M-F Code SSC",
+      "description": "Valid at: Provo Canyon \u00e2\u20ac\u00a2 M-F Code SSC",
       "restrictions": "M-F Code SSC",
       "value": "2 for 1",
       "maxUses": 1,
@@ -4470,7 +4470,7 @@
     "locationRestriction": "Lehi & AF",
     "deal": {
       "title": "2-4-1! Bowling for Same Player! M-Th Before 6pm Not Valid Holidays",
-      "description": "Valid at: Lehi & AF • M-Th Before 6pm Not Valid Holidays Shoes Not Included",
+      "description": "Valid at: Lehi & AF \u00e2\u20ac\u00a2 M-Th Before 6pm Not Valid Holidays Shoes Not Included",
       "restrictions": "M-Th Before 6pm Not Valid Holidays Shoes Not Included",
       "value": "2 for 1",
       "maxUses": 3,
@@ -4502,7 +4502,7 @@
     "locationRestriction": "Lehi",
     "deal": {
       "title": "2-4-1! Game of Laser Tag for Same Player! M-Th before 6pm",
-      "description": "Valid at: Lehi • M-Th before 6pm Not Valid Holidays",
+      "description": "Valid at: Lehi \u00e2\u20ac\u00a2 M-Th before 6pm Not Valid Holidays",
       "restrictions": "M-Th before 6pm Not Valid Holidays",
       "value": "2 for 1",
       "maxUses": 3,
@@ -4827,7 +4827,7 @@
     "locationRestriction": "Orem",
     "deal": {
       "title": "2-4-1! Game! Up to 3 free games per visit! Not Valid after 5 PM Sat",
-      "description": "Valid at: Orem • Not Valid after 5 PM Sat Holidays or School Holidays",
+      "description": "Valid at: Orem \u00e2\u20ac\u00a2 Not Valid after 5 PM Sat Holidays or School Holidays",
       "restrictions": "Not Valid after 5 PM Sat Holidays or School Holidays",
       "value": "2 for 1",
       "maxUses": null,
@@ -4955,7 +4955,7 @@
     "locationRestriction": "Provo Canyon",
     "deal": {
       "title": "2-4-1! Zipline Tour! Appt. Req. Please Tip",
-      "description": "Valid at: Provo Canyon • Appt Required Please Tip",
+      "description": "Valid at: Provo Canyon \u00e2\u20ac\u00a2 Appt Required Please Tip",
       "restrictions": "Appt Required Please Tip",
       "value": "2 for 1",
       "maxUses": 1,
@@ -5115,7 +5115,7 @@
     "locationRestriction": "Santaquin",
     "deal": {
       "title": "2-4-1! Admission to Corn Maze and Fall Festival! M-Th",
-      "description": "Valid at: Santaquin • M-Th",
+      "description": "Valid at: Santaquin \u00e2\u20ac\u00a2 M-Th",
       "restrictions": "M-Th",
       "value": "2 for 1",
       "maxUses": 3,
@@ -5179,7 +5179,7 @@
     "locationRestriction": "Orem",
     "deal": {
       "title": "2-4-1! Same Day Musical Tickets! Present Card in Person",
-      "description": "Valid at: Orem • Present Card in Person",
+      "description": "Valid at: Orem \u00e2\u20ac\u00a2 Present Card in Person",
       "restrictions": "Present Card in Person",
       "value": "2 for 1",
       "maxUses": 3,
@@ -5600,7 +5600,7 @@
     "locationRestriction": "Provo Canyon",
     "deal": {
       "title": "2-4-1! Screaming Falcon Big Line! Code: SSC242U",
-      "description": "Valid at: Provo Canyon • Code: SSC242U",
+      "description": "Valid at: Provo Canyon \u00e2\u20ac\u00a2 Code: SSC242U",
       "restrictions": "Code: SSC242U",
       "value": "2 for 1",
       "maxUses": 2,
@@ -5632,7 +5632,7 @@
     "locationRestriction": "Provo Canyon",
     "deal": {
       "title": "2-4-1! Screaming Falcon Rush! Code: SSC242U",
-      "description": "Valid at: Provo Canyon • Code: SSC242U",
+      "description": "Valid at: Provo Canyon \u00e2\u20ac\u00a2 Code: SSC242U",
       "restrictions": "Code: SSC242U",
       "value": "2 for 1",
       "maxUses": 2,
@@ -6034,7 +6034,7 @@
     "locationRestriction": "All UT Only",
     "deal": {
       "title": "2-4-1! Dry Cleaned or Laundered Item! Up to $20",
-      "description": "Valid at: All UT Only • Up to $20",
+      "description": "Valid at: All UT Only \u00e2\u20ac\u00a2 Up to $20",
       "restrictions": "Up to $20",
       "value": "2 for 1",
       "maxUses": 2,
@@ -6411,7 +6411,7 @@
     "locationRestriction": "All Utah",
     "deal": {
       "title": "$10 OFF! Vehicle Emissions! MSKCUZ",
-      "description": "Valid at: All Utah • MSKCUZ",
+      "description": "Valid at: All Utah \u00e2\u20ac\u00a2 MSKCUZ",
       "restrictions": "MSKCUZ",
       "value": "$10 Off",
       "maxUses": 1,
@@ -6508,7 +6508,7 @@
     "locationRestriction": "All Utah",
     "deal": {
       "title": "$25 OFF! Any Oil Change! DBEUP2",
-      "description": "Valid at: All Utah • DBEUP2",
+      "description": "Valid at: All Utah \u00e2\u20ac\u00a2 DBEUP2",
       "restrictions": "DBEUP2",
       "value": "$25 Off",
       "maxUses": null,
@@ -6637,7 +6637,7 @@
     "locationRestriction": "Utah County",
     "deal": {
       "title": "50% OFF! Pest Control Treatment! New Customers! Up to $40!",
-      "description": "Valid at: Utah County • New Customers Up to $40",
+      "description": "Valid at: Utah County \u00e2\u20ac\u00a2 New Customers Up to $40",
       "restrictions": "New Customers Up to $40",
       "value": "50% Off",
       "maxUses": 3,
@@ -7741,7 +7741,7 @@
     "locationRestriction": "Saratoga & Eagle Mtn",
     "deal": {
       "title": "FREE! Order of Oven-Baked Twists & Dip! Carryout Only",
-      "description": "Valid at: Saratoga & Eagle Mtn • Carryout Only",
+      "description": "Valid at: Saratoga & Eagle Mtn \u00e2\u20ac\u00a2 Carryout Only",
       "restrictions": "Carryout Only",
       "value": "Free Item",
       "maxUses": 1,
@@ -8483,8 +8483,8 @@
     "name": "McDonald's",
     "category": "free",
     "address": "211 W 1230 N, Provo, UT 84604",
-    "lat": 40.2512668,
-    "lng": -111.6532392,
+    "lat": 40.250213468637625,
+    "lng": -111.66252881849788,
     "locationRestriction": "All Orem N Provo PG Cedar Hills & AF",
     "deal": {
       "title": "FREE! 12 oz. Frozen Drink!",
@@ -8504,8 +8504,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2512668,
-        "lng": -111.6532392,
+        "lat": 40.250213468637625,
+        "lng": -111.66252881849788,
         "address": "211 W 1230 N, Provo, UT 84604"
       },
       {
@@ -8624,8 +8624,8 @@
     "name": "Mooyah",
     "category": "free",
     "address": "62 W 1230 N Ste 105, Provo, UT 84604",
-    "lat": 40.2512668,
-    "lng": -111.6532392,
+    "lat": 40.25142611390114,
+    "lng": -111.65996335358233,
     "locationRestriction": "",
     "deal": {
       "title": "FREE! Small Shake!",
@@ -8645,8 +8645,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2512668,
-        "lng": -111.6532392,
+        "lat": 40.25142611390114,
+        "lng": -111.65996335358233,
         "address": "62 W 1230 N Ste 105, Provo, UT 84604"
       },
       {
@@ -8932,7 +8932,7 @@
     "locationRestriction": "All Wasatch Front",
     "deal": {
       "title": "FREE! Order of Cheese Sticks! Carryout Only! All Wasatch Front Locs",
-      "description": "Valid at: All Wasatch Front • Carryout Only",
+      "description": "Valid at: All Wasatch Front \u00e2\u20ac\u00a2 Carryout Only",
       "restrictions": "Carryout Only",
       "value": "Free Item",
       "maxUses": 1,
@@ -9522,7 +9522,7 @@
     "locationRestriction": "Provo and WJ",
     "deal": {
       "title": "FREE! Haircut! M-Th Provo and WJ",
-      "description": "Valid at: Provo and WJ • M-Th",
+      "description": "Valid at: Provo and WJ \u00e2\u20ac\u00a2 M-Th",
       "restrictions": "M-Th",
       "value": "Free Item",
       "maxUses": 2,
@@ -9660,7 +9660,7 @@
     "locationRestriction": "Provo",
     "deal": {
       "title": "FREE! Admit 2 to Any Experience! Mon Only Provo",
-      "description": "Valid at: Provo • Mon Only",
+      "description": "Valid at: Provo \u00e2\u20ac\u00a2 Mon Only",
       "restrictions": "Mon Only",
       "value": "Free Item",
       "maxUses": 1,
@@ -10670,8 +10670,8 @@
     "name": "Carl's Jr",
     "category": "treats",
     "address": "344 W 1230 N, Provo, UT 84604",
-    "lat": 40.2512668,
-    "lng": -111.6532392,
+    "lat": 40.2509715765986,
+    "lng": -111.66482503530547,
     "locationRestriction": "",
     "deal": {
       "title": "2 for $4 Ice Cream Shake! CODE 11685",
@@ -10701,8 +10701,8 @@
         "address": "3536 N Maple Loop Dr, Lehi, UT 84043"
       },
       {
-        "lat": 40.2512668,
-        "lng": -111.6532392,
+        "lat": 40.2509715765986,
+        "lng": -111.66482503530547,
         "address": "344 W 1230 N, Provo, UT 84604"
       }
     ]
@@ -11469,8 +11469,8 @@
     "name": "McDonald's",
     "category": "treats",
     "address": "211 W 1230 N, Provo, UT 84604",
-    "lat": 40.2512668,
-    "lng": -111.6532392,
+    "lat": 40.250213468637625,
+    "lng": -111.66252881849788,
     "locationRestriction": "All Orem N Provo PG Cedar Hills & AF",
     "deal": {
       "title": "2-4-1! Smoothie Shake or McCafe Drink!",
@@ -11490,8 +11490,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2512668,
-        "lng": -111.6532392,
+        "lat": 40.250213468637625,
+        "lng": -111.66252881849788,
         "address": "211 W 1230 N, Provo, UT 84604"
       },
       {
@@ -11721,8 +11721,8 @@
     "name": "Mooyah",
     "category": "treats",
     "address": "62 W 1230 N Ste 105, Provo, UT 84604",
-    "lat": 40.2512668,
-    "lng": -111.6532392,
+    "lat": 40.25142611390114,
+    "lng": -111.65996335358233,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Shake!",
@@ -11742,8 +11742,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2512668,
-        "lng": -111.6532392,
+        "lat": 40.25142611390114,
+        "lng": -111.65996335358233,
         "address": "62 W 1230 N Ste 105, Provo, UT 84604"
       },
       {
@@ -12607,7 +12607,7 @@
     "locationRestriction": "Lehi",
     "deal": {
       "title": "2-4-1! Drink! Lehi Excludes Energy Drink Mixers",
-      "description": "Valid at: Lehi • Excludes Energy Drink Mixers",
+      "description": "Valid at: Lehi \u00e2\u20ac\u00a2 Excludes Energy Drink Mixers",
       "restrictions": "Excludes Energy Drink Mixers",
       "value": "2 for 1",
       "maxUses": 2,
@@ -13512,11 +13512,6 @@
         "lat": 40.2140518,
         "lng": -111.6583366,
         "address": "1474 S 40th E, Provo, UT 84606"
-      },
-      {
-        "lat": 40.2512668,
-        "lng": -111.6532392,
-        "address": "210 W 1230 N, Provo, UT 84604"
       }
     ]
   },
@@ -13559,11 +13554,6 @@
         "lat": 40.2140518,
         "lng": -111.6583366,
         "address": "1474 S 40th E, Provo, UT 84606"
-      },
-      {
-        "lat": 40.2512668,
-        "lng": -111.6532392,
-        "address": "210 W 1230 N, Provo, UT 84604"
       }
     ]
   },
@@ -13668,8 +13658,8 @@
     "name": "Carl's Jr",
     "category": "sandwiches",
     "address": "344 W 1230 N, Provo, UT 84604",
-    "lat": 40.2512668,
-    "lng": -111.6532392,
+    "lat": 40.2509715765986,
+    "lng": -111.66482503530547,
     "locationRestriction": "",
     "deal": {
       "title": "$3.99 Kids meal! Valid for All Kids in Family! Code 10717",
@@ -13699,8 +13689,8 @@
         "address": "3536 N Maple Loop Dr, Lehi, UT 84043"
       },
       {
-        "lat": 40.2512668,
-        "lng": -111.6532392,
+        "lat": 40.2509715765986,
+        "lng": -111.66482503530547,
         "address": "344 W 1230 N, Provo, UT 84604"
       }
     ]
@@ -13710,8 +13700,8 @@
     "name": "Carl's Jr",
     "category": "sandwiches",
     "address": "344 W 1230 N, Provo, UT 84604",
-    "lat": 40.2512668,
-    "lng": -111.6532392,
+    "lat": 40.2509715765986,
+    "lng": -111.66482503530547,
     "locationRestriction": "",
     "deal": {
       "title": "Buy a Sausage Egg and Cheese Biscuit Get 1 FREE! Code 7617",
@@ -13741,8 +13731,8 @@
         "address": "3536 N Maple Loop Dr, Lehi, UT 84043"
       },
       {
-        "lat": 40.2512668,
-        "lng": -111.6532392,
+        "lat": 40.2509715765986,
+        "lng": -111.66482503530547,
         "address": "344 W 1230 N, Provo, UT 84604"
       }
     ]
@@ -13752,8 +13742,8 @@
     "name": "Carl's Jr",
     "category": "sandwiches",
     "address": "344 W 1230 N, Provo, UT 84604",
-    "lat": 40.2512668,
-    "lng": -111.6532392,
+    "lat": 40.2509715765986,
+    "lng": -111.66482503530547,
     "locationRestriction": "",
     "deal": {
       "title": "Buy a Western Bacon Cheeseburger Get 1 FREE! Code 10726",
@@ -13783,8 +13773,8 @@
         "address": "3536 N Maple Loop Dr, Lehi, UT 84043"
       },
       {
-        "lat": 40.2512668,
-        "lng": -111.6532392,
+        "lat": 40.2509715765986,
+        "lng": -111.66482503530547,
         "address": "344 W 1230 N, Provo, UT 84604"
       }
     ]
@@ -14014,7 +14004,7 @@
     "locationRestriction": "Saratoga & Eagle Mtn",
     "deal": {
       "title": "2-4-1! Hot Sandwich! Carryout Only",
-      "description": "Valid at: Saratoga & Eagle Mtn • Carryout Only",
+      "description": "Valid at: Saratoga & Eagle Mtn \u00e2\u20ac\u00a2 Carryout Only",
       "restrictions": "Carryout Only",
       "value": "2 for 1",
       "maxUses": 3,
@@ -14547,8 +14537,8 @@
     "name": "McDonald's",
     "category": "sandwiches",
     "address": "211 W 1230 N, Provo, UT 84604",
-    "lat": 40.2512668,
-    "lng": -111.6532392,
+    "lat": 40.250213468637625,
+    "lng": -111.66252881849788,
     "locationRestriction": "All Orem N Provo PG Cedar Hills & AF",
     "deal": {
       "title": "2-4-1! Kids Meal! All Orem N Provo PG Cedar Hills & AF",
@@ -14568,8 +14558,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2512668,
-        "lng": -111.6532392,
+        "lat": 40.250213468637625,
+        "lng": -111.66252881849788,
         "address": "211 W 1230 N, Provo, UT 84604"
       },
       {
@@ -14609,8 +14599,8 @@
     "name": "McDonald's",
     "category": "sandwiches",
     "address": "211 W 1230 N, Provo, UT 84604",
-    "lat": 40.2512668,
-    "lng": -111.6532392,
+    "lat": 40.250213468637625,
+    "lng": -111.66252881849788,
     "locationRestriction": "All Orem N Provo PG Cedar Hills & AF",
     "deal": {
       "title": "2-4-1! Sandwich! All Orem N Provo PG Cedar Hills & AF",
@@ -14630,8 +14620,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2512668,
-        "lng": -111.6532392,
+        "lat": 40.250213468637625,
+        "lng": -111.66252881849788,
         "address": "211 W 1230 N, Provo, UT 84604"
       },
       {
@@ -14671,8 +14661,8 @@
     "name": "McDonald's",
     "category": "sandwiches",
     "address": "211 W 1230 N, Provo, UT 84604",
-    "lat": 40.2512668,
-    "lng": -111.6532392,
+    "lat": 40.250213468637625,
+    "lng": -111.66252881849788,
     "locationRestriction": "All Orem N Provo PG Cedar Hills & AF",
     "deal": {
       "title": "Buy Large Drink & Fry Get 1 Sandwich FREE! All Orem N Provo PG Cedar Hills & AF",
@@ -14692,8 +14682,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2512668,
-        "lng": -111.6532392,
+        "lat": 40.250213468637625,
+        "lng": -111.66252881849788,
         "address": "211 W 1230 N, Provo, UT 84604"
       },
       {
@@ -14775,8 +14765,8 @@
     "name": "Mooyah",
     "category": "sandwiches",
     "address": "62 W 1230 N Ste 105, Provo, UT 84604",
-    "lat": 40.2512668,
-    "lng": -111.6532392,
+    "lat": 40.25142611390114,
+    "lng": -111.65996335358233,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Any Burger Sandwich or Hot Dog!",
@@ -14796,8 +14786,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2512668,
-        "lng": -111.6532392,
+        "lat": 40.25142611390114,
+        "lng": -111.65996335358233,
         "address": "62 W 1230 N Ste 105, Provo, UT 84604"
       },
       {
@@ -14817,8 +14807,8 @@
     "name": "Mooyah",
     "category": "sandwiches",
     "address": "62 W 1230 N Ste 105, Provo, UT 84604",
-    "lat": 40.2512668,
-    "lng": -111.6532392,
+    "lat": 40.25142611390114,
+    "lng": -111.65996335358233,
     "locationRestriction": "",
     "deal": {
       "title": "50% OFF! Entire Purchase! Max $30 Discount",
@@ -14838,8 +14828,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2512668,
-        "lng": -111.6532392,
+        "lat": 40.25142611390114,
+        "lng": -111.65996335358233,
         "address": "62 W 1230 N Ste 105, Provo, UT 84604"
       },
       {
@@ -14859,8 +14849,8 @@
     "name": "Mooyah",
     "category": "sandwiches",
     "address": "62 W 1230 N Ste 105, Provo, UT 84604",
-    "lat": 40.2512668,
-    "lng": -111.6532392,
+    "lat": 40.25142611390114,
+    "lng": -111.65996335358233,
     "locationRestriction": "",
     "deal": {
       "title": "Buy Any Burger Sandwich or Hot Dog Get Fries and a Drink FREE!",
@@ -14880,8 +14870,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2512668,
-        "lng": -111.6532392,
+        "lat": 40.25142611390114,
+        "lng": -111.65996335358233,
         "address": "62 W 1230 N Ste 105, Provo, UT 84604"
       },
       {
