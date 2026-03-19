@@ -25,8 +25,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2750201,
-        "lng": -111.6851933,
+        "lat": 40.295516,
+        "lng": -111.6918223,
         "address": "93 S State St, Orem, UT 84058"
       }
     ]
@@ -57,8 +57,8 @@
     ],
     "locations": [
       {
-        "lat": 40.4288022,
-        "lng": -111.8982554,
+        "lat": 40.4278617,
+        "lng": -111.8887535,
         "address": "2450 W Executive Pkwy Ste 150, Lehi, UT 84043"
       }
     ]
@@ -89,8 +89,8 @@
     ],
     "locations": [
       {
-        "lat": 40.4288022,
-        "lng": -111.8982554,
+        "lat": 40.4278617,
+        "lng": -111.8887535,
         "address": "2450 W Executive Pkwy Ste 150, Lehi, UT 84043"
       }
     ]
@@ -105,7 +105,7 @@
     "locationRestriction": "Saratoga & Eagle Mtn",
     "deal": {
       "title": "2-4-1! Order of Wings! Carryout Only",
-      "description": "Valid at: Saratoga & Eagle Mtn \u00e2\u20ac\u00a2 Carryout Only",
+      "description": "Valid at: Saratoga & Eagle Mtn â€¢ Carryout Only",
       "restrictions": "Carryout Only",
       "value": "2 for 1",
       "maxUses": 3,
@@ -147,7 +147,7 @@
     "locationRestriction": "Saratoga & Eagle Mtn",
     "deal": {
       "title": "2-4-1! Pizza! Carryout Only",
-      "description": "Valid at: Saratoga & Eagle Mtn \u00e2\u20ac\u00a2 Carryout Only",
+      "description": "Valid at: Saratoga & Eagle Mtn â€¢ Carryout Only",
       "restrictions": "Carryout Only",
       "value": "2 for 1",
       "maxUses": 3,
@@ -189,7 +189,7 @@
     "locationRestriction": "Saratoga & Eagle Mtn",
     "deal": {
       "title": "2-4-1! Specialty Pizza! Carryout Only",
-      "description": "Valid at: Saratoga & Eagle Mtn \u00e2\u20ac\u00a2 Carryout Only",
+      "description": "Valid at: Saratoga & Eagle Mtn â€¢ Carryout Only",
       "restrictions": "Carryout Only",
       "value": "2 for 1",
       "maxUses": 3,
@@ -247,8 +247,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3659998,
-        "lng": -111.7407583,
+        "lat": 40.3597893,
+        "lng": -111.7410892,
         "address": "340 S Main St, Pleasant Grove, UT 84062"
       }
     ]
@@ -279,8 +279,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3659998,
-        "lng": -111.7407583,
+        "lat": 40.3597893,
+        "lng": -111.7410892,
         "address": "340 S Main St, Pleasant Grove, UT 84062"
       }
     ]
@@ -311,8 +311,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3659998,
-        "lng": -111.7407583,
+        "lat": 40.3597893,
+        "lng": -111.7410892,
         "address": "340 S Main St, Pleasant Grove, UT 84062"
       }
     ]
@@ -343,8 +343,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3659998,
-        "lng": -111.7407583,
+        "lat": 40.3597893,
+        "lng": -111.7410892,
         "address": "340 S Main St, Pleasant Grove, UT 84062"
       }
     ]
@@ -418,8 +418,8 @@
     "name": "Marco's Pizza",
     "category": "pizza",
     "address": "82 N Highland Dr, Santaquin, UT 84655",
-    "lat": 39.9547616,
-    "lng": -111.7980151,
+    "lat": 39.9768388,
+    "lng": -111.7691755,
     "locationRestriction": "Santaquin Only",
     "deal": {
       "title": "2-4-1 Pizza!",
@@ -439,8 +439,8 @@
     ],
     "locations": [
       {
-        "lat": 39.9547616,
-        "lng": -111.7980151,
+        "lat": 39.9768388,
+        "lng": -111.7691755,
         "address": "82 N Highland Dr, Santaquin, UT 84655"
       }
     ]
@@ -450,8 +450,8 @@
     "name": "Marco's Pizza",
     "category": "pizza",
     "address": "82 N Highland Dr, Santaquin, UT 84655",
-    "lat": 39.9547616,
-    "lng": -111.7980151,
+    "lat": 39.9768388,
+    "lng": -111.7691755,
     "locationRestriction": "Santaquin Only",
     "deal": {
       "title": "2-4-1 Salad!",
@@ -471,8 +471,8 @@
     ],
     "locations": [
       {
-        "lat": 39.9547616,
-        "lng": -111.7980151,
+        "lat": 39.9768388,
+        "lng": -111.7691755,
         "address": "82 N Highland Dr, Santaquin, UT 84655"
       }
     ]
@@ -546,8 +546,8 @@
     "name": "Papa Murphy's",
     "category": "pizza",
     "address": "1678 Redstone Center Dr Ste 120, Park City, UT 84098",
-    "lat": 40.6460921,
-    "lng": -111.4979963,
+    "lat": 40.72056,
+    "lng": -111.5419791,
     "locationRestriction": "Provo & Park City",
     "deal": {
       "title": "Buy Any Pizza Get One FREE!",
@@ -572,8 +572,8 @@
         "address": "979 S University Ave, Provo, UT 84601"
       },
       {
-        "lat": 40.6460921,
-        "lng": -111.4979963,
+        "lat": 40.72056,
+        "lng": -111.5419791,
         "address": "1678 Redstone Center Dr Ste 120, Park City, UT 84098"
       }
     ]
@@ -647,12 +647,12 @@
     "name": "Pizza Hut",
     "category": "pizza",
     "address": "1151 N Canyon Rd, Provo, UT 84604",
-    "lat": 40.2492997,
-    "lng": -111.6562115,
+    "lat": 40.2496261,
+    "lng": -111.6576184,
     "locationRestriction": "All Wasatch Front",
     "deal": {
       "title": "2-4-1! Med or Lrg Pizza! Carryout Only! All Wasatch Front Locations",
-      "description": "Valid at: All Wasatch Front \u00e2\u20ac\u00a2 Carryout Only",
+      "description": "Valid at: All Wasatch Front â€¢ Carryout Only",
       "restrictions": "Carryout Only",
       "value": "2 for 1",
       "maxUses": 1,
@@ -673,13 +673,13 @@
         "address": "386 W University Pkwy, Orem, UT 84058"
       },
       {
-        "lat": 40.3293932,
-        "lng": -111.7099336,
+        "lat": 40.31309450000001,
+        "lng": -111.7011698,
         "address": "886 N State St, Orem, UT 84057"
       },
       {
-        "lat": 40.2492997,
-        "lng": -111.6562115,
+        "lat": 40.2496261,
+        "lng": -111.6576184,
         "address": "1151 N Canyon Rd, Provo, UT 84604"
       },
       {
@@ -694,12 +694,12 @@
     "name": "Pizza Hut",
     "category": "pizza",
     "address": "1151 N Canyon Rd, Provo, UT 84604",
-    "lat": 40.2492997,
-    "lng": -111.6562115,
+    "lat": 40.2496261,
+    "lng": -111.6576184,
     "locationRestriction": "All Wasatch Front",
     "deal": {
       "title": "2-4-1! Order of Cheese Sticks! Carryout Only! All Wasatch Front Locs",
-      "description": "Valid at: All Wasatch Front \u00e2\u20ac\u00a2 Carryout Only",
+      "description": "Valid at: All Wasatch Front â€¢ Carryout Only",
       "restrictions": "Carryout Only",
       "value": "2 for 1",
       "maxUses": 3,
@@ -720,13 +720,13 @@
         "address": "386 W University Pkwy, Orem, UT 84058"
       },
       {
-        "lat": 40.3293932,
-        "lng": -111.7099336,
+        "lat": 40.31309450000001,
+        "lng": -111.7011698,
         "address": "886 N State St, Orem, UT 84057"
       },
       {
-        "lat": 40.2492997,
-        "lng": -111.6562115,
+        "lat": 40.2496261,
+        "lng": -111.6576184,
         "address": "1151 N Canyon Rd, Provo, UT 84604"
       },
       {
@@ -741,12 +741,12 @@
     "name": "Pizza Hut",
     "category": "pizza",
     "address": "1151 N Canyon Rd, Provo, UT 84604",
-    "lat": 40.2492997,
-    "lng": -111.6562115,
+    "lat": 40.2496261,
+    "lng": -111.6576184,
     "locationRestriction": "All Wasatch Front",
     "deal": {
       "title": "Buy Med or Lrg Pizza Get a Melt FREE! Carryout Only! All Wasatch",
-      "description": "Valid at: All Wasatch Front \u00e2\u20ac\u00a2 Carryout Only",
+      "description": "Valid at: All Wasatch Front â€¢ Carryout Only",
       "restrictions": "Carryout Only",
       "value": "Buy 1 Get 1 Free",
       "maxUses": 2,
@@ -767,13 +767,13 @@
         "address": "386 W University Pkwy, Orem, UT 84058"
       },
       {
-        "lat": 40.3293932,
-        "lng": -111.7099336,
+        "lat": 40.31309450000001,
+        "lng": -111.7011698,
         "address": "886 N State St, Orem, UT 84057"
       },
       {
-        "lat": 40.2492997,
-        "lng": -111.6562115,
+        "lat": 40.2496261,
+        "lng": -111.6576184,
         "address": "1151 N Canyon Rd, Provo, UT 84604"
       },
       {
@@ -788,8 +788,8 @@
     "name": "Pizza Pie Cafe",
     "category": "pizza",
     "address": "5435 W 11000 N, Highland, UT 84003",
-    "lat": 40.427176,
-    "lng": -111.7891709,
+    "lat": 40.4311649,
+    "lng": -111.7877364,
     "locationRestriction": "Highland",
     "deal": {
       "title": "2-4-1! Buffet! Highland Only",
@@ -809,13 +809,13 @@
     ],
     "locations": [
       {
-        "lat": 40.2614699,
-        "lng": -111.7138956,
+        "lat": 40.3262119,
+        "lng": -111.7097776,
         "address": "573 W 1600 N, Orem, UT 84057"
       },
       {
-        "lat": 40.427176,
-        "lng": -111.7891709,
+        "lat": 40.4311649,
+        "lng": -111.7877364,
         "address": "5435 W 11000 N, Highland, UT 84003"
       },
       {
@@ -835,8 +835,8 @@
     "name": "Pizza Pie Cafe",
     "category": "pizza",
     "address": "573 W 1600 N, Orem, UT 84057",
-    "lat": 40.2614699,
-    "lng": -111.7138956,
+    "lat": 40.3262119,
+    "lng": -111.7097776,
     "locationRestriction": "All UT County",
     "deal": {
       "title": "Buy 1 Buffet and 2 Drinks Get 1 Buffet FREE! All UT County",
@@ -856,13 +856,13 @@
     ],
     "locations": [
       {
-        "lat": 40.2614699,
-        "lng": -111.7138956,
+        "lat": 40.3262119,
+        "lng": -111.7097776,
         "address": "573 W 1600 N, Orem, UT 84057"
       },
       {
-        "lat": 40.427176,
-        "lng": -111.7891709,
+        "lat": 40.4311649,
+        "lng": -111.7877364,
         "address": "5435 W 11000 N, Highland, UT 84003"
       },
       {
@@ -882,8 +882,8 @@
     "name": "Pizza Pie Cafe",
     "category": "pizza",
     "address": "573 W 1600 N, Orem, UT 84057",
-    "lat": 40.2614699,
-    "lng": -111.7138956,
+    "lat": 40.3262119,
+    "lng": -111.7097776,
     "locationRestriction": "Orem",
     "deal": {
       "title": "FREE! Kid's Buffet w/ Paying Adult! Orem",
@@ -903,13 +903,13 @@
     ],
     "locations": [
       {
-        "lat": 40.2614699,
-        "lng": -111.7138956,
+        "lat": 40.3262119,
+        "lng": -111.7097776,
         "address": "573 W 1600 N, Orem, UT 84057"
       },
       {
-        "lat": 40.427176,
-        "lng": -111.7891709,
+        "lat": 40.4311649,
+        "lng": -111.7877364,
         "address": "5435 W 11000 N, Highland, UT 84003"
       },
       {
@@ -929,8 +929,8 @@
     "name": "Ritz Eats and Sweets",
     "category": "pizza",
     "address": "250 S State St, Orem, UT 84058",
-    "lat": 40.2943464,
-    "lng": -111.6937846,
+    "lat": 40.2932879,
+    "lng": -111.6950393,
     "locationRestriction": "Orem",
     "deal": {
       "title": "2-4-1! Pizza! Inside Classic Fun Center Orem",
@@ -950,8 +950,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2943464,
-        "lng": -111.6937846,
+        "lat": 40.2932879,
+        "lng": -111.6950393,
         "address": "250 S State St, Orem, UT 84058"
       }
     ]
@@ -961,8 +961,8 @@
     "name": "Rosati's Authentic Chicago Pizza",
     "category": "pizza",
     "address": "775 E University Pkwy, Orem, UT 84097",
-    "lat": 40.2733641,
-    "lng": -111.6926755,
+    "lat": 40.273428,
+    "lng": -111.6770976,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Any Pizza! Dine-in & Carry Out Only",
@@ -982,8 +982,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2733641,
-        "lng": -111.6926755,
+        "lat": 40.273428,
+        "lng": -111.6770976,
         "address": "775 E University Pkwy, Orem, UT 84097"
       }
     ]
@@ -1046,8 +1046,8 @@
     ],
     "locations": [
       {
-        "lat": 40.1590189,
-        "lng": -111.6106522,
+        "lat": 40.1736285,
+        "lng": -111.6102475,
         "address": "520 N Main St, Springville, UT 84663"
       }
     ]
@@ -1057,8 +1057,8 @@
     "name": "5 Star BBQ",
     "category": "restaurants",
     "address": "70 N Geneva Rd, Orem, UT 84057",
-    "lat": 40.3083956,
-    "lng": -111.734113,
+    "lat": 40.298356,
+    "lng": -111.7334723,
     "locationRestriction": "",
     "deal": {
       "title": "Buy Any Meal Plate Get a One-Meal Plate FREE!",
@@ -1078,8 +1078,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3083956,
-        "lng": -111.734113,
+        "lat": 40.298356,
+        "lng": -111.7334723,
         "address": "70 N Geneva Rd, Orem, UT 84057"
       }
     ]
@@ -1089,8 +1089,8 @@
     "name": "5 Star BBQ",
     "category": "restaurants",
     "address": "70 N Geneva Rd, Orem, UT 84057",
-    "lat": 40.3083956,
-    "lng": -111.734113,
+    "lat": 40.298356,
+    "lng": -111.7334723,
     "locationRestriction": "",
     "deal": {
       "title": "50% OFF! Any Meal Plate Sandwich Side or Other Reg Menu Item!",
@@ -1110,8 +1110,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3083956,
-        "lng": -111.734113,
+        "lat": 40.298356,
+        "lng": -111.7334723,
         "address": "70 N Geneva Rd, Orem, UT 84057"
       }
     ]
@@ -1179,8 +1179,8 @@
         "address": "37 W University Pkwy, Orem, UT 84058"
       },
       {
-        "lat": 40.5616177,
-        "lng": -111.9387663,
+        "lat": 40.5626492,
+        "lng": -111.9394521,
         "address": "10384 S Redwood Rd, South Jordan, UT 84095"
       }
     ]
@@ -1190,8 +1190,8 @@
     "name": "Buffalo Wild Wings",
     "category": "restaurants",
     "address": "575 E University Pkwy Ste B28, Orem, UT 84097",
-    "lat": 40.2753836,
-    "lng": -111.6808629,
+    "lat": 40.27451,
+    "lng": -111.68132,
     "locationRestriction": "Orem & Lehi",
     "deal": {
       "title": "FREE! Kids Meal w/ Adult Entree! Orem & Lehi",
@@ -1211,13 +1211,13 @@
     ],
     "locations": [
       {
-        "lat": 40.2753836,
-        "lng": -111.6808629,
+        "lat": 40.27451,
+        "lng": -111.68132,
         "address": "575 E University Pkwy Ste B28, Orem, UT 84097"
       },
       {
-        "lat": 40.4316523,
-        "lng": -111.8305878,
+        "lat": 40.3890036,
+        "lng": -111.8254775,
         "address": "92 N 1200 E, Lehi, UT 84043"
       }
     ]
@@ -1227,12 +1227,12 @@
     "name": "Buffalo Wild Wings",
     "category": "restaurants",
     "address": "575 E University Pkwy Ste B28, Orem, UT 84097",
-    "lat": 40.2753836,
-    "lng": -111.6808629,
+    "lat": 40.27451,
+    "lng": -111.68132,
     "locationRestriction": "Orem & Lehi",
     "deal": {
       "title": "FREE! Appetizer w/ Purchase $25 or More! Excl. Alcohol",
-      "description": "Valid at: Orem & Lehi \u00e2\u20ac\u00a2 Excl. Alcohol",
+      "description": "Valid at: Orem & Lehi â€¢ Excl. Alcohol",
       "restrictions": "Excl. Alcohol",
       "value": "Free Item",
       "maxUses": 3,
@@ -1248,13 +1248,13 @@
     ],
     "locations": [
       {
-        "lat": 40.2753836,
-        "lng": -111.6808629,
+        "lat": 40.27451,
+        "lng": -111.68132,
         "address": "575 E University Pkwy Ste B28, Orem, UT 84097"
       },
       {
-        "lat": 40.4316523,
-        "lng": -111.8305878,
+        "lat": 40.3890036,
+        "lng": -111.8254775,
         "address": "92 N 1200 E, Lehi, UT 84043"
       }
     ]
@@ -1264,12 +1264,12 @@
     "name": "Buffalo Wild Wings",
     "category": "restaurants",
     "address": "575 E University Pkwy Ste B28, Orem, UT 84097",
-    "lat": 40.2753836,
-    "lng": -111.6808629,
+    "lat": 40.27451,
+    "lng": -111.68132,
     "locationRestriction": "Orem & Lehi",
     "deal": {
       "title": "FREE! 6 Wings w/ Purchase $15 or More! Excl. Alcohol",
-      "description": "Valid at: Orem & Lehi \u00e2\u20ac\u00a2 Excl. Alcohol",
+      "description": "Valid at: Orem & Lehi â€¢ Excl. Alcohol",
       "restrictions": "Excl. Alcohol",
       "value": "Free Item",
       "maxUses": 3,
@@ -1285,13 +1285,13 @@
     ],
     "locations": [
       {
-        "lat": 40.2753836,
-        "lng": -111.6808629,
+        "lat": 40.27451,
+        "lng": -111.68132,
         "address": "575 E University Pkwy Ste B28, Orem, UT 84097"
       },
       {
-        "lat": 40.4316523,
-        "lng": -111.8305878,
+        "lat": 40.3890036,
+        "lng": -111.8254775,
         "address": "92 N 1200 E, Lehi, UT 84043"
       }
     ]
@@ -1433,23 +1433,23 @@
         "address": "215 W 1200 S, Orem, UT 84058"
       },
       {
-        "lat": 40.3768064,
-        "lng": -111.7959146,
+        "lat": 40.3536562,
+        "lng": -111.7783973,
         "address": "743 E 1180 S, American Fork, UT 84003"
       },
       {
-        "lat": 40.3862792,
-        "lng": -111.9130188,
+        "lat": 40.33956730000001,
+        "lng": -111.9424788,
         "address": "1085 W Mahogany Dr, Saratoga Springs, UT 84045"
       },
       {
-        "lat": 40.1245889,
-        "lng": -111.6418844,
+        "lat": 40.1249026,
+        "lng": -111.6410154,
         "address": "1090 N Canyon Creek Pkwy, Spanish Fork, UT 84660"
       },
       {
-        "lat": 40.7606675,
-        "lng": -111.8610591,
+        "lat": 40.7603464,
+        "lng": -111.8722293,
         "address": "668 E 400 S, Salt Lake City, UT 84102"
       },
       {
@@ -1458,8 +1458,8 @@
         "address": "3075 S 5600 W, West Valley City, UT 84120"
       },
       {
-        "lat": 40.6207902,
-        "lng": -111.8864925,
+        "lat": 40.6224672,
+        "lng": -111.8619355,
         "address": "1070 E Fort Union Blvd, Midvale, UT 84047"
       },
       {
@@ -1478,8 +1478,8 @@
         "address": "3766 W 13400 S, Riverton, UT 84065"
       },
       {
-        "lat": 40.9214974,
-        "lng": -111.8753159,
+        "lat": 40.92097709999999,
+        "lng": -111.8848671,
         "address": "371 W Parrish Ln, Centerville, UT 84014"
       }
     ]
@@ -1521,8 +1521,8 @@
     "name": "Costa Vida",
     "category": "restaurants",
     "address": "643 W Pacific Dr, American Fork, UT 84003",
-    "lat": 40.3832135,
-    "lng": -111.8134322,
+    "lat": 40.3818422,
+    "lng": -111.8159495,
     "locationRestriction": "All Utah",
     "deal": {
       "title": "Buy 1 Entree and 2 Drinks Get 1 Entree FREE! All Utah Only",
@@ -1542,28 +1542,28 @@
     ],
     "locations": [
       {
-        "lat": 40.3832135,
-        "lng": -111.8134322,
+        "lat": 40.3818422,
+        "lng": -111.8159495,
         "address": "643 W Pacific Dr, American Fork, UT 84003"
       },
       {
-        "lat": 40.3752582,
-        "lng": -111.9171503,
+        "lat": 40.3748854,
+        "lng": -111.9193648,
         "address": "731 N Redwood Rd Ste 110, Saratoga Springs, UT 84045"
       },
       {
-        "lat": 40.4293939,
-        "lng": -111.8900372,
+        "lat": 40.4302858,
+        "lng": -111.8916164,
         "address": "3461 N Thanksgiving Way, Lehi, UT 84043"
       },
       {
-        "lat": 40.1245889,
-        "lng": -111.6418844,
+        "lat": 40.1249026,
+        "lng": -111.6410154,
         "address": "1090 N Canyon Creek Pkwy, Spanish Fork, UT 84660"
       },
       {
-        "lat": 40.5629233,
-        "lng": -111.972409,
+        "lat": 40.56151510000001,
+        "lng": -111.9721026,
         "address": "10384 S River Heights Dr, South Jordan, UT 84095"
       },
       {
@@ -1582,8 +1582,8 @@
         "address": "171 S Rio Grande, Salt Lake City, UT 84101"
       },
       {
-        "lat": 40.7449502,
-        "lng": -111.8301527,
+        "lat": 40.7393953,
+        "lng": -111.8261502,
         "address": "1414 S Foothill Dr Ste C, Salt Lake City, UT 84108"
       }
     ]
@@ -1657,8 +1657,8 @@
     "name": "Dirty Dough's",
     "category": "restaurants",
     "address": "596 N Mill Rd, Vineyard, UT 84059",
-    "lat": 40.3088558,
-    "lng": -111.7397679,
+    "lat": 40.3078776,
+    "lng": -111.7384528,
     "locationRestriction": "Paul Mitchell Locs",
     "deal": {
       "title": "Buy 2 Entrees & 2 Drinks Get 1 FREE!",
@@ -1678,13 +1678,13 @@
     ],
     "locations": [
       {
-        "lat": 40.3088558,
-        "lng": -111.7397679,
+        "lat": 40.3078776,
+        "lng": -111.7384528,
         "address": "596 N Mill Rd, Vineyard, UT 84059"
       },
       {
-        "lat": 40.0991975,
-        "lng": -111.6324307,
+        "lat": 40.0906724,
+        "lng": -111.6326504,
         "address": "239 S 1300 E, Spanish Fork, UT 84660"
       },
       {
@@ -1720,8 +1720,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3063201,
-        "lng": -111.6994954,
+        "lat": 40.3192299,
+        "lng": -111.7042791,
         "address": "1194 N State St, Orem, UT 84057"
       },
       {
@@ -1730,13 +1730,13 @@
         "address": "1680 Freedom Blvd 200 W, Provo, UT 84601"
       },
       {
-        "lat": 40.3893751,
-        "lng": -111.8270995,
+        "lat": 40.43147829999999,
+        "lng": -111.8954016,
         "address": "3536 N Maple Loop Dr, Lehi, UT 84043"
       },
       {
-        "lat": 40.3862792,
-        "lng": -111.9130188,
+        "lat": 40.3358407,
+        "lng": -111.7152106,
         "address": "1400 S State St, Saratoga Springs, UT 84045"
       },
       {
@@ -1745,13 +1745,13 @@
         "address": "395 N Main St, Spanish Fork, UT 84660"
       },
       {
-        "lat": 40.6206076,
-        "lng": -111.896392,
+        "lat": 40.62028189999999,
+        "lng": -111.9010577,
         "address": "401 W 7200 S, Midvale, UT 84047"
       },
       {
-        "lat": 40.6746909,
-        "lng": -111.9065408,
+        "lat": 40.6747915,
+        "lng": -111.9026877,
         "address": "420 W 4500 S, Murray, UT 84123"
       }
     ]
@@ -1857,8 +1857,8 @@
     "name": "El Molcajete",
     "category": "restaurants",
     "address": "1407 S State St, Orem, UT 84097",
-    "lat": 40.2951516,
-    "lng": -111.6941373,
+    "lat": 40.2710322,
+    "lng": -111.6830664,
     "locationRestriction": "",
     "deal": {
       "title": "Buy 1 Entree & 2 Drinks Get One FREE!",
@@ -1878,8 +1878,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2951516,
-        "lng": -111.6941373,
+        "lat": 40.2710322,
+        "lng": -111.6830664,
         "address": "1407 S State St, Orem, UT 84097"
       }
     ]
@@ -1889,8 +1889,8 @@
     "name": "El Pollo Loco",
     "category": "restaurants",
     "address": "76 E University Pkwy, Orem, UT 84058",
-    "lat": 40.2734535,
-    "lng": -111.693284,
+    "lat": 40.27297710000001,
+    "lng": -111.6934417,
     "locationRestriction": "Orem Lehi & Particip",
     "deal": {
       "title": "Buy 1 Combo Meal Get 2nd FREE! Up to $8!",
@@ -1910,13 +1910,13 @@
     ],
     "locations": [
       {
-        "lat": 40.2734535,
-        "lng": -111.693284,
+        "lat": 40.27297710000001,
+        "lng": -111.6934417,
         "address": "76 E University Pkwy, Orem, UT 84058"
       },
       {
-        "lat": 40.4316523,
-        "lng": -111.8305878,
+        "lat": 40.3884675,
+        "lng": -111.8249173,
         "address": "88 N 1200 E, Lehi, UT 84043"
       }
     ]
@@ -1947,8 +1947,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3293932,
-        "lng": -111.7099336,
+        "lat": 40.3024919,
+        "lng": -111.6967397,
         "address": "294 N State St, Orem, UT 84057"
       }
     ]
@@ -1979,8 +1979,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3659998,
-        "lng": -111.7407583,
+        "lat": 40.3597893,
+        "lng": -111.7410892,
         "address": "340 S Main St, Pleasant Grove, UT 84062"
       }
     ]
@@ -2054,8 +2054,8 @@
     "name": "Ganesh Indian Cuisine",
     "category": "restaurants",
     "address": "784 E State Rd, American Fork, UT 84003",
-    "lat": 40.3768064,
-    "lng": -111.7959146,
+    "lat": 40.3714386,
+    "lng": -111.7767175,
     "locationRestriction": "All Locations",
     "deal": {
       "title": "Buy 1 Dinner Entree Get 1 50% OFF! All Locs",
@@ -2075,8 +2075,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3768064,
-        "lng": -111.7959146,
+        "lat": 40.3714386,
+        "lng": -111.7767175,
         "address": "784 E State Rd, American Fork, UT 84003"
       },
       {
@@ -2085,8 +2085,8 @@
         "address": "145 E Fort Union Blvd, Midvale, UT 84047"
       },
       {
-        "lat": 40.665209,
-        "lng": -111.4898534,
+        "lat": 40.6633299,
+        "lng": -111.4979076,
         "address": "1811 Sidewinder Dr, Park City, UT 84060"
       }
     ]
@@ -2096,12 +2096,12 @@
     "name": "Golden Corral Buffet",
     "category": "restaurants",
     "address": "171 W University Pkwy, Orem, UT 84058",
-    "lat": 40.2734889,
-    "lng": -111.6992152,
+    "lat": 40.2728904,
+    "lng": -111.6995531,
     "locationRestriction": "Orem",
     "deal": {
       "title": "2-4-1! Lunch Buffet! Mon-Fri. Before 4 PM Orem",
-      "description": "Valid at: Orem \u00e2\u20ac\u00a2 Mon-Fri Before 4 PM",
+      "description": "Valid at: Orem â€¢ Mon-Fri Before 4 PM",
       "restrictions": "Mon-Fri Before 4 PM",
       "value": "2 for 1",
       "maxUses": 2,
@@ -2117,8 +2117,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2734889,
-        "lng": -111.6992152,
+        "lat": 40.2728904,
+        "lng": -111.6995531,
         "address": "171 W University Pkwy, Orem, UT 84058"
       }
     ]
@@ -2128,8 +2128,8 @@
     "name": "Golden Corral Buffet",
     "category": "restaurants",
     "address": "171 W University Pkwy, Orem, UT 84058",
-    "lat": 40.2734889,
-    "lng": -111.6992152,
+    "lat": 40.2728904,
+    "lng": -111.6995531,
     "locationRestriction": "Orem",
     "deal": {
       "title": "2-4-1! Weekend Breakfast Buffet! Orem",
@@ -2149,8 +2149,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2734889,
-        "lng": -111.6992152,
+        "lat": 40.2728904,
+        "lng": -111.6995531,
         "address": "171 W University Pkwy, Orem, UT 84058"
       }
     ]
@@ -2288,8 +2288,8 @@
     "name": "Kohinoor Cuisine of India",
     "category": "restaurants",
     "address": "75 S State St, Orem, UT 84058",
-    "lat": 40.2748759,
-    "lng": -111.6851248,
+    "lat": 40.2957039,
+    "lng": -111.6938802,
     "locationRestriction": "",
     "deal": {
       "title": "Buy One Entree Get One 50% OFF!",
@@ -2309,8 +2309,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2748759,
-        "lng": -111.6851248,
+        "lat": 40.2957039,
+        "lng": -111.6938802,
         "address": "75 S State St, Orem, UT 84058"
       }
     ]
@@ -2373,8 +2373,8 @@
     ],
     "locations": [
       {
-        "lat": 40.5270143,
-        "lng": -111.8718151,
+        "lat": 40.5261527,
+        "lng": -111.8962721,
         "address": "153 W 12300 S, Draper, UT 84020"
       },
       {
@@ -2410,8 +2410,8 @@
     ],
     "locations": [
       {
-        "lat": 40.5270143,
-        "lng": -111.8718151,
+        "lat": 40.5261527,
+        "lng": -111.8962721,
         "address": "153 W 12300 S, Draper, UT 84020"
       },
       {
@@ -2463,8 +2463,8 @@
     "name": "Nautical Bowls",
     "category": "restaurants",
     "address": "1314 N Redwood Rd Ste 200, Saratoga Springs, UT 84045",
-    "lat": 40.3868641,
-    "lng": -111.916473,
+    "lat": 40.385608,
+    "lng": -111.915722,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Any Acai Bowl or Any Other Bowl!",
@@ -2484,8 +2484,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3868641,
-        "lng": -111.916473,
+        "lat": 40.385608,
+        "lng": -111.915722,
         "address": "1314 N Redwood Rd Ste 200, Saratoga Springs, UT 84045"
       }
     ]
@@ -2516,28 +2516,28 @@
     ],
     "locations": [
       {
-        "lat": 40.3260157,
-        "lng": -111.7075963,
+        "lat": 40.2993019,
+        "lng": -111.6975132,
         "address": "147 N State St, Orem, UT 84057"
       },
       {
-        "lat": 40.6149174,
-        "lng": -111.9106607,
+        "lat": 40.62492839999999,
+        "lng": -111.8901901,
         "address": "6930 S State St, Midvale, UT 84047"
       },
       {
-        "lat": 40.7290673,
-        "lng": -111.8883295,
+        "lat": 40.7384902,
+        "lng": -111.8886217,
         "address": "1438 S State St, Salt Lake City, UT 84115"
       },
       {
-        "lat": 40.5385315,
-        "lng": -111.9815843,
+        "lat": 40.5430538,
+        "lng": -111.9819411,
         "address": "11460 District Dr, South Jordan, UT 84095"
       },
       {
-        "lat": 41.0516518,
-        "lng": -111.95948,
+        "lat": 41.0764693,
+        "lng": -111.9823371,
         "address": "1120 N Main St, Layton, UT 84041"
       }
     ]
@@ -2547,8 +2547,8 @@
     "name": "Outback Steakhouse",
     "category": "restaurants",
     "address": "372 E University Pkwy, Orem, UT 84058",
-    "lat": 40.2733468,
-    "lng": -111.6854562,
+    "lat": 40.2728902,
+    "lng": -111.6855718,
     "locationRestriction": "Orem",
     "deal": {
       "title": "Buy Any Entree Get a Bloomin' Onion FREE! Orem",
@@ -2568,8 +2568,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2733468,
-        "lng": -111.6854562,
+        "lat": 40.2728902,
+        "lng": -111.6855718,
         "address": "372 E University Pkwy, Orem, UT 84058"
       }
     ]
@@ -2610,8 +2610,8 @@
         "address": "960 S University Ave, Provo, UT 84601"
       },
       {
-        "lat": 40.3537387,
-        "lng": -111.7635548,
+        "lat": 40.3546889,
+        "lng": -111.7659027,
         "address": "758 S North County Blvd Ste A, Pleasant Grove, UT 84062"
       }
     ]
@@ -2652,8 +2652,8 @@
         "address": "960 S University Ave, Provo, UT 84601"
       },
       {
-        "lat": 40.3537387,
-        "lng": -111.7635548,
+        "lat": 40.3546889,
+        "lng": -111.7659027,
         "address": "758 S North County Blvd Ste A, Pleasant Grove, UT 84062"
       }
     ]
@@ -2684,8 +2684,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3119974,
-        "lng": -111.6643133,
+        "lat": 40.3107398,
+        "lng": -111.6761608,
         "address": "824 E 800 N, Orem, UT 84097"
       }
     ]
@@ -2695,8 +2695,8 @@
     "name": "Rodizio Grill",
     "category": "restaurants",
     "address": "4801 N University Ave, Provo, UT 84604",
-    "lat": 40.2983483,
-    "lng": -111.658248,
+    "lat": 40.2996159,
+    "lng": -111.6593651,
     "locationRestriction": "",
     "deal": {
       "title": "Buy Any Entree Get Any Specialty Beverage & Any Dessert",
@@ -2716,13 +2716,13 @@
     ],
     "locations": [
       {
-        "lat": 40.756228,
-        "lng": -111.870897,
+        "lat": 40.7573471,
+        "lng": -111.8725087,
         "address": "600 S 700 E Fl 2, Salt Lake City, UT 84102"
       },
       {
-        "lat": 40.2983483,
-        "lng": -111.658248,
+        "lat": 40.2996159,
+        "lng": -111.6593651,
         "address": "4801 N University Ave, Provo, UT 84604"
       }
     ]
@@ -2732,8 +2732,8 @@
     "name": "Rodizio Grill",
     "category": "restaurants",
     "address": "4801 N University Ave, Provo, UT 84604",
-    "lat": 40.2983483,
-    "lng": -111.658248,
+    "lat": 40.2996159,
+    "lng": -111.6593651,
     "locationRestriction": "",
     "deal": {
       "title": "Buy 1 Entree Get 1 Dessert FREE! (Up to 2 People) Excludes Holidays",
@@ -2753,13 +2753,13 @@
     ],
     "locations": [
       {
-        "lat": 40.756228,
-        "lng": -111.870897,
+        "lat": 40.7573471,
+        "lng": -111.8725087,
         "address": "600 S 700 E Fl 2, Salt Lake City, UT 84102"
       },
       {
-        "lat": 40.2983483,
-        "lng": -111.658248,
+        "lat": 40.2996159,
+        "lng": -111.6593651,
         "address": "4801 N University Ave, Provo, UT 84604"
       }
     ]
@@ -2769,8 +2769,8 @@
     "name": "Ruby River",
     "category": "restaurants",
     "address": "1454 S University Ave, Provo, UT 84601",
-    "lat": 40.2140075,
-    "lng": -111.6594531,
+    "lat": 40.2139421,
+    "lng": -111.6604638,
     "locationRestriction": "",
     "deal": {
       "title": "Buy 1 Entree Get an Appetizer FREE! Up to $8",
@@ -2790,13 +2790,13 @@
     ],
     "locations": [
       {
-        "lat": 40.2140075,
-        "lng": -111.6594531,
+        "lat": 40.2139421,
+        "lng": -111.6604638,
         "address": "1454 S University Ave, Provo, UT 84601"
       },
       {
-        "lat": 40.7617992,
-        "lng": -111.8709553,
+        "lat": 40.759654,
+        "lng": -111.8706188,
         "address": "435 S 700 E, Salt Lake City, UT 84102"
       }
     ]
@@ -2832,8 +2832,8 @@
         "address": "748 W Antelope Dr Ste A, Layton, UT 84041"
       },
       {
-        "lat": 40.8911457,
-        "lng": -111.8922285,
+        "lat": 40.8900441,
+        "lng": -111.892692,
         "address": "71 N 500 W Ste C, West Bountiful, UT 84010"
       }
     ]
@@ -2875,8 +2875,8 @@
     "name": "Sweeto Burrito",
     "category": "restaurants",
     "address": "1990 N State St, Orem, UT 84057",
-    "lat": 40.2981599,
-    "lng": -111.6944313,
+    "lat": 40.3335169,
+    "lng": -111.7127447,
     "locationRestriction": "",
     "deal": {
       "title": "Buy 1 Break Neck Breakfast Burrito Get 1 FREE!",
@@ -2896,8 +2896,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2981599,
-        "lng": -111.6944313,
+        "lat": 40.3335169,
+        "lng": -111.7127447,
         "address": "1990 N State St, Orem, UT 84057"
       }
     ]
@@ -2907,8 +2907,8 @@
     "name": "Sweeto Burrito",
     "category": "restaurants",
     "address": "1990 N State St, Orem, UT 84057",
-    "lat": 40.2981599,
-    "lng": -111.6944313,
+    "lat": 40.3335169,
+    "lng": -111.7127447,
     "locationRestriction": "",
     "deal": {
       "title": "Buy 1 Burrito or Los 3 Amigos Tacos & 2 Drinks Get 1 FREE!",
@@ -2928,8 +2928,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2981599,
-        "lng": -111.6944313,
+        "lat": 40.3335169,
+        "lng": -111.7127447,
         "address": "1990 N State St, Orem, UT 84057"
       }
     ]
@@ -2939,8 +2939,8 @@
     "name": "Sweeto Burrito",
     "category": "restaurants",
     "address": "1990 N State St, Orem, UT 84057",
-    "lat": 40.2981599,
-    "lng": -111.6944313,
+    "lat": 40.3335169,
+    "lng": -111.7127447,
     "locationRestriction": "",
     "deal": {
       "title": "Buy 1 Regular Burrito Get 1 FREE!",
@@ -2960,8 +2960,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2981599,
-        "lng": -111.6944313,
+        "lat": 40.3335169,
+        "lng": -111.7127447,
         "address": "1990 N State St, Orem, UT 84057"
       }
     ]
@@ -2997,8 +2997,8 @@
         "address": "1100 W 800 N, Orem, UT 84057"
       },
       {
-        "lat": 40.038367,
-        "lng": -111.7338474,
+        "lat": 40.0411692,
+        "lng": -111.7341621,
         "address": "212 S 100 W, Payson, UT 84651"
       }
     ]
@@ -3061,13 +3061,13 @@
     ],
     "locations": [
       {
-        "lat": 40.3537387,
-        "lng": -111.7635548,
+        "lat": 40.3546889,
+        "lng": -111.7659027,
         "address": "758 S North County Blvd, Pleasant Grove, UT 84062"
       },
       {
-        "lat": 40.5269543,
-        "lng": -111.868482,
+        "lat": 40.5269883,
+        "lng": -111.8775761,
         "address": "487 E 12300 S, Draper, UT 84020"
       }
     ]
@@ -3077,8 +3077,8 @@
     "name": "The Smoked Taco",
     "category": "restaurants",
     "address": "933 W 500 N, American Fork, UT 84003",
-    "lat": 40.388216,
-    "lng": -111.8220603,
+    "lat": 40.3881621,
+    "lng": -111.8228275,
     "locationRestriction": "All Locations",
     "deal": {
       "title": "Buy 1 Taco Get 1 FREE! All Locations",
@@ -3098,18 +3098,18 @@
     ],
     "locations": [
       {
-        "lat": 40.388216,
-        "lng": -111.8220603,
+        "lat": 40.3881621,
+        "lng": -111.8228275,
         "address": "933 W 500 N, American Fork, UT 84003"
       },
       {
-        "lat": 40.3862792,
-        "lng": -111.9130188,
+        "lat": 40.412425,
+        "lng": -111.8694833,
         "address": "1059 W River Rd, Saratoga Springs, UT 84045"
       },
       {
-        "lat": 40.8843845,
-        "lng": -111.8577857,
+        "lat": 40.8840001,
+        "lng": -111.8864579,
         "address": "245 W 500 S, Bountiful, UT 84010"
       }
     ]
@@ -3119,8 +3119,8 @@
     "name": "Umami Japanese Barbeque",
     "category": "restaurants",
     "address": "568 N Mill Rd Ste 107, Vineyard, UT 84059",
-    "lat": 40.3088558,
-    "lng": -111.7397679,
+    "lat": 40.307793,
+    "lng": -111.7364766,
     "locationRestriction": "",
     "deal": {
       "title": "Buy 1 Lunch Buffet Get 1 FREE!",
@@ -3140,8 +3140,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3088558,
-        "lng": -111.7397679,
+        "lat": 40.307793,
+        "lng": -111.7364766,
         "address": "568 N Mill Rd Ste 107, Vineyard, UT 84059"
       }
     ]
@@ -3151,8 +3151,8 @@
     "name": "Umami Japanese Barbeque",
     "category": "restaurants",
     "address": "568 N Mill Rd Ste 107, Vineyard, UT 84059",
-    "lat": 40.3088558,
-    "lng": -111.7397679,
+    "lat": 40.307793,
+    "lng": -111.7364766,
     "locationRestriction": "",
     "deal": {
       "title": "Buy 1 Lunch Buffet Get 1 50% OFF!",
@@ -3172,8 +3172,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3088558,
-        "lng": -111.7397679,
+        "lat": 40.307793,
+        "lng": -111.7364766,
         "address": "568 N Mill Rd Ste 107, Vineyard, UT 84059"
       }
     ]
@@ -3209,8 +3209,8 @@
         "address": "933 S University Ave, Provo, UT 84606"
       },
       {
-        "lat": 40.6967891,
-        "lng": -111.9866954,
+        "lat": 40.6966917,
+        "lng": -112.0064915,
         "address": "4824 W 3500 S, West Valley City, UT 84120"
       }
     ]
@@ -3246,8 +3246,8 @@
         "address": "933 S University Ave, Provo, UT 84606"
       },
       {
-        "lat": 40.6967891,
-        "lng": -111.9866954,
+        "lat": 40.6966917,
+        "lng": -112.0064915,
         "address": "4824 W 3500 S, West Valley City, UT 84120"
       }
     ]
@@ -3294,7 +3294,7 @@
     "locationRestriction": "Orem & SF",
     "deal": {
       "title": "2-4-1! Entree! Max Discount $15!",
-      "description": "Valid at: Orem & SF \u00e2\u20ac\u00a2 Max Discount $15",
+      "description": "Valid at: Orem & SF â€¢ Max Discount $15",
       "restrictions": "Max Discount $15",
       "value": "2 for 1",
       "maxUses": 2,
@@ -3320,8 +3320,8 @@
         "address": "121 E 12300 S Ste P5, Draper, UT 84020"
       },
       {
-        "lat": 40.6667841,
-        "lng": -111.888417,
+        "lat": 40.6408954,
+        "lng": -111.8885751,
         "address": "5967 S State St, Murray, UT 84107"
       }
     ]
@@ -3331,8 +3331,8 @@
     "name": "Wingers",
     "category": "restaurants",
     "address": "1200 Towne Centre Blvd Ste 1096, Provo, UT 84601",
-    "lat": 40.2155627,
-    "lng": -111.6628499,
+    "lat": 40.2179017,
+    "lng": -111.6629503,
     "locationRestriction": "",
     "deal": {
       "title": "Buy 1 Entree & 2 Drinks Get 1 Entree FREE! Up to $10",
@@ -3352,13 +3352,13 @@
     ],
     "locations": [
       {
-        "lat": 40.2155627,
-        "lng": -111.6628499,
+        "lat": 40.2179017,
+        "lng": -111.6629503,
         "address": "1200 Towne Centre Blvd Ste 1096, Provo, UT 84601"
       },
       {
-        "lat": 40.2748759,
-        "lng": -111.6851248,
+        "lat": 40.2858732,
+        "lng": -111.6907089,
         "address": "610 S State St, Orem, UT 84058"
       },
       {
@@ -3367,13 +3367,13 @@
         "address": "3816 W 13400 S, Riverton, UT 84065"
       },
       {
-        "lat": 40.6061337,
-        "lng": -111.9395211,
+        "lat": 40.58440239999999,
+        "lng": -111.9381357,
         "address": "9175 S Redwood Rd, West Jordan, UT 84088"
       },
       {
-        "lat": 40.6924551,
-        "lng": -111.9574181,
+        "lat": 40.7247406,
+        "lng": -111.9580911,
         "address": "3671 S Constitution Blvd, West Valley City, UT 84119"
       }
     ]
@@ -3383,8 +3383,8 @@
     "name": "Wingers",
     "category": "restaurants",
     "address": "1200 Towne Centre Blvd Ste 1096, Provo, UT 84601",
-    "lat": 40.2155627,
-    "lng": -111.6628499,
+    "lat": 40.2179017,
+    "lng": -111.6629503,
     "locationRestriction": "Provo",
     "deal": {
       "title": "FREE! Dessert With Any Entree Purchase! Provo",
@@ -3404,13 +3404,13 @@
     ],
     "locations": [
       {
-        "lat": 40.2155627,
-        "lng": -111.6628499,
+        "lat": 40.2179017,
+        "lng": -111.6629503,
         "address": "1200 Towne Centre Blvd Ste 1096, Provo, UT 84601"
       },
       {
-        "lat": 40.2748759,
-        "lng": -111.6851248,
+        "lat": 40.2858732,
+        "lng": -111.6907089,
         "address": "610 S State St, Orem, UT 84058"
       },
       {
@@ -3419,13 +3419,13 @@
         "address": "3816 W 13400 S, Riverton, UT 84065"
       },
       {
-        "lat": 40.6061337,
-        "lng": -111.9395211,
+        "lat": 40.58440239999999,
+        "lng": -111.9381357,
         "address": "9175 S Redwood Rd, West Jordan, UT 84088"
       },
       {
-        "lat": 40.6924551,
-        "lng": -111.9574181,
+        "lat": 40.7247406,
+        "lng": -111.9580911,
         "address": "3671 S Constitution Blvd, West Valley City, UT 84119"
       }
     ]
@@ -3456,23 +3456,23 @@
     ],
     "locations": [
       {
-        "lat": 40.3533224,
-        "lng": -111.763274,
+        "lat": 40.3533705,
+        "lng": -111.7624504,
         "address": "887 S North County Blvd, Pleasant Grove, UT 84062"
       },
       {
-        "lat": 40.2753836,
-        "lng": -111.6808629,
+        "lat": 40.2748122,
+        "lng": -111.6802325,
         "address": "575 E University Pkwy, Orem, UT 84097"
       },
       {
-        "lat": 40.3088558,
-        "lng": -111.7397679,
+        "lat": 40.3079122,
+        "lng": -111.7389909,
         "address": "514 N Mill Rd, Vineyard, UT 84059"
       },
       {
-        "lat": 40.6841835,
-        "lng": -111.9893324,
+        "lat": 40.6695953,
+        "lng": -111.9871583,
         "address": "4578 S 4000 W, West Valley City, UT 84120"
       }
     ]
@@ -3503,13 +3503,13 @@
     ],
     "locations": [
       {
-        "lat": 40.2748759,
-        "lng": -111.6851248,
+        "lat": 40.2918058,
+        "lng": -111.6941828,
         "address": "360 S State St Bldg C Ste 102, Orem, UT 84058"
       },
       {
-        "lat": 40.6967891,
-        "lng": -111.9866954,
+        "lat": 40.6679758,
+        "lng": -111.962523,
         "address": "2946 W 4700 S, West Valley City, UT 84129"
       }
     ]
@@ -3524,7 +3524,7 @@
     "locationRestriction": "All UT",
     "deal": {
       "title": "Buy 1 Hour Get 1 FREE! Code: SSCARD Bring Clubs",
-      "description": "Valid at: All UT \u00e2\u20ac\u00a2 Code: SSCARD Bring Clubs",
+      "description": "Valid at: All UT â€¢ Code: SSCARD Bring Clubs",
       "restrictions": "Code: SSCARD Bring Clubs",
       "value": "Buy 1 Get 1 Free",
       "maxUses": 3,
@@ -3540,8 +3540,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3670393,
-        "lng": -111.7854846,
+        "lat": 40.365423,
+        "lng": -111.7848179,
         "address": "541 S 500 E, American Fork, UT 84003"
       },
       {
@@ -3550,13 +3550,13 @@
         "address": "1402 E 3500 N Ste 101, Lehi, UT 84043"
       },
       {
-        "lat": 40.6999649,
-        "lng": -111.854862,
+        "lat": 40.6993871,
+        "lng": -111.8634233,
         "address": "970 E 3300 S Ste 4A, Salt Lake City, UT 84106"
       },
       {
-        "lat": 40.5588323,
-        "lng": -111.8823425,
+        "lat": 40.5580422,
+        "lng": -111.8925749,
         "address": "65 W 10600 S, Sandy, UT 84070"
       }
     ]
@@ -3683,8 +3683,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2338588,
-        "lng": -111.6971912,
+        "lat": 40.2345931,
+        "lng": -111.7228989,
         "address": "3606 W Center St, Provo, UT 84601"
       }
     ]
@@ -3715,8 +3715,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2338588,
-        "lng": -111.6971912,
+        "lat": 40.2345931,
+        "lng": -111.7228989,
         "address": "3606 W Center St, Provo, UT 84601"
       }
     ]
@@ -3726,8 +3726,8 @@
     "name": "Classic Fun Center",
     "category": "entertainment",
     "address": "250 S State St, Orem, UT 84058",
-    "lat": 40.2943464,
-    "lng": -111.6937846,
+    "lat": 40.2932879,
+    "lng": -111.6950393,
     "locationRestriction": "Orem",
     "deal": {
       "title": "2-4-1! Skating Climbing Bouncing or Laser Tag! Orem",
@@ -3747,8 +3747,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2943464,
-        "lng": -111.6937846,
+        "lat": 40.2932879,
+        "lng": -111.6950393,
         "address": "250 S State St, Orem, UT 84058"
       }
     ]
@@ -3948,8 +3948,8 @@
     "name": "Dreamwalk Park",
     "category": "entertainment",
     "address": "575 E University Pkwy Ste N237, Orem, UT 84097",
-    "lat": 40.2753836,
-    "lng": -111.6808629,
+    "lat": 40.2748209,
+    "lng": -111.6790978,
     "locationRestriction": "",
     "deal": {
       "title": "Buy 1 Adult Ticket Get a Child Ticket FREE!",
@@ -3969,8 +3969,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2753836,
-        "lng": -111.6808629,
+        "lat": 40.2748209,
+        "lng": -111.6790978,
         "address": "575 E University Pkwy Ste N237, Orem, UT 84097"
       }
     ]
@@ -3980,8 +3980,8 @@
     "name": "Dreamwalk Park",
     "category": "entertainment",
     "address": "575 E University Pkwy Ste N237, Orem, UT 84097",
-    "lat": 40.2753836,
-    "lng": -111.6808629,
+    "lat": 40.2748209,
+    "lng": -111.6790978,
     "locationRestriction": "",
     "deal": {
       "title": "Buy 1 Adult Ticket Get an Adult or Child Ticket 50% OFF!",
@@ -4001,8 +4001,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2753836,
-        "lng": -111.6808629,
+        "lat": 40.2748209,
+        "lng": -111.6790978,
         "address": "575 E University Pkwy Ste N237, Orem, UT 84097"
       }
     ]
@@ -4033,8 +4033,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2338703,
-        "lng": -111.6637831,
+        "lat": 40.2334091,
+        "lng": -111.6637035,
         "address": "295 W Center St, Provo, UT 84601"
       }
     ]
@@ -4145,7 +4145,7 @@
     "locationRestriction": "Provo",
     "deal": {
       "title": "50% OFF! Bowling! Before 8 PM Provo",
-      "description": "Valid at: Provo \u00e2\u20ac\u00a2 Before 8 PM",
+      "description": "Valid at: Provo â€¢ Before 8 PM",
       "restrictions": "Before 8 PM",
       "value": "50% Off",
       "maxUses": 3,
@@ -4358,8 +4358,8 @@
         "address": "261 N University Ave, Provo, UT 84601"
       },
       {
-        "lat": 40.7608504,
-        "lng": -111.9088796,
+        "lat": 40.7563925,
+        "lng": -111.8985922,
         "address": "Salt Lake City, Salt Lake City, UT 84101"
       }
     ]
@@ -4369,8 +4369,8 @@
     "name": "HiddenHunts.com",
     "category": "entertainment",
     "address": "Online/Virtual, Orem, UT 84057",
-    "lat": 40.2981599,
-    "lng": -111.6944313,
+    "lat": 40.3150359,
+    "lng": -111.7018452,
     "locationRestriction": "",
     "deal": {
       "title": "30% OFF! Treasure Hunt Adventure! Code: SSC",
@@ -4390,8 +4390,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2981599,
-        "lng": -111.6944313,
+        "lat": 40.3150359,
+        "lng": -111.7018452,
         "address": "Online/Virtual, Orem, UT 84057"
       }
     ]
@@ -4406,7 +4406,7 @@
     "locationRestriction": "Provo Canyon",
     "deal": {
       "title": "2-4-1! River Tubing! Valid M-F Code SSC",
-      "description": "Valid at: Provo Canyon \u00e2\u20ac\u00a2 M-F Code SSC",
+      "description": "Valid at: Provo Canyon â€¢ M-F Code SSC",
       "restrictions": "M-F Code SSC",
       "value": "2 for 1",
       "maxUses": 1,
@@ -4454,8 +4454,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2334109,
-        "lng": -111.6431945,
+        "lat": 40.24076,
+        "lng": -111.6422706,
         "address": "496 N 900 E, Provo, UT 84606"
       }
     ]
@@ -4465,12 +4465,12 @@
     "name": "Jack & Jill Lanes",
     "category": "entertainment",
     "address": "113 S 600 E, Lehi, UT 84043",
-    "lat": 40.3839944,
-    "lng": -111.8397354,
+    "lat": 40.3866552,
+    "lng": -111.8388794,
     "locationRestriction": "Lehi & AF",
     "deal": {
       "title": "2-4-1! Bowling for Same Player! M-Th Before 6pm Not Valid Holidays",
-      "description": "Valid at: Lehi & AF \u00e2\u20ac\u00a2 M-Th Before 6pm Not Valid Holidays Shoes Not Included",
+      "description": "Valid at: Lehi & AF â€¢ M-Th Before 6pm Not Valid Holidays Shoes Not Included",
       "restrictions": "M-Th Before 6pm Not Valid Holidays Shoes Not Included",
       "value": "2 for 1",
       "maxUses": 3,
@@ -4486,8 +4486,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3839944,
-        "lng": -111.8397354,
+        "lat": 40.3866552,
+        "lng": -111.8388794,
         "address": "113 S 600 E, Lehi, UT 84043"
       }
     ]
@@ -4497,12 +4497,12 @@
     "name": "Jack & Jill Lanes",
     "category": "entertainment",
     "address": "113 S 600 E, Lehi, UT 84043",
-    "lat": 40.3839944,
-    "lng": -111.8397354,
+    "lat": 40.3866552,
+    "lng": -111.8388794,
     "locationRestriction": "Lehi",
     "deal": {
       "title": "2-4-1! Game of Laser Tag for Same Player! M-Th before 6pm",
-      "description": "Valid at: Lehi \u00e2\u20ac\u00a2 M-Th before 6pm Not Valid Holidays",
+      "description": "Valid at: Lehi â€¢ M-Th before 6pm Not Valid Holidays",
       "restrictions": "M-Th before 6pm Not Valid Holidays",
       "value": "2 for 1",
       "maxUses": 3,
@@ -4518,8 +4518,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3839944,
-        "lng": -111.8397354,
+        "lat": 40.3866552,
+        "lng": -111.8388794,
         "address": "113 S 600 E, Lehi, UT 84043"
       }
     ]
@@ -4550,8 +4550,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2997813,
-        "lng": -111.6960881,
+        "lat": 40.2804533,
+        "lng": -111.6879573,
         "address": "914 S State St, Orem, UT 84097"
       }
     ]
@@ -4582,8 +4582,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2997813,
-        "lng": -111.6960881,
+        "lat": 40.2804533,
+        "lng": -111.6879573,
         "address": "914 S State St, Orem, UT 84097"
       }
     ]
@@ -4614,8 +4614,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3543415,
-        "lng": -111.7524533,
+        "lat": 40.3541195,
+        "lng": -111.7533601,
         "address": "844 S 800 W Ste 201, Pleasant Grove, UT 84062"
       },
       {
@@ -4726,8 +4726,8 @@
     "name": "Laser Assault",
     "category": "entertainment",
     "address": "1200 Towne Centre Blvd Ste 2018, Provo, UT 84601",
-    "lat": 40.2155627,
-    "lng": -111.6628499,
+    "lat": 40.2167918,
+    "lng": -111.6630217,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Laser Assault Game!",
@@ -4747,8 +4747,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2155627,
-        "lng": -111.6628499,
+        "lat": 40.2167918,
+        "lng": -111.6630217,
         "address": "1200 Towne Centre Blvd Ste 2018, Provo, UT 84601"
       }
     ]
@@ -4758,8 +4758,8 @@
     "name": "Laser Assault",
     "category": "entertainment",
     "address": "1200 Towne Centre Blvd Ste 2018, Provo, UT 84601",
-    "lat": 40.2155627,
-    "lng": -111.6628499,
+    "lat": 40.2167918,
+    "lng": -111.6630217,
     "locationRestriction": "",
     "deal": {
       "title": "50% OFF! Friday Night Fire Fight Pass!",
@@ -4779,8 +4779,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2155627,
-        "lng": -111.6628499,
+        "lat": 40.2167918,
+        "lng": -111.6630217,
         "address": "1200 Towne Centre Blvd Ste 2018, Provo, UT 84601"
       }
     ]
@@ -4827,7 +4827,7 @@
     "locationRestriction": "Orem",
     "deal": {
       "title": "2-4-1! Game! Up to 3 free games per visit! Not Valid after 5 PM Sat",
-      "description": "Valid at: Orem \u00e2\u20ac\u00a2 Not Valid after 5 PM Sat Holidays or School Holidays",
+      "description": "Valid at: Orem â€¢ Not Valid after 5 PM Sat Holidays or School Holidays",
       "restrictions": "Not Valid after 5 PM Sat Holidays or School Holidays",
       "value": "2 for 1",
       "maxUses": null,
@@ -4843,8 +4843,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2997813,
-        "lng": -111.6960881,
+        "lat": 40.2685402,
+        "lng": -111.6812739,
         "address": "1585 S State St, Orem, UT 84097"
       }
     ]
@@ -4854,8 +4854,8 @@
     "name": "Ninja Playground",
     "category": "entertainment",
     "address": "305 S 850 E Ste 112, Lehi, UT 84043",
-    "lat": 40.3796554,
-    "lng": -111.8333464,
+    "lat": 40.3839824,
+    "lng": -111.8338937,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Admission to Open Gym!",
@@ -4875,8 +4875,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3796554,
-        "lng": -111.8333464,
+        "lat": 40.3839824,
+        "lng": -111.8338937,
         "address": "305 S 850 E Ste 112, Lehi, UT 84043"
       }
     ]
@@ -4886,8 +4886,8 @@
     "name": "Peaks Ice Arena",
     "category": "entertainment",
     "address": "100 N Seven Peaks Blvd, Provo, UT 84606",
-    "lat": 40.234644,
-    "lng": -111.640201,
+    "lat": 40.23500420000001,
+    "lng": -111.6381255,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Reg Admission! Skate Rental Not Included",
@@ -4907,8 +4907,8 @@
     ],
     "locations": [
       {
-        "lat": 40.234644,
-        "lng": -111.640201,
+        "lat": 40.23500420000001,
+        "lng": -111.6381255,
         "address": "100 N Seven Peaks Blvd, Provo, UT 84606"
       }
     ]
@@ -4950,12 +4950,12 @@
     "name": "Provo Canyon Adventures",
     "category": "entertainment",
     "address": "3249 E Provo Canyon Rd, Provo, UT 84604",
-    "lat": 40.3765955698895,
-    "lng": -111.55527264582324,
+    "lat": 40.3564269,
+    "lng": -111.5748526,
     "locationRestriction": "Provo Canyon",
     "deal": {
       "title": "2-4-1! Zipline Tour! Appt. Req. Please Tip",
-      "description": "Valid at: Provo Canyon \u00e2\u20ac\u00a2 Appt Required Please Tip",
+      "description": "Valid at: Provo Canyon â€¢ Appt Required Please Tip",
       "restrictions": "Appt Required Please Tip",
       "value": "2 for 1",
       "maxUses": 1,
@@ -4971,8 +4971,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3765955698895,
-        "lng": -111.55527264582324,
+        "lat": 40.3564269,
+        "lng": -111.5748526,
         "address": "3249 E Provo Canyon Rd, Provo, UT 84604"
       }
     ]
@@ -5046,8 +5046,8 @@
     "name": "Redline Racing",
     "category": "entertainment",
     "address": "1439 N 1380 W Bldg 2 Ste 100, Orem, UT 84057",
-    "lat": 40.3223247,
-    "lng": -111.7243748,
+    "lat": 40.3234299,
+    "lng": -111.7302774,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Race! Includes free helmet & headsock",
@@ -5067,8 +5067,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3223247,
-        "lng": -111.7243748,
+        "lat": 40.3234299,
+        "lng": -111.7302774,
         "address": "1439 N 1380 W Bldg 2 Ste 100, Orem, UT 84057"
       }
     ]
@@ -5110,12 +5110,12 @@
     "name": "Rowley's Red Barn",
     "category": "entertainment",
     "address": "901 S 300 W, Santaquin, UT 84655",
-    "lat": 39.9834825,
-    "lng": -111.7916914,
+    "lat": 39.960811,
+    "lng": -111.7946786,
     "locationRestriction": "Santaquin",
     "deal": {
       "title": "2-4-1! Admission to Corn Maze and Fall Festival! M-Th",
-      "description": "Valid at: Santaquin \u00e2\u20ac\u00a2 M-Th",
+      "description": "Valid at: Santaquin â€¢ M-Th",
       "restrictions": "M-Th",
       "value": "2 for 1",
       "maxUses": 3,
@@ -5131,8 +5131,8 @@
     ],
     "locations": [
       {
-        "lat": 39.9834825,
-        "lng": -111.7916914,
+        "lat": 39.960811,
+        "lng": -111.7946786,
         "address": "901 S 300 W, Santaquin, UT 84655"
       }
     ]
@@ -5142,8 +5142,8 @@
     "name": "Salsa at Southworth",
     "category": "entertainment",
     "address": "268 W 100 S, Provo, UT 84601",
-    "lat": 40.2324226,
-    "lng": -111.6633566,
+    "lat": 40.2330195,
+    "lng": -111.6634834,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Thurs Admission!",
@@ -5163,8 +5163,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2324226,
-        "lng": -111.6633566,
+        "lat": 40.2330195,
+        "lng": -111.6634834,
         "address": "268 W 100 S, Provo, UT 84601"
       }
     ]
@@ -5179,7 +5179,7 @@
     "locationRestriction": "Orem",
     "deal": {
       "title": "2-4-1! Same Day Musical Tickets! Present Card in Person",
-      "description": "Valid at: Orem \u00e2\u20ac\u00a2 Present Card in Person",
+      "description": "Valid at: Orem â€¢ Present Card in Person",
       "restrictions": "Present Card in Person",
       "value": "2 for 1",
       "maxUses": 3,
@@ -5195,8 +5195,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2750201,
-        "lng": -111.6851933,
+        "lat": 40.2836566,
+        "lng": -111.6883373,
         "address": "745 S State St, Orem, UT 84058"
       }
     ]
@@ -5206,8 +5206,8 @@
     "name": "Scratch Miniature Golf",
     "category": "entertainment",
     "address": "1323 E 800 N, Orem, UT 84097",
-    "lat": 40.3252354,
-    "lng": -111.6768205,
+    "lat": 40.3124841,
+    "lng": -111.6642585,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Round of Mini Golf!",
@@ -5227,8 +5227,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3252354,
-        "lng": -111.6768205,
+        "lat": 40.3124841,
+        "lng": -111.6642585,
         "address": "1323 E 800 N, Orem, UT 84097"
       }
     ]
@@ -5238,8 +5238,8 @@
     "name": "Stadium Cinemas",
     "category": "entertainment",
     "address": "633 S 950 W, Payson, UT 84651",
-    "lat": 40.0343732,
-    "lng": -111.7490169,
+    "lat": 40.0346014,
+    "lng": -111.7484353,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Movie Ticket!",
@@ -5259,8 +5259,8 @@
     ],
     "locations": [
       {
-        "lat": 40.0343732,
-        "lng": -111.7490169,
+        "lat": 40.0346014,
+        "lng": -111.7484353,
         "address": "633 S 950 W, Payson, UT 84651"
       }
     ]
@@ -5302,8 +5302,8 @@
     "name": "The Pickr",
     "category": "entertainment",
     "address": "559 S Deseret Dr, Kaysville, UT 84037",
-    "lat": 41.0349847,
-    "lng": -111.9383931,
+    "lat": 41.0260981,
+    "lng": -111.9485107,
     "locationRestriction": "Lehi & Bluffdale",
     "deal": {
       "title": "2-4-1! 3 Hr Open Play Session!",
@@ -5323,13 +5323,13 @@
     ],
     "locations": [
       {
-        "lat": 41.0349847,
-        "lng": -111.9383931,
+        "lat": 41.0260981,
+        "lng": -111.9485107,
         "address": "559 S Deseret Dr, Kaysville, UT 84037"
       },
       {
-        "lat": 40.6133014,
-        "lng": -111.9816758,
+        "lat": 40.6179868,
+        "lng": -111.9792666,
         "address": "7552 S Plaza Center Dr, West Jordan, UT 84084"
       }
     ]
@@ -5339,8 +5339,8 @@
     "name": "The Rift Augmented Reality",
     "category": "entertainment",
     "address": "1200 Towne Centre Blvd Ste 1158, Provo, UT 84601",
-    "lat": 40.2155627,
-    "lng": -111.6628499,
+    "lat": 40.217462,
+    "lng": -111.664028,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Any Experience! Max 8 People",
@@ -5360,8 +5360,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2155627,
-        "lng": -111.6628499,
+        "lat": 40.217462,
+        "lng": -111.664028,
         "address": "1200 Towne Centre Blvd Ste 1158, Provo, UT 84601"
       }
     ]
@@ -5371,8 +5371,8 @@
     "name": "The Ruth",
     "category": "entertainment",
     "address": "401 S Pleasant Grove Blvd, Pleasant Grove, UT 84062",
-    "lat": 40.3590777,
-    "lng": -111.7612082,
+    "lat": 40.3592235,
+    "lng": -111.7617742,
     "locationRestriction": "",
     "deal": {
       "title": "50% OFF! Same Day Ticket! Present Card in Person",
@@ -5392,8 +5392,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3590777,
-        "lng": -111.7612082,
+        "lat": 40.3592235,
+        "lng": -111.7617742,
         "address": "401 S Pleasant Grove Blvd, Pleasant Grove, UT 84062"
       }
     ]
@@ -5403,8 +5403,8 @@
     "name": "This Is The Place Heritage Park",
     "category": "entertainment",
     "address": "2601 E Sunnyside Ave, Salt Lake City, UT 84108",
-    "lat": 40.7510462,
-    "lng": -111.8147792,
+    "lat": 40.7520296,
+    "lng": -111.8162026,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Admission!",
@@ -5424,8 +5424,8 @@
     ],
     "locations": [
       {
-        "lat": 40.7510462,
-        "lng": -111.8147792,
+        "lat": 40.7520296,
+        "lng": -111.8162026,
         "address": "2601 E Sunnyside Ave, Salt Lake City, UT 84108"
       }
     ]
@@ -5435,8 +5435,8 @@
     "name": "Us and Art",
     "category": "entertainment",
     "address": "45 S Main St Ste 101, Pleasant Grove, UT 84062",
-    "lat": 40.3659998,
-    "lng": -111.7407583,
+    "lat": 40.3634032,
+    "lng": -111.7404254,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Themed Paint Night Experience!",
@@ -5456,8 +5456,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3659998,
-        "lng": -111.7407583,
+        "lat": 40.3634032,
+        "lng": -111.7404254,
         "address": "45 S Main St Ste 101, Pleasant Grove, UT 84062"
       }
     ]
@@ -5499,8 +5499,8 @@
     "name": "Utah Country Dance",
     "category": "entertainment",
     "address": "268 W 100 S, Provo, UT 84601",
-    "lat": 40.2324226,
-    "lng": -111.6633566,
+    "lat": 40.2330195,
+    "lng": -111.6634834,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Wednesday Admission!",
@@ -5520,8 +5520,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2324226,
-        "lng": -111.6633566,
+        "lat": 40.2330195,
+        "lng": -111.6634834,
         "address": "268 W 100 S, Provo, UT 84601"
       }
     ]
@@ -5531,8 +5531,8 @@
     "name": "Utah Grizzlies",
     "category": "entertainment",
     "address": "3200 S Decker Lake Dr, West Valley City, UT 84119",
-    "lat": 40.7011275,
-    "lng": -111.9485873,
+    "lat": 40.702692,
+    "lng": -111.950487,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Ticket! Regular Season Only",
@@ -5552,8 +5552,8 @@
     ],
     "locations": [
       {
-        "lat": 40.7011275,
-        "lng": -111.9485873,
+        "lat": 40.702692,
+        "lng": -111.950487,
         "address": "3200 S Decker Lake Dr, West Valley City, UT 84119"
       }
     ]
@@ -5584,8 +5584,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3119974,
-        "lng": -111.6643133,
+        "lat": 40.3133502,
+        "lng": -111.6584335,
         "address": "1565 E 800 N Unit V, Orem, UT 84097"
       }
     ]
@@ -5595,12 +5595,12 @@
     "name": "Zipline Utah",
     "category": "entertainment",
     "address": "3153 E State Creek Rd, Heber City, UT 84032",
-    "lat": 40.506463,
-    "lng": -111.4132963,
+    "lat": 40.490064,
+    "lng": -111.3434551,
     "locationRestriction": "Provo Canyon",
     "deal": {
       "title": "2-4-1! Screaming Falcon Big Line! Code: SSC242U",
-      "description": "Valid at: Provo Canyon \u00e2\u20ac\u00a2 Code: SSC242U",
+      "description": "Valid at: Provo Canyon â€¢ Code: SSC242U",
       "restrictions": "Code: SSC242U",
       "value": "2 for 1",
       "maxUses": 2,
@@ -5616,8 +5616,8 @@
     ],
     "locations": [
       {
-        "lat": 40.506463,
-        "lng": -111.4132963,
+        "lat": 40.490064,
+        "lng": -111.3434551,
         "address": "3153 E State Creek Rd, Heber City, UT 84032"
       }
     ]
@@ -5627,12 +5627,12 @@
     "name": "Zipline Utah",
     "category": "entertainment",
     "address": "3153 E State Creek Rd, Heber City, UT 84032",
-    "lat": 40.506463,
-    "lng": -111.4132963,
+    "lat": 40.490064,
+    "lng": -111.3434551,
     "locationRestriction": "Provo Canyon",
     "deal": {
       "title": "2-4-1! Screaming Falcon Rush! Code: SSC242U",
-      "description": "Valid at: Provo Canyon \u00e2\u20ac\u00a2 Code: SSC242U",
+      "description": "Valid at: Provo Canyon â€¢ Code: SSC242U",
       "restrictions": "Code: SSC242U",
       "value": "2 for 1",
       "maxUses": 2,
@@ -5648,8 +5648,8 @@
     ],
     "locations": [
       {
-        "lat": 40.506463,
-        "lng": -111.4132963,
+        "lat": 40.490064,
+        "lng": -111.3434551,
         "address": "3153 E State Creek Rd, Heber City, UT 84032"
       }
     ]
@@ -5659,8 +5659,8 @@
     "name": "Bad Apple & FIXIT",
     "category": "retail",
     "address": "945 W 500 N Ste 104, American Fork, UT 84003",
-    "lat": 40.388216,
-    "lng": -111.8220603,
+    "lat": 40.3878402,
+    "lng": -111.8231484,
     "locationRestriction": "All Locations",
     "deal": {
       "title": "$20 OFF! Any Service or Repair! Valid All Locations",
@@ -5680,18 +5680,18 @@
     ],
     "locations": [
       {
-        "lat": 40.388216,
-        "lng": -111.8220603,
+        "lat": 40.3878402,
+        "lng": -111.8231484,
         "address": "945 W 500 N Ste 104, American Fork, UT 84003"
       },
       {
-        "lat": 40.2747049,
-        "lng": -111.6852451,
+        "lat": 40.2958815,
+        "lng": -111.6917143,
         "address": "79 S State St, Orem, UT 84058"
       },
       {
-        "lat": 40.1229495,
-        "lng": -111.6625026,
+        "lat": 40.12311589999999,
+        "lng": -111.6524947,
         "address": "137 E 1000 N, Spanish Fork, UT 84660"
       },
       {
@@ -5732,8 +5732,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3670393,
-        "lng": -111.7854846,
+        "lat": 40.369634,
+        "lng": -111.78578,
         "address": "366 S 500 E Ste B, American Fork, UT 84003"
       }
     ]
@@ -5743,8 +5743,8 @@
     "name": "BYU Store",
     "category": "retail",
     "address": "800 E Campus Dr, Provo, UT 84602",
-    "lat": 40.2483377,
-    "lng": -111.648108,
+    "lat": 40.2499115,
+    "lng": -111.6479673,
     "locationRestriction": "",
     "deal": {
       "title": "50% OFF! Any Brigham Supply Company Item! Restrictions Apply",
@@ -5764,8 +5764,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2483377,
-        "lng": -111.648108,
+        "lat": 40.2499115,
+        "lng": -111.6479673,
         "address": "800 E Campus Dr, Provo, UT 84602"
       }
     ]
@@ -5929,8 +5929,8 @@
         "address": "2230 N University Pkwy Building 5 Ste A, Provo, UT 84604"
       },
       {
-        "lat": 40.3810479,
-        "lng": -111.7945759,
+        "lat": 40.3813182,
+        "lng": -111.7963557,
         "address": "95 E 200 N, American Fork, UT 84003"
       },
       {
@@ -5939,8 +5939,8 @@
         "address": "752 E 800 N, Spanish Fork, UT 84660"
       },
       {
-        "lat": 40.6967891,
-        "lng": -111.9866954,
+        "lat": 40.7222862,
+        "lng": -111.9396099,
         "address": "2250 S Redwood Rd Ste 2, West Valley City, UT 84119"
       }
     ]
@@ -5976,8 +5976,8 @@
         "address": "2230 N University Pkwy Building 5 Ste A, Provo, UT 84604"
       },
       {
-        "lat": 40.3810479,
-        "lng": -111.7945759,
+        "lat": 40.3813182,
+        "lng": -111.7963557,
         "address": "95 E 200 N, American Fork, UT 84003"
       },
       {
@@ -5986,8 +5986,8 @@
         "address": "752 E 800 N, Spanish Fork, UT 84660"
       },
       {
-        "lat": 40.6967891,
-        "lng": -111.9866954,
+        "lat": 40.7222862,
+        "lng": -111.9396099,
         "address": "2250 S Redwood Rd Ste 2, West Valley City, UT 84119"
       }
     ]
@@ -6018,8 +6018,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2747049,
-        "lng": -111.6852451,
+        "lat": 40.28948330000001,
+        "lng": -111.6919969,
         "address": "424 S State St, Orem, UT 84058"
       }
     ]
@@ -6034,7 +6034,7 @@
     "locationRestriction": "All UT Only",
     "deal": {
       "title": "2-4-1! Dry Cleaned or Laundered Item! Up to $20",
-      "description": "Valid at: All UT Only \u00e2\u20ac\u00a2 Up to $20",
+      "description": "Valid at: All UT Only â€¢ Up to $20",
       "restrictions": "Up to $20",
       "value": "2 for 1",
       "maxUses": 2,
@@ -6050,13 +6050,13 @@
     ],
     "locations": [
       {
-        "lat": 40.3768196,
-        "lng": -111.8017366,
+        "lat": 40.3770901,
+        "lng": -111.805576,
         "address": "266 W Main St, American Fork, UT 84003"
       },
       {
-        "lat": 40.3659998,
-        "lng": -111.7407583,
+        "lat": 40.35979990000001,
+        "lng": -111.7404248,
         "address": "325 S Main St, Pleasant Grove, UT 84062"
       },
       {
@@ -6140,8 +6140,8 @@
     "name": "FORGE Jewelry Works",
     "category": "retail",
     "address": "2255 N University Pkwy Ste 17, Provo, UT 84604",
-    "lat": 40.262703,
-    "lng": -111.668601,
+    "lat": 40.262899,
+    "lng": -111.669892,
     "locationRestriction": "",
     "deal": {
       "title": "30% OFF! Any Jewelry Item! Excl. Loose Diamonds/Gemstones",
@@ -6161,8 +6161,8 @@
     ],
     "locations": [
       {
-        "lat": 40.262703,
-        "lng": -111.668601,
+        "lat": 40.262899,
+        "lng": -111.669892,
         "address": "2255 N University Pkwy Ste 17, Provo, UT 84604"
       }
     ]
@@ -6172,8 +6172,8 @@
     "name": "G.O.A.T Haircuts",
     "category": "retail",
     "address": "4801 N University Ave Ste 60, Provo, UT 84604",
-    "lat": 40.2983483,
-    "lng": -111.658248,
+    "lat": 40.2996159,
+    "lng": -111.6593651,
     "locationRestriction": "",
     "deal": {
       "title": "$10 OFF! Any Men's Haircut! Please Tip! Call for Appt",
@@ -6193,18 +6193,18 @@
     ],
     "locations": [
       {
-        "lat": 40.2983483,
-        "lng": -111.658248,
+        "lat": 40.2996159,
+        "lng": -111.6593651,
         "address": "4801 N University Ave Ste 60, Provo, UT 84604"
       },
       {
-        "lat": 40.4316523,
-        "lng": -111.8305878,
+        "lat": 40.3898145,
+        "lng": -111.830984,
         "address": "161 N 1200 E, Lehi, UT 84043"
       },
       {
-        "lat": 40.3501595,
-        "lng": -111.9163618,
+        "lat": 40.7350295,
+        "lng": -111.9401717,
         "address": "1630 S Redwood Rd Ste 104, Saratoga Springs, UT 84045"
       }
     ]
@@ -6278,8 +6278,8 @@
     "name": "Havoline",
     "category": "retail",
     "address": "1457 Exchange Dr, Saratoga Springs, UT 84045",
-    "lat": 40.3847899,
-    "lng": -111.9223647,
+    "lat": 40.3887452,
+    "lng": -111.9225058,
     "locationRestriction": "",
     "deal": {
       "title": "$20 OFF! Any Oil Change Service!",
@@ -6299,8 +6299,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3847899,
-        "lng": -111.9223647,
+        "lat": 40.3887452,
+        "lng": -111.9225058,
         "address": "1457 Exchange Dr, Saratoga Springs, UT 84045"
       }
     ]
@@ -6310,8 +6310,8 @@
     "name": "Havoline",
     "category": "retail",
     "address": "1457 Exchange Dr, Saratoga Springs, UT 84045",
-    "lat": 40.3847899,
-    "lng": -111.9223647,
+    "lat": 40.3887452,
+    "lng": -111.9225058,
     "locationRestriction": "",
     "deal": {
       "title": "$40 OFF! Brakes! per axle",
@@ -6331,8 +6331,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3847899,
-        "lng": -111.9223647,
+        "lat": 40.3887452,
+        "lng": -111.9225058,
         "address": "1457 Exchange Dr, Saratoga Springs, UT 84045"
       }
     ]
@@ -6411,7 +6411,7 @@
     "locationRestriction": "All Utah",
     "deal": {
       "title": "$10 OFF! Vehicle Emissions! MSKCUZ",
-      "description": "Valid at: All Utah \u00e2\u20ac\u00a2 MSKCUZ",
+      "description": "Valid at: All Utah â€¢ MSKCUZ",
       "restrictions": "MSKCUZ",
       "value": "$10 Off",
       "maxUses": 1,
@@ -6442,58 +6442,58 @@
         "address": "490 W 300 S, Provo, UT 84601"
       },
       {
-        "lat": 40.2898035,
-        "lng": -111.6940212,
+        "lat": 40.2894414,
+        "lng": -111.6927481,
         "address": "110 E 400 S, Orem, UT 84058"
       },
       {
-        "lat": 40.2747049,
-        "lng": -111.6852451,
+        "lat": 40.29478719999999,
+        "lng": -111.6935075,
         "address": "131 S State St, Orem, UT 84058"
       },
       {
-        "lat": 40.3123099,
-        "lng": -111.7021744,
+        "lat": 40.31784529999999,
+        "lng": -111.7034289,
         "address": "1136 N State St, Orem, UT 84057"
       },
       {
-        "lat": 40.273499,
-        "lng": -111.7018641,
+        "lat": 40.2727201,
+        "lng": -111.7013794,
         "address": "285 W University Pkwy, Orem, UT 84058"
       },
       {
-        "lat": 40.27117,
-        "lng": -111.711872,
+        "lat": 40.2711025,
+        "lng": -111.7127666,
         "address": "1400 Sandhill Rd, Orem, UT 84058"
       },
       {
-        "lat": 40.3768064,
-        "lng": -111.7959146,
+        "lat": 40.3732456,
+        "lng": -111.7841749,
         "address": "562 E State Rd, American Fork, UT 84003"
       },
       {
-        "lat": 40.1208069,
-        "lng": -111.639664,
+        "lat": 40.1208915,
+        "lng": -111.6402956,
         "address": "901 Expressway Ln, Spanish Fork, UT 84660"
       },
       {
-        "lat": 40.1760446,
-        "lng": -111.6471331,
+        "lat": 40.1634801,
+        "lng": -111.6488456,
         "address": "230 S 2000 W, Springville, UT 84663"
       },
       {
-        "lat": 40.3869021,
-        "lng": -111.8362099,
+        "lat": 40.3764878,
+        "lng": -111.8826328,
         "address": "2079 N Gossling Ln, Lehi, UT 84043"
       },
       {
-        "lat": 40.427176,
-        "lng": -111.7891709,
+        "lat": 40.432285,
+        "lng": -111.78408,
         "address": "5248 W 11000 N, Highland, UT 84003"
       },
       {
-        "lat": 40.2975221,
-        "lng": -111.7340427,
+        "lat": 40.3006354,
+        "lng": -111.7346243,
         "address": "199 N Geneva Rd, Vineyard, UT 84059"
       }
     ]
@@ -6508,7 +6508,7 @@
     "locationRestriction": "All Utah",
     "deal": {
       "title": "$25 OFF! Any Oil Change! DBEUP2",
-      "description": "Valid at: All Utah \u00e2\u20ac\u00a2 DBEUP2",
+      "description": "Valid at: All Utah â€¢ DBEUP2",
       "restrictions": "DBEUP2",
       "value": "$25 Off",
       "maxUses": null,
@@ -6539,58 +6539,58 @@
         "address": "490 W 300 S, Provo, UT 84601"
       },
       {
-        "lat": 40.2898035,
-        "lng": -111.6940212,
+        "lat": 40.2894414,
+        "lng": -111.6927481,
         "address": "110 E 400 S, Orem, UT 84058"
       },
       {
-        "lat": 40.2747049,
-        "lng": -111.6852451,
+        "lat": 40.29478719999999,
+        "lng": -111.6935075,
         "address": "131 S State St, Orem, UT 84058"
       },
       {
-        "lat": 40.3123099,
-        "lng": -111.7021744,
+        "lat": 40.31784529999999,
+        "lng": -111.7034289,
         "address": "1136 N State St, Orem, UT 84057"
       },
       {
-        "lat": 40.273499,
-        "lng": -111.7018641,
+        "lat": 40.2727201,
+        "lng": -111.7013794,
         "address": "285 W University Pkwy, Orem, UT 84058"
       },
       {
-        "lat": 40.27117,
-        "lng": -111.711872,
+        "lat": 40.2711025,
+        "lng": -111.7127666,
         "address": "1400 Sandhill Rd, Orem, UT 84058"
       },
       {
-        "lat": 40.3768064,
-        "lng": -111.7959146,
+        "lat": 40.3732456,
+        "lng": -111.7841749,
         "address": "562 E State Rd, American Fork, UT 84003"
       },
       {
-        "lat": 40.1208069,
-        "lng": -111.639664,
+        "lat": 40.1208915,
+        "lng": -111.6402956,
         "address": "901 Expressway Ln, Spanish Fork, UT 84660"
       },
       {
-        "lat": 40.1760446,
-        "lng": -111.6471331,
+        "lat": 40.1634801,
+        "lng": -111.6488456,
         "address": "230 S 2000 W, Springville, UT 84663"
       },
       {
-        "lat": 40.3869021,
-        "lng": -111.8362099,
+        "lat": 40.3764878,
+        "lng": -111.8826328,
         "address": "2079 N Gossling Ln, Lehi, UT 84043"
       },
       {
-        "lat": 40.427176,
-        "lng": -111.7891709,
+        "lat": 40.432285,
+        "lng": -111.78408,
         "address": "5248 W 11000 N, Highland, UT 84003"
       },
       {
-        "lat": 40.2975221,
-        "lng": -111.7340427,
+        "lat": 40.3006354,
+        "lng": -111.7346243,
         "address": "199 N Geneva Rd, Vineyard, UT 84059"
       }
     ]
@@ -6621,8 +6621,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3861807,
-        "lng": -111.8201079,
+        "lat": 40.3715644,
+        "lng": -111.7817744,
         "address": "648 E State St Ste B, American Fork, UT 84003"
       }
     ]
@@ -6632,12 +6632,12 @@
     "name": "Monster Pest Control",
     "category": "retail",
     "address": "119 S Pacific Dr, American Fork, UT 84003",
-    "lat": 40.3805501,
-    "lng": -111.8191596,
+    "lat": 40.3732563,
+    "lng": -111.77922,
     "locationRestriction": "Utah County",
     "deal": {
       "title": "50% OFF! Pest Control Treatment! New Customers! Up to $40!",
-      "description": "Valid at: Utah County \u00e2\u20ac\u00a2 New Customers Up to $40",
+      "description": "Valid at: Utah County â€¢ New Customers Up to $40",
       "restrictions": "New Customers Up to $40",
       "value": "50% Off",
       "maxUses": 3,
@@ -6653,8 +6653,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3805501,
-        "lng": -111.8191596,
+        "lat": 40.3732563,
+        "lng": -111.77922,
         "address": "119 S Pacific Dr, American Fork, UT 84003"
       }
     ]
@@ -6664,8 +6664,8 @@
     "name": "MTECH Cosmetology",
     "category": "retail",
     "address": "693 W 1210 S, Spanish Fork, UT 84660",
-    "lat": 40.1150133,
-    "lng": -111.6547774,
+    "lat": 40.0934601,
+    "lng": -111.666352,
     "locationRestriction": "Lehi & SF",
     "deal": {
       "title": "$4 Haircut & Style! Lehi & SF",
@@ -6685,8 +6685,8 @@
     ],
     "locations": [
       {
-        "lat": 40.1150133,
-        "lng": -111.6547774,
+        "lat": 40.0934601,
+        "lng": -111.666352,
         "address": "693 W 1210 S, Spanish Fork, UT 84660"
       }
     ]
@@ -6696,8 +6696,8 @@
     "name": "Paul Mitchell the School Provo",
     "category": "retail",
     "address": "483 W 2310 N, Provo, UT 84604",
-    "lat": 40.241889,
-    "lng": -111.6991105,
+    "lat": 40.2661133,
+    "lng": -111.6687023,
     "locationRestriction": "",
     "deal": {
       "title": "50% OFF! a Blow Wax Service!",
@@ -6717,8 +6717,8 @@
     ],
     "locations": [
       {
-        "lat": 40.241889,
-        "lng": -111.6991105,
+        "lat": 40.2661133,
+        "lng": -111.6687023,
         "address": "483 W 2310 N, Provo, UT 84604"
       }
     ]
@@ -6728,8 +6728,8 @@
     "name": "Paul Mitchell the School Provo",
     "category": "retail",
     "address": "483 W 2310 N, Provo, UT 84604",
-    "lat": 40.241889,
-    "lng": -111.6991105,
+    "lat": 40.2661133,
+    "lng": -111.6687023,
     "locationRestriction": "",
     "deal": {
       "title": "50% OFF! a Manicure or Pedicure!",
@@ -6749,8 +6749,8 @@
     ],
     "locations": [
       {
-        "lat": 40.241889,
-        "lng": -111.6991105,
+        "lat": 40.2661133,
+        "lng": -111.6687023,
         "address": "483 W 2310 N, Provo, UT 84604"
       }
     ]
@@ -6781,8 +6781,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3873553,
-        "lng": -111.885507,
+        "lat": 40.387467,
+        "lng": -111.8431363,
         "address": "380 E Main St Ste F, Lehi, UT 84043"
       }
     ]
@@ -6813,8 +6813,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3873553,
-        "lng": -111.885507,
+        "lat": 40.387467,
+        "lng": -111.8431363,
         "address": "380 E Main St Ste F, Lehi, UT 84043"
       }
     ]
@@ -6845,8 +6845,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3873553,
-        "lng": -111.885507,
+        "lat": 40.387467,
+        "lng": -111.8431363,
         "address": "380 E Main St Ste F, Lehi, UT 84043"
       }
     ]
@@ -6888,8 +6888,8 @@
     "name": "Tax Freedom Fighters",
     "category": "retail",
     "address": "55 W Main St, Lehi, UT 84043",
-    "lat": 40.3873553,
-    "lng": -111.885507,
+    "lat": 40.3874851,
+    "lng": -111.8500761,
     "locationRestriction": "",
     "deal": {
       "title": "50% OFF! Tax Preparation!",
@@ -6909,8 +6909,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3873553,
-        "lng": -111.885507,
+        "lat": 40.3874851,
+        "lng": -111.8500761,
         "address": "55 W Main St, Lehi, UT 84043"
       }
     ]
@@ -6920,8 +6920,8 @@
     "name": "Taylor Andrews Academy",
     "category": "retail",
     "address": "2035 N 550 W, Provo, UT 84604",
-    "lat": 40.2410163,
-    "lng": -111.7063523,
+    "lat": 40.2615321,
+    "lng": -111.6692865,
     "locationRestriction": "Provo & WJ",
     "deal": {
       "title": "$10 OFF! Hair Color Service",
@@ -6941,8 +6941,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2410163,
-        "lng": -111.7063523,
+        "lat": 40.2615321,
+        "lng": -111.6692865,
         "address": "2035 N 550 W, Provo, UT 84604"
       }
     ]
@@ -6973,8 +6973,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3861807,
-        "lng": -111.8201079,
+        "lat": 40.3715644,
+        "lng": -111.7817744,
         "address": "648 E State St Ste L, American Fork, UT 84003"
       }
     ]
@@ -6984,8 +6984,8 @@
     "name": "UVU Store",
     "category": "retail",
     "address": "800 W University Pkwy, Orem, UT 84058",
-    "lat": 40.2794106,
-    "lng": -111.7178868,
+    "lat": 40.2787626,
+    "lng": -111.7153739,
     "locationRestriction": "",
     "deal": {
       "title": "20% OFF! Any Single Art or School Supply Item!",
@@ -7005,8 +7005,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2794106,
-        "lng": -111.7178868,
+        "lat": 40.2787626,
+        "lng": -111.7153739,
         "address": "800 W University Pkwy, Orem, UT 84058"
       }
     ]
@@ -7016,8 +7016,8 @@
     "name": "UVU Store",
     "category": "retail",
     "address": "800 W University Pkwy, Orem, UT 84058",
-    "lat": 40.2794106,
-    "lng": -111.7178868,
+    "lat": 40.2787626,
+    "lng": -111.7153739,
     "locationRestriction": "",
     "deal": {
       "title": "20% OFF! Any UVU Apparel Item or UVU Emblematic Item",
@@ -7037,8 +7037,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2794106,
-        "lng": -111.7178868,
+        "lat": 40.2787626,
+        "lng": -111.7153739,
         "address": "800 W University Pkwy, Orem, UT 84058"
       }
     ]
@@ -7048,8 +7048,8 @@
     "name": "ZAGG",
     "category": "retail",
     "address": "575 E University Pkwy Ste G142, Orem, UT 84097",
-    "lat": 40.2753836,
-    "lng": -111.6808629,
+    "lat": 40.2748122,
+    "lng": -111.6802325,
     "locationRestriction": "UT County Stores",
     "deal": {
       "title": "20% OFF! Any Glass Screen Protection Phone Case Headphones Power Bank or Bluetooth Keyboard!",
@@ -7069,13 +7069,13 @@
     ],
     "locations": [
       {
-        "lat": 40.2753836,
-        "lng": -111.6808629,
+        "lat": 40.2748122,
+        "lng": -111.6802325,
         "address": "575 E University Pkwy Ste G142, Orem, UT 84097"
       },
       {
-        "lat": 40.3875114,
-        "lng": -111.9064409,
+        "lat": 40.3869621,
+        "lng": -111.9137066,
         "address": "119 W Crossroads Blvd Ste B, Saratoga Springs, UT 84045"
       },
       {
@@ -7084,8 +7084,8 @@
         "address": "933 N Main St Ste E, Spanish Fork, UT 84660"
       },
       {
-        "lat": 40.4347503,
-        "lng": -111.8847456,
+        "lat": 40.4349387,
+        "lng": -111.8834079,
         "address": "3700 Cabelas Blvd, Lehi, UT 84043"
       },
       {
@@ -7100,8 +7100,8 @@
     "name": "5 Star BBQ",
     "category": "free",
     "address": "70 N Geneva Rd, Orem, UT 84057",
-    "lat": 40.3083956,
-    "lng": -111.734113,
+    "lat": 40.298356,
+    "lng": -111.7334723,
     "locationRestriction": "",
     "deal": {
       "title": "FREE! Side Order of Fried Funeral Potatoes!",
@@ -7121,8 +7121,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3083956,
-        "lng": -111.734113,
+        "lat": 40.298356,
+        "lng": -111.7334723,
         "address": "70 N Geneva Rd, Orem, UT 84057"
       }
     ]
@@ -7132,8 +7132,8 @@
     "name": "5 Star BBQ",
     "category": "free",
     "address": "70 N Geneva Rd, Orem, UT 84057",
-    "lat": 40.3083956,
-    "lng": -111.734113,
+    "lat": 40.298356,
+    "lng": -111.7334723,
     "locationRestriction": "",
     "deal": {
       "title": "FREE! Side!",
@@ -7153,8 +7153,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3083956,
-        "lng": -111.734113,
+        "lat": 40.298356,
+        "lng": -111.7334723,
         "address": "70 N Geneva Rd, Orem, UT 84057"
       }
     ]
@@ -7185,8 +7185,8 @@
     ],
     "locations": [
       {
-        "lat": 40.4360183,
-        "lng": -111.8851121,
+        "lat": 40.4352605,
+        "lng": -111.8850381,
         "address": "3700 N Cabelas Blvd Space 234, Lehi, UT 84043"
       },
       {
@@ -7201,8 +7201,8 @@
     "name": "Bad Apple & FIXIT",
     "category": "free",
     "address": "945 W 500 N Ste 104, American Fork, UT 84003",
-    "lat": 40.388216,
-    "lng": -111.8220603,
+    "lat": 40.3878402,
+    "lng": -111.8231484,
     "locationRestriction": "All Locations",
     "deal": {
       "title": "FREE! External Device Cleaning!",
@@ -7222,18 +7222,18 @@
     ],
     "locations": [
       {
-        "lat": 40.388216,
-        "lng": -111.8220603,
+        "lat": 40.3878402,
+        "lng": -111.8231484,
         "address": "945 W 500 N Ste 104, American Fork, UT 84003"
       },
       {
-        "lat": 40.2747049,
-        "lng": -111.6852451,
+        "lat": 40.2958815,
+        "lng": -111.6917143,
         "address": "79 S State St, Orem, UT 84058"
       },
       {
-        "lat": 40.1229495,
-        "lng": -111.6625026,
+        "lat": 40.12311589999999,
+        "lng": -111.6524947,
         "address": "137 E 1000 N, Spanish Fork, UT 84660"
       },
       {
@@ -7274,8 +7274,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2750201,
-        "lng": -111.6851933,
+        "lat": 40.295516,
+        "lng": -111.6918223,
         "address": "93 S State St, Orem, UT 84058"
       }
     ]
@@ -7311,8 +7311,8 @@
         "address": "37 W University Pkwy, Orem, UT 84058"
       },
       {
-        "lat": 40.5616177,
-        "lng": -111.9387663,
+        "lat": 40.5626492,
+        "lng": -111.9394521,
         "address": "10384 S Redwood Rd, South Jordan, UT 84095"
       }
     ]
@@ -7322,8 +7322,8 @@
     "name": "Buffalo Wild Wings",
     "category": "free",
     "address": "575 E University Pkwy Ste B28, Orem, UT 84097",
-    "lat": 40.2753836,
-    "lng": -111.6808629,
+    "lat": 40.27451,
+    "lng": -111.68132,
     "locationRestriction": "Orem & Lehi",
     "deal": {
       "title": "FREE! Order of Fried Pickles or Chips & Salsa!",
@@ -7343,13 +7343,13 @@
     ],
     "locations": [
       {
-        "lat": 40.2753836,
-        "lng": -111.6808629,
+        "lat": 40.27451,
+        "lng": -111.68132,
         "address": "575 E University Pkwy Ste B28, Orem, UT 84097"
       },
       {
-        "lat": 40.4316523,
-        "lng": -111.8305878,
+        "lat": 40.3890036,
+        "lng": -111.8254775,
         "address": "92 N 1200 E, Lehi, UT 84043"
       }
     ]
@@ -7481,8 +7481,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2338588,
-        "lng": -111.6971912,
+        "lat": 40.2345931,
+        "lng": -111.7228989,
         "address": "3606 W Center St, Provo, UT 84601"
       }
     ]
@@ -7492,8 +7492,8 @@
     "name": "Classic Fun Center",
     "category": "free",
     "address": "250 S State St, Orem, UT 84058",
-    "lat": 40.2943464,
-    "lng": -111.6937846,
+    "lat": 40.2932879,
+    "lng": -111.6950393,
     "locationRestriction": "Orem",
     "deal": {
       "title": "FREE! Skating Climbing Bouncing or Laser Tag! Orem",
@@ -7513,8 +7513,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2943464,
-        "lng": -111.6937846,
+        "lat": 40.2932879,
+        "lng": -111.6950393,
         "address": "250 S State St, Orem, UT 84058"
       }
     ]
@@ -7588,8 +7588,8 @@
     "name": "Culver's",
     "category": "free",
     "address": "1211 W 800 N, Orem, UT 84057",
-    "lat": 40.311758,
-    "lng": -111.730387,
+    "lat": 40.3113037,
+    "lng": -111.72404,
     "locationRestriction": "Northern UT",
     "deal": {
       "title": "FREE! Scoop of Frozen Custard!",
@@ -7609,8 +7609,8 @@
     ],
     "locations": [
       {
-        "lat": 40.311758,
-        "lng": -111.730387,
+        "lat": 40.3113037,
+        "lng": -111.72404,
         "address": "1211 W 800 N, Orem, UT 84057"
       },
       {
@@ -7646,8 +7646,8 @@
     ],
     "locations": [
       {
-        "lat": 40.4288022,
-        "lng": -111.8982554,
+        "lat": 40.4278617,
+        "lng": -111.8887535,
         "address": "2450 W Executive Pkwy Ste 150, Lehi, UT 84043"
       }
     ]
@@ -7678,13 +7678,13 @@
     ],
     "locations": [
       {
-        "lat": 40.3260157,
-        "lng": -111.7075963,
+        "lat": 40.3120154,
+        "lng": -111.701522,
         "address": "800 N State St, Orem, UT 84057"
       },
       {
-        "lat": 40.2829078,
-        "lng": -111.7324895,
+        "lat": 40.2975578,
+        "lng": -111.7345052,
         "address": "49 N Geneva Rd, Vineyard, UT 84059"
       },
       {
@@ -7693,8 +7693,8 @@
         "address": "4045 E Pony Express Pkwy, Eagle Mountain, UT 84005"
       },
       {
-        "lat": 39.9755101,
-        "lng": -111.7852106,
+        "lat": 39.99789699999999,
+        "lng": -111.8226412,
         "address": "74 N State Rd 198, Santaquin, UT 84655"
       }
     ]
@@ -7704,8 +7704,8 @@
     "name": "Daylight Donuts",
     "category": "free",
     "address": "649 N Redwood Rd Ste 105, Saratoga Springs, UT 84045",
-    "lat": 40.3743698,
-    "lng": -111.9164812,
+    "lat": 40.3739696,
+    "lng": -111.9190157,
     "locationRestriction": "Saratoga Springs",
     "deal": {
       "title": "FREE! Regular Donut!",
@@ -7725,8 +7725,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3743698,
-        "lng": -111.9164812,
+        "lat": 40.3739696,
+        "lng": -111.9190157,
         "address": "649 N Redwood Rd Ste 105, Saratoga Springs, UT 84045"
       }
     ]
@@ -7741,7 +7741,7 @@
     "locationRestriction": "Saratoga & Eagle Mtn",
     "deal": {
       "title": "FREE! Order of Oven-Baked Twists & Dip! Carryout Only",
-      "description": "Valid at: Saratoga & Eagle Mtn \u00e2\u20ac\u00a2 Carryout Only",
+      "description": "Valid at: Saratoga & Eagle Mtn â€¢ Carryout Only",
       "restrictions": "Carryout Only",
       "value": "Free Item",
       "maxUses": 1,
@@ -7810,8 +7810,8 @@
     "name": "El Pollo Loco",
     "category": "free",
     "address": "76 E University Pkwy, Orem, UT 84058",
-    "lat": 40.2734535,
-    "lng": -111.693284,
+    "lat": 40.27297710000001,
+    "lng": -111.6934417,
     "locationRestriction": "Orem Lehi & Particip",
     "deal": {
       "title": "FREE! Loco Value Menu Item!",
@@ -7831,13 +7831,13 @@
     ],
     "locations": [
       {
-        "lat": 40.2734535,
-        "lng": -111.693284,
+        "lat": 40.27297710000001,
+        "lng": -111.6934417,
         "address": "76 E University Pkwy, Orem, UT 84058"
       },
       {
-        "lat": 40.4316523,
-        "lng": -111.8305878,
+        "lat": 40.3884675,
+        "lng": -111.8249173,
         "address": "88 N 1200 E, Lehi, UT 84043"
       }
     ]
@@ -7911,8 +7911,8 @@
     "name": "Franz Bakery Outlet",
     "category": "free",
     "address": "147 N 2000 W, Springville, UT 84663",
-    "lat": 40.1760446,
-    "lng": -111.6471331,
+    "lat": 40.1684871,
+    "lng": -111.6485588,
     "locationRestriction": "All Utah",
     "deal": {
       "title": "FREE! Loaf of Bread! All Utah Locations",
@@ -7932,18 +7932,18 @@
     ],
     "locations": [
       {
-        "lat": 40.1760446,
-        "lng": -111.6471331,
+        "lat": 40.1684871,
+        "lng": -111.6485588,
         "address": "147 N 2000 W, Springville, UT 84663"
       },
       {
-        "lat": 40.5247777,
-        "lng": -111.8627989,
+        "lat": 40.5262715,
+        "lng": -111.900897,
         "address": "375 W 12300 S, Draper, UT 84020"
       },
       {
         "lat": 40.7231728,
-        "lng": -111.946493,
+        "lng": -111.9455562,
         "address": "2060 W 2200 S, West Valley City, UT 84119"
       }
     ]
@@ -7953,8 +7953,8 @@
     "name": "G.O.A.T Haircuts",
     "category": "free",
     "address": "4801 N University Ave Ste 60, Provo, UT 84604",
-    "lat": 40.2983483,
-    "lng": -111.658248,
+    "lat": 40.2996159,
+    "lng": -111.6593651,
     "locationRestriction": "",
     "deal": {
       "title": "FREE! Men's Ears Eyebrow or Nose Wax! Please Tip! Call for Appt",
@@ -7974,18 +7974,18 @@
     ],
     "locations": [
       {
-        "lat": 40.2983483,
-        "lng": -111.658248,
+        "lat": 40.2996159,
+        "lng": -111.6593651,
         "address": "4801 N University Ave Ste 60, Provo, UT 84604"
       },
       {
-        "lat": 40.4316523,
-        "lng": -111.8305878,
+        "lat": 40.3898145,
+        "lng": -111.830984,
         "address": "161 N 1200 E, Lehi, UT 84043"
       },
       {
-        "lat": 40.3501595,
-        "lng": -111.9163618,
+        "lat": 40.7350295,
+        "lng": -111.9401717,
         "address": "1630 S Redwood Rd Ste 104, Saratoga Springs, UT 84045"
       }
     ]
@@ -8112,8 +8112,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2334109,
-        "lng": -111.6431945,
+        "lat": 40.24076,
+        "lng": -111.6422706,
         "address": "496 N 900 E, Provo, UT 84606"
       }
     ]
@@ -8123,8 +8123,8 @@
     "name": "Jamba Juice",
     "category": "free",
     "address": "1774 N University Pkwy Ste 60, Provo, UT 84604",
-    "lat": 40.2794106,
-    "lng": -111.7178868,
+    "lat": 40.2787541,
+    "lng": -111.7153714,
     "locationRestriction": "Provo (University PKWY) UVU Campus Draper & WJ",
     "deal": {
       "title": "FREE! Belgian Waffle Pretzel or Cheddar Tomato Twist!",
@@ -8144,13 +8144,13 @@
     ],
     "locations": [
       {
-        "lat": 40.2481866,
-        "lng": -111.654986,
+        "lat": 40.25817,
+        "lng": -111.6610672,
         "address": "1774 N University Pkwy Ste 60, Provo, UT 84604"
       },
       {
-        "lat": 40.2794106,
-        "lng": -111.7178868,
+        "lat": 40.2787541,
+        "lng": -111.7153714,
         "address": "800 W University Pkwy (UVU Campus), Orem, UT 84058"
       },
       {
@@ -8159,8 +8159,8 @@
         "address": "148 E 12300 S, Draper, UT 84020"
       },
       {
-        "lat": 40.621287,
-        "lng": -111.9821788,
+        "lat": 40.6111046,
+        "lng": -111.9838365,
         "address": "7689 S Jordan Landing Blvd, West Jordan, UT 84084"
       }
     ]
@@ -8170,8 +8170,8 @@
     "name": "Jersey Mikes",
     "category": "free",
     "address": "426 W Cougar Blvd Ste 6, Provo, UT 84604",
-    "lat": 40.2506788,
-    "lng": -111.6652227,
+    "lat": 40.250948,
+    "lng": -111.6660972,
     "locationRestriction": "All Utah Only except EM and SF",
     "deal": {
       "title": "FREE! Chocolate Chip Cookie!",
@@ -8191,13 +8191,13 @@
     ],
     "locations": [
       {
-        "lat": 40.2750201,
-        "lng": -111.6851933,
+        "lat": 40.295457,
+        "lng": -111.6936902,
         "address": "73 S State St, Orem, UT 84058"
       },
       {
-        "lat": 40.2506788,
-        "lng": -111.6652227,
+        "lat": 40.250948,
+        "lng": -111.6660972,
         "address": "426 W Cougar Blvd Ste 6, Provo, UT 84604"
       },
       {
@@ -8270,8 +8270,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3543415,
-        "lng": -111.7524533,
+        "lat": 40.3541195,
+        "lng": -111.7533601,
         "address": "844 S 800 W Ste 201, Pleasant Grove, UT 84062"
       },
       {
@@ -8318,8 +8318,8 @@
     "name": "Laser Assault",
     "category": "free",
     "address": "1200 Towne Centre Blvd Ste 2018, Provo, UT 84601",
-    "lat": 40.2155627,
-    "lng": -111.6628499,
+    "lat": 40.2167918,
+    "lng": -111.6630217,
     "locationRestriction": "",
     "deal": {
       "title": "FREE! Game of Laser Tag!",
@@ -8339,8 +8339,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2155627,
-        "lng": -111.6628499,
+        "lat": 40.2167918,
+        "lng": -111.6630217,
         "address": "1200 Towne Centre Blvd Ste 2018, Provo, UT 84601"
       }
     ]
@@ -8371,8 +8371,8 @@
     ],
     "locations": [
       {
-        "lat": 40.5270143,
-        "lng": -111.8718151,
+        "lat": 40.5261527,
+        "lng": -111.8962721,
         "address": "153 W 12300 S, Draper, UT 84020"
       },
       {
@@ -8440,8 +8440,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3861807,
-        "lng": -111.8201079,
+        "lat": 40.3715644,
+        "lng": -111.7817744,
         "address": "648 E State St Ste B, American Fork, UT 84003"
       }
     ]
@@ -8472,8 +8472,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3861807,
-        "lng": -111.8201079,
+        "lat": 40.3715644,
+        "lng": -111.7817744,
         "address": "648 E State St Ste B, American Fork, UT 84003"
       }
     ]
@@ -8514,8 +8514,8 @@
         "address": "1225 S University Ave, Provo, UT 84601"
       },
       {
-        "lat": 40.3119892,
-        "lng": -111.7217513,
+        "lat": 40.3124972,
+        "lng": -111.7226212,
         "address": "1140 W 800 N, Orem, UT 84057"
       },
       {
@@ -8524,13 +8524,13 @@
         "address": "1611 N State St, Orem, UT 84057"
       },
       {
-        "lat": 40.3548874,
-        "lng": -111.7361532,
+        "lat": 40.374574,
+        "lng": -111.7904402,
         "address": "312 E State St, Pleasant Grove, UT 84062"
       },
       {
-        "lat": 40.3768064,
-        "lng": -111.7959146,
+        "lat": 40.3739867,
+        "lng": -111.7875427,
         "address": "406 E State Rd, American Fork, UT 84003"
       },
       {
@@ -8566,18 +8566,18 @@
     ],
     "locations": [
       {
-        "lat": 40.359896,
-        "lng": -111.7686103,
+        "lat": 40.3536849,
+        "lng": -111.762916,
         "address": "863 S North County Blvd, Pleasant Grove, UT 84062"
       },
       {
-        "lat": 40.41223,
-        "lng": -111.77303,
+        "lat": 40.4309184,
+        "lng": -111.8952864,
         "address": "2851 W Club House Dr, Lehi, UT 84043"
       },
       {
-        "lat": 41.078145,
-        "lng": -111.976256,
+        "lat": 41.0785409,
+        "lng": -111.9774575,
         "address": "1201 N Hill Field Rd, Layton, UT 84041"
       }
     ]
@@ -8587,8 +8587,8 @@
     "name": "MilkShake Factory",
     "category": "free",
     "address": "876 S North County Blvd Ste E, Pleasant Grove, UT 84062",
-    "lat": 40.3537387,
-    "lng": -111.7635548,
+    "lat": 40.3531378,
+    "lng": -111.7635667,
     "locationRestriction": "All UT",
     "deal": {
       "title": "FREE! Any Chocolate Bark!",
@@ -8608,13 +8608,13 @@
     ],
     "locations": [
       {
-        "lat": 40.3537387,
-        "lng": -111.7635548,
+        "lat": 40.3531378,
+        "lng": -111.7635667,
         "address": "876 S North County Blvd Ste E, Pleasant Grove, UT 84062"
       },
       {
-        "lat": 40.6710765,
-        "lng": -111.8250278,
+        "lat": 40.6632892,
+        "lng": -111.8366112,
         "address": "1920 E Rodeo Way Dr Ste D60, Holladay, UT 84117"
       }
     ]
@@ -8650,8 +8650,8 @@
         "address": "62 W 1230 N Ste 105, Provo, UT 84604"
       },
       {
-        "lat": 40.5710454,
-        "lng": -111.8953815,
+        "lat": 40.5750267,
+        "lng": -111.8912931,
         "address": "9710 S State St Ste 101, Sandy, UT 84070"
       },
       {
@@ -8666,8 +8666,8 @@
     "name": "Nautical Bowls",
     "category": "free",
     "address": "1314 N Redwood Rd Ste 200, Saratoga Springs, UT 84045",
-    "lat": 40.3868641,
-    "lng": -111.916473,
+    "lat": 40.385608,
+    "lng": -111.915722,
     "locationRestriction": "",
     "deal": {
       "title": "FREE! Kayak (8oz) Nauti Sunrise or Paddle Bowl!",
@@ -8687,8 +8687,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3868641,
-        "lng": -111.916473,
+        "lat": 40.385608,
+        "lng": -111.915722,
         "address": "1314 N Redwood Rd Ste 200, Saratoga Springs, UT 84045"
       }
     ]
@@ -8698,8 +8698,8 @@
     "name": "Ninja Playground",
     "category": "free",
     "address": "305 S 850 E Ste 112, Lehi, UT 84043",
-    "lat": 40.3796554,
-    "lng": -111.8333464,
+    "lat": 40.3839824,
+    "lng": -111.8338937,
     "locationRestriction": "",
     "deal": {
       "title": "FREE! Admission to Open Gym!",
@@ -8719,8 +8719,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3796554,
-        "lng": -111.8333464,
+        "lat": 40.3839824,
+        "lng": -111.8338937,
         "address": "305 S 850 E Ste 112, Lehi, UT 84043"
       }
     ]
@@ -8730,8 +8730,8 @@
     "name": "Onoh's Malasada Co.",
     "category": "free",
     "address": "1043 S Valley Grove Way Ste A, Pleasant Grove, UT 84062",
-    "lat": 40.3512579,
-    "lng": -111.7641976,
+    "lat": 40.351823,
+    "lng": -111.7645863,
     "locationRestriction": "",
     "deal": {
       "title": "FREE! Sugar Malasada!",
@@ -8751,8 +8751,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3512579,
-        "lng": -111.7641976,
+        "lat": 40.351823,
+        "lng": -111.7645863,
         "address": "1043 S Valley Grove Way Ste A, Pleasant Grove, UT 84062"
       }
     ]
@@ -8799,8 +8799,8 @@
     "name": "Paul Mitchell the School Provo",
     "category": "free",
     "address": "483 W 2310 N, Provo, UT 84604",
-    "lat": 40.241889,
-    "lng": -111.6991105,
+    "lat": 40.2661133,
+    "lng": -111.6687023,
     "locationRestriction": "",
     "deal": {
       "title": "FREE! Haircut",
@@ -8820,8 +8820,8 @@
     ],
     "locations": [
       {
-        "lat": 40.241889,
-        "lng": -111.6991105,
+        "lat": 40.2661133,
+        "lng": -111.6687023,
         "address": "483 W 2310 N, Provo, UT 84604"
       }
     ]
@@ -8831,8 +8831,8 @@
     "name": "Paul Mitchell the School Provo",
     "category": "free",
     "address": "483 W 2310 N, Provo, UT 84604",
-    "lat": 40.241889,
-    "lng": -111.6991105,
+    "lat": 40.2661133,
+    "lng": -111.6687023,
     "locationRestriction": "",
     "deal": {
       "title": "FREE! Straight Razor Face & Neck Shave or Beard Trim!",
@@ -8852,8 +8852,8 @@
     ],
     "locations": [
       {
-        "lat": 40.241889,
-        "lng": -111.6991105,
+        "lat": 40.2661133,
+        "lng": -111.6687023,
         "address": "483 W 2310 N, Provo, UT 84604"
       }
     ]
@@ -8863,8 +8863,8 @@
     "name": "Peaks Ice Arena",
     "category": "free",
     "address": "100 N Seven Peaks Blvd, Provo, UT 84606",
-    "lat": 40.234644,
-    "lng": -111.640201,
+    "lat": 40.23500420000001,
+    "lng": -111.6381255,
     "locationRestriction": "",
     "deal": {
       "title": "FREE! Admission! Skate Rental Not Included!",
@@ -8884,8 +8884,8 @@
     ],
     "locations": [
       {
-        "lat": 40.234644,
-        "lng": -111.640201,
+        "lat": 40.23500420000001,
+        "lng": -111.6381255,
         "address": "100 N Seven Peaks Blvd, Provo, UT 84606"
       }
     ]
@@ -8927,12 +8927,12 @@
     "name": "Pizza Hut",
     "category": "free",
     "address": "1151 N Canyon Rd, Provo, UT 84604",
-    "lat": 40.2492997,
-    "lng": -111.6562115,
+    "lat": 40.2496261,
+    "lng": -111.6576184,
     "locationRestriction": "All Wasatch Front",
     "deal": {
       "title": "FREE! Order of Cheese Sticks! Carryout Only! All Wasatch Front Locs",
-      "description": "Valid at: All Wasatch Front \u00e2\u20ac\u00a2 Carryout Only",
+      "description": "Valid at: All Wasatch Front â€¢ Carryout Only",
       "restrictions": "Carryout Only",
       "value": "Free Item",
       "maxUses": 1,
@@ -8953,13 +8953,13 @@
         "address": "386 W University Pkwy, Orem, UT 84058"
       },
       {
-        "lat": 40.3293932,
-        "lng": -111.7099336,
+        "lat": 40.31309450000001,
+        "lng": -111.7011698,
         "address": "886 N State St, Orem, UT 84057"
       },
       {
-        "lat": 40.2492997,
-        "lng": -111.6562115,
+        "lat": 40.2496261,
+        "lng": -111.6576184,
         "address": "1151 N Canyon Rd, Provo, UT 84604"
       },
       {
@@ -9006,8 +9006,8 @@
     "name": "Quench It!",
     "category": "free",
     "address": "291 E State St, American Fork, UT 84003",
-    "lat": 40.3861807,
-    "lng": -111.8201079,
+    "lat": 40.3753894,
+    "lng": -111.7908993,
     "locationRestriction": "All Ut County & Bluffdale",
     "deal": {
       "title": "FREE! Pretzel Bites! All Ut County & Bluffdale",
@@ -9027,8 +9027,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3861807,
-        "lng": -111.8201079,
+        "lat": 40.3753894,
+        "lng": -111.7908993,
         "address": "291 E State St, American Fork, UT 84003"
       },
       {
@@ -9037,8 +9037,8 @@
         "address": "390 E State St, Lehi, UT 84043"
       },
       {
-        "lat": 40.4898176,
-        "lng": -111.939284,
+        "lat": 40.4851441,
+        "lng": -111.9052395,
         "address": "14653 S Porter Rockwell Blvd Ste A, Bluffdale, UT 84065"
       }
     ]
@@ -9080,8 +9080,8 @@
     "name": "Redline Racing",
     "category": "free",
     "address": "1439 N 1380 W Bldg 2 Ste 100, Orem, UT 84057",
-    "lat": 40.3223247,
-    "lng": -111.7243748,
+    "lat": 40.3234299,
+    "lng": -111.7302774,
     "locationRestriction": "",
     "deal": {
       "title": "FREE! Race! Includes free helmet & headsock",
@@ -9101,8 +9101,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3223247,
-        "lng": -111.7243748,
+        "lat": 40.3234299,
+        "lng": -111.7302774,
         "address": "1439 N 1380 W Bldg 2 Ste 100, Orem, UT 84057"
       }
     ]
@@ -9112,8 +9112,8 @@
     "name": "Roxberry Juice Co.",
     "category": "free",
     "address": "484 N 950 W, American Fork, UT 84003",
-    "lat": 40.397425,
-    "lng": -111.8221494,
+    "lat": 40.3869565,
+    "lng": -111.8245017,
     "locationRestriction": "SF & partic. locs",
     "deal": {
       "title": "FREE! Mystery Mix Deep-freeze Smoothie! SF & partic. locs.",
@@ -9133,28 +9133,28 @@
     ],
     "locations": [
       {
-        "lat": 40.397425,
-        "lng": -111.8221494,
+        "lat": 40.3869565,
+        "lng": -111.8245017,
         "address": "484 N 950 W, American Fork, UT 84003"
       },
       {
-        "lat": 40.3619091,
-        "lng": -112.0386946,
+        "lat": 40.3084237,
+        "lng": -112.0154283,
         "address": "1337 Eagle Mountain Blvd Ste 110, Eagle Mountain, UT 84005"
       },
       {
-        "lat": 40.427176,
-        "lng": -111.7891709,
+        "lat": 40.4322396,
+        "lng": -111.7875095,
         "address": "5406 W 11000 N, Highland, UT 84003"
       },
       {
-        "lat": 40.2735513,
-        "lng": -111.6880971,
+        "lat": 40.2738093,
+        "lng": -111.6898728,
         "address": "297 E University Pkwy, Orem, UT 84097"
       },
       {
-        "lat": 40.2751196,
-        "lng": -111.7133763,
+        "lat": 40.2755404,
+        "lng": -111.7262957,
         "address": "1296 W University Pkwy, Orem, UT 84057"
       },
       {
@@ -9163,23 +9163,23 @@
         "address": "205 E 700 S Unit A, Pleasant Grove, UT 84062"
       },
       {
-        "lat": 40.2983483,
-        "lng": -111.658248,
+        "lat": 40.2980549,
+        "lng": -111.6595957,
         "address": "4801 N University Ave Ste 51, Provo, UT 84604"
       },
       {
-        "lat": 40.0694278,
-        "lng": -111.6660059,
+        "lat": 40.067736,
+        "lng": -111.6660316,
         "address": "833 N 350 E, Salem, UT 84653"
       },
       {
-        "lat": 40.383492,
-        "lng": -111.9162603,
+        "lat": 40.383185,
+        "lng": -111.9149721,
         "address": "1162 N Redwood Rd Ste 401, Saratoga Springs, UT 84045"
       },
       {
-        "lat": 40.4326662,
-        "lng": -111.8750693,
+        "lat": 40.43234280000001,
+        "lng": -111.8795326,
         "address": "1825 W Traverse Pkwy Ste A, Lehi, UT 84043"
       }
     ]
@@ -9189,8 +9189,8 @@
     "name": "Salsa at Southworth",
     "category": "free",
     "address": "268 W 100 S, Provo, UT 84601",
-    "lat": 40.2324226,
-    "lng": -111.6633566,
+    "lat": 40.2330195,
+    "lng": -111.6634834,
     "locationRestriction": "",
     "deal": {
       "title": "FREE! Thurs Night Admission!",
@@ -9210,8 +9210,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2324226,
-        "lng": -111.6633566,
+        "lat": 40.2330195,
+        "lng": -111.6634834,
         "address": "268 W 100 S, Provo, UT 84601"
       }
     ]
@@ -9247,8 +9247,8 @@
         "address": "1055 N 300 W Ste 201, Provo, UT 84604"
       },
       {
-        "lat": 40.3734298,
-        "lng": -111.7398467,
+        "lat": 40.359893,
+        "lng": -111.739233,
         "address": "306 S 100 E, Pleasant Grove, UT 84062"
       },
       {
@@ -9257,8 +9257,8 @@
         "address": "9748 Oakbrook Dr Ste 1, Highland, UT 84003"
       },
       {
-        "lat": 40.105853,
-        "lng": -111.6565027,
+        "lat": 40.1060875,
+        "lng": -111.652845,
         "address": "109 E 300 S, Spanish Fork, UT 84660"
       },
       {
@@ -9341,8 +9341,8 @@
         "address": "1195 E Main St, Lehi, UT 84043"
       },
       {
-        "lat": 40.5803791,
-        "lng": -111.8537977,
+        "lat": 40.58108379999999,
+        "lng": -111.8604929,
         "address": "1065 E 9400 S, Sandy, UT 84094"
       }
     ]
@@ -9352,8 +9352,8 @@
     "name": "Splash Summit Waterpark",
     "category": "free",
     "address": "1330 E 300 N, Provo, UT 84606",
-    "lat": 40.2374558,
-    "lng": -111.6348644,
+    "lat": 40.2370715,
+    "lng": -111.6361865,
     "locationRestriction": "",
     "deal": {
       "title": "FREE! Day Pass! Valid May & June",
@@ -9373,8 +9373,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2374558,
-        "lng": -111.6348644,
+        "lat": 40.2370715,
+        "lng": -111.6361865,
         "address": "1330 E 300 N, Provo, UT 84606"
       }
     ]
@@ -9384,8 +9384,8 @@
     "name": "Stadium Cinemas",
     "category": "free",
     "address": "633 S 950 W, Payson, UT 84651",
-    "lat": 40.0343732,
-    "lng": -111.7490169,
+    "lat": 40.0346014,
+    "lng": -111.7484353,
     "locationRestriction": "",
     "deal": {
       "title": "FREE! Movie Ticket!",
@@ -9405,8 +9405,8 @@
     ],
     "locations": [
       {
-        "lat": 40.0343732,
-        "lng": -111.7490169,
+        "lat": 40.0346014,
+        "lng": -111.7484353,
         "address": "633 S 950 W, Payson, UT 84651"
       }
     ]
@@ -9442,8 +9442,8 @@
         "address": "1100 W 800 N, Orem, UT 84057"
       },
       {
-        "lat": 40.038367,
-        "lng": -111.7338474,
+        "lat": 40.0411692,
+        "lng": -111.7341621,
         "address": "212 S 100 W, Payson, UT 84651"
       }
     ]
@@ -9517,12 +9517,12 @@
     "name": "Taylor Andrews Academy",
     "category": "free",
     "address": "2035 N 550 W, Provo, UT 84604",
-    "lat": 40.2410163,
-    "lng": -111.7063523,
+    "lat": 40.2615321,
+    "lng": -111.6692865,
     "locationRestriction": "Provo and WJ",
     "deal": {
       "title": "FREE! Haircut! M-Th Provo and WJ",
-      "description": "Valid at: Provo and WJ \u00e2\u20ac\u00a2 M-Th",
+      "description": "Valid at: Provo and WJ â€¢ M-Th",
       "restrictions": "M-Th",
       "value": "Free Item",
       "maxUses": 2,
@@ -9538,8 +9538,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2410163,
-        "lng": -111.7063523,
+        "lat": 40.2615321,
+        "lng": -111.6692865,
         "address": "2035 N 550 W, Provo, UT 84604"
       }
     ]
@@ -9570,8 +9570,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3861807,
-        "lng": -111.8201079,
+        "lat": 40.3715644,
+        "lng": -111.7817744,
         "address": "648 E State St Ste L, American Fork, UT 84003"
       }
     ]
@@ -9602,13 +9602,13 @@
     ],
     "locations": [
       {
-        "lat": 40.3537387,
-        "lng": -111.7635548,
+        "lat": 40.3546889,
+        "lng": -111.7659027,
         "address": "758 S North County Blvd, Pleasant Grove, UT 84062"
       },
       {
-        "lat": 40.5269543,
-        "lng": -111.868482,
+        "lat": 40.5269883,
+        "lng": -111.8775761,
         "address": "487 E 12300 S, Draper, UT 84020"
       }
     ]
@@ -9618,8 +9618,8 @@
     "name": "The Pickr",
     "category": "free",
     "address": "559 S Deseret Dr, Kaysville, UT 84037",
-    "lat": 41.0349847,
-    "lng": -111.9383931,
+    "lat": 41.0260981,
+    "lng": -111.9485107,
     "locationRestriction": "Lehi & Bluffdale",
     "deal": {
       "title": "FREE! 3 Hr Open Play Session! Lehi & Bluffdale",
@@ -9639,13 +9639,13 @@
     ],
     "locations": [
       {
-        "lat": 41.0349847,
-        "lng": -111.9383931,
+        "lat": 41.0260981,
+        "lng": -111.9485107,
         "address": "559 S Deseret Dr, Kaysville, UT 84037"
       },
       {
-        "lat": 40.6133014,
-        "lng": -111.9816758,
+        "lat": 40.6179868,
+        "lng": -111.9792666,
         "address": "7552 S Plaza Center Dr, West Jordan, UT 84084"
       }
     ]
@@ -9655,12 +9655,12 @@
     "name": "The Rift Augmented Reality",
     "category": "free",
     "address": "1200 Towne Centre Blvd Ste 1158, Provo, UT 84601",
-    "lat": 40.2155627,
-    "lng": -111.6628499,
+    "lat": 40.217462,
+    "lng": -111.664028,
     "locationRestriction": "Provo",
     "deal": {
       "title": "FREE! Admit 2 to Any Experience! Mon Only Provo",
-      "description": "Valid at: Provo \u00e2\u20ac\u00a2 Mon Only",
+      "description": "Valid at: Provo â€¢ Mon Only",
       "restrictions": "Mon Only",
       "value": "Free Item",
       "maxUses": 1,
@@ -9676,8 +9676,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2155627,
-        "lng": -111.6628499,
+        "lat": 40.217462,
+        "lng": -111.664028,
         "address": "1200 Towne Centre Blvd Ste 1158, Provo, UT 84601"
       }
     ]
@@ -9687,8 +9687,8 @@
     "name": "The Ruth",
     "category": "free",
     "address": "401 S Pleasant Grove Blvd, Pleasant Grove, UT 84062",
-    "lat": 40.3590777,
-    "lng": -111.7612082,
+    "lat": 40.3592235,
+    "lng": -111.7617742,
     "locationRestriction": "",
     "deal": {
       "title": "FREE! Ticket to Any Youth Show! Select Seats Code: SSC",
@@ -9708,8 +9708,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3590777,
-        "lng": -111.7612082,
+        "lat": 40.3592235,
+        "lng": -111.7617742,
         "address": "401 S Pleasant Grove Blvd, Pleasant Grove, UT 84062"
       }
     ]
@@ -9719,8 +9719,8 @@
     "name": "The Smoked Taco",
     "category": "free",
     "address": "933 W 500 N, American Fork, UT 84003",
-    "lat": 40.388216,
-    "lng": -111.8220603,
+    "lat": 40.3881621,
+    "lng": -111.8228275,
     "locationRestriction": "All Locations",
     "deal": {
       "title": "FREE! Order of Churro Fries! All Locations",
@@ -9740,18 +9740,18 @@
     ],
     "locations": [
       {
-        "lat": 40.388216,
-        "lng": -111.8220603,
+        "lat": 40.3881621,
+        "lng": -111.8228275,
         "address": "933 W 500 N, American Fork, UT 84003"
       },
       {
-        "lat": 40.3862792,
-        "lng": -111.9130188,
+        "lat": 40.412425,
+        "lng": -111.8694833,
         "address": "1059 W River Rd, Saratoga Springs, UT 84045"
       },
       {
-        "lat": 40.8843845,
-        "lng": -111.8577857,
+        "lat": 40.8840001,
+        "lng": -111.8864579,
         "address": "245 W 500 S, Bountiful, UT 84010"
       }
     ]
@@ -9793,8 +9793,8 @@
     "name": "This Is The Place Heritage Park",
     "category": "free",
     "address": "2601 E Sunnyside Ave, Salt Lake City, UT 84108",
-    "lat": 40.7510462,
-    "lng": -111.8147792,
+    "lat": 40.7520296,
+    "lng": -111.8162026,
     "locationRestriction": "",
     "deal": {
       "title": "One FREE! Admission!",
@@ -9814,8 +9814,8 @@
     ],
     "locations": [
       {
-        "lat": 40.7510462,
-        "lng": -111.8147792,
+        "lat": 40.7520296,
+        "lng": -111.8162026,
         "address": "2601 E Sunnyside Ave, Salt Lake City, UT 84108"
       }
     ]
@@ -9857,8 +9857,8 @@
     "name": "Tsubame Rotating Sushi",
     "category": "free",
     "address": "576 N Mill Rd Ste 101, Vineyard, UT 84059",
-    "lat": 40.3088558,
-    "lng": -111.7397679,
+    "lat": 40.3077986,
+    "lng": -111.7371015,
     "locationRestriction": "",
     "deal": {
       "title": "FREE! Food Plate! Dine-in Only",
@@ -9878,8 +9878,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3088558,
-        "lng": -111.7397679,
+        "lat": 40.3077986,
+        "lng": -111.7371015,
         "address": "576 N Mill Rd Ste 101, Vineyard, UT 84059"
       }
     ]
@@ -9889,8 +9889,8 @@
     "name": "Utah Country Dance",
     "category": "free",
     "address": "268 W 100 S, Provo, UT 84601",
-    "lat": 40.2324226,
-    "lng": -111.6633566,
+    "lat": 40.2330195,
+    "lng": -111.6634834,
     "locationRestriction": "",
     "deal": {
       "title": "FREE! Saturday Admission!",
@@ -9910,8 +9910,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2324226,
-        "lng": -111.6633566,
+        "lat": 40.2330195,
+        "lng": -111.6634834,
         "address": "268 W 100 S, Provo, UT 84601"
       }
     ]
@@ -9921,8 +9921,8 @@
     "name": "Utah Grizzlies",
     "category": "free",
     "address": "3200 S Decker Lake Dr, West Valley City, UT 84119",
-    "lat": 40.7011275,
-    "lng": -111.9485873,
+    "lat": 40.702692,
+    "lng": -111.950487,
     "locationRestriction": "",
     "deal": {
       "title": "FREE! Ticket for Up to 2 People! Reg Season Only",
@@ -9942,8 +9942,8 @@
     ],
     "locations": [
       {
-        "lat": 40.7011275,
-        "lng": -111.9485873,
+        "lat": 40.702692,
+        "lng": -111.950487,
         "address": "3200 S Decker Lake Dr, West Valley City, UT 84119"
       }
     ]
@@ -9953,8 +9953,8 @@
     "name": "UVU Athletics",
     "category": "free",
     "address": "800 W University Pkwy, Orem, UT 84058",
-    "lat": 40.2794106,
-    "lng": -111.7178868,
+    "lat": 40.2787626,
+    "lng": -111.7153739,
     "locationRestriction": "",
     "deal": {
       "title": "FREE! Admission to Any UVU NCAA Home Sporting Event!",
@@ -9974,8 +9974,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2794106,
-        "lng": -111.7178868,
+        "lat": 40.2787626,
+        "lng": -111.7153739,
         "address": "800 W University Pkwy, Orem, UT 84058"
       }
     ]
@@ -9985,8 +9985,8 @@
     "name": "UVU Scoops",
     "category": "free",
     "address": "800 W University Pkwy, Orem, UT 84058",
-    "lat": 40.2794106,
-    "lng": -111.7178868,
+    "lat": 40.2787626,
+    "lng": -111.7153739,
     "locationRestriction": "",
     "deal": {
       "title": "FREE! 22 oz. Fountain Drink!",
@@ -10006,8 +10006,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2794106,
-        "lng": -111.7178868,
+        "lat": 40.2787626,
+        "lng": -111.7153739,
         "address": "800 W University Pkwy, Orem, UT 84058"
       }
     ]
@@ -10043,8 +10043,8 @@
         "address": "933 S University Ave, Provo, UT 84606"
       },
       {
-        "lat": 40.6967891,
-        "lng": -111.9866954,
+        "lat": 40.6966917,
+        "lng": -112.0064915,
         "address": "4824 W 3500 S, West Valley City, UT 84120"
       }
     ]
@@ -10075,23 +10075,23 @@
     ],
     "locations": [
       {
-        "lat": 40.3533224,
-        "lng": -111.763274,
+        "lat": 40.3533705,
+        "lng": -111.7624504,
         "address": "887 S North County Blvd, Pleasant Grove, UT 84062"
       },
       {
-        "lat": 40.2753836,
-        "lng": -111.6808629,
+        "lat": 40.2748122,
+        "lng": -111.6802325,
         "address": "575 E University Pkwy, Orem, UT 84097"
       },
       {
-        "lat": 40.3088558,
-        "lng": -111.7397679,
+        "lat": 40.3079122,
+        "lng": -111.7389909,
         "address": "514 N Mill Rd, Vineyard, UT 84059"
       },
       {
-        "lat": 40.6841835,
-        "lng": -111.9893324,
+        "lat": 40.6695953,
+        "lng": -111.9871583,
         "address": "4578 S 4000 W, West Valley City, UT 84120"
       }
     ]
@@ -10154,13 +10154,13 @@
     ],
     "locations": [
       {
-        "lat": 40.2748759,
-        "lng": -111.6851248,
+        "lat": 40.2918058,
+        "lng": -111.6941828,
         "address": "360 S State St Bldg C Ste 102, Orem, UT 84058"
       },
       {
-        "lat": 40.6967891,
-        "lng": -111.9866954,
+        "lat": 40.6679758,
+        "lng": -111.962523,
         "address": "2946 W 4700 S, West Valley City, UT 84129"
       }
     ]
@@ -10191,8 +10191,8 @@
     ],
     "locations": [
       {
-        "lat": 40.4360183,
-        "lng": -111.8851121,
+        "lat": 40.4352605,
+        "lng": -111.8850381,
         "address": "3700 N Cabelas Blvd Space 234, Lehi, UT 84043"
       },
       {
@@ -10228,8 +10228,8 @@
     ],
     "locations": [
       {
-        "lat": 40.4360183,
-        "lng": -111.8851121,
+        "lat": 40.4352605,
+        "lng": -111.8850381,
         "address": "3700 N Cabelas Blvd Space 234, Lehi, UT 84043"
       },
       {
@@ -10244,8 +10244,8 @@
     "name": "Avenue Bakery",
     "category": "treats",
     "address": "297 W Main St, American Fork, UT 84003",
-    "lat": 40.3768196,
-    "lng": -111.8017366,
+    "lat": 40.3764356,
+    "lng": -111.8062973,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Savory Crepe and Drink!",
@@ -10265,8 +10265,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3768196,
-        "lng": -111.8017366,
+        "lat": 40.3764356,
+        "lng": -111.8062973,
         "address": "297 W Main St, American Fork, UT 84003"
       }
     ]
@@ -10276,8 +10276,8 @@
     "name": "Avenue Bakery",
     "category": "treats",
     "address": "297 W Main St, American Fork, UT 84003",
-    "lat": 40.3768196,
-    "lng": -111.8017366,
+    "lat": 40.3764356,
+    "lng": -111.8062973,
     "locationRestriction": "",
     "deal": {
       "title": "50% OFF! 1 Dozen Donuts!",
@@ -10297,8 +10297,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3768196,
-        "lng": -111.8017366,
+        "lat": 40.3764356,
+        "lng": -111.8062973,
         "address": "297 W Main St, American Fork, UT 84003"
       }
     ]
@@ -10308,8 +10308,8 @@
     "name": "Avenue Bakery",
     "category": "treats",
     "address": "297 W Main St, American Fork, UT 84003",
-    "lat": 40.3768196,
-    "lng": -111.8017366,
+    "lat": 40.3764356,
+    "lng": -111.8062973,
     "locationRestriction": "",
     "deal": {
       "title": "Buy 1 Artisan Bread Get 1 FREE!",
@@ -10329,8 +10329,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3768196,
-        "lng": -111.8017366,
+        "lat": 40.3764356,
+        "lng": -111.8062973,
         "address": "297 W Main St, American Fork, UT 84003"
       }
     ]
@@ -10366,8 +10366,8 @@
         "address": "2265 N University Pkwy, Provo, UT 84604"
       },
       {
-        "lat": 40.5269543,
-        "lng": -111.868482,
+        "lat": 40.5263712,
+        "lng": -111.8754094,
         "address": "582 E 12300 S, Draper, UT 84020"
       }
     ]
@@ -10398,8 +10398,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2985854,
-        "lng": -111.6957539,
+        "lat": 40.3009485,
+        "lng": -111.6962866,
         "address": "210 N State St, Orem, UT 84057"
       }
     ]
@@ -10409,8 +10409,8 @@
     "name": "Bobbys Burgers",
     "category": "treats",
     "address": "575 E University Pkwy, Orem, UT 84097",
-    "lat": 40.2753836,
-    "lng": -111.6808629,
+    "lat": 40.2748122,
+    "lng": -111.6802325,
     "locationRestriction": "",
     "deal": {
       "title": "Buy Any Shake Get 1 FREE!",
@@ -10430,8 +10430,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2753836,
-        "lng": -111.6808629,
+        "lat": 40.2748122,
+        "lng": -111.6802325,
         "address": "575 E University Pkwy, Orem, UT 84097"
       }
     ]
@@ -10462,8 +10462,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2750201,
-        "lng": -111.6851933,
+        "lat": 40.295516,
+        "lng": -111.6918223,
         "address": "93 S State St, Orem, UT 84058"
       }
     ]
@@ -10595,8 +10595,8 @@
         "address": "37 W University Pkwy, Orem, UT 84058"
       },
       {
-        "lat": 40.5616177,
-        "lng": -111.9387663,
+        "lat": 40.5626492,
+        "lng": -111.9394521,
         "address": "10384 S Redwood Rd, South Jordan, UT 84095"
       }
     ]
@@ -10638,8 +10638,8 @@
     "name": "BYU Store",
     "category": "treats",
     "address": "800 E Campus Dr, Provo, UT 84602",
-    "lat": 40.2483377,
-    "lng": -111.648108,
+    "lat": 40.2499115,
+    "lng": -111.6479673,
     "locationRestriction": "",
     "deal": {
       "title": "Buy Any Food Candy or Fudge Get 1 50% OFF!",
@@ -10659,8 +10659,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2483377,
-        "lng": -111.648108,
+        "lat": 40.2499115,
+        "lng": -111.6479673,
         "address": "800 E Campus Dr, Provo, UT 84602"
       }
     ]
@@ -10696,8 +10696,8 @@
         "address": "1331 N State St, Orem, UT 84057"
       },
       {
-        "lat": 40.3893751,
-        "lng": -111.8270995,
+        "lat": 40.43147829999999,
+        "lng": -111.8954016,
         "address": "3536 N Maple Loop Dr, Lehi, UT 84043"
       },
       {
@@ -10749,8 +10749,8 @@
     "name": "Cinnabon",
     "category": "treats",
     "address": "575 E University Pkwy Ste B-48, Orem, UT 84097",
-    "lat": 40.2753836,
-    "lng": -111.6808629,
+    "lat": 40.274833,
+    "lng": -111.6807592,
     "locationRestriction": "Orem",
     "deal": {
       "title": "Buy Any Menu Item Get 1 FREE!",
@@ -10770,8 +10770,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2753836,
-        "lng": -111.6808629,
+        "lat": 40.274833,
+        "lng": -111.6807592,
         "address": "575 E University Pkwy Ste B-48, Orem, UT 84097"
       }
     ]
@@ -10781,8 +10781,8 @@
     "name": "Cinnabon",
     "category": "treats",
     "address": "575 E University Pkwy Ste B-48, Orem, UT 84097",
-    "lat": 40.2753836,
-    "lng": -111.6808629,
+    "lat": 40.274833,
+    "lng": -111.6807592,
     "locationRestriction": "Orem",
     "deal": {
       "title": "Buy 1 Classic Cinnamon Roll Get 1 FREE!",
@@ -10802,8 +10802,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2753836,
-        "lng": -111.6808629,
+        "lat": 40.274833,
+        "lng": -111.6807592,
         "address": "575 E University Pkwy Ste B-48, Orem, UT 84097"
       }
     ]
@@ -10813,8 +10813,8 @@
     "name": "Cinnaholic",
     "category": "treats",
     "address": "596 N Mill Rd Ste 105, Vineyard, UT 84059",
-    "lat": 40.3088558,
-    "lng": -111.7397679,
+    "lat": 40.3078541,
+    "lng": -111.7383534,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Gourmet Cinnamon Roll!",
@@ -10834,8 +10834,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3088558,
-        "lng": -111.7397679,
+        "lat": 40.3078541,
+        "lng": -111.7383534,
         "address": "596 N Mill Rd Ste 105, Vineyard, UT 84059"
       }
     ]
@@ -10882,8 +10882,8 @@
     "name": "Cravings Alisha's Cupcakes",
     "category": "treats",
     "address": "93 S Main St Ste C, Pleasant Grove, UT 84062",
-    "lat": 40.3659998,
-    "lng": -111.7407583,
+    "lat": 40.3627041,
+    "lng": -111.7405664,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Unicorn Float!",
@@ -10903,8 +10903,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3659998,
-        "lng": -111.7407583,
+        "lat": 40.3627041,
+        "lng": -111.7405664,
         "address": "93 S Main St Ste C, Pleasant Grove, UT 84062"
       }
     ]
@@ -10914,8 +10914,8 @@
     "name": "Cravings Alisha's Cupcakes",
     "category": "treats",
     "address": "93 S Main St Ste C, Pleasant Grove, UT 84062",
-    "lat": 40.3659998,
-    "lng": -111.7407583,
+    "lat": 40.3627041,
+    "lng": -111.7405664,
     "locationRestriction": "",
     "deal": {
       "title": "Buy Two Cupcakes Get 1 FREE!",
@@ -10935,8 +10935,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3659998,
-        "lng": -111.7407583,
+        "lat": 40.3627041,
+        "lng": -111.7405664,
         "address": "93 S Main St Ste C, Pleasant Grove, UT 84062"
       }
     ]
@@ -11010,8 +11010,8 @@
     "name": "Culver's",
     "category": "treats",
     "address": "1211 W 800 N, Orem, UT 84057",
-    "lat": 40.311758,
-    "lng": -111.730387,
+    "lat": 40.3113037,
+    "lng": -111.72404,
     "locationRestriction": "Northern UT Locs",
     "deal": {
       "title": "2-4-1! 2 Scoop Sundae or Medium Concrete Mixer!",
@@ -11031,8 +11031,8 @@
     ],
     "locations": [
       {
-        "lat": 40.311758,
-        "lng": -111.730387,
+        "lat": 40.3113037,
+        "lng": -111.72404,
         "address": "1211 W 800 N, Orem, UT 84057"
       },
       {
@@ -11068,13 +11068,13 @@
     ],
     "locations": [
       {
-        "lat": 40.3260157,
-        "lng": -111.7075963,
+        "lat": 40.3120154,
+        "lng": -111.701522,
         "address": "800 N State St, Orem, UT 84057"
       },
       {
-        "lat": 40.2829078,
-        "lng": -111.7324895,
+        "lat": 40.2975578,
+        "lng": -111.7345052,
         "address": "49 N Geneva Rd, Vineyard, UT 84059"
       },
       {
@@ -11083,8 +11083,8 @@
         "address": "4045 E Pony Express Pkwy, Eagle Mountain, UT 84005"
       },
       {
-        "lat": 39.9755101,
-        "lng": -111.7852106,
+        "lat": 39.99789699999999,
+        "lng": -111.8226412,
         "address": "74 N State Rd 198, Santaquin, UT 84655"
       }
     ]
@@ -11094,8 +11094,8 @@
     "name": "Daylight Donuts",
     "category": "treats",
     "address": "649 N Redwood Rd Ste 105, Saratoga Springs, UT 84045",
-    "lat": 40.3743698,
-    "lng": -111.9164812,
+    "lat": 40.3739696,
+    "lng": -111.9190157,
     "locationRestriction": "Saratoga Springs",
     "deal": {
       "title": "2-4-1! Reg Dozen Donuts!",
@@ -11115,8 +11115,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3743698,
-        "lng": -111.9164812,
+        "lat": 40.3739696,
+        "lng": -111.9190157,
         "address": "649 N Redwood Rd Ste 105, Saratoga Springs, UT 84045"
       }
     ]
@@ -11158,8 +11158,8 @@
     "name": "Franz Bakery Outlet",
     "category": "treats",
     "address": "147 N 2000 W, Springville, UT 84663",
-    "lat": 40.1760446,
-    "lng": -111.6471331,
+    "lat": 40.1684871,
+    "lng": -111.6485588,
     "locationRestriction": "All UT",
     "deal": {
       "title": "2-4-1! Snack Cake or Loaf of Bread!",
@@ -11179,18 +11179,18 @@
     ],
     "locations": [
       {
-        "lat": 40.1760446,
-        "lng": -111.6471331,
+        "lat": 40.1684871,
+        "lng": -111.6485588,
         "address": "147 N 2000 W, Springville, UT 84663"
       },
       {
-        "lat": 40.5247777,
-        "lng": -111.8627989,
+        "lat": 40.5262715,
+        "lng": -111.900897,
         "address": "375 W 12300 S, Draper, UT 84020"
       },
       {
         "lat": 40.7231728,
-        "lng": -111.946493,
+        "lng": -111.9455562,
         "address": "2060 W 2200 S, West Valley City, UT 84119"
       }
     ]
@@ -11200,8 +11200,8 @@
     "name": "Freddy's Frozen Custard & Steakburgers",
     "category": "treats",
     "address": "1513 N Town Centre Blvd, Provo, UT 84604",
-    "lat": 40.2199248,
-    "lng": -111.6584076,
+    "lat": 40.2135026,
+    "lng": -111.6616299,
     "locationRestriction": "All UT Locs",
     "deal": {
       "title": "2-4-1! Custard Cone or Dish!",
@@ -11221,23 +11221,23 @@
     ],
     "locations": [
       {
-        "lat": 40.2199248,
-        "lng": -111.6584076,
+        "lat": 40.2135026,
+        "lng": -111.6616299,
         "address": "1513 N Town Centre Blvd, Provo, UT 84604"
       },
       {
-        "lat": 40.3661727,
-        "lng": -111.7407528,
+        "lat": 40.3584025,
+        "lng": -111.7407118,
         "address": "436 S Main St, Pleasant Grove, UT 84062"
       },
       {
-        "lat": 40.3862792,
-        "lng": -111.9130188,
+        "lat": 40.412425,
+        "lng": -111.8694833,
         "address": "1059 W River Rd, Saratoga Springs, UT 84045"
       },
       {
-        "lat": 40.1229495,
-        "lng": -111.6625026,
+        "lat": 40.12297239999999,
+        "lng": -111.650976,
         "address": "191 E 1000 N, Spanish Fork, UT 84660"
       }
     ]
@@ -11343,8 +11343,8 @@
     "name": "Jack in the Box",
     "category": "treats",
     "address": "1303 N Redwood Rd, Saratoga Springs, UT 84045",
-    "lat": 40.3868039,
-    "lng": -111.916473,
+    "lat": 40.38582299999999,
+    "lng": -111.917014,
     "locationRestriction": "All Utah County",
     "deal": {
       "title": "Buy 1 Shake Get 1 FREE!",
@@ -11364,8 +11364,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3868039,
-        "lng": -111.916473,
+        "lat": 40.38582299999999,
+        "lng": -111.917014,
         "address": "1303 N Redwood Rd, Saratoga Springs, UT 84045"
       }
     ]
@@ -11375,8 +11375,8 @@
     "name": "Jamba Juice",
     "category": "treats",
     "address": "1774 N University Pkwy Ste 60, Provo, UT 84604",
-    "lat": 40.2794106,
-    "lng": -111.7178868,
+    "lat": 40.2787541,
+    "lng": -111.7153714,
     "locationRestriction": "Provo (Univ PKWY) UVU Campus Draper & WJ",
     "deal": {
       "title": "50% OFF! Any Menu Item!",
@@ -11396,13 +11396,13 @@
     ],
     "locations": [
       {
-        "lat": 40.2481866,
-        "lng": -111.654986,
+        "lat": 40.25817,
+        "lng": -111.6610672,
         "address": "1774 N University Pkwy Ste 60, Provo, UT 84604"
       },
       {
-        "lat": 40.2794106,
-        "lng": -111.7178868,
+        "lat": 40.2787541,
+        "lng": -111.7153714,
         "address": "800 W University Pkwy (UVU Campus), Orem, UT 84058"
       },
       {
@@ -11411,8 +11411,8 @@
         "address": "148 E 12300 S, Draper, UT 84020"
       },
       {
-        "lat": 40.621287,
-        "lng": -111.9821788,
+        "lat": 40.6111046,
+        "lng": -111.9838365,
         "address": "7689 S Jordan Landing Blvd, West Jordan, UT 84084"
       }
     ]
@@ -11422,8 +11422,8 @@
     "name": "Jamba Juice",
     "category": "treats",
     "address": "1774 N University Pkwy Ste 60, Provo, UT 84604",
-    "lat": 40.2794106,
-    "lng": -111.7178868,
+    "lat": 40.2787541,
+    "lng": -111.7153714,
     "locationRestriction": "Same Locations",
     "deal": {
       "title": "Buy Any Smoothie Get 1 FREE!",
@@ -11443,13 +11443,13 @@
     ],
     "locations": [
       {
-        "lat": 40.2481866,
-        "lng": -111.654986,
+        "lat": 40.25817,
+        "lng": -111.6610672,
         "address": "1774 N University Pkwy Ste 60, Provo, UT 84604"
       },
       {
-        "lat": 40.2794106,
-        "lng": -111.7178868,
+        "lat": 40.2787541,
+        "lng": -111.7153714,
         "address": "800 W University Pkwy (UVU Campus), Orem, UT 84058"
       },
       {
@@ -11458,8 +11458,8 @@
         "address": "148 E 12300 S, Draper, UT 84020"
       },
       {
-        "lat": 40.621287,
-        "lng": -111.9821788,
+        "lat": 40.6111046,
+        "lng": -111.9838365,
         "address": "7689 S Jordan Landing Blvd, West Jordan, UT 84084"
       }
     ]
@@ -11500,8 +11500,8 @@
         "address": "1225 S University Ave, Provo, UT 84601"
       },
       {
-        "lat": 40.3119892,
-        "lng": -111.7217513,
+        "lat": 40.3124972,
+        "lng": -111.7226212,
         "address": "1140 W 800 N, Orem, UT 84057"
       },
       {
@@ -11510,13 +11510,13 @@
         "address": "1611 N State St, Orem, UT 84057"
       },
       {
-        "lat": 40.3548874,
-        "lng": -111.7361532,
+        "lat": 40.374574,
+        "lng": -111.7904402,
         "address": "312 E State St, Pleasant Grove, UT 84062"
       },
       {
-        "lat": 40.3768064,
-        "lng": -111.7959146,
+        "lat": 40.3739867,
+        "lng": -111.7875427,
         "address": "406 E State Rd, American Fork, UT 84003"
       },
       {
@@ -11552,18 +11552,18 @@
     ],
     "locations": [
       {
-        "lat": 40.359896,
-        "lng": -111.7686103,
+        "lat": 40.3536849,
+        "lng": -111.762916,
         "address": "863 S North County Blvd, Pleasant Grove, UT 84062"
       },
       {
-        "lat": 40.41223,
-        "lng": -111.77303,
+        "lat": 40.4309184,
+        "lng": -111.8952864,
         "address": "2851 W Club House Dr, Lehi, UT 84043"
       },
       {
-        "lat": 41.078145,
-        "lng": -111.976256,
+        "lat": 41.0785409,
+        "lng": -111.9774575,
         "address": "1201 N Hill Field Rd, Layton, UT 84041"
       }
     ]
@@ -11594,18 +11594,18 @@
     ],
     "locations": [
       {
-        "lat": 40.359896,
-        "lng": -111.7686103,
+        "lat": 40.3536849,
+        "lng": -111.762916,
         "address": "863 S North County Blvd, Pleasant Grove, UT 84062"
       },
       {
-        "lat": 40.41223,
-        "lng": -111.77303,
+        "lat": 40.4309184,
+        "lng": -111.8952864,
         "address": "2851 W Club House Dr, Lehi, UT 84043"
       },
       {
-        "lat": 41.078145,
-        "lng": -111.976256,
+        "lat": 41.0785409,
+        "lng": -111.9774575,
         "address": "1201 N Hill Field Rd, Layton, UT 84041"
       }
     ]
@@ -11647,8 +11647,8 @@
     "name": "MilkShake Factory",
     "category": "treats",
     "address": "876 S North County Blvd Ste E, Pleasant Grove, UT 84062",
-    "lat": 40.3537387,
-    "lng": -111.7635548,
+    "lat": 40.3531378,
+    "lng": -111.7635667,
     "locationRestriction": "All UT Locations",
     "deal": {
       "title": "2-4-1! Any Chocolate Molten Cup!",
@@ -11668,13 +11668,13 @@
     ],
     "locations": [
       {
-        "lat": 40.3537387,
-        "lng": -111.7635548,
+        "lat": 40.3531378,
+        "lng": -111.7635667,
         "address": "876 S North County Blvd Ste E, Pleasant Grove, UT 84062"
       },
       {
-        "lat": 40.6710765,
-        "lng": -111.8250278,
+        "lat": 40.6632892,
+        "lng": -111.8366112,
         "address": "1920 E Rodeo Way Dr Ste D60, Holladay, UT 84117"
       }
     ]
@@ -11684,8 +11684,8 @@
     "name": "MilkShake Factory",
     "category": "treats",
     "address": "876 S North County Blvd Ste E, Pleasant Grove, UT 84062",
-    "lat": 40.3537387,
-    "lng": -111.7635548,
+    "lat": 40.3531378,
+    "lng": -111.7635667,
     "locationRestriction": "All UT Locations",
     "deal": {
       "title": "2-4-1! Any Milkshake!",
@@ -11705,13 +11705,13 @@
     ],
     "locations": [
       {
-        "lat": 40.3537387,
-        "lng": -111.7635548,
+        "lat": 40.3531378,
+        "lng": -111.7635667,
         "address": "876 S North County Blvd Ste E, Pleasant Grove, UT 84062"
       },
       {
-        "lat": 40.6710765,
-        "lng": -111.8250278,
+        "lat": 40.6632892,
+        "lng": -111.8366112,
         "address": "1920 E Rodeo Way Dr Ste D60, Holladay, UT 84117"
       }
     ]
@@ -11747,8 +11747,8 @@
         "address": "62 W 1230 N Ste 105, Provo, UT 84604"
       },
       {
-        "lat": 40.5710454,
-        "lng": -111.8953815,
+        "lat": 40.5750267,
+        "lng": -111.8912931,
         "address": "9710 S State St Ste 101, Sandy, UT 84070"
       },
       {
@@ -11763,8 +11763,8 @@
     "name": "Mrs. Cavanaugh's Chocolates",
     "category": "treats",
     "address": "1163 S State St, Orem, UT 84097",
-    "lat": 40.2951516,
-    "lng": -111.6941373,
+    "lat": 40.2762935,
+    "lng": -111.6852973,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Single Scoop of Ice Cream!",
@@ -11784,8 +11784,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2951516,
-        "lng": -111.6941373,
+        "lat": 40.2762935,
+        "lng": -111.6852973,
         "address": "1163 S State St, Orem, UT 84097"
       }
     ]
@@ -11795,8 +11795,8 @@
     "name": "Mrs. Cavanaugh's Chocolates",
     "category": "treats",
     "address": "1163 S State St, Orem, UT 84097",
-    "lat": 40.2951516,
-    "lng": -111.6941373,
+    "lat": 40.2762935,
+    "lng": -111.6852973,
     "locationRestriction": "",
     "deal": {
       "title": "25% OFF! 1 Pound of Chocolate!",
@@ -11816,8 +11816,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2951516,
-        "lng": -111.6941373,
+        "lat": 40.2762935,
+        "lng": -111.6852973,
         "address": "1163 S State St, Orem, UT 84097"
       }
     ]
@@ -11827,8 +11827,8 @@
     "name": "Nautical Bowls",
     "category": "treats",
     "address": "1314 N Redwood Rd Ste 200, Saratoga Springs, UT 84045",
-    "lat": 40.3868641,
-    "lng": -111.916473,
+    "lat": 40.385608,
+    "lng": -111.915722,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Any Smoothie!",
@@ -11848,8 +11848,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3868641,
-        "lng": -111.916473,
+        "lat": 40.385608,
+        "lng": -111.915722,
         "address": "1314 N Redwood Rd Ste 200, Saratoga Springs, UT 84045"
       }
     ]
@@ -11885,8 +11885,8 @@
         "address": "987 W 500 N Ste 105, American Fork, UT 84003"
       },
       {
-        "lat": 40.648868,
-        "lng": -111.93893,
+        "lat": 40.6544813,
+        "lng": -111.9393251,
         "address": "5338 S Redwood Rd, Taylorsville, UT 84123"
       }
     ]
@@ -11896,8 +11896,8 @@
     "name": "Onoh's Malasada Co.",
     "category": "treats",
     "address": "1043 S Valley Grove Way Ste A, Pleasant Grove, UT 84062",
-    "lat": 40.3512579,
-    "lng": -111.7641976,
+    "lat": 40.351823,
+    "lng": -111.7645863,
     "locationRestriction": "",
     "deal": {
       "title": "50% OFF! Half Dozen Malasadas!",
@@ -11917,8 +11917,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3512579,
-        "lng": -111.7641976,
+        "lat": 40.351823,
+        "lng": -111.7645863,
         "address": "1043 S Valley Grove Way Ste A, Pleasant Grove, UT 84062"
       }
     ]
@@ -11928,8 +11928,8 @@
     "name": "Papa Murphy's",
     "category": "treats",
     "address": "1678 Redstone Center Dr Ste 120, Park City, UT 84098",
-    "lat": 40.6460921,
-    "lng": -111.4979963,
+    "lat": 40.72056,
+    "lng": -111.5419791,
     "locationRestriction": "Provo & Park City",
     "deal": {
       "title": "2-4-1! Any Dessert or Side!",
@@ -11954,8 +11954,8 @@
         "address": "979 S University Ave, Provo, UT 84601"
       },
       {
-        "lat": 40.6460921,
-        "lng": -111.4979963,
+        "lat": 40.72056,
+        "lng": -111.5419791,
         "address": "1678 Redstone Center Dr Ste 120, Park City, UT 84098"
       }
     ]
@@ -12066,8 +12066,8 @@
     "name": "Quench It!",
     "category": "treats",
     "address": "291 E State St, American Fork, UT 84003",
-    "lat": 40.3861807,
-    "lng": -111.8201079,
+    "lat": 40.3753894,
+    "lng": -111.7908993,
     "locationRestriction": "All Utah County & Bluffdale",
     "deal": {
       "title": "2-4-1! Drink! Up to $2.75",
@@ -12087,8 +12087,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3861807,
-        "lng": -111.8201079,
+        "lat": 40.3753894,
+        "lng": -111.7908993,
         "address": "291 E State St, American Fork, UT 84003"
       },
       {
@@ -12097,8 +12097,8 @@
         "address": "390 E State St, Lehi, UT 84043"
       },
       {
-        "lat": 40.4898176,
-        "lng": -111.939284,
+        "lat": 40.4851441,
+        "lng": -111.9052395,
         "address": "14653 S Porter Rockwell Blvd Ste A, Bluffdale, UT 84065"
       }
     ]
@@ -12108,8 +12108,8 @@
     "name": "Rocky Mountain Chocolate Factory",
     "category": "treats",
     "address": "456 E State St Ste 300, American Fork, UT 84003",
-    "lat": 40.3861807,
-    "lng": -111.8201079,
+    "lat": 40.3734761,
+    "lng": -111.7866005,
     "locationRestriction": "Lehi",
     "deal": {
       "title": "Buy 2 Caramel Apples Get a 3rd FREE!",
@@ -12129,8 +12129,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3861807,
-        "lng": -111.8201079,
+        "lat": 40.3734761,
+        "lng": -111.7866005,
         "address": "456 E State St Ste 300, American Fork, UT 84003"
       },
       {
@@ -12139,8 +12139,8 @@
         "address": "50 S Main St Spc 115A, Salt Lake City, UT 84101"
       },
       {
-        "lat": 41.0751048,
-        "lng": -111.9741925,
+        "lat": 41.0739208,
+        "lng": -111.979332,
         "address": "936 N Main St Ste D, Layton, UT 84041"
       }
     ]
@@ -12246,8 +12246,8 @@
     "name": "Rowley's Red Barn",
     "category": "treats",
     "address": "901 S 300 W, Santaquin, UT 84655",
-    "lat": 39.9834825,
-    "lng": -111.7916914,
+    "lat": 39.960811,
+    "lng": -111.7946786,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Small Apple Cider Slush a la Mode!",
@@ -12267,8 +12267,8 @@
     ],
     "locations": [
       {
-        "lat": 39.9834825,
-        "lng": -111.7916914,
+        "lat": 39.960811,
+        "lng": -111.7946786,
         "address": "901 S 300 W, Santaquin, UT 84655"
       }
     ]
@@ -12278,8 +12278,8 @@
     "name": "Rowley's Red Barn",
     "category": "treats",
     "address": "901 S 300 W, Santaquin, UT 84655",
-    "lat": 39.9834825,
-    "lng": -111.7916914,
+    "lat": 39.960811,
+    "lng": -111.7946786,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Two-Scoop Ice Cream!",
@@ -12299,8 +12299,8 @@
     ],
     "locations": [
       {
-        "lat": 39.9834825,
-        "lng": -111.7916914,
+        "lat": 39.960811,
+        "lng": -111.7946786,
         "address": "901 S 300 W, Santaquin, UT 84655"
       }
     ]
@@ -12310,8 +12310,8 @@
     "name": "Roxberry Juice Co.",
     "category": "treats",
     "address": "4801 N University Ave Ste 51, Provo, UT 84604",
-    "lat": 40.2983483,
-    "lng": -111.658248,
+    "lat": 40.2980549,
+    "lng": -111.6595957,
     "locationRestriction": "Spanish Fork & Participating Locations",
     "deal": {
       "title": "2-4-1! Smoothie!",
@@ -12331,28 +12331,28 @@
     ],
     "locations": [
       {
-        "lat": 40.397425,
-        "lng": -111.8221494,
+        "lat": 40.3869565,
+        "lng": -111.8245017,
         "address": "484 N 950 W, American Fork, UT 84003"
       },
       {
-        "lat": 40.3619091,
-        "lng": -112.0386946,
+        "lat": 40.3084237,
+        "lng": -112.0154283,
         "address": "1337 Eagle Mountain Blvd Ste 110, Eagle Mountain, UT 84005"
       },
       {
-        "lat": 40.427176,
-        "lng": -111.7891709,
+        "lat": 40.4322396,
+        "lng": -111.7875095,
         "address": "5406 W 11000 N, Highland, UT 84003"
       },
       {
-        "lat": 40.2735513,
-        "lng": -111.6880971,
+        "lat": 40.2738093,
+        "lng": -111.6898728,
         "address": "297 E University Pkwy, Orem, UT 84097"
       },
       {
-        "lat": 40.2751196,
-        "lng": -111.7133763,
+        "lat": 40.2755404,
+        "lng": -111.7262957,
         "address": "1296 W University Pkwy, Orem, UT 84057"
       },
       {
@@ -12361,23 +12361,23 @@
         "address": "205 E 700 S Unit A, Pleasant Grove, UT 84062"
       },
       {
-        "lat": 40.2983483,
-        "lng": -111.658248,
+        "lat": 40.2980549,
+        "lng": -111.6595957,
         "address": "4801 N University Ave Ste 51, Provo, UT 84604"
       },
       {
-        "lat": 40.0694278,
-        "lng": -111.6660059,
+        "lat": 40.067736,
+        "lng": -111.6660316,
         "address": "833 N 350 E, Salem, UT 84653"
       },
       {
-        "lat": 40.383492,
-        "lng": -111.9162603,
+        "lat": 40.383185,
+        "lng": -111.9149721,
         "address": "1162 N Redwood Rd Ste 401, Saratoga Springs, UT 84045"
       },
       {
-        "lat": 40.4326662,
-        "lng": -111.8750693,
+        "lat": 40.43234280000001,
+        "lng": -111.8795326,
         "address": "1825 W Traverse Pkwy Ste A, Lehi, UT 84043"
       }
     ]
@@ -12413,8 +12413,8 @@
         "address": "1055 N 300 W Ste 201, Provo, UT 84604"
       },
       {
-        "lat": 40.3734298,
-        "lng": -111.7398467,
+        "lat": 40.359893,
+        "lng": -111.739233,
         "address": "306 S 100 E, Pleasant Grove, UT 84062"
       },
       {
@@ -12423,8 +12423,8 @@
         "address": "9748 Oakbrook Dr Ste 1, Highland, UT 84003"
       },
       {
-        "lat": 40.105853,
-        "lng": -111.6565027,
+        "lat": 40.1060875,
+        "lng": -111.652845,
         "address": "109 E 300 S, Spanish Fork, UT 84660"
       },
       {
@@ -12465,8 +12465,8 @@
         "address": "1055 N 300 W Ste 201, Provo, UT 84604"
       },
       {
-        "lat": 40.3734298,
-        "lng": -111.7398467,
+        "lat": 40.359893,
+        "lng": -111.739233,
         "address": "306 S 100 E, Pleasant Grove, UT 84062"
       },
       {
@@ -12475,8 +12475,8 @@
         "address": "9748 Oakbrook Dr Ste 1, Highland, UT 84003"
       },
       {
-        "lat": 40.105853,
-        "lng": -111.6565027,
+        "lat": 40.1060875,
+        "lng": -111.652845,
         "address": "109 E 300 S, Spanish Fork, UT 84660"
       },
       {
@@ -12591,8 +12591,8 @@
         "address": "1195 E Main St, Lehi, UT 84043"
       },
       {
-        "lat": 40.5803791,
-        "lng": -111.8537977,
+        "lat": 40.58108379999999,
+        "lng": -111.8604929,
         "address": "1065 E 9400 S, Sandy, UT 84094"
       }
     ]
@@ -12607,7 +12607,7 @@
     "locationRestriction": "Lehi",
     "deal": {
       "title": "2-4-1! Drink! Lehi Excludes Energy Drink Mixers",
-      "description": "Valid at: Lehi \u00e2\u20ac\u00a2 Excludes Energy Drink Mixers",
+      "description": "Valid at: Lehi â€¢ Excludes Energy Drink Mixers",
       "restrictions": "Excludes Energy Drink Mixers",
       "value": "2 for 1",
       "maxUses": 2,
@@ -12628,8 +12628,8 @@
         "address": "1195 E Main St, Lehi, UT 84043"
       },
       {
-        "lat": 40.5803791,
-        "lng": -111.8537977,
+        "lat": 40.58108379999999,
+        "lng": -111.8604929,
         "address": "1065 E 9400 S, Sandy, UT 84094"
       }
     ]
@@ -12904,33 +12904,33 @@
         "address": "2245 N University Pkwy, Provo, UT 84604"
       },
       {
-        "lat": 40.3512579,
-        "lng": -111.7641976,
+        "lat": 40.3516739,
+        "lng": -111.7638882,
         "address": "1051 S Valley Grove Way, Pleasant Grove, UT 84062"
       },
       {
-        "lat": 40.9214974,
-        "lng": -111.8753159,
+        "lat": 40.9211824,
+        "lng": -111.8792392,
         "address": "25 W Parrish Ln, Centerville, UT 84014"
       },
       {
-        "lat": 40.5567967,
-        "lng": -111.8392037,
+        "lat": 40.5591406,
+        "lng": -111.8517639,
         "address": "1373 E 10600 S, Sandy, UT 84092"
       },
       {
-        "lat": 40.7596198,
-        "lng": -111.886797,
+        "lat": 40.62403210000001,
+        "lng": -111.8362787,
         "address": "1936 E Fort Union Blvd, Salt Lake City, UT 84121"
       },
       {
-        "lat": 40.6385836,
-        "lng": -111.9698931,
+        "lat": 40.6389126,
+        "lng": -111.9757793,
         "address": "3544 W 6200 S Ste 101, Taylorsville, UT 84129"
       },
       {
-        "lat": 41.0601872,
-        "lng": -111.9767943,
+        "lat": 41.060299,
+        "lng": -111.958937,
         "address": "377 E Gentile St, Layton, UT 84041"
       }
     ]
@@ -12966,33 +12966,33 @@
         "address": "2245 N University Pkwy, Provo, UT 84604"
       },
       {
-        "lat": 40.3512579,
-        "lng": -111.7641976,
+        "lat": 40.3516739,
+        "lng": -111.7638882,
         "address": "1051 S Valley Grove Way, Pleasant Grove, UT 84062"
       },
       {
-        "lat": 40.9214974,
-        "lng": -111.8753159,
+        "lat": 40.9211824,
+        "lng": -111.8792392,
         "address": "25 W Parrish Ln, Centerville, UT 84014"
       },
       {
-        "lat": 40.5567967,
-        "lng": -111.8392037,
+        "lat": 40.5591406,
+        "lng": -111.8517639,
         "address": "1373 E 10600 S, Sandy, UT 84092"
       },
       {
-        "lat": 40.7596198,
-        "lng": -111.886797,
+        "lat": 40.62403210000001,
+        "lng": -111.8362787,
         "address": "1936 E Fort Union Blvd, Salt Lake City, UT 84121"
       },
       {
-        "lat": 40.6385836,
-        "lng": -111.9698931,
+        "lat": 40.6389126,
+        "lng": -111.9757793,
         "address": "3544 W 6200 S Ste 101, Taylorsville, UT 84129"
       },
       {
-        "lat": 41.0601872,
-        "lng": -111.9767943,
+        "lat": 41.060299,
+        "lng": -111.958937,
         "address": "377 E Gentile St, Layton, UT 84041"
       }
     ]
@@ -13028,33 +13028,33 @@
         "address": "2245 N University Pkwy, Provo, UT 84604"
       },
       {
-        "lat": 40.3512579,
-        "lng": -111.7641976,
+        "lat": 40.3516739,
+        "lng": -111.7638882,
         "address": "1051 S Valley Grove Way, Pleasant Grove, UT 84062"
       },
       {
-        "lat": 40.9214974,
-        "lng": -111.8753159,
+        "lat": 40.9211824,
+        "lng": -111.8792392,
         "address": "25 W Parrish Ln, Centerville, UT 84014"
       },
       {
-        "lat": 40.5567967,
-        "lng": -111.8392037,
+        "lat": 40.5591406,
+        "lng": -111.8517639,
         "address": "1373 E 10600 S, Sandy, UT 84092"
       },
       {
-        "lat": 40.7596198,
-        "lng": -111.886797,
+        "lat": 40.62403210000001,
+        "lng": -111.8362787,
         "address": "1936 E Fort Union Blvd, Salt Lake City, UT 84121"
       },
       {
-        "lat": 40.6385836,
-        "lng": -111.9698931,
+        "lat": 40.6389126,
+        "lng": -111.9757793,
         "address": "3544 W 6200 S Ste 101, Taylorsville, UT 84129"
       },
       {
-        "lat": 41.0601872,
-        "lng": -111.9767943,
+        "lat": 41.060299,
+        "lng": -111.958937,
         "address": "377 E Gentile St, Layton, UT 84041"
       }
     ]
@@ -13064,8 +13064,8 @@
     "name": "UVU Scoops",
     "category": "treats",
     "address": "800 W University Pkwy, Orem, UT 84058",
-    "lat": 40.2794106,
-    "lng": -111.7178868,
+    "lat": 40.2787626,
+    "lng": -111.7153739,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Single Scoop of Ice Cream!",
@@ -13085,8 +13085,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2794106,
-        "lng": -111.7178868,
+        "lat": 40.2787626,
+        "lng": -111.7153739,
         "address": "800 W University Pkwy, Orem, UT 84058"
       }
     ]
@@ -13122,8 +13122,8 @@
         "address": "1831 N State St, Provo, UT 84604"
       },
       {
-        "lat": 40.3775502,
-        "lng": -111.8123527,
+        "lat": 40.3782992,
+        "lng": -111.8121945,
         "address": "80 N W State St, American Fork, UT 84003"
       },
       {
@@ -13137,13 +13137,13 @@
         "address": "7612 Campus View Dr Ste 130, West Jordan, UT 84084"
       },
       {
-        "lat": 40.6207418,
-        "lng": -111.8726447,
+        "lat": 40.6239721,
+        "lng": -111.8605617,
         "address": "1142 E Fort Union Blvd, Midvale, UT 84047"
       },
       {
-        "lat": 40.9913124,
-        "lng": -111.9021596,
+        "lat": 40.9913625,
+        "lng": -111.8933382,
         "address": "1076 W Park Ln Ste 120, Farmington, UT 84025"
       }
     ]
@@ -13174,13 +13174,13 @@
     ],
     "locations": [
       {
-        "lat": 40.359896,
-        "lng": -111.7686103,
+        "lat": 40.3537694,
+        "lng": -111.7628738,
         "address": "863 S North County Blvd Ste D-E, Pleasant Grove, UT 84062"
       },
       {
-        "lat": 40.6061337,
-        "lng": -111.9395211,
+        "lat": 40.5881524,
+        "lng": -111.9407775,
         "address": "1822 W 9000 S, West Jordan, UT 84088"
       }
     ]
@@ -13254,8 +13254,8 @@
     "name": "Yonutz",
     "category": "treats",
     "address": "11078 S State St Ste 103, Sandy, UT 84070",
-    "lat": 40.5710454,
-    "lng": -111.8953815,
+    "lat": 40.5498967,
+    "lng": -111.8925871,
     "locationRestriction": "Saratoga Springs",
     "deal": {
       "title": "2-4-1! Half Dozen Donuts!",
@@ -13275,8 +13275,8 @@
     ],
     "locations": [
       {
-        "lat": 40.5710454,
-        "lng": -111.8953815,
+        "lat": 40.5498967,
+        "lng": -111.8925871,
         "address": "11078 S State St Ste 103, Sandy, UT 84070"
       }
     ]
@@ -13286,8 +13286,8 @@
     "name": "Yonutz",
     "category": "treats",
     "address": "11078 S State St Ste 103, Sandy, UT 84070",
-    "lat": 40.5710454,
-    "lng": -111.8953815,
+    "lat": 40.5498967,
+    "lng": -111.8925871,
     "locationRestriction": "Saratoga Springs",
     "deal": {
       "title": "2-4-1! Smashed or Simply Smashed Donut!",
@@ -13307,8 +13307,8 @@
     ],
     "locations": [
       {
-        "lat": 40.5710454,
-        "lng": -111.8953815,
+        "lat": 40.5498967,
+        "lng": -111.8925871,
         "address": "11078 S State St Ste 103, Sandy, UT 84070"
       }
     ]
@@ -13318,8 +13318,8 @@
     "name": "Yonutz",
     "category": "treats",
     "address": "11078 S State St Ste 103, Sandy, UT 84070",
-    "lat": 40.5710454,
-    "lng": -111.8953815,
+    "lat": 40.5498967,
+    "lng": -111.8925871,
     "locationRestriction": "Saratoga Springs",
     "deal": {
       "title": "2-4-1! Smashed Shake!",
@@ -13339,8 +13339,8 @@
     ],
     "locations": [
       {
-        "lat": 40.5710454,
-        "lng": -111.8953815,
+        "lat": 40.5498967,
+        "lng": -111.8925871,
         "address": "11078 S State St Ste 103, Sandy, UT 84070"
       }
     ]
@@ -13350,8 +13350,8 @@
     "name": "Yummy Ice Cream",
     "category": "treats",
     "address": "5406 W 11000 N, Highland, UT 84003",
-    "lat": 40.427176,
-    "lng": -111.7891709,
+    "lat": 40.4322396,
+    "lng": -111.7875095,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Hot Chocolate! FREE Arcades for Customers",
@@ -13371,8 +13371,8 @@
     ],
     "locations": [
       {
-        "lat": 40.427176,
-        "lng": -111.7891709,
+        "lat": 40.4322396,
+        "lng": -111.7875095,
         "address": "5406 W 11000 N, Highland, UT 84003"
       }
     ]
@@ -13382,8 +13382,8 @@
     "name": "Yummy Ice Cream",
     "category": "treats",
     "address": "5406 W 11000 N, Highland, UT 84003",
-    "lat": 40.427176,
-    "lng": -111.7891709,
+    "lat": 40.4322396,
+    "lng": -111.7875095,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Any Hot Food Item!",
@@ -13403,8 +13403,8 @@
     ],
     "locations": [
       {
-        "lat": 40.427176,
-        "lng": -111.7891709,
+        "lat": 40.4322396,
+        "lng": -111.7875095,
         "address": "5406 W 11000 N, Highland, UT 84003"
       }
     ]
@@ -13414,8 +13414,8 @@
     "name": "Yummy Ice Cream",
     "category": "treats",
     "address": "5406 W 11000 N, Highland, UT 84003",
-    "lat": 40.427176,
-    "lng": -111.7891709,
+    "lat": 40.4322396,
+    "lng": -111.7875095,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Waffle Cone & Ice Cream!",
@@ -13435,8 +13435,8 @@
     ],
     "locations": [
       {
-        "lat": 40.427176,
-        "lng": -111.7891709,
+        "lat": 40.4322396,
+        "lng": -111.7875095,
         "address": "5406 W 11000 N, Highland, UT 84003"
       }
     ]
@@ -13446,8 +13446,8 @@
     "name": "5 Star BBQ",
     "category": "sandwiches",
     "address": "70 N Geneva Rd, Orem, UT 84057",
-    "lat": 40.3083956,
-    "lng": -111.734113,
+    "lat": 40.298356,
+    "lng": -111.7334723,
     "locationRestriction": "",
     "deal": {
       "title": "Buy 1 Sandwich Get 1 FREE!",
@@ -13467,8 +13467,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3083956,
-        "lng": -111.734113,
+        "lat": 40.298356,
+        "lng": -111.7334723,
         "address": "70 N Geneva Rd, Orem, UT 84057"
       }
     ]
@@ -13504,8 +13504,8 @@
         "address": "910 State St, Orem, UT 84057"
       },
       {
-        "lat": 40.2951516,
-        "lng": -111.6941373,
+        "lat": 40.2762105,
+        "lng": -111.686526,
         "address": "1150 S State St, Orem, UT 84097"
       },
       {
@@ -13546,8 +13546,8 @@
         "address": "910 State St, Orem, UT 84057"
       },
       {
-        "lat": 40.2951516,
-        "lng": -111.6941373,
+        "lat": 40.2762105,
+        "lng": -111.686526,
         "address": "1150 S State St, Orem, UT 84097"
       },
       {
@@ -13562,8 +13562,8 @@
     "name": "Bobbys Burgers",
     "category": "sandwiches",
     "address": "575 E University Pkwy, Orem, UT 84097",
-    "lat": 40.2753836,
-    "lng": -111.6808629,
+    "lat": 40.2748122,
+    "lng": -111.6802325,
     "locationRestriction": "",
     "deal": {
       "title": "Buy Any Burger or Sandwich Get 1 FREE!",
@@ -13583,8 +13583,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2753836,
-        "lng": -111.6808629,
+        "lat": 40.2748122,
+        "lng": -111.6802325,
         "address": "575 E University Pkwy, Orem, UT 84097"
       }
     ]
@@ -13594,8 +13594,8 @@
     "name": "Bobbys Burgers",
     "category": "sandwiches",
     "address": "575 E University Pkwy, Orem, UT 84097",
-    "lat": 40.2753836,
-    "lng": -111.6808629,
+    "lat": 40.2748122,
+    "lng": -111.6802325,
     "locationRestriction": "",
     "deal": {
       "title": "Buy Any Burger and Side Get a Burger FREE!",
@@ -13615,8 +13615,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2753836,
-        "lng": -111.6808629,
+        "lat": 40.2748122,
+        "lng": -111.6802325,
         "address": "575 E University Pkwy, Orem, UT 84097"
       }
     ]
@@ -13684,8 +13684,8 @@
         "address": "1331 N State St, Orem, UT 84057"
       },
       {
-        "lat": 40.3893751,
-        "lng": -111.8270995,
+        "lat": 40.43147829999999,
+        "lng": -111.8954016,
         "address": "3536 N Maple Loop Dr, Lehi, UT 84043"
       },
       {
@@ -13726,8 +13726,8 @@
         "address": "1331 N State St, Orem, UT 84057"
       },
       {
-        "lat": 40.3893751,
-        "lng": -111.8270995,
+        "lat": 40.43147829999999,
+        "lng": -111.8954016,
         "address": "3536 N Maple Loop Dr, Lehi, UT 84043"
       },
       {
@@ -13768,8 +13768,8 @@
         "address": "1331 N State St, Orem, UT 84057"
       },
       {
-        "lat": 40.3893751,
-        "lng": -111.8270995,
+        "lat": 40.43147829999999,
+        "lng": -111.8954016,
         "address": "3536 N Maple Loop Dr, Lehi, UT 84043"
       },
       {
@@ -13821,8 +13821,8 @@
     "name": "Culver's",
     "category": "sandwiches",
     "address": "1211 W 800 N, Orem, UT 84057",
-    "lat": 40.311758,
-    "lng": -111.730387,
+    "lat": 40.3113037,
+    "lng": -111.72404,
     "locationRestriction": "All Northern Utah",
     "deal": {
       "title": "2-4-1! Culver's Deluxe! All Northern Utah Locations",
@@ -13842,8 +13842,8 @@
     ],
     "locations": [
       {
-        "lat": 40.311758,
-        "lng": -111.730387,
+        "lat": 40.3113037,
+        "lng": -111.72404,
         "address": "1211 W 800 N, Orem, UT 84057"
       },
       {
@@ -13879,13 +13879,13 @@
     ],
     "locations": [
       {
-        "lat": 40.3260157,
-        "lng": -111.7075963,
+        "lat": 40.3120154,
+        "lng": -111.701522,
         "address": "800 N State St, Orem, UT 84057"
       },
       {
-        "lat": 40.2829078,
-        "lng": -111.7324895,
+        "lat": 40.2975578,
+        "lng": -111.7345052,
         "address": "49 N Geneva Rd, Vineyard, UT 84059"
       },
       {
@@ -13894,8 +13894,8 @@
         "address": "4045 E Pony Express Pkwy, Eagle Mountain, UT 84005"
       },
       {
-        "lat": 39.9755101,
-        "lng": -111.7852106,
+        "lat": 39.99789699999999,
+        "lng": -111.8226412,
         "address": "74 N State Rd 198, Santaquin, UT 84655"
       }
     ]
@@ -13926,13 +13926,13 @@
     ],
     "locations": [
       {
-        "lat": 40.3260157,
-        "lng": -111.7075963,
+        "lat": 40.3120154,
+        "lng": -111.701522,
         "address": "800 N State St, Orem, UT 84057"
       },
       {
-        "lat": 40.2829078,
-        "lng": -111.7324895,
+        "lat": 40.2975578,
+        "lng": -111.7345052,
         "address": "49 N Geneva Rd, Vineyard, UT 84059"
       },
       {
@@ -13941,8 +13941,8 @@
         "address": "4045 E Pony Express Pkwy, Eagle Mountain, UT 84005"
       },
       {
-        "lat": 39.9755101,
-        "lng": -111.7852106,
+        "lat": 39.99789699999999,
+        "lng": -111.8226412,
         "address": "74 N State Rd 198, Santaquin, UT 84655"
       }
     ]
@@ -13973,13 +13973,13 @@
     ],
     "locations": [
       {
-        "lat": 40.3260157,
-        "lng": -111.7075963,
+        "lat": 40.3120154,
+        "lng": -111.701522,
         "address": "800 N State St, Orem, UT 84057"
       },
       {
-        "lat": 40.2829078,
-        "lng": -111.7324895,
+        "lat": 40.2975578,
+        "lng": -111.7345052,
         "address": "49 N Geneva Rd, Vineyard, UT 84059"
       },
       {
@@ -13988,8 +13988,8 @@
         "address": "4045 E Pony Express Pkwy, Eagle Mountain, UT 84005"
       },
       {
-        "lat": 39.9755101,
-        "lng": -111.7852106,
+        "lat": 39.99789699999999,
+        "lng": -111.8226412,
         "address": "74 N State Rd 198, Santaquin, UT 84655"
       }
     ]
@@ -14004,7 +14004,7 @@
     "locationRestriction": "Saratoga & Eagle Mtn",
     "deal": {
       "title": "2-4-1! Hot Sandwich! Carryout Only",
-      "description": "Valid at: Saratoga & Eagle Mtn \u00e2\u20ac\u00a2 Carryout Only",
+      "description": "Valid at: Saratoga & Eagle Mtn â€¢ Carryout Only",
       "restrictions": "Carryout Only",
       "value": "2 for 1",
       "maxUses": 3,
@@ -14062,13 +14062,13 @@
     ],
     "locations": [
       {
-        "lat": 40.2997813,
-        "lng": -111.6960881,
+        "lat": 40.2774891,
+        "lng": -111.687199,
         "address": "1066 S State St, Orem, UT 84097"
       },
       {
-        "lat": 40.3768064,
-        "lng": -111.7959146,
+        "lat": 40.3703126,
+        "lng": -111.7722845,
         "address": "936 E State Rd, American Fork, UT 84003"
       }
     ]
@@ -14099,13 +14099,13 @@
     ],
     "locations": [
       {
-        "lat": 40.2997813,
-        "lng": -111.6960881,
+        "lat": 40.2774891,
+        "lng": -111.687199,
         "address": "1066 S State St, Orem, UT 84097"
       },
       {
-        "lat": 40.3768064,
-        "lng": -111.7959146,
+        "lat": 40.3703126,
+        "lng": -111.7722845,
         "address": "936 E State Rd, American Fork, UT 84003"
       }
     ]
@@ -14173,8 +14173,8 @@
         "address": "384 W University Pkwy, Orem, UT 84058"
       },
       {
-        "lat": 40.7596198,
-        "lng": -111.886797,
+        "lat": 40.6662383,
+        "lng": -111.8369607,
         "address": "1915 E Murray Holladay Rd, Salt Lake City, UT 84117"
       }
     ]
@@ -14216,8 +14216,8 @@
     "name": "Jack in the Box",
     "category": "sandwiches",
     "address": "1303 N Redwood Rd, Saratoga Springs, UT 84045",
-    "lat": 40.3868039,
-    "lng": -111.916473,
+    "lat": 40.38582299999999,
+    "lng": -111.917014,
     "locationRestriction": "All Utah County",
     "deal": {
       "title": "Buy 1 Combo Get 1 Combo FREE! All Utah County",
@@ -14237,8 +14237,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3868039,
-        "lng": -111.916473,
+        "lat": 40.38582299999999,
+        "lng": -111.917014,
         "address": "1303 N Redwood Rd, Saratoga Springs, UT 84045"
       }
     ]
@@ -14248,8 +14248,8 @@
     "name": "Jamba Juice",
     "category": "sandwiches",
     "address": "1774 N University Pkwy Ste 60, Provo, UT 84604",
-    "lat": 40.2794106,
-    "lng": -111.7178868,
+    "lat": 40.2787541,
+    "lng": -111.7153714,
     "locationRestriction": "Provo (University PKWY) UVU Campus Draper & WJ",
     "deal": {
       "title": "2-4-1! Sandwich or Wrap!",
@@ -14269,13 +14269,13 @@
     ],
     "locations": [
       {
-        "lat": 40.2481866,
-        "lng": -111.654986,
+        "lat": 40.25817,
+        "lng": -111.6610672,
         "address": "1774 N University Pkwy Ste 60, Provo, UT 84604"
       },
       {
-        "lat": 40.2794106,
-        "lng": -111.7178868,
+        "lat": 40.2787541,
+        "lng": -111.7153714,
         "address": "800 W University Pkwy (UVU Campus), Orem, UT 84058"
       },
       {
@@ -14284,8 +14284,8 @@
         "address": "148 E 12300 S, Draper, UT 84020"
       },
       {
-        "lat": 40.621287,
-        "lng": -111.9821788,
+        "lat": 40.6111046,
+        "lng": -111.9838365,
         "address": "7689 S Jordan Landing Blvd, West Jordan, UT 84084"
       }
     ]
@@ -14316,13 +14316,13 @@
     ],
     "locations": [
       {
-        "lat": 40.2633761,
-        "lng": -111.6570615,
+        "lat": 40.2638438,
+        "lng": -111.6656533,
         "address": "396 W 2230 N, Provo, UT 84604"
       },
       {
-        "lat": 40.3768064,
-        "lng": -111.7959146,
+        "lat": 40.3730082,
+        "lng": -111.7831251,
         "address": "580 E State Rd, American Fork, UT 84003"
       },
       {
@@ -14336,8 +14336,8 @@
         "address": "10660 S River Front Pkwy, South Jordan, UT 84095"
       },
       {
-        "lat": 40.5273644,
-        "lng": -112.0241671,
+        "lat": 40.5354087,
+        "lng": -112.0155119,
         "address": "5251 Anthem Park Blvd, Herriman, UT 84096"
       }
     ]
@@ -14347,8 +14347,8 @@
     "name": "Jersey Mikes",
     "category": "sandwiches",
     "address": "426 W Cougar Blvd Ste 6, Provo, UT 84604",
-    "lat": 40.2506788,
-    "lng": -111.6652227,
+    "lat": 40.250948,
+    "lng": -111.6660972,
     "locationRestriction": "All Ut Cnty excl. EM and SF",
     "deal": {
       "title": "Buy 1 Reg. Sub Get a Reg. Sub FREE! All Ut Cnty excl. EM and SF",
@@ -14368,13 +14368,13 @@
     ],
     "locations": [
       {
-        "lat": 40.2750201,
-        "lng": -111.6851933,
+        "lat": 40.295457,
+        "lng": -111.6936902,
         "address": "73 S State St, Orem, UT 84058"
       },
       {
-        "lat": 40.2506788,
-        "lng": -111.6652227,
+        "lat": 40.250948,
+        "lng": -111.6660972,
         "address": "426 W Cougar Blvd Ste 6, Provo, UT 84604"
       },
       {
@@ -14394,8 +14394,8 @@
     "name": "Jersey Mikes",
     "category": "sandwiches",
     "address": "426 W Cougar Blvd Ste 6, Provo, UT 84604",
-    "lat": 40.2506788,
-    "lng": -111.6652227,
+    "lat": 40.250948,
+    "lng": -111.6660972,
     "locationRestriction": "All Ut Cnty excl. EM & SF",
     "deal": {
       "title": "Buy Sub Get Chips and Reg. Size Drink FREE! All Ut Cnty excl. EM & SF",
@@ -14415,13 +14415,13 @@
     ],
     "locations": [
       {
-        "lat": 40.2750201,
-        "lng": -111.6851933,
+        "lat": 40.295457,
+        "lng": -111.6936902,
         "address": "73 S State St, Orem, UT 84058"
       },
       {
-        "lat": 40.2506788,
-        "lng": -111.6652227,
+        "lat": 40.250948,
+        "lng": -111.6660972,
         "address": "426 W Cougar Blvd Ste 6, Provo, UT 84604"
       },
       {
@@ -14505,8 +14505,8 @@
     "name": "Marco's Pizza",
     "category": "sandwiches",
     "address": "82 N Highland Dr, Santaquin, UT 84655",
-    "lat": 39.9547616,
-    "lng": -111.7980151,
+    "lat": 39.9768388,
+    "lng": -111.7691755,
     "locationRestriction": "Santaquin Only",
     "deal": {
       "title": "2-4-1! Toasted Sub!",
@@ -14526,8 +14526,8 @@
     ],
     "locations": [
       {
-        "lat": 39.9547616,
-        "lng": -111.7980151,
+        "lat": 39.9768388,
+        "lng": -111.7691755,
         "address": "82 N Highland Dr, Santaquin, UT 84655"
       }
     ]
@@ -14568,8 +14568,8 @@
         "address": "1225 S University Ave, Provo, UT 84601"
       },
       {
-        "lat": 40.3119892,
-        "lng": -111.7217513,
+        "lat": 40.3124972,
+        "lng": -111.7226212,
         "address": "1140 W 800 N, Orem, UT 84057"
       },
       {
@@ -14578,13 +14578,13 @@
         "address": "1611 N State St, Orem, UT 84057"
       },
       {
-        "lat": 40.3548874,
-        "lng": -111.7361532,
+        "lat": 40.374574,
+        "lng": -111.7904402,
         "address": "312 E State St, Pleasant Grove, UT 84062"
       },
       {
-        "lat": 40.3768064,
-        "lng": -111.7959146,
+        "lat": 40.3739867,
+        "lng": -111.7875427,
         "address": "406 E State Rd, American Fork, UT 84003"
       },
       {
@@ -14630,8 +14630,8 @@
         "address": "1225 S University Ave, Provo, UT 84601"
       },
       {
-        "lat": 40.3119892,
-        "lng": -111.7217513,
+        "lat": 40.3124972,
+        "lng": -111.7226212,
         "address": "1140 W 800 N, Orem, UT 84057"
       },
       {
@@ -14640,13 +14640,13 @@
         "address": "1611 N State St, Orem, UT 84057"
       },
       {
-        "lat": 40.3548874,
-        "lng": -111.7361532,
+        "lat": 40.374574,
+        "lng": -111.7904402,
         "address": "312 E State St, Pleasant Grove, UT 84062"
       },
       {
-        "lat": 40.3768064,
-        "lng": -111.7959146,
+        "lat": 40.3739867,
+        "lng": -111.7875427,
         "address": "406 E State Rd, American Fork, UT 84003"
       },
       {
@@ -14692,8 +14692,8 @@
         "address": "1225 S University Ave, Provo, UT 84601"
       },
       {
-        "lat": 40.3119892,
-        "lng": -111.7217513,
+        "lat": 40.3124972,
+        "lng": -111.7226212,
         "address": "1140 W 800 N, Orem, UT 84057"
       },
       {
@@ -14702,13 +14702,13 @@
         "address": "1611 N State St, Orem, UT 84057"
       },
       {
-        "lat": 40.3548874,
-        "lng": -111.7361532,
+        "lat": 40.374574,
+        "lng": -111.7904402,
         "address": "312 E State St, Pleasant Grove, UT 84062"
       },
       {
-        "lat": 40.3768064,
-        "lng": -111.7959146,
+        "lat": 40.3739867,
+        "lng": -111.7875427,
         "address": "406 E State Rd, American Fork, UT 84003"
       },
       {
@@ -14744,18 +14744,18 @@
     ],
     "locations": [
       {
-        "lat": 40.359896,
-        "lng": -111.7686103,
+        "lat": 40.3536849,
+        "lng": -111.762916,
         "address": "863 S North County Blvd, Pleasant Grove, UT 84062"
       },
       {
-        "lat": 40.41223,
-        "lng": -111.77303,
+        "lat": 40.4309184,
+        "lng": -111.8952864,
         "address": "2851 W Club House Dr, Lehi, UT 84043"
       },
       {
-        "lat": 41.078145,
-        "lng": -111.976256,
+        "lat": 41.0785409,
+        "lng": -111.9774575,
         "address": "1201 N Hill Field Rd, Layton, UT 84041"
       }
     ]
@@ -14791,8 +14791,8 @@
         "address": "62 W 1230 N Ste 105, Provo, UT 84604"
       },
       {
-        "lat": 40.5710454,
-        "lng": -111.8953815,
+        "lat": 40.5750267,
+        "lng": -111.8912931,
         "address": "9710 S State St Ste 101, Sandy, UT 84070"
       },
       {
@@ -14833,8 +14833,8 @@
         "address": "62 W 1230 N Ste 105, Provo, UT 84604"
       },
       {
-        "lat": 40.5710454,
-        "lng": -111.8953815,
+        "lat": 40.5750267,
+        "lng": -111.8912931,
         "address": "9710 S State St Ste 101, Sandy, UT 84070"
       },
       {
@@ -14875,8 +14875,8 @@
         "address": "62 W 1230 N Ste 105, Provo, UT 84604"
       },
       {
-        "lat": 40.5710454,
-        "lng": -111.8953815,
+        "lat": 40.5750267,
+        "lng": -111.8912931,
         "address": "9710 S State St Ste 101, Sandy, UT 84070"
       },
       {
@@ -14891,8 +14891,8 @@
     "name": "Onoh's Malasada Co.",
     "category": "sandwiches",
     "address": "1043 S Valley Grove Way Ste A, Pleasant Grove, UT 84062",
-    "lat": 40.3512579,
-    "lng": -111.7641976,
+    "lat": 40.351823,
+    "lng": -111.7645863,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Any Sandwich!",
@@ -14912,8 +14912,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3512579,
-        "lng": -111.7641976,
+        "lat": 40.351823,
+        "lng": -111.7645863,
         "address": "1043 S Valley Grove Way Ste A, Pleasant Grove, UT 84062"
       }
     ]
@@ -15066,8 +15066,8 @@
     "name": "Tommy's Burgers",
     "category": "sandwiches",
     "address": "401 W 100 N, Provo, UT 84601",
-    "lat": 40.2351493,
-    "lng": -111.6743122,
+    "lat": 40.2349858,
+    "lng": -111.6658596,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Burger Combo!",
@@ -15087,8 +15087,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2351493,
-        "lng": -111.6743122,
+        "lat": 40.2349858,
+        "lng": -111.6658596,
         "address": "401 W 100 N, Provo, UT 84601"
       }
     ]
@@ -15098,8 +15098,8 @@
     "name": "Tommy's Burgers",
     "category": "sandwiches",
     "address": "401 W 100 N, Provo, UT 84601",
-    "lat": 40.2351493,
-    "lng": -111.6743122,
+    "lat": 40.2349858,
+    "lng": -111.6658596,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Hot Dog Combo!",
@@ -15119,8 +15119,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2351493,
-        "lng": -111.6743122,
+        "lat": 40.2349858,
+        "lng": -111.6658596,
         "address": "401 W 100 N, Provo, UT 84601"
       }
     ]
@@ -15151,13 +15151,13 @@
     ],
     "locations": [
       {
-        "lat": 40.359896,
-        "lng": -111.7686103,
+        "lat": 40.3537694,
+        "lng": -111.7628738,
         "address": "863 S North County Blvd Ste D-E, Pleasant Grove, UT 84062"
       },
       {
-        "lat": 40.6061337,
-        "lng": -111.9395211,
+        "lat": 40.5881524,
+        "lng": -111.9407775,
         "address": "1822 W 9000 S, West Jordan, UT 84088"
       }
     ]
@@ -15188,13 +15188,13 @@
     ],
     "locations": [
       {
-        "lat": 40.359896,
-        "lng": -111.7686103,
+        "lat": 40.3537694,
+        "lng": -111.7628738,
         "address": "863 S North County Blvd Ste D-E, Pleasant Grove, UT 84062"
       },
       {
-        "lat": 40.6061337,
-        "lng": -111.9395211,
+        "lat": 40.5881524,
+        "lng": -111.9407775,
         "address": "1822 W 9000 S, West Jordan, UT 84088"
       }
     ]
@@ -15204,8 +15204,8 @@
     "name": "Wendy's",
     "category": "sandwiches",
     "address": "1444 S State St, Orem, UT 84097",
-    "lat": 40.2997813,
-    "lng": -111.6960881,
+    "lat": 40.2708717,
+    "lng": -111.6839879,
     "locationRestriction": "Provo 122 E 1300 N Orem Center St",
     "deal": {
       "title": "FREE! Small Frosty w/ Any Purchase! Provo 122 E 1300 N Orem Center St N. Orem AF Highland Saratoga Traverse Mtn & Participating Locations",
@@ -15225,13 +15225,13 @@
     ],
     "locations": [
       {
-        "lat": 40.2997813,
-        "lng": -111.6960881,
+        "lat": 40.2708717,
+        "lng": -111.6839879,
         "address": "1444 S State St, Orem, UT 84097"
       },
       {
-        "lat": 40.2794106,
-        "lng": -111.7178868,
+        "lat": 40.2787626,
+        "lng": -111.7153739,
         "address": "800 W University Pkwy, Orem, UT 84058"
       },
       {
@@ -15240,23 +15240,23 @@
         "address": "215 W Center St, Orem, UT 84058"
       },
       {
-        "lat": 40.2966929,
-        "lng": -111.7006966,
+        "lat": 40.3154051,
+        "lng": -111.7035876,
         "address": "997 N State St, Orem, UT 84057"
       },
       {
-        "lat": 40.387834,
-        "lng": -111.824327,
+        "lat": 40.3743255,
+        "lng": -111.7889343,
         "address": "368 E State St, American Fork, UT 84003"
       },
       {
-        "lat": 40.3836801,
-        "lng": -111.8349413,
+        "lat": 40.3877904,
+        "lng": -111.83506,
         "address": "47 S 850 E, Lehi, UT 84043"
       },
       {
-        "lat": 40.1556828,
-        "lng": -111.6109588,
+        "lat": 40.1829275,
+        "lng": -111.6099439,
         "address": "1182 N Main St, Springville, UT 84663"
       },
       {
@@ -15276,8 +15276,8 @@
     "name": "Wendy's",
     "category": "sandwiches",
     "address": "1444 S State St, Orem, UT 84097",
-    "lat": 40.2997813,
-    "lng": -111.6960881,
+    "lat": 40.2708717,
+    "lng": -111.6839879,
     "locationRestriction": "Same Locations",
     "deal": {
       "title": "Buy a Dave's Single or Spicy Chicken Get One FREE! Same Locations",
@@ -15297,13 +15297,13 @@
     ],
     "locations": [
       {
-        "lat": 40.2997813,
-        "lng": -111.6960881,
+        "lat": 40.2708717,
+        "lng": -111.6839879,
         "address": "1444 S State St, Orem, UT 84097"
       },
       {
-        "lat": 40.2794106,
-        "lng": -111.7178868,
+        "lat": 40.2787626,
+        "lng": -111.7153739,
         "address": "800 W University Pkwy, Orem, UT 84058"
       },
       {
@@ -15312,23 +15312,23 @@
         "address": "215 W Center St, Orem, UT 84058"
       },
       {
-        "lat": 40.2966929,
-        "lng": -111.7006966,
+        "lat": 40.3154051,
+        "lng": -111.7035876,
         "address": "997 N State St, Orem, UT 84057"
       },
       {
-        "lat": 40.387834,
-        "lng": -111.824327,
+        "lat": 40.3743255,
+        "lng": -111.7889343,
         "address": "368 E State St, American Fork, UT 84003"
       },
       {
-        "lat": 40.3836801,
-        "lng": -111.8349413,
+        "lat": 40.3877904,
+        "lng": -111.83506,
         "address": "47 S 850 E, Lehi, UT 84043"
       },
       {
-        "lat": 40.1556828,
-        "lng": -111.6109588,
+        "lat": 40.1829275,
+        "lng": -111.6099439,
         "address": "1182 N Main St, Springville, UT 84663"
       },
       {
@@ -15369,8 +15369,8 @@
     ],
     "locations": [
       {
-        "lat": 40.1590189,
-        "lng": -111.6106522,
+        "lat": 40.1736285,
+        "lng": -111.6102475,
         "address": "520 N Main St, Springville, UT 84663"
       }
     ]
