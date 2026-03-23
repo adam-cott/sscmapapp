@@ -4,7 +4,7 @@ import MarkerClusterGroup from 'react-leaflet-cluster'
 import L from 'leaflet'
 import BusinessMarker from './BusinessMarker'
 import MapLegend from './MapLegend'
-import { getDealUsageState } from '../../utils/dealHelpers'
+import { getDealUsageState, getPrimaryCategory } from '../../utils/dealHelpers'
 import allDealsRaw from '../../data/deals.json'
 import 'react-leaflet-cluster/dist/assets/MarkerCluster.css'
 import 'react-leaflet-cluster/dist/assets/MarkerCluster.Default.css'
@@ -122,6 +122,7 @@ export default function MapView({ deals, selectedDeal, onSelectDeal, onSelectLoc
               key={key}
               loc={loc}
               items={items}
+              primaryCategory={getPrimaryCategory(items.map(i => i.deal))}
               isSelected={items.some(i => i.deal.id === selectedDeal?.id)}
               onSelectDeal={onSelectDeal}
               onSelectLocation={onSelectLocation}

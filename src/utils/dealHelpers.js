@@ -42,6 +42,19 @@ export function getDealUsageState(deal, usageMap) {
   return { usedCount, remaining, status }
 }
 
+const TIEBREAKER = ['restaurants', 'sandwiches', 'pizza', 'treats', 'free', 'entertainment', 'retail']
+
+export function getPrimaryCategory(deals) {
+  const counts = {}
+  for (const deal of deals) {
+    counts[deal.category] = (counts[deal.category] || 0) + 1
+  }
+  const maxCount = Math.max(...Object.values(counts))
+  const tied = Object.keys(counts).filter(k => counts[k] === maxCount)
+  if (tied.length === 1) return tied[0]
+  return TIEBREAKER.find(t => tied.includes(t)) ?? tied[0]
+}
+
 /**
  * Filter deals by active categories and search query.
  */

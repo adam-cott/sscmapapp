@@ -4,19 +4,19 @@ import L from 'leaflet'
 import { createMarkerIcon } from '../../utils/markerIcons'
 import { CATEGORY_COLORS, CATEGORY_LABELS, CATEGORY_LIGHT } from '../../utils/categoryColors'
 
-const BusinessMarker = memo(function BusinessMarker({ loc, items, isSelected, onSelectDeal, onSelectLocation }) {
+const BusinessMarker = memo(function BusinessMarker({ loc, items, primaryCategory, isSelected, onSelectDeal, onSelectLocation }) {
   const isSingle = items.length === 1
   const { deal, usageState } = items[0]
 
-  const catColor = CATEGORY_COLORS[deal.category] || '#64748b'
-  const catLight = CATEGORY_LIGHT[deal.category] || '#f8fafc'
+  const catColor = CATEGORY_COLORS[primaryCategory] || '#64748b'
+  const catLight = CATEGORY_LIGHT[primaryCategory] || '#f8fafc'
   const remaining = usageState.remaining
   const isExhausted = usageState.status === 'exhausted'
   const isUnlimited = deal.deal.maxUses === null
 
   const icon = useMemo(() => {
     if (isSingle) {
-      return createMarkerIcon(deal.category, usageState.status, isSelected)
+      return createMarkerIcon(primaryCategory, usageState.status, isSelected)
     }
     const size = isSelected ? 38 : 30
     const color = isExhausted ? '#94a3b8' : catColor
@@ -27,7 +27,7 @@ const BusinessMarker = memo(function BusinessMarker({ loc, items, isSelected, on
       iconAnchor: [size / 2, size / 2],
       popupAnchor: [0, -(size / 2 + 6)],
     })
-  }, [isSingle, deal.category, usageState.status, isSelected, items.length, isExhausted, catColor])
+  }, [isSingle, primaryCategory, usageState.status, isSelected, items.length, isExhausted, catColor])
 
   const handleClick = useCallback(() => {
     if (isSingle) {

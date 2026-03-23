@@ -110,6 +110,13 @@ starvingstudentcardmapapp/
 ├── patch_coords.py                 # One-off hardcoded coordinate patches
 ├── add_locations.py                # Geocodes ALL CSV locations; adds locations[] to deals
 │
+│   # Node.js data scripts (one-time runs to improve deals.json)
+├── scripts/
+│   ├── regeocode.js                # Re-geocodes all locations via Google Maps Geocoding API; patches coords >50m off
+│   ├── find-missing-locations.js   # Finds missing chain locations via Google Places API; writes missing-locations-output.json
+│   ├── add-missing-locations.js    # Reads missing-locations-output.json; adds HIGH confidence locations within 90km to deals.json
+│   └── missing-locations-output.json  # Output from find-missing-locations.js (gitignored)
+│
 │   # Reference data
 ├── starving_student_businesses.csv # Authoritative: all business locations (via Downloads)
 ├── phone_website_needed.csv        # 199 businesses awaiting phone/website data entry
@@ -162,7 +169,7 @@ Every entry in `src/data/deals.json` represents **one deal offer** from the card
 - `contact.phone` / `contact.website` — currently null; awaiting `phone_website_needed.csv` fill-in
 - Multiple deals can share the same business name (e.g., Wendy's has 2 separate deals)
 
-**Stats:** 418 deals · 199 unique businesses · 819 map pins · 0 null coordinates
+**Stats:** 418 deals · 199 unique businesses · 1,400+ map pins · 0 null coordinates
 
 ---
 
@@ -282,7 +289,7 @@ To install on iPhone: open in Safari → Share → Add to Home Screen. On Androi
 
 ## Performance Notes
 
-With 819 map pins, keeping pan smooth on Android Chrome requires avoiding unnecessary React re-renders:
+With 1,400+ map pins, keeping pan smooth on Android Chrome requires avoiding unnecessary React re-renders:
 
 - **`BusinessMarker` is wrapped in `React.memo`** — only re-renders when its own props change (e.g., `isSelected` toggles). Without this, opening a modal would re-render all 819 markers.
 - **Stable callbacks in `App.jsx`** — `handleSelectDeal`, `handleSelectLocation`, `handleSelectFromPicker` are wrapped in `useCallback(fn, [])` so their references never change between renders.
@@ -332,6 +339,12 @@ This is the authoritative business/address database (376 rows). Keep it. All geo
 
 The modal and deal card already have rendering logic for `deal.contact.phone` (renders as `tel:` link) and `deal.contact.website` (renders as external link). Populating the data is the only remaining step.
 
+### Category fixes
+A handful of businesses are miscategorized in deals.json. Carl's Jr, Jack in the Box, Bobbys Burgers, and Wayback Burgers sit in `treats` but should be `restaurants` or `sandwiches`. Fix with a targeted Python script patching the `category` field on specific deals.
+
+### Needs review locations
+`scripts/missing-locations-output.json` has 20 locations flagged as REVIEW (name + state passed, Google category type didn't match expected). Most are real missing locations (Back Nine Golf, Color Me Mine, The Pickr, Zipline Utah, Chiropractic Access). Go through manually and add the valid ones.
+
 ### Address Google Maps link
 Already implemented. The address row in `DealModal.jsx` links to:
 ```
@@ -358,6 +371,20 @@ python3 add_locations.py
 
 # Commit and push (Vercel auto-deploys)
 git add -A && git commit -m "..." && git push
+```
+
+```powershell
+# PowerShell: re-geocode wrong pins via Google Maps Geocoding API (dry run first)
+$env:GOOGLE_MAPS_API_KEY="your_key"; node scripts/regeocode.js --dry-run
+$env:GOOGLE_MAPS_API_KEY="your_key"; node scripts/regeocode.js
+
+# PowerShell: find missing chain locations via Google Places API (dry run first)
+$env:GOOGLE_MAPS_API_KEY="your_key"; node scripts/find-missing-locations.js --dry-run
+$env:GOOGLE_MAPS_API_KEY="your_key"; node scripts/find-missing-locations.js
+
+# PowerShell: add high-confidence missing locations within 90km to deals.json
+node scripts/add-missing-locations.js --dry-run
+node scripts/add-missing-locations.js
 ```
 
 ---
