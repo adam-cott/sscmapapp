@@ -4353,6 +4353,16 @@
         "lat": 40.1240357,
         "lng": -111.63438649999999,
         "address": "1168 E 1130 N, Spanish Fork, UT 84660, USA"
+      },
+      {
+        "lat": 40.2809102,
+        "lng": -111.6785329,
+        "address": "865 S 700 E, Orem, UT 84097, USA"
+      },
+      {
+        "lat": 40.3953525,
+        "lng": -111.91810249999999,
+        "address": "1763 N Redwood Rd, Saratoga Springs, UT 84043, USA"
       }
     ]
   },
@@ -4646,6 +4656,16 @@
         "lat": 40.6197484,
         "lng": -111.97996979999999,
         "address": "3751 W Center Park Dr Suite 120, West Jordan, UT 84084, USA"
+      },
+      {
+        "lat": 40.5579974,
+        "lng": -111.8920515,
+        "address": "51 W 10600 S, Sandy, UT 84070, USA"
+      },
+      {
+        "lat": 40.7191451,
+        "lng": -111.81149339999999,
+        "address": "2725 E Parleys Way Suite 100, Salt Lake City, UT 84109, USA"
       }
     ]
   },
@@ -5026,6 +5046,11 @@
         "lat": 40.3834236,
         "lng": -111.8327824,
         "address": ""
+      },
+      {
+        "lat": 40.3564656,
+        "lng": -111.7651648,
+        "address": "593 S Evermore Ln, Pleasant Grove, UT 84062, USA"
       }
     ]
   },
@@ -5058,6 +5083,11 @@
         "lat": 40.3834236,
         "lng": -111.8327824,
         "address": ""
+      },
+      {
+        "lat": 40.3564656,
+        "lng": -111.7651648,
+        "address": "593 S Evermore Ln, Pleasant Grove, UT 84062, USA"
       }
     ]
   },
@@ -5883,6 +5913,11 @@
         "lat": 40.6103136,
         "lng": -111.9100001,
         "address": "695 W Center St, Midvale, UT 84047"
+      },
+      {
+        "lat": 40.692849599999995,
+        "lng": -111.88795449999999,
+        "address": "3601 S State St, South Salt Lake, UT 84115, USA"
       }
     ]
   },
@@ -5915,6 +5950,11 @@
         "lat": 40.3234299,
         "lng": -111.7302774,
         "address": "1439 N 1380 W Bldg 2 Ste 100, Orem, UT 84057"
+      },
+      {
+        "lat": 40.7054548,
+        "lng": -112.0748136,
+        "address": "3002 Melanie Ann Ct, Magna, UT 84044, USA"
       }
     ]
   },
@@ -6144,7 +6184,7 @@
   },
   {
     "id": "entertainment-150",
-    "name": "The Pickr",
+    "name": "The Picklr",
     "category": "entertainment",
     "address": "559 S Deseret Dr, Kaysville, UT 84037",
     "lat": 41.0260981,
@@ -6176,6 +6216,21 @@
         "lat": 40.6179868,
         "lng": -111.9792666,
         "address": "7552 S Plaza Center Dr, West Jordan, UT 84084"
+      },
+      {
+        "lat": 40.3729753,
+        "lng": -111.8892777,
+        "address": "629 Saratoga Rd Bldg 2, Saratoga Springs, UT 84043, USA"
+      },
+      {
+        "lat": 40.4621124,
+        "lng": -111.94853970000001,
+        "address": "15892 S Rockwell Park Cove, Herriman, UT 84065, USA"
+      },
+      {
+        "lat": 40.593690699999996,
+        "lng": -111.83049539999999,
+        "address": "8645 Highland Dr, Sandy, UT 84093, USA"
       }
     ]
   },
@@ -6373,6 +6428,11 @@
         "lat": 40.2330195,
         "lng": -111.6634834,
         "address": "268 W 100 S, Provo, UT 84601"
+      },
+      {
+        "lat": 40.3615831,
+        "lng": -111.748836,
+        "address": "527 W State St Suite #101, Pleasant Grove, UT 84062, USA"
       }
     ]
   },
@@ -6469,6 +6529,21 @@
         "lat": 40.490064,
         "lng": -111.3434551,
         "address": "3153 E State Creek Rd, Heber City, UT 84032"
+      },
+      {
+        "lat": 40.422877,
+        "lng": -111.4918763,
+        "address": "at Mile Marker 22, 84032 W S Hwy 189 of, Heber City, UT 84032, USA"
+      },
+      {
+        "lat": 40.4866707,
+        "lng": -111.24420119999999,
+        "address": "10500 E Lake Creek Rd, Heber City, UT 84032, USA"
+      },
+      {
+        "lat": 40.72309,
+        "lng": -111.54389570000001,
+        "address": "6300 N Sagewood Dr #600, Park City, UT 84098, USA"
       }
     ]
   },
@@ -6501,6 +6576,21 @@
         "lat": 40.490064,
         "lng": -111.3434551,
         "address": "3153 E State Creek Rd, Heber City, UT 84032"
+      },
+      {
+        "lat": 40.422877,
+        "lng": -111.4918763,
+        "address": "at Mile Marker 22, 84032 W S Hwy 189 of, Heber City, UT 84032, USA"
+      },
+      {
+        "lat": 40.4866707,
+        "lng": -111.24420119999999,
+        "address": "10500 E Lake Creek Rd, Heber City, UT 84032, USA"
+      },
+      {
+        "lat": 40.72309,
+        "lng": -111.54389570000001,
+        "address": "6300 N Sagewood Dr #600, Park City, UT 84098, USA"
       }
     ]
   },
@@ -6797,6 +6887,16 @@
         "lat": 40.7222862,
         "lng": -111.9396099,
         "address": "2250 S Redwood Rd Ste 2, West Valley City, UT 84119"
+      },
+      {
+        "lat": 40.281582,
+        "lng": -111.69029499999999,
+        "address": "193 E 860 S, Orem, UT 84058, USA"
+      },
+      {
+        "lat": 40.5905397,
+        "lng": -111.9367699,
+        "address": "8839 S Redwood Rd Suite A-1, West Jordan, UT 84088, USA"
       }
     ]
   },
@@ -6844,6 +6944,16 @@
         "lat": 40.7222862,
         "lng": -111.9396099,
         "address": "2250 S Redwood Rd Ste 2, West Valley City, UT 84119"
+      },
+      {
+        "lat": 40.281582,
+        "lng": -111.69029499999999,
+        "address": "193 E 860 S, Orem, UT 84058, USA"
+      },
+      {
+        "lat": 40.5905397,
+        "lng": -111.9367699,
+        "address": "8839 S Redwood Rd Suite A-1, West Jordan, UT 84088, USA"
       }
     ]
   },
@@ -7346,6 +7456,11 @@
         "lat": 40.761464499999995,
         "lng": -111.87622990000001,
         "address": "363 S 500 E #210, Salt Lake City, UT 84102, USA"
+      },
+      {
+        "lat": 40.2592071,
+        "lng": -111.6823343,
+        "address": "1363 W 1940 N, Provo, UT 84604, USA"
       }
     ]
   },
@@ -7388,6 +7503,11 @@
         "lat": 40.761464499999995,
         "lng": -111.87622990000001,
         "address": "363 S 500 E #210, Salt Lake City, UT 84102, USA"
+      },
+      {
+        "lat": 40.2592071,
+        "lng": -111.6823343,
+        "address": "1363 W 1940 N, Provo, UT 84604, USA"
       }
     ]
   },
@@ -8690,6 +8810,16 @@
         "lat": 40.6197484,
         "lng": -111.97996979999999,
         "address": "3751 W Center Park Dr Suite 120, West Jordan, UT 84084, USA"
+      },
+      {
+        "lat": 40.5579974,
+        "lng": -111.8920515,
+        "address": "51 W 10600 S, Sandy, UT 84070, USA"
+      },
+      {
+        "lat": 40.7191451,
+        "lng": -111.81149339999999,
+        "address": "2725 E Parleys Way Suite 100, Salt Lake City, UT 84109, USA"
       }
     ]
   },
@@ -9324,6 +9454,11 @@
         "lat": 40.3834236,
         "lng": -111.8327824,
         "address": ""
+      },
+      {
+        "lat": 40.3564656,
+        "lng": -111.7651648,
+        "address": "593 S Evermore Ln, Pleasant Grove, UT 84062, USA"
       }
     ]
   },
@@ -9356,6 +9491,11 @@
         "lat": 40.3834236,
         "lng": -111.8327824,
         "address": ""
+      },
+      {
+        "lat": 40.3564656,
+        "lng": -111.7651648,
+        "address": "593 S Evermore Ln, Pleasant Grove, UT 84062, USA"
       }
     ]
   },
@@ -10485,6 +10625,11 @@
         "lat": 40.4851441,
         "lng": -111.9052395,
         "address": "14653 S Porter Rockwell Blvd Ste A, Bluffdale, UT 84065"
+      },
+      {
+        "lat": 40.3640615,
+        "lng": -111.9645599,
+        "address": "4095 E Pony Express Pkwy #11, Eagle Mountain, UT 84005, USA"
       }
     ]
   },
@@ -10517,6 +10662,11 @@
         "lat": 40.6103136,
         "lng": -111.9100001,
         "address": "695 W Center St, Midvale, UT 84047"
+      },
+      {
+        "lat": 40.692849599999995,
+        "lng": -111.88795449999999,
+        "address": "3601 S State St, South Salt Lake, UT 84115, USA"
       }
     ]
   },
@@ -10549,6 +10699,11 @@
         "lat": 40.3234299,
         "lng": -111.7302774,
         "address": "1439 N 1380 W Bldg 2 Ste 100, Orem, UT 84057"
+      },
+      {
+        "lat": 40.7054548,
+        "lng": -112.0748136,
+        "address": "3002 Melanie Ann Ct, Magna, UT 84044, USA"
       }
     ]
   },
@@ -11120,7 +11275,7 @@
   },
   {
     "id": "free-268",
-    "name": "The Pickr",
+    "name": "The Picklr",
     "category": "free",
     "address": "559 S Deseret Dr, Kaysville, UT 84037",
     "lat": 41.0260981,
@@ -11152,6 +11307,21 @@
         "lat": 40.6179868,
         "lng": -111.9792666,
         "address": "7552 S Plaza Center Dr, West Jordan, UT 84084"
+      },
+      {
+        "lat": 40.3729753,
+        "lng": -111.8892777,
+        "address": "629 Saratoga Rd Bldg 2, Saratoga Springs, UT 84043, USA"
+      },
+      {
+        "lat": 40.4621124,
+        "lng": -111.94853970000001,
+        "address": "15892 S Rockwell Park Cove, Herriman, UT 84065, USA"
+      },
+      {
+        "lat": 40.593690699999996,
+        "lng": -111.83049539999999,
+        "address": "8645 Highland Dr, Sandy, UT 84093, USA"
       }
     ]
   },
@@ -11458,6 +11628,11 @@
         "lat": 40.2330195,
         "lng": -111.6634834,
         "address": "268 W 100 S, Provo, UT 84601"
+      },
+      {
+        "lat": 40.3615831,
+        "lng": -111.748836,
+        "address": "527 W State St Suite #101, Pleasant Grove, UT 84062, USA"
       }
     ]
   },
@@ -14170,6 +14345,11 @@
         "lat": 40.4851441,
         "lng": -111.9052395,
         "address": "14653 S Porter Rockwell Blvd Ste A, Bluffdale, UT 84065"
+      },
+      {
+        "lat": 40.3640615,
+        "lng": -111.9645599,
+        "address": "4095 E Pony Express Pkwy #11, Eagle Mountain, UT 84005, USA"
       }
     ]
   },
