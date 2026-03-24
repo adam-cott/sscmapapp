@@ -117,7 +117,7 @@ export default function BottomSheet({ deal, onUse, onClose }) {
           {/* Info */}
           <div className="space-y-3 mb-4">
             {[
-              deal.address && { icon: '📍', text: deal.address },
+              deal.address && { icon: '📍', text: deal.address, href: `https://www.google.com/maps/dir/?api=1&destination=${deal.lat},${deal.lng}`, external: true },
               deal.locationRestriction && { icon: '📍', text: `Valid at: ${deal.locationRestriction}` },
               deal.contact?.hours && { icon: '🕐', text: deal.contact.hours },
               deal.contact?.phone && { icon: '📞', text: deal.contact.phone, href: `tel:${deal.contact.phone}` },
