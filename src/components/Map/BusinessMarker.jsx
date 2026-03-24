@@ -31,7 +31,7 @@ const BusinessMarker = memo(function BusinessMarker({ loc, items, primaryCategor
 
   const handleClick = useCallback(() => {
     if (isSingle) {
-      onSelectDeal({ ...deal, lat: loc.lat, lng: loc.lng, address: loc.address })
+      onSelectDeal({ ...deal, lat: loc.lat, lng: loc.lng, address: loc.address, contact: { ...deal.contact, phone: loc.phone ?? deal.contact?.phone } })
     } else {
       onSelectLocation({ loc, items })
     }
