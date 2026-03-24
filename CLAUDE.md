@@ -89,7 +89,7 @@ starvingstudentcardmapapp/
 │   │   └── useLocalStorage.js      # Generic useState-backed localStorage hook
 │   ├── utils/
 │   │   ├── categoryColors.js       # Color/label/light maps for 7 categories
-│   │   ├── dealHelpers.js          # getDealUsageState(), filterDeals()
+│   │   ├── dealHelpers.js          # getDealUsageState(), filterDeals(), getPrimaryCategory()
 │   │   └── markerIcons.js          # createMarkerIcon() — L.divIcon factory with module-level cache
 │   ├── constants/
 │   │   └── categories.js           # ALL_CATEGORIES array
@@ -115,7 +115,9 @@ starvingstudentcardmapapp/
 │   ├── regeocode.js                # Re-geocodes all locations via Google Maps Geocoding API; patches coords >50m off
 │   ├── find-missing-locations.js   # Finds missing chain locations via Google Places API; writes missing-locations-output.json
 │   ├── add-missing-locations.js    # Reads missing-locations-output.json; adds HIGH confidence locations within 90km to deals.json
-│   └── missing-locations-output.json  # Output from find-missing-locations.js (gitignored)
+│   ├── fetch-phones.js             # Looks up phone numbers per location via Google Places Text Search; patches location.phone in deals.json
+│   ├── missing-locations-output.json  # Output from find-missing-locations.js (gitignored)
+│   └── phones-output.json          # Output from fetch-phones.js (gitignored)
 │
 │   # Reference data
 ├── starving_student_businesses.csv # Authoritative: all business locations (via Downloads)
@@ -166,7 +168,7 @@ Every entry in `src/data/deals.json` represents **one deal offer** from the card
 - `lat`/`lng`/`address` — primary/best-match location (kept for direct access)
 - `locations[]` — **all** valid locations for this deal from the authoritative CSV; the map renders one pin per business×location
 - `maxUses: null` means unlimited uses
-- `contact.phone` / `contact.website` — currently null; awaiting `phone_website_needed.csv` fill-in
+- `contact.phone` / `contact.website` — `phone` is now stored per-location on each `locations[]` entry (not at deal level), passed into `deal.contact.phone` at selection time in `BusinessMarker.jsx` and `LocationPicker.jsx`. `website` still null.
 - Multiple deals can share the same business name (e.g., Wendy's has 2 separate deals)
 
 **Stats:** 418 deals · 199 unique businesses · 1,400+ map pins · 0 null coordinates
@@ -334,19 +336,11 @@ This is the authoritative business/address database (376 rows). Keep it. All geo
 
 ## Pending Work
 
-### Phone numbers + websites
-`phone_website_needed.csv` (project root) has all 199 businesses with blank `phone` and `website` columns. Once filled in, run the merge script (to be written) which will read the CSV and stamp `contact.phone` + `contact.website` onto matching deals in `deals.json`.
-
-The modal and deal card already have rendering logic for `deal.contact.phone` (renders as `tel:` link) and `deal.contact.website` (renders as external link). Populating the data is the only remaining step.
-
-### Category fixes
-A handful of businesses are miscategorized in deals.json. Carl's Jr, Jack in the Box, Bobbys Burgers, and Wayback Burgers sit in `treats` but should be `restaurants` or `sandwiches`. Fix with a targeted Python script patching the `category` field on specific deals.
-
-### Needs review locations
-`scripts/missing-locations-output.json` has 20 locations flagged as REVIEW (name + state passed, Google category type didn't match expected). Most are real missing locations (Back Nine Golf, Color Me Mine, The Pickr, Zipline Utah, Chiropractic Access). Go through manually and add the valid ones.
+### Websites
+Phone numbers are done. Next step is websites — `contact.website` is still null for all businesses. Use `scripts/fetch-phones.js` as a template; swap `nationalPhoneNumber` for `websiteUri` in the field mask (Pro SKU, 5,000 free/month). One request per unique business name (~199 requests total, well within free tier).
 
 ### Address Google Maps link
-Already implemented. The address row in `DealModal.jsx` links to:
+Already implemented on both desktop and mobile. The address row links to:
 ```
 https://www.google.com/maps/dir/?api=1&destination={lat},{lng}
 ```
@@ -385,6 +379,12 @@ $env:GOOGLE_MAPS_API_KEY="your_key"; node scripts/find-missing-locations.js
 # PowerShell: add high-confidence missing locations within 90km to deals.json
 node scripts/add-missing-locations.js --dry-run
 node scripts/add-missing-locations.js
+
+# PowerShell: look up phone numbers per location via Google Places API (dry run first)
+$env:GOOGLE_MAPS_API_KEY="your_key"
+node scripts/fetch-phones.js --dry-run
+node scripts/fetch-phones.js --skip-low-confidence
+node scripts/fetch-phones.js
 ```
 
 ---
