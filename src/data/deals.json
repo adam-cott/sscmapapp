@@ -6412,7 +6412,7 @@
         "lat": 40.2830528,
         "lng": -111.690871,
         "address": "765 S Orem Blvd, Orem, UT 84058",
-        "phone": null
+        "phone": "+18016071201"
       }
     ]
   },
@@ -6544,7 +6544,7 @@
         "lat": 40.3124841,
         "lng": -111.6642585,
         "address": "1323 E 800 N, Orem, UT 84097",
-        "phone": null
+        "phone": "+18016162453"
       }
     ]
   },
@@ -7963,13 +7963,13 @@
         "lat": 40.2338,
         "lng": -111.6585,
         "address": "",
-        "phone": null
+        "phone": "+18016555200"
       },
       {
         "lat": 40.2671402,
         "lng": -111.682543,
         "address": "1636 S State St #A, Orem, UT 84097, USA",
-        "phone": null
+        "phone": "+18016555200"
       },
       {
         "lat": 40.761464499999995,
@@ -8014,13 +8014,13 @@
         "lat": 40.2338,
         "lng": -111.6585,
         "address": "",
-        "phone": null
+        "phone": "+18016555200"
       },
       {
         "lat": 40.2671402,
         "lng": -111.682543,
         "address": "1636 S State St #A, Orem, UT 84097, USA",
-        "phone": null
+        "phone": "+18016555200"
       },
       {
         "lat": 40.761464499999995,
@@ -9010,7 +9010,7 @@
         "lat": 40.3802546,
         "lng": -111.97178799999999,
         "address": "3768 E Campus Dr, Eagle Mountain, UT 84005, USA",
-        "phone": null
+        "phone": "+13853368373"
       }
     ]
   },
@@ -9503,12 +9503,6 @@
         "lng": -112.0238294,
         "address": "7697 5600 W, West Jordan, UT 84081, USA",
         "phone": "+18014179991"
-      },
-      {
-        "lat": 40.698214199999995,
-        "lng": -112.0242593,
-        "address": "3407 S 5600 W, West Valley City, UT 84120, USA",
-        "phone": null
       }
     ]
   },
@@ -11512,7 +11506,7 @@
         "lat": 40.3084237,
         "lng": -112.0154283,
         "address": "1337 Eagle Mountain Blvd Ste 110, Eagle Mountain, UT 84005",
-        "phone": null
+        "phone": "+18017892123"
       },
       {
         "lat": 40.4322396,
@@ -11797,7 +11791,7 @@
         "lat": 40.2370715,
         "lng": -111.6361865,
         "address": "1330 E 300 N, Provo, UT 84606",
-        "phone": null
+        "phone": "+13853092388"
       }
     ]
   },
@@ -12865,7 +12859,7 @@
         "lat": 40.3802546,
         "lng": -111.97178799999999,
         "address": "3768 E Campus Dr, Eagle Mountain, UT 84005, USA",
-        "phone": null
+        "phone": "+13853368373"
       }
     ]
   },
@@ -12916,7 +12910,7 @@
         "lat": 40.3802546,
         "lng": -111.97178799999999,
         "address": "3768 E Campus Dr, Eagle Mountain, UT 84005, USA",
-        "phone": null
+        "phone": "+13853368373"
       }
     ]
   },
@@ -13889,12 +13883,6 @@
         "lng": -112.0238294,
         "address": "7697 5600 W, West Jordan, UT 84081, USA",
         "phone": "+18014179991"
-      },
-      {
-        "lat": 40.698214199999995,
-        "lng": -112.0242593,
-        "address": "3407 S 5600 W, West Valley City, UT 84120, USA",
-        "phone": null
       }
     ]
   },
@@ -14443,7 +14431,7 @@
         "lat": 40.696871,
         "lng": -111.995767,
         "address": "4380 W 3500 S, West Valley City, UT 84120, USA",
-        "phone": null
+        "phone": "+18012517902"
       }
     ]
   },
@@ -15475,7 +15463,7 @@
         "lat": 40.3868271,
         "lng": -111.9147034,
         "address": "1374 Redwood Rd, Saratoga Springs, UT 84043, USA",
-        "phone": null
+        "phone": "+18013418470"
       },
       {
         "lat": 40.5273957,
@@ -15685,7 +15673,7 @@
         "lat": 40.3084237,
         "lng": -112.0154283,
         "address": "1337 Eagle Mountain Blvd Ste 110, Eagle Mountain, UT 84005",
-        "phone": null
+        "phone": "+18017892123"
       },
       {
         "lat": 40.4322396,
@@ -17642,12 +17630,6 @@
         "lng": -112.0238294,
         "address": "7697 5600 W, West Jordan, UT 84081, USA",
         "phone": "+18014179991"
-      },
-      {
-        "lat": 40.698214199999995,
-        "lng": -112.0242593,
-        "address": "3407 S 5600 W, West Valley City, UT 84120, USA",
-        "phone": null
       }
     ]
   },
@@ -18118,7 +18100,7 @@
         "lat": 40.050078299999996,
         "lng": -111.6845079,
         "address": "565 W. State Rd. 198 Hwy, 6, Salem, UT 84653, USA",
-        "phone": null
+        "phone": "+18014233354"
       }
     ]
   },
@@ -18187,7 +18169,7 @@
         "lat": 40.050078299999996,
         "lng": -111.6845079,
         "address": "565 W. State Rd. 198 Hwy, 6, Salem, UT 84653, USA",
-        "phone": null
+        "phone": "+18014233354"
       }
     ]
   },
@@ -18385,7 +18367,7 @@
         "lat": 40.696871,
         "lng": -111.995767,
         "address": "4380 W 3500 S, West Valley City, UT 84120, USA",
-        "phone": null
+        "phone": "+18012517902"
       }
     ]
   },
@@ -19567,7 +19549,7 @@
         "lat": 40.2349858,
         "lng": -111.6658596,
         "address": "401 W 100 N, Provo, UT 84601",
-        "phone": null
+        "phone": "+18013749733"
       }
     ]
   },
@@ -19600,7 +19582,7 @@
         "lat": 40.2349858,
         "lng": -111.6658596,
         "address": "401 W 100 N, Provo, UT 84601",
-        "phone": null
+        "phone": "+18013749733"
       }
     ]
   },
