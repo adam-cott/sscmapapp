@@ -1,6 +1,5 @@
 import { memo, useMemo, useCallback } from 'react'
 import { Marker, Popup } from 'react-leaflet'
-import L from 'leaflet'
 import { createMarkerIcon } from '../../utils/markerIcons'
 import { CATEGORY_COLORS, CATEGORY_LABELS, CATEGORY_LIGHT } from '../../utils/categoryColors'
 
@@ -15,19 +14,14 @@ const BusinessMarker = memo(function BusinessMarker({ loc, items, primaryCategor
   const isUnlimited = deal.deal.maxUses === null
 
   const icon = useMemo(() => {
-    if (isSingle) {
-      return createMarkerIcon(primaryCategory, usageState.status, isSelected)
-    }
-    const size = isSelected ? 38 : 30
-    const color = isExhausted ? '#94a3b8' : catColor
-    return L.divIcon({
-      html: `<div class="ssc-marker${isSelected ? ' selected' : ''}" style="width:${size}px;height:${size}px;background:${color};font-size:12px;">${items.length}</div>`,
-      className: '',
-      iconSize: [size, size],
-      iconAnchor: [size / 2, size / 2],
-      popupAnchor: [0, -(size / 2 + 6)],
-    })
-  }, [isSingle, primaryCategory, usageState.status, isSelected, items.length, isExhausted, catColor])
+    // Always show a category icon — numbered badges only come from MarkerClusterGroup
+    // when distinct business locations are clustered together at the map level.
+    const overallStatus =
+      items.every(i => i.usageState.status === 'exhausted') ? 'exhausted' :
+      items.some(i => i.usageState.status === 'partial')    ? 'partial' :
+      'unused'
+    return createMarkerIcon(primaryCategory, overallStatus, isSelected)
+  }, [primaryCategory, items, isSelected])
 
   const handleClick = useCallback(() => {
     if (isSingle) {
