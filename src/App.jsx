@@ -253,7 +253,7 @@ export default function App() {
         <LocationPicker location={selectedLocation} onSelectDeal={handleSelectFromPicker} onClose={() => setSelectedLocation(null)} />
       )}
       {showUseToast && <UseToast onDismiss={() => setShowUseToast(false)} />}
-      {!hasRequested && <LocationPrompt onAllow={requestLocation} onDecline={decline} />}
+      {!hasRequested && activeTab === 'map' && <LocationPrompt onAllow={requestLocation} onDecline={decline} />}
       <UpdatePrompt />
     </div>
   )
