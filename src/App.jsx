@@ -130,6 +130,7 @@ export default function App() {
     <div className="flex flex-col h-screen overflow-hidden" style={{ backgroundColor: '#f0f4f8' }}>
       {/* ── Map tab ─────────────────────────────────────── */}
       {isMapTab && (
+        <div className="flex flex-col flex-1 overflow-hidden">
         <div className="flex flex-1 overflow-hidden relative">
           {/* Desktop sidebar */}
           <aside className="hidden md:flex flex-col flex-shrink-0" style={{ width: '320px', backgroundColor: '#ffffff', borderRight: '1px solid #e8edf3' }}>
@@ -143,7 +144,6 @@ export default function App() {
             <div className="flex-1 overflow-y-auto">
               <ListView deals={filteredDeals} onSelectDeal={handleSelectDeal} userCoords={coords} />
             </div>
-            <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} />
           </aside>
 
           {/* Main map area */}
@@ -190,6 +190,11 @@ export default function App() {
           <div className="md:hidden absolute bottom-0 left-0 right-0 z-[600]">
             <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab />
           </div>
+        </div>
+        {/* Nav sits full-width below sidebar+map on desktop */}
+        <div className="hidden md:block">
+          <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} />
+        </div>
         </div>
       )}
 
