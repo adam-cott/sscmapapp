@@ -111,7 +111,7 @@ export default function MapView({ deals, selectedDeal, onSelectDeal, onSelectLoc
         <MarkerClusterGroup
           iconCreateFunction={createClusterIcon}
           chunkedLoading
-          maxClusterRadius={40}
+          maxClusterRadius={60}
           spiderfyOnMaxZoom={true}
           showCoverageOnHover={false}
           removeOutsideVisibleBounds={false}
