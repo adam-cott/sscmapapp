@@ -19,6 +19,7 @@ import BottomNav from './components/BottomNav/BottomNav'
 import FavesTab from './components/Tabs/FavesTab'
 import RewardsTab from './components/Tabs/RewardsTab'
 import SettingsTab from './components/Tabs/SettingsTab'
+import { useFaves } from './hooks/useFaves'
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('deals')
@@ -30,6 +31,7 @@ export default function App() {
   const [pendingNearest, setPendingNearest] = useState(false)
 
   const { dealsWithUsage, usageMap, recordUse, resetAll } = useDeals(dealsData)
+  const { faves, toggleFave, isFave } = useFaves()
 
   const { coords, loading: geoLoading, permissionDenied, hasRequested, requestLocation, decline } = useGeolocation()
 
@@ -202,8 +204,12 @@ export default function App() {
       {/* ── Faves tab ───────────────────────────────────── */}
       {activeTab === 'faves' && (
         <div className="flex flex-col flex-1 overflow-hidden">
-          <div className="flex-1">
-            <FavesTab />
+          <div className="flex-1 overflow-hidden">
+            <FavesTab
+              deals={dealsWithUsage.filter(d => faves.includes(d.id))}
+              onSelectDeal={handleSelectDeal}
+              userCoords={coords}
+            />
           </div>
           <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} />
         </div>
@@ -232,12 +238,12 @@ export default function App() {
       {/* ── Overlays (shared across all tabs) ───────────── */}
       {selectedDeal && (
         <div className="hidden md:block">
-          <DealModal deal={selectedDeal} onUse={() => handleUse(selectedDeal.id)} onClose={() => setSelectedDeal(null)} />
+          <DealModal deal={selectedDeal} onUse={() => handleUse(selectedDeal.id)} onClose={() => setSelectedDeal(null)} isFave={isFave(selectedDeal.id)} onToggleFave={toggleFave} />
         </div>
       )}
       {selectedDeal && (
         <div className="md:hidden">
-          <BottomSheet deal={selectedDeal} onUse={() => handleUse(selectedDeal.id)} onClose={() => setSelectedDeal(null)} />
+          <BottomSheet deal={selectedDeal} onUse={() => handleUse(selectedDeal.id)} onClose={() => setSelectedDeal(null)} isFave={isFave(selectedDeal.id)} onToggleFave={toggleFave} />
         </div>
       )}
       {showResetConfirm && (

@@ -1,8 +1,9 @@
 import { useEffect } from 'react'
+import { Heart } from 'lucide-react'
 import { CATEGORY_COLORS, CATEGORY_LIGHT, CATEGORY_LABELS, CATEGORY_ICON } from '../../utils/categoryColors'
 import UsageTracker from '../UI/UsageTracker'
 
-export default function BottomSheet({ deal, onUse, onClose }) {
+export default function BottomSheet({ deal, onUse, onClose, isFave, onToggleFave }) {
   const { usage } = deal
   const isExhausted = usage.status === 'exhausted'
   const catColor = CATEGORY_COLORS[deal.category] || '#0170B9'
@@ -66,15 +67,24 @@ export default function BottomSheet({ deal, onUse, onClose }) {
                 </div>
               </div>
             </div>
-            <button
-              onClick={onClose}
-              className="flex-shrink-0 flex items-center justify-center rounded-full"
-              style={{ width: '30px', height: '30px', backgroundColor: '#f1f5f9', color: '#64748b' }}
-            >
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
-              </svg>
-            </button>
+            <div className="flex items-center gap-2 flex-shrink-0">
+              <button
+                onClick={() => onToggleFave(deal.id)}
+                className="flex items-center justify-center rounded-full"
+                style={{ width: '30px', height: '30px', backgroundColor: '#f1f5f9', border: 'none', cursor: 'pointer' }}
+              >
+                <Heart size={14} strokeWidth={2} fill={isFave ? '#ef4444' : 'none'} color={isFave ? '#ef4444' : '#94a3b8'} />
+              </button>
+              <button
+                onClick={onClose}
+                className="flex items-center justify-center rounded-full"
+                style={{ width: '30px', height: '30px', backgroundColor: '#f1f5f9', color: '#64748b', border: 'none', cursor: 'pointer' }}
+              >
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
 
