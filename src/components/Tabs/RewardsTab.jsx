@@ -17,7 +17,20 @@ export default function RewardsTab({ usageLog, dealsWithUsage, usageMap }) {
   // usageLog.reduce((sum, e) => sum + (dealById[e.dealId]?.deal?.dealValue ?? 0), 0)
   const estimatedSavings = null
 
-  const sortedLog = [...usageLog].reverse()
+  // usageLog only exists from when logging was added. usageMap has ALL usage
+  // including deals used before the log existed. Build a combined history:
+  // real log entries (with timestamps) + synthetic entries for the gap.
+  const logCountById = usageLog.reduce((acc, e) => {
+    acc[e.dealId] = (acc[e.dealId] ?? 0) + 1
+    return acc
+  }, {})
+
+  const syntheticEntries = Object.entries(usageMap).flatMap(([dealId, count]) => {
+    const missing = count - (logCountById[dealId] ?? 0)
+    return Array.from({ length: missing }, () => ({ dealId, usedAt: null }))
+  })
+
+  const fullHistory = [...[...usageLog].reverse(), ...syntheticEntries]
 
   if (totalRedemptions === 0) {
     return (
@@ -72,13 +85,13 @@ export default function RewardsTab({ usageLog, dealsWithUsage, usageMap }) {
             History
           </p>
           <div className="rounded-2xl bg-white overflow-hidden shadow-sm" style={{ border: '1px solid #f1f5f9' }}>
-            {sortedLog.map((entry, i) => {
+            {fullHistory.map((entry, i) => {
               const deal = dealById[entry.dealId]
               return (
                 <div
                   key={i}
                   className="flex items-start gap-3 px-4 py-3"
-                  style={{ borderBottom: i < sortedLog.length - 1 ? '1px solid #f8fafc' : 'none' }}
+                  style={{ borderBottom: i < fullHistory.length - 1 ? '1px solid #f8fafc' : 'none' }}
                 >
                   <div
                     className="flex-shrink-0 mt-0.5 rounded-full flex items-center justify-center"
@@ -94,7 +107,7 @@ export default function RewardsTab({ usageLog, dealsWithUsage, usageMap }) {
                       {deal?.deal?.title ?? entry.dealId}
                     </p>
                     <p className="text-xs mt-1" style={{ color: '#94a3b8' }}>
-                      {formatDate(entry.usedAt)}
+                      {entry.usedAt ? formatDate(entry.usedAt) : 'Date not recorded'}
                     </p>
                   </div>
                 </div>
