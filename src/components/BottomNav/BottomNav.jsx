@@ -1,8 +1,8 @@
 const TABS = [
+  { id: 'rewards',  label: 'Rewards', emoji: '🎁' },
   { id: 'map',      label: 'Map',     emoji: '🗺️' },
   { id: 'deals',    label: 'Deals',   emoji: '🏷️' },
   { id: 'faves',    label: 'Faves',   emoji: '🤍' },
-  { id: 'rewards',  label: 'Rewards', emoji: '🎁' },
   { id: 'settings', label: 'Settings',emoji: '⚙️' },
 ]
 

@@ -21,7 +21,7 @@ import RewardsTab from './components/Tabs/RewardsTab'
 import SettingsTab from './components/Tabs/SettingsTab'
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState('map')
+  const [activeTab, setActiveTab] = useState('deals')
   const [selectedDeal, setSelectedDeal] = useState(null)
   const [selectedLocation, setSelectedLocation] = useState(null)
   const [showResetConfirm, setShowResetConfirm] = useState(false)
