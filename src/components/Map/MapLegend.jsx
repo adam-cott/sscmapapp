@@ -34,7 +34,10 @@ export default function MapLegend() {
             boxShadow: '0 1px 4px rgba(0,0,0,0.2)',
             flexShrink: 0,
           }} />
-          <span style={{ color: '#475569', fontSize: '11px' }}>{CATEGORY_ICON[cat]} {CATEGORY_LABELS[cat]}</span>
+          <span style={{ color: '#475569', fontSize: '11px', display: 'flex', alignItems: 'center', gap: '4px' }}>
+              {(() => { const Icon = CATEGORY_ICON[cat]; return Icon ? <Icon size={11} color={CATEGORY_COLORS[cat]} /> : null })()}
+              {CATEGORY_LABELS[cat]}
+            </span>
         </div>
       ))}
 
