@@ -20,6 +20,7 @@ import FavesTab from './components/Tabs/FavesTab'
 import RewardsTab from './components/Tabs/RewardsTab'
 import SettingsTab from './components/Tabs/SettingsTab'
 import { useFaves } from './hooks/useFaves'
+import { useUsageLog } from './hooks/useUsageLog'
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('deals')
@@ -32,6 +33,7 @@ export default function App() {
 
   const { dealsWithUsage, usageMap, recordUse, resetAll } = useDeals(dealsData)
   const { faves, toggleFave, isFave } = useFaves()
+  const { usageLog, logUse, clearLog } = useUsageLog()
 
   const { coords, loading: geoLoading, permissionDenied, hasRequested, requestLocation, decline } = useGeolocation()
 
@@ -72,12 +74,14 @@ export default function App() {
 
   const confirmReset = () => {
     resetAll()
+    clearLog()
     setSelectedDeal(null)
     setShowResetConfirm(false)
   }
 
   const handleUse = (dealId) => {
     recordUse(dealId)
+    logUse(dealId)
     setSelectedDeal(prev => {
       if (!prev) return null
       const updated = dealsWithUsage.find(d => d.id === dealId)
@@ -218,8 +222,12 @@ export default function App() {
       {/* ── Rewards tab ─────────────────────────────────── */}
       {activeTab === 'rewards' && (
         <div className="flex flex-col flex-1 overflow-hidden">
-          <div className="flex-1">
-            <RewardsTab />
+          <div className="flex-1 overflow-hidden">
+            <RewardsTab
+              usageLog={usageLog}
+              dealsWithUsage={dealsWithUsage}
+              usageMap={usageMap}
+            />
           </div>
           <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} />
         </div>
