@@ -1,3 +1,4 @@
+import { LayoutGrid } from 'lucide-react'
 import { ALL_CATEGORIES } from '../../constants/categories'
 import { CATEGORY_COLORS, CATEGORY_LABELS, CATEGORY_ICON } from '../../utils/categoryColors'
 
@@ -5,11 +6,11 @@ export default function FilterPanel({ activeCategories, onToggle, onClear, categ
   const allActive = activeCategories.length === 0
 
   const chips = [
-    { key: 'all', label: 'All', icon: '✦', color: '#0170B9' },
+    { key: 'all', label: 'All', Icon: LayoutGrid, color: '#0170B9' },
     ...ALL_CATEGORIES.map(cat => ({
       key: cat,
       label: CATEGORY_LABELS[cat],
-      icon: CATEGORY_ICON[cat],
+      Icon: CATEGORY_ICON[cat],
       color: CATEGORY_COLORS[cat],
     })),
   ]
@@ -18,7 +19,7 @@ export default function FilterPanel({ activeCategories, onToggle, onClear, categ
     <div className={`flex gap-1.5 ${compact ? 'overflow-x-auto flex-nowrap' : 'flex-wrap'}`}
       style={{ scrollbarWidth: 'none' }}
     >
-      {chips.map(({ key, label, icon, color }) => {
+      {chips.map(({ key, label, Icon, color }) => {
         const isActive = key === 'all' ? allActive : activeCategories.includes(key)
         return (
           <button
@@ -33,7 +34,7 @@ export default function FilterPanel({ activeCategories, onToggle, onClear, categ
               letterSpacing: '0.01em',
             }}
           >
-            <span style={{ fontSize: '10px' }}>{icon}</span>
+            {Icon && <Icon size={11} color={isActive ? 'white' : color} />}
             {label}
             <span className="opacity-60 text-xs">({categoryCounts[key] ?? 0})</span>
           </button>

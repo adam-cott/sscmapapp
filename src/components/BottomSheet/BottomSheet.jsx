@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { Heart } from 'lucide-react'
+import { Heart, MapPin, Clock, Phone, Globe, Calendar } from 'lucide-react'
 import { CATEGORY_COLORS, CATEGORY_LIGHT, CATEGORY_LABELS, CATEGORY_ICON } from '../../utils/categoryColors'
 import UsageTracker from '../UI/UsageTracker'
 
@@ -8,6 +8,7 @@ export default function BottomSheet({ deal, onUse, onClose, isFave, onToggleFave
   const isExhausted = usage.status === 'exhausted'
   const catColor = CATEGORY_COLORS[deal.category] || '#0170B9'
   const catLight = CATEGORY_LIGHT[deal.category] || '#f0f9ff'
+  const CategoryIcon = CATEGORY_ICON[deal.category]
 
   useEffect(() => {
     const handleKey = (e) => { if (e.key === 'Escape') onClose() }
@@ -48,9 +49,9 @@ export default function BottomSheet({ deal, onUse, onClose, isFave, onToggleFave
             <div className="flex items-start gap-3 min-w-0">
               <div
                 className="flex items-center justify-center rounded-xl flex-shrink-0"
-                style={{ width: '40px', height: '40px', backgroundColor: isExhausted ? '#f1f5f9' : catLight, fontSize: '18px' }}
+                style={{ width: '40px', height: '40px', backgroundColor: isExhausted ? '#f1f5f9' : catLight }}
               >
-                {CATEGORY_ICON[deal.category]}
+                {CategoryIcon && <CategoryIcon size={18} color={isExhausted ? '#94a3b8' : catColor} />}
               </div>
               <div className="min-w-0">
                 <h2
@@ -127,15 +128,15 @@ export default function BottomSheet({ deal, onUse, onClose, isFave, onToggleFave
           {/* Info */}
           <div className="space-y-3 mb-4">
             {[
-              deal.address && { icon: '📍', text: deal.address, href: `https://www.google.com/maps/dir/?api=1&destination=${deal.lat},${deal.lng}`, external: true },
-              deal.locationRestriction && { icon: '📍', text: `Valid at: ${deal.locationRestriction}` },
-              deal.contact?.hours && { icon: '🕐', text: deal.contact.hours },
-              deal.contact?.phone && { icon: '📞', text: deal.contact.phone, href: `tel:${deal.contact.phone}` },
-              deal.contact?.website && { icon: '🌐', text: deal.contact.website.replace(/^https?:\/\//, ''), href: deal.contact.website, external: true },
-              deal.deal.expiresAt && { icon: '📅', text: `Expires ${deal.deal.expiresAt}` },
+              deal.address && { Icon: MapPin, text: deal.address, href: `https://www.google.com/maps/dir/?api=1&destination=${deal.lat},${deal.lng}`, external: true },
+              deal.locationRestriction && { Icon: MapPin, text: `Valid at: ${deal.locationRestriction}` },
+              deal.contact?.hours && { Icon: Clock, text: deal.contact.hours },
+              deal.contact?.phone && { Icon: Phone, text: deal.contact.phone, href: `tel:${deal.contact.phone}` },
+              deal.contact?.website && { Icon: Globe, text: deal.contact.website.replace(/^https?:\/\//, ''), href: deal.contact.website, external: true },
+              deal.deal.expiresAt && { Icon: Calendar, text: `Expires ${deal.deal.expiresAt}` },
             ].filter(Boolean).map((row, i) => (
               <div key={i} className="flex items-start gap-2.5">
-                <span className="flex-shrink-0 text-sm" style={{ marginTop: '1px' }}>{row.icon}</span>
+                <row.Icon size={13} color="#94a3b8" className="flex-shrink-0 mt-0.5" />
                 {row.href ? (
                   <a href={row.href} target={row.external ? '_blank' : undefined}
                     rel={row.external ? 'noopener noreferrer' : undefined}

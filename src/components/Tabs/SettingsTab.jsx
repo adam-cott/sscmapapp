@@ -1,8 +1,10 @@
+import { User, Calendar, RotateCcw, Info, ChevronRight } from 'lucide-react'
+
 const rows = [
-  { label: 'Edit Profile', icon: '👤' },
-  { label: 'Card Year', icon: '📅' },
-  { label: 'Reset Usage Data', icon: '🔄' },
-  { label: 'About', icon: 'ℹ️' },
+  { label: 'Edit Profile',     Icon: User       },
+  { label: 'Card Year',        Icon: Calendar   },
+  { label: 'Reset Usage Data', Icon: RotateCcw  },
+  { label: 'About',            Icon: Info       },
 ]
 
 export default function SettingsTab() {
@@ -18,9 +20,9 @@ export default function SettingsTab() {
             className="flex items-center px-4 py-4 cursor-pointer active:bg-gray-50"
             style={{ borderBottom: i < rows.length - 1 ? '1px solid #f1f5f9' : 'none' }}
           >
-            <span className="text-xl mr-3">{row.icon}</span>
+            <row.Icon size={18} color="#94a3b8" className="mr-3 flex-shrink-0" />
             <span className="flex-1 text-base text-gray-800">{row.label}</span>
-            <span className="text-gray-300 text-lg">›</span>
+            <ChevronRight size={16} color="#d1d5db" />
           </div>
         ))}
       </div>

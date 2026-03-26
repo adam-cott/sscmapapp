@@ -8,6 +8,7 @@ export default function DealModal({ deal, onUse, onClose, isFave, onToggleFave }
   const isExhausted = usage.status === 'exhausted'
   const catColor = CATEGORY_COLORS[deal.category] || '#0170B9'
   const catLight = CATEGORY_LIGHT[deal.category] || '#f0f9ff'
+  const CategoryIcon = CATEGORY_ICON[deal.category]
 
   useEffect(() => {
     const handleKey = (e) => { if (e.key === 'Escape') onClose() }
@@ -50,10 +51,9 @@ export default function DealModal({ deal, onUse, onClose, isFave, onToggleFave }
                 style={{
                   width: '44px', height: '44px',
                   backgroundColor: isExhausted ? '#f1f5f9' : catLight,
-                  fontSize: '20px',
-                }}
+                  }}
               >
-                {CATEGORY_ICON[deal.category]}
+                {CategoryIcon && <CategoryIcon size={20} color={isExhausted ? '#94a3b8' : catColor} />}
               </div>
               <div className="min-w-0">
                 <h2

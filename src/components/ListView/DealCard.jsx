@@ -1,3 +1,4 @@
+import { MapPin } from 'lucide-react'
 import { CATEGORY_COLORS, CATEGORY_LIGHT } from '../../utils/categoryColors'
 import { getNearestDistance, formatDistance } from '../../utils/dealHelpers'
 import Badge from '../UI/Badge'
@@ -51,8 +52,8 @@ export default function DealCard({ deal, onClick, userCoords }) {
 
         {/* Distance badge */}
         {distanceStr && (
-          <p className="text-xs mb-1" style={{ color: '#94a3b8' }}>
-            📍 {distanceStr}
+          <p className="flex items-center gap-1 text-xs mb-1" style={{ color: '#94a3b8' }}>
+            <MapPin size={11} color="#94a3b8" /> {distanceStr}
           </p>
         )}
 

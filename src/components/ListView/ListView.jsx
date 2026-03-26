@@ -1,3 +1,4 @@
+import { Search } from 'lucide-react'
 import DealCard from './DealCard'
 
 export default function ListView({ deals, onSelectDeal, userCoords }) {
@@ -5,10 +6,10 @@ export default function ListView({ deals, onSelectDeal, userCoords }) {
     return (
       <div className="flex flex-col items-center justify-center py-20 px-6 text-center">
         <div
-          className="w-14 h-14 rounded-2xl flex items-center justify-center mb-4 text-2xl"
+          className="w-14 h-14 rounded-2xl flex items-center justify-center mb-4"
           style={{ backgroundColor: '#f1f5f9' }}
         >
-          🔍
+          <Search size={24} color="#94a3b8" />
         </div>
         <p
           className="font-bold text-base mb-1"

@@ -28,12 +28,14 @@ export const CATEGORY_LABELS = {
   retail:         'Retail & Auto',
 }
 
+import { Pizza, Utensils, Sandwich, IceCreamCone, Gift, Ticket, ShoppingBag } from 'lucide-react'
+
 export const CATEGORY_ICON = {
-  pizza:          '🍕',
-  restaurants:    '🍽️',
-  sandwiches:     '🥪',
-  treats:         '🧁',
-  free:           '🎁',
-  entertainment:  '🎭',
-  retail:         '🛍️',
+  pizza:          Pizza,
+  restaurants:    Utensils,
+  sandwiches:     Sandwich,
+  treats:         IceCreamCone,
+  free:           Gift,
+  entertainment:  Ticket,
+  retail:         ShoppingBag,
 }

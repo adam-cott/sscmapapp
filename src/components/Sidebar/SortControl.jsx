@@ -1,7 +1,9 @@
+import { MapPin, Tag, ArrowDownAZ } from 'lucide-react'
+
 const SEGMENTS = [
-  { key: 'nearest',  icon: '📍', label: 'Nearest'  },
-  { key: 'category', icon: '🏷️', label: 'Category' },
-  { key: 'az',       icon: '🔤', label: 'A–Z'      },
+  { key: 'nearest',  Icon: MapPin,      label: 'Nearest'  },
+  { key: 'category', Icon: Tag,         label: 'Category' },
+  { key: 'az',       Icon: ArrowDownAZ, label: 'A–Z'      },
 ]
 
 export default function SortControl({ sortBy, setSortBy, permissionDenied, geoLoading, hasCoords, onNearestRequest }) {
@@ -45,7 +47,7 @@ export default function SortControl({ sortBy, setSortBy, permissionDenied, geoLo
                 letterSpacing: '0.01em',
               }}
             >
-              <span className={isPending ? 'animate-pulse' : ''}>{seg.icon}</span>
+              <seg.Icon size={12} className={isPending ? 'animate-pulse' : ''} />
               <span className={isPending ? 'animate-pulse' : ''}>{isPending ? 'Getting location…' : seg.label}</span>
             </button>
           )
@@ -62,7 +64,8 @@ export default function SortControl({ sortBy, setSortBy, permissionDenied, geoLo
           textAlign: 'center',
           lineHeight: '1.4',
         }}>
-          📍 Location denied — enable in browser settings to use Nearest
+          <MapPin size={11} style={{ display: 'inline', marginRight: '4px', verticalAlign: 'middle' }} />
+          Location denied — enable in browser settings to use Nearest
         </p>
       )}
     </div>

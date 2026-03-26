@@ -1,3 +1,5 @@
+import { MapPin } from 'lucide-react'
+
 export default function LocationPrompt({ onAllow, onDecline }) {
   return (
     <div
@@ -23,7 +25,7 @@ export default function LocationPrompt({ onAllow, onDecline }) {
       <div style={{ padding: '16px 18px' }}>
         {/* Icon + title */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '6px' }}>
-          <span style={{ fontSize: '22px', lineHeight: 1 }}>📍</span>
+          <MapPin size={22} color="#0170B9" />
           <span
             style={{
               fontFamily: 'Sora, sans-serif',
