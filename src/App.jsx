@@ -143,6 +143,7 @@ export default function App() {
             <div className="flex-1 overflow-y-auto">
               <ListView deals={filteredDeals} onSelectDeal={handleSelectDeal} userCoords={coords} />
             </div>
+            <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} />
           </aside>
 
           {/* Main map area */}
