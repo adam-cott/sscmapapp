@@ -11,14 +11,14 @@ export default function BottomNav({ activeTab, onTabChange, isMapTab }) {
     <nav
       className="flex items-stretch"
       style={{
-        height: '60px',
+        height: '64px',
         background: isMapTab
-          ? 'rgba(255,255,255,0.72)'
+          ? 'rgba(255,255,255,0.92)'
           : '#ffffff',
-        backdropFilter: isMapTab ? 'blur(12px)' : 'none',
-        WebkitBackdropFilter: isMapTab ? 'blur(12px)' : 'none',
+        backdropFilter: isMapTab ? 'blur(16px)' : 'none',
+        WebkitBackdropFilter: isMapTab ? 'blur(16px)' : 'none',
         borderTop: '1px solid rgba(0,0,0,0.08)',
-        boxShadow: '0 -1px 12px rgba(0,0,0,0.06)',
+        boxShadow: '0 -2px 16px rgba(0,0,0,0.08)',
       }}
     >
       {TABS.map(tab => {
@@ -27,10 +27,21 @@ export default function BottomNav({ activeTab, onTabChange, isMapTab }) {
           <button
             key={tab.id}
             onClick={() => onTabChange(tab.id)}
-            className="flex-1 flex flex-col items-center justify-center gap-0.5 transition-colors"
-            style={{ background: 'none', border: 'none', cursor: 'pointer' }}
+            className="flex-1 flex flex-col items-center justify-center gap-0.5"
+            style={{ background: 'none', border: 'none', cursor: 'pointer', paddingTop: '6px' }}
           >
-            <span style={{ fontSize: '20px', lineHeight: 1 }}>{tab.emoji}</span>
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: '40px',
+              height: '28px',
+              borderRadius: '14px',
+              background: active ? 'var(--ssc-blue-light)' : 'transparent',
+              transition: 'background 0.15s ease',
+            }}>
+              <span style={{ fontSize: '18px', lineHeight: 1 }}>{tab.emoji}</span>
+            </div>
             <span
               style={{
                 fontSize: '10px',
