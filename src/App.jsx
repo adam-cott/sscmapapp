@@ -19,6 +19,7 @@ import BottomNav from './components/BottomNav/BottomNav'
 import FavesTab from './components/Tabs/FavesTab'
 import RewardsTab from './components/Tabs/RewardsTab'
 import SettingsTab from './components/Tabs/SettingsTab'
+import HomeTab from './components/Tabs/HomeTab'
 import { useFaves } from './hooks/useFaves'
 import { useUsageLog } from './hooks/useUsageLog'
 
@@ -128,6 +129,22 @@ export default function App() {
 
   return (
     <div className="flex flex-col h-screen overflow-hidden" style={{ backgroundColor: '#f0f4f8' }}>
+      {/* ── Home tab ────────────────────────────────────── */}
+      {activeTab === 'home' && (
+        <div className="flex flex-col flex-1 overflow-hidden">
+          <div className="flex-1 overflow-hidden">
+            <HomeTab
+              deals={dealsWithUsage}
+              usageLog={usageLog}
+              userCoords={coords}
+              onSelectDeal={handleSelectDeal}
+              onSwitchToDeals={() => setActiveTab('deals')}
+            />
+          </div>
+          <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} />
+        </div>
+      )}
+
       {/* ── Map tab ─────────────────────────────────────── */}
       {isMapTab && (
         <div className="flex flex-col flex-1 overflow-hidden">
