@@ -83,11 +83,21 @@ function SectionHeader({ title, action, onAction }) {
   )
 }
 
+// Pick up to `perCat` deals per category, spread across all categories, up to `max` total
+function spreadAcrossCategories(deals, max = 8, perCat = 2) {
+  const byCategory = {}
+  for (const deal of deals) {
+    if (!byCategory[deal.category]) byCategory[deal.category] = []
+    if (byCategory[deal.category].length < perCat) byCategory[deal.category].push(deal)
+  }
+  return Object.values(byCategory).flat().slice(0, max)
+}
+
 export default function HomeTab({ deals, usageLog, userCoords, onSelectDeal, onSwitchToDeals }) {
   const [profile] = useLocalStorage('ssc_profile_v1', {})
   const userName = profile.name || 'Student'
 
-  // Deals Near Me — sorted by distance, fallback to first 8
+  // Deals Near Me — sorted by distance, fallback to spread across categories
   const nearbyDeals = userCoords
     ? [...deals]
         .map(d => ({ deal: d, dist: getNearestDistance(d, userCoords) }))
@@ -95,7 +105,7 @@ export default function HomeTab({ deals, usageLog, userCoords, onSelectDeal, onS
         .sort((a, b) => a.dist - b.dist)
         .slice(0, 8)
         .map(({ deal }) => deal)
-    : deals.slice(0, 8)
+    : spreadAcrossCategories(deals)
 
   // Use Again — unique deal IDs from log, most recent first, non-exhausted
   const seenIds = new Set()
@@ -114,8 +124,8 @@ export default function HomeTab({ deals, usageLog, userCoords, onSelectDeal, onS
     .map(id => deals.find(d => d.id === id))
     .filter(Boolean)
 
-  // Search All — first 8 deals
-  const sampleDeals = deals.slice(0, 8)
+  // Search All — one per category sample
+  const sampleDeals = spreadAcrossCategories(deals, 8, 1)
 
   return (
     <div className="flex flex-col h-full overflow-y-auto" style={{ backgroundColor: '#f0f4f8' }}>
