@@ -130,14 +130,25 @@ export default function HomeTab({ deals, usageLog, userCoords, onSelectDeal, onS
   return (
     <div className="flex flex-col h-full overflow-y-auto" style={{ backgroundColor: '#f0f4f8' }}>
       {/* Header */}
-      <div style={{ padding: '24px 16px 0', backgroundColor: '#f0f4f8' }}>
-        <p style={{ fontSize: '12px', color: '#94a3b8', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '4px' }}>
+      <header
+        style={{
+          flexShrink: 0,
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          height: '56px',
+          background: 'linear-gradient(135deg, #013f6e 0%, #0159a0 100%)',
+          borderBottom: '1px solid rgba(255,255,255,0.08)',
+        }}
+      >
+        <div style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '15px', color: 'white', letterSpacing: '-0.01em', lineHeight: 1 }}>
           Starving Student Card
-        </p>
-        <h1 style={{ fontFamily: 'Sora, sans-serif', fontWeight: 800, fontSize: '22px', color: '#0f172a', margin: 0 }}>
+        </div>
+        <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.7)', marginTop: '3px', fontFamily: 'Sora, sans-serif' }}>
           {getGreeting()}, {userName}!
-        </h1>
-      </div>
+        </div>
+      </header>
 
       {/* Deals Near Me */}
       <SectionHeader
