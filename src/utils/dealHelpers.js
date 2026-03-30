@@ -1,3 +1,11 @@
+export function formatPhone(raw) {
+  if (!raw) return raw
+  const digits = raw.replace(/\D/g, '')
+  const local = digits.length === 11 && digits[0] === '1' ? digits.slice(1) : digits
+  if (local.length !== 10) return raw
+  return `(${local.slice(0, 3)}) ${local.slice(3, 6)}-${local.slice(6)}`
+}
+
 const EARTH_RADIUS_MILES = 3958.8
 
 export function haversineDistance(lat1, lng1, lat2, lng2) {

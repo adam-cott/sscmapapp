@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { Heart, MapPin, Clock, Phone, Globe, Calendar } from 'lucide-react'
 import { CATEGORY_COLORS, CATEGORY_LIGHT, CATEGORY_LABELS, CATEGORY_ICON } from '../../utils/categoryColors'
+import { formatPhone } from '../../utils/dealHelpers'
 import UsageTracker from '../UI/UsageTracker'
 
 export default function BottomSheet({ deal, onUse, onClose, isFave, onToggleFave }) {
@@ -131,7 +132,7 @@ export default function BottomSheet({ deal, onUse, onClose, isFave, onToggleFave
               deal.address && { Icon: MapPin, text: deal.address, href: `https://www.google.com/maps/dir/?api=1&destination=${deal.lat},${deal.lng}`, external: true },
               deal.locationRestriction && { Icon: MapPin, text: `Valid at: ${deal.locationRestriction}` },
               deal.contact?.hours && { Icon: Clock, text: deal.contact.hours },
-              deal.contact?.phone && { Icon: Phone, text: deal.contact.phone, href: `tel:${deal.contact.phone}` },
+              deal.contact?.phone && { Icon: Phone, text: formatPhone(deal.contact.phone), href: `tel:${deal.contact.phone}` },
               deal.contact?.website && { Icon: Globe, text: deal.contact.website.replace(/^https?:\/\//, ''), href: deal.contact.website, external: true },
               deal.deal.expiresAt && { Icon: Calendar, text: `Expires ${deal.deal.expiresAt}` },
             ].filter(Boolean).map((row, i) => (
