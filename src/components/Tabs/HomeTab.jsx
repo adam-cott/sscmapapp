@@ -134,7 +134,6 @@ export default function HomeTab({ deals, usageLog, userCoords, onSelectDeal, onS
         style={{
           flexShrink: 0,
           display: 'flex',
-          flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
           height: '56px',
@@ -142,13 +141,17 @@ export default function HomeTab({ deals, usageLog, userCoords, onSelectDeal, onS
           borderBottom: '1px solid rgba(255,255,255,0.08)',
         }}
       >
-        <div style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '15px', color: 'white', letterSpacing: '-0.01em', lineHeight: 1 }}>
+        <div style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '15px', color: 'white', letterSpacing: '-0.01em' }}>
           Starving Student Card
         </div>
-        <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.7)', marginTop: '3px', fontFamily: 'Sora, sans-serif' }}>
-          {getGreeting()}, {userName}!
-        </div>
       </header>
+
+      {/* Greeting */}
+      <div style={{ textAlign: 'center', padding: '20px 16px 16px', backgroundColor: '#ffffff', borderBottom: '1px solid #f1f5f9' }}>
+        <p style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '20px', color: '#0f172a', margin: 0 }}>
+          {getGreeting()}, {userName}!
+        </p>
+      </div>
 
       {/* Deals Near Me */}
       <SectionHeader
