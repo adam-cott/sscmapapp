@@ -24,7 +24,7 @@ import { useFaves } from './hooks/useFaves'
 import { useUsageLog } from './hooks/useUsageLog'
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState('deals')
+  const [activeTab, setActiveTab] = useState('home')
   const [selectedDeal, setSelectedDeal] = useState(null)
   const [selectedLocation, setSelectedLocation] = useState(null)
   const [showResetConfirm, setShowResetConfirm] = useState(false)
@@ -142,14 +142,23 @@ export default function App() {
           <div className="flex-1 overflow-hidden">
             <HomeTab
               deals={dealsWithUsage}
+              filteredDeals={filteredDeals}
               usageLog={usageLog}
               userCoords={coords}
               onSelectDeal={handleSelectDeal}
-              onSwitchToDeals={() => setActiveTab('deals')}
-              onViewNearest={() => {
-                setActiveTab('deals')
-                handleNearestRequest()
-              }}
+              searchQuery={searchQuery}
+              onSearchChange={setSearchQuery}
+              activeCategories={activeCategories}
+              onCategoryToggle={toggleCategory}
+              onClearFilters={clearFilters}
+              sortBy={sortBy}
+              setSortBy={handleSetSortBy}
+              categoryCounts={categoryCounts}
+              permissionDenied={permissionDenied}
+              geoLoading={geoLoading}
+              hasCoords={!!coords}
+              onNearestRequest={handleNearestRequest}
+              dealCount={filteredDeals.length}
             />
           </div>
           <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} />
@@ -226,20 +235,7 @@ export default function App() {
         </div>
       )}
 
-      {/* ── Deals tab ───────────────────────────────────── */}
-      {activeTab === 'deals' && (
-        <div className="flex flex-col flex-1 overflow-hidden">
-          <div className="flex-1 overflow-y-auto">
-            <div className="sticky top-0 z-10 bg-white border-b border-gray-200 px-3 py-2 shadow-sm">
-              <Sidebar {...sidebarProps} compact />
-            </div>
-            <ListView deals={filteredDeals} onSelectDeal={handleSelectDeal} userCoords={coords} />
-          </div>
-          <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} />
-        </div>
-      )}
-
-      {/* ── Faves tab ───────────────────────────────────── */}
+{/* ── Faves tab ───────────────────────────────────── */}
       {activeTab === 'faves' && (
         <div className="flex flex-col flex-1 overflow-hidden">
           <div className="flex-1 overflow-hidden">
