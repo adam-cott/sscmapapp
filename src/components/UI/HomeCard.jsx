@@ -13,7 +13,7 @@ export default function HomeCard({ deal, onClick, userCoords }) {
     <button
       onClick={onClick}
       style={{
-        width: '180px',
+        width: '148px',
         flexShrink: 0,
         textAlign: 'left',
         backgroundColor: isExhausted ? '#f8fafc' : '#ffffff',
