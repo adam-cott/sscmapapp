@@ -91,7 +91,7 @@ function spreadAcrossCategories(deals, max = 8, perCat = 2) {
   return Object.values(byCategory).flat().slice(0, max)
 }
 
-export default function HomeTab({ deals, usageLog, userCoords, onSelectDeal, onSwitchToDeals }) {
+export default function HomeTab({ deals, usageLog, userCoords, onSelectDeal, onSwitchToDeals, onViewNearest }) {
   const [profile] = useLocalStorage('ssc_profile_v1', {})
   const userName = profile.name || 'Student'
 
@@ -151,7 +151,7 @@ export default function HomeTab({ deals, usageLog, userCoords, onSelectDeal, onS
         </div>
       </header>
 
-      <Section title="Deals Near Me" deals={nearbyDeals} onSelectDeal={onSelectDeal} userCoords={userCoords} emptyMessage="No deals found nearby." />
+      <Section title="Deals Near Me" action="See All" onAction={onViewNearest} deals={nearbyDeals} onSelectDeal={onSelectDeal} userCoords={userCoords} emptyMessage="No deals found nearby." />
       <Section title="Use Again" deals={usedDeals} onSelectDeal={onSelectDeal} userCoords={userCoords} emptyMessage="Use a deal to see it here." />
       <Section title="Featured" deals={featuredDeals} onSelectDeal={onSelectDeal} userCoords={userCoords} emptyMessage="No featured deals right now." />
       <Section title="Search All Deals" action="See All" onAction={onSwitchToDeals} deals={sampleDeals} onSelectDeal={onSelectDeal} userCoords={userCoords} emptyMessage="" />

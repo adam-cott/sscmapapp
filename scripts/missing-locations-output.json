@@ -1,0 +1,3824 @@
+{
+  "summary": {
+    "generatedAt": "2026-03-23T17:47:10.565Z",
+    "businessesChecked": 155,
+    "businessesSkipped": 0,
+    "requestsUsed": 155,
+    "stoppedEarly": false,
+    "highConfidenceCount": 252,
+    "reviewCount": 20,
+    "rejectedCount": 120
+  },
+  "highConfidence": [
+    {
+      "businessName": "Curry Pizza",
+      "dealId": "pizza-002",
+      "category": "pizza",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [indian_restaurant, pizza_restaurant, halal_restaurant], state: UT",
+      "placesResult": {
+        "name": "Curry Pizza",
+        "address": "1086 South Jordan Pkwy # 111, South Jordan, UT 84095, USA",
+        "lat": 40.561257999999995,
+        "lng": -111.92160679999999
+      },
+      "distanceFromNearestExistingMeters": 15091
+    },
+    {
+      "businessName": "Curry Pizza",
+      "dealId": "pizza-002",
+      "category": "pizza",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [indian_restaurant, pizza_restaurant, halal_restaurant], state: UT",
+      "placesResult": {
+        "name": "Curry Pizza",
+        "address": "2927 S 5600 W, West Valley City, UT 84120, USA",
+        "lat": 40.706843299999996,
+        "lng": -112.02404639999999
+      },
+      "distanceFromNearestExistingMeters": 33059
+    },
+    {
+      "businessName": "Domino's",
+      "dealId": "pizza-004",
+      "category": "pizza",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [pizza_delivery, meal_delivery, food_delivery], state: UT",
+      "placesResult": {
+        "name": "Domino's Pizza",
+        "address": "120 N State St, Orem, UT 84057, USA",
+        "lat": 40.2994421,
+        "lng": -111.69561979999999
+      },
+      "distanceFromNearestExistingMeters": 21410
+    },
+    {
+      "businessName": "Domino's",
+      "dealId": "pizza-004",
+      "category": "pizza",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [pizza_delivery, meal_delivery, food_delivery], state: UT",
+      "placesResult": {
+        "name": "Domino's Pizza",
+        "address": "572 W 1600 N Suite 100 Ste100, Orem, UT 84057, USA",
+        "lat": 40.3267982,
+        "lng": -111.70978649999999
+      },
+      "distanceFromNearestExistingMeters": 19013
+    },
+    {
+      "businessName": "Domino's",
+      "dealId": "pizza-004",
+      "category": "pizza",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [pizza_delivery, meal_delivery, food_delivery], state: UT",
+      "placesResult": {
+        "name": "Domino's Pizza",
+        "address": "3370 N University Ave, Provo, UT 84604, USA",
+        "lat": 40.2783775,
+        "lng": -111.6570587
+      },
+      "distanceFromNearestExistingMeters": 25408
+    },
+    {
+      "businessName": "Domino's",
+      "dealId": "pizza-004",
+      "category": "pizza",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [pizza_delivery, meal_delivery, food_delivery], state: UT",
+      "placesResult": {
+        "name": "Domino's Pizza",
+        "address": "1274 W University Pkwy, Orem, UT 84058, USA",
+        "lat": 40.275546,
+        "lng": -111.72575
+      },
+      "distanceFromNearestExistingMeters": 20748
+    },
+    {
+      "businessName": "Domino's",
+      "dealId": "pizza-004",
+      "category": "pizza",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [pizza_delivery, meal_delivery, food_delivery], state: UT",
+      "placesResult": {
+        "name": "Domino's Pizza",
+        "address": "156 West Cougar Blvd, Provo, UT 84604, USA",
+        "lat": 40.2510626,
+        "lng": -111.6611946
+      },
+      "distanceFromNearestExistingMeters": 26760
+    },
+    {
+      "businessName": "Domino's",
+      "dealId": "pizza-004",
+      "category": "pizza",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [pizza_delivery, meal_delivery, food_delivery], state: UT",
+      "placesResult": {
+        "name": "Domino's Pizza",
+        "address": "1809 W State St Bldg A Suite A-4 Ste A-4, Pleasant Grove, UT 84062, USA",
+        "lat": 40.3690777,
+        "lng": -111.7665154
+      },
+      "distanceFromNearestExistingMeters": 13027
+    },
+    {
+      "businessName": "Domino's",
+      "dealId": "pizza-004",
+      "category": "pizza",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [pizza_delivery, meal_delivery, food_delivery], state: UT",
+      "placesResult": {
+        "name": "Domino's Pizza",
+        "address": "305 S University Ave, Provo, UT 84601, USA",
+        "lat": 40.2293038,
+        "lng": -111.6582729
+      },
+      "distanceFromNearestExistingMeters": 28434
+    },
+    {
+      "businessName": "Domino's",
+      "dealId": "pizza-004",
+      "category": "pizza",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [pizza_restaurant, fast_food_restaurant, meal_takeaway], state: UT",
+      "placesResult": {
+        "name": "Domino's Pizza",
+        "address": "3156 N 1200 W Suite 300, Lehi, UT 84043, USA",
+        "lat": 40.4274309,
+        "lng": -111.8684794
+      },
+      "distanceFromNearestExistingMeters": 5752
+    },
+    {
+      "businessName": "Domino's",
+      "dealId": "pizza-004",
+      "category": "pizza",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [pizza_delivery, meal_delivery, food_delivery], state: UT",
+      "placesResult": {
+        "name": "Domino's Pizza",
+        "address": "5345 W 11000 N, Highland, UT 84003, USA",
+        "lat": 40.4315916,
+        "lng": -111.78556999999999
+      },
+      "distanceFromNearestExistingMeters": 12020
+    },
+    {
+      "businessName": "Domino's",
+      "dealId": "pizza-004",
+      "category": "pizza",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [pizza_delivery, meal_delivery, food_delivery], state: UT",
+      "placesResult": {
+        "name": "Domino's Pizza",
+        "address": "901 W 400 S Ste 2, Springville, UT 84663, USA",
+        "lat": 40.1607385,
+        "lng": -111.62691769999999
+      },
+      "distanceFromNearestExistingMeters": 35585
+    },
+    {
+      "businessName": "Marco's Pizza",
+      "dealId": "pizza-013",
+      "category": "pizza",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [pizza_restaurant, pizza_delivery, meal_takeaway], state: UT",
+      "placesResult": {
+        "name": "Marco's Pizza",
+        "address": "2245 N University Pkwy, Provo, UT 84604, USA",
+        "lat": 40.2633267,
+        "lng": -111.66882539999999
+      },
+      "distanceFromNearestExistingMeters": 32979
+    },
+    {
+      "businessName": "Marco's Pizza",
+      "dealId": "pizza-013",
+      "category": "pizza",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [pizza_restaurant, pizza_delivery, meal_takeaway], state: UT",
+      "placesResult": {
+        "name": "Marco's Pizza",
+        "address": "45 W 800 N, Orem, UT 84057, USA",
+        "lat": 40.3115726,
+        "lng": -111.69683309999999
+      },
+      "distanceFromNearestExistingMeters": 37725
+    },
+    {
+      "businessName": "Marco's Pizza",
+      "dealId": "pizza-013",
+      "category": "pizza",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [pizza_restaurant, pizza_delivery, meal_takeaway], state: UT",
+      "placesResult": {
+        "name": "Marco's Pizza",
+        "address": "569 N State St Suite C, Lindon, UT 84042, USA",
+        "lat": 40.348413,
+        "lng": -111.72831599999999
+      },
+      "distanceFromNearestExistingMeters": 41463
+    },
+    {
+      "businessName": "Marco's Pizza",
+      "dealId": "pizza-013",
+      "category": "pizza",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [pizza_restaurant, pizza_delivery, meal_takeaway], state: UT",
+      "placesResult": {
+        "name": "Marco's Pizza",
+        "address": "4723 W Cedar Hills Dr Suite 140, Cedar Hills, UT 84062, USA",
+        "lat": 40.415102999999995,
+        "lng": -111.77186499999999
+      },
+      "distanceFromNearestExistingMeters": 48733
+    },
+    {
+      "businessName": "Marco's Pizza",
+      "dealId": "pizza-013",
+      "category": "pizza",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 50%, category types: [pizza_restaurant, restaurant, point_of_interest], state: UT",
+      "placesResult": {
+        "name": "Marco’s",
+        "address": "S Spanish Fork Pkwy, Spanish Fork, UT 84660, USA",
+        "lat": 40.0994698,
+        "lng": -111.6139597
+      },
+      "distanceFromNearestExistingMeters": 18988
+    },
+    {
+      "businessName": "Marco's Pizza",
+      "dealId": "pizza-013",
+      "category": "pizza",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [pizza_restaurant, pizza_delivery, meal_takeaway], state: UT",
+      "placesResult": {
+        "name": "Marco's Pizza",
+        "address": "95 UT-198, Salem, UT 84653, USA",
+        "lat": 40.0582315,
+        "lng": -111.6716154
+      },
+      "distanceFromNearestExistingMeters": 12286
+    },
+    {
+      "businessName": "Marco's Pizza",
+      "dealId": "pizza-013",
+      "category": "pizza",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [meal_takeaway, restaurant, point_of_interest], state: UT",
+      "placesResult": {
+        "name": "Marco's Pizza",
+        "address": "337 E Xrds Blvd Unit D, Saratoga Springs, UT 84045, USA",
+        "lat": 40.3869869,
+        "lng": -111.90861799999999
+      },
+      "distanceFromNearestExistingMeters": 47120
+    },
+    {
+      "businessName": "Marco's Pizza",
+      "dealId": "pizza-013",
+      "category": "pizza",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [pizza_restaurant, pizza_delivery, meal_takeaway], state: UT",
+      "placesResult": {
+        "name": "Marco's Pizza",
+        "address": "2572 W 12600 S, Riverton, UT 84065, USA",
+        "lat": 40.5228,
+        "lng": -111.954545
+      },
+      "distanceFromNearestExistingMeters": 62713
+    },
+    {
+      "businessName": "Marco's Pizza",
+      "dealId": "pizza-013",
+      "category": "pizza",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [pizza_restaurant, pizza_delivery, meal_takeaway], state: UT",
+      "placesResult": {
+        "name": "Marco's Pizza",
+        "address": "8520 S 1300 E, Sandy, UT 84094, USA",
+        "lat": 40.596409,
+        "lng": -111.853612
+      },
+      "distanceFromNearestExistingMeters": 69264
+    },
+    {
+      "businessName": "Papa Murphy's",
+      "dealId": "pizza-017",
+      "category": "pizza",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [pizza_restaurant, family_restaurant, vegetarian_restaurant], state: UT",
+      "placesResult": {
+        "name": "Papa Murphy's | Take 'N' Bake Pizza",
+        "address": "190 W Center St, Orem, UT 84057, USA",
+        "lat": 40.2975959,
+        "lng": -111.70051009999999
+      },
+      "distanceFromNearestExistingMeters": 9302
+    },
+    {
+      "businessName": "Papa Murphy's",
+      "dealId": "pizza-017",
+      "category": "pizza",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [pizza_restaurant, family_restaurant, vegetarian_restaurant], state: UT",
+      "placesResult": {
+        "name": "Papa Murphy's | Take 'N' Bake Pizza",
+        "address": "1659 N State St, Orem, UT 84057, USA",
+        "lat": 40.3276204,
+        "lng": -111.7098475
+      },
+      "distanceFromNearestExistingMeters": 12700
+    },
+    {
+      "businessName": "Papa Murphy's",
+      "dealId": "pizza-017",
+      "category": "pizza",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [pizza_restaurant, family_restaurant, vegetarian_restaurant], state: UT",
+      "placesResult": {
+        "name": "Papa Murphy's | Take 'N' Bake Pizza",
+        "address": "981 W State St 130 #130, Pleasant Grove, UT 84062, USA",
+        "lat": 40.365029299999996,
+        "lng": -111.7549117
+      },
+      "distanceFromNearestExistingMeters": 18050
+    },
+    {
+      "businessName": "Papa Murphy's",
+      "dealId": "pizza-017",
+      "category": "pizza",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [pizza_restaurant, family_restaurant, vegetarian_restaurant], state: UT",
+      "placesResult": {
+        "name": "Papa Murphy's | Take 'N' Bake Pizza",
+        "address": "770 E Main St Suite C, Lehi, UT 84043, USA",
+        "lat": 40.3877111,
+        "lng": -111.8371643
+      },
+      "distanceFromNearestExistingMeters": 24004
+    },
+    {
+      "businessName": "Papa Murphy's",
+      "dealId": "pizza-017",
+      "category": "pizza",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [pizza_restaurant, family_restaurant, vegetarian_restaurant], state: UT",
+      "placesResult": {
+        "name": "Papa Murphy's | Take 'N' Bake Pizza",
+        "address": "655 E 400 S Suite E, Springville, UT 84663, USA",
+        "lat": 40.161381899999995,
+        "lng": -111.5988369
+      },
+      "distanceFromNearestExistingMeters": 8281
+    },
+    {
+      "businessName": "Papa Murphy's",
+      "dealId": "pizza-017",
+      "category": "pizza",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [pizza_restaurant, family_restaurant, vegetarian_restaurant], state: UT",
+      "placesResult": {
+        "name": "Papa Murphy's | Take 'N' Bake Pizza",
+        "address": "5435 W 11000 N Suite 13, Highland, UT 84003, USA",
+        "lat": 40.4308701,
+        "lng": -111.787611
+      },
+      "distanceFromNearestExistingMeters": 25844
+    },
+    {
+      "businessName": "Papa Murphy's",
+      "dealId": "pizza-017",
+      "category": "pizza",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [pizza_restaurant, family_restaurant, vegetarian_restaurant], state: UT",
+      "placesResult": {
+        "name": "Papa Murphy's | Take 'N' Bake Pizza",
+        "address": "790 N 800 E, Spanish Fork, UT 84660, USA",
+        "lat": 40.1196644,
+        "lng": -111.63991940000001
+      },
+      "distanceFromNearestExistingMeters": 11309
+    },
+    {
+      "businessName": "Papa Murphy's",
+      "dealId": "pizza-017",
+      "category": "pizza",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [pizza_restaurant, family_restaurant, vegetarian_restaurant], state: UT",
+      "placesResult": {
+        "name": "Papa Murphy's | Take 'N' Bake Pizza",
+        "address": "791 S 930 W St Suite 102 Suite 102, Payson, UT 84651, USA",
+        "lat": 40.031788299999995,
+        "lng": -111.74804239999999
+      },
+      "distanceFromNearestExistingMeters": 22317
+    },
+    {
+      "businessName": "Papa Murphy's",
+      "dealId": "pizza-017",
+      "category": "pizza",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [pizza_restaurant, family_restaurant, vegetarian_restaurant], state: UT",
+      "placesResult": {
+        "name": "Papa Murphy's | Take 'N' Bake Pizza",
+        "address": "649 N Redwood Rd suite 100 Ste 100, Saratoga Springs, UT 84045, USA",
+        "lat": 40.373906399999996,
+        "lng": -111.9189923
+      },
+      "distanceFromNearestExistingMeters": 27932
+    },
+    {
+      "businessName": "Pier 49 Pizza",
+      "dealId": "pizza-018",
+      "category": "pizza",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [pizza_restaurant, italian_restaurant, restaurant], state: UT",
+      "placesResult": {
+        "name": "Pier 49 Pizza",
+        "address": "3210 N University Ave, Provo, UT 84604, USA",
+        "lat": 40.276165,
+        "lng": -111.656841
+      },
+      "distanceFromNearestExistingMeters": 17826
+    },
+    {
+      "businessName": "Pier 49 Pizza",
+      "dealId": "pizza-018",
+      "category": "pizza",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [pizza_restaurant, restaurant, food], state: UT",
+      "placesResult": {
+        "name": "Pier 49 Pizza Springville",
+        "address": "296 S Main St, Springville, UT 84663, USA",
+        "lat": 40.1625921,
+        "lng": -111.61100499999999
+      },
+      "distanceFromNearestExistingMeters": 29780
+    },
+    {
+      "businessName": "Pizza Hut",
+      "dealId": "pizza-020",
+      "category": "pizza",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [pizza_restaurant, meal_takeaway, restaurant], state: UT",
+      "placesResult": {
+        "name": "Pizza Hut Express",
+        "address": "175 W Center St, Orem, UT 84057, USA",
+        "lat": 40.2953147,
+        "lng": -111.69881699999999
+      },
+      "distanceFromNearestExistingMeters": 1987
+    },
+    {
+      "businessName": "Pizza Hut",
+      "dealId": "pizza-020",
+      "category": "pizza",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [pizza_delivery, pizza_restaurant, meal_delivery], state: UT",
+      "placesResult": {
+        "name": "Pizza Hut",
+        "address": "542 S 1750 W, Springville, UT 84663, USA",
+        "lat": 40.1599016,
+        "lng": -111.64288859999999
+      },
+      "distanceFromNearestExistingMeters": 10055
+    },
+    {
+      "businessName": "Pizza Hut",
+      "dealId": "pizza-020",
+      "category": "pizza",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [pizza_restaurant, meal_takeaway, restaurant], state: UT",
+      "placesResult": {
+        "name": "Pizza Hut Express",
+        "address": "Megaplex Theatres at Geneva, 600 N Mill Rd, Vineyard, UT 84058, USA",
+        "lat": 40.3075945,
+        "lng": -111.7357394
+      },
+      "distanceFromNearestExistingMeters": 2994
+    },
+    {
+      "businessName": "Pizza Hut",
+      "dealId": "pizza-020",
+      "category": "pizza",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [pizza_delivery, pizza_restaurant, meal_delivery], state: UT",
+      "placesResult": {
+        "name": "Pizza Hut",
+        "address": "1578 E 3500 N, Lehi, UT 84043, USA",
+        "lat": 40.4312076,
+        "lng": -111.8246643
+      },
+      "distanceFromNearestExistingMeters": 9097
+    },
+    {
+      "businessName": "Pizza Hut",
+      "dealId": "pizza-020",
+      "category": "pizza",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [pizza_delivery, pizza_restaurant, meal_delivery], state: UT",
+      "placesResult": {
+        "name": "Pizza Hut",
+        "address": "76 N 100 E, American Fork, UT 84003, USA",
+        "lat": 40.3781292,
+        "lng": -111.79539039999999
+      },
+      "distanceFromNearestExistingMeters": 10383
+    },
+    {
+      "businessName": "Pizza Hut",
+      "dealId": "pizza-020",
+      "category": "pizza",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 50%, category types: [pizza_restaurant, pizza_delivery, meal_delivery], state: UT",
+      "placesResult": {
+        "name": "Marco's Pizza",
+        "address": "2245 N University Pkwy, Provo, UT 84604, USA",
+        "lat": 40.2633267,
+        "lng": -111.66882539999999
+      },
+      "distanceFromNearestExistingMeters": 1796
+    },
+    {
+      "businessName": "Buffalo Wild Wings",
+      "dealId": "restaurants-034",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [chicken_wings_restaurant, meal_takeaway, restaurant], state: UT",
+      "placesResult": {
+        "name": "Buffalo Wild Wings GO",
+        "address": "677 N State St Suite B, Lindon, UT 84042, USA",
+        "lat": 40.351184599999996,
+        "lng": -111.731557
+      },
+      "distanceFromNearestExistingMeters": 9000
+    },
+    {
+      "businessName": "Chili's",
+      "dealId": "restaurants-040",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [restaurant, bar_and_grill, hamburger_restaurant], state: UT",
+      "placesResult": {
+        "name": "Chili's Grill & Bar",
+        "address": "122 E 1300 S, Orem, UT 84058, USA",
+        "lat": 40.272954999999996,
+        "lng": -111.69224899999999
+      },
+      "distanceFromNearestExistingMeters": 786
+    },
+    {
+      "businessName": "Chili's",
+      "dealId": "restaurants-040",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [restaurant, bar_and_grill, hamburger_restaurant], state: UT",
+      "placesResult": {
+        "name": "Chili's Grill & Bar",
+        "address": "765 W State Rd, American Fork, UT 84003, USA",
+        "lat": 40.385262,
+        "lng": -111.81872899999999
+      },
+      "distanceFromNearestExistingMeters": 4902
+    },
+    {
+      "businessName": "Chili's",
+      "dealId": "restaurants-040",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [restaurant, bar_and_grill, hamburger_restaurant], state: UT",
+      "placesResult": {
+        "name": "Chili's Grill & Bar",
+        "address": "757 N Redwood Rd, Saratoga Springs, UT 84045, USA",
+        "lat": 40.37504,
+        "lng": -111.917024
+      },
+      "distanceFromNearestExistingMeters": 4496
+    },
+    {
+      "businessName": "Costa Vida",
+      "dealId": "restaurants-042",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [mexican_restaurant, taco_restaurant, fast_food_restaurant], state: UT",
+      "placesResult": {
+        "name": "Costa Vida Fresh Mexican Grill",
+        "address": "557 E University Pkwy Suite B - 1, Orem, UT 84097, USA",
+        "lat": 40.2738897,
+        "lng": -111.68245189999999
+      },
+      "distanceFromNearestExistingMeters": 16497
+    },
+    {
+      "businessName": "Costa Vida",
+      "dealId": "restaurants-042",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [mexican_restaurant, taco_restaurant, fast_food_restaurant], state: UT",
+      "placesResult": {
+        "name": "Costa Vida Fresh Mexican Grill",
+        "address": "1200 N University Ave, Provo, UT 84604, USA",
+        "lat": 40.250015,
+        "lng": -111.65823499999999
+      },
+      "distanceFromNearestExistingMeters": 13989
+    },
+    {
+      "businessName": "Costa Vida",
+      "dealId": "restaurants-042",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [mexican_restaurant, taco_restaurant, fast_food_restaurant], state: UT",
+      "placesResult": {
+        "name": "Costa Vida Fresh Mexican Grill",
+        "address": "1621 N State St, Orem, UT 84057, USA",
+        "lat": 40.3270212,
+        "lng": -111.7105715
+      },
+      "distanceFromNearestExistingMeters": 10812
+    },
+    {
+      "businessName": "Costa Vida",
+      "dealId": "restaurants-042",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [mexican_restaurant, taco_restaurant, fast_food_restaurant], state: UT",
+      "placesResult": {
+        "name": "Costa Vida Fresh Mexican Grill",
+        "address": "800 W University Pkwy, Orem, UT 84058, USA",
+        "lat": 40.2780342,
+        "lng": -111.7135131
+      },
+      "distanceFromNearestExistingMeters": 14444
+    },
+    {
+      "businessName": "Costa Vida",
+      "dealId": "restaurants-042",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [mexican_restaurant, taco_restaurant, fast_food_restaurant], state: UT",
+      "placesResult": {
+        "name": "Costa Vida Fresh Mexican Grill",
+        "address": "881 W State St UNIT 120, Pleasant Grove, UT 84062, USA",
+        "lat": 40.3647543,
+        "lng": -111.75354279999999
+      },
+      "distanceFromNearestExistingMeters": 5618
+    },
+    {
+      "businessName": "Costa Vida",
+      "dealId": "restaurants-042",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [mexican_restaurant, taco_restaurant, fast_food_restaurant], state: UT",
+      "placesResult": {
+        "name": "Costa Vida Fresh Mexican Grill",
+        "address": "597 E 1000 N, Spanish Fork, UT 84660, USA",
+        "lat": 40.123156699999996,
+        "lng": -111.64427529999999
+      },
+      "distanceFromNearestExistingMeters": 338
+    },
+    {
+      "businessName": "Costa Vida",
+      "dealId": "restaurants-042",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [mexican_restaurant, taco_restaurant, fast_food_restaurant], state: UT",
+      "placesResult": {
+        "name": "Costa Vida Fresh Mexican Grill",
+        "address": "4817 Canal Blvd, Highland, UT 84003, USA",
+        "lat": 40.409842999999995,
+        "lng": -111.7737487
+      },
+      "distanceFromNearestExistingMeters": 4740
+    },
+    {
+      "businessName": "Costa Vida",
+      "dealId": "restaurants-042",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [mexican_restaurant, taco_restaurant, fast_food_restaurant], state: UT",
+      "placesResult": {
+        "name": "Costa Vida Fresh Mexican Grill",
+        "address": "3750 N Thanksgiving Way Suite E, Lehi, UT 84043, USA",
+        "lat": 40.4335629,
+        "lng": -111.89476990000001
+      },
+      "distanceFromNearestExistingMeters": 452
+    },
+    {
+      "businessName": "Dirty Dough's",
+      "dealId": "restaurants-045",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 50%, category types: [ice_cream_shop, dessert_restaurant, bakery], state: UT",
+      "placesResult": {
+        "name": "Dirty Dough Cookies - Layton",
+        "address": "729 King St #400, Layton, UT 84041, USA",
+        "lat": 41.070864799999995,
+        "lng": -111.97859989999999
+      },
+      "distanceFromNearestExistingMeters": 77076
+    },
+    {
+      "businessName": "Denny's",
+      "dealId": "restaurants-046",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [restaurant, diner, breakfast_restaurant], state: UT",
+      "placesResult": {
+        "name": "Denny's Restaurant",
+        "address": "485 N State St, Orem, UT 84057, USA",
+        "lat": 40.3063109,
+        "lng": -111.6994939
+      },
+      "distanceFromNearestExistingMeters": 1493
+    },
+    {
+      "businessName": "Denny's",
+      "dealId": "restaurants-046",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [restaurant, diner, breakfast_restaurant], state: UT",
+      "placesResult": {
+        "name": "Denny's Restaurant",
+        "address": "101 N 1200 E, Lehi, UT 84043, USA",
+        "lat": 40.3893662,
+        "lng": -111.8270874
+      },
+      "distanceFromNearestExistingMeters": 7442
+    },
+    {
+      "businessName": "Denny's",
+      "dealId": "restaurants-046",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [restaurant, diner, breakfast_restaurant], state: UT",
+      "placesResult": {
+        "name": "Denny's Restaurant",
+        "address": "592 Kirby Ln, Spanish Fork, UT 84660, USA",
+        "lat": 40.124232299999996,
+        "lng": -111.64424299999999
+      },
+      "distanceFromNearestExistingMeters": 1379
+    },
+    {
+      "businessName": "Denny's",
+      "dealId": "restaurants-046",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [restaurant, diner, breakfast_restaurant], state: UT",
+      "placesResult": {
+        "name": "Denny's Restaurant",
+        "address": "1516 N Redwood Rd, Saratoga Springs, UT 84045, USA",
+        "lat": 40.389665099999995,
+        "lng": -111.9160685
+      },
+      "distanceFromNearestExistingMeters": 4968
+    },
+    {
+      "businessName": "Denny's",
+      "dealId": "restaurants-046",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [restaurant, diner, breakfast_restaurant], state: UT",
+      "placesResult": {
+        "name": "Denny's Restaurant",
+        "address": "7051 S 1300 E, Midvale, UT 84047, USA",
+        "lat": 40.6236385,
+        "lng": -111.8551473
+      },
+      "distanceFromNearestExistingMeters": 3893
+    },
+    {
+      "businessName": "Denny's",
+      "dealId": "restaurants-046",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [restaurant, diner, breakfast_restaurant], state: UT",
+      "placesResult": {
+        "name": "Denny's Restaurant",
+        "address": "1597 S Main St, Nephi, UT 84648, USA",
+        "lat": 39.6851659,
+        "lng": -111.8365341
+      },
+      "distanceFromNearestExistingMeters": 50230
+    },
+    {
+      "businessName": "Denny's",
+      "dealId": "restaurants-046",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [restaurant, diner, breakfast_restaurant], state: UT",
+      "placesResult": {
+        "name": "Denny's Restaurant",
+        "address": "1701 W North Temple St, Salt Lake City, UT 84116, USA",
+        "lat": 40.771180799999996,
+        "lng": -111.9396979
+      },
+      "distanceFromNearestExistingMeters": 11163
+    },
+    {
+      "businessName": "El Pollo Loco",
+      "dealId": "restaurants-051",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [mexican_restaurant, fast_food_restaurant, chicken_restaurant], state: UT",
+      "placesResult": {
+        "name": "El Pollo Loco",
+        "address": "5675 Brud Dr, West Valley City, UT 84120, USA",
+        "lat": 40.7039717,
+        "lng": -112.02668709999999
+      },
+      "distanceFromNearestExistingMeters": 39006
+    },
+    {
+      "businessName": "El Pollo Loco",
+      "dealId": "restaurants-051",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [mexican_restaurant, fast_food_restaurant, chicken_restaurant], state: UT",
+      "placesResult": {
+        "name": "El Pollo Loco",
+        "address": "10590 S State St, Sandy, UT 84070, USA",
+        "lat": 40.55928,
+        "lng": -111.89125
+      },
+      "distanceFromNearestExistingMeters": 19805
+    },
+    {
+      "businessName": "LoLo Hawaiian BBQ",
+      "dealId": "restaurants-065",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [hawaiian_restaurant, barbecue_restaurant, asian_fusion_restaurant], state: UT",
+      "placesResult": {
+        "name": "LoLo Hawaiian BBQ - Orem",
+        "address": "366 E University Pkwy, Orem, UT 84058, USA",
+        "lat": 40.27224,
+        "lng": -111.6857754
+      },
+      "distanceFromNearestExistingMeters": 33390
+    },
+    {
+      "businessName": "LoLo Hawaiian BBQ",
+      "dealId": "restaurants-065",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [hawaiian_restaurant, asian_fusion_restaurant, fusion_restaurant], state: UT",
+      "placesResult": {
+        "name": "LoLo Hawaiian BBQ - Saratoga Springs",
+        "address": "173 W Lk Dr Suite C, Saratoga Springs, UT 84045, USA",
+        "lat": 40.3861613,
+        "lng": -111.9201192
+      },
+      "distanceFromNearestExistingMeters": 15697
+    },
+    {
+      "businessName": "LoLo Hawaiian BBQ",
+      "dealId": "restaurants-065",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [hawaiian_restaurant, asian_fusion_restaurant, fusion_restaurant], state: UT",
+      "placesResult": {
+        "name": "LoLo Hawaiian BBQ - West Valley City",
+        "address": "2885 S 5600 W B, West Valley City, UT 84120, USA",
+        "lat": 40.7077789,
+        "lng": -112.0242916
+      },
+      "distanceFromNearestExistingMeters": 9685
+    },
+    {
+      "businessName": "LoLo Hawaiian BBQ",
+      "dealId": "restaurants-065",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [hawaiian_restaurant, barbecue_restaurant, american_restaurant], state: UT",
+      "placesResult": {
+        "name": "LoLo Hawaiian BBQ - Ogden",
+        "address": "310 12th St, Ogden, UT 84404, USA",
+        "lat": 41.2447462,
+        "lng": -111.97276219999999
+      },
+      "distanceFromNearestExistingMeters": 66305
+    },
+    {
+      "businessName": "LoLo Hawaiian BBQ",
+      "dealId": "restaurants-065",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [hawaiian_restaurant, barbecue_restaurant, american_restaurant], state: UT",
+      "placesResult": {
+        "name": "LoLo Hawaiian BBQ - Roy",
+        "address": "1952 W 5600 S #1, Roy, UT 84067, USA",
+        "lat": 41.1619399,
+        "lng": -112.02754449999999
+      },
+      "distanceFromNearestExistingMeters": 57516
+    },
+    {
+      "businessName": "Los Hermanos",
+      "dealId": "restaurants-067",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [mexican_restaurant, latin_american_restaurant, catering_service], state: UT",
+      "placesResult": {
+        "name": "Los Hermanos",
+        "address": "395 N State St, Lindon, UT 84042, USA",
+        "lat": 40.3446711,
+        "lng": -111.72381689999999
+      },
+      "distanceFromNearestExistingMeters": 316
+    },
+    {
+      "businessName": "Rancherito's",
+      "dealId": "restaurants-071",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [mexican_restaurant, restaurant, point_of_interest], state: UT",
+      "placesResult": {
+        "name": "Rancherito's Mexican Food",
+        "address": "66 Center St, Orem, UT 84057, USA",
+        "lat": 40.2973542,
+        "lng": -111.69725609999999
+      },
+      "distanceFromNearestExistingMeters": 6182
+    },
+    {
+      "businessName": "Rancherito's",
+      "dealId": "restaurants-071",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [mexican_restaurant, restaurant, point_of_interest], state: UT",
+      "placesResult": {
+        "name": "Rancherito’s Mexican Food",
+        "address": "295 S Main St, Springville, UT 84663, USA",
+        "lat": 40.1626286,
+        "lng": -111.61029409999999
+      },
+      "distanceFromNearestExistingMeters": 7685
+    },
+    {
+      "businessName": "Rancherito's",
+      "dealId": "restaurants-071",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [mexican_restaurant, fast_food_restaurant, restaurant], state: UT",
+      "placesResult": {
+        "name": "Rancherito's Mexican Food",
+        "address": "12250 State St, Draper, UT 84020, USA",
+        "lat": 40.5277538,
+        "lng": -111.8892444
+      },
+      "distanceFromNearestExistingMeters": 21893
+    },
+    {
+      "businessName": "Rancherito's",
+      "dealId": "restaurants-071",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [mexican_restaurant, restaurant, point_of_interest], state: UT",
+      "placesResult": {
+        "name": "Rancherito's Mexican Food",
+        "address": "12642 S Redwood Rd, Riverton, UT 84065, USA",
+        "lat": 40.5216535,
+        "lng": -111.9392309
+      },
+      "distanceFromNearestExistingMeters": 23661
+    },
+    {
+      "businessName": "Rancherito's",
+      "dealId": "restaurants-071",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [mexican_restaurant, fast_food_restaurant, restaurant], state: UT",
+      "placesResult": {
+        "name": "Rancherito's Mexican Food",
+        "address": "3455 S 5600 W, West Valley City, UT 84120, USA",
+        "lat": 40.697345,
+        "lng": -112.024299
+      },
+      "distanceFromNearestExistingMeters": 43917
+    },
+    {
+      "businessName": "Rancherito's",
+      "dealId": "restaurants-071",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [mexican_restaurant, taco_restaurant, fast_food_restaurant], state: UT",
+      "placesResult": {
+        "name": "Rancherito's Mexican Food",
+        "address": "4199 S Redwood Rd, Taylorsville, UT 84123, USA",
+        "lat": 40.6798971,
+        "lng": -111.93853449999999
+      },
+      "distanceFromNearestExistingMeters": 38995
+    },
+    {
+      "businessName": "Rodizio Grill",
+      "dealId": "restaurants-074",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [brazilian_restaurant, steak_house, restaurant], state: UT",
+      "placesResult": {
+        "name": "Rodizio Grill - Provo",
+        "address": "4801 N University Ave, Provo, UT 84604, USA",
+        "lat": 40.298773399999995,
+        "lng": -111.6577191
+      },
+      "distanceFromNearestExistingMeters": 168
+    },
+    {
+      "businessName": "Rumbi Island Grill",
+      "dealId": "restaurants-077",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [restaurant, point_of_interest, food], state: UT",
+      "placesResult": {
+        "name": "Rumbi Island Grill",
+        "address": "299 E University Pkwy, Orem, UT 84058, USA",
+        "lat": 40.2737937,
+        "lng": -111.6897463
+      },
+      "distanceFromNearestExistingMeters": 70635
+    },
+    {
+      "businessName": "Rumbi Island Grill",
+      "dealId": "restaurants-077",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [restaurant, point_of_interest, food], state: UT",
+      "placesResult": {
+        "name": "Rumbi Island Grill",
+        "address": "1228 N Cyn Crk Pkwy, Spanish Fork, UT 84660, USA",
+        "lat": 40.125631,
+        "lng": -111.6398292
+      },
+      "distanceFromNearestExistingMeters": 87646
+    },
+    {
+      "businessName": "Rumbi Island Grill",
+      "dealId": "restaurants-077",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [restaurant, point_of_interest, food], state: UT",
+      "placesResult": {
+        "name": "Rumbi Island Grill",
+        "address": "987 W 500 N, American Fork, UT 84003, USA",
+        "lat": 40.3881312,
+        "lng": -111.8238928
+      },
+      "distanceFromNearestExistingMeters": 56111
+    },
+    {
+      "businessName": "Rumbi Island Grill",
+      "dealId": "restaurants-077",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [restaurant, point_of_interest, food], state: UT",
+      "placesResult": {
+        "name": "Rumbi Island Grill",
+        "address": "148 E 12300 S Suite B, Draper, UT 84020, USA",
+        "lat": 40.5262086,
+        "lng": -111.88662049999999
+      },
+      "distanceFromNearestExistingMeters": 40460
+    },
+    {
+      "businessName": "Taco Time",
+      "dealId": "restaurants-082",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 50%, category types: [sports_bar, pub, bar_and_grill], state: UT",
+      "placesResult": {
+        "name": "Bout Time Pub & Grub",
+        "address": "568 N Mill Rd B106, Vineyard, UT 84058, USA",
+        "lat": 40.3074997,
+        "lng": -111.73647679999999
+      },
+      "distanceFromNearestExistingMeters": 1426
+    },
+    {
+      "businessName": "Taco Time",
+      "dealId": "restaurants-082",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [mexican_restaurant, restaurant, food], state: UT",
+      "placesResult": {
+        "name": "Taco Time",
+        "address": "1939 W 12600 S, Riverton, UT 84065, USA",
+        "lat": 40.52196070000001,
+        "lng": -111.9431429
+      },
+      "distanceFromNearestExistingMeters": 29953
+    },
+    {
+      "businessName": "Taco Time",
+      "dealId": "restaurants-082",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 50%, category types: [mexican_restaurant, fast_food_restaurant, catering_service], state: UT",
+      "placesResult": {
+        "name": "Holy Taco",
+        "address": "327 E 1200 S Unit # 3, Orem, UT 84058, USA",
+        "lat": 40.2754124,
+        "lng": -111.68744600000001
+      },
+      "distanceFromNearestExistingMeters": 4992
+    },
+    {
+      "businessName": "Taco Time",
+      "dealId": "restaurants-082",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 50%, category types: [mexican_restaurant, restaurant, food], state: UT",
+      "placesResult": {
+        "name": "Taco Nation",
+        "address": "1290 US-89, Orem, UT 84097, USA",
+        "lat": 40.273886100000006,
+        "lng": -111.685587
+      },
+      "distanceFromNearestExistingMeters": 5222
+    },
+    {
+      "businessName": "Taco Time",
+      "dealId": "restaurants-082",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [mexican_restaurant, restaurant, food], state: UT",
+      "placesResult": {
+        "name": "Taco Time",
+        "address": "6195 Highland Dr, Salt Lake City, UT 84121, USA",
+        "lat": 40.638825499999996,
+        "lng": -111.83427479999999
+      },
+      "distanceFromNearestExistingMeters": 37548
+    },
+    {
+      "businessName": "Taco Time",
+      "dealId": "restaurants-082",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [mexican_restaurant, restaurant, food], state: UT",
+      "placesResult": {
+        "name": "Taco Time",
+        "address": "3911 S State St, Salt Lake City, UT 84107, USA",
+        "lat": 40.686775,
+        "lng": -111.8879625
+      },
+      "distanceFromNearestExistingMeters": 43965
+    },
+    {
+      "businessName": "The Smoked Taco",
+      "dealId": "restaurants-085",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [taco_restaurant, barbecue_restaurant, tex_mex_restaurant], state: UT",
+      "placesResult": {
+        "name": "The Smoked Taco",
+        "address": "863 S N County Blvd, Pleasant Grove, UT 84062, USA",
+        "lat": 40.3536748,
+        "lng": -111.76291640000001
+      },
+      "distanceFromNearestExistingMeters": 6361
+    },
+    {
+      "businessName": "The Smoked Taco",
+      "dealId": "restaurants-085",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [taco_restaurant, barbecue_restaurant, tex_mex_restaurant], state: UT",
+      "placesResult": {
+        "name": "The Smoked Taco",
+        "address": "1048 N Redwood Rd Suite A, Saratoga Springs, UT 84045, USA",
+        "lat": 40.3812122,
+        "lng": -111.91522030000002
+      },
+      "distanceFromNearestExistingMeters": 5201
+    },
+    {
+      "businessName": "Village Inn",
+      "dealId": "restaurants-088",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [breakfast_restaurant, diner, bakery], state: UT",
+      "placesResult": {
+        "name": "Village Inn",
+        "address": "11454 District Dr, South Jordan, UT 84095, USA",
+        "lat": 40.542985099999996,
+        "lng": -111.98362499999999
+      },
+      "distanceFromNearestExistingMeters": 17200
+    },
+    {
+      "businessName": "Village Inn",
+      "dealId": "restaurants-088",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [breakfast_restaurant, diner, bakery], state: UT",
+      "placesResult": {
+        "name": "Village Inn",
+        "address": "5941 S State St, Murray, UT 84107, USA",
+        "lat": 40.641943999999995,
+        "lng": -111.88860269999999
+      },
+      "distanceFromNearestExistingMeters": 11658
+    },
+    {
+      "businessName": "Wing Nutz",
+      "dealId": "restaurants-091",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [chicken_wings_restaurant, family_restaurant, hamburger_restaurant], state: UT",
+      "placesResult": {
+        "name": "Wing Nutz",
+        "address": "1218 N Cyn Crk Pkwy, Spanish Fork, UT 84660, USA",
+        "lat": 40.125458300000005,
+        "lng": -111.63963319999999
+      },
+      "distanceFromNearestExistingMeters": 17230
+    },
+    {
+      "businessName": "Wing Nutz",
+      "dealId": "restaurants-091",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [chicken_wings_restaurant, restaurant, food], state: UT",
+      "placesResult": {
+        "name": "Wing Nutz",
+        "address": "9260 Village Shop Dr, Sandy, UT 84094, USA",
+        "lat": 40.583281,
+        "lng": -111.86296499999999
+      },
+      "distanceFromNearestExistingMeters": 6513
+    },
+    {
+      "businessName": "Wingers",
+      "dealId": "restaurants-092",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [chicken_wings_restaurant, bar_and_grill, pub], state: UT",
+      "placesResult": {
+        "name": "WINGERS Restaurant & Alehouse",
+        "address": "3671 S 2700 W, West Valley City, UT 84119, USA",
+        "lat": 40.6925257,
+        "lng": -111.9575123
+      },
+      "distanceFromNearestExistingMeters": 3582
+    },
+    {
+      "businessName": "Wingstop",
+      "dealId": "restaurants-094",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [chicken_wings_restaurant, restaurant, point_of_interest], state: UT",
+      "placesResult": {
+        "name": "Wingstop",
+        "address": "2275 N University Pkwy, Provo, UT 84604, USA",
+        "lat": 40.263794999999995,
+        "lng": -111.66955829999999
+      },
+      "distanceFromNearestExistingMeters": 1523
+    },
+    {
+      "businessName": "Wingstop",
+      "dealId": "restaurants-094",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [chicken_wings_restaurant, chicken_restaurant, restaurant], state: UT",
+      "placesResult": {
+        "name": "Wingstop",
+        "address": "1106 N Cyn Crk Pkwy Unit G, Spanish Fork, UT 84660, USA",
+        "lat": 40.1231533,
+        "lng": -111.6408711
+      },
+      "distanceFromNearestExistingMeters": 17192
+    },
+    {
+      "businessName": "Wingstop",
+      "dealId": "restaurants-094",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [chicken_wings_restaurant, chicken_restaurant, restaurant], state: UT",
+      "placesResult": {
+        "name": "Wingstop",
+        "address": "1129 W 400 S Suite 403, Springville, UT 84663, USA",
+        "lat": 40.1608111,
+        "lng": -111.6306276
+      },
+      "distanceFromNearestExistingMeters": 13358
+    },
+    {
+      "businessName": "Wingstop",
+      "dealId": "restaurants-094",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [chicken_wings_restaurant, restaurant, point_of_interest], state: UT",
+      "placesResult": {
+        "name": "Wingstop",
+        "address": "3601 Digital Dr Unit 302, Lehi, UT 84043, USA",
+        "lat": 40.4322015,
+        "lng": -111.88747769999999
+      },
+      "distanceFromNearestExistingMeters": 13746
+    },
+    {
+      "businessName": "Wingstop",
+      "dealId": "restaurants-094",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [chicken_wings_restaurant, chicken_restaurant, restaurant], state: UT",
+      "placesResult": {
+        "name": "Wingstop",
+        "address": "3526 W 1940 N Unit E, Lehi, UT 84043, USA",
+        "lat": 40.412044099999996,
+        "lng": -111.9055602
+      },
+      "distanceFromNearestExistingMeters": 13766
+    },
+    {
+      "businessName": "Wingstop",
+      "dealId": "restaurants-094",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [chicken_wings_restaurant, chicken_restaurant, restaurant], state: UT",
+      "placesResult": {
+        "name": "Wingstop",
+        "address": "1140 N Redwood Rd, Saratoga Springs, UT 84045, USA",
+        "lat": 40.383475399999995,
+        "lng": -111.9158781
+      },
+      "distanceFromNearestExistingMeters": 13422
+    },
+    {
+      "businessName": "Wingstop",
+      "dealId": "restaurants-094",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [chicken_wings_restaurant, chicken_restaurant, restaurant], state: UT",
+      "placesResult": {
+        "name": "Wingstop",
+        "address": "4315 Pony Express Parkway #130, Eagle Mountain, UT 84005, USA",
+        "lat": 40.3100658,
+        "lng": -112.0139968
+      },
+      "distanceFromNearestExistingMeters": 21859
+    },
+    {
+      "businessName": "Wingstop",
+      "dealId": "restaurants-094",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [chicken_wings_restaurant, chicken_restaurant, restaurant], state: UT",
+      "placesResult": {
+        "name": "Wingstop",
+        "address": "4182 13400 S Suite 600, Riverton, UT 84096, USA",
+        "lat": 40.508252899999995,
+        "lng": -111.9906761
+      },
+      "distanceFromNearestExistingMeters": 17943
+    },
+    {
+      "businessName": "Yummy's Korean BBQ",
+      "dealId": "restaurants-095",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [korean_restaurant, sushi_restaurant, japanese_restaurant], state: UT",
+      "placesResult": {
+        "name": "Yummy's Korean BBQ, Meat Jun, Corn Dogs, Ramen & Musubi",
+        "address": "198 W Center St, Provo, UT 84601, USA",
+        "lat": 40.234012799999995,
+        "lng": -111.6620555
+      },
+      "distanceFromNearestExistingMeters": 6981
+    },
+    {
+      "businessName": "Yummy's Korean BBQ",
+      "dealId": "restaurants-095",
+      "category": "restaurants",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [restaurant, food, point_of_interest], state: UT",
+      "placesResult": {
+        "name": "Yummy's Korean BBQ",
+        "address": "282 Crossroads Blvd Suite A, Saratoga Springs, UT 84045, USA",
+        "lat": 40.3882237,
+        "lng": -111.9100733
+      },
+      "distanceFromNearestExistingMeters": 21207
+    },
+    {
+      "businessName": "Back Nine Golf",
+      "dealId": "entertainment-096",
+      "category": "entertainment",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [indoor_golf_course, golf_course, athletic_field], state: UT",
+      "placesResult": {
+        "name": "The Back Nine Golf - Spanish Fork",
+        "address": "1168 E 1130 N, Spanish Fork, UT 84660, USA",
+        "lat": 40.1240357,
+        "lng": -111.63438649999999
+      },
+      "distanceFromNearestExistingMeters": 29723
+    },
+    {
+      "businessName": "Color Me Mine",
+      "dealId": "entertainment-105",
+      "category": "entertainment",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [store, point_of_interest, establishment], state: UT",
+      "placesResult": {
+        "name": "Color Me Mine",
+        "address": "3751 W Center Park Dr Suite 120, West Jordan, UT 84084, USA",
+        "lat": 40.6197484,
+        "lng": -111.97996979999999
+      },
+      "distanceFromNearestExistingMeters": 44726
+    },
+    {
+      "businessName": "FatCats",
+      "dealId": "entertainment-112",
+      "category": "entertainment",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [bowling_alley, video_arcade, movie_theater], state: UT",
+      "placesResult": {
+        "name": "FatCats Saratoga Springs",
+        "address": "212 Pioneer Crossing, Saratoga Springs, UT 84045, USA",
+        "lat": 40.3756354,
+        "lng": -111.92095680000001
+      },
+      "distanceFromNearestExistingMeters": 26323
+    },
+    {
+      "businessName": "FatCats",
+      "dealId": "entertainment-112",
+      "category": "entertainment",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [bowling_alley, video_arcade, pizza_restaurant], state: UT",
+      "placesResult": {
+        "name": "FatCats Bluffdale",
+        "address": "13901 S Redwood Rd, Bluffdale, UT 84065, USA",
+        "lat": 40.499047399999995,
+        "lng": -111.9341317
+      },
+      "distanceFromNearestExistingMeters": 36259
+    },
+    {
+      "businessName": "GetOut Games",
+      "dealId": "entertainment-117",
+      "category": "entertainment",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 50%, category types: [water_park, zoo, amusement_park], state: UT",
+      "placesResult": {
+        "name": "GetOut",
+        "address": "3301 N Thanksgiving Way Suite 440, Lehi, UT 84043, USA",
+        "lat": 40.4290335,
+        "lng": -111.8911531
+      },
+      "distanceFromNearestExistingMeters": 28998
+    },
+    {
+      "businessName": "Jack & Jill Lanes",
+      "dealId": "entertainment-124",
+      "category": "entertainment",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [bowling_alley, video_arcade, cafe], state: UT",
+      "placesResult": {
+        "name": "Jack & Jill Bowling Lanes",
+        "address": "105 S 700 E St, American Fork, UT 84003, USA",
+        "lat": 40.3746764,
+        "lng": -111.7787101
+      },
+      "distanceFromNearestExistingMeters": 5268
+    },
+    {
+      "businessName": "The Rift Augmented Reality",
+      "dealId": "entertainment-151",
+      "category": "entertainment",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 50%, category types: [tourist_attraction, art_museum, museum], state: UT",
+      "placesResult": {
+        "name": "The Rift",
+        "address": "1200 Towne Centre Blvd suite 1158, Provo, UT 84601, USA",
+        "lat": 40.2161531,
+        "lng": -111.66259930000001
+      },
+      "distanceFromNearestExistingMeters": 189
+    },
+    {
+      "businessName": "BYU Store",
+      "dealId": "retail-163",
+      "category": "retail",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [department_store, convenience_store, candy_store], state: UT",
+      "placesResult": {
+        "name": "BYU Store",
+        "address": "800 E Campus Dr, Provo, UT 84602, USA",
+        "lat": 40.2484703,
+        "lng": -111.64788809999999
+      },
+      "distanceFromNearestExistingMeters": 160
+    },
+    {
+      "businessName": "Fabulous Freddy's",
+      "dealId": "retail-172",
+      "category": "retail",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [car_wash, convenience_store, food_store], state: UT",
+      "placesResult": {
+        "name": "Fabulous Freddy's",
+        "address": "1065 9400 S, Sandy, UT 84094, USA",
+        "lat": 40.5810579,
+        "lng": -111.86044509999999
+      },
+      "distanceFromNearestExistingMeters": 21501
+    },
+    {
+      "businessName": "G.O.A.T Haircuts",
+      "dealId": "retail-175",
+      "category": "retail",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [barber_shop, hair_care, health], state: UT",
+      "placesResult": {
+        "name": "G.O.A.T. Haircuts",
+        "address": "160 E University Pkwy Suite J, Orem, UT 84058, USA",
+        "lat": 40.2730617,
+        "lng": -111.690962
+      },
+      "distanceFromNearestExistingMeters": 3988
+    },
+    {
+      "businessName": "G.O.A.T Haircuts",
+      "dealId": "retail-175",
+      "category": "retail",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [barber_shop, beauty_salon, hair_salon], state: UT",
+      "placesResult": {
+        "name": "G.O.A.T. Haircuts",
+        "address": "529 S 500 E St Suite #C, American Fork, UT 84003, USA",
+        "lat": 40.3659324,
+        "lng": -111.7847671
+      },
+      "distanceFromNearestExistingMeters": 4731
+    },
+    {
+      "businessName": "G.O.A.T Haircuts",
+      "dealId": "retail-175",
+      "category": "retail",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [barber_shop, hair_care, health], state: UT",
+      "placesResult": {
+        "name": "G.O.A.T. Haircuts",
+        "address": "1276 N Cyn Crk Pkwy, Spanish Fork, UT 84660, USA",
+        "lat": 40.126163399999996,
+        "lng": -111.63871759999999
+      },
+      "distanceFromNearestExistingMeters": 19367
+    },
+    {
+      "businessName": "G.O.A.T Haircuts",
+      "dealId": "retail-175",
+      "category": "retail",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [barber_shop, beauty_salon, hair_salon], state: UT",
+      "placesResult": {
+        "name": "G.O.A.T. Haircuts",
+        "address": "1870 W Traverse Pkwy Ste C, Lehi, UT 84043, USA",
+        "lat": 40.434611,
+        "lng": -111.880057
+      },
+      "distanceFromNearestExistingMeters": 6486
+    },
+    {
+      "businessName": "G.O.A.T Haircuts",
+      "dealId": "retail-175",
+      "category": "retail",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 50%, category types: [barber_shop, hair_care, health], state: UT",
+      "placesResult": {
+        "name": "Beard Bar - Haircuts and Beard Care",
+        "address": "570 E University Pkwy Suite #5, Orem, UT 84097, USA",
+        "lat": 40.2728336,
+        "lng": -111.6815833
+      },
+      "distanceFromNearestExistingMeters": 3524
+    },
+    {
+      "businessName": "G.O.A.T Haircuts",
+      "dealId": "retail-175",
+      "category": "retail",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [barber_shop, hair_care, health], state: UT",
+      "placesResult": {
+        "name": "G.O.A.T. Haircuts",
+        "address": "10709 S Redwood Rd STE 104, South Jordan, UT 84095, USA",
+        "lat": 40.556685,
+        "lng": -111.9381457
+      },
+      "distanceFromNearestExistingMeters": 19832
+    },
+    {
+      "businessName": "G.O.A.T Haircuts",
+      "dealId": "retail-175",
+      "category": "retail",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [barber_shop, beauty_salon, hair_salon], state: UT",
+      "placesResult": {
+        "name": "G.O.A.T. Haircuts",
+        "address": "11052 S State St Suite B, Sandy, UT 84070, USA",
+        "lat": 40.5505517,
+        "lng": -111.8912311
+      },
+      "distanceFromNearestExistingMeters": 18586
+    },
+    {
+      "businessName": "Grease Monkey",
+      "dealId": "retail-176",
+      "category": "retail",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [car_repair, service, point_of_interest], state: UT",
+      "placesResult": {
+        "name": "Grease Monkey",
+        "address": "589 130 N, American Fork, UT 84003, USA",
+        "lat": 40.379305099999996,
+        "lng": -111.8139997
+      },
+      "distanceFromNearestExistingMeters": 5278
+    },
+    {
+      "businessName": "Grease Monkey",
+      "dealId": "retail-176",
+      "category": "retail",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [car_repair, service, point_of_interest], state: UT",
+      "placesResult": {
+        "name": "Grease Monkey",
+        "address": "1027 S 1100 W, Lehi, UT 84043, USA",
+        "lat": 40.375610099999996,
+        "lng": -111.86624420000001
+      },
+      "distanceFromNearestExistingMeters": 6988
+    },
+    {
+      "businessName": "Grease Monkey",
+      "dealId": "retail-176",
+      "category": "retail",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [car_repair, service, point_of_interest], state: UT",
+      "placesResult": {
+        "name": "Grease Monkey",
+        "address": "214 E 13800 S, Draper, UT 84020, USA",
+        "lat": 40.5003627,
+        "lng": -111.88445589999999
+      },
+      "distanceFromNearestExistingMeters": 9035
+    },
+    {
+      "businessName": "Grease Monkey",
+      "dealId": "retail-176",
+      "category": "retail",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [car_repair, service, point_of_interest], state: UT",
+      "placesResult": {
+        "name": "Grease Monkey",
+        "address": "3668 W 11400 S, South Jordan, UT 84095, USA",
+        "lat": 40.5446338,
+        "lng": -111.97834050000002
+      },
+      "distanceFromNearestExistingMeters": 17893
+    },
+    {
+      "businessName": "Grease Monkey",
+      "dealId": "retail-176",
+      "category": "retail",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [car_repair, service, point_of_interest], state: UT",
+      "placesResult": {
+        "name": "Grease Monkey",
+        "address": "9492 Highland Dr, Sandy, UT 84092, USA",
+        "lat": 40.57861,
+        "lng": -111.83608199999999
+      },
+      "distanceFromNearestExistingMeters": 16390
+    },
+    {
+      "businessName": "Grease Monkey",
+      "dealId": "retail-176",
+      "category": "retail",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [car_repair, service, point_of_interest], state: UT",
+      "placesResult": {
+        "name": "Grease Monkey",
+        "address": "10352 S Beckstead Ln, South Jordan, UT 84095, USA",
+        "lat": 40.563259099999996,
+        "lng": -111.936352
+      },
+      "distanceFromNearestExistingMeters": 17291
+    },
+    {
+      "businessName": "Grease Monkey",
+      "dealId": "retail-176",
+      "category": "retail",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [car_repair, service, point_of_interest], state: UT",
+      "placesResult": {
+        "name": "Grease Monkey",
+        "address": "5688 13400 S, Herriman, UT 84096, USA",
+        "lat": 40.5082564,
+        "lng": -112.02632419999999
+      },
+      "distanceFromNearestExistingMeters": 18824
+    },
+    {
+      "businessName": "Healing Vibes",
+      "dealId": "retail-180",
+      "category": "retail",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 50%, category types: [point_of_interest, store, establishment], state: UT",
+      "placesResult": {
+        "name": "Healing Mountain Crystals *OREM",
+        "address": "1636 S State St #A, Orem, UT 84097, USA",
+        "lat": 40.2671402,
+        "lng": -111.682543
+      },
+      "distanceFromNearestExistingMeters": 4232
+    },
+    {
+      "businessName": "Healing Vibes",
+      "dealId": "retail-180",
+      "category": "retail",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 50%, category types: [gift_shop, jewelry_store, point_of_interest], state: UT",
+      "placesResult": {
+        "name": "Healing Mountain Crystals",
+        "address": "363 S 500 E #210, Salt Lake City, UT 84102, USA",
+        "lat": 40.761464499999995,
+        "lng": -111.87622990000001
+      },
+      "distanceFromNearestExistingMeters": 61494
+    },
+    {
+      "businessName": "Jiffy Lube",
+      "dealId": "retail-182",
+      "category": "retail",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [car_repair, service, point_of_interest], state: UT",
+      "placesResult": {
+        "name": "Jiffy Lube",
+        "address": "91 N State St, Orem, UT 84057, USA",
+        "lat": 40.2987804,
+        "lng": -111.6962592
+      },
+      "distanceFromNearestExistingMeters": 502
+    },
+    {
+      "businessName": "Jiffy Lube",
+      "dealId": "retail-182",
+      "category": "retail",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [car_repair, service, point_of_interest], state: UT",
+      "placesResult": {
+        "name": "Jiffy Lube",
+        "address": "991 S State St, Orem, UT 84097, USA",
+        "lat": 40.278889799999995,
+        "lng": -111.6864208
+      },
+      "distanceFromNearestExistingMeters": 1290
+    },
+    {
+      "businessName": "Jiffy Lube",
+      "dealId": "retail-182",
+      "category": "retail",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [car_repair, service, point_of_interest], state: UT",
+      "placesResult": {
+        "name": "Jiffy Lube",
+        "address": "809 N State St, Orem, UT 84057, USA",
+        "lat": 40.312294099999995,
+        "lng": -111.70215359999999
+      },
+      "distanceFromNearestExistingMeters": 627
+    },
+    {
+      "businessName": "Jiffy Lube",
+      "dealId": "retail-182",
+      "category": "retail",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [car_repair, service, point_of_interest], state: UT",
+      "placesResult": {
+        "name": "Jiffy Lube",
+        "address": "625 N State St, Lindon, UT 84042, USA",
+        "lat": 40.3500656,
+        "lng": -111.7303134
+      },
+      "distanceFromNearestExistingMeters": 4246
+    },
+    {
+      "businessName": "Jiffy Lube",
+      "dealId": "retail-182",
+      "category": "retail",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [car_repair, service, point_of_interest], state: UT",
+      "placesResult": {
+        "name": "Jiffy Lube",
+        "address": "290 W 1230 N, Provo, UT 84604, USA",
+        "lat": 40.2508743,
+        "lng": -111.6636709
+      },
+      "distanceFromNearestExistingMeters": 500
+    },
+    {
+      "businessName": "Jiffy Lube",
+      "dealId": "retail-182",
+      "category": "retail",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [car_repair, service, point_of_interest], state: UT",
+      "placesResult": {
+        "name": "Jiffy Lube",
+        "address": "836 S University Ave, Provo, UT 84601, USA",
+        "lat": 40.2227658,
+        "lng": -111.6591273
+      },
+      "distanceFromNearestExistingMeters": 1056
+    },
+    {
+      "businessName": "Taylor Andrews Academy",
+      "dealId": "retail-194",
+      "category": "retail",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [hair_salon, beauty_salon, hair_care], state: UT",
+      "placesResult": {
+        "name": "Taylor Andrews Academy",
+        "address": "9052 S 1510 W, West Jordan, UT 84088, USA",
+        "lat": 40.5868664,
+        "lng": -111.934316
+      },
+      "distanceFromNearestExistingMeters": 42567
+    },
+    {
+      "businessName": "ZAGG",
+      "dealId": "retail-198",
+      "category": "retail",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [point_of_interest, service, store], state: UT",
+      "placesResult": {
+        "name": "ZAGG Traverse Mountain",
+        "address": "1820 W Traverse Pkwy Suite G, Lehi, UT 84043, USA",
+        "lat": 40.434166499999996,
+        "lng": -111.8792879
+      },
+      "distanceFromNearestExistingMeters": 359
+    },
+    {
+      "businessName": "ZAGG",
+      "dealId": "retail-198",
+      "category": "retail",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [point_of_interest, service, store], state: UT",
+      "placesResult": {
+        "name": "ZAGG Saratoga Springs",
+        "address": "119 Crossroads Blvd STE B, Saratoga Springs, UT 84045, USA",
+        "lat": 40.3869293,
+        "lng": -111.91877099999999
+      },
+      "distanceFromNearestExistingMeters": 429
+    },
+    {
+      "businessName": "ZAGG",
+      "dealId": "retail-198",
+      "category": "retail",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [point_of_interest, service, store], state: UT",
+      "placesResult": {
+        "name": "ZAGG Mountain View Village",
+        "address": "4539 W Partridge Hill Ln, Riverton, UT 84096, USA",
+        "lat": 40.508244999999995,
+        "lng": -111.9993016
+      },
+      "distanceFromNearestExistingMeters": 12749
+    },
+    {
+      "businessName": "ZAGG",
+      "dealId": "retail-198",
+      "category": "retail",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [point_of_interest, service, store], state: UT",
+      "placesResult": {
+        "name": "ZAGG Sandy",
+        "address": "98 W 11400 S, Sandy, UT 84070, USA",
+        "lat": 40.5448775,
+        "lng": -111.8927001
+      },
+      "distanceFromNearestExistingMeters": 8715
+    },
+    {
+      "businessName": "ZAGG",
+      "dealId": "retail-198",
+      "category": "retail",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [point_of_interest, service, store], state: UT",
+      "placesResult": {
+        "name": "ZAGG The District",
+        "address": "3761 W Parkway Plaza Dr, South Jordan, UT 84095, USA",
+        "lat": 40.5400019,
+        "lng": -111.98064889999999
+      },
+      "distanceFromNearestExistingMeters": 10685
+    },
+    {
+      "businessName": "ZAGG",
+      "dealId": "retail-198",
+      "category": "retail",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [point_of_interest, service, store], state: UT",
+      "placesResult": {
+        "name": "ZAGG Fashion Place",
+        "address": "6191 State State, Murray, UT 84107, USA",
+        "lat": 40.636007,
+        "lng": -111.88583
+      },
+      "distanceFromNearestExistingMeters": 2853
+    },
+    {
+      "businessName": "ZAGG",
+      "dealId": "retail-198",
+      "category": "retail",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [point_of_interest, service, store], state: UT",
+      "placesResult": {
+        "name": "ZAGG Valley Fair",
+        "address": "3601 2700 W STE B144, West Valley City, UT 84119, USA",
+        "lat": 40.6935985,
+        "lng": -111.95556499999999
+      },
+      "distanceFromNearestExistingMeters": 8747
+    },
+    {
+      "businessName": "Auntie Anne's",
+      "dealId": "free-201",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [bakery, food_store, food], state: UT",
+      "placesResult": {
+        "name": "Auntie Anne's - University Place Mall - Orem",
+        "address": "575 E University Pkwy M214, Orem, UT 84097, USA",
+        "lat": 40.2756571,
+        "lng": -111.6797637
+      },
+      "distanceFromNearestExistingMeters": 24850
+    },
+    {
+      "businessName": "Auntie Anne's",
+      "dealId": "free-201",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [restaurant, food, point_of_interest], state: UT",
+      "placesResult": {
+        "name": "Auntie Anne's",
+        "address": "3768 E Campus Dr, Eagle Mountain, UT 84005, USA",
+        "lat": 40.3802546,
+        "lng": -111.97178799999999
+      },
+      "distanceFromNearestExistingMeters": 9558
+    },
+    {
+      "businessName": "Culver's",
+      "dealId": "free-213",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [american_restaurant, ice_cream_shop, hamburger_restaurant], state: UT",
+      "placesResult": {
+        "name": "Culver’s",
+        "address": "943 N 700 E, Spanish Fork, UT 84660, USA",
+        "lat": 40.1220719,
+        "lng": -111.6429905
+      },
+      "distanceFromNearestExistingMeters": 22138
+    },
+    {
+      "businessName": "Culver's",
+      "dealId": "free-213",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [american_restaurant, ice_cream_shop, hamburger_restaurant], state: UT",
+      "placesResult": {
+        "name": "Culver’s",
+        "address": "3372 South Jordan Pkwy, South Jordan, UT 84095, USA",
+        "lat": 40.562515399999995,
+        "lng": -111.9715705
+      },
+      "distanceFromNearestExistingMeters": 22860
+    },
+    {
+      "businessName": "Culver's",
+      "dealId": "free-213",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [american_restaurant, ice_cream_shop, hamburger_restaurant], state: UT",
+      "placesResult": {
+        "name": "Culver’s",
+        "address": "7165 Bingham Jct Blvd, Midvale, UT 84047, USA",
+        "lat": 40.6212734,
+        "lng": -111.91177359999999
+      },
+      "distanceFromNearestExistingMeters": 26866
+    },
+    {
+      "businessName": "Culver's",
+      "dealId": "free-213",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [american_restaurant, ice_cream_shop, hamburger_restaurant], state: UT",
+      "placesResult": {
+        "name": "Culver's",
+        "address": "7697 5600 W, West Jordan, UT 84081, USA",
+        "lat": 40.6111476,
+        "lng": -112.0238294
+      },
+      "distanceFromNearestExistingMeters": 29798
+    },
+    {
+      "businessName": "Culver's",
+      "dealId": "free-213",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [american_restaurant, ice_cream_shop, hamburger_restaurant], state: UT",
+      "placesResult": {
+        "name": "Culver’s",
+        "address": "3407 S 5600 W, West Valley City, UT 84120, USA",
+        "lat": 40.698214199999995,
+        "lng": -112.0242593
+      },
+      "distanceFromNearestExistingMeters": 38245
+    },
+    {
+      "businessName": "Dairy Queen",
+      "dealId": "free-215",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [fast_food_restaurant, ice_cream_shop, dessert_shop], state: UT",
+      "placesResult": {
+        "name": "Dairy Queen Grill & Chill",
+        "address": "813 E 800 N, Orem, UT 84097, USA",
+        "lat": 40.3115041,
+        "lng": -111.6762794
+      },
+      "distanceFromNearestExistingMeters": 2141
+    },
+    {
+      "businessName": "Dairy Queen",
+      "dealId": "free-215",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [restaurant, ice_cream_shop, dessert_shop], state: UT",
+      "placesResult": {
+        "name": "Dairy Queen Grill & Chill",
+        "address": "2025 W Center St, Provo, UT 84601, USA",
+        "lat": 40.2335935,
+        "lng": -111.69425
+      },
+      "distanceFromNearestExistingMeters": 7890
+    },
+    {
+      "businessName": "Dairy Queen",
+      "dealId": "free-215",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [fast_food_restaurant, ice_cream_shop, dessert_shop], state: UT",
+      "placesResult": {
+        "name": "Dairy Queen Grill & Chill",
+        "address": "795 UT-198, Salem, UT 84653, USA",
+        "lat": 40.066518099999996,
+        "lng": -111.66710499999999
+      },
+      "distanceFromNearestExistingMeters": 15283
+    },
+    {
+      "businessName": "Dairy Queen",
+      "dealId": "free-215",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [fast_food_restaurant, ice_cream_shop, dessert_shop], state: UT",
+      "placesResult": {
+        "name": "Dairy Queen Grill & Chill",
+        "address": "74 S Highland Dr, Santaquin, UT 84655, USA",
+        "lat": 39.9765898,
+        "lng": -111.7694119
+      },
+      "distanceFromNearestExistingMeters": 5117
+    },
+    {
+      "businessName": "Dairy Queen",
+      "dealId": "free-215",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [fast_food_restaurant, ice_cream_shop, dessert_shop], state: UT",
+      "placesResult": {
+        "name": "Dairy Queen Grill & Chill",
+        "address": "1557 Eagle Mountain Blvd, Eagle Mountain, UT 84005, USA",
+        "lat": 40.307092999999995,
+        "lng": -112.01324000000001
+      },
+      "distanceFromNearestExistingMeters": 7463
+    },
+    {
+      "businessName": "Dairy Queen",
+      "dealId": "free-215",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [fast_food_restaurant, ice_cream_shop, dessert_shop], state: UT",
+      "placesResult": {
+        "name": "Dairy Queen Grill & Chill",
+        "address": "9327 S 1300 E, Sandy, UT 84094, USA",
+        "lat": 40.5818945,
+        "lng": -111.85283659999999
+      },
+      "distanceFromNearestExistingMeters": 26074
+    },
+    {
+      "businessName": "Dairy Queen",
+      "dealId": "free-215",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [fast_food_restaurant, ice_cream_shop, dessert_shop], state: UT",
+      "placesResult": {
+        "name": "Dairy Queen Grill & Chill",
+        "address": "7872 S Redwood Rd, West Jordan, UT 84088, USA",
+        "lat": 40.607800999999995,
+        "lng": -111.9391977
+      },
+      "distanceFromNearestExistingMeters": 27220
+    },
+    {
+      "businessName": "Dairy Queen",
+      "dealId": "free-215",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [ice_cream_shop, dessert_shop, confectionery], state: UT",
+      "placesResult": {
+        "name": "Dairy Queen (Treat)",
+        "address": "South Towne Center, 10450 S State St Space #fc-10, Sandy, UT 84070, USA",
+        "lat": 40.562643,
+        "lng": -111.8946344
+      },
+      "distanceFromNearestExistingMeters": 22919
+    },
+    {
+      "businessName": "Daylight Donuts",
+      "dealId": "free-216",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [donut_shop, bakery, point_of_interest], state: UT",
+      "placesResult": {
+        "name": "Daylight Donuts",
+        "address": "125 E State Rd, Pleasant Grove, UT 84062, USA",
+        "lat": 40.3577276,
+        "lng": -111.73818209999999
+      },
+      "distanceFromNearestExistingMeters": 15427
+    },
+    {
+      "businessName": "Daylight Donuts",
+      "dealId": "free-216",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [donut_shop, bakery, point_of_interest], state: UT",
+      "placesResult": {
+        "name": "Daylight Donuts",
+        "address": "412 Alpine Hwy, Alpine, UT 84004, USA",
+        "lat": 40.4475081,
+        "lng": -111.77961889999999
+      },
+      "distanceFromNearestExistingMeters": 14358
+    },
+    {
+      "businessName": "Daylight Donuts",
+      "dealId": "free-216",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [donut_shop, bakery, dessert_shop], state: UT",
+      "placesResult": {
+        "name": "Daylight Donuts Sandy",
+        "address": "51 E 11400 S, Sandy, UT 84070, USA",
+        "lat": 40.5449218,
+        "lng": -111.88998249999999
+      },
+      "distanceFromNearestExistingMeters": 19167
+    },
+    {
+      "businessName": "Franz Bakery Outlet",
+      "dealId": "free-222",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [bakery, discount_store, food_store], state: UT",
+      "placesResult": {
+        "name": "Franz Bakery Outlet",
+        "address": "1177 W 100 N, Provo, UT 84601, USA",
+        "lat": 40.2344417,
+        "lng": -111.679362
+      },
+      "distanceFromNearestExistingMeters": 7786
+    },
+    {
+      "businessName": "Jamba Juice",
+      "dealId": "free-228",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 50%, category types: [juice_shop, restaurant, point_of_interest], state: UT",
+      "placesResult": {
+        "name": "Jamba",
+        "address": "Brigham Young University, Provo, UT 84602, USA",
+        "lat": 40.2485515,
+        "lng": -111.6472221
+      },
+      "distanceFromNearestExistingMeters": 1589
+    },
+    {
+      "businessName": "Jamba Juice",
+      "dealId": "free-228",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 50%, category types: [juice_shop, point_of_interest, food], state: UT",
+      "placesResult": {
+        "name": "Jamba",
+        "address": "3601 Digital Dr Ste 206, Lehi, UT 84043, USA",
+        "lat": 40.4320628,
+        "lng": -111.88815029999999
+      },
+      "distanceFromNearestExistingMeters": 10460
+    },
+    {
+      "businessName": "Jamba Juice",
+      "dealId": "free-228",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 50%, category types: [cafe, juice_shop, coffee_shop], state: UT",
+      "placesResult": {
+        "name": "Juice 'n Java",
+        "address": "535 N State St, Orem, UT 84057, USA",
+        "lat": 40.3069444,
+        "lng": -111.6997222
+      },
+      "distanceFromNearestExistingMeters": 3404
+    },
+    {
+      "businessName": "Jamba Juice",
+      "dealId": "free-228",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 50%, category types: [juice_shop, point_of_interest, food], state: UT",
+      "placesResult": {
+        "name": "Jamba",
+        "address": "77 W 10600 S, Sandy, UT 84070, USA",
+        "lat": 40.557946699999995,
+        "lng": -111.8917141
+      },
+      "distanceFromNearestExistingMeters": 3565
+    },
+    {
+      "businessName": "Jamba Juice",
+      "dealId": "free-228",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 50%, category types: [juice_shop, point_of_interest, food], state: UT",
+      "placesResult": {
+        "name": "Jamba",
+        "address": "11507 S Pkwy Plaza Dr Ste. 200, South Jordan, UT 84095, USA",
+        "lat": 40.5428401,
+        "lng": -111.9792583
+      },
+      "distanceFromNearestExistingMeters": 7601
+    },
+    {
+      "businessName": "Jamba Juice",
+      "dealId": "free-228",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 50%, category types: [juice_shop, point_of_interest, food], state: UT",
+      "placesResult": {
+        "name": "Jamba",
+        "address": "14728 Marketplace Dr Ste. A, Herriman, UT 84096, USA",
+        "lat": 40.4835645,
+        "lng": -111.9868421
+      },
+      "distanceFromNearestExistingMeters": 9709
+    },
+    {
+      "businessName": "Jersey Mikes",
+      "dealId": "free-229",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [sandwich_shop, deli, catering_service], state: UT",
+      "placesResult": {
+        "name": "Jersey Mike's Subs",
+        "address": "661 E 450 N Suite 101, Vineyard, UT 84058, USA",
+        "lat": 40.3053586,
+        "lng": -111.7382712
+      },
+      "distanceFromNearestExistingMeters": 3938
+    },
+    {
+      "businessName": "Jersey Mikes",
+      "dealId": "free-229",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [sandwich_shop, deli, catering_service], state: UT",
+      "placesResult": {
+        "name": "Jersey Mike's Subs",
+        "address": "1882 W Pleasant Grove Blvd Suite A, Pleasant Grove, UT 84062, USA",
+        "lat": 40.3535815,
+        "lng": -111.7654419
+      },
+      "distanceFromNearestExistingMeters": 6746
+    },
+    {
+      "businessName": "Jersey Mikes",
+      "dealId": "free-229",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [sandwich_shop, deli, catering_service], state: UT",
+      "placesResult": {
+        "name": "Jersey Mike's Subs",
+        "address": "1129 W 400 S Suite 405, Springville, UT 84663, USA",
+        "lat": 40.160616000000005,
+        "lng": -111.63060259999999
+      },
+      "distanceFromNearestExistingMeters": 10487
+    },
+    {
+      "businessName": "Jersey Mikes",
+      "dealId": "free-229",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [sandwich_shop, deli, catering_service], state: UT",
+      "placesResult": {
+        "name": "Jersey Mike's Subs",
+        "address": "1254 N Cyn Crk Pkwy, Spanish Fork, UT 84660, USA",
+        "lat": 40.125976,
+        "lng": -111.6394165
+      },
+      "distanceFromNearestExistingMeters": 14080
+    },
+    {
+      "businessName": "Jersey Mikes",
+      "dealId": "free-229",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [sandwich_shop, deli, catering_service], state: UT",
+      "placesResult": {
+        "name": "Jersey Mike's Subs",
+        "address": "923 N Redwood Rd, Saratoga Springs, UT 84045, USA",
+        "lat": 40.3787661,
+        "lng": -111.9179659
+      },
+      "distanceFromNearestExistingMeters": 6766
+    },
+    {
+      "businessName": "Jersey Mikes",
+      "dealId": "free-229",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [sandwich_shop, deli, catering_service], state: UT",
+      "placesResult": {
+        "name": "Jersey Mike's Subs",
+        "address": "14662 Porter Rockwell Blvd Ste. B, Bluffdale, UT 84065, USA",
+        "lat": 40.4850472,
+        "lng": -111.90621519999999
+      },
+      "distanceFromNearestExistingMeters": 6262
+    },
+    {
+      "businessName": "Klucks Krispy Chicken",
+      "dealId": "free-230",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [chicken_restaurant, fast_food_restaurant, restaurant], state: UT",
+      "placesResult": {
+        "name": "Kluck's Krispy Chicken",
+        "address": "1066 S 750 E, Orem, UT 84097, USA",
+        "lat": 40.277364,
+        "lng": -111.67751799999999
+      },
+      "distanceFromNearestExistingMeters": 22946
+    },
+    {
+      "businessName": "McDonald's",
+      "dealId": "free-238",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [fast_food_restaurant, hamburger_restaurant, coffee_shop], state: UT",
+      "placesResult": {
+        "name": "McDonald's",
+        "address": "15 N State St, Orem, UT 84057, USA",
+        "lat": 40.2976618,
+        "lng": -111.6959297
+      },
+      "distanceFromNearestExistingMeters": 2801
+    },
+    {
+      "businessName": "McDonald's",
+      "dealId": "free-238",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [fast_food_restaurant, hamburger_restaurant, ice_cream_shop], state: UT",
+      "placesResult": {
+        "name": "McDonald's",
+        "address": "650 E 800 S, Orem, UT 84097, USA",
+        "lat": 40.281898999999996,
+        "lng": -111.6801721
+      },
+      "distanceFromNearestExistingMeters": 3828
+    },
+    {
+      "businessName": "McDonald's",
+      "dealId": "free-238",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [fast_food_restaurant, hamburger_restaurant, coffee_shop], state: UT",
+      "placesResult": {
+        "name": "McDonald's",
+        "address": "1265 S Sandhill Rd, Orem, UT 84058, USA",
+        "lat": 40.274274999999996,
+        "lng": -111.71275299999999
+      },
+      "distanceFromNearestExistingMeters": 4332
+    },
+    {
+      "businessName": "McDonald's",
+      "dealId": "free-238",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [fast_food_restaurant, hamburger_restaurant, coffee_shop], state: UT",
+      "placesResult": {
+        "name": "McDonald's",
+        "address": "312 State St, Pleasant Grove, UT 84062, USA",
+        "lat": 40.3548908,
+        "lng": -111.73617619999999
+      },
+      "distanceFromNearestExistingMeters": 3854
+    },
+    {
+      "businessName": "McDonald's",
+      "dealId": "free-238",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [fast_food_restaurant, hamburger_restaurant, coffee_shop], state: UT",
+      "placesResult": {
+        "name": "McDonald's",
+        "address": "48 S 850 E, Lehi, UT 84043, USA",
+        "lat": 40.387788,
+        "lng": -111.836196
+      },
+      "distanceFromNearestExistingMeters": 4145
+    },
+    {
+      "businessName": "Roxberry Juice Co.",
+      "dealId": "free-255",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [juice_shop, breakfast_restaurant, dessert_restaurant], state: UT",
+      "placesResult": {
+        "name": "Roxberry Juice Co.",
+        "address": "563 E 1000 N, Spanish Fork, UT 84660, USA",
+        "lat": 40.123398699999996,
+        "lng": -111.6448851
+      },
+      "distanceFromNearestExistingMeters": 6445
+    },
+    {
+      "businessName": "Roxberry Juice Co.",
+      "dealId": "free-255",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [juice_shop, point_of_interest, food], state: UT",
+      "placesResult": {
+        "name": "Roxberry Juice Co. Draper (Drive Thru)",
+        "address": "1283 E Draper Pkwy, Draper, UT 84020, USA",
+        "lat": 40.529382999999996,
+        "lng": -111.85506529999999
+      },
+      "distanceFromNearestExistingMeters": 10987
+    },
+    {
+      "businessName": "Sip-N",
+      "dealId": "free-257",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [dessert_shop, confectionery, food_store], state: UT",
+      "placesResult": {
+        "name": "Sip-N Drinks & Treats",
+        "address": "955 UT-51, Spanish Fork, UT 84660, USA",
+        "lat": 40.1220192,
+        "lng": -111.6305184
+      },
+      "distanceFromNearestExistingMeters": 2597
+    },
+    {
+      "businessName": "Sonic",
+      "dealId": "free-258",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [fast_food_restaurant, hot_dog_stand, hamburger_restaurant], state: UT",
+      "placesResult": {
+        "name": "Sonic Drive-In",
+        "address": "971 N Main St, Spanish Fork, UT 84660, USA",
+        "lat": 40.1223539,
+        "lng": -111.65517709999999
+      },
+      "distanceFromNearestExistingMeters": 14435
+    },
+    {
+      "businessName": "Splash Drinks and Treats",
+      "dealId": "free-259",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 50%, category types: [dessert_shop, confectionery, food_store], state: UT",
+      "placesResult": {
+        "name": "Sip-N Drinks & Treats",
+        "address": "9748 Oakbrook Dr Ste 1, Highland, UT 84003, USA",
+        "lat": 40.409321,
+        "lng": -111.7746044
+      },
+      "distanceFromNearestExistingMeters": 5273
+    },
+    {
+      "businessName": "The Yard Milkshake Bar",
+      "dealId": "free-272",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [ice_cream_shop, dessert_shop, confectionery], state: UT",
+      "placesResult": {
+        "name": "The Yard Milkshake Bar",
+        "address": "Next to the Food Court, 575 E University Pkwy Space M-224, Orem, UT 84097, USA",
+        "lat": 40.275575499999995,
+        "lng": -111.67850949999999
+      },
+      "distanceFromNearestExistingMeters": 201
+    },
+    {
+      "businessName": "Tropical Smoothie Cafe",
+      "dealId": "free-274",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [restaurant, juice_shop, point_of_interest], state: UT",
+      "placesResult": {
+        "name": "Tropical Smoothie Cafe",
+        "address": "4585 13400 S, Riverton, UT 84096, USA",
+        "lat": 40.5074502,
+        "lng": -112.0002892
+      },
+      "distanceFromNearestExistingMeters": 49775
+    },
+    {
+      "businessName": "Tropical Smoothie Cafe",
+      "dealId": "free-274",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [juice_shop, fast_food_restaurant, sandwich_shop], state: UT",
+      "placesResult": {
+        "name": "Tropical Smoothie Cafe",
+        "address": "9645 S State St, Sandy, UT 84070, USA",
+        "lat": 40.5761293,
+        "lng": -111.89029889999999
+      },
+      "distanceFromNearestExistingMeters": 51233
+    },
+    {
+      "businessName": "Tropical Smoothie Cafe",
+      "dealId": "free-274",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [juice_shop, fast_food_restaurant, sandwich_shop], state: UT",
+      "placesResult": {
+        "name": "Tropical Smoothie Cafe",
+        "address": "7812 S 1300 E, Sandy, UT 84094, USA",
+        "lat": 40.609428,
+        "lng": -111.85497799999999
+      },
+      "distanceFromNearestExistingMeters": 53452
+    },
+    {
+      "businessName": "Tropical Smoothie Cafe",
+      "dealId": "free-274",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [juice_shop, fast_food_restaurant, sandwich_shop], state: UT",
+      "placesResult": {
+        "name": "Tropical Smoothie Cafe",
+        "address": "2419 N Main St, Tooele, UT 84074, USA",
+        "lat": 40.573330899999995,
+        "lng": -112.29749079999999
+      },
+      "distanceFromNearestExistingMeters": 72889
+    },
+    {
+      "businessName": "UVU Scoops",
+      "dealId": "free-279",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 50%, category types: [restaurant, point_of_interest, food], state: UT",
+      "placesResult": {
+        "name": "UVU Dining Services",
+        "address": "Student Center, 800 W University Pkwy, Orem, UT 84058, USA",
+        "lat": 40.27822,
+        "lng": -111.713619
+      },
+      "distanceFromNearestExistingMeters": 161
+    },
+    {
+      "businessName": "Yogurtland",
+      "dealId": "free-282",
+      "category": "free",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [ice_cream_shop, dessert_shop, confectionery], state: UT",
+      "placesResult": {
+        "name": "Yogurtland West Jordan",
+        "address": "7211 Plaza Center Dr Ste #140, West Jordan, UT 84084, USA",
+        "lat": 40.62055,
+        "lng": -111.97897999999999
+      },
+      "distanceFromNearestExistingMeters": 46086
+    },
+    {
+      "businessName": "Carl's Jr",
+      "dealId": "treats-299",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [fast_food_restaurant, hamburger_restaurant, american_restaurant], state: UT",
+      "placesResult": {
+        "name": "Carl's Jr.",
+        "address": "602 S 500 E St, American Fork, UT 84003, USA",
+        "lat": 40.3647364,
+        "lng": -111.78605209999999
+      },
+      "distanceFromNearestExistingMeters": 8286
+    },
+    {
+      "businessName": "Carl's Jr",
+      "dealId": "treats-299",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [fast_food_restaurant, hamburger_restaurant, american_restaurant], state: UT",
+      "placesResult": {
+        "name": "Carl's Jr.",
+        "address": "770 N Main St, Spanish Fork, UT 84660, USA",
+        "lat": 40.1197908,
+        "lng": -111.6542922
+      },
+      "distanceFromNearestExistingMeters": 14614
+    },
+    {
+      "businessName": "Cinnabon",
+      "dealId": "treats-301",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [bakery, food_store, point_of_interest], state: UT",
+      "placesResult": {
+        "name": "Cinnabon",
+        "address": "1078 E State Rd, American Fork, UT 84003, USA",
+        "lat": 40.3696254,
+        "lng": -111.77000539999999
+      },
+      "distanceFromNearestExistingMeters": 12975
+    },
+    {
+      "businessName": "Cinnabon",
+      "dealId": "treats-301",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [bakery, food_store, point_of_interest], state: UT",
+      "placesResult": {
+        "name": "Cinnabon",
+        "address": "3569 N Thanksgiving Way, Lehi, UT 84043, USA",
+        "lat": 40.4318715,
+        "lng": -111.89444019999999
+      },
+      "distanceFromNearestExistingMeters": 25155
+    },
+    {
+      "businessName": "Cinnabon",
+      "dealId": "treats-301",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [bakery, food_store, point_of_interest], state: UT",
+      "placesResult": {
+        "name": "Cinnabon",
+        "address": "14817 Minuteman Dr, Draper, UT 84020, USA",
+        "lat": 40.481993599999996,
+        "lng": -111.89821959999999
+      },
+      "distanceFromNearestExistingMeters": 29495
+    },
+    {
+      "businessName": "Cinnabon",
+      "dealId": "treats-301",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [bakery, food_store, point_of_interest], state: UT",
+      "placesResult": {
+        "name": "Cinnabon",
+        "address": "435 N Main St, Heber City, UT 84032, USA",
+        "lat": 40.5133898,
+        "lng": -111.41414359999999
+      },
+      "distanceFromNearestExistingMeters": 34835
+    },
+    {
+      "businessName": "Cold Stone Creamery",
+      "dealId": "treats-304",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [ice_cream_shop, cake_shop, bakery], state: UT",
+      "placesResult": {
+        "name": "Cold Stone Creamery",
+        "address": "456 E State St #300, American Fork, UT 84003, USA",
+        "lat": 40.3735674,
+        "lng": -111.78663309999999
+      },
+      "distanceFromNearestExistingMeters": 15682
+    },
+    {
+      "businessName": "Cold Stone Creamery",
+      "dealId": "treats-304",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [ice_cream_shop, cake_shop, bakery], state: UT",
+      "placesResult": {
+        "name": "Cold Stone Creamery",
+        "address": "1376 N Redwood Rd, Saratoga Springs, UT 84045, USA",
+        "lat": 40.3868186,
+        "lng": -111.9146439
+      },
+      "distanceFromNearestExistingMeters": 24861
+    },
+    {
+      "businessName": "Cold Stone Creamery",
+      "dealId": "treats-304",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [ice_cream_shop, cake_shop, bakery], state: UT",
+      "placesResult": {
+        "name": "Cold Stone Creamery",
+        "address": "62 E 12300 S, Draper, UT 84020, USA",
+        "lat": 40.5264211,
+        "lng": -111.88918869999999
+      },
+      "distanceFromNearestExistingMeters": 34560
+    },
+    {
+      "businessName": "Cold Stone Creamery",
+      "dealId": "treats-304",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [ice_cream_shop, cake_shop, bakery], state: UT",
+      "placesResult": {
+        "name": "Cold Stone Creamery",
+        "address": "11585 District Dr #700, South Jordan, UT 84095, USA",
+        "lat": 40.5409527,
+        "lng": -111.9803668
+      },
+      "distanceFromNearestExistingMeters": 40479
+    },
+    {
+      "businessName": "Cold Stone Creamery",
+      "dealId": "treats-304",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [ice_cream_shop, cake_shop, bakery], state: UT",
+      "placesResult": {
+        "name": "Cold Stone Creamery",
+        "address": "10493 S Redwood Rd, South Jordan, UT 84095, USA",
+        "lat": 40.5605877,
+        "lng": -111.9382494
+      },
+      "distanceFromNearestExistingMeters": 40024
+    },
+    {
+      "businessName": "Cold Stone Creamery",
+      "dealId": "treats-304",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [ice_cream_shop, cake_shop, bakery], state: UT",
+      "placesResult": {
+        "name": "Cold Stone Creamery",
+        "address": "5287 S State St, Murray, UT 84107, USA",
+        "lat": 40.656380399999996,
+        "lng": -111.8874709
+      },
+      "distanceFromNearestExistingMeters": 47308
+    },
+    {
+      "businessName": "Cold Stone Creamery",
+      "dealId": "treats-304",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [ice_cream_shop, cake_shop, bakery], state: UT",
+      "placesResult": {
+        "name": "Cold Stone Creamery",
+        "address": "3781 W Center Park Dr Ste 120, West Jordan, UT 84084, USA",
+        "lat": 40.6195004,
+        "lng": -111.9806311
+      },
+      "distanceFromNearestExistingMeters": 47452
+    },
+    {
+      "businessName": "Cold Stone Creamery",
+      "dealId": "treats-304",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [ice_cream_shop, cake_shop, bakery], state: UT",
+      "placesResult": {
+        "name": "Cold Stone Creamery",
+        "address": "1197 N Main St E, Tooele, UT 84074, USA",
+        "lat": 40.5548807,
+        "lng": -112.29882169999999
+      },
+      "distanceFromNearestExistingMeters": 62329
+    },
+    {
+      "businessName": "Freddy's Frozen Custard & Steakburgers",
+      "dealId": "treats-314",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [hamburger_restaurant, fast_food_restaurant, american_restaurant], state: UT",
+      "placesResult": {
+        "name": "Freddy's Frozen Custard & Steakburgers",
+        "address": "1025 S University Ave, Provo, UT 84601, USA",
+        "lat": 40.220027699999996,
+        "lng": -111.65835799999999
+      },
+      "distanceFromNearestExistingMeters": 777
+    },
+    {
+      "businessName": "Freddy's Frozen Custard & Steakburgers",
+      "dealId": "treats-314",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [hamburger_restaurant, fast_food_restaurant, american_restaurant], state: UT",
+      "placesResult": {
+        "name": "Freddy's Frozen Custard & Steakburgers",
+        "address": "3567 E Pony Express Pkwy, Eagle Mountain, UT 84005, USA",
+        "lat": 40.362643,
+        "lng": -111.9761293
+      },
+      "distanceFromNearestExistingMeters": 10594
+    },
+    {
+      "businessName": "Freddy's Frozen Custard & Steakburgers",
+      "dealId": "treats-314",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [hamburger_restaurant, fast_food_restaurant, american_restaurant], state: UT",
+      "placesResult": {
+        "name": "Freddy's Frozen Custard & Steakburgers",
+        "address": "1146 Draper Pkwy, Draper, UT 84020, USA",
+        "lat": 40.527887299999996,
+        "lng": -111.85816009999999
+      },
+      "distanceFromNearestExistingMeters": 12875
+    },
+    {
+      "businessName": "Freddy's Frozen Custard & Steakburgers",
+      "dealId": "treats-314",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [hamburger_restaurant, american_restaurant, restaurant], state: UT",
+      "placesResult": {
+        "name": "Freddy's Frozen Custard & Steakburgers",
+        "address": "13331 Old Liberty Way, Riverton, UT 84096, USA",
+        "lat": 40.5091007,
+        "lng": -111.98695839999999
+      },
+      "distanceFromNearestExistingMeters": 14640
+    },
+    {
+      "businessName": "Freddy's Frozen Custard & Steakburgers",
+      "dealId": "treats-314",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [hamburger_restaurant, fast_food_restaurant, american_restaurant], state: UT",
+      "placesResult": {
+        "name": "Freddy's Frozen Custard & Steakburgers",
+        "address": "716 Blue Vista Ln, Midvale, UT 84047, USA",
+        "lat": 40.6199547,
+        "lng": -111.91065280000001
+      },
+      "distanceFromNearestExistingMeters": 23337
+    },
+    {
+      "businessName": "Freddy's Frozen Custard & Steakburgers",
+      "dealId": "treats-314",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [hamburger_restaurant, fast_food_restaurant, american_restaurant], state: UT",
+      "placesResult": {
+        "name": "Freddy's Frozen Custard & Steakburgers",
+        "address": "5502 High Market Dr, West Valley City, UT 84120, USA",
+        "lat": 40.712810499999996,
+        "lng": -112.0226247
+      },
+      "distanceFromNearestExistingMeters": 35819
+    },
+    {
+      "businessName": "Great Harvest Bread Co.",
+      "dealId": "treats-315",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [bakery, sandwich_shop, food_store], state: UT",
+      "placesResult": {
+        "name": "Great Harvest Bread Co.",
+        "address": "1774 N University Pkwy #48, Provo, UT 84604, USA",
+        "lat": 40.257841299999995,
+        "lng": -111.66087809999999
+      },
+      "distanceFromNearestExistingMeters": 268
+    },
+    {
+      "businessName": "Great Harvest Bread Co.",
+      "dealId": "treats-315",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [bakery, pastry_shop, breakfast_restaurant], state: UT",
+      "placesResult": {
+        "name": "Great Harvest Bread Co. Bakery & Cafe",
+        "address": "6357 S Redwood Rd, Taylorsville, UT 84123, USA",
+        "lat": 40.6356359,
+        "lng": -111.9382559
+      },
+      "distanceFromNearestExistingMeters": 48026
+    },
+    {
+      "businessName": "Great Harvest Bread Co.",
+      "dealId": "treats-315",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 75%, category types: [bakery, breakfast_restaurant, sandwich_shop], state: UT",
+      "placesResult": {
+        "name": "Great Harvest Bread Company",
+        "address": "217 E 12300 S J5, Draper, UT 84020, USA",
+        "lat": 40.5280597,
+        "lng": -111.8847851
+      },
+      "distanceFromNearestExistingMeters": 35422
+    },
+    {
+      "businessName": "Great Harvest Bread Co.",
+      "dealId": "treats-315",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [bakery, food_store, restaurant], state: UT",
+      "placesResult": {
+        "name": "Great Harvest Bread Co.",
+        "address": "3591 W 11400 S D, South Jordan, UT 84095, USA",
+        "lat": 40.5438727,
+        "lng": -111.9761882
+      },
+      "distanceFromNearestExistingMeters": 41386
+    },
+    {
+      "businessName": "Great Harvest Bread Co.",
+      "dealId": "treats-315",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [bakery, sandwich_shop, meal_takeaway], state: UT",
+      "placesResult": {
+        "name": "Great Harvest Bread Co. Bakery & Cafe",
+        "address": "2201 N 2000 W, Clinton, UT 84015, USA",
+        "lat": 41.145548000000005,
+        "lng": -112.065021
+      },
+      "distanceFromNearestExistingMeters": 104372
+    },
+    {
+      "businessName": "Great Harvest Bread Co.",
+      "dealId": "treats-315",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [bakery, catering_service, breakfast_restaurant], state: UT",
+      "placesResult": {
+        "name": "Great Harvest Bread Co.",
+        "address": "96 N Main St, Layton, UT 84041, USA",
+        "lat": 41.061751699999995,
+        "lng": -111.96688189999999
+      },
+      "distanceFromNearestExistingMeters": 93006
+    },
+    {
+      "businessName": "Great Harvest Bread Co.",
+      "dealId": "treats-315",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [bakery, food_store, food], state: UT",
+      "placesResult": {
+        "name": "Great Harvest Bread Co.",
+        "address": "43 500 S, Bountiful, UT 84010, USA",
+        "lat": 40.8845762,
+        "lng": -111.8798357
+      },
+      "distanceFromNearestExistingMeters": 72071
+    },
+    {
+      "businessName": "Great Harvest Bread Co.",
+      "dealId": "treats-315",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [bakery, sandwich_shop, meal_takeaway], state: UT",
+      "placesResult": {
+        "name": "Great Harvest Bread Co.",
+        "address": "1231 E 4800 S, Ogden, UT 84403, USA",
+        "lat": 41.1758662,
+        "lng": -111.9483233
+      },
+      "distanceFromNearestExistingMeters": 104891
+    },
+    {
+      "businessName": "Great Harvest Bread Co.",
+      "dealId": "treats-315",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [bakery, sandwich_shop, wholesaler], state: UT",
+      "placesResult": {
+        "name": "Great Harvest Bread Co.",
+        "address": "55 W Center St, Logan, UT 84321, USA",
+        "lat": 41.731544799999995,
+        "lng": -111.8364513
+      },
+      "distanceFromNearestExistingMeters": 164544
+    },
+    {
+      "businessName": "Jack in the Box",
+      "dealId": "treats-318",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [fast_food_restaurant, hamburger_restaurant, chicken_restaurant], state: UT",
+      "placesResult": {
+        "name": "Jack in the Box",
+        "address": "11432 District Dr, South Jordan, UT 84095, USA",
+        "lat": 40.543661,
+        "lng": -111.981802
+      },
+      "distanceFromNearestExistingMeters": 18387
+    },
+    {
+      "businessName": "Jack in the Box",
+      "dealId": "treats-318",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [fast_food_restaurant, hamburger_restaurant, chicken_restaurant], state: UT",
+      "placesResult": {
+        "name": "Jack in the Box",
+        "address": "61 E 2100 S, Salt Lake City, UT 84115, USA",
+        "lat": 40.7257463,
+        "lng": -111.8893466
+      },
+      "distanceFromNearestExistingMeters": 37870
+    },
+    {
+      "businessName": "Jack in the Box",
+      "dealId": "treats-318",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [fast_food_restaurant, hamburger_restaurant, chicken_restaurant], state: UT",
+      "placesResult": {
+        "name": "Jack in the Box",
+        "address": "5456 S 5600 W, West Valley City, UT 84118, USA",
+        "lat": 40.652027,
+        "lng": -112.02528099999999
+      },
+      "distanceFromNearestExistingMeters": 30983
+    },
+    {
+      "businessName": "Jack in the Box",
+      "dealId": "treats-318",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [fast_food_restaurant, hamburger_restaurant, chicken_restaurant], state: UT",
+      "placesResult": {
+        "name": "Jack in the Box",
+        "address": "4380 W 3500 S, West Valley City, UT 84120, USA",
+        "lat": 40.696871,
+        "lng": -111.995767
+      },
+      "distanceFromNearestExistingMeters": 35221
+    },
+    {
+      "businessName": "Nothing Bundt Cakes",
+      "dealId": "treats-331",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [cake_shop, dessert_shop, bakery], state: UT",
+      "placesResult": {
+        "name": "Nothing Bundt Cakes",
+        "address": "1357 S State St, Orem, UT 84097, USA",
+        "lat": 40.272332999999996,
+        "lng": -111.682496
+      },
+      "distanceFromNearestExistingMeters": 17620
+    },
+    {
+      "businessName": "Nothing Bundt Cakes",
+      "dealId": "treats-331",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [cake_shop, dessert_shop, bakery], state: UT",
+      "placesResult": {
+        "name": "Nothing Bundt Cakes",
+        "address": "407 E 1000 N, Spanish Fork, UT 84660, USA",
+        "lat": 40.1231162,
+        "lng": -111.6474176
+      },
+      "distanceFromNearestExistingMeters": 33079
+    },
+    {
+      "businessName": "Nothing Bundt Cakes",
+      "dealId": "treats-331",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [cake_shop, dessert_shop, bakery], state: UT",
+      "placesResult": {
+        "name": "Nothing Bundt Cakes",
+        "address": "10389 S State St, Sandy, UT 84070, USA",
+        "lat": 40.5626104,
+        "lng": -111.8903505
+      },
+      "distanceFromNearestExistingMeters": 11020
+    },
+    {
+      "businessName": "Rocky Mountain Chocolate Factory",
+      "dealId": "treats-338",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [chocolate_shop, candy_store, gift_shop], state: UT",
+      "placesResult": {
+        "name": "Rocky Mountain Chocolate Factory of Provo, UT",
+        "address": "The Shops At Riverwoods, 4801 N University Ave Suite 140, Provo, UT 84604, USA",
+        "lat": 40.2990055,
+        "lng": -111.6590738
+      },
+      "distanceFromNearestExistingMeters": 13616
+    },
+    {
+      "businessName": "Rocky Mountain Chocolate Factory",
+      "dealId": "treats-338",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [chocolate_shop, candy_store, gift_shop], state: UT",
+      "placesResult": {
+        "name": "Rocky Mountain Chocolate Factory",
+        "address": "3700 N Cabelas Blvd Space 252, Lehi, UT 84043, USA",
+        "lat": 40.435562399999995,
+        "lng": -111.88489190000001
+      },
+      "distanceFromNearestExistingMeters": 10813
+    },
+    {
+      "businessName": "Rocky Mountain Chocolate Factory",
+      "dealId": "treats-338",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [ice_cream_shop, chocolate_shop, candy_store], state: UT",
+      "placesResult": {
+        "name": "Rocky Mountain Chocolate Factory Cafe",
+        "address": "206 W Main St Suite B, Midway, UT 84049, USA",
+        "lat": 40.512417299999996,
+        "lng": -111.4769153
+      },
+      "distanceFromNearestExistingMeters": 30422
+    },
+    {
+      "businessName": "Rocky Mountain Chocolate Factory",
+      "dealId": "treats-338",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [chocolate_shop, candy_store, gift_shop], state: UT",
+      "placesResult": {
+        "name": "Rocky Mountain Chocolate Factory",
+        "address": "575 E University Pkwy, Orem, UT 84097, USA",
+        "lat": 40.275043,
+        "lng": -111.680605
+      },
+      "distanceFromNearestExistingMeters": 14161
+    },
+    {
+      "businessName": "Rocky Mountain Chocolate Factory",
+      "dealId": "treats-338",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [chocolate_shop, candy_store, dessert_shop], state: UT",
+      "placesResult": {
+        "name": "Rocky Mountain Chocolate Factory",
+        "address": "1374 Redwood Rd, Saratoga Springs, UT 84043, USA",
+        "lat": 40.3868271,
+        "lng": -111.9147034
+      },
+      "distanceFromNearestExistingMeters": 10952
+    },
+    {
+      "businessName": "Rocky Mountain Chocolate Factory",
+      "dealId": "treats-338",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [ice_cream_shop, chocolate_shop, candy_store], state: UT",
+      "placesResult": {
+        "name": "U-Swirl Frozen Yogurt & Rocky Mountain Chocolate Factory",
+        "address": "241 E 12300 S, Draper, UT 84020, USA",
+        "lat": 40.5273957,
+        "lng": -111.8835228
+      },
+      "distanceFromNearestExistingMeters": 18979
+    },
+    {
+      "businessName": "Sub Zero Ice Cream",
+      "dealId": "treats-351",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [ice_cream_shop, vegan_restaurant, vegetarian_restaurant], state: UT",
+      "placesResult": {
+        "name": "Sub Zero Nitrogen Ice Cream",
+        "address": "62 W Center St, Provo, UT 84601, USA",
+        "lat": 40.2339021,
+        "lng": -111.65982129999999
+      },
+      "distanceFromNearestExistingMeters": 25852
+    },
+    {
+      "businessName": "Twisted Sugar",
+      "dealId": "treats-358",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [bakery, confectionery, food_store], state: UT",
+      "placesResult": {
+        "name": "Twisted Sugar",
+        "address": "863 S N County Blvd, Pleasant Grove, UT 84062, USA",
+        "lat": 40.3536109,
+        "lng": -111.76278269999999
+      },
+      "distanceFromNearestExistingMeters": 235
+    },
+    {
+      "businessName": "Twisted Sugar",
+      "dealId": "treats-358",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [bakery, confectionery, cafe], state: UT",
+      "placesResult": {
+        "name": "Twisted Sugar",
+        "address": "250 E Crossroads Blvd, Saratoga Springs, UT 84045, USA",
+        "lat": 40.388188,
+        "lng": -111.9107387
+      },
+      "distanceFromNearestExistingMeters": 13087
+    },
+    {
+      "businessName": "Waffle Love",
+      "dealId": "treats-362",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [restaurant, catering_service, breakfast_restaurant], state: UT",
+      "placesResult": {
+        "name": "Waffle Love - Farmington",
+        "address": "1076 Park Ln Suite 120, Farmington, UT 84025, USA",
+        "lat": 40.9853793,
+        "lng": -111.91237319999999
+      },
+      "distanceFromNearestExistingMeters": 1731
+    },
+    {
+      "businessName": "Yonutz",
+      "dealId": "treats-366",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [donut_shop, ice_cream_shop, bakery], state: UT",
+      "placesResult": {
+        "name": "Yonutz Donuts and Ice Cream - Orem",
+        "address": "545 E University Pkwy Space 105, Orem, UT 84097, USA",
+        "lat": 40.2742125,
+        "lng": -111.6836794
+      },
+      "distanceFromNearestExistingMeters": 35391
+    },
+    {
+      "businessName": "Yummy Ice Cream",
+      "dealId": "treats-369",
+      "category": "treats",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 67%, category types: [dessert_shop, confectionery, food_store], state: UT",
+      "placesResult": {
+        "name": "Yummy Ice",
+        "address": "1352 Eagle Mountain Blvd, Eagle Mountain, UT 84005, USA",
+        "lat": 40.3073372,
+        "lng": -112.018277
+      },
+      "distanceFromNearestExistingMeters": 23981
+    },
+    {
+      "businessName": "Arby's",
+      "dealId": "sandwiches-373",
+      "category": "sandwiches",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [fast_food_restaurant, sandwich_shop, deli], state: UT",
+      "placesResult": {
+        "name": "Arby's",
+        "address": "450 E State St, American Fork, UT 84003, USA",
+        "lat": 40.3738047,
+        "lng": -111.7869767
+      },
+      "distanceFromNearestExistingMeters": 9843
+    },
+    {
+      "businessName": "Arby's",
+      "dealId": "sandwiches-373",
+      "category": "sandwiches",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [fast_food_restaurant, sandwich_shop, deli], state: UT",
+      "placesResult": {
+        "name": "Arby's",
+        "address": "1881 W 500 S, Springville, UT 84663, USA",
+        "lat": 40.1595655,
+        "lng": -111.64462909999999
+      },
+      "distanceFromNearestExistingMeters": 6169
+    },
+    {
+      "businessName": "Arby's",
+      "dealId": "sandwiches-373",
+      "category": "sandwiches",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [fast_food_restaurant, sandwich_shop, deli], state: UT",
+      "placesResult": {
+        "name": "Arby's",
+        "address": "46 W Pioneer Crossing, Saratoga Springs, UT 84045, USA",
+        "lat": 40.373275,
+        "lng": -111.9178907
+      },
+      "distanceFromNearestExistingMeters": 19478
+    },
+    {
+      "businessName": "Arby's",
+      "dealId": "sandwiches-373",
+      "category": "sandwiches",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [fast_food_restaurant, sandwich_shop, deli], state: UT",
+      "placesResult": {
+        "name": "Arby's",
+        "address": "955 Expressway Ln, Spanish Fork, UT 84660, USA",
+        "lat": 40.1211007,
+        "lng": -111.6401166
+      },
+      "distanceFromNearestExistingMeters": 10451
+    },
+    {
+      "businessName": "Arby's",
+      "dealId": "sandwiches-373",
+      "category": "sandwiches",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [fast_food_restaurant, sandwich_shop, deli], state: UT",
+      "placesResult": {
+        "name": "Arby's",
+        "address": "788 S 1270 W, Payson, UT 84651, USA",
+        "lat": 40.0319109,
+        "lng": -111.7550146
+      },
+      "distanceFromNearestExistingMeters": 21858
+    },
+    {
+      "businessName": "Arby's",
+      "dealId": "sandwiches-373",
+      "category": "sandwiches",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [fast_food_restaurant, sandwich_shop, deli], state: UT",
+      "placesResult": {
+        "name": "Arby's",
+        "address": "1385 Eagle Mountain Blvd Suite 110, Eagle Mountain, UT 84005, USA",
+        "lat": 40.307921799999995,
+        "lng": -112.017189
+      },
+      "distanceFromNearestExistingMeters": 26751
+    },
+    {
+      "businessName": "Arby's",
+      "dealId": "sandwiches-373",
+      "category": "sandwiches",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [fast_food_restaurant, sandwich_shop, deli], state: UT",
+      "placesResult": {
+        "name": "Arby's",
+        "address": "1245 S Main St, Heber City, UT 84032, USA",
+        "lat": 40.4924967,
+        "lng": -111.41228609999999
+      },
+      "distanceFromNearestExistingMeters": 31566
+    },
+    {
+      "businessName": "Arby's",
+      "dealId": "sandwiches-373",
+      "category": "sandwiches",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [fast_food_restaurant, sandwich_shop, deli], state: UT",
+      "placesResult": {
+        "name": "Arby's",
+        "address": "10273 S 1300 E, Sandy, UT 84094, USA",
+        "lat": 40.5650889,
+        "lng": -111.85257539999999
+      },
+      "distanceFromNearestExistingMeters": 30734
+    },
+    {
+      "businessName": "Gandolfo's",
+      "dealId": "sandwiches-387",
+      "category": "sandwiches",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [deli, sandwich_shop, food_store], state: UT",
+      "placesResult": {
+        "name": "Gandolfo's New York Deli",
+        "address": "775 N State St, Orem, UT 84057, USA",
+        "lat": 40.3114346,
+        "lng": -111.70208
+      },
+      "distanceFromNearestExistingMeters": 3980
+    },
+    {
+      "businessName": "Gandolfo's",
+      "dealId": "sandwiches-387",
+      "category": "sandwiches",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [deli, sandwich_shop, american_restaurant], state: UT",
+      "placesResult": {
+        "name": "Gandolfo's New York Deli",
+        "address": "818 N 500 W, Provo, UT 84604, USA",
+        "lat": 40.244717,
+        "lng": -111.66659969999999
+      },
+      "distanceFromNearestExistingMeters": 4042
+    },
+    {
+      "businessName": "Gandolfo's",
+      "dealId": "sandwiches-387",
+      "category": "sandwiches",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [deli, food_store, food], state: UT",
+      "placesResult": {
+        "name": "Gandolfo's New York Deli",
+        "address": "715 S Main St, Pleasant Grove, UT 84062, USA",
+        "lat": 40.3548717,
+        "lng": -111.73997329999999
+      },
+      "distanceFromNearestExistingMeters": 3231
+    },
+    {
+      "businessName": "Gandolfo's",
+      "dealId": "sandwiches-387",
+      "category": "sandwiches",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [deli, food_store, food], state: UT",
+      "placesResult": {
+        "name": "Gandolfo's New York Deli",
+        "address": "362 E State Rd, American Fork, UT 84003, USA",
+        "lat": 40.374407999999995,
+        "lng": -111.78945789999999
+      },
+      "distanceFromNearestExistingMeters": 1524
+    },
+    {
+      "businessName": "Gandolfo's",
+      "dealId": "sandwiches-387",
+      "category": "sandwiches",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [deli, food_store, food], state: UT",
+      "placesResult": {
+        "name": "Gandolfo's New York Deli",
+        "address": "565 W. State Rd. 198 Hwy, 6, Salem, UT 84653, USA",
+        "lat": 40.050078299999996,
+        "lng": -111.6845079
+      },
+      "distanceFromNearestExistingMeters": 25288
+    },
+    {
+      "businessName": "Wendy's",
+      "dealId": "sandwiches-416",
+      "category": "sandwiches",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [fast_food_restaurant, restaurant, food], state: UT",
+      "placesResult": {
+        "name": "Wendy's",
+        "address": "145 N Geneva Rd, Vineyard, UT 84059, USA",
+        "lat": 40.299112099999995,
+        "lng": -111.7344201
+      },
+      "distanceFromNearestExistingMeters": 2780
+    },
+    {
+      "businessName": "Wendy's",
+      "dealId": "sandwiches-416",
+      "category": "sandwiches",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [fast_food_restaurant, hamburger_restaurant, american_restaurant], state: UT",
+      "placesResult": {
+        "name": "Wendy's",
+        "address": "795 N State St, Lindon, UT 84042, USA",
+        "lat": 40.351900799999996,
+        "lng": -111.7330733
+      },
+      "distanceFromNearestExistingMeters": 4766
+    },
+    {
+      "businessName": "Wendy's",
+      "dealId": "sandwiches-416",
+      "category": "sandwiches",
+      "confidence": "HIGH",
+      "validationNotes": "name match: 100%, category types: [fast_food_restaurant, hamburger_restaurant, american_restaurant], state: UT",
+      "placesResult": {
+        "name": "Wendy's",
+        "address": "3410 Digital Dr, Lehi, UT 84043, USA",
+        "lat": 40.4304135,
+        "lng": -111.88599900000001
+      },
+      "distanceFromNearestExistingMeters": 6408
+    }
+  ],
+  "needsReview": [
+    {
+      "businessName": "Costa Vida",
+      "dealId": "restaurants-042",
+      "category": "restaurants",
+      "confidence": "REVIEW",
+      "validationNotes": "name match: 100%, category types: [corporate_office, point_of_interest, establishment] -- not in expected types, manual check recommended, state: UT",
+      "placesResult": {
+        "name": "Costa Vida Corporate Office",
+        "address": "1333 Valley Grove Way Suite 500, Pleasant Grove, UT 84062, USA",
+        "lat": 40.3486088,
+        "lng": -111.7608073
+      },
+      "distanceFromNearestExistingMeters": 5957
+    },
+    {
+      "businessName": "Back Nine Golf",
+      "dealId": "entertainment-096",
+      "category": "entertainment",
+      "confidence": "REVIEW",
+      "validationNotes": "name match: 100%, category types: [indoor_golf_course, golf_course, athletic_field] -- not in expected types, manual check recommended, state: UT",
+      "placesResult": {
+        "name": "The Back Nine Golf | Orem, UT",
+        "address": "865 S 700 E, Orem, UT 84097, USA",
+        "lat": 40.2809102,
+        "lng": -111.6785329
+      },
+      "distanceFromNearestExistingMeters": 13019
+    },
+    {
+      "businessName": "Back Nine Golf",
+      "dealId": "entertainment-096",
+      "category": "entertainment",
+      "confidence": "REVIEW",
+      "validationNotes": "name match: 100%, category types: [indoor_golf_course, golf_course, athletic_field] -- not in expected types, manual check recommended, state: UT",
+      "placesResult": {
+        "name": "The Back Nine Golf | Saratoga Springs, UT",
+        "address": "1763 N Redwood Rd, Saratoga Springs, UT 84043, USA",
+        "lat": 40.3953525,
+        "lng": -111.91810249999999
+      },
+      "distanceFromNearestExistingMeters": 8637
+    },
+    {
+      "businessName": "Color Me Mine",
+      "dealId": "entertainment-105",
+      "category": "entertainment",
+      "confidence": "REVIEW",
+      "validationNotes": "name match: 100%, category types: [point_of_interest, establishment] -- not in expected types, manual check recommended, state: UT",
+      "placesResult": {
+        "name": "Color Me Mine",
+        "address": "51 W 10600 S, Sandy, UT 84070, USA",
+        "lat": 40.5579974,
+        "lng": -111.8920515
+      },
+      "distanceFromNearestExistingMeters": 34796
+    },
+    {
+      "businessName": "Color Me Mine",
+      "dealId": "entertainment-105",
+      "category": "entertainment",
+      "confidence": "REVIEW",
+      "validationNotes": "name match: 100%, category types: [point_of_interest, establishment] -- not in expected types, manual check recommended, state: UT",
+      "placesResult": {
+        "name": "Color Me Mine",
+        "address": "2725 E Parleys Way Suite 100, Salt Lake City, UT 84109, USA",
+        "lat": 40.7191451,
+        "lng": -111.81149339999999
+      },
+      "distanceFromNearestExistingMeters": 48291
+    },
+    {
+      "businessName": "Game Grid",
+      "dealId": "entertainment-115",
+      "category": "entertainment",
+      "confidence": "REVIEW",
+      "validationNotes": "name match: 50%, category types: [go_karting_venue, video_arcade, race_course] -- not in expected types, manual check recommended, state: UT",
+      "placesResult": {
+        "name": "The Grid",
+        "address": "593 S Evermore Ln, Pleasant Grove, UT 84062, USA",
+        "lat": 40.3564656,
+        "lng": -111.7651648
+      },
+      "distanceFromNearestExistingMeters": 6465
+    },
+    {
+      "businessName": "Quick Wits Comedy",
+      "dealId": "entertainment-141",
+      "category": "entertainment",
+      "confidence": "REVIEW",
+      "validationNotes": "name match: 100%, category types: [comedy_club, point_of_interest, establishment] -- not in expected types, manual check recommended, state: UT",
+      "placesResult": {
+        "name": "Quick Wits Comedy",
+        "address": "3601 S State St, South Salt Lake, UT 84115, USA",
+        "lat": 40.692849599999995,
+        "lng": -111.88795449999999
+      },
+      "distanceFromNearestExistingMeters": 9364
+    },
+    {
+      "businessName": "Redline Racing",
+      "dealId": "entertainment-142",
+      "category": "entertainment",
+      "confidence": "REVIEW",
+      "validationNotes": "name match: 50%, category types: [race_course, event_venue, sports_activity_location] -- not in expected types, manual check recommended, state: UT",
+      "placesResult": {
+        "name": "Rush Valley Racing",
+        "address": "3002 Melanie Ann Ct, Magna, UT 84044, USA",
+        "lat": 40.7054548,
+        "lng": -112.0748136
+      },
+      "distanceFromNearestExistingMeters": 51505
+    },
+    {
+      "businessName": "The Pickr",
+      "dealId": "entertainment-150",
+      "category": "entertainment",
+      "confidence": "REVIEW",
+      "validationNotes": "name match: 50%, category types: [sports_club, athletic_field, sports_activity_location] -- not in expected types, manual check recommended, state: UT",
+      "placesResult": {
+        "name": "The Picklr Lehi",
+        "address": "629 Saratoga Rd Bldg 2, Saratoga Springs, UT 84043, USA",
+        "lat": 40.3729753,
+        "lng": -111.8892777
+      },
+      "distanceFromNearestExistingMeters": 28287
+    },
+    {
+      "businessName": "The Pickr",
+      "dealId": "entertainment-150",
+      "category": "entertainment",
+      "confidence": "REVIEW",
+      "validationNotes": "name match: 50%, category types: [athletic_field, sports_activity_location, point_of_interest] -- not in expected types, manual check recommended, state: UT",
+      "placesResult": {
+        "name": "The Picklr Bluffdale",
+        "address": "15892 S Rockwell Park Cove, Herriman, UT 84065, USA",
+        "lat": 40.4621124,
+        "lng": -111.94853970000001
+      },
+      "distanceFromNearestExistingMeters": 17526
+    },
+    {
+      "businessName": "The Pickr",
+      "dealId": "entertainment-150",
+      "category": "entertainment",
+      "confidence": "REVIEW",
+      "validationNotes": "name match: 50%, category types: [sports_club, athletic_field, sports_activity_location] -- not in expected types, manual check recommended, state: UT",
+      "placesResult": {
+        "name": "The Picklr Sandy",
+        "address": "8645 Highland Dr, Sandy, UT 84093, USA",
+        "lat": 40.593690699999996,
+        "lng": -111.83049539999999
+      },
+      "distanceFromNearestExistingMeters": 12847
+    },
+    {
+      "businessName": "Utah Country Dance",
+      "dealId": "entertainment-156",
+      "category": "entertainment",
+      "confidence": "REVIEW",
+      "validationNotes": "name match: 67%, category types: [dance_hall, event_venue, point_of_interest] -- not in expected types, manual check recommended, state: UT",
+      "placesResult": {
+        "name": "Marnell's Country Dance",
+        "address": "527 W State St Suite #101, Pleasant Grove, UT 84062, USA",
+        "lat": 40.3615831,
+        "lng": -111.748836
+      },
+      "distanceFromNearestExistingMeters": 16024
+    },
+    {
+      "businessName": "Zipline Utah",
+      "dealId": "entertainment-159",
+      "category": "entertainment",
+      "confidence": "REVIEW",
+      "validationNotes": "name match: 100%, category types: [adventure_sports_center, sports_complex, sports_activity_location] -- not in expected types, manual check recommended, state: UT",
+      "placesResult": {
+        "name": "ZipLine Utah",
+        "address": "at Mile Marker 22, 84032 W S Hwy 189 of, Heber City, UT 84032, USA",
+        "lat": 40.422877,
+        "lng": -111.4918763
+      },
+      "distanceFromNearestExistingMeters": 14612
+    },
+    {
+      "businessName": "Zipline Utah",
+      "dealId": "entertainment-159",
+      "category": "entertainment",
+      "confidence": "REVIEW",
+      "validationNotes": "name match: 50%, category types: [tourist_attraction, point_of_interest, establishment] -- not in expected types, manual check recommended, state: UT",
+      "placesResult": {
+        "name": "Utah Adventure Park",
+        "address": "10500 E Lake Creek Rd, Heber City, UT 84032, USA",
+        "lat": 40.4866707,
+        "lng": -111.24420119999999
+      },
+      "distanceFromNearestExistingMeters": 8402
+    },
+    {
+      "businessName": "Zipline Utah",
+      "dealId": "entertainment-159",
+      "category": "entertainment",
+      "confidence": "REVIEW",
+      "validationNotes": "name match: 50%, category types: [adventure_sports_center, sports_complex, sports_activity_location] -- not in expected types, manual check recommended, state: UT",
+      "placesResult": {
+        "name": "Utah Adventure Center Park City",
+        "address": "6300 N Sagewood Dr #600, Park City, UT 84098, USA",
+        "lat": 40.72309,
+        "lng": -111.54389570000001
+      },
+      "distanceFromNearestExistingMeters": 30947
+    },
+    {
+      "businessName": "Chiropractic Access Accident Center",
+      "dealId": "retail-168",
+      "category": "retail",
+      "confidence": "REVIEW",
+      "validationNotes": "name match: 50%, category types: [chiropractor, point_of_interest, health] -- not in expected types, manual check recommended, state: UT",
+      "placesResult": {
+        "name": "Absolute Health Chiropractic & Nutrition Center",
+        "address": "193 E 860 S, Orem, UT 84058, USA",
+        "lat": 40.281582,
+        "lng": -111.69029499999999
+      },
+      "distanceFromNearestExistingMeters": 3035
+    },
+    {
+      "businessName": "Chiropractic Access Accident Center",
+      "dealId": "retail-168",
+      "category": "retail",
+      "confidence": "REVIEW",
+      "validationNotes": "name match: 50%, category types: [chiropractor, point_of_interest, health] -- not in expected types, manual check recommended, state: UT",
+      "placesResult": {
+        "name": "Access Chiropractic - Dr. Phillip White",
+        "address": "8839 S Redwood Rd Suite A-1, West Jordan, UT 84088, USA",
+        "lat": 40.5905397,
+        "lng": -111.9367699
+      },
+      "distanceFromNearestExistingMeters": 14652
+    },
+    {
+      "businessName": "Healing Vibes",
+      "dealId": "retail-180",
+      "category": "retail",
+      "confidence": "REVIEW",
+      "validationNotes": "name match: 50%, category types: [wellness_center, foot_care, health] -- not in expected types, manual check recommended, state: UT",
+      "placesResult": {
+        "name": "Healing Thyme",
+        "address": "1363 W 1940 N, Provo, UT 84604, USA",
+        "lat": 40.2592071,
+        "lng": -111.6823343
+      },
+      "distanceFromNearestExistingMeters": 3475
+    },
+    {
+      "businessName": "ZAGG",
+      "dealId": "retail-198",
+      "category": "retail",
+      "confidence": "REVIEW",
+      "validationNotes": "name match: 100%, category types: [point_of_interest, establishment] -- not in expected types, manual check recommended, state: UT",
+      "placesResult": {
+        "name": "ZAGG Retail Store - iPhone Repair",
+        "address": "1274 N Cyn Crk Pkwy, Spanish Fork, UT 84660, USA",
+        "lat": 40.126205399999996,
+        "lng": -111.6387637
+      },
+      "distanceFromNearestExistingMeters": 1442
+    },
+    {
+      "businessName": "Quench It!",
+      "dealId": "free-252",
+      "category": "free",
+      "confidence": "REVIEW",
+      "validationNotes": "name match: 100%, category types: [point_of_interest, establishment] -- not in expected types, manual check recommended, state: UT",
+      "placesResult": {
+        "name": "Quench It! Soda",
+        "address": "4095 E Pony Express Pkwy #11, Eagle Mountain, UT 84005, USA",
+        "lat": 40.3640615,
+        "lng": -111.9645599
+      },
+      "distanceFromNearestExistingMeters": 10816
+    }
+  ]
+}

@@ -146,6 +146,10 @@ export default function App() {
               userCoords={coords}
               onSelectDeal={handleSelectDeal}
               onSwitchToDeals={() => setActiveTab('deals')}
+              onViewNearest={() => {
+                setActiveTab('deals')
+                handleNearestRequest()
+              }}
             />
           </div>
           <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} />
