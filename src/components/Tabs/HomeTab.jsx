@@ -24,7 +24,7 @@ function getGreeting() {
 function Section({ title, action, onAction, deals, onSelectDeal, userCoords, emptyMessage }) {
   return (
     <div style={{
-      margin: '14px 16px 0',
+      margin: '14px 20px 0',
       backgroundColor: '#ffffff',
       borderRadius: '18px',
       boxShadow: '0 2px 10px rgba(0,0,0,0.07), 0 1px 3px rgba(0,0,0,0.04)',
@@ -58,13 +58,14 @@ function Section({ title, action, onAction, deals, onSelectDeal, userCoords, emp
 
       {/* Content */}
       {!deals.length ? (
-        <p style={{ fontSize: '13px', color: '#94a3b8', padding: '14px 16px' }}>
+        <p style={{ fontSize: '13px', color: '#94a3b8', padding: '14px 16px', backgroundColor: '#f8fafc', margin: 0 }}>
           {emptyMessage}
         </p>
       ) : (
         <div style={{
           display: 'flex', gap: '10px', overflowX: 'auto',
-          padding: '14px 16px', scrollbarWidth: 'none',
+          padding: '12px 14px', scrollbarWidth: 'none',
+          backgroundColor: '#f8fafc',
         }}>
           {deals.map(deal => (
             <HomeCard

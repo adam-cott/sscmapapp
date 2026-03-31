@@ -13,20 +13,20 @@ export default function HomeCard({ deal, onClick, userCoords }) {
     <button
       onClick={onClick}
       style={{
-        width: '160px',
+        width: '148px',
         flexShrink: 0,
         textAlign: 'left',
         backgroundColor: isExhausted ? '#f8fafc' : '#ffffff',
-        borderRadius: '14px',
-        boxShadow: '0 1px 4px rgba(0,0,0,0.07), 0 2px 10px rgba(0,0,0,0.04)',
-        border: `1px solid #f1f5f9`,
+        borderRadius: '12px',
+        boxShadow: '0 1px 3px rgba(0,0,0,0.08)',
+        border: `1px solid #e8edf3`,
         borderTop: `3px solid ${isExhausted ? '#e2e8f0' : catColor}`,
         opacity: isExhausted ? 0.6 : 1,
         cursor: 'pointer',
-        padding: '12px',
+        padding: '10px',
         display: 'flex',
         flexDirection: 'column',
-        gap: '4px',
+        gap: '3px',
       }}
     >
       <span
@@ -48,12 +48,11 @@ export default function HomeCard({ deal, onClick, userCoords }) {
         style={{
           fontSize: '11px',
           color: isExhausted ? '#94a3b8' : '#475569',
-          lineHeight: '1.35',
+          lineHeight: '1.3',
           display: '-webkit-box',
-          WebkitLineClamp: 2,
+          WebkitLineClamp: 1,
           WebkitBoxOrient: 'vertical',
           overflow: 'hidden',
-          flexGrow: 1,
         }}
       >
         {deal.deal.title}
@@ -62,14 +61,14 @@ export default function HomeCard({ deal, onClick, userCoords }) {
       <span
         style={{
           display: 'inline-block',
-          marginTop: '4px',
+          marginTop: '3px',
           fontSize: '10px',
           fontFamily: 'Sora, sans-serif',
           fontWeight: 700,
           backgroundColor: isExhausted ? '#f1f5f9' : CATEGORY_LIGHT[deal.category] || '#f1f5f9',
           color: isExhausted ? '#94a3b8' : catColor,
-          borderRadius: '6px',
-          padding: '2px 7px',
+          borderRadius: '5px',
+          padding: '2px 6px',
           alignSelf: 'flex-start',
         }}
       >
@@ -84,7 +83,7 @@ export default function HomeCard({ deal, onClick, userCoords }) {
             gap: '3px',
             fontSize: '10px',
             color: '#94a3b8',
-            marginTop: '2px',
+            marginTop: '1px',
           }}
         >
           <MapPin size={9} color="#94a3b8" />
