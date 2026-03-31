@@ -1,10 +1,10 @@
 import { Home, Map, Heart, Trophy, Settings } from 'lucide-react'
 
 const TABS = [
-  { id: 'home',     label: 'Home',    Icon: Home     },
-  { id: 'map',      label: 'Map',     Icon: Map      },
-  { id: 'faves',    label: 'Faves',   Icon: Heart    },
   { id: 'rewards',  label: 'Rewards', Icon: Trophy   },
+  { id: 'map',      label: 'Map',     Icon: Map      },
+  { id: 'home',     label: 'Home',    Icon: Home     },
+  { id: 'faves',    label: 'Faves',   Icon: Heart    },
   { id: 'settings', label: 'Settings',Icon: Settings },
 ]
 
