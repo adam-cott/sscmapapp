@@ -58,14 +58,14 @@ function Section({ title, action, onAction, deals, onSelectDeal, userCoords, emp
 
       {/* Content */}
       {!deals.length ? (
-        <p style={{ fontSize: '13px', color: '#94a3b8', padding: '14px 16px', backgroundColor: '#f8fafc', margin: 0 }}>
+        <p style={{ fontSize: '13px', color: '#94a3b8', padding: '14px 16px', backgroundColor: '#f0f4f8', margin: 0 }}>
           {emptyMessage}
         </p>
       ) : (
         <div style={{
           display: 'flex', gap: '10px', overflowX: 'auto',
           padding: '12px 14px', scrollbarWidth: 'none',
-          backgroundColor: '#f8fafc',
+          backgroundColor: '#f0f4f8',
         }}>
           {deals.map(deal => (
             <HomeCard

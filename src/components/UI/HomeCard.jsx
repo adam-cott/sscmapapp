@@ -18,7 +18,7 @@ export default function HomeCard({ deal, onClick, userCoords }) {
         textAlign: 'left',
         backgroundColor: isExhausted ? '#f8fafc' : '#ffffff',
         borderRadius: '12px',
-        boxShadow: '0 1px 3px rgba(0,0,0,0.08)',
+        boxShadow: '0 1px 3px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.04)',
         border: `1px solid #e8edf3`,
         borderTop: `3px solid ${isExhausted ? '#e2e8f0' : catColor}`,
         opacity: isExhausted ? 0.6 : 1,
