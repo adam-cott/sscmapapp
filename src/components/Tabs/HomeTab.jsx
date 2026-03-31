@@ -28,13 +28,17 @@ function getGreeting() {
 function Section({ title, deals, onSelectDeal, userCoords, emptyMessage }) {
   return (
     <div style={{
-      margin: '14px 20px 0',
+      flex: 1,
+      display: 'flex',
+      flexDirection: 'column',
       backgroundColor: '#ffffff',
       borderRadius: '18px',
       boxShadow: '0 2px 10px rgba(0,0,0,0.07), 0 1px 3px rgba(0,0,0,0.04)',
       overflow: 'hidden',
+      minHeight: 0,
     }}>
       <div style={{
+        flexShrink: 0,
         padding: '14px 16px 12px',
         borderBottom: '1px solid #f1f5f9',
       }}>
@@ -48,7 +52,8 @@ function Section({ title, deals, onSelectDeal, userCoords, emptyMessage }) {
         </p>
       ) : (
         <div style={{
-          display: 'flex', gap: '10px', overflowX: 'auto',
+          flex: 1,
+          display: 'flex', gap: '10px', overflowX: 'auto', alignItems: 'center',
           padding: '12px 14px', scrollbarWidth: 'none',
           backgroundColor: '#f0f4f8',
         }}>
@@ -157,11 +162,10 @@ export default function HomeTab({
         </>
       ) : (
         /* DISCOVERY MODE — section carousels */
-        <div style={{ flex: 1, overflowY: 'auto', overscrollBehaviorY: 'contain' }}>
+        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', padding: '14px 20px', gap: '14px', minHeight: 0 }}>
           <Section title="Deals Near Me" deals={nearbyDeals} onSelectDeal={onSelectDeal} userCoords={userCoords} emptyMessage="No deals found nearby." />
           <Section title="Use Again" deals={usedDeals} onSelectDeal={onSelectDeal} userCoords={userCoords} emptyMessage="Use a deal to see it here." />
           <Section title="Featured" deals={featuredDeals} onSelectDeal={onSelectDeal} userCoords={userCoords} emptyMessage="No featured deals right now." />
-          <div style={{ height: '16px' }} />
         </div>
       )}
 
