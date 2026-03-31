@@ -21,63 +21,60 @@ function getGreeting() {
   return 'Good evening'
 }
 
-function ScrollRow({ deals, onSelectDeal, userCoords, emptyMessage }) {
-  if (!deals.length) {
-    return (
-      <p style={{ fontSize: '13px', color: '#94a3b8', paddingLeft: '16px', paddingBottom: '8px' }}>
-        {emptyMessage}
-      </p>
-    )
-  }
+function Section({ title, action, onAction, deals, onSelectDeal, userCoords, emptyMessage }) {
   return (
-    <div
-      style={{
+    <div style={{
+      margin: '14px 16px 0',
+      backgroundColor: '#ffffff',
+      borderRadius: '18px',
+      boxShadow: '0 2px 10px rgba(0,0,0,0.07), 0 1px 3px rgba(0,0,0,0.04)',
+      overflow: 'hidden',
+    }}>
+      {/* Title row */}
+      <div style={{
         display: 'flex',
-        gap: '10px',
-        overflowX: 'auto',
-        paddingLeft: '16px',
-        paddingRight: '16px',
-        paddingBottom: '8px',
-        scrollbarWidth: 'none',
-      }}
-    >
-      {deals.map(deal => (
-        <HomeCard
-          key={deal.id}
-          deal={deal}
-          onClick={() => onSelectDeal(deal)}
-          userCoords={userCoords}
-        />
-      ))}
-    </div>
-  )
-}
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        padding: '14px 16px 12px',
+        borderBottom: '1px solid #f1f5f9',
+      }}>
+        <h3 style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '14px', color: '#0f172a', margin: 0 }}>
+          {title}
+        </h3>
+        {action && (
+          <button
+            onClick={onAction}
+            style={{
+              display: 'flex', alignItems: 'center', gap: '2px',
+              fontSize: '12px', fontWeight: 600, color: 'var(--ssc-blue)',
+              background: 'none', border: 'none', cursor: 'pointer', padding: 0,
+            }}
+          >
+            {action}
+            <ChevronRight size={13} color="var(--ssc-blue)" />
+          </button>
+        )}
+      </div>
 
-function SectionHeader({ title, action, onAction }) {
-  return (
-    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '20px 16px 8px' }}>
-      <h3 style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '15px', color: '#0f172a', margin: 0 }}>
-        {title}
-      </h3>
-      {action && (
-        <button
-          onClick={onAction}
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '2px',
-            fontSize: '12px',
-            color: 'var(--ssc-blue)',
-            fontWeight: 600,
-            background: 'none',
-            border: 'none',
-            cursor: 'pointer',
-            padding: 0,
-          }}
-        >
-          {action}
-          <ChevronRight size={13} color="var(--ssc-blue)" />
-        </button>
+      {/* Content */}
+      {!deals.length ? (
+        <p style={{ fontSize: '13px', color: '#94a3b8', padding: '14px 16px' }}>
+          {emptyMessage}
+        </p>
+      ) : (
+        <div style={{
+          display: 'flex', gap: '10px', overflowX: 'auto',
+          padding: '14px 16px', scrollbarWidth: 'none',
+        }}>
+          {deals.map(deal => (
+            <HomeCard
+              key={deal.id}
+              deal={deal}
+              onClick={() => onSelectDeal(deal)}
+              userCoords={userCoords}
+            />
+          ))}
+        </div>
       )}
     </div>
   )
@@ -151,46 +148,12 @@ export default function HomeTab({ deals, usageLog, userCoords, onSelectDeal, onS
         </div>
       </header>
 
-      {/* Deals Near Me */}
-      <SectionHeader
-        title={userCoords ? 'Deals Near Me' : 'Deals Near Me'}
-        action={null}
-      />
-      <ScrollRow
-        deals={nearbyDeals}
-        onSelectDeal={onSelectDeal}
-        userCoords={userCoords}
-        emptyMessage="No deals found nearby."
-      />
+      <Section title="Deals Near Me" deals={nearbyDeals} onSelectDeal={onSelectDeal} userCoords={userCoords} emptyMessage="No deals found nearby." />
+      <Section title="Use Again" deals={usedDeals} onSelectDeal={onSelectDeal} userCoords={userCoords} emptyMessage="Use a deal to see it here." />
+      <Section title="Featured" deals={featuredDeals} onSelectDeal={onSelectDeal} userCoords={userCoords} emptyMessage="No featured deals right now." />
+      <Section title="Search All Deals" action="See All" onAction={onSwitchToDeals} deals={sampleDeals} onSelectDeal={onSelectDeal} userCoords={userCoords} emptyMessage="" />
 
-      {/* Use Again */}
-      <SectionHeader title="Use Again" />
-      <ScrollRow
-        deals={usedDeals}
-        onSelectDeal={onSelectDeal}
-        userCoords={userCoords}
-        emptyMessage="Use a deal to see it here."
-      />
-
-      {/* Featured */}
-      <SectionHeader title="Featured" />
-      <ScrollRow
-        deals={featuredDeals}
-        onSelectDeal={onSelectDeal}
-        userCoords={userCoords}
-        emptyMessage="No featured deals right now."
-      />
-
-      {/* Search All Deals */}
-      <SectionHeader title="Search All Deals" action="See All" onAction={onSwitchToDeals} />
-      <ScrollRow
-        deals={sampleDeals}
-        onSelectDeal={onSelectDeal}
-        userCoords={userCoords}
-        emptyMessage=""
-      />
-
-      <div style={{ height: '8px' }} />
+      <div style={{ height: '16px' }} />
     </div>
   )
 }
