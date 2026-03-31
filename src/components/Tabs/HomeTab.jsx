@@ -95,15 +95,17 @@ export default function HomeTab({ deals, usageLog, userCoords, onSelectDeal, onS
   const [profile] = useLocalStorage('ssc_profile_v1', {})
   const userName = profile.name || 'Student'
 
+  const activeDeals = deals.filter(d => d.usage.status !== 'exhausted')
+
   // Deals Near Me — sorted by distance, fallback to spread across categories
   const nearbyDeals = userCoords
-    ? [...deals]
+    ? [...activeDeals]
         .map(d => ({ deal: d, dist: getNearestDistance(d, userCoords) }))
         .filter(({ dist }) => dist !== null)
         .sort((a, b) => a.dist - b.dist)
         .slice(0, 8)
         .map(({ deal }) => deal)
-    : spreadAcrossCategories(deals)
+    : spreadAcrossCategories(activeDeals)
 
   // Use Again — unique deal IDs from log, most recent first, non-exhausted
   const seenIds = new Set()
@@ -113,17 +115,17 @@ export default function HomeTab({ deals, usageLog, userCoords, onSelectDeal, onS
     return true
   })
   const usedDeals = usedDealIds
-    .map(id => deals.find(d => d.id === id))
-    .filter(d => d && d.usage.status !== 'exhausted')
+    .map(id => activeDeals.find(d => d.id === id))
+    .filter(Boolean)
     .slice(0, 8)
 
   // Featured — static curated selection
   const featuredDeals = FEATURED_IDS
-    .map(id => deals.find(d => d.id === id))
+    .map(id => activeDeals.find(d => d.id === id))
     .filter(Boolean)
 
   // Search All — one per category sample
-  const sampleDeals = spreadAcrossCategories(deals, 8, 1)
+  const sampleDeals = spreadAcrossCategories(activeDeals, 8, 1)
 
   return (
     <div className="flex flex-col h-full overflow-y-auto" style={{ backgroundColor: '#f0f4f8' }}>
