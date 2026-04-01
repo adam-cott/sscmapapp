@@ -5,7 +5,6 @@ import SearchBar from '../Sidebar/SearchBar'
 import FilterPanel from '../Sidebar/FilterPanel'
 import SortControl from '../Sidebar/SortControl'
 import ListView from '../ListView/ListView'
-import { ChevronRight } from 'lucide-react'
 
 const FEATURED_IDS = [
   'restaurants-040', // Chili's — Free Item
