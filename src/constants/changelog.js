@@ -1,4 +1,4 @@
 export const LATEST_UPDATE = {
-  version: '1.0.0',
-  description: "You can now create an account and make the app your own! Sign up with your name and email, and manage your profile anytime from the Settings tab.",
+  version: '1.0.1',
+  description: "Card Year is here! Head to Settings → Card Year to set your card's year. You'll get a heads-up banner on the home screen and a reminder in Settings when your card is expiring soon.",
 }
