@@ -2,6 +2,8 @@ import { useState, useEffect, useCallback } from 'react'
 import './App.css'
 import { useAuth } from './hooks/useAuth'
 import AuthScreen from './components/Auth/AuthScreen'
+import EditProfileScreen from './components/Tabs/EditProfileScreen'
+import DeleteAccountDialog from './components/UI/DeleteAccountDialog'
 import dealsData from './data/deals.json'
 import { useDeals } from './hooks/useDeals'
 import { useFilters } from './hooks/useFilters'
@@ -26,13 +28,15 @@ import { useFaves } from './hooks/useFaves'
 import { useUsageLog } from './hooks/useUsageLog'
 
 export default function App() {
-  const { user, loading } = useAuth()
+  const { user, loading, signOut } = useAuth()
   if (loading) return null
   if (!user) return <AuthScreen />
   const [activeTab, setActiveTab] = useState('home')
   const [selectedDeal, setSelectedDeal] = useState(null)
   const [selectedLocation, setSelectedLocation] = useState(null)
   const [showResetConfirm, setShowResetConfirm] = useState(false)
+  const [showEditProfile, setShowEditProfile] = useState(false)
+  const [showDeleteDialog, setShowDeleteDialog] = useState(false)
   const [activeView, setActiveView] = useState('map')
   const [showUseToast, setShowUseToast] = useState(false)
   const [pendingNearest, setPendingNearest] = useState(false)
@@ -271,8 +275,16 @@ export default function App() {
       {/* ── Settings tab ────────────────────────────────── */}
       {activeTab === 'settings' && (
         <div className="flex flex-col flex-1 overflow-hidden">
-          <div className="flex-1 overflow-y-auto">
-            <SettingsTab />
+          <div className="flex-1 overflow-hidden">
+            {showEditProfile
+              ? <EditProfileScreen onBack={() => setShowEditProfile(false)} />
+              : <SettingsTab
+                  onEditProfile={() => setShowEditProfile(true)}
+                  onReset={handleReset}
+                  onSignOut={signOut}
+                  onDeleteAccount={() => setShowDeleteDialog(true)}
+                />
+            }
           </div>
           <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} />
         </div>
@@ -304,6 +316,7 @@ export default function App() {
       {showUseToast && <UseToast onDismiss={() => setShowUseToast(false)} />}
       {!hasRequested && activeTab === 'map' && <LocationPrompt onAllow={requestLocation} onDecline={decline} />}
       <UpdatePrompt />
+      {showDeleteDialog && <DeleteAccountDialog onCancel={() => setShowDeleteDialog(false)} />}
     </div>
   )
 }

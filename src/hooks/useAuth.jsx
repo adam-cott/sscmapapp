@@ -4,8 +4,13 @@ import {
   signInWithEmailAndPassword,
   signOut as firebaseSignOut,
   onAuthStateChanged,
+  updateEmail,
+  updatePassword,
+  reauthenticateWithCredential,
+  EmailAuthProvider,
+  deleteUser,
 } from 'firebase/auth'
-import { doc, setDoc, getDoc } from 'firebase/firestore'
+import { doc, setDoc, getDoc, updateDoc, deleteDoc } from 'firebase/firestore'
 import { auth, db } from '../firebase'
 
 const AuthContext = createContext(null)
@@ -43,8 +48,30 @@ export function AuthProvider({ children }) {
     await firebaseSignOut(auth)
   }
 
+  async function updateFirstName(newFirst) {
+    await updateDoc(doc(db, 'users', user.uid), { firstName: newFirst })
+    setFirstName(newFirst)
+  }
+
+  async function updateCredentials({ currentPassword, newEmail, newPassword }) {
+    const credential = EmailAuthProvider.credential(user.email, currentPassword)
+    await reauthenticateWithCredential(auth.currentUser, credential)
+    if (newEmail) await updateEmail(auth.currentUser, newEmail)
+    if (newPassword) await updatePassword(auth.currentUser, newPassword)
+  }
+
+  async function deleteAccount(currentPassword) {
+    const credential = EmailAuthProvider.credential(user.email, currentPassword)
+    await reauthenticateWithCredential(auth.currentUser, credential)
+    await deleteDoc(doc(db, 'users', user.uid))
+    localStorage.removeItem('ssc_usage_v1')
+    localStorage.removeItem('ssc_faves_v1')
+    localStorage.removeItem('ssc_usage_log_v1')
+    await deleteUser(auth.currentUser)
+  }
+
   return (
-    <AuthContext.Provider value={{ user, firstName, loading, signUp, signIn, signOut }}>
+    <AuthContext.Provider value={{ user, firstName, loading, signUp, signIn, signOut, updateFirstName, updateCredentials, deleteAccount }}>
       {children}
     </AuthContext.Provider>
   )

@@ -10,6 +10,7 @@ export function useFaves() {
   }
 
   const isFave = (dealId) => faves.includes(dealId)
+  const clearFaves = () => setFaves([])
 
-  return { faves, toggleFave, isFave }
+  return { faves, toggleFave, isFave, clearFaves }
 }
