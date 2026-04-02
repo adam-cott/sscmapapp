@@ -5,14 +5,8 @@ function formatDate(date) {
   return date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
 }
 
-function getYearOptions() {
-  const now = new Date()
-  const y = now.getFullYear()
-  return [y - 1, y, y + 1]
-}
-
 export default function CardYearScreen({ onBack }) {
-  const { startYear, setStartYear, daysRemaining, isExpired, isExpiring } = useCardYear()
+  const { startYear, daysRemaining, isExpired, isExpiring } = useCardYear()
 
   const expiryDate = getExpiryDate(startYear)
   const startDate = new Date(startYear, 6, 31)
@@ -56,43 +50,6 @@ export default function CardYearScreen({ onBack }) {
             {statusText}
           </div>
         </div>
-      </div>
-
-      {/* Year picker */}
-      <div className="mx-4 mt-4 rounded-2xl overflow-hidden bg-white shadow-sm">
-        <div style={{ padding: '12px 16px 8px', borderBottom: '1px solid #f1f5f9' }}>
-          <h3 style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '13px', color: '#94a3b8', margin: 0, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-            Select Your Card Year
-          </h3>
-        </div>
-        {getYearOptions().map((y, i, arr) => {
-          const selected = y === startYear
-          const expiry = getExpiryDate(y)
-          const expired = new Date() > expiry
-          return (
-            <div
-              key={y}
-              onClick={() => setStartYear(y)}
-              style={{
-                display: 'flex', alignItems: 'center', padding: '14px 16px',
-                borderBottom: i < arr.length - 1 ? '1px solid #f1f5f9' : 'none',
-                cursor: 'pointer', backgroundColor: selected ? '#f0f7ff' : 'transparent',
-              }}
-            >
-              <div style={{ flex: 1 }}>
-                <div style={{ fontFamily: 'Sora, sans-serif', fontWeight: 600, fontSize: '15px', color: selected ? 'var(--ssc-blue)' : '#0f172a' }}>
-                  {y}–{y + 1}
-                </div>
-                <div style={{ fontSize: '12px', color: '#94a3b8', marginTop: '2px' }}>
-                  Jul 31, {y} – Jul 31, {y + 1} {expired ? '· Expired' : ''}
-                </div>
-              </div>
-              {selected && (
-                <div style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: 'var(--ssc-blue)' }} />
-              )}
-            </div>
-          )
-        })}
       </div>
 
       {/* Buy new card */}
