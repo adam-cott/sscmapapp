@@ -42,7 +42,10 @@ function StatusMsg({ status }) {
 }
 
 export default function EditProfileScreen({ onBack }) {
-  const { firstName: authFirstName, updateFirstName, updateCredentials } = useAuth()
+  const { user, firstName: authFirstName, updateFirstName, updateCredentials } = useAuth()
+
+  const isDemo = user?.email === 'test@gmail.com'
+  const demoError = { type: 'error', msg: "This is a demo account — profile changes are disabled." }
 
   const [name, setName] = useState(authFirstName)
   const [nameStatus, setNameStatus] = useState(null)
@@ -61,6 +64,7 @@ export default function EditProfileScreen({ onBack }) {
 
   async function handleSaveName(e) {
     e.preventDefault()
+    if (isDemo) { setNameStatus(demoError); return }
     if (!name.trim()) return
     setNameSaving(true)
     setNameStatus(null)
@@ -76,6 +80,7 @@ export default function EditProfileScreen({ onBack }) {
 
   async function handleSaveEmail(e) {
     e.preventDefault()
+    if (isDemo) { setEmailStatus(demoError); return }
     if (!newEmail.trim() || !emailPass) return
     setEmailSaving(true)
     setEmailStatus(null)
@@ -93,6 +98,7 @@ export default function EditProfileScreen({ onBack }) {
 
   async function handleSavePassword(e) {
     e.preventDefault()
+    if (isDemo) { setPassStatus(demoError); return }
     if (!newPass || !confirmPass || !passCurrentPass) return
     if (newPass !== confirmPass) {
       setPassStatus({ type: 'error', msg: 'Passwords do not match.' })
