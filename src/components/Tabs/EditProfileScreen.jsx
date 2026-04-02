@@ -14,30 +14,22 @@ function friendlyError(code) {
   }
 }
 
-function SectionCard({ children }) {
-  return (
-    <div className="mx-4 mt-4 rounded-2xl overflow-hidden bg-white shadow-sm">
-      {children}
-    </div>
-  )
-}
-
-function SectionTitle({ children }) {
-  return (
-    <div style={{ padding: '12px 16px 8px', borderBottom: '1px solid #f1f5f9' }}>
-      <h3 style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '13px', color: '#94a3b8', margin: 0, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-        {children}
-      </h3>
-    </div>
-  )
-}
-
 function StatusMsg({ status }) {
   if (!status) return null
   return (
-    <p style={{ fontSize: '13px', color: status.type === 'success' ? '#22c55e' : '#ef4444', margin: '6px 0 0' }}>
+    <p style={{ fontSize: '13px', color: status.type === 'success' ? '#22c55e' : '#ef4444', margin: '2px 0 0' }}>
       {status.msg}
     </p>
+  )
+}
+
+function SectionLabel({ children }) {
+  return (
+    <div style={{ padding: '20px 20px 8px' }}>
+      <span style={{ fontSize: '12px', fontWeight: 700, color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.06em', fontFamily: 'Sora, sans-serif' }}>
+        {children}
+      </span>
+    </div>
   )
 }
 
@@ -123,8 +115,11 @@ export default function EditProfileScreen({ onBack }) {
     }
   }
 
+  const initial = (authFirstName || user?.email || '?')[0].toUpperCase()
+
   return (
     <div className="flex flex-col h-full overflow-y-auto" style={{ backgroundColor: '#f0f4f8' }}>
+
       {/* Header */}
       <div style={{ display: 'flex', alignItems: 'center', padding: '16px 16px 12px', backgroundColor: '#fff', borderBottom: '1px solid #e8edf3' }}>
         <button onClick={onBack} style={{ background: 'none', border: 'none', cursor: 'pointer', padding: '4px', marginRight: '8px', color: '#0f172a' }}>
@@ -135,29 +130,34 @@ export default function EditProfileScreen({ onBack }) {
         </h2>
       </div>
 
-      {/* Current account info */}
-      <div className="mx-4 mt-4 rounded-2xl overflow-hidden bg-white shadow-sm">
-        <div style={{ padding: '12px 16px 8px', borderBottom: '1px solid #f1f5f9' }}>
-          <h3 style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '13px', color: '#94a3b8', margin: 0, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-            Current Account
-          </h3>
+      {/* Profile summary — read only */}
+      <div className="mx-4 mt-5 rounded-2xl bg-white shadow-sm" style={{ display: 'flex', alignItems: 'center', gap: '14px', padding: '18px 16px' }}>
+        <div style={{
+          width: '52px', height: '52px', borderRadius: '50%',
+          backgroundColor: 'var(--ssc-blue)', flexShrink: 0,
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+        }}>
+          <span style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '20px', color: '#fff' }}>
+            {initial}
+          </span>
         </div>
-        <div style={{ padding: '14px 16px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
-          <div>
-            <div style={{ fontSize: '11px', color: '#94a3b8', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '2px' }}>Name</div>
-            <div style={{ fontSize: '15px', color: '#0f172a' }}>{authFirstName || '—'}</div>
+        <div>
+          <div style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '17px', color: '#0f172a', lineHeight: 1.2 }}>
+            {authFirstName || 'No name set'}
           </div>
-          <div style={{ borderTop: '1px solid #f1f5f9', paddingTop: '10px' }}>
-            <div style={{ fontSize: '11px', color: '#94a3b8', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '2px' }}>Email</div>
-            <div style={{ fontSize: '15px', color: '#0f172a' }}>{user?.email || '—'}</div>
+          <div style={{ fontSize: '13px', color: '#94a3b8', marginTop: '3px' }}>
+            {user?.email}
           </div>
         </div>
       </div>
 
-      {/* Name */}
-      <SectionCard>
-        <SectionTitle>Name</SectionTitle>
-        <form onSubmit={handleSaveName} style={{ padding: '14px 16px' }}>
+      {/* Update name + email */}
+      <SectionLabel>Update Info</SectionLabel>
+
+      <div className="mx-4 rounded-2xl bg-white shadow-sm overflow-hidden">
+        {/* Name */}
+        <form onSubmit={handleSaveName} style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: '8px', borderBottom: '1px solid #f1f5f9' }}>
+          <label style={labelStyle}>First Name</label>
           <input
             type="text"
             value={name}
@@ -171,12 +171,10 @@ export default function EditProfileScreen({ onBack }) {
             {nameSaving ? 'Saving…' : 'Save Name'}
           </button>
         </form>
-      </SectionCard>
 
-      {/* Email */}
-      <SectionCard>
-        <SectionTitle>Email</SectionTitle>
-        <form onSubmit={handleSaveEmail} style={{ padding: '14px 16px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+        {/* Email */}
+        <form onSubmit={handleSaveEmail} style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <label style={labelStyle}>Email</label>
           <input
             type="email"
             value={newEmail}
@@ -189,7 +187,7 @@ export default function EditProfileScreen({ onBack }) {
             type="password"
             value={emailPass}
             onChange={e => { setEmailPass(e.target.value); setEmailStatus(null) }}
-            placeholder="Current password"
+            placeholder="Current password to confirm"
             required
             style={inputStyle}
           />
@@ -198,12 +196,14 @@ export default function EditProfileScreen({ onBack }) {
             {emailSaving ? 'Saving…' : 'Save Email'}
           </button>
         </form>
-      </SectionCard>
+      </div>
 
-      {/* Password */}
-      <SectionCard>
-        <SectionTitle>Password</SectionTitle>
-        <form onSubmit={handleSavePassword} style={{ padding: '14px 16px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+      {/* Update password */}
+      <SectionLabel>Security</SectionLabel>
+
+      <div className="mx-4 rounded-2xl bg-white shadow-sm overflow-hidden">
+        <form onSubmit={handleSavePassword} style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <label style={labelStyle}>Change Password</label>
           <input
             type="password"
             value={newPass}
@@ -224,7 +224,7 @@ export default function EditProfileScreen({ onBack }) {
             type="password"
             value={passCurrentPass}
             onChange={e => { setPassCurrentPass(e.target.value); setPassStatus(null) }}
-            placeholder="Current password"
+            placeholder="Current password to confirm"
             required
             style={inputStyle}
           />
@@ -233,11 +233,16 @@ export default function EditProfileScreen({ onBack }) {
             {passSaving ? 'Saving…' : 'Save Password'}
           </button>
         </form>
-      </SectionCard>
+      </div>
 
-      <div style={{ height: '24px' }} />
+      <div style={{ height: '28px' }} />
     </div>
   )
+}
+
+const labelStyle = {
+  fontSize: '13px', fontWeight: 600, color: '#475569',
+  fontFamily: 'Sora, sans-serif', margin: 0,
 }
 
 const inputStyle = {
@@ -248,7 +253,7 @@ const inputStyle = {
 }
 
 const saveBtn = (disabled) => ({
-  marginTop: '4px', padding: '11px', borderRadius: '10px', border: 'none',
+  marginTop: '2px', padding: '11px', borderRadius: '10px', border: 'none',
   backgroundColor: 'var(--ssc-blue)', color: '#fff',
   fontFamily: 'Sora, sans-serif', fontWeight: 600, fontSize: '14px',
   cursor: disabled ? 'not-allowed' : 'pointer',
