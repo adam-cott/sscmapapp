@@ -8,7 +8,7 @@ const TABS = [
   { id: 'settings', label: 'Settings',Icon: Settings },
 ]
 
-export default function BottomNav({ activeTab, onTabChange, isMapTab }) {
+export default function BottomNav({ activeTab, onTabChange, isMapTab, settingsBadge }) {
   return (
     <nav
       className="flex items-stretch"
@@ -39,12 +39,20 @@ export default function BottomNav({ activeTab, onTabChange, isMapTab }) {
               borderRadius: '14px',
               background: active ? 'var(--ssc-blue-light)' : 'transparent',
               transition: 'background 0.15s ease',
+              position: 'relative',
             }}>
               <Icon
                 size={20}
                 strokeWidth={active ? 2.5 : 1.8}
                 color={active ? 'var(--ssc-blue)' : '#94a3b8'}
               />
+              {id === 'settings' && settingsBadge && (
+                <div style={{
+                  position: 'absolute', top: '2px', right: '4px',
+                  width: '8px', height: '8px', borderRadius: '50%',
+                  backgroundColor: '#ef4444', border: '1.5px solid #fff',
+                }} />
+              )}
             </div>
             <span style={{
               fontSize: '10px',

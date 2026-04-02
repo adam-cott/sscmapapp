@@ -5,6 +5,8 @@ import AuthScreen from './components/Auth/AuthScreen'
 import EditProfileScreen from './components/Tabs/EditProfileScreen'
 import DeleteAccountDialog from './components/UI/DeleteAccountDialog'
 import AboutScreen from './components/Settings/AboutScreen'
+import CardYearScreen from './components/Settings/CardYearScreen'
+import { useCardYear } from './hooks/useCardYear'
 import dealsData from './data/deals.json'
 import { useDeals } from './hooks/useDeals'
 import { useFilters } from './hooks/useFilters'
@@ -39,6 +41,8 @@ export default function App() {
   const [showEditProfile, setShowEditProfile] = useState(false)
   const [showDeleteDialog, setShowDeleteDialog] = useState(false)
   const [showAbout, setShowAbout] = useState(false)
+  const [showCardYear, setShowCardYear] = useState(false)
+  const { isExpired, isExpiring } = useCardYear()
   const [activeView, setActiveView] = useState('map')
   const [showUseToast, setShowUseToast] = useState(false)
   const [pendingNearest, setPendingNearest] = useState(false)
@@ -172,7 +176,7 @@ export default function App() {
               dealCount={filteredDeals.length}
             />
           </div>
-          <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} />
+          <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} settingsBadge={isExpired || isExpiring} />
         </div>
       )}
 
@@ -236,12 +240,12 @@ export default function App() {
 
           {/* Nav floats over map on mobile */}
           <div className="md:hidden absolute bottom-0 left-0 right-0 z-[600]">
-            <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab />
+            <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab settingsBadge={isExpired || isExpiring} />
           </div>
         </div>
         {/* Nav sits full-width below sidebar+map on desktop */}
         <div className="hidden md:block">
-          <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} />
+          <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} settingsBadge={isExpired || isExpiring} />
         </div>
         </div>
       )}
@@ -256,7 +260,7 @@ export default function App() {
               userCoords={coords}
             />
           </div>
-          <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} />
+          <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} settingsBadge={isExpired || isExpiring} />
         </div>
       )}
 
@@ -270,7 +274,7 @@ export default function App() {
               usageMap={usageMap}
             />
           </div>
-          <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} />
+          <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} settingsBadge={isExpired || isExpiring} />
         </div>
       )}
 
@@ -282,16 +286,20 @@ export default function App() {
               ? <EditProfileScreen onBack={() => setShowEditProfile(false)} />
               : showAbout
               ? <AboutScreen onBack={() => setShowAbout(false)} />
+              : showCardYear
+              ? <CardYearScreen onBack={() => setShowCardYear(false)} />
               : <SettingsTab
                   onEditProfile={() => setShowEditProfile(true)}
                   onReset={handleReset}
                   onSignOut={signOut}
                   onDeleteAccount={() => setShowDeleteDialog(true)}
                   onAbout={() => setShowAbout(true)}
+                  onCardYear={() => setShowCardYear(true)}
+                  showBadge={isExpired || isExpiring}
                 />
             }
           </div>
-          <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} />
+          <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} settingsBadge={isExpired || isExpiring} />
         </div>
       )}
 

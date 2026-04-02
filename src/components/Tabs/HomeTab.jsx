@@ -1,4 +1,5 @@
 import { useAuth } from '../../hooks/useAuth'
+import { useCardYear } from '../../hooks/useCardYear'
 import { getNearestDistance } from '../../utils/dealHelpers'
 import HomeCard from '../UI/HomeCard'
 import SearchBar from '../Sidebar/SearchBar'
@@ -87,6 +88,8 @@ export default function HomeTab({
 }) {
   const { firstName } = useAuth()
   const userName = firstName || 'Student'
+  const { daysRemaining, isExpired, isExpiring } = useCardYear()
+  const showBanner = isExpired || isExpiring
 
   // Sort is NOT part of the trigger — only search text and category filters switch modes
   const isSearching = searchQuery.trim().length > 0 || activeCategories.length > 0
@@ -130,6 +133,26 @@ export default function HomeTab({
             {getGreeting()}, {userName}!
           </div>
         </div>
+        {showBanner && (
+          <a
+            href="https://sscdeals.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'block', margin: '0 12px 2px', padding: '10px 14px',
+              borderRadius: '12px', textDecoration: 'none',
+              backgroundColor: isExpired ? '#fef2f2' : '#fff7ed',
+              border: `1px solid ${isExpired ? '#fecaca' : '#fed7aa'}`,
+            }}
+          >
+            <span style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '13px', color: isExpired ? '#dc2626' : '#ea580c' }}>
+              {isExpired ? 'Your card has expired! ' : `Card expires in ${daysRemaining} day${daysRemaining === 1 ? '' : 's'}! `}
+            </span>
+            <span style={{ fontSize: '13px', color: isExpired ? '#dc2626' : '#ea580c' }}>
+              Grab next year's card at sscdeals.com →
+            </span>
+          </a>
+        )}
         <div style={{ padding: '0 12px 14px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
           <SearchBar value={searchQuery} onChange={onSearchChange} />
           <FilterPanel
