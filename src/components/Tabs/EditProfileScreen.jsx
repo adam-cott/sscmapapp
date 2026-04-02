@@ -124,7 +124,7 @@ export default function EditProfileScreen({ onBack }) {
   }
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '100%', backgroundColor: '#f0f4f8', overflowY: 'auto' }}>
+    <div className="flex flex-col h-full overflow-y-auto" style={{ backgroundColor: '#f0f4f8' }}>
       {/* Header */}
       <div style={{ display: 'flex', alignItems: 'center', padding: '16px 16px 12px', backgroundColor: '#fff', borderBottom: '1px solid #e8edf3' }}>
         <button onClick={onBack} style={{ background: 'none', border: 'none', cursor: 'pointer', padding: '4px', marginRight: '8px', color: '#0f172a' }}>
