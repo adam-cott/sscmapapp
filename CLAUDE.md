@@ -107,3 +107,12 @@ npm test             # Run Vitest tests
 # Push to deploy
 git add -A && git commit -m "..." && git push
 ```
+
+---
+
+## Push Workflow (REQUIRED — do this every time before pushing)
+1. **Bump the patch version** in `package.json` (e.g. `1.0.3` → `1.0.4`)
+2. **Update `src/constants/changelog.js`** — set `version` to match and write a short, friendly, user-facing `description` of what changed (not a commit message — something a student would actually want to read)
+3. Then commit and push as normal
+
+This keeps the About screen version and What's New section accurate without any manual effort from the user.

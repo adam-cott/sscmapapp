@@ -4,11 +4,11 @@ const mainRows = [
   { label: 'Edit Profile',     Icon: User,      key: 'editProfile' },
   { label: 'Card Year',        Icon: Calendar,  key: 'cardYear' },
   { label: 'Reset Usage Data', Icon: RotateCcw, key: 'reset' },
-  { label: 'About',            Icon: Info,      key: 'about' },
+  { label: 'About',            Icon: Info,      key: 'onAbout' },
 ]
 
-export default function SettingsTab({ onEditProfile, onReset, onSignOut, onDeleteAccount }) {
-  const handlers = { editProfile: onEditProfile, reset: onReset }
+export default function SettingsTab({ onEditProfile, onReset, onSignOut, onDeleteAccount, onAbout }) {
+  const handlers = { editProfile: onEditProfile, reset: onReset, onAbout }
 
   return (
     <div className="flex flex-col h-full overflow-y-auto" style={{ backgroundColor: '#f0f4f8' }}>
