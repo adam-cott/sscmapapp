@@ -1,5 +1,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import './App.css'
+import { useAuth } from './hooks/useAuth'
+import AuthScreen from './components/Auth/AuthScreen'
 import dealsData from './data/deals.json'
 import { useDeals } from './hooks/useDeals'
 import { useFilters } from './hooks/useFilters'
@@ -24,6 +26,9 @@ import { useFaves } from './hooks/useFaves'
 import { useUsageLog } from './hooks/useUsageLog'
 
 export default function App() {
+  const { user, loading } = useAuth()
+  if (loading) return null
+  if (!user) return <AuthScreen />
   const [activeTab, setActiveTab] = useState('home')
   const [selectedDeal, setSelectedDeal] = useState(null)
   const [selectedLocation, setSelectedLocation] = useState(null)

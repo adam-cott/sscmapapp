@@ -1,4 +1,4 @@
-import { useLocalStorage } from '../../hooks/useLocalStorage'
+import { useAuth } from '../../hooks/useAuth'
 import { getNearestDistance } from '../../utils/dealHelpers'
 import HomeCard from '../UI/HomeCard'
 import SearchBar from '../Sidebar/SearchBar'
@@ -85,8 +85,8 @@ export default function HomeTab({
   onClearFilters, sortBy, setSortBy, categoryCounts,
   permissionDenied, geoLoading, hasCoords, onNearestRequest, dealCount,
 }) {
-  const [profile] = useLocalStorage('ssc_profile_v1', {})
-  const userName = profile.name || 'Student'
+  const { firstName } = useAuth()
+  const userName = firstName || 'Student'
 
   // Sort is NOT part of the trigger — only search text and category filters switch modes
   const isSearching = searchQuery.trim().length > 0 || activeCategories.length > 0
