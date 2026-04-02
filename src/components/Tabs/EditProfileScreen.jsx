@@ -135,6 +135,25 @@ export default function EditProfileScreen({ onBack }) {
         </h2>
       </div>
 
+      {/* Current account info */}
+      <div className="mx-4 mt-4 rounded-2xl overflow-hidden bg-white shadow-sm">
+        <div style={{ padding: '12px 16px 8px', borderBottom: '1px solid #f1f5f9' }}>
+          <h3 style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '13px', color: '#94a3b8', margin: 0, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+            Current Account
+          </h3>
+        </div>
+        <div style={{ padding: '14px 16px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+          <div>
+            <div style={{ fontSize: '11px', color: '#94a3b8', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '2px' }}>Name</div>
+            <div style={{ fontSize: '15px', color: '#0f172a' }}>{authFirstName || '—'}</div>
+          </div>
+          <div style={{ borderTop: '1px solid #f1f5f9', paddingTop: '10px' }}>
+            <div style={{ fontSize: '11px', color: '#94a3b8', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '2px' }}>Email</div>
+            <div style={{ fontSize: '15px', color: '#0f172a' }}>{user?.email || '—'}</div>
+          </div>
+        </div>
+      </div>
+
       {/* Name */}
       <SectionCard>
         <SectionTitle>Name</SectionTitle>
