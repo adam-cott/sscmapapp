@@ -118,10 +118,10 @@ export default function EditProfileScreen({ onBack }) {
   const initial = (authFirstName || user?.email || '?')[0].toUpperCase()
 
   return (
-    <div className="flex flex-col h-full overflow-y-auto" style={{ backgroundColor: '#f0f4f8' }}>
+    <div className="flex flex-col h-full" style={{ backgroundColor: '#f0f4f8' }}>
 
-      {/* Header */}
-      <div style={{ display: 'flex', alignItems: 'center', padding: '16px 16px 12px', backgroundColor: '#fff', borderBottom: '1px solid #e8edf3' }}>
+      {/* Header — fixed */}
+      <div style={{ flexShrink: 0, display: 'flex', alignItems: 'center', padding: '16px 16px 12px', backgroundColor: '#fff', borderBottom: '1px solid #e8edf3' }}>
         <button onClick={onBack} style={{ background: 'none', border: 'none', cursor: 'pointer', padding: '4px', marginRight: '8px', color: '#0f172a' }}>
           <ArrowLeft size={20} />
         </button>
@@ -129,6 +129,9 @@ export default function EditProfileScreen({ onBack }) {
           Edit Profile
         </h2>
       </div>
+
+      {/* Scrollable body */}
+      <div style={{ flex: 1, overflowY: 'auto', overscrollBehaviorY: 'contain' }}>
 
       {/* Profile summary — read only */}
       <div className="mx-4 mt-5 rounded-2xl bg-white shadow-sm" style={{ display: 'flex', alignItems: 'center', gap: '14px', padding: '18px 16px' }}>
@@ -236,6 +239,7 @@ export default function EditProfileScreen({ onBack }) {
       </div>
 
       <div style={{ height: '28px' }} />
+      </div> {/* end scrollable body */}
     </div>
   )
 }
@@ -246,7 +250,7 @@ const labelStyle = {
 }
 
 const inputStyle = {
-  width: '100%', padding: '11px 13px', borderRadius: '10px',
+  width: '100%', padding: '8px 13px', borderRadius: '10px',
   border: '1px solid #e2e8f0', backgroundColor: '#f8fafc',
   fontSize: '15px', color: '#0f172a', outline: 'none',
   fontFamily: 'DM Sans, sans-serif', boxSizing: 'border-box',
