@@ -3,12 +3,12 @@ import { getAuth } from 'firebase/auth'
 import { getFirestore } from 'firebase/firestore'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCnbDNCBXmpReXseMXq31T6khwEvtzNZvs",
-  authDomain: "ssc-map-app-c31fd.firebaseapp.com",
-  projectId: "ssc-map-app-c31fd",
-  storageBucket: "ssc-map-app-c31fd.firebasestorage.app",
-  messagingSenderId: "875906321741",
-  appId: "1:875906321741:web:b9219ae2b34bc45e893b04"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 }
 
 const app = initializeApp(firebaseConfig)
