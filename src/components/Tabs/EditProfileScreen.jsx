@@ -156,7 +156,7 @@ export default function EditProfileScreen({ onBack }) {
 
       <div className="mx-4 rounded-2xl bg-white shadow-sm overflow-hidden">
         {/* Name */}
-        <form onSubmit={handleSaveName} style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: '8px', borderBottom: '1px solid #f1f5f9' }}>
+        <form onSubmit={handleSaveName} style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: '12px', borderBottom: '1px solid #f1f5f9' }}>
           <label style={labelStyle}>First Name</label>
           <input
             type="text"
@@ -173,7 +173,7 @@ export default function EditProfileScreen({ onBack }) {
         </form>
 
         {/* Email */}
-        <form onSubmit={handleSaveEmail} style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+        <form onSubmit={handleSaveEmail} style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
           <label style={labelStyle}>Email</label>
           <input
             type="email"
@@ -202,7 +202,7 @@ export default function EditProfileScreen({ onBack }) {
       <SectionLabel>Security</SectionLabel>
 
       <div className="mx-4 rounded-2xl bg-white shadow-sm overflow-hidden">
-        <form onSubmit={handleSavePassword} style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+        <form onSubmit={handleSavePassword} style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
           <label style={labelStyle}>Change Password</label>
           <input
             type="password"
