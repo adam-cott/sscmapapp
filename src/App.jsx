@@ -154,7 +154,7 @@ export default function App() {
       {/* ── Home tab ────────────────────────────────────── */}
       {activeTab === 'home' && (
         <div className="flex flex-col flex-1 overflow-hidden">
-          <div className="flex-1 overflow-hidden">
+          <div className="flex flex-col flex-1 min-h-0 overflow-hidden">
             <HomeTab
               deals={dealsWithUsage}
               filteredDeals={filteredDeals}
