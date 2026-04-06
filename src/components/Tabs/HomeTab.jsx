@@ -53,7 +53,7 @@ function Section({ title, deals, onSelectDeal, userCoords, emptyMessage }) {
       ) : (
         <div style={{
           flex: 1,
-          display: 'flex', gap: '10px', overflowX: 'auto', alignItems: 'center',
+          display: 'flex', gap: '10px', overflowX: 'auto', alignItems: 'flex-start',
           padding: '12px 14px', scrollbarWidth: 'none',
           backgroundColor: '#f0f4f8',
         }}>
