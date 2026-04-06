@@ -189,6 +189,22 @@ h1, h2, h3, h4, h5 {
 .ssc-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
 .ssc-scroll::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
 
+/* ─── HomeCard compact sizing (short screens) ───── */
+@media (max-height: 700px) {
+  :root {
+    --hc-pad: 6px 10px;
+    --hc-gap: 2px;
+    --hc-name: 11px;
+    --hc-desc: 10px;
+    --hc-desc-lh: 1.2;
+    --hc-badge: 9px;
+    --hc-badge-pad: 1px 5px;
+    --hc-badge-mt: 0px;
+    --hc-dist: 8px;
+    --hc-dist-mt: 0px;
+  }
+}
+
 /* ─── Utility ────────────────────────────────────── */
 .line-clamp-2 {
   display: -webkit-box;

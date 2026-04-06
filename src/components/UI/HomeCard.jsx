@@ -23,17 +23,17 @@ export default function HomeCard({ deal, onClick, userCoords }) {
         borderTop: `3px solid ${isExhausted ? '#e2e8f0' : catColor}`,
         opacity: isExhausted ? 0.6 : 1,
         cursor: 'pointer',
-        padding: '14px',
+        padding: 'var(--hc-pad, 14px)',
         display: 'flex',
         flexDirection: 'column',
-        gap: '6px',
+        gap: 'var(--hc-gap, 6px)',
       }}
     >
       <span
         style={{
           fontFamily: 'Sora, sans-serif',
           fontWeight: 700,
-          fontSize: '13px',
+          fontSize: 'var(--hc-name, 13px)',
           color: isExhausted ? '#94a3b8' : '#0f172a',
           whiteSpace: 'nowrap',
           overflow: 'hidden',
@@ -46,9 +46,9 @@ export default function HomeCard({ deal, onClick, userCoords }) {
 
       <span
         style={{
-          fontSize: '12px',
+          fontSize: 'var(--hc-desc, 12px)',
           color: isExhausted ? '#94a3b8' : '#475569',
-          lineHeight: '1.3',
+          lineHeight: 'var(--hc-desc-lh, 1.3)',
           display: '-webkit-box',
           WebkitLineClamp: 2,
           WebkitBoxOrient: 'vertical',
@@ -61,14 +61,14 @@ export default function HomeCard({ deal, onClick, userCoords }) {
       <span
         style={{
           display: 'inline-block',
-          marginTop: '3px',
-          fontSize: '11px',
+          marginTop: 'var(--hc-badge-mt, 3px)',
+          fontSize: 'var(--hc-badge, 11px)',
           fontFamily: 'Sora, sans-serif',
           fontWeight: 700,
           backgroundColor: isExhausted ? '#f1f5f9' : CATEGORY_LIGHT[deal.category] || '#f1f5f9',
           color: isExhausted ? '#94a3b8' : catColor,
           borderRadius: '6px',
-          padding: '3px 8px',
+          padding: 'var(--hc-badge-pad, 3px 8px)',
           alignSelf: 'flex-start',
         }}
       >
@@ -81,9 +81,9 @@ export default function HomeCard({ deal, onClick, userCoords }) {
             display: 'flex',
             alignItems: 'center',
             gap: '3px',
-            fontSize: '10px',
+            fontSize: 'var(--hc-dist, 10px)',
             color: '#94a3b8',
-            marginTop: '1px',
+            marginTop: 'var(--hc-dist-mt, 1px)',
           }}
         >
           <MapPin size={9} color="#94a3b8" />
