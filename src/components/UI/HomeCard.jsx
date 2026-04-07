@@ -26,7 +26,7 @@ export default function HomeCard({ deal, onClick, userCoords }) {
         padding: 'var(--hc-pad, 14px)',
         display: 'flex',
         flexDirection: 'column',
-        gap: 'var(--hc-gap, 6px)',
+        gap: 'var(--hc-gap, 3px)',
       }}
     >
       <span
@@ -61,7 +61,7 @@ export default function HomeCard({ deal, onClick, userCoords }) {
       <span
         style={{
           display: 'inline-block',
-          marginTop: 'var(--hc-badge-mt, 3px)',
+          marginTop: 'var(--hc-badge-mt, 1px)',
           fontSize: 'var(--hc-badge, 11px)',
           fontFamily: 'Sora, sans-serif',
           fontWeight: 700,
@@ -83,7 +83,7 @@ export default function HomeCard({ deal, onClick, userCoords }) {
             gap: '3px',
             fontSize: 'var(--hc-dist, 10px)',
             color: '#94a3b8',
-            marginTop: 'var(--hc-dist-mt, 1px)',
+            marginTop: 'var(--hc-dist-mt, 0px)',
           }}
         >
           <MapPin size={9} color="#94a3b8" />

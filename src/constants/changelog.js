@@ -1,4 +1,4 @@
 export const LATEST_UPDATE = {
-  version: '1.0.5',
-  description: "Fixed the whole app being draggable on Android — the bottom nav stays put and nothing scrolls at the page level anymore.",
+  version: '1.0.6',
+  description: "Home tab deal cards are now more compact — all three sections fit cleanly on screen without the bottom one getting cut off.",
 }
