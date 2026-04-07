@@ -190,6 +190,18 @@ h1, h2, h3, h4, h5 {
 .ssc-scroll::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
 
 /* ─── HomeCard compact sizing (short screens) ───── */
+@media (max-height: 900px) {
+  :root {
+    --hc-pad: 10px 12px;
+    --hc-gap: 4px;
+    --hc-name: 12px;
+    --hc-desc: 11px;
+    --hc-badge: 10px;
+    --hc-badge-pad: 2px 6px;
+    --hc-badge-mt: 2px;
+    --hc-dist: 9px;
+  }
+}
 @media (max-height: 700px) {
   :root {
     --hc-pad: 6px 10px;

@@ -1,4 +1,4 @@
 export const LATEST_UPDATE = {
-  version: '1.0.3',
-  description: "Deal cards on the Home tab now scale down on smaller phones so the business name, deal, badge, and distance all fit without getting cut off.",
+  version: '1.0.4',
+  description: "Fixed deal cards on the Home tab getting cut off or accidentally scrolling vertically on Android. All four lines of info now fit cleanly on screen.",
 }
