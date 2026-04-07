@@ -150,10 +150,10 @@ export default function App() {
   const isMapTab = activeTab === 'map'
 
   return (
-    <div className="flex flex-col h-screen overflow-hidden" style={{ backgroundColor: '#f0f4f8' }}>
+    <div className="flex flex-col h-full min-h-0 overflow-hidden" style={{ backgroundColor: '#f0f4f8' }}>
       {/* ── Home tab ────────────────────────────────────── */}
       {activeTab === 'home' && (
-        <div className="flex flex-col flex-1 overflow-hidden">
+        <div className="flex flex-col flex-1 min-h-0 overflow-hidden">
           <div className="flex flex-col flex-1 min-h-0 overflow-hidden">
             <HomeTab
               deals={dealsWithUsage}
