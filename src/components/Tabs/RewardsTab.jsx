@@ -13,10 +13,6 @@ export default function RewardsTab({ usageLog, dealsWithUsage, usageMap }) {
   const dealById = Object.fromEntries(dealsWithUsage.map(d => [d.id, d]))
   const totalRedemptions = Object.values(usageMap).reduce((a, b) => a + b, 0)
 
-  // Savings scaffold — when deal.dealValue is added to deals.json, replace null with:
-  // usageLog.reduce((sum, e) => sum + (dealById[e.dealId]?.deal?.dealValue ?? 0), 0)
-  const estimatedSavings = null
-
   // usageLog only exists from when logging was added. usageMap has ALL usage
   // including deals used before the log existed. Build a combined history:
   // real log entries (with timestamps) + synthetic entries for the gap.
@@ -52,31 +48,15 @@ export default function RewardsTab({ usageLog, dealsWithUsage, usageMap }) {
 
       <div className="flex-1 overflow-y-auto ssc-scroll px-4 pb-4 space-y-4">
 
-        {/* Stats cards */}
-        <div className="grid grid-cols-2 gap-3">
-          <div className="rounded-2xl bg-white p-4 shadow-sm" style={{ border: '1px solid #f1f5f9' }}>
-            <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-1" style={{ fontFamily: 'var(--font-display)', fontSize: '9px', letterSpacing: '0.1em' }}>
-              Deals Used
-            </p>
-            <p className="text-3xl font-bold" style={{ fontFamily: 'var(--font-display)', color: 'var(--ssc-blue)' }}>
-              {totalRedemptions}
-            </p>
-            <p className="text-xs text-gray-400 mt-0.5">redemption{totalRedemptions !== 1 ? 's' : ''} this year</p>
-          </div>
-
-          <div className="rounded-2xl bg-white p-4 shadow-sm" style={{ border: '1px solid #f1f5f9' }}>
-            <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-1" style={{ fontFamily: 'var(--font-display)', fontSize: '9px', letterSpacing: '0.1em' }}>
-              Est. Savings
-            </p>
-            {estimatedSavings !== null ? (
-              <p className="text-3xl font-bold text-green-600" style={{ fontFamily: 'var(--font-display)' }}>
-                ${estimatedSavings.toFixed(2)}
-              </p>
-            ) : (
-              <p className="text-lg font-bold text-gray-300" style={{ fontFamily: 'var(--font-display)' }}>—</p>
-            )}
-            <p className="text-xs text-gray-400 mt-0.5">Savings tracking coming soon</p>
-          </div>
+        {/* Stats card */}
+        <div className="rounded-2xl bg-white p-4 shadow-sm" style={{ border: '1px solid #f1f5f9' }}>
+          <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-1" style={{ fontFamily: 'var(--font-display)', fontSize: '9px', letterSpacing: '0.1em' }}>
+            Deals Used
+          </p>
+          <p className="text-3xl font-bold" style={{ fontFamily: 'var(--font-display)', color: 'var(--ssc-blue)' }}>
+            {totalRedemptions}
+          </p>
+          <p className="text-xs text-gray-400 mt-0.5">redemption{totalRedemptions !== 1 ? 's' : ''} this year</p>
         </div>
 
         {/* Usage history */}

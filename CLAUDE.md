@@ -67,7 +67,7 @@ src/
 - `locations[]` is canonical for map pins — `lat`/`lng` at top level is just primary location
 - `maxUses: null` = unlimited
 - `contact.phone` stored per-location in `locations[]`, not at deal level
-- `contact.website` is null for all businesses (pending)
+- `contact.website` is null for all businesses — intentionally left empty for now. Do not ask about this or treat it as a gap to fix. It is a deliberate decision to revisit later.
 - Python geocode scripts read from `C:\Users\adamb\Downloads\starving_student_businesses.csv` (hardcoded path — keep that file in place)
 - **Stats:** 418 deals · 199 businesses · 1,400+ pins · 0 null coords
 
@@ -86,7 +86,8 @@ src/
 ## Navigation (Bottom Nav — 5 tabs)
 `home` · `map` · `faves` · `rewards` · `settings`
 
-**Pending (3.31.home_page_fix.md):** Merge Deals tab into Home tab. Home = Discovery mode (carousels) by default; switches to Search mode (ListView) when user interacts with search/filters. `isSearching = searchQuery || activeCategories.length > 0 || sortBy !== 'default'`.
+## Rewards Tab — Est. Savings
+The "Est. Savings" stat card has been intentionally removed from the Rewards tab for now. The plan is to add a `dealValue` field to each deal in `deals.json` and compute savings from `usageLog`. The code scaffold was: `usageLog.reduce((sum, e) => sum + (dealById[e.dealId]?.deal?.dealValue ?? 0), 0)`. Do not re-add the placeholder "coming soon" UI — only ship it when real `dealValue` data exists.
 
 ---
 
