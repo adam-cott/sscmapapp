@@ -29,6 +29,7 @@ import SettingsTab from './components/Tabs/SettingsTab'
 import HomeTab from './components/Tabs/HomeTab'
 import { useFaves } from './hooks/useFaves'
 import { useUsageLog } from './hooks/useUsageLog'
+import { useFirestoreSync } from './hooks/useFirestoreSync'
 
 export default function App() {
   const { user, loading } = useAuth()
@@ -38,7 +39,7 @@ export default function App() {
 }
 
 function AppShell() {
-  const { signOut } = useAuth()
+  const { signOut, user } = useAuth()
   const [activeTab, setActiveTab] = useState('home')
   const [selectedDeal, setSelectedDeal] = useState(null)
   const [selectedLocation, setSelectedLocation] = useState(null)
@@ -55,6 +56,8 @@ function AppShell() {
   const { dealsWithUsage, usageMap, recordUse, resetAll } = useDeals(dealsData)
   const { faves, toggleFave, isFave } = useFaves()
   const { usageLog, logUse, clearLog } = useUsageLog()
+
+  useFirestoreSync(user.uid, usageMap, faves, usageLog)
 
   const { coords, loading: geoLoading, permissionDenied, hasRequested, requestLocation, decline } = useGeolocation()
 

@@ -26,6 +26,20 @@ export function AuthProvider({ children }) {
       if (firebaseUser) {
         const snap = await getDoc(doc(db, 'users', firebaseUser.uid))
         setFirstName(snap.exists() ? snap.data().firstName : '')
+
+        // Seed localStorage from Firestore when this is a new or different device.
+        // Must happen before setUser so AppShell's hooks initialize with the right data.
+        const storedUid = localStorage.getItem(STORAGE_KEYS.uid)
+        if (storedUid !== firebaseUser.uid) {
+          if (snap.exists()) {
+            const data = snap.data()
+            if (data.usage !== undefined) localStorage.setItem(STORAGE_KEYS.usage, JSON.stringify(data.usage))
+            if (data.faves !== undefined) localStorage.setItem(STORAGE_KEYS.faves, JSON.stringify(data.faves))
+            if (data.usageLog !== undefined) localStorage.setItem(STORAGE_KEYS.usageLog, JSON.stringify(data.usageLog))
+          }
+          localStorage.setItem(STORAGE_KEYS.uid, firebaseUser.uid)
+        }
+
         setUser(firebaseUser)
       } else {
         setUser(null)
@@ -46,6 +60,7 @@ export function AuthProvider({ children }) {
   }
 
   async function signOut() {
+    Object.values(STORAGE_KEYS).forEach(key => localStorage.removeItem(key))
     await firebaseSignOut(auth)
   }
 
