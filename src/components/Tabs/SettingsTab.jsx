@@ -1,6 +1,6 @@
 import { User, Calendar, RotateCcw, Info, ChevronRight, LogOut, Trash2 } from 'lucide-react'
 
-export default function SettingsTab({ onEditProfile, onCardYear, onReset, onAbout, onSignOut, onDeleteAccount, showBadge }) {
+export default function SettingsTab({ onEditProfile, onCardYear, onReset, onAbout, onSignOut, onDeleteAccount, showBadge, isAdmin }) {
   const mainRows = [
     { label: 'Edit Profile',     Icon: User,      onClick: onEditProfile },
     { label: 'Card Year',        Icon: Calendar,  onClick: onCardYear,   badge: showBadge },
@@ -51,16 +51,18 @@ export default function SettingsTab({ onEditProfile, onCardYear, onReset, onAbou
         </div>
       </div>
 
-      {/* Delete account */}
-      <div className="mx-4 mt-3 rounded-2xl overflow-hidden bg-white shadow-sm">
-        <div
-          onClick={onDeleteAccount}
-          className="flex items-center px-4 py-4 cursor-pointer active:bg-gray-50"
-        >
-          <Trash2 size={18} color="#ef4444" className="mr-3 flex-shrink-0" />
-          <span className="flex-1 text-base" style={{ color: '#ef4444' }}>Delete Account</span>
+      {/* Delete account — hidden for admin account */}
+      {!isAdmin && (
+        <div className="mx-4 mt-3 rounded-2xl overflow-hidden bg-white shadow-sm">
+          <div
+            onClick={onDeleteAccount}
+            className="flex items-center px-4 py-4 cursor-pointer active:bg-gray-50"
+          >
+            <Trash2 size={18} color="#ef4444" className="mr-3 flex-shrink-0" />
+            <span className="flex-1 text-base" style={{ color: '#ef4444' }}>Delete Account</span>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   )
 }

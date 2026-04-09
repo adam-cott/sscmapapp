@@ -319,6 +319,7 @@ function AppShell() {
                   onAbout={() => setShowAbout(true)}
                   onCardYear={() => setShowCardYear(true)}
                   showBadge={isExpired || isExpiring}
+                  isAdmin={isAdmin}
                 />
             }
           </div>
