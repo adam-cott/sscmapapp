@@ -280,6 +280,7 @@ function AppShell() {
             <FavesTab
               deals={dealsWithUsage.filter(d => faves.includes(d.id))}
               onSelectDeal={handleSelectDeal}
+              onToggleFave={toggleFave}
               userCoords={coords}
             />
           </div>
