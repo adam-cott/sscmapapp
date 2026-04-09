@@ -30,6 +30,9 @@ import HomeTab from './components/Tabs/HomeTab'
 import { useFaves } from './hooks/useFaves'
 import { useUsageLog } from './hooks/useUsageLog'
 import { useFirestoreSync } from './hooks/useFirestoreSync'
+import { useFeaturedDeals } from './hooks/useFeaturedDeals'
+import AdminTab from './components/Tabs/AdminTab'
+import { ADMIN_UID } from './constants/admin'
 
 export default function App() {
   const { user, loading } = useAuth()
@@ -40,6 +43,8 @@ export default function App() {
 
 function AppShell() {
   const { signOut, user } = useAuth()
+  const isAdmin = user.uid === ADMIN_UID
+  const { featuredIds } = useFeaturedDeals()
   const [activeTab, setActiveTab] = useState('home')
   const [selectedDeal, setSelectedDeal] = useState(null)
   const [selectedLocation, setSelectedLocation] = useState(null)
@@ -182,9 +187,10 @@ function AppShell() {
               hasCoords={!!coords}
               onNearestRequest={handleNearestRequest}
               dealCount={filteredDeals.length}
+              featuredIds={featuredIds}
             />
           </div>
-          <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} settingsBadge={isExpired || isExpiring} />
+          <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} settingsBadge={isExpired || isExpiring} isAdmin={isAdmin} />
         </div>
       )}
 
@@ -248,12 +254,12 @@ function AppShell() {
 
           {/* Nav floats over map on mobile */}
           <div className="md:hidden absolute bottom-0 left-0 right-0 z-[600]">
-            <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab settingsBadge={isExpired || isExpiring} />
+            <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab settingsBadge={isExpired || isExpiring} isAdmin={isAdmin} />
           </div>
         </div>
         {/* Nav sits full-width below sidebar+map on desktop */}
         <div className="hidden md:block">
-          <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} settingsBadge={isExpired || isExpiring} />
+          <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} settingsBadge={isExpired || isExpiring} isAdmin={isAdmin} />
         </div>
         </div>
       )}
@@ -268,7 +274,7 @@ function AppShell() {
               userCoords={coords}
             />
           </div>
-          <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} settingsBadge={isExpired || isExpiring} />
+          <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} settingsBadge={isExpired || isExpiring} isAdmin={isAdmin} />
         </div>
       )}
 
@@ -282,7 +288,7 @@ function AppShell() {
               usageMap={usageMap}
             />
           </div>
-          <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} settingsBadge={isExpired || isExpiring} />
+          <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} settingsBadge={isExpired || isExpiring} isAdmin={isAdmin} />
         </div>
       )}
 
@@ -307,7 +313,17 @@ function AppShell() {
                 />
             }
           </div>
-          <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} settingsBadge={isExpired || isExpiring} />
+          <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} settingsBadge={isExpired || isExpiring} isAdmin={isAdmin} />
+        </div>
+      )}
+
+      {/* ── Admin tab ───────────────────────────────────── */}
+      {activeTab === 'admin' && isAdmin && (
+        <div className="flex flex-col flex-1 overflow-hidden">
+          <div className="flex-1 overflow-hidden">
+            <AdminTab deals={dealsWithUsage} />
+          </div>
+          <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} settingsBadge={isExpired || isExpiring} isAdmin={isAdmin} />
         </div>
       )}
 

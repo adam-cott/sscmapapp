@@ -1,4 +1,4 @@
 export const LATEST_UPDATE = {
-  version: '1.0.13',
-  description: "Card year and expiry dates now update automatically each year — no more manual fixes needed behind the scenes.",
+  version: '1.0.14',
+  description: "Featured deals on the Home tab are now curated and updated regularly — keep an eye out for new picks!",
 }

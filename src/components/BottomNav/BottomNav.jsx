@@ -1,14 +1,17 @@
-import { Home, Map, Heart, Trophy, Settings } from 'lucide-react'
+import { Home, Map, Heart, Trophy, Settings, ShieldCheck } from 'lucide-react'
 
 const TABS = [
-  { id: 'rewards',  label: 'Rewards', Icon: Trophy   },
-  { id: 'map',      label: 'Map',     Icon: Map      },
-  { id: 'home',     label: 'Home',    Icon: Home     },
-  { id: 'faves',    label: 'Faves',   Icon: Heart    },
-  { id: 'settings', label: 'Settings',Icon: Settings },
+  { id: 'rewards',  label: 'Rewards', Icon: Trophy      },
+  { id: 'map',      label: 'Map',     Icon: Map         },
+  { id: 'home',     label: 'Home',    Icon: Home        },
+  { id: 'faves',    label: 'Faves',   Icon: Heart       },
+  { id: 'settings', label: 'Settings',Icon: Settings    },
 ]
 
-export default function BottomNav({ activeTab, onTabChange, isMapTab, settingsBadge }) {
+const ADMIN_TAB = { id: 'admin', label: 'Admin', Icon: ShieldCheck }
+
+export default function BottomNav({ activeTab, onTabChange, isMapTab, settingsBadge, isAdmin }) {
+  const tabs = isAdmin ? [...TABS, ADMIN_TAB] : TABS
   return (
     <nav
       className="flex items-stretch"
@@ -21,7 +24,7 @@ export default function BottomNav({ activeTab, onTabChange, isMapTab, settingsBa
         boxShadow: '0 -2px 16px rgba(0,0,0,0.08)',
       }}
     >
-      {TABS.map(({ id, label, Icon }) => {
+      {tabs.map(({ id, label, Icon }) => {
         const active = activeTab === id
         return (
           <button

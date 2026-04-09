@@ -7,16 +7,6 @@ import FilterPanel from '../Sidebar/FilterPanel'
 import SortControl from '../Sidebar/SortControl'
 import ListView from '../ListView/ListView'
 
-const FEATURED_IDS = [
-  'restaurants-040', // Chili's — Free Item
-  'sandwiches-416',  // Wendy's — Free Item
-  'free-228',        // Jamba Juice — Free Item
-  'restaurants-042', // Costa Vida — Buy 1 Get 1 Free
-  'free-258',        // Sonic — Free Item
-  'free-229',        // Jersey Mike's — Free Item
-  'pizza-004',       // Domino's — 2 for 1
-  'entertainment-097', // BYU Bowling — 2 for 1
-]
 
 function getGreeting() {
   const h = new Date().getHours()
@@ -85,6 +75,7 @@ export default function HomeTab({
   searchQuery, onSearchChange, activeCategories, onCategoryToggle,
   onClearFilters, sortBy, setSortBy, categoryCounts,
   permissionDenied, geoLoading, hasCoords, onNearestRequest, dealCount,
+  featuredIds,
 }) {
   const { firstName } = useAuth()
   const userName = firstName || 'Student'
@@ -116,7 +107,7 @@ export default function HomeTab({
     .filter(Boolean)
     .slice(0, 8)
 
-  const featuredDeals = FEATURED_IDS
+  const featuredDeals = (featuredIds ?? [])
     .map(id => activeDeals.find(d => d.id === id))
     .filter(Boolean)
 
