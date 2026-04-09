@@ -38,6 +38,15 @@ export function AuthProvider({ children }) {
             if (data.usageLog !== undefined) localStorage.setItem(STORAGE_KEYS.usageLog, JSON.stringify(data.usageLog))
           }
           localStorage.setItem(STORAGE_KEYS.uid, firebaseUser.uid)
+        } else if (snap.exists() && snap.data().usage === undefined) {
+          // Same device, but Firestore has no usage data yet — this user predates the sync
+          // feature. Upload their existing local data once so other devices can see it.
+          const localUsage = JSON.parse(localStorage.getItem(STORAGE_KEYS.usage) || '{}')
+          const localFaves = JSON.parse(localStorage.getItem(STORAGE_KEYS.faves) || '[]')
+          const localLog = JSON.parse(localStorage.getItem(STORAGE_KEYS.usageLog) || '[]')
+          if (Object.keys(localUsage).length || localFaves.length || localLog.length) {
+            setDoc(doc(db, 'users', firebaseUser.uid), { usage: localUsage, faves: localFaves, usageLog: localLog }, { merge: true })
+          }
         }
 
         setUser(firebaseUser)
