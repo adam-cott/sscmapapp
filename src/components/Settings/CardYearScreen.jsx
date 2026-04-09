@@ -1,15 +1,14 @@
 import { ArrowLeft, ExternalLink } from 'lucide-react'
-import { useCardYear, getExpiryDate } from '../../hooks/useCardYear'
+import { useCardYear } from '../../hooks/useCardYear'
 
 function formatDate(date) {
   return date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
 }
 
 export default function CardYearScreen({ onBack }) {
-  const { startYear, daysRemaining, isExpired, isExpiring } = useCardYear()
+  const { startYear, expiryDate, daysRemaining, isExpired, isExpiring } = useCardYear()
 
-  const expiryDate = getExpiryDate(startYear)
-  const startDate = new Date(startYear, 6, 31)
+  const startDate = new Date(startYear, 7, 1)
 
   const statusColor = isExpired ? '#ef4444' : isExpiring ? '#f97316' : '#22c55e'
   const statusText = isExpired
