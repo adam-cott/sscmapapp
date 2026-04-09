@@ -51,18 +51,22 @@ export default function SettingsTab({ onEditProfile, onCardYear, onReset, onAbou
         </div>
       </div>
 
-      {/* Delete account — hidden for admin account */}
-      {!isAdmin && (
-        <div className="mx-4 mt-3 rounded-2xl overflow-hidden bg-white shadow-sm">
-          <div
-            onClick={onDeleteAccount}
-            className="flex items-center px-4 py-4 cursor-pointer active:bg-gray-50"
-          >
-            <Trash2 size={18} color="#ef4444" className="mr-3 flex-shrink-0" />
-            <span className="flex-1 text-base" style={{ color: '#ef4444' }}>Delete Account</span>
+      {/* Delete account */}
+      <div className="mx-4 mt-3 rounded-2xl overflow-hidden bg-white shadow-sm">
+        <div
+          onClick={isAdmin ? undefined : onDeleteAccount}
+          className="flex items-center px-4 py-4"
+          style={{ cursor: isAdmin ? 'default' : 'pointer', opacity: isAdmin ? 0.4 : 1 }}
+        >
+          <Trash2 size={18} color="#ef4444" className="mr-3 flex-shrink-0" />
+          <div className="flex-1">
+            <span className="text-base block" style={{ color: '#ef4444' }}>Delete Account</span>
+            {isAdmin && (
+              <span className="text-xs text-gray-400">Not available for the admin account</span>
+            )}
           </div>
         </div>
-      )}
+      </div>
     </div>
   )
 }
