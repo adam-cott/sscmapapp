@@ -1,10 +1,15 @@
 import { useEffect } from 'react'
 
-export default function UseToast({ onDismiss }) {
+export default function UseToast({ dealName, onUndo, onDismiss }) {
   useEffect(() => {
-    const timer = setTimeout(onDismiss, 2000)
+    const timer = setTimeout(onDismiss, 4000)
     return () => clearTimeout(timer)
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
+
+  function handleUndo() {
+    onUndo()
+    onDismiss()
+  }
 
   return (
     <div
@@ -25,11 +30,29 @@ export default function UseToast({ onDismiss }) {
       }}
     >
       <div style={{ height: '3px', backgroundColor: '#059669' }} />
-      <div style={{ display: 'flex', alignItems: 'center', padding: '12px 16px', gap: '10px' }}>
-        <span style={{ fontSize: '16px' }}>✓</span>
-        <span style={{ fontSize: '14px', color: '#1e293b', fontFamily: 'DM Sans, sans-serif' }}>
-          Deal marked as used
-        </span>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '12px 16px', gap: '10px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', minWidth: 0 }}>
+          <span style={{ fontSize: '16px', flexShrink: 0 }}>✓</span>
+          <span style={{ fontSize: '14px', color: '#1e293b', fontFamily: 'DM Sans, sans-serif', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+            {dealName ? `Used: ${dealName}` : 'Deal marked as used'}
+          </span>
+        </div>
+        <button
+          onClick={handleUndo}
+          style={{
+            flexShrink: 0,
+            fontSize: '13px',
+            fontWeight: 700,
+            color: '#059669',
+            background: 'none',
+            border: 'none',
+            cursor: 'pointer',
+            padding: '2px 4px',
+            fontFamily: 'DM Sans, sans-serif',
+          }}
+        >
+          Undo
+        </button>
       </div>
     </div>
   )

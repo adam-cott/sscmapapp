@@ -1,4 +1,4 @@
 export const LATEST_UPDATE = {
-  version: '1.0.14',
-  description: "Featured deals on the Home tab are now curated and updated regularly — keep an eye out for new picks!",
+  version: '1.0.15',
+  description: "Accidentally marked a deal as used? Just tap Undo on the confirmation toast to reverse it instantly.",
 }

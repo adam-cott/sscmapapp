@@ -56,11 +56,12 @@ function AppShell() {
   const { isExpired, isExpiring } = useCardYear()
   const [activeView, setActiveView] = useState('map')
   const [showUseToast, setShowUseToast] = useState(false)
+  const [lastUsedDealId, setLastUsedDealId] = useState(null)
   const [pendingNearest, setPendingNearest] = useState(false)
 
-  const { dealsWithUsage, usageMap, recordUse, resetAll } = useDeals(dealsData)
+  const { dealsWithUsage, usageMap, recordUse, undoUse, resetAll } = useDeals(dealsData)
   const { faves, toggleFave, isFave } = useFaves()
-  const { usageLog, logUse, clearLog } = useUsageLog()
+  const { usageLog, logUse, undoLog, clearLog } = useUsageLog()
 
   useFirestoreSync(user.uid, usageMap, faves, usageLog)
 
@@ -127,7 +128,15 @@ function AppShell() {
         },
       }
     })
+    setLastUsedDealId(dealId)
     setShowUseToast(true)
+  }
+
+  const handleUndoUse = () => {
+    if (!lastUsedDealId) return
+    undoUse(lastUsedDealId)
+    undoLog(lastUsedDealId)
+    setLastUsedDealId(null)
   }
 
   const handleSelectDeal = useCallback((deal) => {
@@ -350,7 +359,13 @@ function AppShell() {
       {selectedLocation && (
         <LocationPicker location={selectedLocation} onSelectDeal={handleSelectFromPicker} onClose={() => setSelectedLocation(null)} />
       )}
-      {showUseToast && <UseToast onDismiss={() => setShowUseToast(false)} />}
+      {showUseToast && (
+        <UseToast
+          dealName={dealsWithUsage.find(d => d.id === lastUsedDealId)?.name}
+          onUndo={handleUndoUse}
+          onDismiss={() => setShowUseToast(false)}
+        />
+      )}
       {!hasRequested && activeTab === 'map' && <LocationPrompt onAllow={requestLocation} onDecline={decline} />}
       <UpdatePrompt />
       {showDeleteDialog && <DeleteAccountDialog onCancel={() => setShowDeleteDialog(false)} />}
