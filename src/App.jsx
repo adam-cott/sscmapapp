@@ -31,9 +31,14 @@ import { useFaves } from './hooks/useFaves'
 import { useUsageLog } from './hooks/useUsageLog'
 
 export default function App() {
-  const { user, loading, signOut } = useAuth()
+  const { user, loading } = useAuth()
   if (loading) return null
   if (!user) return <AuthScreen />
+  return <AppShell />
+}
+
+function AppShell() {
+  const { signOut } = useAuth()
   const [activeTab, setActiveTab] = useState('home')
   const [selectedDeal, setSelectedDeal] = useState(null)
   const [selectedLocation, setSelectedLocation] = useState(null)
