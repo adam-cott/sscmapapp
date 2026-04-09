@@ -1,7 +1,7 @@
 import { Heart } from 'lucide-react'
 import DealCard from '../ListView/DealCard'
 
-export default function FavesTab({ deals, onSelectDeal, onToggleFave, userCoords }) {
+export default function FavesTab({ deals, onSelectDeal, userCoords }) {
   if (deals.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center h-full text-center px-8">
@@ -20,30 +20,7 @@ export default function FavesTab({ deals, onSelectDeal, onToggleFave, userCoords
       </div>
       <div className="flex-1 overflow-y-auto ssc-scroll px-4 pb-4 space-y-3">
         {deals.map(deal => (
-          <div key={deal.id} style={{ position: 'relative' }}>
-            <DealCard deal={deal} onClick={() => onSelectDeal(deal)} userCoords={userCoords} />
-            <button
-              onClick={() => onToggleFave(deal.id)}
-              style={{
-                position: 'absolute',
-                top: '10px',
-                right: '10px',
-                width: '28px',
-                height: '28px',
-                borderRadius: '50%',
-                backgroundColor: 'rgba(255,255,255,0.95)',
-                border: '1px solid #f1f5f9',
-                boxShadow: '0 1px 4px rgba(0,0,0,0.1)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                cursor: 'pointer',
-                zIndex: 1,
-              }}
-            >
-              <Heart size={14} fill="#ef4444" color="#ef4444" />
-            </button>
-          </div>
+          <DealCard key={deal.id} deal={deal} onClick={() => onSelectDeal(deal)} userCoords={userCoords} />
         ))}
       </div>
     </div>

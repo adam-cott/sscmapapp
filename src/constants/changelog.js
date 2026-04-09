@@ -1,4 +1,4 @@
 export const LATEST_UPDATE = {
-  version: '1.0.16',
-  description: "You can now remove deals from your Favorites directly from the Favorites tab — just tap the heart on any card.",
+  version: '1.0.17',
+  description: "Cleaned up the Favorites tab — cards are less cluttered. Tap any deal to open it and unfave from the detail view.",
 }
