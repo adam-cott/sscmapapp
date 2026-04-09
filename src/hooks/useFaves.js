@@ -1,7 +1,8 @@
 import { useLocalStorage } from './useLocalStorage'
+import { STORAGE_KEYS } from '../constants/storageKeys'
 
 export function useFaves() {
-  const [faves, setFaves] = useLocalStorage('ssc_faves_v1', [])
+  const [faves, setFaves] = useLocalStorage(STORAGE_KEYS.faves, [])
 
   const toggleFave = (dealId) => {
     setFaves(prev =>

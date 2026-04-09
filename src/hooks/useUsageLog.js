@@ -1,7 +1,8 @@
 import { useLocalStorage } from './useLocalStorage'
+import { STORAGE_KEYS } from '../constants/storageKeys'
 
 export function useUsageLog() {
-  const [usageLog, setUsageLog] = useLocalStorage('ssc_usage_log_v1', [])
+  const [usageLog, setUsageLog] = useLocalStorage(STORAGE_KEYS.usageLog, [])
 
   const logUse = (dealId) => {
     setUsageLog(prev => [...prev, { dealId, usedAt: new Date().toISOString() }])

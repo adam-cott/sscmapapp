@@ -1,11 +1,10 @@
 import { useCallback } from 'react'
 import { useLocalStorage } from './useLocalStorage'
 import { getDealUsageState } from '../utils/dealHelpers'
-
-const STORAGE_KEY = 'ssc_usage_v1'
+import { STORAGE_KEYS } from '../constants/storageKeys'
 
 export function useDeals(deals) {
-  const [usageMap, setUsageMap] = useLocalStorage(STORAGE_KEY, {})
+  const [usageMap, setUsageMap] = useLocalStorage(STORAGE_KEYS.usage, {})
 
   const recordUse = useCallback((dealId) => {
     setUsageMap(prev => ({

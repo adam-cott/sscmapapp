@@ -1,4 +1,4 @@
 export const LATEST_UPDATE = {
-  version: '1.0.8',
-  description: "Fixed persistent dead space below the deals sections on the Home tab. Layout now fills the full screen correctly on all devices.",
+  version: '1.0.9',
+  description: "Under-the-hood cleanup: app data is now properly wiped when you delete your account.",
 }

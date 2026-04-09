@@ -12,6 +12,7 @@ import {
 } from 'firebase/auth'
 import { doc, setDoc, getDoc, updateDoc, deleteDoc } from 'firebase/firestore'
 import { auth, db } from '../firebase'
+import { STORAGE_KEYS } from '../constants/storageKeys'
 
 const AuthContext = createContext(null)
 
@@ -64,9 +65,7 @@ export function AuthProvider({ children }) {
     const credential = EmailAuthProvider.credential(user.email, currentPassword)
     await reauthenticateWithCredential(auth.currentUser, credential)
     await deleteDoc(doc(db, 'users', user.uid))
-    localStorage.removeItem('ssc_usage_v1')
-    localStorage.removeItem('ssc_faves_v1')
-    localStorage.removeItem('ssc_usage_log_v1')
+    Object.values(STORAGE_KEYS).forEach(key => localStorage.removeItem(key))
     await deleteUser(auth.currentUser)
   }
 
