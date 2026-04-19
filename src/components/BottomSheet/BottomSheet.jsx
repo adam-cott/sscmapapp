@@ -1,12 +1,15 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Heart, MapPin, Clock, Phone, Globe, Calendar } from 'lucide-react'
 import { CATEGORY_COLORS, CATEGORY_LIGHT, CATEGORY_LABELS, CATEGORY_ICON } from '../../utils/categoryColors'
 import { formatPhone } from '../../utils/dealHelpers'
 import UsageTracker from '../UI/UsageTracker'
+import SwipeToConfirm from '../UI/SwipeToConfirm'
+import RedemptionScreen from '../UI/RedemptionScreen'
 
 export default function BottomSheet({ deal, onUse, onClose, isFave, onToggleFave }) {
   const { usage } = deal
   const isExhausted = usage.status === 'exhausted'
+  const [showRedemption, setShowRedemption] = useState(false)
   const catColor = CATEGORY_COLORS[deal.category] || '#0170B9'
   const catLight = CATEGORY_LIGHT[deal.category] || '#f0f9ff'
   const CategoryIcon = CATEGORY_ICON[deal.category]
@@ -151,33 +154,32 @@ export default function BottomSheet({ deal, onUse, onClose, isFave, onToggleFave
         </div>
 
         {/* Actions */}
-        <div
-          className="flex gap-3"
-          style={{ padding: '14px 20px 24px', borderTop: '1px solid #f1f5f9' }}
-        >
+        <div style={{ padding: '14px 20px 24px', borderTop: '1px solid #f1f5f9' }}>
+          <div style={{ marginBottom: '10px' }}>
+            <SwipeToConfirm
+              onConfirm={() => setShowRedemption(true)}
+              disabled={isExhausted}
+            />
+          </div>
           <button
             onClick={onClose}
-            className="flex-1 font-semibold rounded-xl py-3.5 text-sm"
+            className="w-full font-semibold rounded-xl py-3.5 text-sm"
             style={{ fontFamily: 'Sora, sans-serif', backgroundColor: '#f1f5f9', color: '#475569', border: 'none' }}
           >
             Close
           </button>
-          <button
-            onClick={onUse}
-            disabled={isExhausted}
-            className="flex-1 font-semibold rounded-xl py-3.5 text-sm transition-all"
-            style={{
-              fontFamily: 'Sora, sans-serif',
-              backgroundColor: isExhausted ? '#f1f5f9' : '#059669',
-              color: isExhausted ? '#94a3b8' : 'white',
-              border: 'none',
-              cursor: isExhausted ? 'not-allowed' : 'pointer',
-            }}
-          >
-            {isExhausted ? 'No Uses Remaining' : 'Use This Deal'}
-          </button>
         </div>
       </div>
+
+      {showRedemption && (
+        <RedemptionScreen
+          deal={deal}
+          onDone={() => {
+            onUse()
+            setShowRedemption(false)
+          }}
+        />
+      )}
     </>
   )
 }
