@@ -1,16 +1,59 @@
-# React + Vite
+# Starving Student Card Map
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A mobile-first PWA that turns the physical Starving Student Discount Card into an interactive map and deal tracker for Utah County college students (BYU/UVU).
 
-Currently, two official plugins are available:
+The official app lists 400+ deals as a flat category list with no map, and chains with multiple locations get split across categories or duplicated — making it hard to tell what's actually nearby. This app fixes that: **418 deals, 199 businesses, 1,400+ map pins**, all browsable on a live, clustered map.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Live app:** https://sscmapapp.vercel.app/
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Interactive, clustered map of every deal location (react-leaflet)
+- Category filters
+- Nearest-first sort with location permission
+- Per-deal usage tracking with undo
+- Favorites tab
+- Rewards tab
+- Swipe-to-redeem flow with countdown
+- Cross-device sync via Firestore
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Layer | Choice |
+|---|---|
+| Framework | Vite + React 19 |
+| Map | react-leaflet (OpenStreetMap) |
+| Styling | Tailwind CSS |
+| Data sync | Firebase / Firestore |
+| PWA | vite-plugin-pwa |
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js and npm installed
+
+### Installation
+
+```bash
+git clone https://github.com/adam-cott/sscmapapp.git
+cd sscmapapp
+npm install
+```
+
+### Development
+
+```bash
+npm run dev
+```
+
+App runs at http://localhost:5173
+
+### Other Scripts
+
+```bash
+npm run build     # Production build
+npm run lint       # Lint
+npm run preview   # Preview production build
+npm test           # Run tests
+```
