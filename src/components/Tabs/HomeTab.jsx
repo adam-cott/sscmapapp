@@ -15,44 +15,37 @@ function getGreeting() {
   return 'Good evening'
 }
 
-function Section({ title, deals, onSelectDeal, userCoords, emptyMessage }) {
+function Section({ title, deals, onSelectDeal, emptyMessage }) {
   return (
     <div style={{
       flex: 1,
       display: 'flex',
       flexDirection: 'column',
-      backgroundColor: '#ffffff',
-      borderRadius: '18px',
-      boxShadow: '0 2px 10px rgba(0,0,0,0.07), 0 1px 3px rgba(0,0,0,0.04)',
-      overflow: 'hidden',
       minHeight: 0,
     }}>
       <div style={{
         flexShrink: 0,
-        padding: '10px 16px 8px',
-        borderBottom: '1px solid #f1f5f9',
+        padding: '0 2px 8px',
       }}>
         <h3 style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '14px', color: '#0f172a', margin: 0 }}>
           {title}
         </h3>
       </div>
       {!deals.length ? (
-        <p style={{ fontSize: '13px', color: '#94a3b8', padding: '14px 16px', backgroundColor: '#f0f4f8', margin: 0 }}>
+        <p style={{ fontSize: '13px', color: '#94a3b8', padding: '14px 16px', margin: 0 }}>
           {emptyMessage}
         </p>
       ) : (
         <div style={{
           flex: 1,
           display: 'flex', gap: '10px', overflowX: 'auto', overflowY: 'hidden', alignItems: 'flex-start',
-          padding: '12px 14px', scrollbarWidth: 'none',
-          backgroundColor: '#f0f4f8',
+          padding: '2px', scrollbarWidth: 'none',
         }}>
           {deals.map(deal => (
             <HomeCard
               key={deal.id}
               deal={deal}
               onClick={() => onSelectDeal(deal)}
-              userCoords={userCoords}
             />
           ))}
         </div>
@@ -176,9 +169,9 @@ export default function HomeTab({
       ) : (
         /* DISCOVERY MODE — section carousels */
         <div style={{ flex: 1, display: 'flex', flexDirection: 'column', padding: '14px 20px', gap: '14px', minHeight: 0 }}>
-          <Section title="Deals Near Me" deals={nearbyDeals} onSelectDeal={onSelectDeal} userCoords={userCoords} emptyMessage="No deals found nearby." />
-          <Section title="Use Again" deals={usedDeals} onSelectDeal={onSelectDeal} userCoords={userCoords} emptyMessage="Use a deal to see it here." />
-          <Section title="Featured" deals={featuredDeals} onSelectDeal={onSelectDeal} userCoords={userCoords} emptyMessage="No featured deals right now." />
+          <Section title="Deals Near Me" deals={nearbyDeals} onSelectDeal={onSelectDeal} emptyMessage="No deals found nearby." />
+          <Section title="Use Again" deals={usedDeals} onSelectDeal={onSelectDeal} emptyMessage="Use a deal to see it here." />
+          <Section title="Featured" deals={featuredDeals} onSelectDeal={onSelectDeal} emptyMessage="No featured deals right now." />
         </div>
       )}
 

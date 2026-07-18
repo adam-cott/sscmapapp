@@ -1,13 +1,10 @@
-import { MapPin } from 'lucide-react'
 import { CATEGORY_COLORS, CATEGORY_LIGHT } from '../../utils/categoryColors'
-import { getNearestDistance, formatDistance } from '../../utils/dealHelpers'
+import BusinessLogo from './BusinessLogo'
 
-export default function HomeCard({ deal, onClick, userCoords }) {
+export default function HomeCard({ deal, onClick }) {
   const { usage } = deal
   const isExhausted = usage.status === 'exhausted'
   const catColor = CATEGORY_COLORS[deal.category] || '#64748b'
-  const distanceMiles = getNearestDistance(deal, userCoords)
-  const distanceStr = distanceMiles !== null ? formatDistance(distanceMiles) : null
 
   return (
     <button
@@ -23,12 +20,14 @@ export default function HomeCard({ deal, onClick, userCoords }) {
         borderTop: `3px solid ${isExhausted ? '#e2e8f0' : catColor}`,
         opacity: isExhausted ? 0.6 : 1,
         cursor: 'pointer',
-        padding: 'var(--hc-pad, 14px)',
+        padding: 'var(--hc-pad, 10px)',
         display: 'flex',
         flexDirection: 'column',
-        gap: 'var(--hc-gap, 3px)',
+        gap: 'var(--hc-gap, 8px)',
       }}
     >
+      <BusinessLogo name={deal.name} size="100%" radius={10} />
+
       <span
         style={{
           fontFamily: 'Sora, sans-serif',
@@ -46,22 +45,7 @@ export default function HomeCard({ deal, onClick, userCoords }) {
 
       <span
         style={{
-          fontSize: 'var(--hc-desc, 12px)',
-          color: isExhausted ? '#94a3b8' : '#475569',
-          lineHeight: 'var(--hc-desc-lh, 1.3)',
-          display: '-webkit-box',
-          WebkitLineClamp: 2,
-          WebkitBoxOrient: 'vertical',
-          overflow: 'hidden',
-        }}
-      >
-        {deal.deal.title}
-      </span>
-
-      <span
-        style={{
           display: 'inline-block',
-          marginTop: 'var(--hc-badge-mt, 1px)',
           fontSize: 'var(--hc-badge, 11px)',
           fontFamily: 'Sora, sans-serif',
           fontWeight: 700,
@@ -74,22 +58,6 @@ export default function HomeCard({ deal, onClick, userCoords }) {
       >
         {deal.deal.value}
       </span>
-
-      {distanceStr && (
-        <span
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '3px',
-            fontSize: 'var(--hc-dist, 10px)',
-            color: '#94a3b8',
-            marginTop: 'var(--hc-dist-mt, 0px)',
-          }}
-        >
-          <MapPin size={9} color="#94a3b8" />
-          {distanceStr}
-        </span>
-      )}
     </button>
   )
 }

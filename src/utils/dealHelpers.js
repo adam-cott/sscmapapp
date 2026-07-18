@@ -1,3 +1,10 @@
+export function slugify(name) {
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+}
+
 export function formatPhone(raw) {
   if (!raw) return raw
   const digits = raw.replace(/\D/g, '')
