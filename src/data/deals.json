@@ -3083,6 +3083,7 @@
   {
     "id": "restaurants-064",
     "name": "Korean Dinewan Restaurant",
+    "active": false,
     "category": "restaurants",
     "address": "",
     "lat": 40.2338,
