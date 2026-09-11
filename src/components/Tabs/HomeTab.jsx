@@ -18,10 +18,9 @@ function getGreeting() {
 function Section({ title, deals, onSelectDeal, emptyMessage }) {
   return (
     <div style={{
-      flex: 1,
+      flexShrink: 0,
       display: 'flex',
       flexDirection: 'column',
-      minHeight: 0,
     }}>
       <div style={{
         flexShrink: 0,
@@ -37,8 +36,8 @@ function Section({ title, deals, onSelectDeal, emptyMessage }) {
         </p>
       ) : (
         <div style={{
-          flex: 1,
-          display: 'flex', gap: '10px', overflowX: 'auto', overflowY: 'hidden', alignItems: 'flex-start',
+          flexShrink: 0,
+          display: 'flex', gap: '10px', overflowX: 'auto', overflowY: 'visible', alignItems: 'flex-start',
           padding: '2px', scrollbarWidth: 'none',
         }}>
           {deals.map(deal => (
@@ -168,7 +167,7 @@ export default function HomeTab({
         </>
       ) : (
         /* DISCOVERY MODE — section carousels */
-        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', padding: '14px 20px', gap: '14px', minHeight: 0 }}>
+        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', padding: '14px 20px', gap: '14px', overflowY: 'auto', overscrollBehaviorY: 'contain' }}>
           <Section title="Deals Near Me" deals={nearbyDeals} onSelectDeal={onSelectDeal} emptyMessage="No deals found nearby." />
           <Section title="Use Again" deals={usedDeals} onSelectDeal={onSelectDeal} emptyMessage="Use a deal to see it here." />
           <Section title="Featured" deals={featuredDeals} onSelectDeal={onSelectDeal} emptyMessage="No featured deals right now." />
