@@ -37,7 +37,7 @@ export default function DealCard({ deal, onClick, userCoords }) {
       }}
     >
       <div className="p-4 flex gap-3">
-        <BusinessLogo name={deal.name} size={56} radius={12} />
+        <BusinessLogo name={deal.name} size={56} radius={12} padding={3} />
 
         <div className="flex-1 min-w-0">
           {/* Top row */}
