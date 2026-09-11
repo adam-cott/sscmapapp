@@ -26,7 +26,7 @@ export default function HomeCard({ deal, onClick }) {
         gap: 'var(--hc-gap, 8px)',
       }}
     >
-      <BusinessLogo name={deal.name} size="100%" radius={10} />
+      <BusinessLogo name={deal.name} size={84} radius={10} />
 
       <span
         style={{

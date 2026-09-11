@@ -11,11 +11,19 @@ export default function BusinessLogo({ name, size = 56, radius = 12, iconSize })
     <div
       style={{
         width: size,
+        // An explicit height (when size is a number) pins the box square even
+        // inside a flex row that would otherwise stretch it to a sibling's
+        // height; aspectRatio is the fallback for size="100%", where a fixed
+        // height can't be known up front.
+        height: typeof size === 'number' ? size : undefined,
         aspectRatio: '1 / 1',
         flexShrink: 0,
+        alignSelf: 'flex-start',
         borderRadius: radius,
         overflow: 'hidden',
         backgroundColor: '#f1f5f9',
+        boxSizing: 'border-box',
+        padding: '10%',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -28,7 +36,7 @@ export default function BusinessLogo({ name, size = 56, radius = 12, iconSize })
           src={src}
           alt=""
           onError={() => setFailed(true)}
-          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          style={{ width: '100%', height: '100%', objectFit: 'contain' }}
         />
       )}
     </div>
