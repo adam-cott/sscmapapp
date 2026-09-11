@@ -14,6 +14,10 @@ dist
 dist-ssr
 *.local
 
+# Raw Places API response cache + local call tally (machine-local, not shared state)
+scripts/.domains-cache.json
+scripts/.places-usage.json
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

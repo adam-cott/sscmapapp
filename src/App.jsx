@@ -59,7 +59,7 @@ function AppShell() {
   const [lastUsedDealId, setLastUsedDealId] = useState(null)
   const [pendingNearest, setPendingNearest] = useState(false)
 
-  const { dealsWithUsage, usageMap, recordUse, undoUse, resetAll } = useDeals(dealsData)
+  const { dealsWithUsage, usageMap, recordUse, undoUse, resetAll } = useDeals(dealsData.filter(d => d.active !== false))
   const { faves, toggleFave, isFave } = useFaves()
   const { usageLog, logUse, undoLog, clearLog } = useUsageLog()
 
