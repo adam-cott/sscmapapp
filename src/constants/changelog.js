@@ -1,4 +1,4 @@
 export const LATEST_UPDATE = {
-  version: '1.0.23',
-  description: "Fixed logo thumbnails getting cropped or clipped on the Home tab.",
+  version: '1.0.24',
+  description: "Logo thumbnails now display at the right size with no more empty white boxes.",
 }

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { ImageOff } from 'lucide-react'
 import { slugify } from '../../utils/dealHelpers'
 
-export default function BusinessLogo({ name, size = 56, radius = 12, iconSize }) {
+export default function BusinessLogo({ name, size = 56, radius = 12, iconSize, padding = 6, maxWidth }) {
   const [failed, setFailed] = useState(false)
   const src = `/logos/${slugify(name)}.png`
   const fallbackIconSize = iconSize ?? (typeof size === 'number' ? Math.round(size * 0.4) : 28)
@@ -11,19 +11,31 @@ export default function BusinessLogo({ name, size = 56, radius = 12, iconSize })
     <div
       style={{
         width: size,
+        maxWidth,
         // An explicit height (when size is a number) pins the box square even
         // inside a flex row that would otherwise stretch it to a sibling's
-        // height; aspectRatio is the fallback for size="100%", where a fixed
-        // height can't be known up front.
+        // height; aspectRatio is the fallback for size="100%"/maxWidth, where
+        // a fixed height can't be known up front — it's derived from the
+        // resolved width, never a percentage of the parent's height, so it
+        // can't collapse if the parent's own height is content-driven.
         height: typeof size === 'number' ? size : undefined,
         aspectRatio: '1 / 1',
         flexShrink: 0,
         alignSelf: 'flex-start',
         borderRadius: radius,
         overflow: 'hidden',
-        backgroundColor: '#f1f5f9',
+        // A fixed pixel padding, not a percentage: percentage padding is
+        // resolved against the containing block's (parent's) width, not this
+        // box's own size, which previously produced padding many times larger
+        // than the tile itself and collapsed the image to 0x0.
+        padding,
         boxSizing: 'border-box',
-        padding: '10%',
+        // White matches the background nearly every logo file is already
+        // flattened onto, so the tile doesn't read as a box inside a box; a
+        // hairline border keeps the tile legible for the missing-logo
+        // fallback and for the handful of logos rendered on a dark tile.
+        backgroundColor: '#ffffff',
+        border: '1px solid #e8edf3',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
