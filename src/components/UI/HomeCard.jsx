@@ -25,8 +25,9 @@ export default function HomeCard({ deal, onClick }) {
         name={deal.name}
         size="100%"
         radius={18}
-        padding={20}
+        padding={16}
         align="center"
+        aspectRatio="4 / 3"
         bare
         shadow
         background="#f1f5f9"
@@ -42,6 +43,8 @@ export default function HomeCard({ deal, onClick }) {
           overflow: 'hidden',
           textOverflow: 'ellipsis',
           display: 'block',
+          width: '100%',
+          minWidth: 0,
           marginTop: '8px',
         }}
       >
@@ -55,6 +58,8 @@ export default function HomeCard({ deal, onClick }) {
           fontSize: 'var(--hc-desc, 12px)',
           color: '#64748b',
           lineHeight: 1.35,
+          width: '100%',
+          minWidth: 0,
         }}
       >
         {deal.deal.title}
