@@ -25,7 +25,10 @@ export default function BusinessLogo({ name, size = 56, radius = 12, iconSize, p
   // overflow:hidden: combining box-shadow with overflow:hidden on the same
   // rounded box produces a faint seam/border artifact on some renderers.
   // This inner "fill" layer (which does have overflow:hidden) handles
-  // clipping the image to the rounded corners instead.
+  // clipping the image to the rounded corners instead. When bare and
+  // padding is 0 (HomeCard's tile), this layer has no fill of its own, so
+  // the image reads as the tile itself rather than a picture floating
+  // inside a separate colored box.
   const fillStyle = {
     borderRadius: radius,
     overflow: 'hidden',

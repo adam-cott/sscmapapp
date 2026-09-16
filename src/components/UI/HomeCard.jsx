@@ -25,12 +25,10 @@ export default function HomeCard({ deal, onClick }) {
         name={deal.name}
         size="100%"
         radius={18}
-        padding={16}
+        padding={0}
         align="center"
-        aspectRatio="4 / 3"
         bare
         shadow
-        background="#f1f5f9"
       />
 
       <span
