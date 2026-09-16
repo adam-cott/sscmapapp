@@ -1,4 +1,11 @@
 /* App-level styles — most styling is handled by Tailwind in components */
+:root {
+  /* Single source of truth for the desktop phone-panel width, shared with
+     any position:fixed overlay (e.g. RedemptionScreen) that needs to match
+     it exactly rather than spanning the full browser window. */
+  --app-panel-width: 480px;
+}
+
 #root {
   height: 100%;
   width: 100%;
@@ -17,7 +24,7 @@
   }
 
   #root {
-    max-width: 480px;
+    max-width: var(--app-panel-width);
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 24px 64px rgba(0, 0, 0, 0.4);
   }
 }
