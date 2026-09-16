@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { ImageOff } from 'lucide-react'
 import { slugify } from '../../utils/dealHelpers'
 
-export default function BusinessLogo({ name, size = 56, radius = 12, iconSize, padding = 6, maxWidth }) {
+export default function BusinessLogo({ name, size = 56, radius = 12, iconSize, padding = 6, maxWidth, align = 'flex-start' }) {
   const [failed, setFailed] = useState(false)
   const src = `/logos/${slugify(name)}.png`
   const fallbackIconSize = iconSize ?? (typeof size === 'number' ? Math.round(size * 0.4) : 28)
@@ -21,7 +21,11 @@ export default function BusinessLogo({ name, size = 56, radius = 12, iconSize, p
         height: typeof size === 'number' ? size : undefined,
         aspectRatio: '1 / 1',
         flexShrink: 0,
-        alignSelf: 'flex-start',
+        // 'flex-start' anchors the tile in a row layout (DealCard) so a
+        // taller sibling can't stretch it; 'center' balances it in a column
+        // layout (HomeCard) when maxWidth leaves the tile narrower than the
+        // card, instead of it sticking to one edge.
+        alignSelf: align,
         borderRadius: radius,
         overflow: 'hidden',
         // A fixed pixel padding, not a percentage: percentage padding is

@@ -26,7 +26,7 @@ export default function HomeCard({ deal, onClick }) {
         gap: 'var(--hc-gap, 8px)',
       }}
     >
-      <BusinessLogo name={deal.name} size="100%" maxWidth={112} radius={10} padding={8} />
+      <BusinessLogo name={deal.name} size="100%" maxWidth={88} radius={10} padding={8} align="center" />
 
       <span
         style={{
@@ -46,6 +46,10 @@ export default function HomeCard({ deal, onClick }) {
       <span
         style={{
           display: 'inline-block',
+          maxWidth: '100%',
+          whiteSpace: 'nowrap',
+          overflow: 'hidden',
+          textOverflow: 'ellipsis',
           fontSize: 'var(--hc-badge, 11px)',
           fontFamily: 'Sora, sans-serif',
           fontWeight: 700,
