@@ -1,4 +1,4 @@
 export const LATEST_UPDATE = {
-  version: '1.0.35',
-  description: "Section card logo tile is now the card itself, no separate box.",
+  version: '1.0.36',
+  description: "Shrunk section card tiles to fit and fixed text overflowing into the next card.",
 }
