@@ -1,4 +1,4 @@
 export const LATEST_UPDATE = {
-  version: '1.0.32',
-  description: "Section cards now show the logo as a standalone tile, Airbnb-style.",
+  version: '1.0.33',
+  description: "Fixed section card sizing, text overflow, and a shadow artifact.",
 }
