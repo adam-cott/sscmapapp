@@ -108,11 +108,11 @@ export default function HomeTab({
 
       {/* Always-pinned top: greeting header + search + category filters */}
       <div style={{ flexShrink: 0, backgroundColor: '#ffffff', borderBottom: '1px solid #e8edf3', boxShadow: '0 1px 4px rgba(0,0,0,0.05)' }}>
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '18px 16px 12px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '10px 16px 6px' }}>
           <div style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '16px', color: 'var(--ssc-blue)', letterSpacing: '-0.01em' }}>
             Starving Student Card
           </div>
-          <div style={{ fontSize: '13px', color: '#94a3b8', marginTop: '3px' }}>
+          <div style={{ fontSize: '13px', color: '#94a3b8', marginTop: '1px' }}>
             {getGreeting()}, {userName}!
           </div>
         </div>
