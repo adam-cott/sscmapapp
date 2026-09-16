@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { ImageOff } from 'lucide-react'
 import { slugify } from '../../utils/dealHelpers'
 
-export default function BusinessLogo({ name, size = 56, radius = 12, iconSize, padding = 6, maxWidth, align = 'flex-start', bare = false }) {
+export default function BusinessLogo({ name, size = 56, radius = 12, iconSize, padding = 6, maxWidth, align = 'flex-start', bare = false, background, shadow = false }) {
   const [failed, setFailed] = useState(false)
   const src = `/logos/${slugify(name)}.png`
   const fallbackIconSize = iconSize ?? (typeof size === 'number' ? Math.round(size * 0.4) : 28)
@@ -39,9 +39,12 @@ export default function BusinessLogo({ name, size = 56, radius = 12, iconSize, p
         // hairline border keeps the tile legible for the missing-logo
         // fallback and for the handful of logos rendered on a dark tile.
         // 'bare' drops both so the logo sits directly on the parent card's
-        // own background instead of a nested framed tile.
-        backgroundColor: bare ? 'transparent' : '#ffffff',
+        // own background instead of a nested framed tile; 'background' lets
+        // a bare tile still have its own fill (e.g. HomeCard's page-level
+        // tile) without the default white/hairline-border framed look.
+        backgroundColor: background ?? (bare ? 'transparent' : '#ffffff'),
         border: bare ? 'none' : '1px solid #e8edf3',
+        boxShadow: shadow ? '0 2px 8px rgba(0,0,0,0.10), 0 1px 3px rgba(0,0,0,0.06)' : undefined,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
