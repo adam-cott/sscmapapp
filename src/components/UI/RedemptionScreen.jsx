@@ -44,7 +44,17 @@ export default function RedemptionScreen({ deal, onDone }) {
       className="animate-redemption-in"
       style={{
         position: 'fixed',
-        inset: 0,
+        // Matches the desktop phone-panel width (App.css's --app-panel-width)
+        // instead of inset: 0, so this overlay stays within the panel on
+        // desktop rather than covering the full browser window. On mobile,
+        // where the viewport is already narrower than that cap, this is
+        // visually identical to inset: 0.
+        top: 0,
+        bottom: 0,
+        left: '50%',
+        transform: 'translateX(-50%)',
+        width: '100%',
+        maxWidth: 'var(--app-panel-width)',
         zIndex: 2000,
         backgroundColor: '#ffffff',
         display: 'flex',
