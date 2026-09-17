@@ -1,4 +1,4 @@
 export const LATEST_UPDATE = {
-  version: '1.0.44',
-  description: "Simplified the Home tab header to just the app name, centered.",
+  version: '1.0.45',
+  description: "Fixed a small visual glitch where the color bar at the top of deal popups didn't quite match the panel's rounded corners.",
 }

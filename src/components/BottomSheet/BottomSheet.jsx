@@ -37,10 +37,11 @@ export default function BottomSheet({ deal, onUse, onClose, isFave, onToggleFave
           borderRadius: '20px 20px 0 0',
           boxShadow: '0 -8px 40px rgba(0,0,0,0.18)',
           maxHeight: '88vh',
+          overflow: 'hidden',
         }}
       >
         {/* Category bar */}
-        <div style={{ height: '4px', background: isExhausted ? '#e2e8f0' : catColor, borderRadius: '20px 20px 0 0' }} />
+        <div style={{ height: '4px', background: isExhausted ? '#e2e8f0' : catColor }} />
 
         {/* Drag handle */}
         <div className="flex justify-center pt-3 pb-1">

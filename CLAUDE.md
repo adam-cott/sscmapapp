@@ -38,6 +38,7 @@ A mobile-first PWA for Utah County college students. Turns the physical Starving
 - Same family of mistake: **don't use percentage heights to force a square.** Use `aspect-ratio: 1/1` on the resolved width instead.
 - `BusinessLogo`'s alignment is controlled by its `align` prop (defaults to `flex-start` for DealCard rows, `center` for HomeCard) — don't hardcode `alignSelf` inside the component.
 - **Debugging rule:** if a style change doesn't appear to take effect, verify which file actually renders the element before editing again — don't assume and re-edit blind.
+- **A thin accent bar can't match a panel's corner radius by giving it the same `border-radius` value.** CSS clamps a box's radius to half its own dimension, so a 4px-tall bar's vertical radius silently clamps to 2px regardless of what you set — it'll never visually match a 16-20px panel curve, leaving a sliver. The working pattern (see `DealModal.jsx`, `LocationPrompt.jsx`, `UndoToast.jsx`): `overflow: hidden` + `border-radius` on the panel, no radius on the bar — the bar just gets clipped to whatever shape the panel is.
 
 ---
 

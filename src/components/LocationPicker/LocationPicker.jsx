@@ -109,9 +109,9 @@ export default function LocationPicker({ location, onSelectDeal, onClose }) {
         <div className="fixed inset-0 z-[900] animate-fade-in" style={{ backgroundColor: 'rgba(15,23,42,0.5)', backdropFilter: 'blur(3px)' }} onClick={onClose} />
         <div
           className="fixed bottom-0 left-0 right-0 z-[1000] animate-sheet-up flex flex-col"
-          style={{ backgroundColor: '#f8fafc', borderRadius: '20px 20px 0 0', boxShadow: '0 -8px 40px rgba(0,0,0,0.18)', maxHeight: '80vh' }}
+          style={{ backgroundColor: '#f8fafc', borderRadius: '20px 20px 0 0', boxShadow: '0 -8px 40px rgba(0,0,0,0.18)', maxHeight: '80vh', overflow: 'hidden' }}
         >
-          <div style={{ height: '4px', background: '#0170B9', borderRadius: '20px 20px 0 0' }} />
+          <div style={{ height: '4px', background: '#0170B9' }} />
           <div className="flex justify-center pt-3 pb-1">
             <div style={{ width: '36px', height: '4px', backgroundColor: '#e2e8f0', borderRadius: '99px' }} />
           </div>
@@ -132,9 +132,10 @@ export default function LocationPicker({ location, onSelectDeal, onClose }) {
             boxShadow: '0 20px 60px rgba(0,0,0,0.25)',
             width: '420px',
             maxHeight: '70vh',
+            overflow: 'hidden',
           }}
         >
-          <div style={{ height: '4px', background: '#0170B9', borderRadius: '16px 16px 0 0' }} />
+          <div style={{ height: '4px', background: '#0170B9' }} />
           {header}
           {dealList}
         </div>
