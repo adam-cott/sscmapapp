@@ -158,12 +158,16 @@ export default function HomeTab({
 
       {/* Always-pinned top: greeting header + search + category filters */}
       <div style={{ flexShrink: 0, backgroundColor: '#ffffff', borderBottom: '1px solid #e8edf3', boxShadow: '0 1px 4px rgba(0,0,0,0.05)' }}>
-        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', padding: '18px 16px 6px', gap: '10px' }}>
-          <div style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '18px', color: 'var(--ssc-blue)', letterSpacing: '-0.01em', whiteSpace: 'nowrap', flexShrink: 0 }}>
-            Starving Student Card
+        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', padding: '18px 16px 6px' }}>
+          <div style={{ width: '65%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <div style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '18px', color: 'var(--ssc-blue)', letterSpacing: '-0.01em', whiteSpace: 'nowrap' }}>
+              Starving Student Card
+            </div>
           </div>
-          <div style={{ flex: 1, minWidth: 0, fontSize: '15px', fontWeight: 500, color: '#64748b', textAlign: 'right', lineHeight: 1.3 }}>
-            {getGreeting()}, {userName}!
+          <div style={{ width: '35%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <div style={{ fontSize: '15px', fontWeight: 500, color: '#64748b', textAlign: 'center', lineHeight: 1.3, overflowWrap: 'break-word' }}>
+              {getGreeting()}, {userName}!
+            </div>
           </div>
         </div>
         {showBanner && (
