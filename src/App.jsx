@@ -208,34 +208,16 @@ function AppShell() {
       {isMapTab && (
         <div className="flex flex-col flex-1 overflow-hidden">
         <div className="flex flex-1 overflow-hidden relative">
-          {/* Desktop sidebar */}
-          <aside className="hidden md:flex flex-col flex-shrink-0" style={{ width: '320px', backgroundColor: '#ffffff', borderRight: '1px solid #e8edf3' }}>
+          <main className="flex-1 relative overflow-hidden">
             <Header
               activeView={activeView}
               onViewToggle={() => setActiveView(v => v === 'map' ? 'list' : 'map')}
               onReset={handleReset}
               filteredCount={filteredDeals.length}
             />
-            <Sidebar {...sidebarProps} />
-            <div className="flex-1 overflow-y-auto">
-              <ListView deals={filteredDeals} onSelectDeal={handleSelectDeal} userCoords={coords} />
-            </div>
-          </aside>
-
-          {/* Main map area */}
-          <main className="flex-1 relative overflow-hidden">
-            {/* Mobile header */}
-            <div className="md:hidden">
-              <Header
-                activeView={activeView}
-                onViewToggle={() => setActiveView(v => v === 'map' ? 'list' : 'map')}
-                onReset={handleReset}
-                filteredCount={filteredDeals.length}
-              />
-            </div>
 
             {/* Map — always rendered so it stays alive */}
-            <div className={`absolute inset-0 ${activeView === 'map' ? 'block' : 'hidden md:block'}`}>
+            <div className={`absolute inset-0 ${activeView === 'map' ? 'block' : 'hidden'}`}>
               <MapView
                 deals={filteredDeals}
                 selectedDeal={selectedDeal}
@@ -247,29 +229,25 @@ function AppShell() {
             </div>
 
             {/* Mobile list view */}
-            <div className={`absolute inset-0 overflow-y-auto ${activeView === 'list' ? 'block' : 'hidden'} md:hidden`}>
+            <div className={`absolute inset-0 overflow-y-auto ${activeView === 'list' ? 'block' : 'hidden'}`}>
               <div className="sticky top-0 z-10 bg-white border-b border-gray-200 px-3 py-2 shadow-sm">
-                <Sidebar {...sidebarProps} compact />
+                <Sidebar {...sidebarProps} />
               </div>
               <ListView deals={filteredDeals} onSelectDeal={handleSelectDeal} userCoords={coords} />
             </div>
 
-            {/* Mobile compact filter bar over map */}
+            {/* Compact filter bar over map */}
             {activeView === 'map' && (
-              <div className="md:hidden absolute top-0 left-0 right-0 z-[500] bg-white border-b border-gray-100 px-3 py-2 shadow-sm">
-                <Sidebar {...sidebarProps} compact />
+              <div className="absolute top-0 left-0 right-0 z-[500] bg-white border-b border-gray-100 px-3 py-2 shadow-sm">
+                <Sidebar {...sidebarProps} />
               </div>
             )}
           </main>
 
-          {/* Nav floats over map on mobile */}
-          <div className="md:hidden absolute bottom-0 left-0 right-0 z-[600]">
+          {/* Nav floats over map */}
+          <div className="absolute bottom-0 left-0 right-0 z-[600]">
             <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab settingsBadge={isExpired || isExpiring} isAdmin={isAdmin} />
           </div>
-        </div>
-        {/* Nav sits full-width below sidebar+map on desktop */}
-        <div className="hidden md:block">
-          <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} settingsBadge={isExpired || isExpiring} isAdmin={isAdmin} />
         </div>
         </div>
       )}

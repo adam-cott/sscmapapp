@@ -176,7 +176,6 @@ export default function HomeTab({
         <div style={{ padding: '0 12px 14px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
           <SearchBar value={searchQuery} onChange={onSearchChange} />
           <FilterPanel
-            compact
             activeCategories={activeCategories}
             onToggle={onCategoryToggle}
             onClear={onClearFilters}

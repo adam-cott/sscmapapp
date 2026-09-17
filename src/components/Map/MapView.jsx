@@ -3,7 +3,6 @@ import { MapContainer, TileLayer, useMapEvents, Marker } from 'react-leaflet'
 import MarkerClusterGroup from 'react-leaflet-cluster'
 import L from 'leaflet'
 import BusinessMarker from './BusinessMarker'
-import MapLegend from './MapLegend'
 import { getDealUsageState, getPrimaryCategory } from '../../utils/dealHelpers'
 import allDealsRaw from '../../data/deals.json'
 import 'react-leaflet-cluster/dist/assets/MarkerCluster.css'
@@ -130,7 +129,6 @@ export default function MapView({ deals, selectedDeal, onSelectDeal, onSelectLoc
           ))}
         </MarkerClusterGroup>
       </MapContainer>
-      <MapLegend />
     </div>
   )
 }

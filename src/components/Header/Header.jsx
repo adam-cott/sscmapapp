@@ -46,10 +46,10 @@ export default function Header({ activeView, onViewToggle, onReset, filteredCoun
 
       {/* Actions */}
       <div className="flex items-center gap-2">
-        {/* Map / List toggle — mobile only */}
+        {/* Map / List toggle */}
         <button
           onClick={onViewToggle}
-          className="md:hidden flex items-center gap-1.5 text-xs font-semibold rounded-lg px-3 py-1.5 transition-colors"
+          className="flex items-center gap-1.5 text-xs font-semibold rounded-lg px-3 py-1.5 transition-colors"
           style={{
             backgroundColor: 'rgba(255,255,255,0.15)',
             color: 'white',

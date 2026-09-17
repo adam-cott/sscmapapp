@@ -2,7 +2,7 @@ import { LayoutGrid } from 'lucide-react'
 import { ALL_CATEGORIES } from '../../constants/categories'
 import { CATEGORY_COLORS, CATEGORY_LABELS, CATEGORY_ICON } from '../../utils/categoryColors'
 
-export default function FilterPanel({ activeCategories, onToggle, onClear, categoryCounts = {}, compact = false }) {
+export default function FilterPanel({ activeCategories, onToggle, onClear, categoryCounts = {} }) {
   const allActive = activeCategories.length === 0
 
   const chips = [
@@ -15,36 +15,31 @@ export default function FilterPanel({ activeCategories, onToggle, onClear, categ
     })),
   ]
 
-  const chipRow = (
-    <div className={`flex gap-1.5 ${compact ? 'overflow-x-auto flex-nowrap' : 'flex-wrap'}`}
-      style={{ scrollbarWidth: 'none' }}
-    >
-      {chips.map(({ key, label, Icon, color }) => {
-        const isActive = key === 'all' ? allActive : activeCategories.includes(key)
-        return (
-          <button
-            key={key}
-            onClick={key === 'all' ? onClear : () => onToggle(key)}
-            className="flex-shrink-0 flex items-center gap-1 text-xs font-semibold rounded-full px-3 py-1.5 transition-all"
-            style={{
-              fontFamily: 'Sora, sans-serif',
-              backgroundColor: isActive ? color : 'transparent',
-              color: isActive ? 'white' : '#64748b',
-              border: `1.5px solid ${isActive ? color : '#e2e8f0'}`,
-              letterSpacing: '0.01em',
-            }}
-          >
-            {Icon && <Icon size={11} color={isActive ? 'white' : color} />}
-            {label}
-            <span className="opacity-60 text-xs">({categoryCounts[key] ?? 0})</span>
-          </button>
-        )
-      })}
+  return (
+    <div className="filter-scroll-container">
+      <div className="flex gap-1.5 overflow-x-auto flex-nowrap" style={{ scrollbarWidth: 'none' }}>
+        {chips.map(({ key, label, Icon, color }) => {
+          const isActive = key === 'all' ? allActive : activeCategories.includes(key)
+          return (
+            <button
+              key={key}
+              onClick={key === 'all' ? onClear : () => onToggle(key)}
+              className="flex-shrink-0 flex items-center gap-1 text-xs font-semibold rounded-full px-3 py-1.5 transition-all"
+              style={{
+                fontFamily: 'Sora, sans-serif',
+                backgroundColor: isActive ? color : 'transparent',
+                color: isActive ? 'white' : '#64748b',
+                border: `1.5px solid ${isActive ? color : '#e2e8f0'}`,
+                letterSpacing: '0.01em',
+              }}
+            >
+              {Icon && <Icon size={11} color={isActive ? 'white' : color} />}
+              {label}
+              <span className="opacity-60 text-xs">({categoryCounts[key] ?? 0})</span>
+            </button>
+          )
+        })}
+      </div>
     </div>
   )
-
-  if (compact) {
-    return <div className="filter-scroll-container">{chipRow}</div>
-  }
-  return chipRow
 }
