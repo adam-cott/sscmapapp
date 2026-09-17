@@ -162,7 +162,7 @@ export default function HomeTab({
           <img
             src="/logos/logo.png"
             alt="Starving Student Card"
-            style={{ height: '36px', width: 'auto', flexShrink: 0 }}
+            style={{ height: '108px', width: 'auto', flexShrink: 0 }}
           />
           <div style={{ flex: 1, minWidth: 0, fontSize: '13px', color: '#94a3b8', textAlign: 'right', lineHeight: 1.3 }}>
             {getGreeting()}, {userName}!
