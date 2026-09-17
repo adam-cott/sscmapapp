@@ -1,4 +1,3 @@
-import { useAuth } from '../../hooks/useAuth'
 import { useCardYear } from '../../hooks/useCardYear'
 import { getNearestDistance, getNearestLocation } from '../../utils/dealHelpers'
 import HomeCard from '../UI/HomeCard'
@@ -7,13 +6,6 @@ import FilterPanel from '../Sidebar/FilterPanel'
 import SortControl from '../Sidebar/SortControl'
 import ListView from '../ListView/ListView'
 
-
-function getGreeting() {
-  const h = new Date().getHours()
-  if (h < 12) return 'Good morning'
-  if (h < 17) return 'Good afternoon'
-  return 'Good evening'
-}
 
 // Groups deals by business name (trimmed, case-insensitive) so a stray
 // whitespace/casing difference in deals.json can't split one business into
@@ -107,8 +99,6 @@ export default function HomeTab({
   permissionDenied, geoLoading, hasCoords, onNearestRequest, dealCount,
   featuredIds,
 }) {
-  const { firstName } = useAuth()
-  const userName = firstName || 'Student'
   const { daysRemaining, isExpired, isExpiring } = useCardYear()
   const showBanner = isExpired || isExpiring
 
@@ -156,18 +146,11 @@ export default function HomeTab({
   return (
     <div style={{ display: 'flex', flexDirection: 'column', flex: 1, minHeight: 0, overflow: 'hidden', backgroundColor: '#f0f4f8' }}>
 
-      {/* Always-pinned top: greeting header + search + category filters */}
+      {/* Always-pinned top: title header + search + category filters */}
       <div style={{ flexShrink: 0, backgroundColor: '#ffffff', borderBottom: '1px solid #e8edf3', boxShadow: '0 1px 4px rgba(0,0,0,0.05)' }}>
-        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', padding: '18px 16px 6px' }}>
-          <div style={{ width: '65%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <div style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '18px', color: 'var(--ssc-blue)', letterSpacing: '-0.01em', whiteSpace: 'nowrap' }}>
-              Starving Student Card
-            </div>
-          </div>
-          <div style={{ width: '35%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <div style={{ fontSize: '15px', fontWeight: 500, color: '#64748b', textAlign: 'center', lineHeight: 1.3, overflowWrap: 'break-word' }}>
-              {getGreeting()}, {userName}!
-            </div>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '10px 16px' }}>
+          <div style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '18px', color: 'var(--ssc-blue)', letterSpacing: '-0.01em', whiteSpace: 'nowrap' }}>
+            Starving Student Card
           </div>
         </div>
         {showBanner && (
