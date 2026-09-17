@@ -125,3 +125,10 @@ git add -A && git commit -m "..." && git push
 3. Then commit and push as normal
 
 This keeps the About screen version and What's New section accurate without any manual effort from the user.
+
+---
+
+## Browser Testing
+- **Never drive the Claude in Chrome browser tools against this app without asking first** — Adam tests on his own phone after each deploy and would rather do that than have the app clicked through on his behalf
+- Even when he says yes, keep it minimal — verify the one thing in question, don't wander into unrelated flows or edge cases on your own initiative
+- This app requires sign-in against a real Firestore test account (see README) — any state changed during a browser session (profile name, usage log, etc.) is real, persists, and needs to be reverted before moving on
