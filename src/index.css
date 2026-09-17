@@ -41,17 +41,15 @@ h1, h2, h3, h4, h5 {
   display: none !important;
 }
 
-/* ─── Mobile: move zoom controls to bottom-right ─── */
-@media (max-width: 768px) {
-  .leaflet-top.leaflet-left {
-    top: auto;
-    left: auto;
-    bottom: 80px;
-    right: 10px;
-  }
-  .leaflet-bottom.leaflet-right {
-    bottom: 68px;
-  }
+/* ─── Move zoom controls to bottom-right (map is always the phone layout) ─── */
+.leaflet-top.leaflet-left {
+  top: auto;
+  left: auto;
+  bottom: 80px;
+  right: 10px;
+}
+.leaflet-bottom.leaflet-right {
+  bottom: 68px;
 }
 
 /* ─── Filter chip scroll fade ────────────────────── */
