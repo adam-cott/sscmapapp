@@ -1,6 +1,6 @@
 import BusinessLogo from './BusinessLogo'
 
-export default function HomeCard({ deal, onClick }) {
+export default function HomeCard({ deal, dealCount = 1, onClick }) {
   const { usage } = deal
   const isExhausted = usage.status === 'exhausted'
 
@@ -68,7 +68,7 @@ export default function HomeCard({ deal, onClick }) {
             width: '100%',
           }}
         >
-          {deal.deal.title}
+          {dealCount > 1 ? `${dealCount} deals` : deal.deal.title}
         </p>
       </div>
     </button>

@@ -33,6 +33,14 @@ A mobile-first PWA for Utah County college students. Turns the physical Starving
 
 ---
 
+## Styling Gotchas
+- **Percentage padding resolves against the parent's content *width*, not the element's own size** (even for `padding-top`/`padding-bottom`). This cost real debugging time on `BusinessLogo.jsx`: `padding: '10%'` collapsed images to 0x0 on the 56px list tile and ate a third of the 84px Home tile. On small fixed-size elements, use fixed pixel padding instead.
+- Same family of mistake: **don't use percentage heights to force a square.** Use `aspect-ratio: 1/1` on the resolved width instead.
+- `BusinessLogo`'s alignment is controlled by its `align` prop (defaults to `flex-start` for DealCard rows, `center` for HomeCard) — don't hardcode `alignSelf` inside the component.
+- **Debugging rule:** if a style change doesn't appear to take effect, verify which file actually renders the element before editing again — don't assume and re-edit blind.
+
+---
+
 ## Project Structure (key files)
 ```
 src/

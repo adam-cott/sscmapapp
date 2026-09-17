@@ -183,6 +183,7 @@ function AppShell() {
               usageLog={usageLog}
               userCoords={coords}
               onSelectDeal={handleSelectDeal}
+              onSelectLocation={handleSelectLocation}
               searchQuery={searchQuery}
               onSearchChange={setSearchQuery}
               activeCategories={activeCategories}

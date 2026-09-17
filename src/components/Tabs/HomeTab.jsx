@@ -1,6 +1,6 @@
 import { useAuth } from '../../hooks/useAuth'
 import { useCardYear } from '../../hooks/useCardYear'
-import { getNearestDistance } from '../../utils/dealHelpers'
+import { getNearestDistance, getNearestLocation } from '../../utils/dealHelpers'
 import HomeCard from '../UI/HomeCard'
 import SearchBar from '../Sidebar/SearchBar'
 import FilterPanel from '../Sidebar/FilterPanel'
@@ -15,7 +15,44 @@ function getGreeting() {
   return 'Good evening'
 }
 
-function Section({ title, deals, onSelectDeal, emptyMessage }) {
+// Groups deals by business name (trimmed, case-insensitive) so a stray
+// whitespace/casing difference in deals.json can't split one business into
+// two cards. Preserves first-occurrence order (nearest / most-recent / featured-order).
+function groupByBusiness(deals) {
+  const order = []
+  const groups = new Map()
+  for (const deal of deals) {
+    const key = deal.name.trim().toLowerCase()
+    if (!groups.has(key)) {
+      groups.set(key, [])
+      order.push(key)
+    }
+    groups.get(key).push(deal)
+  }
+  return order.map(key => groups.get(key))
+}
+
+// Builds one Home-tab card per business from a pool of candidate deals.
+// Dedupes BEFORE capping to `take` so a business with several deals
+// clustered together (e.g. same distance) can't crowd out other businesses.
+function buildHomeCards(deals, userCoords, take = Infinity) {
+  return groupByBusiness(deals).slice(0, take).map(items => {
+    const primary = items[0]
+    const allLocations = items.flatMap(d => d.locations ?? [])
+    const loc = getNearestLocation({ locations: allLocations }, userCoords)
+      ?? primary.locations?.[0]
+      ?? { lat: primary.lat, lng: primary.lng, address: primary.address, phone: primary.contact?.phone ?? null }
+    return {
+      key: primary.id,
+      deal: primary,
+      dealCount: items.length,
+      loc,
+      items: items.map(deal => ({ deal, usageState: deal.usage })),
+    }
+  })
+}
+
+function Section({ title, cards, onSelectCard, emptyMessage }) {
   return (
     <div style={{
       flexShrink: 0,
@@ -30,7 +67,7 @@ function Section({ title, deals, onSelectDeal, emptyMessage }) {
           {title}
         </h3>
       </div>
-      {!deals.length ? (
+      {!cards.length ? (
         <p style={{ fontSize: '13px', color: '#94a3b8', padding: '14px 16px', margin: 0 }}>
           {emptyMessage}
         </p>
@@ -40,11 +77,12 @@ function Section({ title, deals, onSelectDeal, emptyMessage }) {
           display: 'flex', gap: '10px', overflowX: 'auto', overflowY: 'visible', alignItems: 'flex-start',
           padding: '2px', scrollbarWidth: 'none',
         }}>
-          {deals.map(deal => (
+          {cards.map(card => (
             <HomeCard
-              key={deal.id}
-              deal={deal}
-              onClick={() => onSelectDeal(deal)}
+              key={card.key}
+              deal={card.deal}
+              dealCount={card.dealCount}
+              onClick={() => onSelectCard(card)}
             />
           ))}
         </div>
@@ -63,7 +101,7 @@ function spreadAcrossCategories(deals, max = 8, perCat = 2) {
 }
 
 export default function HomeTab({
-  deals, filteredDeals, usageLog, userCoords, onSelectDeal,
+  deals, filteredDeals, usageLog, userCoords, onSelectDeal, onSelectLocation,
   searchQuery, onSearchChange, activeCategories, onCategoryToggle,
   onClearFilters, sortBy, setSortBy, categoryCounts,
   permissionDenied, geoLoading, hasCoords, onNearestRequest, dealCount,
@@ -79,14 +117,17 @@ export default function HomeTab({
 
   const activeDeals = deals.filter(d => d.usage.status !== 'exhausted')
 
-  const nearbyDeals = userCoords
+  // Candidate pools are built wider than the 8-card cap, then deduped by
+  // business (see buildHomeCards) BEFORE slicing to 8 — otherwise a business
+  // with several deals clustered together could crowd out other businesses.
+  const nearbyPool = userCoords
     ? [...activeDeals]
         .map(d => ({ deal: d, dist: getNearestDistance(d, userCoords) }))
         .filter(({ dist }) => dist !== null)
         .sort((a, b) => a.dist - b.dist)
-        .slice(0, 8)
         .map(({ deal }) => deal)
-    : spreadAcrossCategories(activeDeals)
+    : spreadAcrossCategories(activeDeals, 100, 8)
+  const nearbyCards = buildHomeCards(nearbyPool, userCoords, 8)
 
   const seenIds = new Set()
   const usedDealIds = [...usageLog].reverse().map(e => e.dealId).filter(id => {
@@ -94,14 +135,23 @@ export default function HomeTab({
     seenIds.add(id)
     return true
   })
-  const usedDeals = usedDealIds
+  const usedPool = usedDealIds
     .map(id => activeDeals.find(d => d.id === id))
     .filter(Boolean)
-    .slice(0, 8)
+  const usedCards = buildHomeCards(usedPool, userCoords, 8)
 
-  const featuredDeals = (featuredIds ?? [])
+  const featuredPool = (featuredIds ?? [])
     .map(id => activeDeals.find(d => d.id === id))
     .filter(Boolean)
+  const featuredCards = buildHomeCards(featuredPool, userCoords)
+
+  const handleSelectCard = (card) => {
+    if (card.dealCount > 1) {
+      onSelectLocation({ loc: card.loc, items: card.items })
+    } else {
+      onSelectDeal(card.deal)
+    }
+  }
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', flex: 1, minHeight: 0, overflow: 'hidden', backgroundColor: '#f0f4f8' }}>
@@ -168,9 +218,9 @@ export default function HomeTab({
       ) : (
         /* DISCOVERY MODE — section carousels */
         <div style={{ flex: 1, display: 'flex', flexDirection: 'column', padding: '14px 20px', gap: '14px', overflowY: 'auto', overscrollBehaviorY: 'contain' }}>
-          <Section title="Deals Near Me" deals={nearbyDeals} onSelectDeal={onSelectDeal} emptyMessage="No deals found nearby." />
-          <Section title="Use Again" deals={usedDeals} onSelectDeal={onSelectDeal} emptyMessage="Use a deal to see it here." />
-          <Section title="Featured" deals={featuredDeals} onSelectDeal={onSelectDeal} emptyMessage="No featured deals right now." />
+          <Section title="Deals Near Me" cards={nearbyCards} onSelectCard={handleSelectCard} emptyMessage="No deals found nearby." />
+          <Section title="Use Again" cards={usedCards} onSelectCard={handleSelectCard} emptyMessage="Use a deal to see it here." />
+          <Section title="Featured" cards={featuredCards} onSelectCard={handleSelectCard} emptyMessage="No featured deals right now." />
         </div>
       )}
 

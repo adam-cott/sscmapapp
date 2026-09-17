@@ -35,6 +35,18 @@ export function getNearestDistance(deal, userCoords) {
   return min === Infinity ? null : min
 }
 
+export function getNearestLocation(deal, userCoords) {
+  if (!userCoords || !deal.locations?.length) return null
+  let best = null
+  let bestDist = Infinity
+  for (const loc of deal.locations) {
+    if (loc.lat == null || loc.lng == null) continue
+    const d = haversineDistance(userCoords.lat, userCoords.lng, Number(loc.lat), Number(loc.lng))
+    if (d < bestDist) { bestDist = d; best = loc }
+  }
+  return best
+}
+
 export function formatDistance(miles) {
   if (miles < 0.1) return '< 0.1 mi'
   if (miles < 10) return `${miles.toFixed(1)} mi`
