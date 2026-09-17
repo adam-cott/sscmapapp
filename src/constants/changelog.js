@@ -1,4 +1,4 @@
 export const LATEST_UPDATE = {
-  version: '1.0.40',
-  description: "Tightened up the Home tab header so it takes up less of the screen.",
+  version: '1.0.41',
+  description: "Swapped the Home tab logo back for the app name, in a much more compact header.",
 }
