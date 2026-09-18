@@ -1,4 +1,4 @@
 export const LATEST_UPDATE = {
-  version: '1.0.48',
-  description: "Home now shows a lot more ways to browse: deals by category (Freebies, Sweet Treats + Drinks, Restaurants, and more), your favorites, and deals you can use over and over. Sections only show up once there's something to put in them.",
+  version: '1.0.49',
+  description: "Every row on Home now ends with a \"See all\" card so you can jump straight to the full list for that section instead of just scrolling sideways.",
 }

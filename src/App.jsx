@@ -77,6 +77,11 @@ function AppShell() {
     sortBy,
     setSortBy,
     categoryCounts,
+    pinnedIds,
+    showCategory,
+    showPinned,
+    showAllNearest,
+    isListMode,
   } = useFilters(dealsWithUsage, coords)
 
   useEffect(() => {
@@ -199,6 +204,12 @@ function AppShell() {
               dealCount={filteredDeals.length}
               featuredIds={featuredIds}
               faves={faves}
+              pinnedIds={pinnedIds}
+              isListMode={isListMode}
+              onShowCategory={showCategory}
+              onShowPinned={showPinned}
+              onShowAllNearest={showAllNearest}
+              onNavigateFaves={() => setActiveTab('faves')}
             />
           </div>
           <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} settingsBadge={isExpired || isExpiring} isAdmin={isAdmin} />

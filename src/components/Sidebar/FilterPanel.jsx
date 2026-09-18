@@ -2,8 +2,8 @@ import { LayoutGrid } from 'lucide-react'
 import { ALL_CATEGORIES } from '../../constants/categories'
 import { CATEGORY_COLORS, CATEGORY_LABELS, CATEGORY_ICON } from '../../utils/categoryColors'
 
-export default function FilterPanel({ activeCategories, onToggle, onClear, categoryCounts = {} }) {
-  const allActive = activeCategories.length === 0
+export default function FilterPanel({ activeCategories, onToggle, onClear, categoryCounts = {}, pinnedActive = false }) {
+  const allActive = activeCategories.length === 0 && !pinnedActive
 
   const chips = [
     { key: 'all', label: 'All', Icon: LayoutGrid, color: '#0170B9' },
