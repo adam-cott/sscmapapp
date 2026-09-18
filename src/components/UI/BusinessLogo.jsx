@@ -58,6 +58,7 @@ export default function BusinessLogo({ name, size = 56, radius = 12, iconSize, p
     <img
       src={src}
       alt=""
+      loading="lazy"
       onError={() => setFailed(true)}
       style={{ width: '100%', height: '100%', objectFit: 'contain' }}
     />

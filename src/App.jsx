@@ -198,6 +198,7 @@ function AppShell() {
               onNearestRequest={handleNearestRequest}
               dealCount={filteredDeals.length}
               featuredIds={featuredIds}
+              faves={faves}
             />
           </div>
           <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} settingsBadge={isExpired || isExpiring} isAdmin={isAdmin} />

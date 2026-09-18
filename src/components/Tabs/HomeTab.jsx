@@ -92,12 +92,34 @@ function spreadAcrossCategories(deals, max = 8, perCat = 2) {
   return Object.values(byCategory).flat().slice(0, max)
 }
 
+// Sorts by nearest-location distance when userCoords is available; deals
+// with no computable distance sort last rather than being dropped, since
+// (unlike the "Deals Near Me" pool) a category section should still show
+// its full lineup even without a location fix.
+function sortByDistance(deals, userCoords) {
+  if (!userCoords) return deals
+  return [...deals]
+    .map(deal => ({ deal, dist: getNearestDistance(deal, userCoords) }))
+    .sort((a, b) => (a.dist ?? Infinity) - (b.dist ?? Infinity))
+    .map(({ deal }) => deal)
+}
+
+const CATEGORY_SECTIONS = [
+  { category: 'free', title: 'Freebies' },
+  { category: 'treats', title: 'Sweet Treats + Drinks' },
+  { category: 'restaurants', title: 'Restaurants' },
+  { category: 'sandwiches', title: 'Want a Sandwich?' },
+  { category: 'entertainment', title: 'Entertainment & Fun' },
+  { category: 'pizza', title: 'Pizza' },
+  { category: 'retail', title: 'Services & Shops' },
+]
+
 export default function HomeTab({
   deals, filteredDeals, usageLog, userCoords, onSelectDeal, onSelectLocation,
   searchQuery, onSearchChange, activeCategories, onCategoryToggle,
   onClearFilters, sortBy, setSortBy, categoryCounts,
   permissionDenied, geoLoading, hasCoords, onNearestRequest, dealCount,
-  featuredIds,
+  featuredIds, faves,
 }) {
   const { daysRemaining, isExpired, isExpiring } = useCardYear()
   const showBanner = isExpired || isExpiring
@@ -134,6 +156,37 @@ export default function HomeTab({
     .map(id => activeDeals.find(d => d.id === id))
     .filter(Boolean)
   const featuredCards = buildHomeCards(featuredPool, userCoords)
+
+  // Most-recently-favorited first — faves is stored oldest-to-newest.
+  const favesPool = [...(faves ?? [])].reverse()
+    .map(id => activeDeals.find(d => d.id === id))
+    .filter(Boolean)
+  const favesCards = buildHomeCards(favesPool, userCoords, 8)
+
+  const categorySections = CATEGORY_SECTIONS.map(({ category, title }) => ({
+    key: category,
+    title,
+    cards: buildHomeCards(
+      sortByDistance(activeDeals.filter(d => d.category === category), userCoords),
+      userCoords,
+      8
+    ),
+  }))
+
+  const unlimitedPool = sortByDistance(activeDeals.filter(d => d.deal.maxUses === null), userCoords)
+  const unlimitedCards = buildHomeCards(unlimitedPool, userCoords, 8)
+
+  // Sections with no cards (new user, nothing used/favorited yet, no
+  // Firestore-set Featured items) are dropped entirely rather than shown
+  // with an empty-state message — the page grows as the user does.
+  const sections = [
+    { key: 'near-me', title: 'Deals Near Me', cards: nearbyCards },
+    { key: 'featured', title: 'Featured Deals', cards: featuredCards },
+    { key: 'use-again', title: 'Use Again', cards: usedCards },
+    { key: 'favorites', title: 'Your Favorites', cards: favesCards },
+    ...categorySections,
+    { key: 'unlimited', title: 'Unlimited Deals', cards: unlimitedCards },
+  ].filter(section => section.cards.length > 0)
 
   const handleSelectCard = (card) => {
     if (card.dealCount > 1) {
@@ -204,9 +257,9 @@ export default function HomeTab({
       ) : (
         /* DISCOVERY MODE — section carousels */
         <div style={{ flex: 1, display: 'flex', flexDirection: 'column', padding: '14px 20px', gap: '14px', overflowY: 'auto', overscrollBehaviorY: 'contain' }}>
-          <Section title="Deals Near Me" cards={nearbyCards} onSelectCard={handleSelectCard} emptyMessage="No deals found nearby." />
-          <Section title="Use Again" cards={usedCards} onSelectCard={handleSelectCard} emptyMessage="Use a deal to see it here." />
-          <Section title="Featured" cards={featuredCards} onSelectCard={handleSelectCard} emptyMessage="No featured deals right now." />
+          {sections.map(section => (
+            <Section key={section.key} title={section.title} cards={section.cards} onSelectCard={handleSelectCard} />
+          ))}
         </div>
       )}
 
