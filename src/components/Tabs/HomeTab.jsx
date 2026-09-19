@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ChevronRight } from 'lucide-react'
+import { ChevronRight, ChevronLeft } from 'lucide-react'
 import { useCardYear } from '../../hooks/useCardYear'
 import { getNearestDistance, getNearestLocation } from '../../utils/dealHelpers'
 import HomeCard from '../UI/HomeCard'
@@ -321,13 +321,23 @@ export default function HomeTab({
       {isListMode ? (
         /* SEARCH MODE — sort controls + full deal list */
         <>
-          {listLabel && (
-            <div style={{ flexShrink: 0, padding: '10px 12px 0', backgroundColor: '#ffffff' }}>
+          <div style={{ flexShrink: 0, padding: '10px 12px 0', backgroundColor: '#ffffff', display: 'flex', alignItems: 'center', gap: '4px' }}>
+            <button
+              onClick={handleClearFilters}
+              aria-label="Back to Home"
+              style={{
+                background: 'none', border: 'none', cursor: 'pointer', padding: '4px',
+                margin: '-4px', display: 'flex', alignItems: 'center', color: 'var(--ssc-blue)',
+              }}
+            >
+              <ChevronLeft size={20} />
+            </button>
+            {listLabel && (
               <span style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '13px', color: '#0f172a' }}>
                 {listLabel}
               </span>
-            </div>
-          )}
+            )}
+          </div>
           <div style={{ flexShrink: 0, padding: '10px 12px', backgroundColor: '#ffffff', borderBottom: '1px solid #e8edf3' }}>
             <SortControl
               sortBy={sortBy}
