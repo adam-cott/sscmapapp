@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Heart, MapPin, Clock, Phone, Globe, Calendar } from 'lucide-react'
 import { CATEGORY_COLORS, CATEGORY_LIGHT, CATEGORY_LABELS, CATEGORY_ICON } from '../../utils/categoryColors'
-import { formatPhone } from '../../utils/dealHelpers'
+import { formatPhone, getDisplayValue } from '../../utils/dealHelpers'
 import UsageTracker from '../UI/UsageTracker'
 import SwipeToConfirm from '../UI/SwipeToConfirm'
 import RedemptionScreen from '../UI/RedemptionScreen'
@@ -13,6 +13,7 @@ export default function BottomSheet({ deal, onUse, onClose, isFave, onToggleFave
   const catColor = CATEGORY_COLORS[deal.category] || '#0170B9'
   const catLight = CATEGORY_LIGHT[deal.category] || '#f0f9ff'
   const CategoryIcon = CATEGORY_ICON[deal.category]
+  const displayValue = getDisplayValue(deal)
 
   useEffect(() => {
     const handleKey = (e) => { if (e.key === 'Escape') onClose() }
@@ -102,17 +103,19 @@ export default function BottomSheet({ deal, onUse, onClose, isFave, onToggleFave
             style={{ backgroundColor: isExhausted ? '#f8fafc' : catLight, border: `1px solid ${isExhausted ? '#e2e8f0' : catColor + '25'}` }}
           >
             <div
-              className="font-bold mb-1"
-              style={{ fontFamily: 'Sora, sans-serif', fontSize: '14px', color: isExhausted ? '#94a3b8' : '#0f172a' }}
+              className={displayValue ? 'font-bold mb-1' : 'font-bold'}
+              style={{ fontFamily: 'Sora, sans-serif', fontSize: displayValue ? '14px' : '18px', color: isExhausted ? '#94a3b8' : '#0f172a' }}
             >
               {deal.deal.title}
             </div>
-            <div
-              className="font-bold"
-              style={{ fontFamily: 'Sora, sans-serif', fontSize: '22px', color: isExhausted ? '#94a3b8' : catColor }}
-            >
-              {deal.deal.value}
-            </div>
+            {displayValue && (
+              <div
+                className="font-bold"
+                style={{ fontFamily: 'Sora, sans-serif', fontSize: '22px', color: isExhausted ? '#94a3b8' : catColor }}
+              >
+                {displayValue}
+              </div>
+            )}
           </div>
 
           <p className="text-sm mb-4" style={{ color: '#64748b', lineHeight: '1.6' }}>

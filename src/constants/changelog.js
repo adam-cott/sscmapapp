@@ -1,4 +1,4 @@
 export const LATEST_UPDATE = {
-  version: '1.0.50',
-  description: "Fixed back button and swipe gestures so they now close deal pop-ups and filtered lists instead of leaving the app. Tapping Home also resets you to the main view.",
+  version: '1.0.51',
+  description: "Fixed a few deals showing a cut-off deal value (like Denny's Kids Eat FREE deal) instead of the full offer.",
 }

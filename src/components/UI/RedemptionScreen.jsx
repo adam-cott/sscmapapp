@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { CheckCircle } from 'lucide-react'
+import { getDisplayValue } from '../../utils/dealHelpers'
 
 const DURATION = 30
 const RADIUS = 58
@@ -9,6 +10,7 @@ export default function RedemptionScreen({ deal, onDone }) {
   const [seconds, setSeconds] = useState(DURATION)
   const hasFiredRef = useRef(false)
   const intervalRef = useRef(null)
+  const displayValue = getDisplayValue(deal)
 
   useEffect(() => {
     intervalRef.current = setInterval(() => {
@@ -81,22 +83,25 @@ export default function RedemptionScreen({ deal, onDone }) {
       </div>
 
       {/* Deal description */}
-      <div
-        style={{
-          fontFamily: 'DM Sans, sans-serif',
-          fontSize: '16px',
-          color: '#64748b',
-          textAlign: 'center',
-          marginBottom: '40px',
-          lineHeight: 1.5,
-          maxWidth: '300px',
-        }}
-      >
-        {deal.deal.value}
-      </div>
+      {displayValue && (
+        <div
+          style={{
+            fontFamily: 'DM Sans, sans-serif',
+            fontSize: '16px',
+            color: '#64748b',
+            textAlign: 'center',
+            lineHeight: 1.5,
+            maxWidth: '300px',
+          }}
+        >
+          {displayValue}
+        </div>
+      )}
 
-      {/* Countdown ring */}
-      <div style={{ position: 'relative', width: '140px', height: '140px', marginBottom: '36px' }}>
+      {/* Countdown ring — marginTop (not the description's own marginBottom)
+          owns the gap above, so spacing stays identical whether or not the
+          description renders */}
+      <div style={{ position: 'relative', width: '140px', height: '140px', marginTop: '40px', marginBottom: '36px' }}>
         <svg width="140" height="140" viewBox="0 0 140 140">
           {/* Background ring */}
           <circle

@@ -53,6 +53,25 @@ export function formatDistance(miles) {
   return `${Math.round(miles)} mi`
 }
 
+const TERMINAL_PUNCT = /[.!?)'"]\s*$/
+
+/**
+ * deal.deal.value is meant to be a short label ("2 for 1", "Free Item"), but
+ * an upstream import bug hard-cut some longer deal copy at ~30 characters
+ * into deal.value instead of leaving the full text in deal.title. Detect
+ * that case (value is an exact, unterminated prefix of title) and return
+ * null so callers can skip rendering the mangled fragment rather than show
+ * it. See reports/truncated-deals-report.md for the affected deals.
+ */
+export function getDisplayValue(deal) {
+  const value = deal.deal.value
+  const title = deal.deal.title
+  if (value && title && title !== value && title.startsWith(value) && !TERMINAL_PUNCT.test(value)) {
+    return null
+  }
+  return value
+}
+
 /**
  * Compute derived usage state for a deal.
  * maxUses === null means unlimited (can never be exhausted).

@@ -1,6 +1,6 @@
 import { MapPin } from 'lucide-react'
 import { CATEGORY_COLORS, CATEGORY_LIGHT } from '../../utils/categoryColors'
-import { getNearestDistance, formatDistance } from '../../utils/dealHelpers'
+import { getNearestDistance, formatDistance, getDisplayValue } from '../../utils/dealHelpers'
 import Badge from '../UI/Badge'
 import BusinessLogo from '../UI/BusinessLogo'
 
@@ -13,6 +13,7 @@ export default function DealCard({ deal, onClick, userCoords }) {
 
   const distanceMiles = getNearestDistance(deal, userCoords)
   const distanceStr   = distanceMiles !== null ? formatDistance(distanceMiles) : null
+  const displayValue  = getDisplayValue(deal)
 
   return (
     <button
@@ -72,19 +73,22 @@ export default function DealCard({ deal, onClick, userCoords }) {
           {/* Bottom row */}
           <div className="flex items-center justify-between">
             {/* Value pill */}
-            <span
-              className="text-xs font-bold rounded-lg px-2.5 py-1"
-              style={{
-                fontFamily: 'Sora, sans-serif',
-                backgroundColor: isExhausted ? '#f1f5f9' : CATEGORY_LIGHT[deal.category] || '#f1f5f9',
-                color: isExhausted ? '#94a3b8' : catColor,
-              }}
-            >
-              {deal.deal.value}
-            </span>
+            {displayValue && (
+              <span
+                className="text-xs font-bold rounded-lg px-2.5 py-1"
+                style={{
+                  fontFamily: 'Sora, sans-serif',
+                  backgroundColor: isExhausted ? '#f1f5f9' : CATEGORY_LIGHT[deal.category] || '#f1f5f9',
+                  color: isExhausted ? '#94a3b8' : catColor,
+                }}
+              >
+                {displayValue}
+              </span>
+            )}
 
-            {/* Usage indicator */}
-            <div className="flex items-center gap-1.5">
+            {/* Usage indicator — margin-left: auto keeps this right-aligned
+                whether or not the pill above renders */}
+            <div className="flex items-center gap-1.5" style={{ marginLeft: 'auto' }}>
               {isUnlimited ? (
                 <span
                   className="text-xs font-semibold"
