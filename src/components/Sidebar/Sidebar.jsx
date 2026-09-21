@@ -15,6 +15,7 @@ export default function Sidebar({
   hasCoords,
   onNearestRequest,
   categoryCounts,
+  showSort = true,
 }) {
   return (
     <div className="flex flex-col gap-2">
@@ -25,14 +26,16 @@ export default function Sidebar({
         onClear={onClearFilters}
         categoryCounts={categoryCounts}
       />
-      <SortControl
-        sortBy={sortBy}
-        setSortBy={setSortBy}
-        permissionDenied={permissionDenied}
-        geoLoading={geoLoading}
-        hasCoords={hasCoords}
-        onNearestRequest={onNearestRequest}
-      />
+      {showSort && (
+        <SortControl
+          sortBy={sortBy}
+          setSortBy={setSortBy}
+          permissionDenied={permissionDenied}
+          geoLoading={geoLoading}
+          hasCoords={hasCoords}
+          onNearestRequest={onNearestRequest}
+        />
+      )}
     </div>
   )
 }
