@@ -12,10 +12,8 @@ import { useDeals } from './hooks/useDeals'
 import { useFilters } from './hooks/useFilters'
 import { useOverlayHistory } from './hooks/useOverlayHistory'
 import { useGeolocation } from './hooks/useGeolocation'
-import Header from './components/Header/Header'
 import Sidebar from './components/Sidebar/Sidebar'
 import MapView from './components/Map/MapView'
-import ListView from './components/ListView/ListView'
 import DealModal from './components/Modal/DealModal'
 import BottomSheet from './components/BottomSheet/BottomSheet'
 import LocationPicker from './components/LocationPicker/LocationPicker'
@@ -55,7 +53,6 @@ function AppShell() {
   const [showAbout, setShowAbout] = useState(false)
   const [showCardYear, setShowCardYear] = useState(false)
   const { isExpired, isExpiring } = useCardYear()
-  const [activeView, setActiveView] = useState('map')
   const [showUseToast, setShowUseToast] = useState(false)
   const [lastUsedDealId, setLastUsedDealId] = useState(null)
   const [pendingNearest, setPendingNearest] = useState(false)
@@ -194,12 +191,6 @@ function AppShell() {
     onCategoryToggle: toggleCategory,
     onClearFilters: clearFilters,
     dealCount: filteredDeals.length,
-    sortBy,
-    setSortBy: handleSetSortBy,
-    permissionDenied,
-    geoLoading,
-    hasCoords: !!coords,
-    onNearestRequest: handleNearestRequest,
     categoryCounts,
   }
 
@@ -250,15 +241,8 @@ function AppShell() {
         <div className="flex flex-col flex-1 overflow-hidden">
         <div className="flex flex-1 overflow-hidden relative">
           <main className="flex-1 relative overflow-hidden">
-            <Header
-              activeView={activeView}
-              onViewToggle={() => setActiveView(v => v === 'map' ? 'list' : 'map')}
-              onReset={handleReset}
-              filteredCount={filteredDeals.length}
-            />
-
-            {/* Map — always rendered so it stays alive */}
-            <div className={`absolute inset-0 ${activeView === 'map' ? 'block' : 'hidden'}`}>
+            {/* Map */}
+            <div className="absolute inset-0">
               <MapView
                 deals={filteredDeals}
                 selectedDeal={selectedDeal}
@@ -269,20 +253,10 @@ function AppShell() {
               />
             </div>
 
-            {/* Mobile list view */}
-            <div className={`absolute inset-0 overflow-y-auto ${activeView === 'list' ? 'block' : 'hidden'}`}>
-              <div className="sticky top-0 z-10 bg-white border-b border-gray-200 px-3 py-2 shadow-sm">
-                <Sidebar {...sidebarProps} />
-              </div>
-              <ListView deals={filteredDeals} onSelectDeal={handleSelectDeal} userCoords={coords} />
-            </div>
-
             {/* Compact filter bar over map — no sort control, map pins aren't ordered */}
-            {activeView === 'map' && (
-              <div className="absolute top-0 left-0 right-0 z-[500] bg-white border-b border-gray-100 px-3 py-2 shadow-sm">
-                <Sidebar {...sidebarProps} showSort={false} />
-              </div>
-            )}
+            <div className="absolute top-0 left-0 right-0 z-[500] bg-white border-b border-gray-100 px-3 py-2 shadow-sm">
+              <Sidebar {...sidebarProps} />
+            </div>
           </main>
 
           {/* Nav floats over map */}

@@ -1,6 +1,5 @@
 import SearchBar from './SearchBar'
 import FilterPanel from './FilterPanel'
-import SortControl from './SortControl'
 
 export default function Sidebar({
   searchQuery,
@@ -8,14 +7,7 @@ export default function Sidebar({
   activeCategories,
   onCategoryToggle,
   onClearFilters,
-  sortBy,
-  setSortBy,
-  permissionDenied,
-  geoLoading,
-  hasCoords,
-  onNearestRequest,
   categoryCounts,
-  showSort = true,
 }) {
   return (
     <div className="flex flex-col gap-2">
@@ -26,16 +18,6 @@ export default function Sidebar({
         onClear={onClearFilters}
         categoryCounts={categoryCounts}
       />
-      {showSort && (
-        <SortControl
-          sortBy={sortBy}
-          setSortBy={setSortBy}
-          permissionDenied={permissionDenied}
-          geoLoading={geoLoading}
-          hasCoords={hasCoords}
-          onNearestRequest={onNearestRequest}
-        />
-      )}
     </div>
   )
 }
