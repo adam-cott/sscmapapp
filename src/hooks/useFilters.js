@@ -6,6 +6,15 @@ export function useFilters(deals, userCoords) {
   const [searchQuery, setSearchQuery] = useState('')
   const [activeCategories, setActiveCategories] = useState([])
   const [sortBy, setSortByState] = useState('az')
+  // Non-null = show only these deal ids, ignoring activeCategories (used by
+  // Home tab "See all" cards for sections with no category equivalent, e.g.
+  // Featured, Use Again, Unlimited Deals).
+  const [pinnedIds, setPinnedIds] = useState(null)
+  // True whenever the user explicitly asked to see a full list (a "See all"
+  // tap), even when that list has no active search/category/pinnedIds of its
+  // own — e.g. "Deals Near Me" See all, which is just everything sorted by
+  // distance with no restriction at all.
+  const [listMode, setListMode] = useState(false)
 
   // Track whether the user has explicitly chosen a sort mode so that a
   // late-resolving geolocation result doesn't override their explicit choice.
@@ -25,6 +34,7 @@ export function useFilters(deals, userCoords) {
   }, [userCoords])
 
   const toggleCategory = useCallback((category) => {
+    setPinnedIds(null)
     setActiveCategories(prev =>
       prev.includes(category)
         ? prev.filter(c => c !== category)
@@ -35,6 +45,36 @@ export function useFilters(deals, userCoords) {
   const clearFilters = useCallback(() => {
     setSearchQuery('')
     setActiveCategories([])
+    setPinnedIds(null)
+    setListMode(false)
+  }, [])
+
+  // Set exactly one active category, replacing whatever filter state was
+  // there before (used by category-section "See all" cards).
+  const showCategory = useCallback((category) => {
+    setSearchQuery('')
+    setPinnedIds(null)
+    setActiveCategories([category])
+    setListMode(true)
+  }, [])
+
+  // Show exactly this set of deal ids, replacing whatever filter state was
+  // there before (used by "See all" cards with no category equivalent).
+  const showPinned = useCallback((ids) => {
+    setSearchQuery('')
+    setActiveCategories([])
+    setPinnedIds(ids)
+    setListMode(true)
+  }, [])
+
+  // "Deals Near Me" See all: every deal, nearest first, no restriction.
+  const showAllNearest = useCallback(() => {
+    setSearchQuery('')
+    setActiveCategories([])
+    setPinnedIds(null)
+    userHasPickedSort.current = true
+    setSortByState('nearest')
+    setListMode(true)
   }, [])
 
   // Counts per category based on search query only (category filter excluded so
@@ -49,7 +89,8 @@ export function useFilters(deals, userCoords) {
   }, [deals, searchQuery])
 
   const filteredDeals = useMemo(() => {
-    const filtered = filterDeals(deals, searchQuery, activeCategories)
+    const base = pinnedIds ? deals.filter(d => pinnedIds.includes(d.id)) : deals
+    const filtered = filterDeals(base, searchQuery, pinnedIds ? [] : activeCategories)
     const sorted = [...filtered]
 
     if (sortBy === 'nearest') {
@@ -79,7 +120,9 @@ export function useFilters(deals, userCoords) {
     }
 
     return sorted
-  }, [deals, searchQuery, activeCategories, sortBy, userCoords])
+  }, [deals, searchQuery, activeCategories, pinnedIds, sortBy, userCoords])
+
+  const isListMode = listMode || searchQuery.trim().length > 0 || activeCategories.length > 0
 
   return {
     searchQuery,
@@ -91,5 +134,10 @@ export function useFilters(deals, userCoords) {
     sortBy,
     setSortBy,
     categoryCounts,
+    pinnedIds,
+    showCategory,
+    showPinned,
+    showAllNearest,
+    isListMode,
   }
 }

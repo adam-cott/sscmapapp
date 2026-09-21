@@ -10,6 +10,7 @@ import { useCardYear } from './hooks/useCardYear'
 import dealsData from './data/deals.json'
 import { useDeals } from './hooks/useDeals'
 import { useFilters } from './hooks/useFilters'
+import { useOverlayHistory } from './hooks/useOverlayHistory'
 import { useGeolocation } from './hooks/useGeolocation'
 import Header from './components/Header/Header'
 import Sidebar from './components/Sidebar/Sidebar'
@@ -77,7 +78,40 @@ function AppShell() {
     sortBy,
     setSortBy,
     categoryCounts,
+    pinnedIds,
+    showCategory,
+    showPinned,
+    showAllNearest,
+    isListMode,
   } = useFilters(dealsWithUsage, coords)
+
+  // Back (hardware button, edge-swipe, or the browser's own back control)
+  // closes whichever of these is topmost instead of leaving the app. See
+  // useOverlayHistory for how a physical back press only closes one layer
+  // at a time when several are open (e.g. a deal opened from Home's
+  // filtered list).
+  useOverlayHistory(isListMode, clearFilters)
+  useOverlayHistory(!!selectedDeal, () => setSelectedDeal(null))
+  useOverlayHistory(!!selectedLocation, () => setSelectedLocation(null))
+  useOverlayHistory(showResetConfirm, () => setShowResetConfirm(false))
+  useOverlayHistory(showEditProfile, () => setShowEditProfile(false))
+  useOverlayHistory(showDeleteDialog, () => setShowDeleteDialog(false))
+  useOverlayHistory(showAbout, () => setShowAbout(false))
+  useOverlayHistory(showCardYear, () => setShowCardYear(false))
+
+  // Leaving Home resets its filtered-list state, so it's never left running
+  // in the background — otherwise a later back press on a different tab
+  // could silently consume a history entry with no visible change.
+  useEffect(() => {
+    if (activeTab !== 'home' && isListMode) clearFilters()
+  }, [activeTab, isListMode, clearFilters])
+
+  // Tapping Home while already on Home resets to the carousel view, since
+  // switching to an already-active tab is otherwise a no-op.
+  const handleTabChange = (id) => {
+    if (id === 'home' && activeTab === 'home') clearFilters()
+    setActiveTab(id)
+  }
 
   useEffect(() => {
     if (coords && pendingNearest) {
@@ -198,9 +232,16 @@ function AppShell() {
               onNearestRequest={handleNearestRequest}
               dealCount={filteredDeals.length}
               featuredIds={featuredIds}
+              faves={faves}
+              pinnedIds={pinnedIds}
+              isListMode={isListMode}
+              onShowCategory={showCategory}
+              onShowPinned={showPinned}
+              onShowAllNearest={showAllNearest}
+              onNavigateFaves={() => setActiveTab('faves')}
             />
           </div>
-          <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} settingsBadge={isExpired || isExpiring} isAdmin={isAdmin} />
+          <BottomNav activeTab={activeTab} onTabChange={handleTabChange} isMapTab={false} settingsBadge={isExpired || isExpiring} isAdmin={isAdmin} />
         </div>
       )}
 
@@ -246,7 +287,7 @@ function AppShell() {
 
           {/* Nav floats over map */}
           <div className="absolute bottom-0 left-0 right-0 z-[600]">
-            <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab settingsBadge={isExpired || isExpiring} isAdmin={isAdmin} />
+            <BottomNav activeTab={activeTab} onTabChange={handleTabChange} isMapTab settingsBadge={isExpired || isExpiring} isAdmin={isAdmin} />
           </div>
         </div>
         </div>
@@ -262,7 +303,7 @@ function AppShell() {
               userCoords={coords}
             />
           </div>
-          <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} settingsBadge={isExpired || isExpiring} isAdmin={isAdmin} />
+          <BottomNav activeTab={activeTab} onTabChange={handleTabChange} isMapTab={false} settingsBadge={isExpired || isExpiring} isAdmin={isAdmin} />
         </div>
       )}
 
@@ -276,7 +317,7 @@ function AppShell() {
               usageMap={usageMap}
             />
           </div>
-          <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} settingsBadge={isExpired || isExpiring} isAdmin={isAdmin} />
+          <BottomNav activeTab={activeTab} onTabChange={handleTabChange} isMapTab={false} settingsBadge={isExpired || isExpiring} isAdmin={isAdmin} />
         </div>
       )}
 
@@ -302,7 +343,7 @@ function AppShell() {
                 />
             }
           </div>
-          <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} settingsBadge={isExpired || isExpiring} isAdmin={isAdmin} />
+          <BottomNav activeTab={activeTab} onTabChange={handleTabChange} isMapTab={false} settingsBadge={isExpired || isExpiring} isAdmin={isAdmin} />
         </div>
       )}
 
@@ -312,7 +353,7 @@ function AppShell() {
           <div className="flex-1 overflow-hidden">
             <AdminTab deals={dealsWithUsage} />
           </div>
-          <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isMapTab={false} settingsBadge={isExpired || isExpiring} isAdmin={isAdmin} />
+          <BottomNav activeTab={activeTab} onTabChange={handleTabChange} isMapTab={false} settingsBadge={isExpired || isExpiring} isAdmin={isAdmin} />
         </div>
       )}
 
