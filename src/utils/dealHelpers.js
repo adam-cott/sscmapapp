@@ -90,30 +90,109 @@ export function getDealUsageState(deal, usageMap) {
 
 // deal.locations[] lists every physical location for the business, but
 // locationRestriction (when set) means the deal only honors a subset of
-// them — and locations[] isn't filtered to match. For a restricted deal we
-// can only be sure the deal's own primary lat/lng/address is valid, so
-// "View on map" shows just that one pin. These four businesses' primary
-// address doesn't even match their own locationRestriction text (verified
-// against deals.json on 2026-09-21 — e.g. The Picklr's restriction is
-// "Lehi & Bluffdale" but its primary address is in Kaysville), so we can't
-// show a pin for them at all without risking a wrong location.
-const UNVERIFIABLE_RESTRICTED_DEAL_IDS = new Set([
-  'entertainment-150', 'free-268', // The Picklr — "Lehi & Bluffdale"
-  'treats-338', // Rocky Mountain Chocolate Factory — "Lehi"
-  'treats-358', 'treats-359', 'treats-360', // Twisted Sugar — "PG & Saratoga Only"
-  'treats-366', 'treats-367', 'treats-368', // Yonutz — "Saratoga Springs"
-])
+// them — and locations[] isn't filtered to match. The functions below
+// resolve a restriction's free text (e.g. "Lehi & Bluffdale",
+// "All Ut Cnty excl. EM & SF") down to the specific locations it names, so
+// "View on map" only shows pins we're confident actually honor the deal.
+// See reports/map-focus-restrictions-report.md for the full data audit
+// this logic was validated against (dated 2026-09-21).
+
+const PLACE_ABBREVIATIONS = {
+  sf: 'spanish fork', pg: 'pleasant grove', em: 'eagle mountain', wj: 'west jordan',
+  af: 'american fork', saratoga: 'saratoga springs', mtn: 'mountain', mt: 'mountain',
+  ut: 'utah', cnty: 'county', crs: 'crossing',
+}
+
+// Wording that means "every location honors this deal" rather than naming
+// specific cities — "All ...", any "county"-level phrasing, "Participating
+// Locations", "Same Locations", or a bare "Northern UT".
+export const BROAD_RESTRICTION = /^all\b|county|participating locs?\.?|participating locations?|same locations?|^northern ut\b/i
+
+// Splits "All Ut Cnty excl. EM & SF" into an include clause and an exclude
+// clause; restrictions with no exclusion wording are all include, no exclude.
+const EXCLUSION_SPLIT = /\b(excl\.?|exclude[sd]?|except|not)\b/i
+
+export function splitRestrictionClauses(restrictionText) {
+  const parts = restrictionText.split(EXCLUSION_SPLIT)
+  if (parts.length === 1) return { includeText: restrictionText, excludeText: null }
+  return { includeText: parts[0], excludeText: parts.slice(2).join(' ') }
+}
+
+function normalizePlace(text) {
+  return text.toLowerCase().replace(/[^a-z ]/g, ' ').replace(/\s+/g, ' ').trim()
+}
+
+// Filler words that ride along with a place name but aren't part of it
+// ("Saratoga Only", "SF & partic. locs") — stripped wherever they appear
+// inside a token, not just when a token is exactly one of these.
+const FILLER_WORD = /\b(only|locs?|locations?|partic\w*|stores?)\b/gi
+
+// Expands abbreviations word-by-word (not just whole-token) so compound
+// phrases like "Eagle Mtn" resolve to "eagle mountain", not just a bare "Mtn".
+function expandAbbreviations(token) {
+  return token.split(' ').map(w => PLACE_ABBREVIATIONS[w] || w).join(' ')
+}
+
+// Breaks a restriction clause into place names: splits on "&", ",", "and",
+// "/", "-", strips filler words ("Only", "Locations", "Participating",
+// etc.), and expands known abbreviations (SF, PG, EM, Mtn, ...).
+export function expandPlaceTokens(text) {
+  return text.toLowerCase()
+    .replace(/[().]/g, ' ')
+    .split(/&|,|\band\b|\/|-/)
+    .map(t => t.replace(FILLER_WORD, ' ').trim())
+    .filter(Boolean)
+    .map(expandAbbreviations)
+    .map(normalizePlace)
+    .filter(Boolean)
+}
+
+export function cityFromAddress(address) {
+  if (!address) return null
+  const parts = address.split(',').map(s => s.trim())
+  return parts.length >= 2 ? parts[1] : null
+}
+
+function placeMatchesCity(placeToken, city) {
+  const c = normalizePlace(city || '')
+  return !!c && (c.includes(placeToken) || placeToken.includes(c))
+}
+
+/**
+ * Filters a business's locations[] down to the ones a locationRestriction
+ * actually names. Returns null if nothing can be confidently matched.
+ */
+export function matchLocationsToRestriction(locations, restrictionText) {
+  if (!restrictionText) return locations
+  const { includeText, excludeText } = splitRestrictionClauses(restrictionText)
+  const isBroad = BROAD_RESTRICTION.test(includeText.trim())
+  const includeTokens = isBroad ? null : expandPlaceTokens(includeText)
+  const excludeTokens = excludeText ? expandPlaceTokens(excludeText) : []
+
+  let included = isBroad
+    ? locations
+    : locations.filter(l => {
+      const city = cityFromAddress(l.address)
+      return city && includeTokens.some(t => placeMatchesCity(t, city))
+    })
+
+  if (excludeTokens.length) {
+    included = included.filter(l => {
+      const city = cityFromAddress(l.address)
+      return !(city && excludeTokens.some(t => placeMatchesCity(t, city)))
+    })
+  }
+
+  return included.length ? included : null
+}
 
 /**
  * Locations to show for a deal's "View on map" focus mode, or null if none
- * can be shown with confidence. See UNVERIFIABLE_RESTRICTED_DEAL_IDS above.
+ * can be shown with confidence.
  */
 export function getMapFocusLocations(deal) {
-  if (deal.locationRestriction) {
-    if (UNVERIFIABLE_RESTRICTED_DEAL_IDS.has(deal.id)) return null
-    return [{ lat: deal.lat, lng: deal.lng, address: deal.address, phone: deal.contact?.phone }]
-  }
-  return deal.locations
+  if (!deal.locationRestriction) return deal.locations
+  return matchLocationsToRestriction(deal.locations, deal.locationRestriction)
 }
 
 const TIEBREAKER = ['restaurants', 'sandwiches', 'pizza', 'treats', 'free', 'entertainment', 'retail']
