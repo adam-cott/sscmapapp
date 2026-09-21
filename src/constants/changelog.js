@@ -1,4 +1,4 @@
 export const LATEST_UPDATE = {
-  version: '1.0.51',
-  description: "Fixed a few deals showing a cut-off deal value (like Denny's Kids Eat FREE deal) instead of the full offer.",
+  version: '1.0.52',
+  description: "Zoomed in the Scratch Miniature Golf logo so it's not lost in a sea of empty background.",
 }
