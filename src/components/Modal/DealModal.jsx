@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
-import { Heart } from 'lucide-react'
+import { Heart, Map as MapIcon } from 'lucide-react'
 import { CATEGORY_COLORS, CATEGORY_LIGHT, CATEGORY_LABELS, CATEGORY_ICON } from '../../utils/categoryColors'
-import { formatPhone, getDisplayValue } from '../../utils/dealHelpers'
+import { formatPhone, getDisplayValue, getMapFocusLocations } from '../../utils/dealHelpers'
 import UsageTracker from '../UI/UsageTracker'
 import SwipeToConfirm from '../UI/SwipeToConfirm'
 import RedemptionScreen from '../UI/RedemptionScreen'
 
-export default function DealModal({ deal, onUse, onClose, isFave, onToggleFave }) {
+export default function DealModal({ deal, onUse, onClose, isFave, onToggleFave, onViewOnMap }) {
   const { usage } = deal
   const isExhausted = usage.status === 'exhausted'
   const [showRedemption, setShowRedemption] = useState(false)
@@ -14,6 +14,7 @@ export default function DealModal({ deal, onUse, onClose, isFave, onToggleFave }
   const catLight = CATEGORY_LIGHT[deal.category] || '#f0f9ff'
   const CategoryIcon = CATEGORY_ICON[deal.category]
   const displayValue = getDisplayValue(deal)
+  const canViewOnMap = !!getMapFocusLocations(deal)?.length
 
   useEffect(() => {
     const handleKey = (e) => { if (e.key === 'Escape') onClose() }
@@ -146,6 +147,7 @@ export default function DealModal({ deal, onUse, onClose, isFave, onToggleFave }
           <div className="space-y-3 mb-5">
             {[
               deal.lat && { icon: <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>, text: deal.address || 'Get Directions', href: `https://www.google.com/maps/dir/?api=1&destination=${deal.lat},${deal.lng}`, external: true },
+              canViewOnMap && { icon: <MapIcon size={13} />, text: 'View on map', onClick: onViewOnMap },
               deal.locationRestriction && { icon: <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>, text: `Valid at: ${deal.locationRestriction}` },
               deal.contact?.hours && { icon: <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>, text: deal.contact.hours },
               deal.contact?.phone && { icon: <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>, text: formatPhone(deal.contact.phone), href: `tel:${deal.contact.phone}` },
@@ -164,6 +166,8 @@ export default function DealModal({ deal, onUse, onClose, isFave, onToggleFave }
                   >
                     {row.text}
                   </a>
+                ) : row.onClick ? (
+                  <button onClick={row.onClick} className="text-sm text-left" style={{ color: '#0170B9', background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}>{row.text}</button>
                 ) : (
                   <span className="text-sm" style={{ color: '#475569' }}>{row.text}</span>
                 )}

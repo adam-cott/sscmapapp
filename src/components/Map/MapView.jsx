@@ -1,5 +1,5 @@
-import { useMemo } from 'react'
-import { MapContainer, TileLayer, useMapEvents, Marker } from 'react-leaflet'
+import { useEffect, useMemo, useRef } from 'react'
+import { MapContainer, TileLayer, useMap, useMapEvents, Marker } from 'react-leaflet'
 import MarkerClusterGroup from 'react-leaflet-cluster'
 import L from 'leaflet'
 import BusinessMarker from './BusinessMarker'
@@ -57,6 +57,27 @@ function AutoSpiderfy() {
   return null
 }
 
+// Zooms/pans to fit a set of [lat, lng] points once, when the set changes
+// (e.g. entering or changing "View on map" focus). Doesn't re-fit on every
+// render, since the user may then pan/zoom manually within focus mode.
+function FitBounds({ points }) {
+  const map = useMap()
+  const key = points?.map(p => p.join(',')).join('|')
+  const fittedKeyRef = useRef(null)
+
+  useEffect(() => {
+    if (!points?.length || fittedKeyRef.current === key) return
+    fittedKeyRef.current = key
+    if (points.length === 1) {
+      map.setView(points[0], MAX_ZOOM - 2)
+    } else {
+      map.fitBounds(points, { padding: [48, 48], maxZoom: MAX_ZOOM - 1 })
+    }
+  }, [key, points, map])
+
+  return null
+}
+
 const LOCATION_ICON = L.divIcon({
   className: '',
   html: '<div class="loc-ring"></div><div class="loc-dot"></div>',
@@ -64,7 +85,7 @@ const LOCATION_ICON = L.divIcon({
   iconAnchor: [16, 16],
 })
 
-export default function MapView({ deals, selectedDeal, onSelectDeal, onSelectLocation, usageMap, userCoords }) {
+export default function MapView({ deals, selectedDeal, onSelectDeal, onSelectLocation, usageMap, userCoords, focusPoints }) {
   // Group pins by unique coordinate — one pin per physical location
   const pins = useMemo(() => {
     const byCoord = new Map()
@@ -99,6 +120,7 @@ export default function MapView({ deals, selectedDeal, onSelectDeal, onSelectLoc
           maxZoom={MAX_ZOOM}
         />
         <AutoSpiderfy />
+        {focusPoints?.length > 0 && <FitBounds points={focusPoints} />}
         {userCoords && (
           <Marker
             position={[userCoords.lat, userCoords.lng]}

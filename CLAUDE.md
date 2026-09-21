@@ -1,7 +1,7 @@
 # Starving Student Card Map App
 
 ## What This Is
-A mobile-first PWA for Utah County college students. Turns the physical Starving Student Discount Card into an interactive deal finder — 418 deals, 199 businesses, 1,400+ map pins. Users browse by map or list, filter by category, and track deal usage per card.
+A mobile-first PWA for Utah County college students. Turns the physical Starving Student Discount Card into an interactive deal finder — 418 deals, 199 businesses, 1,400+ map pins. Users browse via Home tab carousels/search or the Map tab's pins, filter by category, and track deal usage per card.
 
 **Live:** Vercel via GitHub auto-deploy (`master` branch)
 **Repo:** https://github.com/adam-cott/sscmapapp
@@ -40,6 +40,7 @@ A mobile-first PWA for Utah County college students. Turns the physical Starving
 - Logos use `object-fit: contain`, not `cover` — they should never be cropped.
 - **Debugging rule:** if a style change doesn't appear to take effect, verify which file actually renders the element before editing again — don't assume and re-edit blind.
 - **A thin accent bar can't match a panel's corner radius by giving it the same `border-radius` value.** CSS clamps a box's radius to half its own dimension, so a 4px-tall bar's vertical radius silently clamps to 2px regardless of what you set — it'll never visually match a 16-20px panel curve, leaving a sliver. The working pattern (see `DealModal.jsx`, `LocationPrompt.jsx`, `UndoToast.jsx`): `overflow: hidden` + `border-radius` on the panel, no radius on the bar — the bar just gets clipped to whatever shape the panel is.
+- **A static (`position: static`, the default) element always paints BEHIND any sibling with `position: absolute`/`relative`/etc., even with no `z-index` set and even if the static element comes later in the DOM.** This isn't a bug in any one component, it's plain CSS stacking order. It cost real damage once: the Map tab's `Header` (app title, deal-count pill, a map/list toggle, a Reset button) was a static element sitting before `position: absolute; inset: 0` map/list panels — so the map's opaque tiles painted directly over the entire header strip, on every screen size, for as long as that layout existed. The toggle and Reset button were completely unclickable and nobody noticed because nothing looked visually "broken" — the map just filled the screen like it was supposed to. When overlaying `position: absolute` content near a static header/toolbar, either give the static element `position: relative` (or a real stacking context) too, or don't assume "it renders in the JSX before the overlay" means "it renders on top."
 
 ---
 
@@ -48,8 +49,7 @@ A mobile-first PWA for Utah County college students. Turns the physical Starving
 src/
   data/deals.json              # 418 deals, all with coords + locations[]
   components/
-    Header/Header.jsx          # App bar
-    Sidebar/                   # SearchBar, FilterPanel, SortControl
+    Sidebar/                   # SearchBar, FilterPanel — map's compact filter bar (no sort; map pins aren't ordered)
     Map/MapView.jsx            # Map + clustering + spiderfy
     Map/BusinessMarker.jsx     # Pins — React.memo wrapped
     ListView/                  # DealCard list
@@ -65,7 +65,7 @@ src/
     useGeolocation.js          # Manual-trigger GPS; exposes coords, permissionDenied, hasRequested
   utils/
     categoryColors.js          # 7 category color/label map
-    dealHelpers.js             # getDealUsageState(), filterDeals()
+    dealHelpers.js             # getDealUsageState(), filterDeals(), getMapFocusLocations()
     markerIcons.js             # createMarkerIcon() — module-level cache (42 max entries)
   App.jsx                      # Root state + layout
   index.css                    # Global styles (Leaflet CSS first!)

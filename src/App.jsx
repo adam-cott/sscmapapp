@@ -8,6 +8,7 @@ import AboutScreen from './components/Settings/AboutScreen'
 import CardYearScreen from './components/Settings/CardYearScreen'
 import { useCardYear } from './hooks/useCardYear'
 import dealsData from './data/deals.json'
+import { getMapFocusLocations } from './utils/dealHelpers'
 import { useDeals } from './hooks/useDeals'
 import { useFilters } from './hooks/useFilters'
 import { useOverlayHistory } from './hooks/useOverlayHistory'
@@ -47,6 +48,7 @@ function AppShell() {
   const [activeTab, setActiveTab] = useState('home')
   const [selectedDeal, setSelectedDeal] = useState(null)
   const [selectedLocation, setSelectedLocation] = useState(null)
+  const [mapFocus, setMapFocus] = useState(null)
   const [showResetConfirm, setShowResetConfirm] = useState(false)
   const [showEditProfile, setShowEditProfile] = useState(false)
   const [showDeleteDialog, setShowDeleteDialog] = useState(false)
@@ -90,6 +92,7 @@ function AppShell() {
   useOverlayHistory(isListMode, clearFilters)
   useOverlayHistory(!!selectedDeal, () => setSelectedDeal(null))
   useOverlayHistory(!!selectedLocation, () => setSelectedLocation(null))
+  useOverlayHistory(!!mapFocus, () => setMapFocus(null))
   useOverlayHistory(showResetConfirm, () => setShowResetConfirm(false))
   useOverlayHistory(showEditProfile, () => setShowEditProfile(false))
   useOverlayHistory(showDeleteDialog, () => setShowDeleteDialog(false))
@@ -102,6 +105,14 @@ function AppShell() {
   useEffect(() => {
     if (activeTab !== 'home' && isListMode) clearFilters()
   }, [activeTab, isListMode, clearFilters])
+
+  // "View on map" focus is a one-shot overlay tied to the moment it was
+  // triggered — leaving the Map tab (by any route) always exits it, so
+  // coming back to Map later shows the normal, unfocused map.
+  const exitMapFocus = () => setMapFocus(null)
+  useEffect(() => {
+    if (activeTab !== 'map') exitMapFocus()
+  }, [activeTab])
 
   // Tapping Home while already on Home resets to the carousel view, since
   // switching to an already-active tab is otherwise a no-op.
@@ -184,6 +195,21 @@ function AppShell() {
     setSelectedDeal(deal)
   }, [])
 
+  // Looks the deal up fresh from dealsWithUsage rather than trusting the
+  // passed-in id's currently-open selectedDeal object — if the sheet was
+  // opened from a map pin at a non-primary location, selectedDeal.lat/lng
+  // gets overridden to that pin's coords (see BusinessMarker), which would
+  // otherwise leak into a restricted deal's single "primary location" pin.
+  const handleViewOnMap = useCallback((dealId) => {
+    const deal = dealsWithUsage.find(d => d.id === dealId)
+    if (!deal) return
+    const locations = getMapFocusLocations(deal)
+    if (!locations?.length) return
+    setMapFocus({ deal: { ...deal, locations }, businessName: deal.name, restriction: deal.locationRestriction ?? null, count: locations.length })
+    setSelectedDeal(null)
+    setActiveTab('map')
+  }, [dealsWithUsage])
+
   const sidebarProps = {
     searchQuery,
     onSearchChange: setSearchQuery,
@@ -244,18 +270,40 @@ function AppShell() {
             {/* Map */}
             <div className="absolute inset-0">
               <MapView
-                deals={filteredDeals}
+                deals={mapFocus ? [mapFocus.deal] : filteredDeals}
                 selectedDeal={selectedDeal}
                 onSelectDeal={handleSelectDeal}
                 onSelectLocation={handleSelectLocation}
                 usageMap={usageMap}
                 userCoords={coords}
+                focusPoints={mapFocus ? mapFocus.deal.locations.map(l => [l.lat, l.lng]) : undefined}
               />
             </div>
 
-            {/* Compact filter bar over map — no sort control, map pins aren't ordered */}
+            {/* Compact filter bar over map — no sort control, map pins aren't ordered.
+                Replaced with a dismissible chip while "View on map" focus is active. */}
             <div className="absolute top-0 left-0 right-0 z-[500] bg-white border-b border-gray-100 px-3 py-2 shadow-sm">
-              <Sidebar {...sidebarProps} />
+              {mapFocus ? (
+                <div className="flex items-center gap-2">
+                  <span
+                    className="text-sm font-semibold truncate min-w-0"
+                    style={{ fontFamily: 'Sora, sans-serif', color: '#0f172a' }}
+                  >
+                    {mapFocus.businessName} · {mapFocus.restriction ?? `${mapFocus.count} location${mapFocus.count !== 1 ? 's' : ''}`}
+                  </span>
+                  <button
+                    onClick={exitMapFocus}
+                    className="flex items-center justify-center rounded-full flex-shrink-0 ml-auto"
+                    style={{ width: '26px', height: '26px', backgroundColor: '#f1f5f9', color: '#64748b', border: 'none', cursor: 'pointer' }}
+                  >
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                      <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                  </button>
+                </div>
+              ) : (
+                <Sidebar {...sidebarProps} />
+              )}
             </div>
           </main>
 
@@ -334,12 +382,12 @@ function AppShell() {
       {/* ── Overlays (shared across all tabs) ───────────── */}
       {selectedDeal && (
         <div className="hidden md:block">
-          <DealModal deal={selectedDeal} onUse={() => handleUse(selectedDeal.id)} onClose={() => setSelectedDeal(null)} isFave={isFave(selectedDeal.id)} onToggleFave={toggleFave} />
+          <DealModal deal={selectedDeal} onUse={() => handleUse(selectedDeal.id)} onClose={() => setSelectedDeal(null)} isFave={isFave(selectedDeal.id)} onToggleFave={toggleFave} onViewOnMap={() => handleViewOnMap(selectedDeal.id)} />
         </div>
       )}
       {selectedDeal && (
         <div className="md:hidden">
-          <BottomSheet deal={selectedDeal} onUse={() => handleUse(selectedDeal.id)} onClose={() => setSelectedDeal(null)} isFave={isFave(selectedDeal.id)} onToggleFave={toggleFave} />
+          <BottomSheet deal={selectedDeal} onUse={() => handleUse(selectedDeal.id)} onClose={() => setSelectedDeal(null)} isFave={isFave(selectedDeal.id)} onToggleFave={toggleFave} onViewOnMap={() => handleViewOnMap(selectedDeal.id)} />
         </div>
       )}
       {showResetConfirm && (

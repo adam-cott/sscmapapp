@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
-import { Heart, MapPin, Clock, Phone, Globe, Calendar } from 'lucide-react'
+import { Heart, MapPin, Clock, Phone, Globe, Calendar, Map as MapIcon } from 'lucide-react'
 import { CATEGORY_COLORS, CATEGORY_LIGHT, CATEGORY_LABELS, CATEGORY_ICON } from '../../utils/categoryColors'
-import { formatPhone, getDisplayValue } from '../../utils/dealHelpers'
+import { formatPhone, getDisplayValue, getMapFocusLocations } from '../../utils/dealHelpers'
 import UsageTracker from '../UI/UsageTracker'
 import SwipeToConfirm from '../UI/SwipeToConfirm'
 import RedemptionScreen from '../UI/RedemptionScreen'
 
-export default function BottomSheet({ deal, onUse, onClose, isFave, onToggleFave }) {
+export default function BottomSheet({ deal, onUse, onClose, isFave, onToggleFave, onViewOnMap }) {
   const { usage } = deal
   const isExhausted = usage.status === 'exhausted'
   const [showRedemption, setShowRedemption] = useState(false)
@@ -14,6 +14,7 @@ export default function BottomSheet({ deal, onUse, onClose, isFave, onToggleFave
   const catLight = CATEGORY_LIGHT[deal.category] || '#f0f9ff'
   const CategoryIcon = CATEGORY_ICON[deal.category]
   const displayValue = getDisplayValue(deal)
+  const canViewOnMap = !!getMapFocusLocations(deal)?.length
 
   useEffect(() => {
     const handleKey = (e) => { if (e.key === 'Escape') onClose() }
@@ -137,6 +138,7 @@ export default function BottomSheet({ deal, onUse, onClose, isFave, onToggleFave
           <div className="space-y-3 mb-4">
             {[
               deal.address && { Icon: MapPin, text: deal.address, href: `https://www.google.com/maps/dir/?api=1&destination=${deal.lat},${deal.lng}`, external: true },
+              canViewOnMap && { Icon: MapIcon, text: 'View on map', onClick: onViewOnMap },
               deal.locationRestriction && { Icon: MapPin, text: `Valid at: ${deal.locationRestriction}` },
               deal.contact?.hours && { Icon: Clock, text: deal.contact.hours },
               deal.contact?.phone && { Icon: Phone, text: formatPhone(deal.contact.phone), href: `tel:${deal.contact.phone}` },
@@ -149,6 +151,8 @@ export default function BottomSheet({ deal, onUse, onClose, isFave, onToggleFave
                   <a href={row.href} target={row.external ? '_blank' : undefined}
                     rel={row.external ? 'noopener noreferrer' : undefined}
                     className="text-sm" style={{ color: '#0170B9' }}>{row.text}</a>
+                ) : row.onClick ? (
+                  <button onClick={row.onClick} className="text-sm text-left" style={{ color: '#0170B9', background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}>{row.text}</button>
                 ) : (
                   <span className="text-sm" style={{ color: '#475569' }}>{row.text}</span>
                 )}

@@ -88,6 +88,34 @@ export function getDealUsageState(deal, usageMap) {
   return { usedCount, remaining, status }
 }
 
+// deal.locations[] lists every physical location for the business, but
+// locationRestriction (when set) means the deal only honors a subset of
+// them — and locations[] isn't filtered to match. For a restricted deal we
+// can only be sure the deal's own primary lat/lng/address is valid, so
+// "View on map" shows just that one pin. These four businesses' primary
+// address doesn't even match their own locationRestriction text (verified
+// against deals.json on 2026-09-21 — e.g. The Picklr's restriction is
+// "Lehi & Bluffdale" but its primary address is in Kaysville), so we can't
+// show a pin for them at all without risking a wrong location.
+const UNVERIFIABLE_RESTRICTED_DEAL_IDS = new Set([
+  'entertainment-150', 'free-268', // The Picklr — "Lehi & Bluffdale"
+  'treats-338', // Rocky Mountain Chocolate Factory — "Lehi"
+  'treats-358', 'treats-359', 'treats-360', // Twisted Sugar — "PG & Saratoga Only"
+  'treats-366', 'treats-367', 'treats-368', // Yonutz — "Saratoga Springs"
+])
+
+/**
+ * Locations to show for a deal's "View on map" focus mode, or null if none
+ * can be shown with confidence. See UNVERIFIABLE_RESTRICTED_DEAL_IDS above.
+ */
+export function getMapFocusLocations(deal) {
+  if (deal.locationRestriction) {
+    if (UNVERIFIABLE_RESTRICTED_DEAL_IDS.has(deal.id)) return null
+    return [{ lat: deal.lat, lng: deal.lng, address: deal.address, phone: deal.contact?.phone }]
+  }
+  return deal.locations
+}
+
 const TIEBREAKER = ['restaurants', 'sandwiches', 'pizza', 'treats', 'free', 'entertainment', 'retail']
 
 export function getPrimaryCategory(deals) {
