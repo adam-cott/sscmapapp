@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
 import { Heart, Map as MapIcon } from 'lucide-react'
 import { CATEGORY_COLORS, CATEGORY_LIGHT, CATEGORY_LABELS, CATEGORY_ICON } from '../../utils/categoryColors'
-import { formatPhone, getDisplayValue, getMapFocusLocations } from '../../utils/dealHelpers'
+import { formatPhone, getDisplayValue, getMapFocusLocations, getDirectionsLocation } from '../../utils/dealHelpers'
 import UsageTracker from '../UI/UsageTracker'
 import SwipeToConfirm from '../UI/SwipeToConfirm'
 import RedemptionScreen from '../UI/RedemptionScreen'
 
-export default function DealModal({ deal, onUse, onClose, isFave, onToggleFave, onViewOnMap }) {
+export default function DealModal({ deal, onUse, onClose, isFave, onToggleFave, onViewOnMap, userCoords }) {
   const { usage } = deal
   const isExhausted = usage.status === 'exhausted'
   const [showRedemption, setShowRedemption] = useState(false)
@@ -15,6 +15,7 @@ export default function DealModal({ deal, onUse, onClose, isFave, onToggleFave, 
   const CategoryIcon = CATEGORY_ICON[deal.category]
   const displayValue = getDisplayValue(deal)
   const canViewOnMap = !!getMapFocusLocations(deal)?.length
+  const directionsLocation = getDirectionsLocation(deal, userCoords)
 
   useEffect(() => {
     const handleKey = (e) => { if (e.key === 'Escape') onClose() }
@@ -146,7 +147,7 @@ export default function DealModal({ deal, onUse, onClose, isFave, onToggleFave, 
           {/* Info rows */}
           <div className="space-y-3 mb-5">
             {[
-              deal.lat && { icon: <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>, text: deal.address || 'Get Directions', href: `https://www.google.com/maps/dir/?api=1&destination=${deal.lat},${deal.lng}`, external: true },
+              directionsLocation && { icon: <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>, text: directionsLocation.address || 'Get Directions', href: `https://www.google.com/maps/dir/?api=1&destination=${directionsLocation.lat},${directionsLocation.lng}`, external: true },
               canViewOnMap && { icon: <MapIcon size={13} />, text: 'View on map', onClick: onViewOnMap },
               deal.locationRestriction && { icon: <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>, text: `Valid at: ${deal.locationRestriction}` },
               deal.contact?.hours && { icon: <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>, text: deal.contact.hours },

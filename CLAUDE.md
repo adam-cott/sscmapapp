@@ -80,6 +80,8 @@ src/
 - `contact.website` is null for all businesses — intentionally left empty for now. Do not ask about this or treat it as a gap to fix. It is a deliberate decision to revisit later.
 - Python geocode scripts read from `C:\Users\adamb\Downloads\starving_student_businesses.csv` (hardcoded path — keep that file in place)
 - **Stats:** 418 deals · 199 businesses · 1,400+ pins · 0 null coords
+- **`locationRestriction` isn't reflected in `locations[]`** — a restricted deal's `locations[]` still lists every physical location for the business, not just the ones that honor that specific deal. Never read `deal.locations` directly when the result needs to be restriction-aware (map pins, nearest-sort, "Get Directions"). Use `getMapFocusLocations(deal)` (or `getDirectionsLocation(deal, userCoords)` for a single target) from `dealHelpers.js` instead — see `reports/map-focus-restrictions-report.md` for how that matching was derived and verified.
+- **`LocationPicker.jsx` overrides `deal.lat`/`deal.lng`/`deal.address`** with a specific location when a multi-deal business is opened (from both the Map tab and Home) — and that override location is a business-wide "nearest to user" pick that ignores the specific deal's own `locationRestriction`. Nothing currently reads `deal.address`/`deal.lat`/`deal.lng` after that override (verified by grep), but if something new needs to, use `getMapFocusLocations()`/`getDirectionsLocation()` instead of trusting those fields directly.
 
 ---
 

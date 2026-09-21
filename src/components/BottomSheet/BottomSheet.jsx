@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
 import { Heart, MapPin, Clock, Phone, Globe, Calendar, Map as MapIcon } from 'lucide-react'
 import { CATEGORY_COLORS, CATEGORY_LIGHT, CATEGORY_LABELS, CATEGORY_ICON } from '../../utils/categoryColors'
-import { formatPhone, getDisplayValue, getMapFocusLocations } from '../../utils/dealHelpers'
+import { formatPhone, getDisplayValue, getMapFocusLocations, getDirectionsLocation } from '../../utils/dealHelpers'
 import UsageTracker from '../UI/UsageTracker'
 import SwipeToConfirm from '../UI/SwipeToConfirm'
 import RedemptionScreen from '../UI/RedemptionScreen'
 
-export default function BottomSheet({ deal, onUse, onClose, isFave, onToggleFave, onViewOnMap }) {
+export default function BottomSheet({ deal, onUse, onClose, isFave, onToggleFave, onViewOnMap, userCoords }) {
   const { usage } = deal
   const isExhausted = usage.status === 'exhausted'
   const [showRedemption, setShowRedemption] = useState(false)
@@ -15,6 +15,7 @@ export default function BottomSheet({ deal, onUse, onClose, isFave, onToggleFave
   const CategoryIcon = CATEGORY_ICON[deal.category]
   const displayValue = getDisplayValue(deal)
   const canViewOnMap = !!getMapFocusLocations(deal)?.length
+  const directionsLocation = getDirectionsLocation(deal, userCoords)
 
   useEffect(() => {
     const handleKey = (e) => { if (e.key === 'Escape') onClose() }
@@ -137,7 +138,7 @@ export default function BottomSheet({ deal, onUse, onClose, isFave, onToggleFave
           {/* Info */}
           <div className="space-y-3 mb-4">
             {[
-              deal.address && { Icon: MapPin, text: deal.address, href: `https://www.google.com/maps/dir/?api=1&destination=${deal.lat},${deal.lng}`, external: true },
+              directionsLocation && { Icon: MapPin, text: directionsLocation.address, href: `https://www.google.com/maps/dir/?api=1&destination=${directionsLocation.lat},${directionsLocation.lng}`, external: true },
               canViewOnMap && { Icon: MapIcon, text: 'View on map', onClick: onViewOnMap },
               deal.locationRestriction && { Icon: MapPin, text: `Valid at: ${deal.locationRestriction}` },
               deal.contact?.hours && { Icon: Clock, text: deal.contact.hours },

@@ -204,6 +204,20 @@ export function getMapFocusLocations(deal) {
   return matchLocationsToRestriction(deal.locations, deal.locationRestriction)
 }
 
+/**
+ * The location a deal's "Get Directions" link should point to — nearest to
+ * the user among the deal's honoring locations if several and userCoords
+ * is known, otherwise the first match. Returns null if none can be shown
+ * with confidence (same gate as getMapFocusLocations), so callers should
+ * hide the Directions row entirely rather than fall back to deal.lat/lng.
+ */
+export function getDirectionsLocation(deal, userCoords) {
+  const locations = getMapFocusLocations(deal)
+  if (!locations?.length) return null
+  if (locations.length === 1 || !userCoords) return locations[0]
+  return getNearestLocation({ locations }, userCoords) ?? locations[0]
+}
+
 const TIEBREAKER = ['restaurants', 'sandwiches', 'pizza', 'treats', 'free', 'entertainment', 'retail']
 
 export function getPrimaryCategory(deals) {
