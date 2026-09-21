@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, useMap, useMapEvents, Marker } from 'react-lea
 import MarkerClusterGroup from 'react-leaflet-cluster'
 import L from 'leaflet'
 import BusinessMarker from './BusinessMarker'
-import { getDealUsageState, getPrimaryCategory } from '../../utils/dealHelpers'
+import { getDealUsageState, getPrimaryCategory, getMapFocusLocations } from '../../utils/dealHelpers'
 import allDealsRaw from '../../data/deals.json'
 import 'react-leaflet-cluster/dist/assets/MarkerCluster.css'
 import 'react-leaflet-cluster/dist/assets/MarkerCluster.Default.css'
@@ -91,9 +91,14 @@ export default function MapView({ deals, selectedDeal, onSelectDeal, onSelectLoc
     const byCoord = new Map()
     deals.forEach(deal => {
       const usageState = deal.usage ?? getDealUsageState(deal, usageMap)
-      const locs = deal.locations?.length
-        ? deal.locations
-        : (deal.lat != null ? [{ lat: deal.lat, lng: deal.lng, address: deal.address }] : [])
+      // Restricted deals only contribute pins for locations that actually
+      // honor them (see getMapFocusLocations) — a restriction with zero
+      // matches contributes no pins at all, rather than falling back to an
+      // unverified top-level lat/lng.
+      const focusLocations = getMapFocusLocations(deal)
+      const locs = focusLocations?.length
+        ? focusLocations
+        : (!deal.locationRestriction && deal.lat != null ? [{ lat: deal.lat, lng: deal.lng, address: deal.address }] : [])
       locs.forEach(loc => {
         if (!loc.lat || !loc.lng) return
         const coordKey = `${loc.lat.toFixed(4)},${loc.lng.toFixed(4)}`

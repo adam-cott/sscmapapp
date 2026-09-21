@@ -25,10 +25,18 @@ export function haversineDistance(lat1, lng1, lat2, lng2) {
   return EARTH_RADIUS_MILES * 2 * Math.asin(Math.sqrt(a))
 }
 
+// Both of these resolve locations via getMapFocusLocations(deal) rather than
+// reading deal.locations directly, so a restricted deal can't be sorted as
+// "nearest" to, or show a distance for, a store that doesn't honor it.
+// Unrestricted deals and callers that pass a plain { locations } object
+// (no locationRestriction field, e.g. HomeTab's pooled-nearest-location
+// lookup) are unaffected — see getMapFocusLocations.
+
 export function getNearestDistance(deal, userCoords) {
-  if (!userCoords || !deal.locations?.length) return null
+  const locations = getMapFocusLocations(deal) ?? []
+  if (!userCoords || !locations.length) return null
   let min = Infinity
-  for (const loc of deal.locations) {
+  for (const loc of locations) {
     const d = haversineDistance(userCoords.lat, userCoords.lng, Number(loc.lat), Number(loc.lng))
     if (d < min) min = d
   }
@@ -36,10 +44,11 @@ export function getNearestDistance(deal, userCoords) {
 }
 
 export function getNearestLocation(deal, userCoords) {
-  if (!userCoords || !deal.locations?.length) return null
+  const locations = getMapFocusLocations(deal) ?? []
+  if (!userCoords || !locations.length) return null
   let best = null
   let bestDist = Infinity
-  for (const loc of deal.locations) {
+  for (const loc of locations) {
     if (loc.lat == null || loc.lng == null) continue
     const d = haversineDistance(userCoords.lat, userCoords.lng, Number(loc.lat), Number(loc.lng))
     if (d < bestDist) { bestDist = d; best = loc }

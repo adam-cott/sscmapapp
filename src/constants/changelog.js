@@ -1,4 +1,4 @@
 export const LATEST_UPDATE = {
-  version: '1.0.57',
-  description: "'View on map' now shows the right store(s) for deals that only work at certain locations, not just one guess.",
+  version: '1.0.58',
+  description: "The map and 'Nearest' sort now only show pins/distances for stores that actually honor a location-restricted deal.",
 }
