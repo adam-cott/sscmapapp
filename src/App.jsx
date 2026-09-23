@@ -205,7 +205,7 @@ function AppShell() {
     if (!deal) return
     const locations = getMapFocusLocations(deal)
     if (!locations?.length) return
-    setMapFocus({ deal: { ...deal, locations }, businessName: deal.name, restriction: deal.locationRestriction ?? null, count: locations.length })
+    setMapFocus({ deal: { ...deal, locations }, businessName: deal.name, restriction: deal.locationRestriction || null, count: locations.length })
     setSelectedDeal(null)
     setActiveTab('map')
   }, [dealsWithUsage])
