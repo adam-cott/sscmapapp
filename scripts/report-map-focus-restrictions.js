@@ -14,7 +14,7 @@ import {
 const restricted = dealsData.filter(d => d.locationRestriction)
 
 // --- Exclusion wording count ---
-const EXCLUSION_RE = /\b(excl\.?|exclude[sd]?|except|not)\b/i
+const EXCLUSION_RE = /\b(excluding|except|not)\b/i
 const withExclusion = restricted.filter(d => EXCLUSION_RE.test(d.locationRestriction))
 
 // --- Per-deal resolution using the real matching logic ---
@@ -80,9 +80,9 @@ lines.push('')
 lines.push('## Summary')
 lines.push('')
 lines.push(`- ${restricted.length} deals have a \`locationRestriction\``)
-lines.push(`- ${rows.filter(r => r.isBroad).length} are broad wording (All / county-level / Participating / Same Locations / "Northern UT") — full \`locations[]\` shown, minus any exclusions`)
+lines.push(`- ${rows.filter(r => r.isBroad).length} are broad wording (All / county-level / Participating) — full \`locations[]\` shown, minus any exclusions`)
 lines.push(`- ${rows.length - rows.filter(r => r.isBroad).length} name specific place(s) — filtered to matching cities`)
-lines.push(`- ${withExclusion.length} restrictions contain exclusion wording ("excl.", "except", "not") — see below`)
+lines.push(`- ${withExclusion.length} restrictions contain exclusion wording ("excluding", "except", "not") — see below`)
 lines.push(`- ${hidden.length} deals resolve to **zero locations** — "View on map" is hidden for these`)
 lines.push(`- ${partial.length} deals are **partial matches** — restriction names multiple places, at least one matched no location`)
 lines.push(`- ${blankTopAddress.length} restricted deals have a blank top-level \`address\` field`)

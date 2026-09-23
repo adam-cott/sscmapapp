@@ -8,11 +8,11 @@ exactly, so this report and the app's actual behavior can't drift apart.
 ## Summary
 
 - 193 deals have a `locationRestriction`
-- 82 are broad wording (All / county-level / Participating / Same Locations / "Northern UT") — full `locations[]` shown, minus any exclusions
-- 111 name specific place(s) — filtered to matching cities
-- 3 restrictions contain exclusion wording ("excl.", "except", "not") — see below
+- 79 are broad wording (All / county-level / Participating) — full `locations[]` shown, minus any exclusions
+- 114 name specific place(s) — filtered to matching cities
+- 3 restrictions contain exclusion wording ("excluding", "except", "not") — see below
 - 13 deals resolve to **zero locations** — "View on map" is hidden for these
-- 8 deals are **partial matches** — restriction names multiple places, at least one matched no location
+- 12 deals are **partial matches** — restriction names multiple places, at least one matched no location
 - 9 restricted deals have a blank top-level `address` field
 
 ## Does the top-level `lat`/`lng`/`address` drive anything outside focus mode?
@@ -35,15 +35,15 @@ map-pin tap overrides them), a wrong top-level address means the existing "Get D
 
 3 of 193 restrictions contain exclusion wording, all on the same business:
 
-- `free-229` Jersey Mikes — "All Utah Only except EM and SF"
-- `sandwiches-395` Jersey Mikes — "All Ut Cnty excl. EM and SF"
-- `sandwiches-396` Jersey Mikes — "All Ut Cnty excl. EM & SF"
+- `free-229` Jersey Mikes — "All Utah Locations, excluding Eagle Mountain & Spanish Fork"
+- `sandwiches-395` Jersey Mikes — "All Utah County, excluding Eagle Mountain & Spanish Fork"
+- `sandwiches-396` Jersey Mikes — "All Utah County, excluding Eagle Mountain & Spanish Fork"
 
 Resolution with the new exclusion-aware matching:
 
-- `free-229` — "All Utah Only except EM and SF" → broad scope (10 locations) minus excluded city/cities → **9 locations shown**: Orem, Provo, Lehi, Vineyard, Pleasant Grove, Springville, Saratoga Springs, Bluffdale
-- `sandwiches-395` — "All Ut Cnty excl. EM and SF" → broad scope (10 locations) minus excluded city/cities → **9 locations shown**: Orem, Provo, Lehi, Vineyard, Pleasant Grove, Springville, Saratoga Springs, Bluffdale
-- `sandwiches-396` — "All Ut Cnty excl. EM & SF" → broad scope (10 locations) minus excluded city/cities → **9 locations shown**: Orem, Provo, Lehi, Vineyard, Pleasant Grove, Springville, Saratoga Springs, Bluffdale
+- `free-229` — "All Utah Locations, excluding Eagle Mountain & Spanish Fork" → broad scope (10 locations) minus excluded city/cities → **9 locations shown**: Orem, Provo, Lehi, Vineyard, Pleasant Grove, Springville, Saratoga Springs, Bluffdale
+- `sandwiches-395` — "All Utah County, excluding Eagle Mountain & Spanish Fork" → broad scope (10 locations) minus excluded city/cities → **9 locations shown**: Orem, Provo, Lehi, Vineyard, Pleasant Grove, Springville, Saratoga Springs, Bluffdale
+- `sandwiches-396` — "All Utah County, excluding Eagle Mountain & Spanish Fork" → broad scope (10 locations) minus excluded city/cities → **9 locations shown**: Orem, Provo, Lehi, Vineyard, Pleasant Grove, Springville, Saratoga Springs, Bluffdale
 
 (Spanish Fork is correctly dropped; there's no Eagle Mountain location in this business's `locations[]` to begin with, so only the SF exclusion actually changes anything.)
 
@@ -53,7 +53,7 @@ Resolution with the new exclusion-aware matching:
 
 | Deal | Business | Restriction | Location cities on file |
 |---|---|---|---|
-| `restaurants-045` | Dirty Dough's | "Paul Mitchell Locs" | Vineyard, Spanish Fork, American Fork, Layton |
+| `restaurants-045` | Dirty Dough's | "Paul Mitchell Locations" | Vineyard, Spanish Fork, American Fork, Layton |
 | `entertainment-115` | Game Grid | "Lehi" | Pleasant Grove |
 | `entertainment-116` | Game Grid | "Lehi" | Pleasant Grove |
 | `entertainment-122` | High Country Adventure | "Provo Canyon" | *(blank)* |
@@ -67,21 +67,25 @@ Resolution with the new exclusion-aware matching:
 | `treats-367` | Yonutz | "Saratoga Springs" | Sandy, Orem |
 | `treats-368` | Yonutz | "Saratoga Springs" | Sandy, Orem |
 
-## Partial matches — some named place(s) matched, others didn't (8)
+## Partial matches — some named place(s) matched, others didn't (12)
 
 Still shown (whatever did match), flagged here for visibility — restriction names 2+ places but at least
 one has no matching location on file.
 
 | Deal | Business | Restriction | Matched | Unmatched place(s) |
 |---|---|---|---|---|
-| `pizza-011` | Gurus Cafe | "Provo Center St & UVU" | Provo | uvu |
-| `restaurants-059` | Gurus Cafe | "Provo Center St & UVU" | Provo | uvu |
-| `restaurants-060` | Gurus Cafe | "Provo Center St & UVU" | Provo | uvu |
-| `retail-186` | MTECH Cosmetology | "Lehi & SF" | Spanish Fork | lehi |
-| `treats-317` | Gurus Cafe | "Provo Cntr & UVU" | Provo | uvu |
-| `treats-339` | Roll Up Crepes | "Orem & SF" | Orem | spanish fork |
-| `treats-340` | Roll Up Crepes | "Orem & SF" | Orem | spanish fork |
-| `treats-341` | Roll Up Crepes | "Orem & SF" | Orem | spanish fork |
+| `pizza-011` | Gurus Cafe | "Provo (Center St) & UVU" | Provo | uvu |
+| `restaurants-059` | Gurus Cafe | "Provo (Center St) & UVU" | Provo | uvu |
+| `restaurants-060` | Gurus Cafe | "Provo (Center St) & UVU" | Provo | uvu |
+| `retail-186` | MTECH Cosmetology | "Lehi & Spanish Fork" | Spanish Fork | lehi |
+| `free-228` | Jamba Juice | "Provo (University Pkwy), UVU Campus, Draper & West Jordan" | Provo, Draper, West Jordan | uvu campus |
+| `treats-317` | Gurus Cafe | "Provo (Center St) & UVU" | Provo | uvu |
+| `treats-319` | Jamba Juice | "Provo (University Pkwy), UVU Campus, Draper & West Jordan" | Provo, Draper, West Jordan | uvu campus |
+| `treats-320` | Jamba Juice | "Provo (University Pkwy), UVU Campus, Draper & West Jordan" | Provo, Draper, West Jordan | uvu campus |
+| `treats-339` | Roll Up Crepes | "Orem & Spanish Fork" | Orem | spanish fork |
+| `treats-340` | Roll Up Crepes | "Orem & Spanish Fork" | Orem | spanish fork |
+| `treats-341` | Roll Up Crepes | "Orem & Spanish Fork" | Orem | spanish fork |
+| `sandwiches-393` | Jamba Juice | "Provo (University Pkwy), UVU Campus, Draper & West Jordan" | Provo, Draper, West Jordan | uvu campus |
 
 ## Blank top-level address (9)
 
@@ -97,12 +101,12 @@ opened from Home.
 | `entertainment-116` | Game Grid | "Lehi" |
 | `entertainment-122` | High Country Adventure | "Provo Canyon" |
 | `retail-176` | Grease Monkey | "All Locations" |
-| `retail-177` | Grease Monkey | "Lehi (Pioneer Crs) Herriman" |
+| `retail-177` | Grease Monkey | "Lehi (Pioneer Crossing) & Herriman" |
 | `retail-181` | Healing Vibes | "Orem" |
 | `free-224` | Game Grid | "Lehi" |
 | `free-225` | Game Grid | "Lehi" |
 
-## Top-level address falls outside its own restriction (13)
+## Top-level address falls outside its own restriction (14)
 
 Every restricted deal with a non-blank top-level address, checked with the same matching logic used for
 `locations[]`. These are cases where `deal.address`/`deal.lat`/`deal.lng` (the "Get Directions" link
@@ -110,16 +114,17 @@ target) is itself not in a restriction-honoring city — independent of `locatio
 
 | Deal | Business | Restriction | Top-level address | City |
 |---|---|---|---|---|
-| `restaurants-045` | Dirty Dough's | "Paul Mitchell Locs" | 596 N Mill Rd, Vineyard, UT 84059 | Vineyard |
+| `restaurants-045` | Dirty Dough's | "Paul Mitchell Locations" | 596 N Mill Rd, Vineyard, UT 84059 | Vineyard |
 | `entertainment-150` | The Picklr | "Lehi & Bluffdale" | 559 S Deseret Dr, Kaysville, UT 84037 | Kaysville |
 | `entertainment-159` | Zipline Utah | "Provo Canyon" | 3153 E State Creek Rd, Heber City, UT 84032 | Heber City |
 | `entertainment-160` | Zipline Utah | "Provo Canyon" | 3153 E State Creek Rd, Heber City, UT 84032 | Heber City |
-| `free-255` | Roxberry Juice Co. | "SF & partic. locs" | 484 N 950 W, American Fork, UT 84003 | American Fork |
+| `free-255` | Roxberry Juice Co. | "Spanish Fork & Participating Locations" | 484 N 950 W, American Fork, UT 84003 | American Fork |
 | `free-268` | The Picklr | "Lehi & Bluffdale" | 559 S Deseret Dr, Kaysville, UT 84037 | Kaysville |
 | `treats-338` | Rocky Mountain Chocolate Factory | "Lehi" | 456 E State St Ste 300, American Fork, UT 84003 | American Fork |
-| `treats-358` | Twisted Sugar | "PG & Saratoga Only" | 2245 N University Pkwy, Provo, UT 84604 | Provo |
-| `treats-359` | Twisted Sugar | "PG & Saratoga Only" | 2245 N University Pkwy, Provo, UT 84604 | Provo |
-| `treats-360` | Twisted Sugar | "PG & Saratoga Only" | 2245 N University Pkwy, Provo, UT 84604 | Provo |
+| `treats-344` | Roxberry Juice Co. | "Spanish Fork & Participating Locations" | 4801 N University Ave Ste 51, Provo, UT 84604 | Provo |
+| `treats-358` | Twisted Sugar | "Pleasant Grove & Saratoga Springs" | 2245 N University Pkwy, Provo, UT 84604 | Provo |
+| `treats-359` | Twisted Sugar | "Pleasant Grove & Saratoga Springs" | 2245 N University Pkwy, Provo, UT 84604 | Provo |
+| `treats-360` | Twisted Sugar | "Pleasant Grove & Saratoga Springs" | 2245 N University Pkwy, Provo, UT 84604 | Provo |
 | `treats-366` | Yonutz | "Saratoga Springs" | 11078 S State St Ste 103, Sandy, UT 84070 | Sandy |
 | `treats-367` | Yonutz | "Saratoga Springs" | 11078 S State St Ste 103, Sandy, UT 84070 | Sandy |
 | `treats-368` | Yonutz | "Saratoga Springs" | 11078 S State St Ste 103, Sandy, UT 84070 | Sandy |

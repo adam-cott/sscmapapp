@@ -100,26 +100,24 @@ export function getDealUsageState(deal, usageMap) {
 // deal.locations[] lists every physical location for the business, but
 // locationRestriction (when set) means the deal only honors a subset of
 // them — and locations[] isn't filtered to match. The functions below
-// resolve a restriction's free text (e.g. "Lehi & Bluffdale",
-// "All Ut Cnty excl. EM & SF") down to the specific locations it names, so
-// "View on map" only shows pins we're confident actually honor the deal.
-// See reports/map-focus-restrictions-report.md for the full data audit
-// this logic was validated against (dated 2026-09-21).
-
-const PLACE_ABBREVIATIONS = {
-  sf: 'spanish fork', pg: 'pleasant grove', em: 'eagle mountain', wj: 'west jordan',
-  af: 'american fork', saratoga: 'saratoga springs', mtn: 'mountain', mt: 'mountain',
-  ut: 'utah', cnty: 'county', crs: 'crossing',
-}
+// resolve a restriction's text (e.g. "Lehi & Bluffdale",
+// "All Utah County, excluding Eagle Mountain & Spanish Fork") down to the
+// specific locations it names, so the map, "Nearest", "Get Directions" and
+// "View on map" only use locations that actually honor the deal.
+//
+// This relies on locationRestriction using full city names ("Eagle Mountain",
+// not "EM") and "&" between places — keep it that way when editing
+// deals.json. See reports/map-focus-restrictions-report.md for the data audit.
 
 // Wording that means "every location honors this deal" rather than naming
-// specific cities — "All ...", any "county"-level phrasing, "Participating
-// Locations", "Same Locations", or a bare "Northern UT".
-export const BROAD_RESTRICTION = /^all\b|county|participating locs?\.?|participating locations?|same locations?|^northern ut\b/i
+// specific cities: starts with "All" ("All Locations", "All Utah County"),
+// starts with "Participating", or mentions a county-level scope.
+export const BROAD_RESTRICTION = /^all\b|^participating\b|county/i
 
-// Splits "All Ut Cnty excl. EM & SF" into an include clause and an exclude
-// clause; restrictions with no exclusion wording are all include, no exclude.
-const EXCLUSION_SPLIT = /\b(excl\.?|exclude[sd]?|except|not)\b/i
+// Splits "All Utah County, excluding Eagle Mountain & Spanish Fork" into an
+// include clause and an exclude clause; restrictions with no exclusion
+// wording are all include, no exclude.
+const EXCLUSION_SPLIT = /\b(excluding|except|not)\b/i
 
 export function splitRestrictionClauses(restrictionText) {
   const parts = restrictionText.split(EXCLUSION_SPLIT)
@@ -131,27 +129,18 @@ function normalizePlace(text) {
   return text.toLowerCase().replace(/[^a-z ]/g, ' ').replace(/\s+/g, ' ').trim()
 }
 
-// Filler words that ride along with a place name but aren't part of it
-// ("Saratoga Only", "SF & partic. locs") — stripped wherever they appear
-// inside a token, not just when a token is exactly one of these.
-const FILLER_WORD = /\b(only|locs?|locations?|partic\w*|stores?)\b/gi
-
-// Expands abbreviations word-by-word (not just whole-token) so compound
-// phrases like "Eagle Mtn" resolve to "eagle mountain", not just a bare "Mtn".
-function expandAbbreviations(token) {
-  return token.split(' ').map(w => PLACE_ABBREVIATIONS[w] || w).join(' ')
-}
+// Words that ride along with a place name but aren't part of it
+// ("Spanish Fork & Participating Locations").
+const FILLER_WORD = /\b(locations?|participating)\b/gi
 
 // Breaks a restriction clause into place names: splits on "&", ",", "and",
-// "/", "-", strips filler words ("Only", "Locations", "Participating",
-// etc.), and expands known abbreviations (SF, PG, EM, Mtn, ...).
+// "/", "-" and strips filler words.
 export function expandPlaceTokens(text) {
   return text.toLowerCase()
     .replace(/[().]/g, ' ')
     .split(/&|,|\band\b|\/|-/)
     .map(t => t.replace(FILLER_WORD, ' ').trim())
     .filter(Boolean)
-    .map(expandAbbreviations)
     .map(normalizePlace)
     .filter(Boolean)
 }
