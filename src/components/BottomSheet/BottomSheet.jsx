@@ -120,9 +120,11 @@ export default function BottomSheet({ deal, onUse, onClose, isFave, onToggleFave
             )}
           </div>
 
-          <p className="text-sm mb-4" style={{ color: '#64748b', lineHeight: '1.6' }}>
-            {deal.deal.description}
-          </p>
+          {deal.deal.description && (
+            <p className="text-sm mb-4" style={{ color: '#64748b', lineHeight: '1.6' }}>
+              {deal.deal.description}
+            </p>
+          )}
 
           {/* Usage */}
           <div className="rounded-xl p-4 mb-4" style={{ backgroundColor: '#f8fafc', border: '1px solid #f1f5f9' }}>

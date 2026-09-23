@@ -126,9 +126,11 @@ export default function DealModal({ deal, onUse, onClose, isFave, onToggleFave, 
           </div>
 
           {/* Description */}
-          <p className="text-sm mb-4" style={{ color: '#64748b', lineHeight: '1.6' }}>
-            {deal.deal.description}
-          </p>
+          {deal.deal.description && (
+            <p className="text-sm mb-4" style={{ color: '#64748b', lineHeight: '1.6' }}>
+              {deal.deal.description}
+            </p>
+          )}
 
           {/* Usage tracker */}
           <div
