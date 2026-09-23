@@ -1,7 +1,7 @@
 # Starving Student Card Map App
 
 ## What This Is
-A mobile-first PWA for Utah County college students. Turns the physical Starving Student Discount Card into an interactive deal finder — 418 deals, 199 businesses, 1,400+ map pins. Users browse via Home tab carousels/search or the Map tab's pins, filter by category, and track deal usage per card.
+A mobile-first PWA for Utah County college students. Turns the physical Starving Student Discount Card into an interactive deal finder — 414 deals, 197 businesses, 500+ map pins. Users browse via Home tab carousels/search or the Map tab's pins, filter by category, and track deal usage per card.
 
 **Live:** Vercel via GitHub auto-deploy (`master` branch)
 **Repo:** https://github.com/adam-cott/sscmapapp
@@ -47,7 +47,7 @@ A mobile-first PWA for Utah County college students. Turns the physical Starving
 ## Project Structure (key files)
 ```
 src/
-  data/deals.json              # 418 deals, all with coords + locations[]
+  data/deals.json              # 418 deals (414 active), all with coords + locations[]
   components/
     Sidebar/                   # SearchBar, FilterPanel — map's compact filter bar (no sort; map pins aren't ordered)
     Map/MapView.jsx            # Map + clustering + spiderfy
@@ -79,7 +79,7 @@ src/
 - `contact.phone` stored per-location in `locations[]`, not at deal level
 - `contact.website` is null for all businesses — intentionally left empty for now. Do not ask about this or treat it as a gap to fix. It is a deliberate decision to revisit later.
 - Python geocode scripts read from `C:\Users\adamb\Downloads\starving_student_businesses.csv` (hardcoded path — keep that file in place)
-- **Stats:** 418 deals · 199 businesses · 1,400+ pins · 0 null coords
+- **Stats:** 414 deals · 197 businesses · 500+ pins · 0 null coords
 - **Closed businesses/locations are hidden, not deleted.** A whole business that's gone: set `"active": false` (filtered once at the top of `App.jsx`) plus `"closedReason": "Permanently closed"`. Just one location of a multi-location business closed: move it out of `locations[]` into `closedLocations[]` on each of that business's deals, with its own `closedReason` — the app never reads `closedLocations`, so it's invisible but easy to restore. (Examples: The Yard Milkshake Bar, Sub Zero Ice Cream's downtown Provo store.)
 - **`locationRestriction` isn't reflected in `locations[]`** — a restricted deal's `locations[]` still lists every physical location for the business, not just the ones that honor that specific deal. Never read `deal.locations` directly when the result needs to be restriction-aware (map pins, nearest-sort, "Get Directions"). Use `getMapFocusLocations(deal)` (or `getDirectionsLocation(deal, userCoords)` for a single target) from `dealHelpers.js` instead — see `reports/map-focus-restrictions-report.md` for how that matching was derived and verified.
 - **`LocationPicker.jsx` overrides `deal.lat`/`deal.lng`/`deal.address`** with a specific location when a multi-deal business is opened (from both the Map tab and Home) — and that override location is a business-wide "nearest to user" pick that ignores the specific deal's own `locationRestriction`. Nothing currently reads `deal.address`/`deal.lat`/`deal.lng` after that override (verified by grep), but if something new needs to, use `getMapFocusLocations()`/`getDirectionsLocation()` instead of trusting those fields directly.
@@ -105,7 +105,7 @@ The "Est. Savings" stat card has been intentionally removed from the Rewards tab
 ---
 
 ## Performance
-- `BusinessMarker` wrapped in `React.memo` — avoids re-rendering all 1,400+ pins on modal open
+- `BusinessMarker` wrapped in `React.memo` — avoids re-rendering all 500+ pins on modal open
 - `handleSelectDeal`, `handleSelectLocation` wrapped in `useCallback(fn, [])` in App.jsx
 - `eventHandlers` memoized inside BusinessMarker — prevents Leaflet rebinding on every render
 - Icon cache in `markerIcons.js` — keyed by `category:status:isSelected`
