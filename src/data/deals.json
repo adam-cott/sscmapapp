@@ -1797,7 +1797,7 @@
     "locationRestriction": "Orem & Lehi",
     "deal": {
       "title": "FREE! Appetizer w/ Purchase $25 or More! Excl. Alcohol",
-      "description": "Excl. Alcohol",
+      "description": "Excluding Alcohol",
       "restrictions": "Excl. Alcohol",
       "value": "Free Item",
       "maxUses": 3,
@@ -1842,7 +1842,7 @@
     "locationRestriction": "Orem & Lehi",
     "deal": {
       "title": "FREE! 6 Wings w/ Purchase $15 or More! Excl. Alcohol",
-      "description": "Excl. Alcohol",
+      "description": "Excluding Alcohol",
       "restrictions": "Excl. Alcohol",
       "value": "Free Item",
       "maxUses": 3,
@@ -2847,7 +2847,7 @@
     "locationRestriction": "Orem",
     "deal": {
       "title": "2-4-1! Lunch Buffet! Mon-Fri. Before 4 PM Orem",
-      "description": "Mon-Fri Before 4 PM",
+      "description": "Monday-Friday Before 4 PM",
       "restrictions": "Mon-Fri Before 4 PM",
       "value": "2 for 1",
       "maxUses": 2,
@@ -3298,7 +3298,7 @@
     "locationRestriction": "",
     "deal": {
       "title": "Buy 1 Menu Item and 2 Drinks Get 1 Menu Item FREE! Excl. Buffet",
-      "description": "Excl. Buffet",
+      "description": "Excluding Buffet",
       "restrictions": "Excl. Buffet",
       "value": "Buy 1 Get 1 Free",
       "maxUses": 2,
@@ -4678,7 +4678,7 @@
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Game of Bowling! M-Fri Before 6pm",
-      "description": "M-Fri Before 6pm",
+      "description": "Monday-Friday Before 6pm",
       "restrictions": "M-Fri Before 6pm",
       "value": "2 for 1",
       "maxUses": 2,
@@ -4711,7 +4711,7 @@
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Downhill Ski Snowboard or CC Ski Rental! M-Th",
-      "description": "M-Th",
+      "description": "Monday-Thursday",
       "restrictions": "M-Th",
       "value": "2 for 1",
       "maxUses": 3,
@@ -4777,7 +4777,7 @@
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Admission Christmas & Halloween Cruise! Valid M-Th 8pm",
-      "description": "M-Th 8pm Ride",
+      "description": "Monday-Thursday 8pm Ride",
       "restrictions": "M-Th 8pm Ride",
       "value": "2 for 1",
       "maxUses": 2,
@@ -4876,7 +4876,7 @@
     "locationRestriction": "",
     "deal": {
       "title": "50% OFF! 1 Hr of Bowling! M-Th Before 6 PM",
-      "description": "M-Th Before 6 PM",
+      "description": "Monday-Thursday Before 6 PM",
       "restrictions": "M-Th Before 6 PM",
       "value": "50% Off",
       "maxUses": 3,
@@ -4942,7 +4942,7 @@
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Studio Fee! M-Th",
-      "description": "M-Th",
+      "description": "Monday-Thursday",
       "restrictions": "M-Th",
       "value": "2 for 1",
       "maxUses": null,
@@ -5440,7 +5440,7 @@
     "locationRestriction": "",
     "deal": {
       "title": "50% OFF! Group Admission for One Room! M-Th",
-      "description": "M-Th",
+      "description": "Monday-Thursday",
       "restrictions": "M-Th",
       "value": "50% Off",
       "maxUses": 1,
@@ -5479,7 +5479,7 @@
     "locationRestriction": "",
     "deal": {
       "title": "$6 OFF! Any Adventure Park Pass! College ID M-Th or Fri-Sat after 9PM",
-      "description": "College Student ID M-Th anytime or Fri-Sat after 9 PM",
+      "description": "College Student ID Monday-Thursday anytime or Friday-Saturday after 9 PM",
       "restrictions": "College Student ID M-Th anytime or Fri-Sat after 9 PM",
       "value": "$6 Off",
       "maxUses": null,
@@ -5512,7 +5512,7 @@
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Hour for Same Person! M-Th",
-      "description": "M-Th",
+      "description": "Monday-Thursday",
       "restrictions": "M-Th",
       "value": "2 for 1",
       "maxUses": null,
@@ -5545,7 +5545,7 @@
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Axe Throwing! Up to 4 Throwers. M-Th",
-      "description": "M-Th Up to 4 Throwers",
+      "description": "Monday-Thursday Up to 4 Throwers",
       "restrictions": "M-Th Up to 4 Throwers",
       "value": "2 for 1",
       "maxUses": 2,
@@ -5617,7 +5617,7 @@
     "locationRestriction": "Provo Canyon",
     "deal": {
       "title": "2-4-1! River Tubing! Valid M-F Code SSC",
-      "description": "M-F Code SSC",
+      "description": "Monday-Friday Code SSC",
       "restrictions": "M-F Code SSC",
       "value": "2 for 1",
       "maxUses": 1,
@@ -5683,7 +5683,7 @@
     "locationRestriction": "Lehi & American Fork",
     "deal": {
       "title": "2-4-1! Bowling for Same Player! M-Th Before 6pm Not Valid Holidays",
-      "description": "M-Th Before 6pm Not Valid Holidays Shoes Not Included",
+      "description": "Monday-Thursday Before 6pm Not Valid Holidays Shoes Not Included",
       "restrictions": "M-Th Before 6pm Not Valid Holidays Shoes Not Included",
       "value": "2 for 1",
       "maxUses": 3,
@@ -5722,7 +5722,7 @@
     "locationRestriction": "Lehi",
     "deal": {
       "title": "2-4-1! Game of Laser Tag for Same Player! M-Th before 6pm",
-      "description": "M-Th before 6pm Not Valid Holidays",
+      "description": "Monday-Thursday before 6pm Not Valid Holidays",
       "restrictions": "M-Th before 6pm Not Valid Holidays",
       "value": "2 for 1",
       "maxUses": 3,
@@ -5794,7 +5794,7 @@
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Hour of Karaoke! M-Th Max 8 People Per Use",
-      "description": "M-Th Max 8 People Per Use",
+      "description": "Monday-Thursday Max 8 People Per Use",
       "restrictions": "M-Th Max 8 People Per Use",
       "value": "2 for 1",
       "maxUses": null,
@@ -6064,7 +6064,7 @@
     "locationRestriction": "Orem",
     "deal": {
       "title": "2-4-1! Game! Up to 3 free games per visit! Not Valid after 5 PM Sat",
-      "description": "Not Valid after 5 PM Sat Holidays or School Holidays",
+      "description": "Not Valid after 5 PM Saturday Holidays or School Holidays",
       "restrictions": "Not Valid after 5 PM Sat Holidays or School Holidays",
       "value": "2 for 1",
       "maxUses": null,
@@ -6196,7 +6196,7 @@
     "locationRestriction": "Provo Canyon",
     "deal": {
       "title": "2-4-1! Zipline Tour! Appt. Req. Please Tip",
-      "description": "Appt Required Please Tip",
+      "description": "Appointment Required Please Tip",
       "restrictions": "Appt Required Please Tip",
       "value": "2 for 1",
       "maxUses": 1,
@@ -6229,7 +6229,7 @@
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Day Pass! Not Valid Mon or Sat After 6pm",
-      "description": "Not Valid Mon or Sat After 6pm Shoes and Harness Not Included",
+      "description": "Not Valid Monday or Saturday After 6pm Shoes and Harness Not Included",
       "restrictions": "Not Valid Mon or Sat After 6pm Shoes and Harness Not Included",
       "value": "2 for 1",
       "maxUses": 3,
@@ -6340,7 +6340,7 @@
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Axe Throwing or Archery! Valid M-Th",
-      "description": "Valid M-Th",
+      "description": "Valid Monday-Thursday",
       "restrictions": "Valid M-Th",
       "value": "2 for 1",
       "maxUses": null,
@@ -6373,7 +6373,7 @@
     "locationRestriction": "Santaquin",
     "deal": {
       "title": "2-4-1! Admission to Corn Maze and Fall Festival! M-Th",
-      "description": "M-Th",
+      "description": "Monday-Thursday",
       "restrictions": "M-Th",
       "value": "2 for 1",
       "maxUses": 3,
@@ -6865,7 +6865,7 @@
     "locationRestriction": "",
     "deal": {
       "title": "Rent 1 eBike for 1 Hr Get 2nd eBike FREE! M-Th",
-      "description": "M-Th",
+      "description": "Monday-Thursday",
       "restrictions": "M-Th",
       "value": "Buy 1 Get 1 Free",
       "maxUses": 1,
@@ -7543,7 +7543,7 @@
     "locationRestriction": "",
     "deal": {
       "title": "30% OFF! Any Jewelry Item! Excl. Loose Diamonds/Gemstones",
-      "description": "Excl. Loose Diamonds/Gemstones",
+      "description": "Excluding Loose Diamonds/Gemstones",
       "restrictions": "Excl. Loose Diamonds/Gemstones",
       "value": "30% Off",
       "maxUses": null,
@@ -7576,7 +7576,7 @@
     "locationRestriction": "",
     "deal": {
       "title": "$10 OFF! Any Men's Haircut! Please Tip! Call for Appt",
-      "description": "Please Tip Call for Appt",
+      "description": "Please Tip Call for Appointment",
       "restrictions": "Please Tip Call for Appt",
       "value": "$10 Off",
       "maxUses": 3,
@@ -9154,7 +9154,7 @@
     "locationRestriction": "",
     "deal": {
       "title": "FREE! Ski or Snowboard Rental! M-Th",
-      "description": "M-Th",
+      "description": "Monday-Thursday",
       "restrictions": "M-Th",
       "value": "Free Item",
       "maxUses": 1,
@@ -9823,7 +9823,7 @@
     "locationRestriction": "",
     "deal": {
       "title": "FREE! Admission! M-Th. Not Valid December!",
-      "description": "M-Th Not Valid December",
+      "description": "Monday-Thursday Not Valid December",
       "restrictions": "M-Th Not Valid December",
       "value": "Free Item",
       "maxUses": 1,
@@ -9946,7 +9946,7 @@
     "locationRestriction": "",
     "deal": {
       "title": "FREE! Men's Ears Eyebrow or Nose Wax! Please Tip! Call for Appt",
-      "description": "Please Tip Call for Appt",
+      "description": "Please Tip Call for Appointment",
       "restrictions": "Please Tip Call for Appt",
       "value": "Free Item",
       "maxUses": 1,
@@ -10111,7 +10111,7 @@
     "locationRestriction": "",
     "deal": {
       "title": "FREE! Admit for ONE Person! M-Th only!",
-      "description": "M-Th only",
+      "description": "Monday-Thursday only",
       "restrictions": "M-Th only",
       "value": "Free Item",
       "maxUses": 3,
@@ -10558,7 +10558,7 @@
     "locationRestriction": "",
     "deal": {
       "title": "FREE! Admission! Up to 2 Hrs",
-      "description": "Up to 2 Hrs",
+      "description": "Up to 2 Hours",
       "restrictions": "Up to 2 Hrs",
       "value": "Free Item",
       "maxUses": 2,
@@ -11884,7 +11884,7 @@
     "locationRestriction": "Provo & West Jordan",
     "deal": {
       "title": "FREE! Haircut! M-Th Provo and WJ",
-      "description": "M-Th",
+      "description": "Monday-Thursday",
       "restrictions": "M-Th",
       "value": "Free Item",
       "maxUses": 2,
@@ -12052,7 +12052,7 @@
     "locationRestriction": "Provo",
     "deal": {
       "title": "FREE! Admit 2 to Any Experience! Mon Only Provo",
-      "description": "Mon Only",
+      "description": "Monday Only",
       "restrictions": "Mon Only",
       "value": "Free Item",
       "maxUses": 1,
@@ -12372,7 +12372,7 @@
     "locationRestriction": "",
     "deal": {
       "title": "FREE! Ticket for Up to 2 People! Reg Season Only",
-      "description": "Reg Season Only",
+      "description": "Regular Season Only",
       "restrictions": "Reg Season Only",
       "value": "Free Item",
       "maxUses": 1,
