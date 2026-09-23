@@ -1,4 +1,4 @@
 export const LATEST_UPDATE = {
-  version: '1.0.77',
-  description: "Deal details now spell out days and abbreviations (Monday-Thursday, Excluding, Appointment) so they're easier to read.",
+  version: '1.0.78',
+  description: "Added commas to deal details so separate conditions are easier to tell apart.",
 }
