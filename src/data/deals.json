@@ -12196,7 +12196,9 @@
         "address": "Next to the Food Court, 575 E University Pkwy Space M-224, Orem, UT 84097, USA",
         "phone": "+13853190905"
       }
-    ]
+    ],
+    "active": false,
+    "closedReason": "Permanently closed"
   },
   {
     "id": "free-273",
@@ -15936,12 +15938,15 @@
         "lng": -111.8728377,
         "address": "9860 S 700 E Ste 16, Sandy, UT 84070",
         "phone": "+18014205256"
-      },
+      }
+    ],
+    "closedLocations": [
       {
         "lat": 40.2339021,
         "lng": -111.65982129999999,
         "address": "62 W Center St, Provo, UT 84601, USA",
-        "phone": "+13853752617"
+        "phone": "+13853752617",
+        "closedReason": "Permanently closed"
       }
     ]
   },
@@ -15981,12 +15986,15 @@
         "lng": -111.8728377,
         "address": "9860 S 700 E Ste 16, Sandy, UT 84070",
         "phone": "+18014205256"
-      },
+      }
+    ],
+    "closedLocations": [
       {
         "lat": 40.2339021,
         "lng": -111.65982129999999,
         "address": "62 W Center St, Provo, UT 84601, USA",
-        "phone": "+13853752617"
+        "phone": "+13853752617",
+        "closedReason": "Permanently closed"
       }
     ]
   },
@@ -16026,12 +16034,15 @@
         "lng": -111.8728377,
         "address": "9860 S 700 E Ste 16, Sandy, UT 84070",
         "phone": "+18014205256"
-      },
+      }
+    ],
+    "closedLocations": [
       {
         "lat": 40.2339021,
         "lng": -111.65982129999999,
         "address": "62 W Center St, Provo, UT 84601, USA",
-        "phone": "+13853752617"
+        "phone": "+13853752617",
+        "closedReason": "Permanently closed"
       }
     ]
   },
@@ -16099,7 +16110,9 @@
         "address": "Next to the Food Court, 575 E University Pkwy Space M-224, Orem, UT 84097, USA",
         "phone": "+13853190905"
       }
-    ]
+    ],
+    "active": false,
+    "closedReason": "Permanently closed"
   },
   {
     "id": "treats-356",
@@ -16132,7 +16145,9 @@
         "address": "Next to the Food Court, 575 E University Pkwy Space M-224, Orem, UT 84097, USA",
         "phone": "+13853190905"
       }
-    ]
+    ],
+    "active": false,
+    "closedReason": "Permanently closed"
   },
   {
     "id": "treats-357",
