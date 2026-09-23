@@ -1,4 +1,4 @@
 export const LATEST_UPDATE = {
-  version: '1.0.75',
-  description: "Deal details no longer show where a deal is valid twice, and Jiffy Lube promo codes are now labeled \"Code:\".",
+  version: '1.0.76',
+  description: "Extra deal conditions (like \"Carryout Only\") now have a \"Details:\" label so they don't look lost on the deal screen.",
 }

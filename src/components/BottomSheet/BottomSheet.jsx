@@ -122,7 +122,7 @@ export default function BottomSheet({ deal, onUse, onClose, isFave, onToggleFave
 
           {deal.deal.description && (
             <p className="text-sm mb-4" style={{ color: '#64748b', lineHeight: '1.6' }}>
-              {deal.deal.description}
+              <span className="font-semibold" style={{ color: '#475569' }}>Details:</span> {deal.deal.description}
             </p>
           )}
 
