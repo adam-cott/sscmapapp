@@ -6665,8 +6665,8 @@
     "name": "The Rift Augmented Reality",
     "category": "entertainment",
     "address": "1200 Towne Centre Blvd Ste 1158, Provo, UT 84601",
-    "lat": 40.217462,
-    "lng": -111.664028,
+    "lat": 40.2161531,
+    "lng": -111.66259930000001,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Any Experience! Max 8 People",
@@ -6685,12 +6685,6 @@
       "entertainment"
     ],
     "locations": [
-      {
-        "lat": 40.217462,
-        "lng": -111.664028,
-        "address": "1200 Towne Centre Blvd Ste 1158, Provo, UT 84601",
-        "phone": "+18016236985"
-      },
       {
         "lat": 40.2161531,
         "lng": -111.66259930000001,
@@ -12125,8 +12119,8 @@
     "name": "The Rift Augmented Reality",
     "category": "free",
     "address": "1200 Towne Centre Blvd Ste 1158, Provo, UT 84601",
-    "lat": 40.217462,
-    "lng": -111.664028,
+    "lat": 40.2161531,
+    "lng": -111.66259930000001,
     "locationRestriction": "Provo",
     "deal": {
       "title": "FREE! Admit 2 to Any Experience! Mon Only Provo",
@@ -12145,12 +12139,6 @@
       "free"
     ],
     "locations": [
-      {
-        "lat": 40.217462,
-        "lng": -111.664028,
-        "address": "1200 Towne Centre Blvd Ste 1158, Provo, UT 84601",
-        "phone": "+18016236985"
-      },
       {
         "lat": 40.2161531,
         "lng": -111.66259930000001,
@@ -12254,8 +12242,8 @@
     "name": "The Yard Milkshake Bar",
     "category": "free",
     "address": "575 E University Pkwy Spc M-224, Orem, UT 84097",
-    "lat": 40.2753836,
-    "lng": -111.6808629,
+    "lat": 40.275575499999995,
+    "lng": -111.67850949999999,
     "locationRestriction": "",
     "deal": {
       "title": "FREE! Calf Cup! (1 Scoop Ice Cream)",
@@ -12274,12 +12262,6 @@
       "free"
     ],
     "locations": [
-      {
-        "lat": 40.2753836,
-        "lng": -111.6808629,
-        "address": "575 E University Pkwy Spc M-224, Orem, UT 84097",
-        "phone": "+13853190905"
-      },
       {
         "lat": 40.275575499999995,
         "lng": -111.67850949999999,
@@ -12521,8 +12503,8 @@
     "name": "UVU Scoops",
     "category": "free",
     "address": "800 W University Pkwy, Orem, UT 84058",
-    "lat": 40.2787626,
-    "lng": -111.7153739,
+    "lat": 40.27822,
+    "lng": -111.713619,
     "locationRestriction": "",
     "deal": {
       "title": "FREE! 22 oz. Fountain Drink!",
@@ -12541,12 +12523,6 @@
       "free"
     ],
     "locations": [
-      {
-        "lat": 40.2787626,
-        "lng": -111.7153739,
-        "address": "800 W University Pkwy, Orem, UT 84058",
-        "phone": "+18018638664"
-      },
       {
         "lat": 40.27822,
         "lng": -111.713619,
@@ -16187,8 +16163,8 @@
     "name": "The Yard Milkshake Bar",
     "category": "treats",
     "address": "575 E University Pkwy Spc M-224, Orem, UT 84097",
-    "lat": 40.2753836,
-    "lng": -111.6808629,
+    "lat": 40.275575499999995,
+    "lng": -111.67850949999999,
     "locationRestriction": "",
     "deal": {
       "title": "Buy 1 Pint Cup Get 1 FREE!",
@@ -16208,12 +16184,6 @@
     ],
     "locations": [
       {
-        "lat": 40.2753836,
-        "lng": -111.6808629,
-        "address": "575 E University Pkwy Spc M-224, Orem, UT 84097",
-        "phone": "+13853190905"
-      },
-      {
         "lat": 40.275575499999995,
         "lng": -111.67850949999999,
         "address": "Next to the Food Court, 575 E University Pkwy Space M-224, Orem, UT 84097, USA",
@@ -16226,8 +16196,8 @@
     "name": "The Yard Milkshake Bar",
     "category": "treats",
     "address": "575 E University Pkwy Spc M-224, Orem, UT 84097",
-    "lat": 40.2753836,
-    "lng": -111.6808629,
+    "lat": 40.275575499999995,
+    "lng": -111.67850949999999,
     "locationRestriction": "",
     "deal": {
       "title": "Buy 1 Regular Milkshake Get 1 FREE!",
@@ -16246,12 +16216,6 @@
       "treats"
     ],
     "locations": [
-      {
-        "lat": 40.2753836,
-        "lng": -111.6808629,
-        "address": "575 E University Pkwy Spc M-224, Orem, UT 84097",
-        "phone": "+13853190905"
-      },
       {
         "lat": 40.275575499999995,
         "lng": -111.67850949999999,
@@ -16565,8 +16529,8 @@
     "name": "UVU Scoops",
     "category": "treats",
     "address": "800 W University Pkwy, Orem, UT 84058",
-    "lat": 40.2787626,
-    "lng": -111.7153739,
+    "lat": 40.27822,
+    "lng": -111.713619,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Single Scoop of Ice Cream!",
@@ -16585,12 +16549,6 @@
       "treats"
     ],
     "locations": [
-      {
-        "lat": 40.2787626,
-        "lng": -111.7153739,
-        "address": "800 W University Pkwy, Orem, UT 84058",
-        "phone": "+18018638664"
-      },
       {
         "lat": 40.27822,
         "lng": -111.713619,
