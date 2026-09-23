@@ -3596,8 +3596,8 @@
     "name": "Rodizio Grill",
     "category": "restaurants",
     "address": "4801 N University Ave, Provo, UT 84604",
-    "lat": 40.2996159,
-    "lng": -111.6593651,
+    "lat": 40.298773399999995,
+    "lng": -111.6577191,
     "locationRestriction": "",
     "deal": {
       "title": "Buy Any Entree Get Any Specialty Beverage & Any Dessert",
@@ -3623,12 +3623,6 @@
         "phone": "+18012200500"
       },
       {
-        "lat": 40.2996159,
-        "lng": -111.6593651,
-        "address": "4801 N University Ave, Provo, UT 84604",
-        "phone": "+18013740100"
-      },
-      {
         "lat": 40.298773399999995,
         "lng": -111.6577191,
         "address": "4801 N University Ave, Provo, UT 84604, USA",
@@ -3641,8 +3635,8 @@
     "name": "Rodizio Grill",
     "category": "restaurants",
     "address": "4801 N University Ave, Provo, UT 84604",
-    "lat": 40.2996159,
-    "lng": -111.6593651,
+    "lat": 40.298773399999995,
+    "lng": -111.6577191,
     "locationRestriction": "",
     "deal": {
       "title": "Buy 1 Entree Get 1 Dessert FREE! (Up to 2 People) Excludes Holidays",
@@ -3666,12 +3660,6 @@
         "lng": -111.8725087,
         "address": "600 S 700 E Fl 2, Salt Lake City, UT 84102",
         "phone": "+18012200500"
-      },
-      {
-        "lat": 40.2996159,
-        "lng": -111.6593651,
-        "address": "4801 N University Ave, Provo, UT 84604",
-        "phone": "+18013740100"
       },
       {
         "lat": 40.298773399999995,
