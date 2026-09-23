@@ -4415,12 +4415,6 @@
         "phone": "+18015679799"
       },
       {
-        "lat": 40.7247406,
-        "lng": -111.9580911,
-        "address": "3671 S Constitution Blvd, West Valley City, UT 84119",
-        "phone": "+18019699464"
-      },
-      {
         "lat": 40.6925257,
         "lng": -111.9575123,
         "address": "3671 S 2700 W, West Valley City, UT 84119, USA",
@@ -4476,12 +4470,6 @@
         "lng": -111.9381357,
         "address": "9175 S Redwood Rd, West Jordan, UT 84088",
         "phone": "+18015679799"
-      },
-      {
-        "lat": 40.7247406,
-        "lng": -111.9580911,
-        "address": "3671 S Constitution Blvd, West Valley City, UT 84119",
-        "phone": "+18019699464"
       },
       {
         "lat": 40.6925257,
@@ -8807,12 +8795,6 @@
         "phone": "+18014270481"
       },
       {
-        "lat": 40.3869621,
-        "lng": -111.9137066,
-        "address": "119 W Crossroads Blvd Ste B, Saratoga Springs, UT 84045",
-        "phone": "+18013411810"
-      },
-      {
         "lat": 40.1219617,
         "lng": -111.6547841,
         "address": "933 N Main St Ste E, Spanish Fork, UT 84660",
@@ -8835,12 +8817,6 @@
         "lng": -111.8792879,
         "address": "1820 W Traverse Pkwy Suite G, Lehi, UT 84043, USA",
         "phone": "+18013418094"
-      },
-      {
-        "lat": 40.3869293,
-        "lng": -111.91877099999999,
-        "address": "119 Crossroads Blvd STE B, Saratoga Springs, UT 84045, USA",
-        "phone": "+18013411810"
       },
       {
         "lat": 40.508244999999995,
@@ -14164,9 +14140,9 @@
     "id": "treats-315",
     "name": "Great Harvest Bread Co.",
     "category": "treats",
-    "address": "",
-    "lat": 40.2575,
-    "lng": -111.664,
+    "address": "1774 N University Pkwy #48, Provo, UT 84604, USA",
+    "lat": 40.257841299999995,
+    "lng": -111.66087809999999,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Cinnamon Roll Protein Bar or Cookie!",
@@ -14185,12 +14161,6 @@
       "treats"
     ],
     "locations": [
-      {
-        "lat": 40.2575,
-        "lng": -111.664,
-        "address": "",
-        "phone": "+18013739816"
-      },
       {
         "lat": 40.257841299999995,
         "lng": -111.66087809999999,
@@ -14233,9 +14203,9 @@
     "id": "treats-316",
     "name": "Great Harvest Bread Co.",
     "category": "treats",
-    "address": "",
-    "lat": 40.2575,
-    "lng": -111.664,
+    "address": "1774 N University Pkwy #48, Provo, UT 84604, USA",
+    "lat": 40.257841299999995,
+    "lng": -111.66087809999999,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Loaf of Bread!",
@@ -14254,12 +14224,6 @@
       "treats"
     ],
     "locations": [
-      {
-        "lat": 40.2575,
-        "lng": -111.664,
-        "address": "",
-        "phone": "+18013739816"
-      },
       {
         "lat": 40.257841299999995,
         "lng": -111.66087809999999,
@@ -16613,12 +16577,6 @@
         "phone": "+18015662559"
       },
       {
-        "lat": 40.9913625,
-        "lng": -111.8933382,
-        "address": "1076 W Park Ln Ste 120, Farmington, UT 84025",
-        "phone": "+18014479300"
-      },
-      {
         "lat": 40.9853793,
         "lng": -111.91237319999999,
         "address": "1076 Park Ln Suite 120, Farmington, UT 84025, USA",
@@ -18112,9 +18070,9 @@
     "id": "sandwiches-389",
     "name": "Great Harvest Bread Co.",
     "category": "sandwiches",
-    "address": "",
-    "lat": 40.2575,
-    "lng": -111.664,
+    "address": "1774 N University Pkwy #48, Provo, UT 84604, USA",
+    "lat": 40.257841299999995,
+    "lng": -111.66087809999999,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Breakfast or Lunch Sandwich!",
@@ -18133,12 +18091,6 @@
       "sandwiches"
     ],
     "locations": [
-      {
-        "lat": 40.2575,
-        "lng": -111.664,
-        "address": "",
-        "phone": "+18013739816"
-      },
       {
         "lat": 40.257841299999995,
         "lng": -111.66087809999999,
