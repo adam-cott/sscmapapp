@@ -1,4 +1,4 @@
 export const LATEST_UPDATE = {
-  version: '1.0.60',
-  description: "Fixed the 'View on map' banner not showing the location count for deals that work at every store.",
+  version: '1.0.61',
+  description: "Fixed the BYU Store showing up as two pins on the map — there's only one, in the Wilkinson Center.",
 }

@@ -7145,8 +7145,8 @@
     "name": "BYU Store",
     "category": "retail",
     "address": "800 E Campus Dr, Provo, UT 84602",
-    "lat": 40.2499115,
-    "lng": -111.6479673,
+    "lat": 40.2484703,
+    "lng": -111.64788809999999,
     "locationRestriction": "",
     "deal": {
       "title": "50% OFF! Any Brigham Supply Company Item! Restrictions Apply",
@@ -7165,12 +7165,6 @@
       "retail"
     ],
     "locations": [
-      {
-        "lat": 40.2499115,
-        "lng": -111.6479673,
-        "address": "800 E Campus Dr, Provo, UT 84602",
-        "phone": "+18014222400"
-      },
       {
         "lat": 40.2484703,
         "lng": -111.64788809999999,
@@ -13328,8 +13322,8 @@
     "name": "BYU Store",
     "category": "treats",
     "address": "800 E Campus Dr, Provo, UT 84602",
-    "lat": 40.2499115,
-    "lng": -111.6479673,
+    "lat": 40.2484703,
+    "lng": -111.64788809999999,
     "locationRestriction": "",
     "deal": {
       "title": "Buy Any Food Candy or Fudge Get 1 50% OFF!",
@@ -13348,12 +13342,6 @@
       "treats"
     ],
     "locations": [
-      {
-        "lat": 40.2499115,
-        "lng": -111.6479673,
-        "address": "800 E Campus Dr, Provo, UT 84602",
-        "phone": "+18014224134"
-      },
       {
         "lat": 40.2484703,
         "lng": -111.64788809999999,
