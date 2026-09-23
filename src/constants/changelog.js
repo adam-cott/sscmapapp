@@ -1,4 +1,4 @@
 export const LATEST_UPDATE = {
-  version: '1.0.67',
-  description: "Fixed duplicate map pins for Costa Vida (Spanish Fork and Lehi) and Los Hermanos.",
+  version: '1.0.68',
+  description: "Fixed the American Fork McDonald's showing up as two pins on the map.",
 }
