@@ -1,32 +1,19 @@
 {
   "summary": {
-    "generatedAt": "2026-09-24T18:51:45.934Z",
-    "businessesWithDomain": 235,
-    "attempted": 37,
-    "skippedExisting": 198,
-    "saved": 36,
-    "tooSmall": 1,
+    "generatedAt": "2026-09-24T22:46:07.384Z",
+    "businessesWithDomain": 6,
+    "attempted": 6,
+    "skippedExisting": 0,
+    "saved": 6,
+    "tooSmall": 0,
     "noSource": 0,
-    "lowRes": 6,
-    "dark": 5,
-    "whiteOnDark": 1,
-    "wide": 1,
+    "lowRes": 0,
+    "dark": 0,
+    "whiteOnDark": 0,
+    "wide": 0,
     "outputSize": 512
   },
   "results": [
-    {
-      "businessName": "MOD Pizza",
-      "slug": "mod-pizza",
-      "target": "modpizza.com",
-      "via": "resolved",
-      "status": "SAVED",
-      "sourceUrl": "https://modpizza.com/wp-content/uploads/2021/12/260518_olo_image_square_01-23.jpg",
-      "srcSize": 1593,
-      "aspect": 1,
-      "whiteOnDark": false,
-      "format": "jpeg",
-      "brightness": 159
-    },
     {
       "businessName": "Mountain Mike's Pizza",
       "slug": "mountain-mike-s-pizza",
@@ -184,19 +171,6 @@
       "brightness": 168
     },
     {
-      "businessName": "Shirley's Bakery & Cafe",
-      "slug": "shirley-s-bakery-cafe",
-      "target": "shirleysbakerycafe.com",
-      "via": "resolved",
-      "status": "SAVED",
-      "sourceUrl": "https://shirleysbakerycafe.com/apple-touch-icon.png",
-      "srcSize": 100,
-      "aspect": 1,
-      "whiteOnDark": true,
-      "format": "png",
-      "brightness": 255
-    },
-    {
       "businessName": "Tamashi Ramen",
       "slug": "tamashi-ramen",
       "target": "tamashiramenut.com",
@@ -234,19 +208,6 @@
       "whiteOnDark": false,
       "format": "svg",
       "brightness": 159
-    },
-    {
-      "businessName": "ComedyBox Utah",
-      "slug": "comedybox-utah",
-      "target": "comedyboxclub.com",
-      "via": "resolved",
-      "status": "SAVED",
-      "sourceUrl": "https://static.wixstatic.com/media/bd446e_04b53db602dd4847ae812e02c3019cc7~mv2.jpg/v1/fill/w_1000,h_666,al_c/bd446e_04b53db602dd4847ae812e02c3019cc7~mv2.jpg",
-      "srcSize": 1000,
-      "aspect": 1.5,
-      "whiteOnDark": false,
-      "format": "jpeg",
-      "brightness": 103
     },
     {
       "businessName": "Conquer Padel",
@@ -431,45 +392,6 @@
       "brightness": 236
     },
     {
-      "businessName": "Crumbl",
-      "slug": "crumbl",
-      "target": "crumblcookies.com",
-      "via": "resolved",
-      "status": "SAVED",
-      "sourceUrl": "https://crumblcookies.com/favicons/safari-pinned-tab.svg",
-      "srcSize": 9271,
-      "aspect": 1,
-      "whiteOnDark": false,
-      "format": "svg",
-      "brightness": 1
-    },
-    {
-      "businessName": "Habit Burger & Grill",
-      "slug": "habit-burger-grill",
-      "target": "habitburger.com",
-      "via": "resolved",
-      "status": "SAVED",
-      "sourceUrl": "https://www.habitburger.com/dbcwp/wp-content/themes/habitburger/images/misc/habit-newsweek-logo-portrait.png",
-      "srcSize": 252,
-      "aspect": 1.17,
-      "whiteOnDark": false,
-      "format": "png",
-      "brightness": 150
-    },
-    {
-      "businessName": "Firehouse Subs",
-      "slug": "firehouse-subs",
-      "target": "firehousesubs.com",
-      "via": "resolved",
-      "status": "TOO_SMALL",
-      "sourceUrl": null,
-      "srcSize": 44,
-      "aspect": null,
-      "whiteOnDark": false,
-      "format": null,
-      "brightness": null
-    },
-    {
       "businessName": "KFC",
       "slug": "kfc",
       "target": "kfc.com",
@@ -494,6 +416,84 @@
       "whiteOnDark": false,
       "format": "jpeg",
       "brightness": 143
+    },
+    {
+      "businessName": "MOD Pizza",
+      "slug": "mod-pizza",
+      "target": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/32/ee/ae/32eeaeb4-8486-9beb-fbb9-073d63d1be27/AppIcon-0-0-1x_U007emarketing-0-1-0-85-220.png/512x512bb.png",
+      "via": "manual",
+      "status": "SAVED",
+      "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/32/ee/ae/32eeaeb4-8486-9beb-fbb9-073d63d1be27/AppIcon-0-0-1x_U007emarketing-0-1-0-85-220.png/512x512bb.png",
+      "srcSize": 512,
+      "aspect": 1.19,
+      "whiteOnDark": false,
+      "format": "png",
+      "brightness": 174
+    },
+    {
+      "businessName": "Shirley's Bakery & Cafe",
+      "slug": "shirley-s-bakery-cafe",
+      "target": "https://shirleysbakerycafe.com/wp-content/uploads/2022/02/1396289938.png",
+      "via": "manual",
+      "status": "SAVED",
+      "sourceUrl": "https://shirleysbakerycafe.com/wp-content/uploads/2022/02/1396289938.png",
+      "srcSize": 193,
+      "aspect": 1.53,
+      "whiteOnDark": false,
+      "format": "png",
+      "brightness": 143
+    },
+    {
+      "businessName": "ComedyBox Utah",
+      "slug": "comedybox-utah",
+      "target": "https://static.wixstatic.com/media/bd446e_479a8d04914d4dd4b7d75e6504d6a4d5~mv2.png",
+      "via": "manual",
+      "status": "SAVED",
+      "sourceUrl": "https://static.wixstatic.com/media/bd446e_479a8d04914d4dd4b7d75e6504d6a4d5~mv2.png",
+      "srcSize": 2550,
+      "aspect": 1,
+      "whiteOnDark": false,
+      "format": "png",
+      "brightness": 162
+    },
+    {
+      "businessName": "Crumbl",
+      "slug": "crumbl",
+      "target": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/91/74/5c/91745cac-598e-8263-0e0f-33d9a3f77898/AppIcon-0-0-1x_U007ephone-0-0-0-1-0-0-sRGB-0-85-220.png/512x512bb.png",
+      "via": "manual",
+      "status": "SAVED",
+      "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/91/74/5c/91745cac-598e-8263-0e0f-33d9a3f77898/AppIcon-0-0-1x_U007ephone-0-0-0-1-0-0-sRGB-0-85-220.png/512x512bb.png",
+      "srcSize": 512,
+      "aspect": 1,
+      "whiteOnDark": false,
+      "format": "png",
+      "brightness": 198
+    },
+    {
+      "businessName": "Habit Burger & Grill",
+      "slug": "habit-burger-grill",
+      "target": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/cc/51/5a/cc515ab5-a0e5-d4f0-7572-a373dd7ab644/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/512x512bb.png",
+      "via": "manual",
+      "status": "SAVED",
+      "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/cc/51/5a/cc515ab5-a0e5-d4f0-7572-a373dd7ab644/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/512x512bb.png",
+      "srcSize": 512,
+      "aspect": 1,
+      "whiteOnDark": false,
+      "format": "png",
+      "brightness": 196
+    },
+    {
+      "businessName": "Firehouse Subs",
+      "slug": "firehouse-subs",
+      "target": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/de/8a/f7/de8af70d-fdb4-6cee-1a5f-a8ad4c7b79f0/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.png",
+      "via": "manual",
+      "status": "SAVED",
+      "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/de/8a/f7/de8af70d-fdb4-6cee-1a5f-a8ad4c7b79f0/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.png",
+      "srcSize": 400,
+      "aspect": 1,
+      "whiteOnDark": false,
+      "format": "png",
+      "brightness": 111
     }
   ]
 }

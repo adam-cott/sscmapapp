@@ -1,4 +1,4 @@
 export const LATEST_UPDATE = {
-  version: '2.0.3',
-  description: "Added Wendy's Highland and Saratoga Springs stores to the map.",
+  version: '2.0.4',
+  description: "Added logos for Crumbl, MOD Pizza, Habit Burger & Grill, Firehouse Subs, Shirley's Bakery & Cafe, and ComedyBox.",
 }

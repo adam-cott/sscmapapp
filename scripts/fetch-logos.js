@@ -85,6 +85,14 @@ const MANUAL_LOGOS = {
   'FatCats': 'https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/15/23/bc/1523bc99-2b50-d082-ae40-53471d6fa32e/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/512x512bb.png',
   'Paul Mitchell the School Provo': 'https://is1-ssl.mzstatic.com/image/thumb/Purple118/v4/b2/36/fd/b236fd4b-75d0-d6da-9e07-f0c57e17ca5d/AppIcon-1x_U007emarketing-85-220-5.png/512x512bb.png',
   "Carrabba's Italian Grill": 'https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c1/b4/92/c1b492c6-bc09-73a9-d97d-5af9385590fe/AppIcon-1x_U007emarketing-0-11-0-85-220-0.png/512x512bb.png',
+  'Crumbl': 'https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/91/74/5c/91745cac-598e-8263-0e0f-33d9a3f77898/AppIcon-0-0-1x_U007ephone-0-0-0-1-0-0-sRGB-0-85-220.png/512x512bb.png',
+  'MOD Pizza': 'https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/32/ee/ae/32eeaeb4-8486-9beb-fbb9-073d63d1be27/AppIcon-0-0-1x_U007emarketing-0-1-0-85-220.png/512x512bb.png',
+  'Habit Burger & Grill': 'https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/cc/51/5a/cc515ab5-a0e5-d4f0-7572-a373dd7ab644/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/512x512bb.png',
+  'Firehouse Subs': 'https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/de/8a/f7/de8af70d-fdb4-6cee-1a5f-a8ad4c7b79f0/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.png',
+
+  // Local sites whose scraped pick was wrong; these are their real marks.
+  "Shirley's Bakery & Cafe": 'https://shirleysbakerycafe.com/wp-content/uploads/2022/02/1396289938.png',
+  'ComedyBox Utah': 'https://static.wixstatic.com/media/bd446e_479a8d04914d4dd4b7d75e6504d6a4d5~mv2.png',
 
   // Businesses with no usable website. App icons, eyeballed one by one on the
   // review sheet before being added here.
