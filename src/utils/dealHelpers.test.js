@@ -45,6 +45,12 @@ describe('matchLocationsToRestriction', () => {
     expect(matchLocationsToRestriction([salem, sandy], 'All Utah County')).toEqual([salem])
   })
 
+  it('matches venue names like "UVU Campus" by address, for include and exclude', () => {
+    const uvu = { address: '800 W University Pkwy, Orem, UT 84058' }
+    expect(matchLocationsToRestriction([uvu, OREM, PROVO], 'Provo & UVU Campus')).toEqual([uvu, PROVO])
+    expect(matchLocationsToRestriction([uvu, OREM], 'All Utah County, excluding UVU')).toEqual([OREM])
+  })
+
   it('ignores parenthetical detail and unmatchable venue names', () => {
     expect(cities(matchLocationsToRestriction([PROVO, OREM], 'Provo (Center St) & UVU'))).toEqual(['Provo'])
   })

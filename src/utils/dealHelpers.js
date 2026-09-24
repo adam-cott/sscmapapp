@@ -166,9 +166,17 @@ export function cityFromAddress(address) {
   return parts.length >= 2 ? parts[1] : null
 }
 
-function placeMatchesCity(placeToken, city) {
-  const c = normalizePlace(city || '')
-  return !!c && (c.includes(placeToken) || placeToken.includes(c))
+// Venue names the card uses instead of a city, matched against the address.
+const VENUES = {
+  uvu: /800 W University Pkwy/i,
+  'uvu campus': /800 W University Pkwy/i,
+  'traverse mountain': /Traverse Pkwy|Digital Dr/i,
+}
+
+function placeMatchesLocation(placeToken, location) {
+  const c = normalizePlace(cityFromAddress(location.address) || '')
+  return (!!c && (c.includes(placeToken) || placeToken.includes(c))) ||
+    !!VENUES[placeToken]?.test(location.address)
 }
 
 /**
@@ -185,16 +193,12 @@ export function matchLocationsToRestriction(locations, restrictionText) {
 
   let included = isBroad
     ? locations
-    : locations.filter(l => {
-      const city = cityFromAddress(l.address)
-      return city && ((utahCounty && UTAH_COUNTY_CITIES.has(city)) || includeTokens.some(t => placeMatchesCity(t, city)))
-    })
+    : locations.filter(l =>
+      (utahCounty && UTAH_COUNTY_CITIES.has(cityFromAddress(l.address))) ||
+      includeTokens.some(t => placeMatchesLocation(t, l)))
 
   if (excludeTokens.length) {
-    included = included.filter(l => {
-      const city = cityFromAddress(l.address)
-      return !(city && excludeTokens.some(t => placeMatchesCity(t, city)))
-    })
+    included = included.filter(l => !excludeTokens.some(t => placeMatchesLocation(t, l)))
   }
 
   return included.length ? included : null
