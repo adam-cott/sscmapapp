@@ -25,7 +25,7 @@ export default function AboutScreen({ onBack }) {
           Version {pkg.version}
         </div>
         <p style={{ fontSize: '14px', color: '#475569', lineHeight: '1.6', marginTop: '14px', maxWidth: '300px', margin: '14px auto 0' }}>
-          Your guide to every deal on the Starving Student Discount Card — 414 deals, 197 local businesses, all on one interactive map built for Utah County students.
+          Your guide to every deal on the Starving Student Discount Card — 439 deals, 214 local businesses, all on one interactive map built for Utah County students.
         </p>
       </div>
 

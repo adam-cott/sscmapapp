@@ -1,0 +1,13 @@
+status,photo,business,category,field,issue,best_reading
+resolved,11,SSCDeals.com,retail,row,"The card company's separate app offer, printed like a deal. Kept as a row per Adam; Claude Code will put it in the hidden section.",Get the App for Only $30!
+resolved,"6,11",Grease Monkey,retail,title,"""Herriman"" runs to the card edge in both photos. Adam confirmed ""Lehi (Pioneer Crs), Herriman"" is complete.","50% OFF! Full Service Conv. Oil Change! Lehi (Pioneer Crs), Herriman"
+resolved,"1,2,4",Pizza Hut,pizza,title,"The line ends at ""All Wasatch""; the other Pizza Hut rows say ""All Wasatch Front Locations""/""Locs"". Kept as printed per Adam.","Buy Med or Lrg Pizza, Get a Melt FREE! Carryout Only! All Wasatch"
+resolved,"3,4",Rumbi Island Grill,restaurants,title,"The line ends at ""All UT""; the other Rumbi row says ""All UT Locations"". Kept as printed per Adam.","Buy 1 Menu Item and 2 Reg Drinks, Get 1 FREE! All UT"
+resolved,"6,11",Zipline Utah,entertainment,title,The code ran to the edge in photo 6; photo 11 shows it complete.,Code: SSC24ZU
+resolved,"6,11",Healing Mountain Massage through Revive PT Cryo,retail,max_uses,The bubbles were offset by the curl in photo 6; photo 11 confirms every count.,
+resolved,"6,11",Monster Pest Control,retail,title,A crease ran through the line in photo 6; photo 11 confirms the text.,50% OFF! Pest Control Treatment! New Customers! Up to $40!
+resolved,8,Carl's Jr,treats,value,No blue text on the line; value left blank per Adam (converter fills it).,
+resolved,10,Wendy's,sandwiches,address,"A street address is printed in the location list; kept in title, address blank per Adam.",
+resolved,"9,10",Klucks Krispy Chicken / Gurus Cafe / Craving's Bistro,"sandwiches, treats",business,5 back rows renamed to the reference-list names per Adam; each row notes the card spelling.,
+resolved,8,UVU Athletics,free,max_uses,6 bubbles printed after the text; max_uses 6 confirmed by Adam.,6
+resolved,"8,9,10",KFC / Zeppe's / Conquer Padel,"sandwiches, treats, free",title,"Printed oddities (""FREE!All UT"", ""Gelata"", only the first FREE! blue) kept as printed per Adam.",

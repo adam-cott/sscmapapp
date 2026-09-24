@@ -1,7 +1,7 @@
 # Starving Student Card Map App
 
 ## What This Is
-A mobile-first PWA for Utah County college students. Turns the physical Starving Student Discount Card into an interactive deal finder — 414 deals, 197 businesses, 500+ map pins. Users browse via Home tab carousels/search or the Map tab's pins, filter by category, and track deal usage per card.
+A mobile-first PWA for Utah County college students. Turns the physical Starving Student Discount Card into an interactive deal finder — 439 deals, 214 businesses, 500+ map pins (2026–27 card). Users browse via Home tab carousels/search or the Map tab's pins, filter by category, and track deal usage per card.
 
 **Live:** Vercel via GitHub auto-deploy (`master` branch)
 **Repo:** https://github.com/adam-cott/sscmapapp
@@ -17,7 +17,7 @@ A mobile-first PWA for Utah County college students. Turns the physical Starving
 | Styling | Tailwind CSS v3, Sora (headings), DM Sans (body) |
 | Icons | lucide-react |
 | Data | Static `src/data/deals.json` — no backend |
-| Persistence | localStorage (`ssc_usage_v1`) |
+| Persistence | localStorage + Firestore, keyed by card year (`CARD_YEAR` in `src/constants/storageKeys.js`) |
 | PWA | vite-plugin-pwa (generateSW) — installable iOS/Android |
 | Deploy | Vercel, auto-deploy on push to master |
 
@@ -47,7 +47,7 @@ A mobile-first PWA for Utah County college students. Turns the physical Starving
 ## Project Structure (key files)
 ```
 src/
-  data/deals.json              # 418 deals (414 active), all with coords + locations[]
+  data/deals.json              # 440 deals (439 active), all with coords + locations[]
   components/
     Sidebar/                   # SearchBar, FilterPanel — map's compact filter bar (no sort; map pins aren't ordered)
     Map/MapView.jsx            # Map + clustering + spiderfy
@@ -79,12 +79,26 @@ src/
 - `contact.phone` stored per-location in `locations[]`, not at deal level
 - `contact.website` is null for all businesses — intentionally left empty for now. Do not ask about this or treat it as a gap to fix. It is a deliberate decision to revisit later.
 - Python geocode scripts read from `C:\Users\adamb\Downloads\starving_student_businesses.csv` (hardcoded path — keep that file in place)
-- **Stats:** 414 deals · 197 businesses · 500+ pins · 0 null coords
+- **Stats:** 439 deals · 214 businesses · 523 pins · every deal has at least one pin
 - **Closed businesses/locations are hidden, not deleted.** A whole business that's gone: set `"active": false` (filtered once at the top of `App.jsx`) plus `"closedReason": "Permanently closed"`. Just one location of a multi-location business closed: move it out of `locations[]` into `closedLocations[]` on each of that business's deals, with its own `closedReason` — the app never reads `closedLocations`, so it's invisible but easy to restore. (Examples: The Yard Milkshake Bar, Sub Zero Ice Cream's downtown Provo store.)
 - **Keep `locationRestriction` wording standardized** — full city names (never "EM", "SF", "PG", "WJ", "Mtn"), "&" between places (comma-separated for 3+: "Orem, Vineyard, Eagle Mountain & Santaquin"), "All ..." for broad scopes ("All Locations", "All Utah County"), and "excluding" for exclusions. The matcher parses this text, so odd wording silently changes which pins show. `locationRestriction` is the only place the restriction lives — `deal.description` holds just the extra conditions ("Carryout Only"), never a "Valid at:" copy; the deal sheet shows the restriction in its own info row. If a restriction has no extra conditions, `description` is `""` and the sheet hides the description paragraph.
 - **`deals.json` edits for data cleanup are allowed**, but only via a dry run: write the cleaned data to a separate file (scratchpad, not the repo), produce a report flagging anything unexpected, show before/after examples, and get Adam's explicit approval before overwriting `src/data/deals.json`.
 - **`locationRestriction` isn't reflected in `locations[]`** — a restricted deal's `locations[]` still lists every physical location for the business, not just the ones that honor that specific deal. Never read `deal.locations` directly when the result needs to be restriction-aware (map pins, nearest-sort, "Get Directions"). Use `getMapFocusLocations(deal)` (or `getDirectionsLocation(deal, userCoords)` for a single target) from `dealHelpers.js` instead — see `reports/map-focus-restrictions-report.md` for how that matching was derived and verified.
 - **`LocationPicker.jsx` overrides `deal.lat`/`deal.lng`/`deal.address`** with a specific location when a multi-deal business is opened (from both the Map tab and Home) — and that override location is a business-wide "nearest to user" pick that ignores the specific deal's own `locationRestriction`. Nothing currently reads `deal.address`/`deal.lat`/`deal.lng` after that override (verified by grep), but if something new needs to, use `getMapFocusLocations()`/`getDirectionsLocation()` instead of trusting those fields directly.
+
+---
+
+## New Card Year (import process — used for the 2026–27 card, Sept 2026)
+The card runs Oct 1 → Oct 1. Each year the whole deal list is replaced from a new transcription; do it as a hard switch.
+1. **Transcribe** the card (separate claude.ai chat, from photos) into a CSV with columns `business,category,title,value,conditions,valid_at,max_uses,address,photo,note` — text kept **raw, exactly as printed** (the converter does all expanding/cleanup). Save it plus its Unsure list in `data-archive/`.
+2. **Archive** last year's `src/data/deals.json` as `data-archive/deals-YYYY-YY.json` (the converter reads last year from here, never from `src/data`).
+3. **Update `scripts/import-card.js`** constants (file names, `ID_PREFIX`, `EXPIRES`), `RENAMES`/`MERGED` (ask Adam which dropped/new pairs are the same business), and add `OVERRIDES` for lines the parser gets wrong. It matches businesses ignoring punctuation and carries over `locations[]`, `closedLocations[]`, contact info and logos.
+4. `node scripts/import-card.js` (dry run) → `node scripts/lookup-new-locations.js` (Google Places for new businesses; needs `GOOGLE_MAPS_API_KEY` in `.env`; ~60 requests, well inside the free tier) → `node scripts/import-card.js` again. Review `reports/card-import-YYYY-YY.md` (every card line → headline / valid at / details / value / uses, plus flags). If re-running the lookup, delete its output file first.
+5. **Logos:** add the new businesses to `scripts/domains-output.json`, run `node scripts/fetch-logos.js --live`, then eyeball them — about 1 in 6 auto-fetched logos is wrong (photos, badges, blank). Delete bad ones; a missing logo shows a placeholder icon. Hand-picked files go in `scripts/manual-logos/`.
+6. `DEALS_FILE=reports/card-import-YYYY-YY.preview.json npx vitest run` must pass (`src/data/deals.test.js`: every deal has a pin, no abbreviations, etc.).
+7. **Switch:** `node scripts/import-card.js --write`, bump `CARD_YEAR` in `src/constants/storageKeys.js` (resets everyone's usage/history/favorites; old data stays under the old keys/fields, never deleted), update counts (About screen, README, this file), push. Old Featured picks stop matching any deal and vanish from Home on their own; Adam re-picks in the Admin tab.
+
+Parser rules worth knowing: a trailing location on the card line becomes `locationRestriction` (lookup table `TAILS`); text after the offer that looks like a condition becomes `deal.description` ("Details:"); headline = the offer. When one card line has a separate bubble per item (CLAS Ropes Course), split it into one deal per item via an `OVERRIDES` array. When a store is branded with one city but its address is in another (The Picklr "Lehi" in Saratoga Springs), write the restriction as "Lehi/Saratoga Springs" so the matcher finds it.
 
 ---
 

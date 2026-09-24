@@ -11,7 +11,7 @@ starvingstudentcardmapapp — Interactive map of Starving Student Discount Card 
 ## Structure
 ```
 src/
-  data/deals.json        # Source of truth — 418 deals, 819 map pins
+  data/deals.json        # Source of truth — 440 deals (439 active), 500+ map pins
   components/            # UI components (Map, Sidebar, Modal, BottomSheet, etc.)
   hooks/                 # useDeals, useFilters, useLocalStorage
   utils/                 # categoryColors, dealHelpers, markerIcons
