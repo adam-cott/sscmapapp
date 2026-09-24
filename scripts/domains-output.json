@@ -4066,6 +4066,18 @@
       "matchedPlaceName": null,
       "rawWebsiteUri": "https://rootsburgersandmore.com/",
       "domain": "rootsburgersandmore.com"
+    },
+    {
+      "businessName": "Peruvian's Bunker",
+      "slug": "peruvian-s-bunker",
+      "category": "restaurants",
+      "primaryAddress": "360s S State St Ste 107, Orem, UT 84058, USA",
+      "source": "CARD_IMPORT_2026_27",
+      "status": "NO_WEBSITE",
+      "confidence": "LOOKUP",
+      "matchedPlaceName": null,
+      "rawWebsiteUri": null,
+      "domain": null
     }
   ],
   "needsReview": [

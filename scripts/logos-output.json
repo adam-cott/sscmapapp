@@ -1,14 +1,14 @@
 {
   "summary": {
-    "generatedAt": "2026-09-24T22:46:07.384Z",
-    "businessesWithDomain": 6,
-    "attempted": 6,
+    "generatedAt": "2026-09-24T22:51:37.979Z",
+    "businessesWithDomain": 1,
+    "attempted": 1,
     "skippedExisting": 0,
-    "saved": 6,
+    "saved": 1,
     "tooSmall": 0,
     "noSource": 0,
     "lowRes": 0,
-    "dark": 0,
+    "dark": 1,
     "whiteOnDark": 0,
     "wide": 0,
     "outputSize": 512
@@ -288,19 +288,6 @@
       "brightness": 233
     },
     {
-      "businessName": "Fossil Shack",
-      "slug": "fossil-shack",
-      "target": "fossilshack.com",
-      "via": "resolved",
-      "status": "SAVED",
-      "sourceUrl": "https://www.fossilshack.com/uploads/2/5/5/6/2556175/published/family-dig-6-copy-2.jpg?1783350245",
-      "srcSize": 276,
-      "aspect": 1.78,
-      "whiteOnDark": false,
-      "format": "jpeg",
-      "brightness": 190
-    },
-    {
       "businessName": "Healing Mountain Massage",
       "slug": "healing-mountain-massage",
       "target": "healingmountain.edu",
@@ -494,6 +481,32 @@
       "whiteOnDark": false,
       "format": "png",
       "brightness": 111
+    },
+    {
+      "businessName": "Fossil Shack",
+      "slug": "fossil-shack",
+      "target": "C:\\Users\\adamb\\OneDrive\\Desktop\\PM Projects\\starvingstudentcardmapapp\\scripts\\manual-logos\\fossil-shack.jpg",
+      "via": "manual-file",
+      "status": "SAVED",
+      "sourceUrl": "C:\\Users\\adamb\\OneDrive\\Desktop\\PM Projects\\starvingstudentcardmapapp\\scripts\\manual-logos\\fossil-shack.jpg",
+      "srcSize": 176,
+      "aspect": 1.01,
+      "whiteOnDark": false,
+      "format": "jpeg",
+      "brightness": 160
+    },
+    {
+      "businessName": "Peruvian's Bunker",
+      "slug": "peruvian-s-bunker",
+      "target": "C:\\Users\\adamb\\OneDrive\\Desktop\\PM Projects\\starvingstudentcardmapapp\\scripts\\manual-logos\\peruvian-s-bunker.png",
+      "via": "manual-file",
+      "status": "SAVED",
+      "sourceUrl": "C:\\Users\\adamb\\OneDrive\\Desktop\\PM Projects\\starvingstudentcardmapapp\\scripts\\manual-logos\\peruvian-s-bunker.png",
+      "srcSize": 225,
+      "aspect": 1,
+      "whiteOnDark": false,
+      "format": "png",
+      "brightness": 15
     }
   ]
 }
