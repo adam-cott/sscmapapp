@@ -114,6 +114,17 @@ export function getDealUsageState(deal, usageMap) {
 // starts with "Participating", or mentions a county-level scope.
 export const BROAD_RESTRICTION = /^all\b|^participating\b|county/i
 
+// "All Utah County" is narrower than the business's full locations[] (many
+// chains also have Salt Lake County or Tooele stores), so it matches these
+// cities plus any extra places named after it ("All Utah County & Bluffdale").
+const UTAH_COUNTY = /\b(all )?utah county\b/i
+const UTAH_COUNTY_CITIES = new Set([
+  'Alpine', 'American Fork', 'Cedar Fort', 'Cedar Hills', 'Eagle Mountain', 'Elk Ridge',
+  'Fairfield', 'Genola', 'Goshen', 'Highland', 'Lehi', 'Lindon', 'Mapleton', 'Orem',
+  'Payson', 'Pleasant Grove', 'Provo', 'Salem', 'Santaquin', 'Saratoga Springs',
+  'Spanish Fork', 'Spring Lake', 'Springville', 'Vineyard', 'Woodland Hills',
+])
+
 // Splits "All Utah County, excluding Eagle Mountain & Spanish Fork" into an
 // include clause and an exclude clause; restrictions with no exclusion
 // wording are all include, no exclude.
@@ -145,9 +156,13 @@ export function expandPlaceTokens(text) {
     .filter(Boolean)
 }
 
+// The city is the part just before "UT 84xxx" — not always parts[1], since
+// some addresses carry a venue or suite first ("South Towne Center, ...").
 export function cityFromAddress(address) {
   if (!address) return null
   const parts = address.split(',').map(s => s.trim())
+  const state = parts.findIndex(p => /^UT\b/.test(p))
+  if (state > 0) return parts[state - 1]
   return parts.length >= 2 ? parts[1] : null
 }
 
@@ -163,15 +178,16 @@ function placeMatchesCity(placeToken, city) {
 export function matchLocationsToRestriction(locations, restrictionText) {
   if (!restrictionText) return locations
   const { includeText, excludeText } = splitRestrictionClauses(restrictionText)
-  const isBroad = BROAD_RESTRICTION.test(includeText.trim())
-  const includeTokens = isBroad ? null : expandPlaceTokens(includeText)
+  const utahCounty = UTAH_COUNTY.test(includeText)
+  const isBroad = !utahCounty && BROAD_RESTRICTION.test(includeText.trim())
+  const includeTokens = isBroad ? null : expandPlaceTokens(includeText.replace(UTAH_COUNTY, ''))
   const excludeTokens = excludeText ? expandPlaceTokens(excludeText) : []
 
   let included = isBroad
     ? locations
     : locations.filter(l => {
       const city = cityFromAddress(l.address)
-      return city && includeTokens.some(t => placeMatchesCity(t, city))
+      return city && ((utahCounty && UTAH_COUNTY_CITIES.has(city)) || includeTokens.some(t => placeMatchesCity(t, city)))
     })
 
   if (excludeTokens.length) {

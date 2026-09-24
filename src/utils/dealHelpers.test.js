@@ -30,6 +30,21 @@ describe('matchLocationsToRestriction', () => {
     expect(matchLocationsToRestriction([OREM, PROVO], 'All Locations')).toHaveLength(2)
   })
 
+  it('limits "All Utah County" to Utah County cities plus any extra named place', () => {
+    const TOOELE = loc('Tooele')
+    const WEST_VALLEY = loc('West Valley City')
+    expect(cities(matchLocationsToRestriction([OREM, TOOELE, HERRIMAN, WEST_VALLEY, LEHI], 'All Utah County')))
+      .toEqual(['Orem', 'Lehi'])
+    expect(cities(matchLocationsToRestriction([OREM, TOOELE, HERRIMAN], 'All Utah County & Herriman')))
+      .toEqual(['Orem', 'Herriman'])
+  })
+
+  it('finds the city in addresses with an extra venue or suite part', () => {
+    const salem = { address: '565 W. State Rd. 198 Hwy, 6, Salem, UT 84653, USA' }
+    const sandy = { address: 'South Towne Center, 10450 S State St, Sandy, UT 84070, USA' }
+    expect(matchLocationsToRestriction([salem, sandy], 'All Utah County')).toEqual([salem])
+  })
+
   it('ignores parenthetical detail and unmatchable venue names', () => {
     expect(cities(matchLocationsToRestriction([PROVO, OREM], 'Provo (Center St) & UVU'))).toEqual(['Provo'])
   })
