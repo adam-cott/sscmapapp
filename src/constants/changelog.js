@@ -1,4 +1,4 @@
 export const LATEST_UPDATE = {
-  version: '2.1.2',
-  description: "\"Participating locations\" deals now include Heber City and Park City stores too, so Arby's in Heber is back on the map.",
+  version: '2.1.3',
+  description: "The map's category counts now only include deals that show up on the map.",
 }

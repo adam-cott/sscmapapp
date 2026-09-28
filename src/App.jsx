@@ -78,6 +78,7 @@ function AppShell() {
     sortBy,
     setSortBy,
     categoryCounts,
+    mapCategoryCounts,
     pinnedIds,
     showCategory,
     showPinned,
@@ -228,7 +229,7 @@ function AppShell() {
     onCategoryToggle: toggleCategory,
     onClearFilters: clearFilters,
     dealCount: filteredDeals.length,
-    categoryCounts,
+    categoryCounts: mapCategoryCounts,
   }
 
   const isMapTab = activeTab === 'map'

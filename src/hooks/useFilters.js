@@ -1,5 +1,5 @@
 import { useState, useMemo, useCallback, useEffect, useRef } from 'react'
-import { filterDeals, getNearestDistance, searchCities, parsePlaceQuery } from '../utils/dealHelpers'
+import { filterDeals, getNearestDistance, searchCities, parsePlaceQuery, getMapFocusLocations } from '../utils/dealHelpers'
 import { CATEGORY_LABELS } from '../utils/categoryColors'
 
 export function useFilters(deals, userCoords) {
@@ -90,13 +90,15 @@ export function useFilters(deals, userCoords) {
 
   // Counts per category based on search query only (category filter excluded so
   // each chip always shows how many deals exist in that category for the current search).
-  const categoryCounts = useMemo(() => {
+  // The map's chips only count deals that have a pin (not online-only ones).
+  const [categoryCounts, mapCategoryCounts] = useMemo(() => {
     const searchOnly = filterDeals(deals, searchQuery, [], cities)
-    const counts = { all: searchOnly.length }
-    searchOnly.forEach(deal => {
-      counts[deal.category] = (counts[deal.category] ?? 0) + 1
-    })
-    return counts
+    const count = list => {
+      const counts = { all: list.length }
+      list.forEach(deal => { counts[deal.category] = (counts[deal.category] ?? 0) + 1 })
+      return counts
+    }
+    return [count(searchOnly), count(searchOnly.filter(d => getMapFocusLocations(d)?.length))]
   }, [deals, searchQuery, cities])
 
   const filteredDeals = useMemo(() => {
@@ -146,6 +148,7 @@ export function useFilters(deals, userCoords) {
     sortBy,
     setSortBy,
     categoryCounts,
+    mapCategoryCounts,
     pinnedIds,
     showCategory,
     showPinned,
