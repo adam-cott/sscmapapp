@@ -2656,8 +2656,8 @@
         "phone": "+13854985108"
       },
       {
-        "lat": 40.3748854,
-        "lng": -111.9193648,
+        "lat": 40.3752059,
+        "lng": -111.91693620000001,
         "address": "731 N Redwood Rd Ste 110, Saratoga Springs, UT 84045",
         "phone": "+13854298990"
       },
@@ -7066,8 +7066,8 @@
     "name": "Provo Beach",
     "category": "entertainment",
     "address": "4801 N University Ave Ste 210, Provo, UT 84604",
-    "lat": 40.2983483,
-    "lng": -111.658248,
+    "lat": 40.2996056,
+    "lng": -111.6590822,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Attraction!",
@@ -7087,8 +7087,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2983483,
-        "lng": -111.658248,
+        "lat": 40.2996056,
+        "lng": -111.6590822,
         "address": "4801 N University Ave Ste 210, Provo, UT 84604",
         "phone": "+18012245001"
       }
@@ -11405,8 +11405,8 @@
     "name": "Klucks Krispy Chicken",
     "category": "free",
     "address": "282 E Crossroads Blvd, Saratoga Springs, UT 84045",
-    "lat": 40.3875114,
-    "lng": -111.9064409,
+    "lat": 40.388130499999995,
+    "lng": -111.91008989999999,
     "locationRestriction": "Saratoga Springs",
     "deal": {
       "title": "FREE! Order of Fried Chicken! (3 Pieces & 1 Sauce)",
@@ -11426,8 +11426,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3875114,
-        "lng": -111.9064409,
+        "lat": 40.388130499999995,
+        "lng": -111.91008989999999,
         "address": "282 E Crossroads Blvd, Saratoga Springs, UT 84045",
         "phone": "+13853527432"
       },
@@ -13373,8 +13373,8 @@
     "name": "UVU Athletics",
     "category": "free",
     "address": "800 W University Pkwy, Orem, UT 84058",
-    "lat": 40.2787626,
-    "lng": -111.7153739,
+    "lat": 40.278517699999995,
+    "lng": -111.7174544,
     "locationRestriction": "",
     "deal": {
       "title": "FREE! Admission to Regular Season Home Events!",
@@ -13394,8 +13394,8 @@
     ],
     "locations": [
       {
-        "lat": 40.2787626,
-        "lng": -111.7153739,
+        "lat": 40.278517699999995,
+        "lng": -111.7174544,
         "address": "800 W University Pkwy, Orem, UT 84058",
         "phone": "+18018638664"
       }
@@ -20231,8 +20231,8 @@
     "name": "Klucks Krispy Chicken",
     "category": "sandwiches",
     "address": "282 E Crossroads Blvd, Saratoga Springs, UT 84045",
-    "lat": 40.3875114,
-    "lng": -111.9064409,
+    "lat": 40.388130499999995,
+    "lng": -111.91008989999999,
     "locationRestriction": "Saratoga Springs",
     "deal": {
       "title": "Buy 1 Entree & 2 Drinks, Get 1 Entree FREE!",
@@ -20252,8 +20252,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3875114,
-        "lng": -111.9064409,
+        "lat": 40.388130499999995,
+        "lng": -111.91008989999999,
         "address": "282 E Crossroads Blvd, Saratoga Springs, UT 84045",
         "phone": "+13853527432"
       },
@@ -20270,8 +20270,8 @@
     "name": "Klucks Krispy Chicken",
     "category": "sandwiches",
     "address": "282 E Crossroads Blvd, Saratoga Springs, UT 84045",
-    "lat": 40.3875114,
-    "lng": -111.9064409,
+    "lat": 40.388130499999995,
+    "lng": -111.91008989999999,
     "locationRestriction": "Saratoga Springs",
     "deal": {
       "title": "Buy 1 Entree or Meal, Get 1 50% OFF!",
@@ -20291,8 +20291,8 @@
     ],
     "locations": [
       {
-        "lat": 40.3875114,
-        "lng": -111.9064409,
+        "lat": 40.388130499999995,
+        "lng": -111.91008989999999,
         "address": "282 E Crossroads Blvd, Saratoga Springs, UT 84045",
         "phone": "+13853527432"
       },
