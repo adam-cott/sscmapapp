@@ -1,5 +1,5 @@
 import { useState, useMemo, useCallback, useEffect, useRef } from 'react'
-import { filterDeals, getNearestDistance } from '../utils/dealHelpers'
+import { filterDeals, getNearestDistance, searchCities, parsePlaceQuery } from '../utils/dealHelpers'
 import { CATEGORY_LABELS } from '../utils/categoryColors'
 
 export function useFilters(deals, userCoords) {
@@ -78,20 +78,30 @@ export function useFilters(deals, userCoords) {
     setListMode(true)
   }, [])
 
+  // Cities come from the full list so a pinned subset can't shrink them.
+  const cities = useMemo(() => searchCities(deals), [deals])
+
+  // The city or venue a search names in full ("American Fork", "UVU pizza"),
+  // for the map to zoom to. Partial names ("Americ") don't zoom.
+  const searchPlace = useMemo(() => {
+    const match = parsePlaceQuery(searchQuery, cities)
+    return match?.full ? (match.places[0].venue ?? match.places[0].city) : null
+  }, [searchQuery, cities])
+
   // Counts per category based on search query only (category filter excluded so
   // each chip always shows how many deals exist in that category for the current search).
   const categoryCounts = useMemo(() => {
-    const searchOnly = filterDeals(deals, searchQuery, [])
+    const searchOnly = filterDeals(deals, searchQuery, [], cities)
     const counts = { all: searchOnly.length }
     searchOnly.forEach(deal => {
       counts[deal.category] = (counts[deal.category] ?? 0) + 1
     })
     return counts
-  }, [deals, searchQuery])
+  }, [deals, searchQuery, cities])
 
   const filteredDeals = useMemo(() => {
     const base = pinnedIds ? deals.filter(d => pinnedIds.includes(d.id)) : deals
-    const filtered = filterDeals(base, searchQuery, pinnedIds ? [] : activeCategories)
+    const filtered = filterDeals(base, searchQuery, pinnedIds ? [] : activeCategories, cities)
     const sorted = [...filtered]
 
     if (sortBy === 'nearest') {
@@ -121,7 +131,7 @@ export function useFilters(deals, userCoords) {
     }
 
     return sorted
-  }, [deals, searchQuery, activeCategories, pinnedIds, sortBy, userCoords])
+  }, [deals, searchQuery, activeCategories, pinnedIds, sortBy, userCoords, cities])
 
   const isListMode = listMode || searchQuery.trim().length > 0 || activeCategories.length > 0
 
@@ -132,6 +142,7 @@ export function useFilters(deals, userCoords) {
     toggleCategory,
     clearFilters,
     filteredDeals,
+    searchPlace,
     sortBy,
     setSortBy,
     categoryCounts,

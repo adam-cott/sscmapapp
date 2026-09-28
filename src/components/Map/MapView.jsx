@@ -60,9 +60,11 @@ function AutoSpiderfy() {
 // Zooms/pans to fit a set of [lat, lng] points once, when the set changes
 // (e.g. entering or changing "View on map" focus). Doesn't re-fit on every
 // render, since the user may then pan/zoom manually within focus mode.
-function FitBounds({ points }) {
+// `fitKey` overrides what counts as a change: a place search passes the
+// place name, so typing more words after "American Fork" doesn't re-zoom.
+function FitBounds({ points, fitKey }) {
   const map = useMap()
-  const key = points?.map(p => p.join(',')).join('|')
+  const key = fitKey ?? points?.map(p => p.join(',')).join('|')
   const fittedKeyRef = useRef(null)
 
   useEffect(() => {
@@ -85,7 +87,7 @@ const LOCATION_ICON = L.divIcon({
   iconAnchor: [16, 16],
 })
 
-export default function MapView({ deals, selectedDeal, onSelectDeal, onSelectLocation, usageMap, userCoords, focusPoints }) {
+export default function MapView({ deals, selectedDeal, onSelectDeal, onSelectLocation, usageMap, userCoords, focusPoints, fitKey }) {
   // Group pins by unique coordinate — one pin per physical location
   const pins = useMemo(() => {
     const byCoord = new Map()
@@ -125,7 +127,7 @@ export default function MapView({ deals, selectedDeal, onSelectDeal, onSelectLoc
           maxZoom={MAX_ZOOM}
         />
         <AutoSpiderfy />
-        {focusPoints?.length > 0 && <FitBounds points={focusPoints} />}
+        {focusPoints?.length > 0 && <FitBounds points={focusPoints} fitKey={fitKey} />}
         {userCoords && (
           <Marker
             position={[userCoords.lat, userCoords.lng]}

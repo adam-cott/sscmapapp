@@ -98,10 +98,18 @@ The card runs Oct 1 → Oct 1. Each year the whole deal list is replaced from a 
 6. `DEALS_FILE=reports/card-import-YYYY-YY.preview.json npx vitest run` must pass (`src/data/deals.test.js`: every deal has a pin, no abbreviations, etc.).
 7. **Pin audit:** `DEALS_FILE=reports/card-import-YYYY-YY.preview.json node scripts/audit-pins.js` (~750 Google requests) → read `reports/pin-audit.md`. Continuing businesses keep last year's pins, so wrong or closed stores carry over unless this catches them (the Sept 2026 audit found 53 wrong-address pins and 9 closed stores). Fix "Misplaced" and "Closed" with a dry run + Adam's approval; `--snap` moves 50–150 m near-misses onto Google's spot.
 8. **Switch:** `node scripts/import-card.js --write`, bump `CARD_YEAR` in `src/constants/storageKeys.js` (resets everyone's usage/history/favorites; old data stays under the old keys/fields, never deleted), update counts (About screen, README, this file), push. Old Featured picks stop matching any deal and vanish from Home on their own; Adam re-picks in the Admin tab.
+9. **Venue tags:** `node scripts/tag-venues.js` (dry run, ~300 Google requests) → show Adam `reports/venue-tags.md` → `--write`. Tags stores Google says are *inside* UVU, BYU, and the malls, for location search. Hand fixes go in `scripts/venue-overrides.json` (survive re-runs); Adam's rule: roadside stores near a mall don't count.
 
 Parser rules worth knowing: a trailing location on the card line becomes `locationRestriction` (lookup table `TAILS`); text after the offer that looks like a condition becomes `deal.description` ("Details:"); headline = the offer. When one card line has a separate bubble per item (CLAS Ropes Course), split it into one deal per item via an `OVERRIDES` array. When a store is branded with one city but its address is in another (The Picklr "Lehi" in Saratoga Springs), write the restriction as "Lehi/Saratoga Springs" so the matcher finds it.
 
 ---
+
+## Location Search
+Typing a city, venue, or nickname finds deals honored at a store there; full rules in `specs/location-search-plan.md`, logic in `filterDeals` / `parsePlaceQuery` (`src/utils/dealHelpers.js`).
+- Cities come from store addresses (no list to maintain); venues are `SEARCH_VENUES` + the `venue` tag on stores; nicknames SLC/AF/PG/SF/EM count only when followed by a space. No "SS" (Adam).
+- A deal found by place is a **copy** whose `locations` are only its honoring stores there (same id), so pins, distance, and Directions follow. Never mutate the original.
+- Partial names match from the start of the name (≥40% and 3+ letters) and add to normal text results. Only full matches zoom the map, once per place (`fitKey`).
+- Results always include plain text matches of the whole query (brands like "Provo Beach"); text search reads only the "valid at" part of a restriction, not "excluding …".
 
 ## Map Logic
 - `FALLBACK_COORDS`: coords shared by 8+ different businesses are excluded from map (city-level geocoding fallbacks). Threshold = 8.

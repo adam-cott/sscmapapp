@@ -74,6 +74,7 @@ function AppShell() {
     toggleCategory,
     clearFilters,
     filteredDeals,
+    searchPlace,
     sortBy,
     setSortBy,
     categoryCounts,
@@ -156,12 +157,17 @@ function AppShell() {
     setShowResetConfirm(false)
   }
 
+  // A deal opened from a place search is a narrowed copy (only its stores in
+  // that city/venue), so look it up in the current results first to keep
+  // Directions and "View on map" on those stores.
+  const findDeal = (dealId) => filteredDeals.find(d => d.id === dealId) ?? dealsWithUsage.find(d => d.id === dealId)
+
   const handleUse = (dealId) => {
     recordUse(dealId)
     logUse(dealId)
     setSelectedDeal(prev => {
       if (!prev) return null
-      const updated = dealsWithUsage.find(d => d.id === dealId)
+      const updated = findDeal(dealId)
       if (!updated) return prev
       const newUsedCount = (usageMap[dealId] ?? 0) + 1
       const isUnlimited = updated.deal.maxUses === null
@@ -206,14 +212,14 @@ function AppShell() {
   // gets overridden to that pin's coords (see BusinessMarker), which would
   // otherwise leak into a restricted deal's single "primary location" pin.
   const handleViewOnMap = useCallback((dealId) => {
-    const deal = dealsWithUsage.find(d => d.id === dealId)
+    const deal = filteredDeals.find(d => d.id === dealId) ?? dealsWithUsage.find(d => d.id === dealId)
     if (!deal) return
     const locations = getMapFocusLocations(deal)
     if (!locations?.length) return
     setMapFocus({ deal: { ...deal, locations }, businessName: deal.name, restriction: deal.locationRestriction || null, count: locations.length })
     setSelectedDeal(null)
     setActiveTab('map')
-  }, [dealsWithUsage])
+  }, [filteredDeals, dealsWithUsage])
 
   const sidebarProps = {
     searchQuery,
@@ -280,7 +286,10 @@ function AppShell() {
                 onSelectLocation={handleSelectLocation}
                 usageMap={usageMap}
                 userCoords={coords}
-                focusPoints={mapFocus ? mapFocus.deal.locations.map(l => [l.lat, l.lng]) : undefined}
+                focusPoints={mapFocus
+                  ? mapFocus.deal.locations.map(l => [l.lat, l.lng])
+                  : searchPlace ? filteredDeals.flatMap(d => (getMapFocusLocations(d) ?? []).map(l => [l.lat, l.lng])) : undefined}
+                fitKey={mapFocus ? undefined : searchPlace}
               />
             </div>
 

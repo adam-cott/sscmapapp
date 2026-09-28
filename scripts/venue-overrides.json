@@ -1,0 +1,8 @@
+{
+  "add": [],
+  "remove": [
+    { "venue": "University Place", "name": "Stretch Zone", "address": "1165 S State St, Orem, UT 84097, USA", "why": "On the road by the mall, not in it (Adam, 2026-09-28)" },
+    { "venue": "University Place", "name": "Klucks Krispy Chicken", "address": "1066 S 750 E, Orem, UT 84097, USA", "why": "On the road by the mall, not in it (Adam, 2026-09-28)" },
+    { "venue": "University Place", "name": "Wing Nutz", "address": "1054 S 750 E, Orem, UT 84097", "why": "On the road by the mall, not in it (Adam, 2026-09-28)" }
+  ]
+}

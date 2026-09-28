@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { matchLocationsToRestriction, getMapFocusLocations, getDirectionsLocation } from './dealHelpers'
+import { matchLocationsToRestriction, getMapFocusLocations, getDirectionsLocation, filterDeals, parsePlaceQuery, searchCities } from './dealHelpers'
 
 const loc = (city, lat = 40, lng = -111) => ({ address: `1 Main St, ${city}, UT 84000`, lat, lng })
 const cities = locs => locs?.map(l => l.address.split(', ')[1]) ?? null
@@ -86,5 +86,97 @@ describe('getDirectionsLocation', () => {
 
   it('returns null when nothing honors the deal', () => {
     expect(getDirectionsLocation({ locationRestriction: 'Lehi', locations: [OREM] }, null)).toBeNull()
+  })
+})
+
+describe('location search', () => {
+  const deal = (id, name, locations, extra = {}) =>
+    ({ id, name, category: 'restaurants', deal: { title: 'A deal', description: '' }, locationRestriction: '', locations, ...extra })
+  const AF = loc('American Fork')
+  const UVU_STORE = { ...loc('Orem'), venue: 'UVU' }
+  const kfc = deal('kfc', 'KFC', [PROVO, AF, OREM], { locationRestriction: 'All Utah Locations' })
+  const crumbl = deal('crumbl', 'Crumbl', [OREM, AF], { locationRestriction: 'Orem', category: 'treats' })
+  const pizza = deal('pizza', 'Pie Place', [AF, PROVO], { category: 'pizza' })
+  const beach = deal('beach', 'Provo Beach', [PROVO])
+  const online = deal('online', 'HiddenHunts.com', [])
+  const jamba = deal('jamba', 'Jamba', [UVU_STORE, OREM])
+  const wendys = deal('wendys', "Wendy's", [LEHI, OREM], { locationRestriction: 'Lehi & Traverse Mountain' })
+  const all = [
+    kfc, crumbl, pizza, beach, online, jamba, wendys,
+    deal('sandy', 'Shop One', [loc('Sandy')]), deal('santaquin', 'Shop Two', [loc('Santaquin')]),
+    deal('slc', 'Shop Three', [loc('Salt Lake City')]), deal('ssl', 'Shop Four', [loc('South Salt Lake')]),
+    deal('wj', 'Shop Five', [loc('West Jordan')]), deal('sj', 'Shop Six', [loc('South Jordan')]),
+    deal('pg', 'Shop Seven', [loc('Pleasant Grove')], { category: 'pizza' }),
+    deal('midvale', 'Shop Eight', [loc('Midvale')]), deal('midway', 'Shop Nine', [loc('Midway')]),
+  ]
+  const ids = q => filterDeals(all, q, []).map(d => d.id).sort()
+  const found = (q, id) => filterDeals(all, q, []).find(d => d.id === id)
+
+  it('finds a chain through its store address, narrowed to that city', () => {
+    expect(ids('American Fork')).toEqual(['kfc', 'pizza'])
+    expect(cities(found('American Fork', 'kfc').locations)).toEqual(['American Fork'])
+  })
+
+  it('skips a business whose deal is not honored in that city', () => {
+    expect(ids('American Fork')).not.toContain('crumbl')
+  })
+
+  it('combines a city with other words, in either order', () => {
+    expect(ids('American Fork pizza')).toEqual(['pizza'])
+    expect(ids('pizza american fork')).toEqual(['pizza'])
+    expect(ids('American Fork sushi')).toEqual([])
+  })
+
+  it('matches partial names from the start, 40%+ and 3+ letters', () => {
+    expect(ids('Americ')).toEqual(['kfc', 'pizza'])
+    expect(ids('ork')).toEqual([])
+    expect(ids('Fork')).toEqual([])
+    expect(parsePlaceQuery('Or', searchCities(all))).toBeNull()
+    expect(ids('San')).toEqual(['sandy']) // 3 of 9 letters of Santaquin is under 40%
+    expect(ids('Mid')).toEqual(['midvale', 'midway']) // several cities fit: all of them
+  })
+
+  it('keeps look-alike cities apart', () => {
+    expect(ids('Salt Lake City')).toEqual(['slc'])
+    expect(ids('West Jordan')).toEqual(['wj'])
+  })
+
+  it('reads nicknames only when followed by a space', () => {
+    expect(ids('pg pizza')).toEqual(['pg'])
+    expect(parsePlaceQuery('pg ', searchCities(all))?.places).toEqual([{ city: 'Pleasant Grove' }])
+    expect(parsePlaceQuery('pg', searchCities(all))).toBeNull()
+    expect(parsePlaceQuery('pgs', searchCities(all))).toBeNull()
+    expect(parsePlaceQuery('ss pizza', searchCities(all))).toBeNull()
+  })
+
+  it('still finds a brand whose name contains a city', () => {
+    expect(ids('Provo Beach')).toContain('beach')
+  })
+
+  it('leaves out deals with no stores', () => {
+    expect(ids('Provo')).not.toContain('online')
+  })
+
+  it('matches venues through store tags, falling back for deals that only name the venue', () => {
+    expect(found('UVU', 'jamba').locations).toEqual([UVU_STORE])
+    expect(cities(found('Traverse Mountain', 'wendys').locations)).toEqual(['Lehi'])
+    expect(ids('Fashion Place')).toEqual([])
+  })
+
+  it('does not find a deal through a place it excludes', () => {
+    const costa = deal('costa', 'Costa', [UVU_STORE, OREM], { locationRestriction: 'All Utah County, excluding UVU' })
+    expect(filterDeals([costa], 'UVU', []).map(d => d.id)).toEqual([])
+    expect(filterDeals([costa], 'Orem', []).map(d => d.id)).toEqual(['costa'])
+  })
+
+  it('never changes the original deals', () => {
+    const copy = found('American Fork', 'kfc')
+    expect(copy).not.toBe(kfc)
+    expect(copy.id).toBe('kfc')
+    expect(kfc.locations).toHaveLength(3)
+  })
+
+  it('ignores case and extra spaces', () => {
+    expect(ids('  AMERICAN   fork  ')).toEqual(['kfc', 'pizza'])
   })
 })

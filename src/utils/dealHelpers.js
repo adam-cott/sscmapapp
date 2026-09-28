@@ -176,7 +176,8 @@ const VENUES = {
 function placeMatchesLocation(placeToken, location) {
   const c = normalizePlace(cityFromAddress(location.address) || '')
   return (!!c && (c.includes(placeToken) || placeToken.includes(c))) ||
-    !!VENUES[placeToken]?.test(location.address)
+    !!VENUES[placeToken]?.test(location.address) ||
+    SEARCH_VENUES.some(v => v.venue === location.venue && v.terms.includes(placeToken))
 }
 
 /**
@@ -240,26 +241,116 @@ export function getPrimaryCategory(deals) {
   return TIEBREAKER.find(t => tied.includes(t)) ?? tied[0]
 }
 
+// Location search: a query naming a city or venue ("American Fork",
+// "UVU pizza") matches deals honored at a store there. See
+// specs/location-search-plan.md for the rules.
+
+// Venues are matched through the `venue` tag on each store (set by
+// scripts/tag-venues.js); `city` is the fallback for deals that only name the
+// venue in their valid-at text.
+export const SEARCH_VENUES = [
+  { venue: 'UVU', city: 'Orem', terms: ['uvu', 'utah valley university'] },
+  { venue: 'BYU', city: 'Provo', terms: ['byu', 'brigham young university'] },
+  { venue: 'University Place', city: 'Orem', terms: ['university place'] },
+  { venue: 'Provo Towne Centre', city: 'Provo', terms: ['provo towne centre', 'towne centre'] },
+  { venue: 'The Shops at Riverwoods', city: 'Provo', terms: ['riverwoods', 'shops at riverwoods', 'the shops at riverwoods'] },
+  { venue: 'Traverse Mountain', city: 'Lehi', terms: ['traverse mountain'] },
+  { venue: 'Thanksgiving Point', city: 'Lehi', terms: ['thanksgiving point'] },
+  { venue: 'Fashion Place', city: 'Murray', terms: ['fashion place'] },
+]
+
+// Only count when followed by a space ("pg pizza"), so "pg" or "pgs" alone don't.
+const NICKNAMES = { slc: 'Salt Lake City', af: 'American Fork', pg: 'Pleasant Grove', sf: 'Spanish Fork', em: 'Eagle Mountain' }
+
+export function searchCities(deals) {
+  const cities = new Set()
+  for (const d of deals) for (const l of d.locations ?? []) {
+    const c = cityFromAddress(l.address)
+    if (c && !/\d|^UT\b/.test(c)) cities.add(c)
+  }
+  return [...cities]
+}
+
 /**
- * Filter deals by active categories and search query.
+ * Finds the place a query names. Returns null, or
+ * { full: true, places: [one place], rest: 'other words' } for a whole name or
+ * nickname, or { full: false, places: [...], rest: '' } for a partial name
+ * (the query is the start of a name, at least 40% of it and 3+ letters).
+ * A place is { city } or { venue, city }.
  */
-export function filterDeals(deals, searchQuery, activeCategories) {
+export function parsePlaceQuery(query, cities) {
+  const spaced = query.toLowerCase().replace(/\s+/g, ' ').replace(/^ /, '')
+  const q = spaced.trim()
+  if (!q) return null
+  const places = [
+    ...cities.map(c => ({ place: { city: c }, terms: [c.toLowerCase()] })),
+    ...SEARCH_VENUES.map(v => ({ place: { venue: v.venue, city: v.city }, terms: v.terms })),
+  ]
+
+  let best = null
+  for (const { place, terms } of places) for (const t of terms) {
+    if (!` ${q} `.includes(` ${t} `) || (best && best.term.length >= t.length)) continue
+    best = { place, term: t }
+  }
+  const nickname = spaced.match(/(?:^| )(slc|af|pg|sf|em) /)
+  if (!best && nickname) best = { place: { city: NICKNAMES[nickname[1]] }, term: nickname[1] }
+  if (best) {
+    const rest = ` ${q} `.replace(` ${best.term} `, ' ').trim()
+    return { full: true, places: [best.place], rest }
+  }
+
+  if (q.length < 3) return null
+  const partial = places.filter(({ terms }) => terms.some(t => t.startsWith(q) && q.length >= 0.4 * t.length)).map(p => p.place)
+  return partial.length ? { full: false, places: partial, rest: '' } : null
+}
+
+// Only the "valid at" part of a restriction counts — "All Utah County,
+// excluding UVU" must not come up for "UVU".
+function textMatches(d, q) {
+  return d.name.toLowerCase().includes(q) ||
+    d.deal.title.toLowerCase().includes(q) ||
+    (d.deal.description || '').toLowerCase().includes(q) ||
+    splitRestrictionClauses(d.locationRestriction || '').includeText.toLowerCase().includes(q) ||
+    d.category.includes(q) ||
+    (d.tags || []).some(t => t.toLowerCase().includes(q))
+}
+
+// The deal's honoring stores at a place. A deal whose valid-at text names the
+// venue (Wendy's "Traverse Mountain") falls back to its stores in the venue's
+// city, then to all its honoring stores, so it never ends up with none.
+function storesAt(d, place) {
+  const honoring = getMapFocusLocations(d) ?? []
+  if (!place.venue) return honoring.filter(l => cityFromAddress(l.address) === place.city)
+  const tagged = honoring.filter(l => l.venue === place.venue)
+  if (tagged.length) return tagged
+  const v = SEARCH_VENUES.find(x => x.venue === place.venue)
+  const include = d.locationRestriction ? splitRestrictionClauses(d.locationRestriction).includeText.toLowerCase() : ''
+  if (!v.terms.some(t => include.includes(t))) return []
+  const inCity = honoring.filter(l => cityFromAddress(l.address) === place.city)
+  return inCity.length ? inCity : honoring
+}
+
+/**
+ * Filter deals by active categories and search query. A deal found through a
+ * place comes back as a copy whose `locations` are only its stores there (same
+ * id; the original is untouched), so pins, distance and directions follow.
+ */
+export function filterDeals(deals, searchQuery, activeCategories, cities = searchCities(deals)) {
   let result = deals
 
   if (activeCategories.length > 0) {
     result = result.filter(d => activeCategories.includes(d.category))
   }
 
-  if (searchQuery.trim()) {
-    const q = searchQuery.toLowerCase()
-    result = result.filter(d =>
-      d.name.toLowerCase().includes(q) ||
-      d.deal.title.toLowerCase().includes(q) ||
-      (d.deal.description || '').toLowerCase().includes(q) ||
-      (d.locationRestriction || '').toLowerCase().includes(q) ||
-      (d.tags || []).some(t => t.toLowerCase().includes(q))
-    )
-  }
+  const q = searchQuery.toLowerCase().replace(/\s+/g, ' ').trim()
+  if (!q) return result
 
-  return result
+  const match = parsePlaceQuery(searchQuery, cities)
+  return result.flatMap(d => {
+    if (match) {
+      const stores = [...new Set(match.places.flatMap(p => storesAt(d, p)))]
+      if (stores.length && (!match.rest || textMatches(d, match.rest))) return [{ ...d, locations: stores }]
+    }
+    return textMatches(d, q) ? [d] : []
+  })
 }

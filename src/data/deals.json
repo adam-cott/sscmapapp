@@ -606,7 +606,7 @@
     "id": "2627-pizza-012",
     "name": "Malawi's Pizza",
     "category": "pizza",
-    "address": "",
+    "address": "4801 N University Ave #110, Provo, UT 84604, USA",
     "lat": 40.2990229,
     "lng": -111.6596246,
     "locationRestriction": "",
@@ -630,8 +630,9 @@
       {
         "lat": 40.2990229,
         "lng": -111.6596246,
-        "address": "",
-        "phone": "+18012252800"
+        "address": "4801 N University Ave #110, Provo, UT 84604, USA",
+        "phone": "+18012252800",
+        "venue": "The Shops at Riverwoods"
       }
     ]
   },
@@ -838,7 +839,8 @@
         "lat": 40.2747368,
         "lng": -111.683691,
         "address": "541 E University Pkwy Ste B, Orem, UT 84097",
-        "phone": "+13853523752"
+        "phone": "+13853523752",
+        "venue": "University Place"
       }
     ]
   },
@@ -871,7 +873,8 @@
         "lat": 40.2747368,
         "lng": -111.683691,
         "address": "541 E University Pkwy Ste B, Orem, UT 84097",
-        "phone": "+13853523752"
+        "phone": "+13853523752",
+        "venue": "University Place"
       }
     ]
   },
@@ -1741,7 +1744,8 @@
         "lat": 40.273428,
         "lng": -111.6770976,
         "address": "775 E University Pkwy, Orem, UT 84097",
-        "phone": "+18012244414"
+        "phone": "+18012244414",
+        "venue": "University Place"
       }
     ]
   },
@@ -1774,7 +1778,8 @@
         "lat": 40.273428,
         "lng": -111.6770976,
         "address": "775 E University Pkwy, Orem, UT 84097",
-        "phone": "+18012244414"
+        "phone": "+18012244414",
+        "venue": "University Place"
       }
     ]
   },
@@ -2005,7 +2010,8 @@
         "lat": 40.2980866,
         "lng": -111.6596429,
         "address": "4801 N University Ave #51, Provo, UT 84604",
-        "phone": "+18012246668"
+        "phone": "+18012246668",
+        "venue": "The Shops at Riverwoods"
       }
     ]
   },
@@ -2245,7 +2251,8 @@
         "lat": 40.27451,
         "lng": -111.68132,
         "address": "575 E University Pkwy Ste B28, Orem, UT 84097",
-        "phone": "+13852138277"
+        "phone": "+13852138277",
+        "venue": "University Place"
       },
       {
         "lat": 40.3890036,
@@ -2290,7 +2297,8 @@
         "lat": 40.27451,
         "lng": -111.68132,
         "address": "575 E University Pkwy Ste B28, Orem, UT 84097",
-        "phone": "+13852138277"
+        "phone": "+13852138277",
+        "venue": "University Place"
       },
       {
         "lat": 40.3890036,
@@ -2335,7 +2343,8 @@
         "lat": 40.27451,
         "lng": -111.68132,
         "address": "575 E University Pkwy Ste B28, Orem, UT 84097",
-        "phone": "+13852138277"
+        "phone": "+13852138277",
+        "venue": "University Place"
       },
       {
         "lat": 40.3890036,
@@ -2458,7 +2467,8 @@
         "lat": 40.27365116178191,
         "lng": -111.67942940091054,
         "address": "683 University Pkwy, Orem, UT 84097",
-        "phone": "+18017651222"
+        "phone": "+18017651222",
+        "venue": "University Place"
       }
     ]
   },
@@ -2562,7 +2572,7 @@
     "id": "2627-restaurants-051",
     "name": "Chubby's",
     "category": "restaurants",
-    "address": "",
+    "address": "955 N 1400 W, Salt Lake City, UT 84116, USA",
     "lat": 40.7905574,
     "lng": -111.9314652,
     "locationRestriction": "All Locations",
@@ -2586,7 +2596,7 @@
       {
         "lat": 40.7905574,
         "lng": -111.9314652,
-        "address": "",
+        "address": "955 N 1400 W, Salt Lake City, UT 84116, USA",
         "phone": "+18015962070"
       }
     ]
@@ -2662,7 +2672,8 @@
         "lat": 40.2738897,
         "lng": -111.68245189999999,
         "address": "557 E University Pkwy Suite B - 1, Orem, UT 84097, USA",
-        "phone": "+18012255220"
+        "phone": "+18012255220",
+        "venue": "University Place"
       },
       {
         "lat": 40.250015,
@@ -2680,7 +2691,8 @@
         "lat": 40.2780342,
         "lng": -111.7135131,
         "address": "800 W University Pkwy, Orem, UT 84058, USA",
-        "phone": "+18018637637"
+        "phone": "+18018637637",
+        "venue": "UVU"
       },
       {
         "lat": 40.3647543,
@@ -3802,13 +3814,15 @@
         "lat": 40.2745477,
         "lng": -111.6816521,
         "address": "575 E University Pkwy Ste A-20, Orem, UT 84097, USA",
-        "phone": "+18014260900"
+        "phone": "+18014260900",
+        "venue": "University Place"
       },
       {
         "lat": 40.63531,
         "lng": -111.8870396,
         "address": "6227 S State St Ste 1, Murray, UT 84107, USA",
-        "phone": "+13854740033"
+        "phone": "+13854740033",
+        "venue": "Fashion Place"
       },
       {
         "lat": 40.7630494,
@@ -4060,7 +4074,8 @@
         "lat": 40.298773399999995,
         "lng": -111.6577191,
         "address": "4801 N University Ave, Provo, UT 84604, USA",
-        "phone": "+18013740100"
+        "phone": "+18013740100",
+        "venue": "The Shops at Riverwoods"
       }
     ]
   },
@@ -4825,7 +4840,8 @@
         "lat": 40.2173525,
         "lng": -111.6623462,
         "address": "1200 Towne Centre Blvd Ste 1096, Provo, UT 84601",
-        "phone": "+18018122141"
+        "phone": "+18018122141",
+        "venue": "Provo Towne Centre"
       },
       {
         "lat": 40.2858732,
@@ -4882,7 +4898,8 @@
         "lat": 40.2173525,
         "lng": -111.6623462,
         "address": "1200 Towne Centre Blvd Ste 1096, Provo, UT 84601",
-        "phone": "+18018122141"
+        "phone": "+18018122141",
+        "venue": "Provo Towne Centre"
       },
       {
         "lat": 40.2858732,
@@ -5278,7 +5295,8 @@
         "lat": 40.248403,
         "lng": -111.647053,
         "address": "1171 Wilkinson Student Center, Provo, UT 84602",
-        "phone": "+18014224381"
+        "phone": "+18014224381",
+        "venue": "BYU"
       }
     ]
   },
@@ -5517,7 +5535,7 @@
     "id": "2627-entertainment-117",
     "name": "Coin Crazy",
     "category": "entertainment",
-    "address": "",
+    "address": "1024 Expressway Ln, Spanish Fork, UT 84660, USA",
     "lat": 40.122395,
     "lng": -111.6370493,
     "locationRestriction": "",
@@ -5541,7 +5559,7 @@
       {
         "lat": 40.122395,
         "lng": -111.6370493,
-        "address": "",
+        "address": "1024 Expressway Ln, Spanish Fork, UT 84660, USA",
         "phone": "+13854379360"
       }
     ]
@@ -5550,7 +5568,7 @@
     "id": "2627-entertainment-118",
     "name": "Coin Crazy",
     "category": "entertainment",
-    "address": "",
+    "address": "1024 Expressway Ln, Spanish Fork, UT 84660, USA",
     "lat": 40.122395,
     "lng": -111.6370493,
     "locationRestriction": "",
@@ -5574,7 +5592,7 @@
       {
         "lat": 40.122395,
         "lng": -111.6370493,
-        "address": "",
+        "address": "1024 Expressway Ln, Spanish Fork, UT 84660, USA",
         "phone": "+13854379360"
       }
     ]
@@ -5827,7 +5845,8 @@
         "lat": 40.2748209,
         "lng": -111.6790978,
         "address": "575 E University Pkwy Ste N237, Orem, UT 84097",
-        "phone": "+13853841985"
+        "phone": "+13853841985",
+        "venue": "University Place"
       }
     ]
   },
@@ -5860,7 +5879,8 @@
         "lat": 40.2748209,
         "lng": -111.6790978,
         "address": "575 E University Pkwy Ste N237, Orem, UT 84097",
-        "phone": "+13853841985"
+        "phone": "+13853841985",
+        "venue": "University Place"
       }
     ]
   },
@@ -6183,7 +6203,7 @@
     "id": "2627-entertainment-133",
     "name": "GetOut Games",
     "category": "entertainment",
-    "address": "",
+    "address": "283 N University Ave, Provo, UT 84601, USA",
     "lat": 40.2374209,
     "lng": -111.6590855,
     "locationRestriction": "",
@@ -6207,7 +6227,7 @@
       {
         "lat": 40.2374209,
         "lng": -111.6590855,
-        "address": "",
+        "address": "283 N University Ave, Provo, UT 84601, USA",
         "phone": "+18013104434"
       },
       {
@@ -6699,7 +6719,8 @@
         "lat": 40.2167918,
         "lng": -111.6630217,
         "address": "1200 Towne Centre Blvd Ste 2018, Provo, UT 84601",
-        "phone": "+18012100778"
+        "phone": "+18012100778",
+        "venue": "Provo Towne Centre"
       }
     ]
   },
@@ -6732,7 +6753,8 @@
         "lat": 40.2167918,
         "lng": -111.6630217,
         "address": "1200 Towne Centre Blvd Ste 2018, Provo, UT 84601",
-        "phone": "+18012100778"
+        "phone": "+18012100778",
+        "venue": "Provo Towne Centre"
       }
     ]
   },
@@ -6963,7 +6985,8 @@
         "lat": 40.2996056,
         "lng": -111.6590822,
         "address": "4801 N University Ave Ste 210, Provo, UT 84604",
-        "phone": "+18012245001"
+        "phone": "+18012245001",
+        "venue": "The Shops at Riverwoods"
       }
     ]
   },
@@ -7380,7 +7403,8 @@
         "lat": 40.2161531,
         "lng": -111.66259930000001,
         "address": "1200 Towne Centre Blvd suite 1158, Provo, UT 84601, USA",
-        "phone": "+18016236985"
+        "phone": "+18016236985",
+        "venue": "Provo Towne Centre"
       }
     ]
   },
@@ -7779,7 +7803,8 @@
         "lat": 40.2484703,
         "lng": -111.64788809999999,
         "address": "800 E Campus Dr, Provo, UT 84602, USA",
-        "phone": "+18014222400"
+        "phone": "+18014222400",
+        "venue": "BYU"
       }
     ]
   },
@@ -7812,7 +7837,8 @@
         "lat": 40.248723,
         "lng": -111.64654360000002,
         "address": "1030 Wilkinson Student Center, Provo, UT 84602",
-        "phone": "+18014221030"
+        "phone": "+18014221030",
+        "venue": "BYU"
       }
     ]
   },
@@ -7845,7 +7871,8 @@
         "lat": 40.248723,
         "lng": -111.64654360000002,
         "address": "1030 Wilkinson Student Center, Provo, UT 84602",
-        "phone": "+18014221030"
+        "phone": "+18014221030",
+        "venue": "BYU"
       }
     ]
   },
@@ -8181,7 +8208,8 @@
         "lat": 40.434611,
         "lng": -111.880057,
         "address": "1870 W Traverse Pkwy Ste C, Lehi, UT 84043, USA",
-        "phone": "+18017564460"
+        "phone": "+18017564460",
+        "venue": "Traverse Mountain"
       },
       {
         "lat": 40.556685,
@@ -8225,7 +8253,7 @@
       {
         "lat": 40.3662777,
         "lng": -111.7540925,
-        "address": "",
+        "address": "919 W State St, Pleasant Grove, UT 84062, USA",
         "phone": "+18017857272"
       },
       {
@@ -8300,7 +8328,7 @@
       {
         "lat": 40.3662777,
         "lng": -111.7540925,
-        "address": "",
+        "address": "919 W State St, Pleasant Grove, UT 84062, USA",
         "phone": "+18017857272"
       },
       {
@@ -9415,7 +9443,8 @@
         "lat": 40.2782872,
         "lng": -111.7144156,
         "address": "800 W University Pkwy, Orem, UT 84058",
-        "phone": "+18018638641"
+        "phone": "+18018638641",
+        "venue": "UVU"
       }
     ]
   },
@@ -9448,7 +9477,8 @@
         "lat": 40.2782872,
         "lng": -111.7144156,
         "address": "800 W University Pkwy, Orem, UT 84058",
-        "phone": "+18018638641"
+        "phone": "+18018638641",
+        "venue": "UVU"
       }
     ]
   },
@@ -9481,7 +9511,8 @@
         "lat": 40.2744911,
         "lng": -111.68188359999999,
         "address": "575 E University Pkwy Ste G142, Orem, UT 84097",
-        "phone": "+18014270481"
+        "phone": "+18014270481",
+        "venue": "University Place"
       },
       {
         "lat": 40.6215933,
@@ -9523,7 +9554,8 @@
         "lat": 40.636007,
         "lng": -111.88583,
         "address": "6191 State State, Murray, UT 84107, USA",
-        "phone": "+18012901066"
+        "phone": "+18012901066",
+        "venue": "Fashion Place"
       },
       {
         "lat": 40.6935985,
@@ -9634,7 +9666,8 @@
         "lat": 40.4358686,
         "lng": -111.88538559999999,
         "address": "3700 N Cabelas Blvd Space 234, Lehi, UT 84043",
-        "phone": "+13853368373"
+        "phone": "+13853368373",
+        "venue": "Traverse Mountain"
       },
       {
         "lat": 40.526125,
@@ -9646,7 +9679,8 @@
         "lat": 40.2756571,
         "lng": -111.6797637,
         "address": "575 E University Pkwy M214, Orem, UT 84097, USA",
-        "phone": "+18017011703"
+        "phone": "+18017011703",
+        "venue": "University Place"
       },
       {
         "lat": 40.3802546,
@@ -9802,7 +9836,8 @@
         "lat": 40.27451,
         "lng": -111.68132,
         "address": "575 E University Pkwy Ste B28, Orem, UT 84097",
-        "phone": "+13852138277"
+        "phone": "+13852138277",
+        "venue": "University Place"
       },
       {
         "lat": 40.3890036,
@@ -9913,7 +9948,8 @@
         "lat": 40.248723,
         "lng": -111.64654360000002,
         "address": "1030 Wilkinson Student Center, Provo, UT 84602",
-        "phone": "+18014221030"
+        "phone": "+18014221030",
+        "venue": "BYU"
       }
     ]
   },
@@ -10044,7 +10080,7 @@
     "id": "2627-free-231",
     "name": "Coin Crazy",
     "category": "free",
-    "address": "",
+    "address": "1024 Expressway Ln, Spanish Fork, UT 84660, USA",
     "lat": 40.122395,
     "lng": -111.6370493,
     "locationRestriction": "",
@@ -10068,7 +10104,7 @@
       {
         "lat": 40.122395,
         "lng": -111.6370493,
-        "address": "",
+        "address": "1024 Expressway Ln, Spanish Fork, UT 84660, USA",
         "phone": "+13854379360"
       }
     ]
@@ -10810,7 +10846,8 @@
         "lat": 40.434611,
         "lng": -111.880057,
         "address": "1870 W Traverse Pkwy Ste C, Lehi, UT 84043, USA",
-        "phone": "+18017564460"
+        "phone": "+18017564460",
+        "venue": "Traverse Mountain"
       },
       {
         "lat": 40.556685,
@@ -10944,7 +10981,7 @@
     "id": "2627-free-249",
     "name": "GetOut Games",
     "category": "free",
-    "address": "",
+    "address": "283 N University Ave, Provo, UT 84601, USA",
     "lat": 40.2374209,
     "lng": -111.6590855,
     "locationRestriction": "",
@@ -10968,7 +11005,7 @@
       {
         "lat": 40.2374209,
         "lng": -111.6590855,
-        "address": "",
+        "address": "283 N University Ave, Provo, UT 84601, USA",
         "phone": "+18013104434"
       },
       {
@@ -11059,7 +11096,8 @@
         "lat": 40.4323486,
         "lng": -111.8801064,
         "address": "1851 W Traverse Pkwy Bldg G Ste A-2, Lehi, UT 84043",
-        "phone": "+18019016980"
+        "phone": "+18019016980",
+        "venue": "Traverse Mountain"
       },
       {
         "lat": 40.3053586,
@@ -11242,7 +11280,8 @@
         "lat": 40.2167918,
         "lng": -111.6630217,
         "address": "1200 Towne Centre Blvd Ste 2018, Provo, UT 84601",
-        "phone": "+18012100778"
+        "phone": "+18012100778",
+        "venue": "Provo Towne Centre"
       }
     ]
   },
@@ -12118,7 +12157,8 @@
         "lat": 40.2980549,
         "lng": -111.6595957,
         "address": "4801 N University Ave Ste 51, Provo, UT 84604",
-        "phone": "+18017097699"
+        "phone": "+18017097699",
+        "venue": "The Shops at Riverwoods"
       },
       {
         "lat": 40.067736,
@@ -12136,7 +12176,8 @@
         "lat": 40.43234280000001,
         "lng": -111.8795326,
         "address": "1825 W Traverse Pkwy Ste A, Lehi, UT 84043",
-        "phone": "+18019199595"
+        "phone": "+18019199595",
+        "venue": "Traverse Mountain"
       },
       {
         "lat": 40.123398699999996,
@@ -12709,7 +12750,8 @@
         "lat": 40.2161531,
         "lng": -111.66259930000001,
         "address": "1200 Towne Centre Blvd suite 1158, Provo, UT 84601, USA",
-        "phone": "+18016236985"
+        "phone": "+18016236985",
+        "venue": "Provo Towne Centre"
       }
     ]
   },
@@ -13060,7 +13102,8 @@
         "lat": 40.278517699999995,
         "lng": -111.7174544,
         "address": "800 W University Pkwy, Orem, UT 84058",
-        "phone": "+18018638664"
+        "phone": "+18018638664",
+        "venue": "UVU"
       }
     ]
   },
@@ -13093,7 +13136,8 @@
         "lat": 40.27822,
         "lng": -111.713619,
         "address": "Student Center, 800 W University Pkwy, Orem, UT 84058, USA",
-        "phone": "+18018638664"
+        "phone": "+18018638664",
+        "venue": "UVU"
       }
     ]
   },
@@ -13318,7 +13362,8 @@
         "lat": 40.4358686,
         "lng": -111.88538559999999,
         "address": "3700 N Cabelas Blvd Space 234, Lehi, UT 84043",
-        "phone": "+13853368373"
+        "phone": "+13853368373",
+        "venue": "Traverse Mountain"
       },
       {
         "lat": 40.526125,
@@ -13330,7 +13375,8 @@
         "lat": 40.2756571,
         "lng": -111.6797637,
         "address": "575 E University Pkwy M214, Orem, UT 84097, USA",
-        "phone": "+18017011703"
+        "phone": "+18017011703",
+        "venue": "University Place"
       },
       {
         "lat": 40.3802546,
@@ -13369,7 +13415,8 @@
         "lat": 40.4358686,
         "lng": -111.88538559999999,
         "address": "3700 N Cabelas Blvd Space 234, Lehi, UT 84043",
-        "phone": "+13853368373"
+        "phone": "+13853368373",
+        "venue": "Traverse Mountain"
       },
       {
         "lat": 40.526125,
@@ -13381,7 +13428,8 @@
         "lat": 40.2756571,
         "lng": -111.6797637,
         "address": "575 E University Pkwy M214, Orem, UT 84097, USA",
-        "phone": "+18017011703"
+        "phone": "+18017011703",
+        "venue": "University Place"
       },
       {
         "lat": 40.3802546,
@@ -13594,7 +13642,8 @@
         "lat": 40.2748122,
         "lng": -111.6802325,
         "address": "575 E University Pkwy, Orem, UT 84097",
-        "phone": "+13855820002"
+        "phone": "+13855820002",
+        "venue": "University Place"
       }
     ]
   },
@@ -13732,7 +13781,8 @@
         "lat": 40.2484703,
         "lng": -111.64788809999999,
         "address": "800 E Campus Dr, Provo, UT 84602, USA",
-        "phone": "+18014222400"
+        "phone": "+18014222400",
+        "venue": "BYU"
       }
     ]
   },
@@ -13861,7 +13911,8 @@
         "lat": 40.2752097,
         "lng": -111.68008160000001,
         "address": "575 E University Pkwy Ste B-48, Orem, UT 84097",
-        "phone": "+13853337080"
+        "phone": "+13853337080",
+        "venue": "University Place"
       },
       {
         "lat": 40.3696254,
@@ -13918,7 +13969,8 @@
         "lat": 40.2752097,
         "lng": -111.68008160000001,
         "address": "575 E University Pkwy Ste B-48, Orem, UT 84097",
-        "phone": "+13853337080"
+        "phone": "+13853337080",
+        "venue": "University Place"
       },
       {
         "lat": 40.3696254,
@@ -14245,7 +14297,8 @@
         "lat": 40.434177299999995,
         "lng": -111.8792644,
         "address": "1820 W Traverse Pkwy, Lehi, UT 84043, USA",
-        "phone": "+18018231272"
+        "phone": "+18018231272",
+        "venue": "Traverse Mountain"
       },
       {
         "lat": 40.118643299999995,
@@ -14356,7 +14409,8 @@
         "lat": 40.434177299999995,
         "lng": -111.8792644,
         "address": "1820 W Traverse Pkwy, Lehi, UT 84043, USA",
-        "phone": "+18018231272"
+        "phone": "+18018231272",
+        "venue": "Traverse Mountain"
       },
       {
         "lat": 40.118643299999995,
@@ -15103,7 +15157,8 @@
         "lat": 40.278999999999996,
         "lng": -111.7162,
         "address": "800 W University Pkwy (UVU Campus), Orem, UT 84058",
-        "phone": "+18018636041"
+        "phone": "+18018636041",
+        "venue": "UVU"
       },
       {
         "lat": 40.526125,
@@ -15121,7 +15176,8 @@
         "lat": 40.2485515,
         "lng": -111.6472221,
         "address": "Brigham Young University, Provo, UT 84602, USA",
-        "phone": "+18014229976"
+        "phone": "+18014229976",
+        "venue": "BYU"
       },
       {
         "lat": 40.4320628,
@@ -15190,7 +15246,8 @@
         "lat": 40.278999999999996,
         "lng": -111.7162,
         "address": "800 W University Pkwy (UVU Campus), Orem, UT 84058",
-        "phone": "+18018636041"
+        "phone": "+18018636041",
+        "venue": "UVU"
       },
       {
         "lat": 40.526125,
@@ -15208,7 +15265,8 @@
         "lat": 40.2485515,
         "lng": -111.6472221,
         "address": "Brigham Young University, Provo, UT 84602, USA",
-        "phone": "+18014229976"
+        "phone": "+18014229976",
+        "venue": "BYU"
       },
       {
         "lat": 40.4320628,
@@ -15364,7 +15422,8 @@
         "lat": 40.2747368,
         "lng": -111.683691,
         "address": "541 E University Pkwy Ste B, Orem, UT 84097",
-        "phone": "+13853523752"
+        "phone": "+13853523752",
+        "venue": "University Place"
       }
     ]
   },
@@ -15979,7 +16038,8 @@
         "lat": 40.435562399999995,
         "lng": -111.88489190000001,
         "address": "3700 N Cabelas Blvd Space 252, Lehi, UT 84043, USA",
-        "phone": "+18019011323"
+        "phone": "+18019011323",
+        "venue": "Traverse Mountain"
       },
       {
         "lat": 40.512417299999996,
@@ -15991,7 +16051,8 @@
         "lat": 40.275043,
         "lng": -111.680605,
         "address": "575 E University Pkwy, Orem, UT 84097, USA",
-        "phone": "+18012240511"
+        "phone": "+18012240511",
+        "venue": "University Place"
       },
       {
         "lat": 40.3868271,
@@ -16054,7 +16115,8 @@
         "lat": 40.435562399999995,
         "lng": -111.88489190000001,
         "address": "3700 N Cabelas Blvd Space 252, Lehi, UT 84043, USA",
-        "phone": "+18019011323"
+        "phone": "+18019011323",
+        "venue": "Traverse Mountain"
       },
       {
         "lat": 40.512417299999996,
@@ -16066,7 +16128,8 @@
         "lat": 40.275043,
         "lng": -111.680605,
         "address": "575 E University Pkwy, Orem, UT 84097, USA",
-        "phone": "+18012240511"
+        "phone": "+18012240511",
+        "venue": "University Place"
       },
       {
         "lat": 40.3868271,
@@ -16312,7 +16375,8 @@
         "lat": 40.2980549,
         "lng": -111.6595957,
         "address": "4801 N University Ave Ste 51, Provo, UT 84604",
-        "phone": "+18017097699"
+        "phone": "+18017097699",
+        "venue": "The Shops at Riverwoods"
       },
       {
         "lat": 40.067736,
@@ -16330,7 +16394,8 @@
         "lat": 40.43234280000001,
         "lng": -111.8795326,
         "address": "1825 W Traverse Pkwy Ste A, Lehi, UT 84043",
-        "phone": "+18019199595"
+        "phone": "+18019199595",
+        "venue": "Traverse Mountain"
       },
       {
         "lat": 40.123398699999996,
@@ -17176,7 +17241,8 @@
         "lat": 40.27822,
         "lng": -111.713619,
         "address": "Student Center, 800 W University Pkwy, Orem, UT 84058, USA",
-        "phone": "+18018638664"
+        "phone": "+18018638664",
+        "venue": "UVU"
       }
     ]
   },
@@ -17728,7 +17794,8 @@
         "lat": 40.2748122,
         "lng": -111.6802325,
         "address": "575 E University Pkwy, Orem, UT 84097",
-        "phone": "+13855820002"
+        "phone": "+13855820002",
+        "venue": "University Place"
       }
     ]
   },
@@ -17761,7 +17828,8 @@
         "lat": 40.2748122,
         "lng": -111.6802325,
         "address": "575 E University Pkwy, Orem, UT 84097",
-        "phone": "+13855820002"
+        "phone": "+13855820002",
+        "venue": "University Place"
       }
     ]
   },
@@ -19105,7 +19173,8 @@
         "lat": 40.278999999999996,
         "lng": -111.7162,
         "address": "800 W University Pkwy (UVU Campus), Orem, UT 84058",
-        "phone": "+18018636041"
+        "phone": "+18018636041",
+        "venue": "UVU"
       },
       {
         "lat": 40.526125,
@@ -19123,7 +19192,8 @@
         "lat": 40.2485515,
         "lng": -111.6472221,
         "address": "Brigham Young University, Provo, UT 84602, USA",
-        "phone": "+18014229976"
+        "phone": "+18014229976",
+        "venue": "BYU"
       },
       {
         "lat": 40.4320628,
@@ -19261,7 +19331,8 @@
         "lat": 40.4323486,
         "lng": -111.8801064,
         "address": "1851 W Traverse Pkwy Bldg G Ste A-2, Lehi, UT 84043",
-        "phone": "+18019016980"
+        "phone": "+18019016980",
+        "venue": "Traverse Mountain"
       },
       {
         "lat": 40.3053586,
@@ -19348,7 +19419,8 @@
         "lat": 40.4323486,
         "lng": -111.8801064,
         "address": "1851 W Traverse Pkwy Bldg G Ste A-2, Lehi, UT 84043",
-        "phone": "+18019016980"
+        "phone": "+18019016980",
+        "venue": "Traverse Mountain"
       },
       {
         "lat": 40.3053586,
@@ -20713,7 +20785,8 @@
         "lat": 40.2796174,
         "lng": -111.7149201,
         "address": "800 W University Pkwy, Orem, UT 84058",
-        "phone": "+18012255742"
+        "phone": "+18012255742",
+        "venue": "UVU"
       },
       {
         "lat": 40.2966929,
@@ -20824,7 +20897,8 @@
         "lat": 40.2796174,
         "lng": -111.7149201,
         "address": "800 W University Pkwy, Orem, UT 84058",
-        "phone": "+18012255742"
+        "phone": "+18012255742",
+        "venue": "UVU"
       },
       {
         "lat": 40.2966929,

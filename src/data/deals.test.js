@@ -3,7 +3,7 @@
 //   DEALS_FILE=reports/card-import-2026-27.preview.json npx vitest run src/data
 import { describe, it, expect } from 'vitest'
 import { readFileSync } from 'node:fs'
-import { getMapFocusLocations } from '../utils/dealHelpers'
+import { getMapFocusLocations, cityFromAddress } from '../utils/dealHelpers'
 
 const file = process.env.DEALS_FILE ?? 'src/data/deals.json'
 const all = JSON.parse(readFileSync(file, 'utf8'))
@@ -33,6 +33,10 @@ describe(`deals data (${file})`, () => {
 
   it('gives every deal at least one map pin that honors it', () => {
     expect(offenders(d => !ONLINE_ONLY.includes(d.name) && !getMapFocusLocations(d)?.length)).toEqual([])
+  })
+
+  it('gives every store address a clean city for location search', () => {
+    expect(offenders(d => (d.locations ?? []).some(l => !/^[A-Z][A-Za-z .'-]+$/.test(cityFromAddress(l.address) ?? '')))).toEqual([])
   })
 
   it('only resolves pins from the business’s own locations', () => {
