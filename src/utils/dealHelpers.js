@@ -127,8 +127,8 @@ const UTAH_COUNTY_CITIES = new Set([
 
 // "Participating Locations" and "All Wasatch Front" mean every store on the
 // Wasatch Front — Utah, Salt Lake, Davis and Weber counties up to Ogden — plus
-// any city named alongside (Adam, Sept 2026). Heber, Park City, Tooele and
-// Nephi stores don't count.
+// any city named alongside (Adam, Sept 2026). Heber City and Park City count
+// too; Tooele and Nephi don't.
 const WASATCH_FRONT = /\bparticipating\b|\b(all )?wasatch front\b/i
 const WASATCH_FRONT_CITIES = new Set([
   ...UTAH_COUNTY_CITIES,
@@ -138,6 +138,7 @@ const WASATCH_FRONT_CITIES = new Set([
   'Bountiful', 'Centerville', 'Clearfield', 'Clinton', 'Farmington', 'Fruit Heights', 'Kaysville',
   'Layton', 'North Salt Lake', 'Syracuse', 'West Bountiful', 'Woods Cross',
   'North Ogden', 'Ogden', 'Riverdale', 'Roy', 'South Ogden', 'Washington Terrace',
+  'Heber City', 'Park City',
 ])
 
 // Splits "All Utah County, excluding Eagle Mountain & Spanish Fork" into an

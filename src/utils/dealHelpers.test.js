@@ -24,16 +24,16 @@ describe('matchLocationsToRestriction', () => {
       .toEqual(['Orem', 'Lehi'])
   })
 
-  it('treats "Participating Locations" and "Wasatch Front" as every Wasatch Front store, plus named cities', () => {
+  it('treats "Participating Locations" and "Wasatch Front" as every Wasatch Front, Heber or Park City store, plus named cities', () => {
     const OGDEN = loc('Ogden')
     const HEBER = loc('Heber City')
     const TOOELE = loc('Tooele')
     expect(cities(matchLocationsToRestriction([OREM, OGDEN, HEBER, TOOELE], 'Participating Locations')))
-      .toEqual(['Orem', 'Ogden'])
-    expect(cities(matchLocationsToRestriction([PROVO, HEBER, TOOELE], 'Heber City & Participating Locations')))
-      .toEqual(['Provo', 'Heber City'])
-    expect(cities(matchLocationsToRestriction([OREM, HEBER], 'All Wasatch Front'))).toEqual(['Orem'])
-    expect(matchLocationsToRestriction([OREM, HEBER], 'All Locations')).toHaveLength(2)
+      .toEqual(['Orem', 'Ogden', 'Heber City'])
+    expect(cities(matchLocationsToRestriction([PROVO, TOOELE], 'Tooele & Participating Locations')))
+      .toEqual(['Provo', 'Tooele'])
+    expect(cities(matchLocationsToRestriction([OREM, TOOELE], 'All Wasatch Front'))).toEqual(['Orem'])
+    expect(matchLocationsToRestriction([OREM, TOOELE], 'All Locations')).toHaveLength(2)
   })
 
   it('treats "All ..." wording as every location, minus exclusions', () => {
