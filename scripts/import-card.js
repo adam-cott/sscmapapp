@@ -253,16 +253,33 @@ function parseTitle(raw) {
   return { headline, where, details: cleanDetails(segs.slice(k)), source: 'parsed' }
 }
 
+// Words that don't name an item: "Get a 2nd FREE", "Get One FREE". Hyphenated
+// words stay whole, so "One-Meat Plate" is a different item from "Meat Plate".
+const LABEL_FILLER = new Set(['a', 'an', 'the', 'any', 'one', '1', '2nd', 'second', 'free', 'regular', 'or', 'and'])
+const itemWords = s => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
+  .replace(/[^a-z0-9 -]/g, ' ').split(/\s+/).filter(w => w && !LABEL_FILLER.has(w)).map(w => w.replace(/s$/, ''))
+
 function valueLabel(headline, printedValue) {
   const h = headline
   if (/^2-4-1/i.test(h)) return '2 for 1'
-  let m = h.match(/^(\d+)% OFF/i) || h.match(/Get [^!]*?(\d+)% OFF/i)
+  let m = h.match(/^(\d+)% OFF/i)
   if (m) return `${m[1]}% Off`
+  m = h.match(/^Buy\b.*\bGet [^!]*?(\d+)% OFF/i)
+  if (m) return `Buy 1 Get 1 ${m[1]}% Off`
   m = h.match(/^\$([\d.]+) OFF/i)
   if (m) return `$${m[1]} Off`
+  if (/Kids Eat FREE/i.test(h)) return 'Kids Eat Free'
   if (/^(One )?FREE!/i.test(h) || /Eat FREE/i.test(h)) return 'Free Item'
-  if (/^(Buy|Rent)\b.*\bGet (1|One|2nd|the 2nd|Entree|1 Entree|1 Menu Item|a Burger|a Melt|Burger or Sandwich|Any Platter|an Adult)\b.*FREE/i.test(h)) return 'Buy 1 Get 1 Free'
-  if (/^(Buy|Rent)\b.*FREE/i.test(h)) return 'Free Item'
+  // "Buy X, Get Y FREE": the same item again is Buy 1 Get 1 (or Buy 2 Get 1);
+  // anything else ("Get Lettuce Wraps FREE", "Get 5 Wings FREE") is a Free Item.
+  m = h.match(/^(?:Buy|Rent)\s+(.*?),?\s+Get\s+(.*?)\s*FREE/i)
+  if (m) {
+    const [, bought, got] = m
+    const buysTwo = /^(any\s+)?(2|two)\b/i.test(bought)
+    if (/\b3rd\b/i.test(got) || (buysTwo && !itemWords(got).length)) return 'Buy 2 Get 1 Free'
+    if (!buysTwo && !/\b([3-9]|\d{2,})\b/.test(got) && itemWords(got).every(w => itemWords(bought).includes(w))) return 'Buy 1 Get 1 Free'
+    return 'Free Item'
+  }
   m = h.match(/(\d+ for \$[\d.]+)/i) || h.match(/(\$[\d.]+)/)
   if (m) return m[1]
   return printedValue || ''

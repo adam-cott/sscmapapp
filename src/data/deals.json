@@ -1358,7 +1358,7 @@
       "title": "Buy Any Pizza, Get One 50% OFF!",
       "description": "",
       "restrictions": "",
-      "value": "50% Off",
+      "value": "Buy 1 Get 1 50% Off",
       "maxUses": null,
       "expiresAt": "2027-10-01"
     },
@@ -1565,7 +1565,7 @@
       "title": "Buy Medium or Large Pizza, Get a Melt FREE!",
       "description": "Carryout Only",
       "restrictions": "Carryout Only",
-      "value": "Buy 1 Get 1 Free",
+      "value": "Free Item",
       "maxUses": 3,
       "expiresAt": "2027-10-01"
     },
@@ -1955,7 +1955,7 @@
       "title": "Buy Two Tacos, Get One FREE!",
       "description": "",
       "restrictions": "",
-      "value": "Buy 1 Get 1 Free",
+      "value": "Buy 2 Get 1 Free",
       "maxUses": 3,
       "expiresAt": "2027-10-01"
     },
@@ -2720,7 +2720,7 @@
       "title": "Buy Regular Grilled Cheese and 2 Drinks, Get Regular Grilled Cheese FREE!",
       "description": "",
       "restrictions": "",
-      "value": "Free Item",
+      "value": "Buy 1 Get 1 Free",
       "maxUses": 3,
       "expiresAt": "2027-10-01"
     },
@@ -2861,7 +2861,7 @@
       "title": "Kids Eat FREE!",
       "description": "Up to 2 Kids Per Paying Adult Anytime",
       "restrictions": "Up to 2 Kids Per Paying Adult Anytime",
-      "value": "Free Item",
+      "value": "Kids Eat Free",
       "maxUses": null,
       "expiresAt": "2027-10-01"
     },
@@ -3119,7 +3119,7 @@
       "title": "Buy 1 Dinner Entrée, Get 1 50% OFF!",
       "description": "",
       "restrictions": "",
-      "value": "50% Off",
+      "value": "Buy 1 Get 1 50% Off",
       "maxUses": 3,
       "expiresAt": "2027-10-01"
     },
@@ -3362,7 +3362,7 @@
       "title": "Buy One Entree, Get One 50% OFF!",
       "description": "",
       "restrictions": "",
-      "value": "50% Off",
+      "value": "Buy 1 Get 1 50% Off",
       "maxUses": 3,
       "expiresAt": "2027-10-01"
     },
@@ -3875,7 +3875,7 @@
       "title": "Buy a Combo Meal, Get a Combo Meal 50% OFF!",
       "description": "",
       "restrictions": "",
-      "value": "50% Off",
+      "value": "Buy 1 Get 1 50% Off",
       "maxUses": 2,
       "expiresAt": "2027-10-01"
     },
@@ -4592,7 +4592,7 @@
       "title": "Buy 1 Lunch Buffet, Get 1 50% OFF!",
       "description": "",
       "restrictions": "",
-      "value": "50% Off",
+      "value": "Buy 1 Get 1 50% Off",
       "maxUses": 1,
       "expiresAt": "2027-10-01"
     },
@@ -5558,7 +5558,7 @@
       "title": "Buy a 2 hour Play Pass, Get a 2 hour Play Pass FREE!",
       "description": "",
       "restrictions": "",
-      "value": "Free Item",
+      "value": "Buy 1 Get 1 Free",
       "maxUses": 2,
       "expiresAt": "2027-10-01"
     },
@@ -5708,7 +5708,7 @@
       "title": "Buy 1 Board Game, Get 1 50% OFF!",
       "description": "",
       "restrictions": "",
-      "value": "50% Off",
+      "value": "Buy 1 Get 1 50% Off",
       "maxUses": 1,
       "expiresAt": "2027-10-01"
     },
@@ -5759,7 +5759,7 @@
       "title": "Buy 1 Graphic Novel, Get 1 50% OFF!",
       "description": "",
       "restrictions": "",
-      "value": "50% Off",
+      "value": "Buy 1 Get 1 50% Off",
       "maxUses": 1,
       "expiresAt": "2027-10-01"
     },
@@ -5843,7 +5843,7 @@
       "title": "Buy 1 Adult Ticket, Get an Adult or Child Ticket 50% OFF!",
       "description": "",
       "restrictions": "",
-      "value": "50% Off",
+      "value": "Buy 1 Get 1 50% Off",
       "maxUses": 3,
       "expiresAt": "2027-10-01"
     },
@@ -7762,7 +7762,7 @@
       "title": "Buy Any Hat, Get One 50% OFF!",
       "description": "",
       "restrictions": "",
-      "value": "50% Off",
+      "value": "Buy 1 Get 1 50% Off",
       "maxUses": 1,
       "expiresAt": "2027-10-01"
     },
@@ -13352,7 +13352,7 @@
       "title": "Buy Any 2 Menu Items, Get a 3rd FREE!",
       "description": "",
       "restrictions": "",
-      "value": "Free Item",
+      "value": "Buy 2 Get 1 Free",
       "maxUses": 1,
       "expiresAt": "2027-10-01"
     },
@@ -14111,7 +14111,7 @@
       "title": "Buy Two Cupcakes, Get 1 FREE!",
       "description": "",
       "restrictions": "",
-      "value": "Buy 1 Get 1 Free",
+      "value": "Buy 2 Get 1 Free",
       "maxUses": 3,
       "expiresAt": "2027-10-01"
     },
@@ -16019,7 +16019,7 @@
       "title": "Buy 2 Caramel Apples, Get a 3rd FREE!",
       "description": "",
       "restrictions": "",
-      "value": "Free Item",
+      "value": "Buy 2 Get 1 Free",
       "maxUses": 3,
       "expiresAt": "2027-10-01"
     },
@@ -17255,7 +17255,7 @@
       "title": "Buy Any Menu Item, Get 1 50% OFF!",
       "description": "",
       "restrictions": "",
-      "value": "50% Off",
+      "value": "Buy 1 Get 1 50% Off",
       "maxUses": 3,
       "expiresAt": "2027-10-01"
     },
@@ -18884,7 +18884,7 @@
       "title": "Buy Fries and Drink, Get Burger or Sandwich FREE!",
       "description": "",
       "restrictions": "",
-      "value": "Buy 1 Get 1 Free",
+      "value": "Free Item",
       "maxUses": 2,
       "expiresAt": "2027-10-01"
     },
@@ -19226,7 +19226,7 @@
       "title": "Buy 1 Regular Sub, Get a Regular Sub FREE!",
       "description": "",
       "restrictions": "",
-      "value": "Free Item",
+      "value": "Buy 1 Get 1 Free",
       "maxUses": 1,
       "expiresAt": "2027-10-01"
     },
@@ -19793,7 +19793,7 @@
       "title": "Buy 1 Entree or Meal, Get 1 50% OFF!",
       "description": "",
       "restrictions": "",
-      "value": "50% Off",
+      "value": "Buy 1 Get 1 50% Off",
       "maxUses": 3,
       "expiresAt": "2027-10-01"
     },
