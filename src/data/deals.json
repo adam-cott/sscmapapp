@@ -1469,12 +1469,6 @@
         "lng": -111.79539039999999,
         "address": "76 N 100 E, American Fork, UT 84003, USA",
         "phone": "+18017569696"
-      },
-      {
-        "lat": 40.2633267,
-        "lng": -111.66882539999999,
-        "address": "2245 N University Pkwy, Provo, UT 84604, USA",
-        "phone": "+13854505200"
       }
     ]
   },
@@ -1556,12 +1550,6 @@
         "lng": -111.79539039999999,
         "address": "76 N 100 E, American Fork, UT 84003, USA",
         "phone": "+18017569696"
-      },
-      {
-        "lat": 40.2633267,
-        "lng": -111.66882539999999,
-        "address": "2245 N University Pkwy, Provo, UT 84604, USA",
-        "phone": "+13854505200"
       }
     ]
   },
@@ -1643,12 +1631,6 @@
         "lng": -111.79539039999999,
         "address": "76 N 100 E, American Fork, UT 84003, USA",
         "phone": "+18017569696"
-      },
-      {
-        "lat": 40.2633267,
-        "lng": -111.66882539999999,
-        "address": "2245 N University Pkwy, Provo, UT 84604, USA",
-        "phone": "+13854505200"
       }
     ]
   },
@@ -2484,9 +2466,9 @@
     "id": "2627-restaurants-050",
     "name": "Chili's",
     "category": "restaurants",
-    "address": "215 W 1200 S, Orem, UT 84058",
-    "lat": 40.275351,
-    "lng": -111.700966,
+    "address": "1090 N Canyon Creek Pkwy, Spanish Fork, UT 84660",
+    "lat": 40.1249026,
+    "lng": -111.6410154,
     "locationRestriction": "All Utah Locations",
     "deal": {
       "title": "FREE! Chips & Salsa with Any Entree Purchase!",
@@ -2505,24 +2487,6 @@
       "restaurants"
     ],
     "locations": [
-      {
-        "lat": 40.275351,
-        "lng": -111.700966,
-        "address": "215 W 1200 S, Orem, UT 84058",
-        "phone": "+18012210884"
-      },
-      {
-        "lat": 40.3536562,
-        "lng": -111.7783973,
-        "address": "743 E 1180 S, American Fork, UT 84003",
-        "phone": "+18017567581"
-      },
-      {
-        "lat": 40.33956730000001,
-        "lng": -111.9424788,
-        "address": "1085 W Mahogany Dr, Saratoga Springs, UT 84045",
-        "phone": "+18019005638"
-      },
       {
         "lat": 40.1249026,
         "lng": -111.6410154,
@@ -2814,9 +2778,9 @@
     "id": "2627-restaurants-055",
     "name": "Denny's",
     "category": "restaurants",
-    "address": "1194 N State St, Orem, UT 84057",
-    "lat": 40.3192299,
-    "lng": -111.7042791,
+    "address": "1680 Freedom Blvd 200 W, Provo, UT 84601",
+    "lat": 40.25685140156715,
+    "lng": -111.66152000437961,
     "locationRestriction": "Orem & Lehi",
     "deal": {
       "title": "Buy 1 Entrée & 2 Drinks, Get 1 FREE!",
@@ -2836,46 +2800,16 @@
     ],
     "locations": [
       {
-        "lat": 40.3192299,
-        "lng": -111.7042791,
-        "address": "1194 N State St, Orem, UT 84057",
-        "phone": "+18017650519"
-      },
-      {
         "lat": 40.25685140156715,
         "lng": -111.66152000437961,
         "address": "1680 Freedom Blvd 200 W, Provo, UT 84601",
         "phone": "+18013758362"
       },
       {
-        "lat": 40.43147829999999,
-        "lng": -111.8954016,
-        "address": "3536 N Maple Loop Dr, Lehi, UT 84043",
-        "phone": "+18017661270"
-      },
-      {
-        "lat": 40.3358407,
-        "lng": -111.7152106,
-        "address": "1400 S State St, Saratoga Springs, UT 84045",
-        "phone": "+18017650519"
-      },
-      {
-        "lat": 40.1148517,
-        "lng": -111.6548558,
-        "address": "395 N Main St, Spanish Fork, UT 84660",
-        "phone": "+18017987019"
-      },
-      {
         "lat": 40.62028189999999,
         "lng": -111.9010577,
         "address": "401 W 7200 S, Midvale, UT 84047",
         "phone": "+18015614112"
-      },
-      {
-        "lat": 40.6747915,
-        "lng": -111.9026877,
-        "address": "420 W 4500 S, Murray, UT 84123",
-        "phone": "+18012628251"
       },
       {
         "lat": 40.3063109,
@@ -2900,12 +2834,6 @@
         "lng": -111.9160685,
         "address": "1516 N Redwood Rd, Saratoga Springs, UT 84045, USA",
         "phone": "+18017661270"
-      },
-      {
-        "lat": 40.6236385,
-        "lng": -111.8551473,
-        "address": "7051 S 1300 E, Midvale, UT 84047, USA",
-        "phone": "+18012339280"
       },
       {
         "lat": 39.6851659,
@@ -2925,9 +2853,9 @@
     "id": "2627-restaurants-056",
     "name": "Denny's",
     "category": "restaurants",
-    "address": "1194 N State St, Orem, UT 84057",
-    "lat": 40.3192299,
-    "lng": -111.7042791,
+    "address": "1680 Freedom Blvd 200 W, Provo, UT 84601",
+    "lat": 40.25685140156715,
+    "lng": -111.66152000437961,
     "locationRestriction": "Orem & Lehi",
     "deal": {
       "title": "Kids Eat FREE!",
@@ -2947,46 +2875,16 @@
     ],
     "locations": [
       {
-        "lat": 40.3192299,
-        "lng": -111.7042791,
-        "address": "1194 N State St, Orem, UT 84057",
-        "phone": "+18017650519"
-      },
-      {
         "lat": 40.25685140156715,
         "lng": -111.66152000437961,
         "address": "1680 Freedom Blvd 200 W, Provo, UT 84601",
         "phone": "+18013758362"
       },
       {
-        "lat": 40.43147829999999,
-        "lng": -111.8954016,
-        "address": "3536 N Maple Loop Dr, Lehi, UT 84043",
-        "phone": "+18017661270"
-      },
-      {
-        "lat": 40.3358407,
-        "lng": -111.7152106,
-        "address": "1400 S State St, Saratoga Springs, UT 84045",
-        "phone": "+18017650519"
-      },
-      {
-        "lat": 40.1148517,
-        "lng": -111.6548558,
-        "address": "395 N Main St, Spanish Fork, UT 84660",
-        "phone": "+18017987019"
-      },
-      {
         "lat": 40.62028189999999,
         "lng": -111.9010577,
         "address": "401 W 7200 S, Midvale, UT 84047",
         "phone": "+18015614112"
-      },
-      {
-        "lat": 40.6747915,
-        "lng": -111.9026877,
-        "address": "420 W 4500 S, Murray, UT 84123",
-        "phone": "+18012628251"
       },
       {
         "lat": 40.3063109,
@@ -3011,12 +2909,6 @@
         "lng": -111.9160685,
         "address": "1516 N Redwood Rd, Saratoga Springs, UT 84045, USA",
         "phone": "+18017661270"
-      },
-      {
-        "lat": 40.6236385,
-        "lng": -111.8551473,
-        "address": "7051 S 1300 E, Midvale, UT 84047, USA",
-        "phone": "+18012339280"
       },
       {
         "lat": 39.6851659,
@@ -4636,12 +4528,6 @@
         "phone": "+18018215550"
       },
       {
-        "lat": 40.412425,
-        "lng": -111.8694833,
-        "address": "1059 W River Rd, Saratoga Springs, UT 84045",
-        "phone": "+18018215550"
-      },
-      {
         "lat": 40.8840001,
         "lng": -111.8864579,
         "address": "245 W 500 S, Bountiful, UT 84010",
@@ -4894,18 +4780,6 @@
         "phone": "+18016551433"
       },
       {
-        "lat": 40.5278496,
-        "lng": -111.8878725,
-        "address": "121 E 12300 S Ste P5, Draper, UT 84020",
-        "phone": "+18017277813"
-      },
-      {
-        "lat": 40.125458300000005,
-        "lng": -111.63963319999999,
-        "address": "1218 N Cyn Crk Pkwy, Spanish Fork, UT 84660, USA",
-        "phone": "+18013103625"
-      },
-      {
         "lat": 40.583281,
         "lng": -111.86296499999999,
         "address": "9260 Village Shop Dr, Sandy, UT 84094, USA",
@@ -5068,12 +4942,6 @@
         "phone": "+13855419464"
       },
       {
-        "lat": 40.2748122,
-        "lng": -111.6802325,
-        "address": "575 E University Pkwy, Orem, UT 84097",
-        "phone": "+13853143040"
-      },
-      {
         "lat": 40.3079122,
         "lng": -111.7389909,
         "address": "514 N Mill Rd, Vineyard, UT 84059",
@@ -5165,12 +5033,6 @@
         "lng": -111.7624504,
         "address": "887 S North County Blvd, Pleasant Grove, UT 84062",
         "phone": "+13855419464"
-      },
-      {
-        "lat": 40.2748122,
-        "lng": -111.6802325,
-        "address": "575 E University Pkwy, Orem, UT 84097",
-        "phone": "+13853143040"
       },
       {
         "lat": 40.3079122,
@@ -6435,9 +6297,9 @@
     "id": "2627-entertainment-136",
     "name": "HiddenHunts.com",
     "category": "entertainment",
-    "address": "Online/Virtual, Orem, UT 84057",
-    "lat": 40.3150359,
-    "lng": -111.7018452,
+    "address": "Online only",
+    "lat": null,
+    "lng": null,
     "locationRestriction": "",
     "deal": {
       "title": "30% OFF! Treasure Hunt Adventure!",
@@ -6455,14 +6317,7 @@
     "tags": [
       "entertainment"
     ],
-    "locations": [
-      {
-        "lat": 40.3150359,
-        "lng": -111.7018452,
-        "address": "Online/Virtual, Orem, UT 84057",
-        "phone": null
-      }
-    ]
+    "locations": []
   },
   {
     "id": "2627-entertainment-137",
@@ -7625,12 +7480,6 @@
         "lng": -111.6634834,
         "address": "268 W 100 S, Provo, UT 84601",
         "phone": "+18018718151"
-      },
-      {
-        "lat": 40.3615831,
-        "lng": -111.748836,
-        "address": "527 W State St Suite #101, Pleasant Grove, UT 84062, USA",
-        "phone": "+18054056756"
       }
     ]
   },
@@ -7737,9 +7586,9 @@
     "id": "2627-entertainment-174",
     "name": "Zipline Utah",
     "category": "entertainment",
-    "address": "3153 E State Creek Rd, Heber City, UT 84032",
-    "lat": 40.490064,
-    "lng": -111.3434551,
+    "address": "at Mile Marker 22, 84032 W S Hwy 189 of, Heber City, UT 84032, USA",
+    "lat": 40.422877,
+    "lng": -111.4918763,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Screaming Falcon Big Line or Falcon Rush!",
@@ -7759,28 +7608,10 @@
     ],
     "locations": [
       {
-        "lat": 40.490064,
-        "lng": -111.3434551,
-        "address": "3153 E State Creek Rd, Heber City, UT 84032",
-        "phone": "+18669231063"
-      },
-      {
         "lat": 40.422877,
         "lng": -111.4918763,
         "address": "at Mile Marker 22, 84032 W S Hwy 189 of, Heber City, UT 84032, USA",
         "phone": "+18669231063"
-      },
-      {
-        "lat": 40.4866707,
-        "lng": -111.24420119999999,
-        "address": "10500 E Lake Creek Rd, Heber City, UT 84032, USA",
-        "phone": "+14356713583"
-      },
-      {
-        "lat": 40.72309,
-        "lng": -111.54389570000001,
-        "address": "6300 N Sagewood Dr #600, Park City, UT 84098, USA",
-        "phone": "+18015501761"
       }
     ]
   },
@@ -7832,18 +7663,6 @@
         "lng": -111.9396099,
         "address": "2250 S Redwood Rd Ste 2, West Valley City, UT 84119",
         "phone": "+18012100669"
-      },
-      {
-        "lat": 40.281582,
-        "lng": -111.69029499999999,
-        "address": "193 E 860 S, Orem, UT 84058, USA",
-        "phone": "+18012211151"
-      },
-      {
-        "lat": 40.5905397,
-        "lng": -111.9367699,
-        "address": "8839 S Redwood Rd Suite A-1, West Jordan, UT 84088, USA",
-        "phone": "+18015665626"
       }
     ]
   },
@@ -7895,18 +7714,6 @@
         "lng": -111.9396099,
         "address": "2250 S Redwood Rd Ste 2, West Valley City, UT 84119",
         "phone": "+18012100669"
-      },
-      {
-        "lat": 40.281582,
-        "lng": -111.69029499999999,
-        "address": "193 E 860 S, Orem, UT 84058, USA",
-        "phone": "+18012211151"
-      },
-      {
-        "lat": 40.5905397,
-        "lng": -111.9367699,
-        "address": "8839 S Redwood Rd Suite A-1, West Jordan, UT 84088, USA",
-        "phone": "+18015665626"
       }
     ]
   },
@@ -8265,9 +8072,9 @@
     "id": "2627-retail-186",
     "name": "FORGE Jewelry Works",
     "category": "retail",
-    "address": "2255 N University Pkwy Ste 17, Provo, UT 84604",
-    "lat": 40.262899,
-    "lng": -111.669892,
+    "address": "522 N Freedom Blvd, Provo, UT 84601, USA",
+    "lat": 40.2405731,
+    "lng": -111.6616569,
     "locationRestriction": "",
     "deal": {
       "title": "30% OFF! Any Jewelry Item!",
@@ -8287,9 +8094,9 @@
     ],
     "locations": [
       {
-        "lat": 40.262899,
-        "lng": -111.669892,
-        "address": "2255 N University Pkwy Ste 17, Provo, UT 84604",
+        "lat": 40.2405731,
+        "lng": -111.6616569,
+        "address": "522 N Freedom Blvd, Provo, UT 84601, USA",
         "phone": "+18017047020"
       }
     ]
@@ -8331,9 +8138,9 @@
     "id": "2627-retail-188",
     "name": "G.O.A.T Haircuts",
     "category": "retail",
-    "address": "4801 N University Ave Ste 60, Provo, UT 84604",
-    "lat": 40.2996159,
-    "lng": -111.6593651,
+    "address": "160 E University Pkwy Suite J, Orem, UT 84058, USA",
+    "lat": 40.2730617,
+    "lng": -111.690962,
     "locationRestriction": "",
     "deal": {
       "title": "$10 OFF! Any Men's Haircut!",
@@ -8352,24 +8159,6 @@
       "retail"
     ],
     "locations": [
-      {
-        "lat": 40.2996159,
-        "lng": -111.6593651,
-        "address": "4801 N University Ave Ste 60, Provo, UT 84604",
-        "phone": "+18014941414"
-      },
-      {
-        "lat": 40.3898145,
-        "lng": -111.830984,
-        "address": "161 N 1200 E, Lehi, UT 84043",
-        "phone": "+18019807745"
-      },
-      {
-        "lat": 40.7350295,
-        "lng": -111.9401717,
-        "address": "1630 S Redwood Rd Ste 104, Saratoga Springs, UT 84045",
-        "phone": "+13853229200"
-      },
       {
         "lat": 40.2730617,
         "lng": -111.690962,
@@ -8393,12 +8182,6 @@
         "lng": -111.880057,
         "address": "1870 W Traverse Pkwy Ste C, Lehi, UT 84043, USA",
         "phone": "+18017564460"
-      },
-      {
-        "lat": 40.2728336,
-        "lng": -111.6815833,
-        "address": "570 E University Pkwy Suite #5, Orem, UT 84097, USA",
-        "phone": "+18014941414"
       },
       {
         "lat": 40.556685,
@@ -8740,39 +8523,9 @@
         "phone": "+18013772072"
       },
       {
-        "lat": 40.2300446,
-        "lng": -111.6671177,
-        "address": "490 W 300 S, Provo, UT 84601",
-        "phone": "+18013700303"
-      },
-      {
-        "lat": 40.2894414,
-        "lng": -111.6927481,
-        "address": "110 E 400 S, Orem, UT 84058",
-        "phone": "+18012250703"
-      },
-      {
         "lat": 40.29478719999999,
         "lng": -111.6935075,
         "address": "131 S State St, Orem, UT 84058",
-        "phone": "+18012250703"
-      },
-      {
-        "lat": 40.31784529999999,
-        "lng": -111.7034289,
-        "address": "1136 N State St, Orem, UT 84057",
-        "phone": "+18017649500"
-      },
-      {
-        "lat": 40.2727201,
-        "lng": -111.7013794,
-        "address": "285 W University Pkwy, Orem, UT 84058",
-        "phone": "+18012250703"
-      },
-      {
-        "lat": 40.2711025,
-        "lng": -111.7127666,
-        "address": "1400 Sandhill Rd, Orem, UT 84058",
         "phone": "+18012250703"
       },
       {
@@ -8786,18 +8539,6 @@
         "lng": -111.6402956,
         "address": "901 Expressway Ln, Spanish Fork, UT 84660",
         "phone": "+18017983993"
-      },
-      {
-        "lat": 40.1634801,
-        "lng": -111.6488456,
-        "address": "230 S 2000 W, Springville, UT 84663",
-        "phone": "+18017983993"
-      },
-      {
-        "lat": 40.3764878,
-        "lng": -111.8826328,
-        "address": "2079 N Gossling Ln, Lehi, UT 84043",
-        "phone": "+18017663300"
       },
       {
         "lat": 40.432285,
@@ -8846,6 +8587,24 @@
         "lng": -111.6591273,
         "address": "836 S University Ave, Provo, UT 84601, USA",
         "phone": "+18013700303"
+      },
+      {
+        "lat": 40.1609664,
+        "lng": -111.6410088,
+        "address": "1703 W 400 S, Springville, UT 84663, USA",
+        "phone": "+18014916868"
+      },
+      {
+        "lat": 40.387875,
+        "lng": -111.91002399999999,
+        "address": "284 E State Road 73, Lehi, UT 84043, USA",
+        "phone": "+18017663300"
+      },
+      {
+        "lat": 40.386894999999996,
+        "lng": -111.83622109999999,
+        "address": "116 S 850 E, Lehi, UT 84043, USA",
+        "phone": "+18017661914"
       }
     ]
   },
@@ -8887,39 +8646,9 @@
         "phone": "+18013772072"
       },
       {
-        "lat": 40.2300446,
-        "lng": -111.6671177,
-        "address": "490 W 300 S, Provo, UT 84601",
-        "phone": "+18013700303"
-      },
-      {
-        "lat": 40.2894414,
-        "lng": -111.6927481,
-        "address": "110 E 400 S, Orem, UT 84058",
-        "phone": "+18012250703"
-      },
-      {
         "lat": 40.29478719999999,
         "lng": -111.6935075,
         "address": "131 S State St, Orem, UT 84058",
-        "phone": "+18012250703"
-      },
-      {
-        "lat": 40.31784529999999,
-        "lng": -111.7034289,
-        "address": "1136 N State St, Orem, UT 84057",
-        "phone": "+18017649500"
-      },
-      {
-        "lat": 40.2727201,
-        "lng": -111.7013794,
-        "address": "285 W University Pkwy, Orem, UT 84058",
-        "phone": "+18012250703"
-      },
-      {
-        "lat": 40.2711025,
-        "lng": -111.7127666,
-        "address": "1400 Sandhill Rd, Orem, UT 84058",
         "phone": "+18012250703"
       },
       {
@@ -8933,18 +8662,6 @@
         "lng": -111.6402956,
         "address": "901 Expressway Ln, Spanish Fork, UT 84660",
         "phone": "+18017983993"
-      },
-      {
-        "lat": 40.1634801,
-        "lng": -111.6488456,
-        "address": "230 S 2000 W, Springville, UT 84663",
-        "phone": "+18017983993"
-      },
-      {
-        "lat": 40.3764878,
-        "lng": -111.8826328,
-        "address": "2079 N Gossling Ln, Lehi, UT 84043",
-        "phone": "+18017663300"
       },
       {
         "lat": 40.432285,
@@ -8993,6 +8710,24 @@
         "lng": -111.6591273,
         "address": "836 S University Ave, Provo, UT 84601, USA",
         "phone": "+18013700303"
+      },
+      {
+        "lat": 40.1609664,
+        "lng": -111.6410088,
+        "address": "1703 W 400 S, Springville, UT 84663, USA",
+        "phone": "+18014916868"
+      },
+      {
+        "lat": 40.387875,
+        "lng": -111.91002399999999,
+        "address": "284 E State Road 73, Lehi, UT 84043, USA",
+        "phone": "+18017663300"
+      },
+      {
+        "lat": 40.386894999999996,
+        "lng": -111.83622109999999,
+        "address": "116 S 850 E, Lehi, UT 84043, USA",
+        "phone": "+18017661914"
       }
     ]
   },
@@ -9749,12 +9484,6 @@
         "phone": "+18014270481"
       },
       {
-        "lat": 40.1219617,
-        "lng": -111.6547841,
-        "address": "933 N Main St Ste E, Spanish Fork, UT 84660",
-        "phone": "+13853448183"
-      },
-      {
         "lat": 40.6215933,
         "lng": -111.9138045,
         "address": "7141 S Bingham Junction Blvd Ste 102, Midvale, UT 84047",
@@ -9801,6 +9530,12 @@
         "lng": -111.95556499999999,
         "address": "3601 2700 W STE B144, West Valley City, UT 84119, USA",
         "phone": "+18012049121"
+      },
+      {
+        "lat": 40.126205399999996,
+        "lng": -111.6387637,
+        "address": "1274 N Cyn Crk Pkwy, Spanish Fork, UT 84660, USA",
+        "phone": "+13853448183"
       }
     ]
   },
@@ -10600,9 +10335,9 @@
     "id": "2627-free-238",
     "name": "Dairy Queen",
     "category": "free",
-    "address": "800 N State St, Orem, UT 84057",
-    "lat": 40.3120154,
-    "lng": -111.701522,
+    "address": "49 N Geneva Rd, Vineyard, UT 84059",
+    "lat": 40.2975578,
+    "lng": -111.7345052,
     "locationRestriction": "Orem, Vineyard, Eagle Mountain & Santaquin",
     "deal": {
       "title": "FREE! Small Ice Cream Cone!",
@@ -10622,12 +10357,6 @@
     ],
     "locations": [
       {
-        "lat": 40.3120154,
-        "lng": -111.701522,
-        "address": "800 N State St, Orem, UT 84057",
-        "phone": "+18012243434"
-      },
-      {
         "lat": 40.2975578,
         "lng": -111.7345052,
         "address": "49 N Geneva Rd, Vineyard, UT 84059",
@@ -10638,12 +10367,6 @@
         "lng": -111.9662996,
         "address": "4045 E Pony Express Pkwy, Eagle Mountain, UT 84005",
         "phone": "+18017894994"
-      },
-      {
-        "lat": 39.99789699999999,
-        "lng": -111.8226412,
-        "address": "74 N State Rd 198, Santaquin, UT 84655",
-        "phone": "+18017540144"
       },
       {
         "lat": 40.3115041,
@@ -11011,9 +10734,9 @@
     "id": "2627-free-245",
     "name": "Franz Bakery Outlet",
     "category": "free",
-    "address": "147 N 2000 W, Springville, UT 84663",
-    "lat": 40.1684871,
-    "lng": -111.6485588,
+    "address": "1177 W 100 N, Provo, UT 84601, USA",
+    "lat": 40.2344417,
+    "lng": -111.679362,
     "locationRestriction": "All Utah Locations",
     "deal": {
       "title": "FREE! Loaf of Bread!",
@@ -11033,24 +10756,6 @@
     ],
     "locations": [
       {
-        "lat": 40.1684871,
-        "lng": -111.6485588,
-        "address": "147 N 2000 W, Springville, UT 84663",
-        "phone": "+18013772154"
-      },
-      {
-        "lat": 40.5262715,
-        "lng": -111.900897,
-        "address": "375 W 12300 S, Draper, UT 84020",
-        "phone": "+18013772154"
-      },
-      {
-        "lat": 40.7231728,
-        "lng": -111.9455562,
-        "address": "2060 W 2200 S, West Valley City, UT 84119",
-        "phone": "+18017761623"
-      },
-      {
         "lat": 40.2344417,
         "lng": -111.679362,
         "address": "1177 W 100 N, Provo, UT 84601, USA",
@@ -11062,9 +10767,9 @@
     "id": "2627-free-246",
     "name": "G.O.A.T Haircuts",
     "category": "free",
-    "address": "4801 N University Ave Ste 60, Provo, UT 84604",
-    "lat": 40.2996159,
-    "lng": -111.6593651,
+    "address": "160 E University Pkwy Suite J, Orem, UT 84058, USA",
+    "lat": 40.2730617,
+    "lng": -111.690962,
     "locationRestriction": "",
     "deal": {
       "title": "FREE! Men's Ears, Eyebrow or Nose Wax!",
@@ -11083,24 +10788,6 @@
       "free"
     ],
     "locations": [
-      {
-        "lat": 40.2996159,
-        "lng": -111.6593651,
-        "address": "4801 N University Ave Ste 60, Provo, UT 84604",
-        "phone": "+18014941414"
-      },
-      {
-        "lat": 40.3898145,
-        "lng": -111.830984,
-        "address": "161 N 1200 E, Lehi, UT 84043",
-        "phone": "+18019807745"
-      },
-      {
-        "lat": 40.7350295,
-        "lng": -111.9401717,
-        "address": "1630 S Redwood Rd Ste 104, Saratoga Springs, UT 84045",
-        "phone": "+13853229200"
-      },
       {
         "lat": 40.2730617,
         "lng": -111.690962,
@@ -11124,12 +10811,6 @@
         "lng": -111.880057,
         "address": "1870 W Traverse Pkwy Ste C, Lehi, UT 84043, USA",
         "phone": "+18017564460"
-      },
-      {
-        "lat": 40.2728336,
-        "lng": -111.6815833,
-        "address": "570 E University Pkwy Suite #5, Orem, UT 84097, USA",
-        "phone": "+18014941414"
       },
       {
         "lat": 40.556685,
@@ -12186,12 +11867,6 @@
         "lng": -111.79539039999999,
         "address": "76 N 100 E, American Fork, UT 84003, USA",
         "phone": "+18017569696"
-      },
-      {
-        "lat": 40.2633267,
-        "lng": -111.66882539999999,
-        "address": "2245 N University Pkwy, Provo, UT 84604, USA",
-        "phone": "+13854505200"
       }
     ]
   },
@@ -12316,9 +11991,9 @@
     "id": "2627-free-274",
     "name": "Quick Wits Comedy",
     "category": "free",
-    "address": "695 W Center St, Midvale, UT 84047",
-    "lat": 40.6103136,
-    "lng": -111.9100001,
+    "address": "2685 Preston St, Salt Lake City, UT 84106, USA",
+    "lat": 40.7134143,
+    "lng": -111.8349451,
     "locationRestriction": "",
     "deal": {
       "title": "FREE! Admission!",
@@ -12338,15 +12013,9 @@
     ],
     "locations": [
       {
-        "lat": 40.6103136,
-        "lng": -111.9100001,
-        "address": "695 W Center St, Midvale, UT 84047",
-        "phone": "+18018240523"
-      },
-      {
-        "lat": 40.692849599999995,
-        "lng": -111.88795449999999,
-        "address": "3601 S State St, South Salt Lake, UT 84115, USA",
+        "lat": 40.7134143,
+        "lng": -111.8349451,
+        "address": "2685 Preston St, Salt Lake City, UT 84106, USA",
         "phone": "+18018240523"
       }
     ]
@@ -12581,18 +12250,6 @@
         "phone": "+18018523142"
       },
       {
-        "lat": 40.359893,
-        "lng": -111.739233,
-        "address": "306 S 100 E, Pleasant Grove, UT 84062",
-        "phone": "+18013622737"
-      },
-      {
-        "lat": 40.4092656,
-        "lng": -111.7746392,
-        "address": "9748 Oakbrook Dr Ste 1, Highland, UT 84003",
-        "phone": "+18013622737"
-      },
-      {
         "lat": 40.1060875,
         "lng": -111.652845,
         "address": "109 E 300 S, Spanish Fork, UT 84660",
@@ -12648,12 +12305,6 @@
         "lng": -111.8604929,
         "address": "1065 E 9400 S, Sandy, UT 84094",
         "phone": "+18015232969"
-      },
-      {
-        "lat": 40.409321,
-        "lng": -111.7746044,
-        "address": "9748 Oakbrook Dr Ste 1, Highland, UT 84003, USA",
-        "phone": "+13854847438"
       }
     ]
   },
@@ -13127,12 +12778,6 @@
         "phone": "+18018215550"
       },
       {
-        "lat": 40.412425,
-        "lng": -111.8694833,
-        "address": "1059 W River Rd, Saratoga Springs, UT 84045",
-        "phone": "+18018215550"
-      },
-      {
         "lat": 40.8840001,
         "lng": -111.8864579,
         "address": "245 W 500 S, Bountiful, UT 84010",
@@ -13215,12 +12860,6 @@
         "lng": -111.6634834,
         "address": "268 W 100 S, Provo, UT 84601",
         "phone": "+18018718151"
-      },
-      {
-        "lat": 40.3615831,
-        "lng": -111.748836,
-        "address": "527 W State St Suite #101, Pleasant Grove, UT 84062, USA",
-        "phone": "+18054056756"
       }
     ]
   },
@@ -14848,9 +14487,9 @@
     "id": "2627-treats-330",
     "name": "Dairy Queen",
     "category": "treats",
-    "address": "800 N State St, Orem, UT 84057",
-    "lat": 40.3120154,
-    "lng": -111.701522,
+    "address": "49 N Geneva Rd, Vineyard, UT 84059",
+    "lat": 40.2975578,
+    "lng": -111.7345052,
     "locationRestriction": "Orem, Vineyard, Eagle Mountain & Santaquin",
     "deal": {
       "title": "Buy a Blizzard, Get 1 FREE!",
@@ -14870,12 +14509,6 @@
     ],
     "locations": [
       {
-        "lat": 40.3120154,
-        "lng": -111.701522,
-        "address": "800 N State St, Orem, UT 84057",
-        "phone": "+18012243434"
-      },
-      {
         "lat": 40.2975578,
         "lng": -111.7345052,
         "address": "49 N Geneva Rd, Vineyard, UT 84059",
@@ -14886,12 +14519,6 @@
         "lng": -111.9662996,
         "address": "4045 E Pony Express Pkwy, Eagle Mountain, UT 84005",
         "phone": "+18017894994"
-      },
-      {
-        "lat": 39.99789699999999,
-        "lng": -111.8226412,
-        "address": "74 N State Rd 198, Santaquin, UT 84655",
-        "phone": "+18017540144"
       },
       {
         "lat": 40.3115041,
@@ -15031,9 +14658,9 @@
     "id": "2627-treats-333",
     "name": "Franz Bakery Outlet",
     "category": "treats",
-    "address": "147 N 2000 W, Springville, UT 84663",
-    "lat": 40.1684871,
-    "lng": -111.6485588,
+    "address": "1177 W 100 N, Provo, UT 84601, USA",
+    "lat": 40.2344417,
+    "lng": -111.679362,
     "locationRestriction": "All Utah Locations",
     "deal": {
       "title": "2-4-1! Snack Cake or Loaf of Bread!",
@@ -15053,24 +14680,6 @@
     ],
     "locations": [
       {
-        "lat": 40.1684871,
-        "lng": -111.6485588,
-        "address": "147 N 2000 W, Springville, UT 84663",
-        "phone": "+18013772154"
-      },
-      {
-        "lat": 40.5262715,
-        "lng": -111.900897,
-        "address": "375 W 12300 S, Draper, UT 84020",
-        "phone": "+18013772154"
-      },
-      {
-        "lat": 40.7231728,
-        "lng": -111.9455562,
-        "address": "2060 W 2200 S, West Valley City, UT 84119",
-        "phone": "+18017761623"
-      },
-      {
         "lat": 40.2344417,
         "lng": -111.679362,
         "address": "1177 W 100 N, Provo, UT 84601, USA",
@@ -15082,9 +14691,9 @@
     "id": "2627-treats-334",
     "name": "Freddy's Frozen Custard & Steakburgers",
     "category": "treats",
-    "address": "1513 N Town Centre Blvd, Provo, UT 84604",
-    "lat": 40.2135026,
-    "lng": -111.6616299,
+    "address": "1025 S University Ave, Provo, UT 84601, USA",
+    "lat": 40.220027699999996,
+    "lng": -111.65835799999999,
     "locationRestriction": "All Utah Locations",
     "deal": {
       "title": "2-4-1! Custard, Cone or Dish!",
@@ -15103,30 +14712,6 @@
       "treats"
     ],
     "locations": [
-      {
-        "lat": 40.2135026,
-        "lng": -111.6616299,
-        "address": "1513 N Town Centre Blvd, Provo, UT 84604",
-        "phone": "+13852865817"
-      },
-      {
-        "lat": 40.3584025,
-        "lng": -111.7407118,
-        "address": "436 S Main St, Pleasant Grove, UT 84062",
-        "phone": "+13852865817"
-      },
-      {
-        "lat": 40.412425,
-        "lng": -111.8694833,
-        "address": "1059 W River Rd, Saratoga Springs, UT 84045",
-        "phone": "+18014384646"
-      },
-      {
-        "lat": 40.12297239999999,
-        "lng": -111.650976,
-        "address": "191 E 1000 N, Spanish Fork, UT 84660",
-        "phone": "+13852865817"
-      },
       {
         "lat": 40.220027699999996,
         "lng": -111.65835799999999,
@@ -16379,12 +15964,6 @@
         "phone": "+18017637540"
       },
       {
-        "lat": 40.7679724,
-        "lng": -111.891504,
-        "address": "50 S Main St Spc 115A, Salt Lake City, UT 84101",
-        "phone": "+14353153049"
-      },
-      {
         "lat": 41.0739208,
         "lng": -111.979332,
         "address": "936 N Main St Ste D, Layton, UT 84041",
@@ -16458,12 +16037,6 @@
         "lng": -111.7866005,
         "address": "456 E State St Ste 300, American Fork, UT 84003",
         "phone": "+18017637540"
-      },
-      {
-        "lat": 40.7679724,
-        "lng": -111.891504,
-        "address": "50 S Main St Spc 115A, Salt Lake City, UT 84101",
-        "phone": "+14353153049"
       },
       {
         "lat": 41.0739208,
@@ -16805,18 +16378,6 @@
         "phone": "+18018523142"
       },
       {
-        "lat": 40.359893,
-        "lng": -111.739233,
-        "address": "306 S 100 E, Pleasant Grove, UT 84062",
-        "phone": "+18013622737"
-      },
-      {
-        "lat": 40.4092656,
-        "lng": -111.7746392,
-        "address": "9748 Oakbrook Dr Ste 1, Highland, UT 84003",
-        "phone": "+18013622737"
-      },
-      {
         "lat": 40.1060875,
         "lng": -111.652845,
         "address": "109 E 300 S, Spanish Fork, UT 84660",
@@ -16866,18 +16427,6 @@
         "lng": -111.6641105,
         "address": "1055 N 300 W Ste 201, Provo, UT 84604",
         "phone": "+18018523142"
-      },
-      {
-        "lat": 40.359893,
-        "lng": -111.739233,
-        "address": "306 S 100 E, Pleasant Grove, UT 84062",
-        "phone": "+18013622737"
-      },
-      {
-        "lat": 40.4092656,
-        "lng": -111.7746392,
-        "address": "9748 Oakbrook Dr Ste 1, Highland, UT 84003",
-        "phone": "+18013622737"
       },
       {
         "lat": 40.1060875,
@@ -16986,12 +16535,6 @@
         "lng": -111.8604929,
         "address": "1065 E 9400 S, Sandy, UT 84094",
         "phone": "+18015232969"
-      },
-      {
-        "lat": 40.409321,
-        "lng": -111.7746044,
-        "address": "9748 Oakbrook Dr Ste 1, Highland, UT 84003, USA",
-        "phone": "+13854847438"
       }
     ]
   },
@@ -17031,12 +16574,6 @@
         "lng": -111.8604929,
         "address": "1065 E 9400 S, Sandy, UT 84094",
         "phone": "+18015232969"
-      },
-      {
-        "lat": 40.409321,
-        "lng": -111.7746044,
-        "address": "9748 Oakbrook Dr Ste 1, Highland, UT 84003, USA",
-        "phone": "+13854847438"
       }
     ]
   },
@@ -17453,9 +16990,9 @@
         "phone": "+13852480661"
       },
       {
-        "lat": 40.388188,
-        "lng": -111.9107387,
-        "address": "250 E Crossroads Blvd, Saratoga Springs, UT 84045, USA",
+        "lat": 40.3869974,
+        "lng": -111.90831440000001,
+        "address": "337 E Xrds Blvd suite a, Saratoga Springs, UT 84043, USA",
         "phone": "+13853527136"
       }
     ]
@@ -17528,9 +17065,9 @@
         "phone": "+13852480661"
       },
       {
-        "lat": 40.388188,
-        "lng": -111.9107387,
-        "address": "250 E Crossroads Blvd, Saratoga Springs, UT 84045, USA",
+        "lat": 40.3869974,
+        "lng": -111.90831440000001,
+        "address": "337 E Xrds Blvd suite a, Saratoga Springs, UT 84043, USA",
         "phone": "+13853527136"
       }
     ]
@@ -17603,9 +17140,9 @@
         "phone": "+13852480661"
       },
       {
-        "lat": 40.388188,
-        "lng": -111.9107387,
-        "address": "250 E Crossroads Blvd, Saratoga Springs, UT 84045, USA",
+        "lat": 40.3869974,
+        "lng": -111.90831440000001,
+        "address": "337 E Xrds Blvd suite a, Saratoga Springs, UT 84043, USA",
         "phone": "+13853527136"
       }
     ]
@@ -18020,12 +17557,6 @@
         "phone": "+18012262117"
       },
       {
-        "lat": 40.2762105,
-        "lng": -111.686526,
-        "address": "1150 S State St, Orem, UT 84097",
-        "phone": "+18012262117"
-      },
-      {
         "lat": 40.2140518,
         "lng": -111.6583366,
         "address": "1474 S 40th E, Provo, UT 84606",
@@ -18110,12 +17641,6 @@
         "lat": 40.313643,
         "lng": -111.701784,
         "address": "910 State St, Orem, UT 84057",
-        "phone": "+18012262117"
-      },
-      {
-        "lat": 40.2762105,
-        "lng": -111.686526,
-        "address": "1150 S State St, Orem, UT 84097",
         "phone": "+18012262117"
       },
       {
@@ -18589,9 +18114,9 @@
     "id": "2627-sandwiches-400",
     "name": "Dairy Queen",
     "category": "sandwiches",
-    "address": "800 N State St, Orem, UT 84057",
-    "lat": 40.3120154,
-    "lng": -111.701522,
+    "address": "49 N Geneva Rd, Vineyard, UT 84059",
+    "lat": 40.2975578,
+    "lng": -111.7345052,
     "locationRestriction": "Orem, Vineyard, Eagle Mountain & Santaquin",
     "deal": {
       "title": "2-4-1! 4-Piece Chicken Strip Basket!",
@@ -18611,12 +18136,6 @@
     ],
     "locations": [
       {
-        "lat": 40.3120154,
-        "lng": -111.701522,
-        "address": "800 N State St, Orem, UT 84057",
-        "phone": "+18012243434"
-      },
-      {
         "lat": 40.2975578,
         "lng": -111.7345052,
         "address": "49 N Geneva Rd, Vineyard, UT 84059",
@@ -18627,12 +18146,6 @@
         "lng": -111.9662996,
         "address": "4045 E Pony Express Pkwy, Eagle Mountain, UT 84005",
         "phone": "+18017894994"
-      },
-      {
-        "lat": 39.99789699999999,
-        "lng": -111.8226412,
-        "address": "74 N State Rd 198, Santaquin, UT 84655",
-        "phone": "+18017540144"
       },
       {
         "lat": 40.3115041,
@@ -18688,9 +18201,9 @@
     "id": "2627-sandwiches-401",
     "name": "Dairy Queen",
     "category": "sandwiches",
-    "address": "800 N State St, Orem, UT 84057",
-    "lat": 40.3120154,
-    "lng": -111.701522,
+    "address": "49 N Geneva Rd, Vineyard, UT 84059",
+    "lat": 40.2975578,
+    "lng": -111.7345052,
     "locationRestriction": "Orem, Vineyard, Eagle Mountain & Santaquin",
     "deal": {
       "title": "Buy a Combo Meal, Get One FREE!",
@@ -18710,12 +18223,6 @@
     ],
     "locations": [
       {
-        "lat": 40.3120154,
-        "lng": -111.701522,
-        "address": "800 N State St, Orem, UT 84057",
-        "phone": "+18012243434"
-      },
-      {
         "lat": 40.2975578,
         "lng": -111.7345052,
         "address": "49 N Geneva Rd, Vineyard, UT 84059",
@@ -18726,12 +18233,6 @@
         "lng": -111.9662996,
         "address": "4045 E Pony Express Pkwy, Eagle Mountain, UT 84005",
         "phone": "+18017894994"
-      },
-      {
-        "lat": 39.99789699999999,
-        "lng": -111.8226412,
-        "address": "74 N State Rd 198, Santaquin, UT 84655",
-        "phone": "+18017540144"
       },
       {
         "lat": 40.3115041,
@@ -18787,9 +18288,9 @@
     "id": "2627-sandwiches-402",
     "name": "Dairy Queen",
     "category": "sandwiches",
-    "address": "800 N State St, Orem, UT 84057",
-    "lat": 40.3120154,
-    "lng": -111.701522,
+    "address": "49 N Geneva Rd, Vineyard, UT 84059",
+    "lat": 40.2975578,
+    "lng": -111.7345052,
     "locationRestriction": "Orem, Vineyard, Eagle Mountain & Santaquin",
     "deal": {
       "title": "Buy 1 Sandwich or Burger, Get 1 FREE!",
@@ -18809,12 +18310,6 @@
     ],
     "locations": [
       {
-        "lat": 40.3120154,
-        "lng": -111.701522,
-        "address": "800 N State St, Orem, UT 84057",
-        "phone": "+18012243434"
-      },
-      {
         "lat": 40.2975578,
         "lng": -111.7345052,
         "address": "49 N Geneva Rd, Vineyard, UT 84059",
@@ -18825,12 +18320,6 @@
         "lng": -111.9662996,
         "address": "4045 E Pony Express Pkwy, Eagle Mountain, UT 84005",
         "phone": "+18017894994"
-      },
-      {
-        "lat": 39.99789699999999,
-        "lng": -111.8226412,
-        "address": "74 N State Rd 198, Santaquin, UT 84655",
-        "phone": "+18017540144"
       },
       {
         "lat": 40.3115041,
@@ -19072,9 +18561,9 @@
     "id": "2627-sandwiches-405",
     "name": "Gandolfo's",
     "category": "sandwiches",
-    "address": "1066 S State St, Orem, UT 84097",
-    "lat": 40.2774891,
-    "lng": -111.687199,
+    "address": "775 N State St, Orem, UT 84057, USA",
+    "lat": 40.3114346,
+    "lng": -111.70208,
     "locationRestriction": "All Utah County",
     "deal": {
       "title": "2-4-1! ANY Sandwich or Hot Dog!",
@@ -19093,18 +18582,6 @@
       "sandwiches"
     ],
     "locations": [
-      {
-        "lat": 40.2774891,
-        "lng": -111.687199,
-        "address": "1066 S State St, Orem, UT 84097",
-        "phone": "+18017341770"
-      },
-      {
-        "lat": 40.3703126,
-        "lng": -111.7722845,
-        "address": "936 E State Rd, American Fork, UT 84003",
-        "phone": "+18014921330"
-      },
       {
         "lat": 40.3114346,
         "lng": -111.70208,
@@ -19141,9 +18618,9 @@
     "id": "2627-sandwiches-406",
     "name": "Gandolfo's",
     "category": "sandwiches",
-    "address": "1066 S State St, Orem, UT 84097",
-    "lat": 40.2774891,
-    "lng": -111.687199,
+    "address": "775 N State St, Orem, UT 84057, USA",
+    "lat": 40.3114346,
+    "lng": -111.70208,
     "locationRestriction": "All Utah County",
     "deal": {
       "title": "2-4-1! Breakfast Sandwich!",
@@ -19162,18 +18639,6 @@
       "sandwiches"
     ],
     "locations": [
-      {
-        "lat": 40.2774891,
-        "lng": -111.687199,
-        "address": "1066 S State St, Orem, UT 84097",
-        "phone": "+18017341770"
-      },
-      {
-        "lat": 40.3703126,
-        "lng": -111.7722845,
-        "address": "936 E State Rd, American Fork, UT 84003",
-        "phone": "+18014921330"
-      },
       {
         "lat": 40.3114346,
         "lng": -111.70208,
@@ -21275,12 +20740,6 @@
         "phone": "+18017680391"
       },
       {
-        "lat": 40.1829275,
-        "lng": -111.6099439,
-        "address": "1182 N Main St, Springville, UT 84663",
-        "phone": "+18014916810"
-      },
-      {
         "lat": 40.2505403,
         "lng": -111.6565773,
         "address": "122 E 1230 N, Provo, UT 84604",
@@ -21321,6 +20780,12 @@
         "lng": -111.9168328,
         "address": "1361 N Redwood Rd, Saratoga Springs, UT 84045, USA",
         "phone": "+18017684380"
+      },
+      {
+        "lat": 40.1609324,
+        "lng": -111.6418648,
+        "address": "1739 W 400 S, Springville, UT 84663, USA",
+        "phone": "+18014916810"
       }
     ]
   },
@@ -21386,12 +20851,6 @@
         "phone": "+18017680391"
       },
       {
-        "lat": 40.1829275,
-        "lng": -111.6099439,
-        "address": "1182 N Main St, Springville, UT 84663",
-        "phone": "+18014916810"
-      },
-      {
         "lat": 40.2505403,
         "lng": -111.6565773,
         "address": "122 E 1230 N, Provo, UT 84604",
@@ -21432,6 +20891,12 @@
         "lng": -111.9168328,
         "address": "1361 N Redwood Rd, Saratoga Springs, UT 84045, USA",
         "phone": "+18017684380"
+      },
+      {
+        "lat": 40.1609324,
+        "lng": -111.6418648,
+        "address": "1739 W 400 S, Springville, UT 84663, USA",
+        "phone": "+18014916810"
       }
     ]
   },

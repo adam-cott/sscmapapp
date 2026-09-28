@@ -14,6 +14,8 @@ const CATEGORIES = ['pizza', 'restaurants', 'sandwiches', 'treats', 'free', 'ent
 const ABBREVIATION = /\b(Lrg|Med|Reg|Hrs?|Appt|Req|Excl|Pcs|Conv|Locs?|Cnty|Mtn|Particip|Partic|M-Th|M-F|T-Th)\b|\bw\//
 const PLACE_ABBREVIATION = /\b(AF|SF|PG|WJ|EM|SS|SJ|CH|UT|Ut|N\.|S\.)(?=\W|$)/
 const SHORT_DAY = /\b(Mon|Tue|Tues|Wed|Thu|Thur|Thurs|Fri|Sat|Sun)\b/
+// Online-only businesses have no place to go, so no map pin.
+const ONLINE_ONLY = ['HiddenHunts.com']
 
 const offenders = (check) => deals.filter(check).map(d => `${d.id} ${d.name}`)
 
@@ -30,7 +32,7 @@ describe(`deals data (${file})`, () => {
   })
 
   it('gives every deal at least one map pin that honors it', () => {
-    expect(offenders(d => !getMapFocusLocations(d)?.length)).toEqual([])
+    expect(offenders(d => !ONLINE_ONLY.includes(d.name) && !getMapFocusLocations(d)?.length)).toEqual([])
   })
 
   it('only resolves pins from the business’s own locations', () => {
