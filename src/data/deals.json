@@ -2530,12 +2530,6 @@
         "phone": "+18019978446"
       },
       {
-        "lat": 40.7603464,
-        "lng": -111.8722293,
-        "address": "668 E 400 S, Salt Lake City, UT 84102",
-        "phone": "+18015756933"
-      },
-      {
         "lat": 40.7041658,
         "lng": -112.0244025,
         "address": "3075 S 5600 W, West Valley City, UT 84120",
@@ -2588,6 +2582,15 @@
         "lng": -111.917024,
         "address": "757 N Redwood Rd, Saratoga Springs, UT 84045, USA",
         "phone": "+18019005638"
+      }
+    ],
+    "closedLocations": [
+      {
+        "lat": 40.7603464,
+        "lng": -111.8722293,
+        "address": "668 E 400 S, Salt Lake City, UT 84102",
+        "phone": "+18015756933",
+        "closedReason": "Permanently closed"
       }
     ]
   },
@@ -4173,9 +4176,9 @@
     "id": "2627-restaurants-085",
     "name": "Rumbi Island Grill",
     "category": "restaurants",
-    "address": "748 W Antelope Dr Ste A, Layton, UT 84041",
-    "lat": 41.0894892,
-    "lng": -111.9802123,
+    "address": "71 N 500 W Ste C, West Bountiful, UT 84010",
+    "lat": 40.8900441,
+    "lng": -111.892692,
     "locationRestriction": "All Utah Locations",
     "deal": {
       "title": "2-4-1! Any Rice Bowl!",
@@ -4194,12 +4197,6 @@
       "restaurants"
     ],
     "locations": [
-      {
-        "lat": 41.0894892,
-        "lng": -111.9802123,
-        "address": "748 W Antelope Dr Ste A, Layton, UT 84041",
-        "phone": "+18016145020"
-      },
       {
         "lat": 40.8900441,
         "lng": -111.892692,
@@ -4230,15 +4227,24 @@
         "address": "148 E 12300 S Suite B, Draper, UT 84020, USA",
         "phone": "+18015722558"
       }
+    ],
+    "closedLocations": [
+      {
+        "lat": 41.0894892,
+        "lng": -111.9802123,
+        "address": "748 W Antelope Dr Ste A, Layton, UT 84041",
+        "phone": "+18016145020",
+        "closedReason": "Permanently closed"
+      }
     ]
   },
   {
     "id": "2627-restaurants-086",
     "name": "Rumbi Island Grill",
     "category": "restaurants",
-    "address": "748 W Antelope Dr Ste A, Layton, UT 84041",
-    "lat": 41.0894892,
-    "lng": -111.9802123,
+    "address": "71 N 500 W Ste C, West Bountiful, UT 84010",
+    "lat": 40.8900441,
+    "lng": -111.892692,
     "locationRestriction": "All Utah Locations",
     "deal": {
       "title": "Buy 1 Menu Item and 2 Regular Drinks, Get 1 FREE!",
@@ -4257,12 +4263,6 @@
       "restaurants"
     ],
     "locations": [
-      {
-        "lat": 41.0894892,
-        "lng": -111.9802123,
-        "address": "748 W Antelope Dr Ste A, Layton, UT 84041",
-        "phone": "+18016145020"
-      },
       {
         "lat": 40.8900441,
         "lng": -111.892692,
@@ -4292,6 +4292,15 @@
         "lng": -111.88662049999999,
         "address": "148 E 12300 S Suite B, Draper, UT 84020, USA",
         "phone": "+18015722558"
+      }
+    ],
+    "closedLocations": [
+      {
+        "lat": 41.0894892,
+        "lng": -111.9802123,
+        "address": "748 W Antelope Dr Ste A, Layton, UT 84041",
+        "phone": "+18016145020",
+        "closedReason": "Permanently closed"
       }
     ]
   },
@@ -4891,12 +4900,6 @@
         "phone": "+18017277813"
       },
       {
-        "lat": 40.6408954,
-        "lng": -111.8885751,
-        "address": "5967 S State St, Murray, UT 84107",
-        "phone": "+18017277850"
-      },
-      {
         "lat": 40.125458300000005,
         "lng": -111.63963319999999,
         "address": "1218 N Cyn Crk Pkwy, Spanish Fork, UT 84660, USA",
@@ -4907,6 +4910,15 @@
         "lng": -111.86296499999999,
         "address": "9260 Village Shop Dr, Sandy, UT 84094, USA",
         "phone": "+18017277850"
+      }
+    ],
+    "closedLocations": [
+      {
+        "lat": 40.6408954,
+        "lng": -111.8885751,
+        "address": "5967 S State St, Murray, UT 84107",
+        "phone": "+18017277850",
+        "closedReason": "Permanently closed"
       }
     ]
   },
@@ -6407,12 +6419,15 @@
         "lng": -111.6587677,
         "address": "261 N University Ave, Provo, UT 84601",
         "phone": "+18016138960"
-      },
+      }
+    ],
+    "closedLocations": [
       {
         "lat": 40.7563925,
         "lng": -111.8985922,
         "address": "Salt Lake City, Salt Lake City, UT 84101",
-        "phone": "+18018503507"
+        "phone": "+18018503507",
+        "closedReason": "Permanently closed"
       }
     ]
   },
@@ -6689,12 +6704,15 @@
         "lng": -111.7533601,
         "address": "844 S 800 W Ste 201, Pleasant Grove, UT 84062",
         "phone": "+18337756245"
-      },
+      }
+    ],
+    "closedLocations": [
       {
         "lat": 40.257234,
         "lng": -111.6602724,
         "address": "1774 N University Pkwy Ste 18, Provo, UT 84604",
-        "phone": "+18337756245"
+        "phone": "+18337756245",
+        "closedReason": "Permanently closed"
       }
     ]
   },
@@ -11469,12 +11487,15 @@
         "lng": -111.7533601,
         "address": "844 S 800 W Ste 201, Pleasant Grove, UT 84062",
         "phone": "+18337756245"
-      },
+      }
+    ],
+    "closedLocations": [
       {
         "lat": 40.257234,
         "lng": -111.6602724,
         "address": "1774 N University Pkwy Ste 18, Provo, UT 84604",
-        "phone": "+18337756245"
+        "phone": "+18337756245",
+        "closedReason": "Permanently closed"
       }
     ]
   },
@@ -11773,9 +11794,9 @@
     "id": "2627-free-261",
     "name": "Mooyah",
     "category": "free",
-    "address": "62 W 1230 N Ste 105, Provo, UT 84604",
-    "lat": 40.25142611390114,
-    "lng": -111.65996335358233,
+    "address": "9710 S State St Ste 101, Sandy, UT 84070",
+    "lat": 40.5750267,
+    "lng": -111.8912931,
     "locationRestriction": "",
     "deal": {
       "title": "FREE! Small Shake!",
@@ -11795,12 +11816,6 @@
     ],
     "locations": [
       {
-        "lat": 40.25142611390114,
-        "lng": -111.65996335358233,
-        "address": "62 W 1230 N Ste 105, Provo, UT 84604",
-        "phone": "+18017058500"
-      },
-      {
         "lat": 40.5750267,
         "lng": -111.8912931,
         "address": "9710 S State St Ste 101, Sandy, UT 84070",
@@ -11811,6 +11826,15 @@
         "lng": -111.9801041,
         "address": "11428 S Parkway Plaza Dr, South Jordan, UT 84095",
         "phone": "+13855633377"
+      }
+    ],
+    "closedLocations": [
+      {
+        "lat": 40.25142611390114,
+        "lng": -111.65996335358233,
+        "address": "62 W 1230 N Ste 105, Provo, UT 84604",
+        "phone": "+18017058500",
+        "closedReason": "Permanently closed"
       }
     ]
   },
@@ -13857,12 +13881,15 @@
         "lng": -111.669533,
         "address": "2265 N University Pkwy, Provo, UT 84604",
         "phone": "+13852754425"
-      },
+      }
+    ],
+    "closedLocations": [
       {
         "lat": 40.5263712,
         "lng": -111.8754094,
         "address": "582 E 12300 S, Draper, UT 84020",
-        "phone": "+13852754425"
+        "phone": "+13852754425",
+        "closedReason": "Permanently closed"
       }
     ]
   },
@@ -15838,9 +15865,9 @@
     "id": "2627-treats-347",
     "name": "Mooyah",
     "category": "treats",
-    "address": "62 W 1230 N Ste 105, Provo, UT 84604",
-    "lat": 40.25142611390114,
-    "lng": -111.65996335358233,
+    "address": "9710 S State St Ste 101, Sandy, UT 84070",
+    "lat": 40.5750267,
+    "lng": -111.8912931,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Shake!",
@@ -15860,12 +15887,6 @@
     ],
     "locations": [
       {
-        "lat": 40.25142611390114,
-        "lng": -111.65996335358233,
-        "address": "62 W 1230 N Ste 105, Provo, UT 84604",
-        "phone": "+18017058500"
-      },
-      {
         "lat": 40.5750267,
         "lng": -111.8912931,
         "address": "9710 S State St Ste 101, Sandy, UT 84070",
@@ -15876,6 +15897,15 @@
         "lng": -111.9801041,
         "address": "11428 S Parkway Plaza Dr, South Jordan, UT 84095",
         "phone": "+13855633377"
+      }
+    ],
+    "closedLocations": [
+      {
+        "lat": 40.25142611390114,
+        "lng": -111.65996335358233,
+        "address": "62 W 1230 N Ste 105, Provo, UT 84604",
+        "phone": "+18017058500",
+        "closedReason": "Permanently closed"
       }
     ]
   },
@@ -17014,9 +17044,9 @@
     "id": "2627-treats-371",
     "name": "Sub Zero Ice Cream",
     "category": "treats",
-    "address": "400 S Main St, Alpine, UT 84004",
-    "lat": 40.4477829,
-    "lng": -111.7794082,
+    "address": "9860 S 700 E Ste 16, Sandy, UT 84070",
+    "lat": 40.5711666,
+    "lng": -111.8728377,
     "locationRestriction": "All Utah County",
     "deal": {
       "title": "2-4-1! Flavored Soda from the Soda Lab!",
@@ -17036,16 +17066,16 @@
     ],
     "locations": [
       {
-        "lat": 40.4477829,
-        "lng": -111.7794082,
-        "address": "400 S Main St, Alpine, UT 84004",
-        "phone": "+18014205256"
-      },
-      {
         "lat": 40.5711666,
         "lng": -111.8728377,
         "address": "9860 S 700 E Ste 16, Sandy, UT 84070",
         "phone": "+18014205256"
+      },
+      {
+        "lat": 40.3646329,
+        "lng": -111.7530842,
+        "address": "148 S Pleasant Grove Blvd #120, Pleasant Grove, UT 84062, USA",
+        "phone": "+13853237020"
       }
     ],
     "closedLocations": [
@@ -17055,6 +17085,13 @@
         "address": "62 W Center St, Provo, UT 84601, USA",
         "phone": "+13853752617",
         "closedReason": "Permanently closed"
+      },
+      {
+        "lat": 40.4477829,
+        "lng": -111.7794082,
+        "address": "400 S Main St, Alpine, UT 84004",
+        "phone": "+18014205256",
+        "closedReason": "Permanently closed"
       }
     ]
   },
@@ -17062,9 +17099,9 @@
     "id": "2627-treats-372",
     "name": "Sub Zero Ice Cream",
     "category": "treats",
-    "address": "400 S Main St, Alpine, UT 84004",
-    "lat": 40.4477829,
-    "lng": -111.7794082,
+    "address": "9860 S 700 E Ste 16, Sandy, UT 84070",
+    "lat": 40.5711666,
+    "lng": -111.8728377,
     "locationRestriction": "All Utah County",
     "deal": {
       "title": "Buy Any Ice Cream, Get 1 FREE!",
@@ -17084,16 +17121,16 @@
     ],
     "locations": [
       {
-        "lat": 40.4477829,
-        "lng": -111.7794082,
-        "address": "400 S Main St, Alpine, UT 84004",
-        "phone": "+18014205256"
-      },
-      {
         "lat": 40.5711666,
         "lng": -111.8728377,
         "address": "9860 S 700 E Ste 16, Sandy, UT 84070",
         "phone": "+18014205256"
+      },
+      {
+        "lat": 40.3646329,
+        "lng": -111.7530842,
+        "address": "148 S Pleasant Grove Blvd #120, Pleasant Grove, UT 84062, USA",
+        "phone": "+13853237020"
       }
     ],
     "closedLocations": [
@@ -17103,6 +17140,13 @@
         "address": "62 W Center St, Provo, UT 84601, USA",
         "phone": "+13853752617",
         "closedReason": "Permanently closed"
+      },
+      {
+        "lat": 40.4477829,
+        "lng": -111.7794082,
+        "address": "400 S Main St, Alpine, UT 84004",
+        "phone": "+18014205256",
+        "closedReason": "Permanently closed"
       }
     ]
   },
@@ -17110,9 +17154,9 @@
     "id": "2627-treats-373",
     "name": "Sub Zero Ice Cream",
     "category": "treats",
-    "address": "400 S Main St, Alpine, UT 84004",
-    "lat": 40.4477829,
-    "lng": -111.7794082,
+    "address": "9860 S 700 E Ste 16, Sandy, UT 84070",
+    "lat": 40.5711666,
+    "lng": -111.8728377,
     "locationRestriction": "All Utah County",
     "deal": {
       "title": "Buy Any Italian Ice, Get 1 FREE!",
@@ -17132,16 +17176,16 @@
     ],
     "locations": [
       {
-        "lat": 40.4477829,
-        "lng": -111.7794082,
-        "address": "400 S Main St, Alpine, UT 84004",
-        "phone": "+18014205256"
-      },
-      {
         "lat": 40.5711666,
         "lng": -111.8728377,
         "address": "9860 S 700 E Ste 16, Sandy, UT 84070",
         "phone": "+18014205256"
+      },
+      {
+        "lat": 40.3646329,
+        "lng": -111.7530842,
+        "address": "148 S Pleasant Grove Blvd #120, Pleasant Grove, UT 84062, USA",
+        "phone": "+13853237020"
       }
     ],
     "closedLocations": [
@@ -17150,6 +17194,13 @@
         "lng": -111.65982129999999,
         "address": "62 W Center St, Provo, UT 84601, USA",
         "phone": "+13853752617",
+        "closedReason": "Permanently closed"
+      },
+      {
+        "lat": 40.4477829,
+        "lng": -111.7794082,
+        "address": "400 S Main St, Alpine, UT 84004",
+        "phone": "+18014205256",
         "closedReason": "Permanently closed"
       }
     ]
@@ -20706,12 +20757,15 @@
         "lng": -111.8952864,
         "address": "2851 W Club House Dr, Lehi, UT 84043",
         "phone": "+18013418205"
-      },
+      }
+    ],
+    "closedLocations": [
       {
         "lat": 41.0785409,
         "lng": -111.9774575,
         "address": "1201 N Hill Field Rd, Layton, UT 84041",
-        "phone": "+13853322257"
+        "phone": "+13853322257",
+        "closedReason": "Permanently closed"
       }
     ]
   },
@@ -20719,9 +20773,9 @@
     "id": "2627-sandwiches-427",
     "name": "Mooyah",
     "category": "sandwiches",
-    "address": "62 W 1230 N Ste 105, Provo, UT 84604",
-    "lat": 40.25142611390114,
-    "lng": -111.65996335358233,
+    "address": "9710 S State St Ste 101, Sandy, UT 84070",
+    "lat": 40.5750267,
+    "lng": -111.8912931,
     "locationRestriction": "",
     "deal": {
       "title": "2-4-1! Any Burger, Sandwich or Hot Dog!",
@@ -20741,12 +20795,6 @@
     ],
     "locations": [
       {
-        "lat": 40.25142611390114,
-        "lng": -111.65996335358233,
-        "address": "62 W 1230 N Ste 105, Provo, UT 84604",
-        "phone": "+18017058500"
-      },
-      {
         "lat": 40.5750267,
         "lng": -111.8912931,
         "address": "9710 S State St Ste 101, Sandy, UT 84070",
@@ -20758,15 +20806,24 @@
         "address": "11428 S Parkway Plaza Dr, South Jordan, UT 84095",
         "phone": "+13855633377"
       }
+    ],
+    "closedLocations": [
+      {
+        "lat": 40.25142611390114,
+        "lng": -111.65996335358233,
+        "address": "62 W 1230 N Ste 105, Provo, UT 84604",
+        "phone": "+18017058500",
+        "closedReason": "Permanently closed"
+      }
     ]
   },
   {
     "id": "2627-sandwiches-428",
     "name": "Mooyah",
     "category": "sandwiches",
-    "address": "62 W 1230 N Ste 105, Provo, UT 84604",
-    "lat": 40.25142611390114,
-    "lng": -111.65996335358233,
+    "address": "9710 S State St Ste 101, Sandy, UT 84070",
+    "lat": 40.5750267,
+    "lng": -111.8912931,
     "locationRestriction": "",
     "deal": {
       "title": "50% OFF! Entire Purchase!",
@@ -20786,12 +20843,6 @@
     ],
     "locations": [
       {
-        "lat": 40.25142611390114,
-        "lng": -111.65996335358233,
-        "address": "62 W 1230 N Ste 105, Provo, UT 84604",
-        "phone": "+18017058500"
-      },
-      {
         "lat": 40.5750267,
         "lng": -111.8912931,
         "address": "9710 S State St Ste 101, Sandy, UT 84070",
@@ -20803,15 +20854,24 @@
         "address": "11428 S Parkway Plaza Dr, South Jordan, UT 84095",
         "phone": "+13855633377"
       }
+    ],
+    "closedLocations": [
+      {
+        "lat": 40.25142611390114,
+        "lng": -111.65996335358233,
+        "address": "62 W 1230 N Ste 105, Provo, UT 84604",
+        "phone": "+18017058500",
+        "closedReason": "Permanently closed"
+      }
     ]
   },
   {
     "id": "2627-sandwiches-429",
     "name": "Mooyah",
     "category": "sandwiches",
-    "address": "62 W 1230 N Ste 105, Provo, UT 84604",
-    "lat": 40.25142611390114,
-    "lng": -111.65996335358233,
+    "address": "9710 S State St Ste 101, Sandy, UT 84070",
+    "lat": 40.5750267,
+    "lng": -111.8912931,
     "locationRestriction": "",
     "deal": {
       "title": "Buy Any Burger, Sandwich or Hot Dog, Get Fries and a Drink FREE!",
@@ -20831,12 +20891,6 @@
     ],
     "locations": [
       {
-        "lat": 40.25142611390114,
-        "lng": -111.65996335358233,
-        "address": "62 W 1230 N Ste 105, Provo, UT 84604",
-        "phone": "+18017058500"
-      },
-      {
         "lat": 40.5750267,
         "lng": -111.8912931,
         "address": "9710 S State St Ste 101, Sandy, UT 84070",
@@ -20847,6 +20901,15 @@
         "lng": -111.9801041,
         "address": "11428 S Parkway Plaza Dr, South Jordan, UT 84095",
         "phone": "+13855633377"
+      }
+    ],
+    "closedLocations": [
+      {
+        "lat": 40.25142611390114,
+        "lng": -111.65996335358233,
+        "address": "62 W 1230 N Ste 105, Provo, UT 84604",
+        "phone": "+18017058500",
+        "closedReason": "Permanently closed"
       }
     ]
   },
