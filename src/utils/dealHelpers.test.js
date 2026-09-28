@@ -19,9 +19,21 @@ describe('matchLocationsToRestriction', () => {
       .toEqual(['Saratoga Springs', 'Eagle Mountain', 'Eagle Mountain'])
   })
 
-  it('handles comma lists and ignores "Participating Locations"', () => {
-    expect(cities(matchLocationsToRestriction([OREM, LEHI, PROVO], 'Orem, Lehi & Participating Locations')))
+  it('handles comma lists', () => {
+    expect(cities(matchLocationsToRestriction([OREM, LEHI, PROVO], 'Orem & Lehi')))
       .toEqual(['Orem', 'Lehi'])
+  })
+
+  it('treats "Participating Locations" and "Wasatch Front" as every Wasatch Front store, plus named cities', () => {
+    const OGDEN = loc('Ogden')
+    const HEBER = loc('Heber City')
+    const TOOELE = loc('Tooele')
+    expect(cities(matchLocationsToRestriction([OREM, OGDEN, HEBER, TOOELE], 'Participating Locations')))
+      .toEqual(['Orem', 'Ogden'])
+    expect(cities(matchLocationsToRestriction([PROVO, HEBER, TOOELE], 'Heber City & Participating Locations')))
+      .toEqual(['Provo', 'Heber City'])
+    expect(cities(matchLocationsToRestriction([OREM, HEBER], 'All Wasatch Front'))).toEqual(['Orem'])
+    expect(matchLocationsToRestriction([OREM, HEBER], 'All Locations')).toHaveLength(2)
   })
 
   it('treats "All ..." wording as every location, minus exclusions', () => {

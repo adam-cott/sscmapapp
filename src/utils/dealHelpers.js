@@ -125,6 +125,21 @@ const UTAH_COUNTY_CITIES = new Set([
   'Spanish Fork', 'Spring Lake', 'Springville', 'Vineyard', 'Woodland Hills',
 ])
 
+// "Participating Locations" and "All Wasatch Front" mean every store on the
+// Wasatch Front — Utah, Salt Lake, Davis and Weber counties up to Ogden — plus
+// any city named alongside (Adam, Sept 2026). Heber, Park City, Tooele and
+// Nephi stores don't count.
+const WASATCH_FRONT = /\bparticipating\b|\b(all )?wasatch front\b/i
+const WASATCH_FRONT_CITIES = new Set([
+  ...UTAH_COUNTY_CITIES,
+  'Bluffdale', 'Cottonwood Heights', 'Draper', 'Herriman', 'Holladay', 'Kearns', 'Magna', 'Midvale',
+  'Millcreek', 'Murray', 'Riverton', 'Salt Lake City', 'Sandy', 'South Jordan', 'South Salt Lake',
+  'Taylorsville', 'West Jordan', 'West Valley City',
+  'Bountiful', 'Centerville', 'Clearfield', 'Clinton', 'Farmington', 'Fruit Heights', 'Kaysville',
+  'Layton', 'North Salt Lake', 'Syracuse', 'West Bountiful', 'Woods Cross',
+  'North Ogden', 'Ogden', 'Riverdale', 'Roy', 'South Ogden', 'Washington Terrace',
+])
+
 // Splits "All Utah County, excluding Eagle Mountain & Spanish Fork" into an
 // include clause and an exclude clause; restrictions with no exclusion
 // wording are all include, no exclude.
@@ -188,14 +203,16 @@ export function matchLocationsToRestriction(locations, restrictionText) {
   if (!restrictionText) return locations
   const { includeText, excludeText } = splitRestrictionClauses(restrictionText)
   const utahCounty = UTAH_COUNTY.test(includeText)
-  const isBroad = !utahCounty && BROAD_RESTRICTION.test(includeText.trim())
-  const includeTokens = isBroad ? null : expandPlaceTokens(includeText.replace(UTAH_COUNTY, ''))
+  const wasatchFront = WASATCH_FRONT.test(includeText)
+  const isBroad = !utahCounty && !wasatchFront && BROAD_RESTRICTION.test(includeText.trim())
+  const includeTokens = isBroad ? null : expandPlaceTokens(includeText.replace(UTAH_COUNTY, '').replace(WASATCH_FRONT, ''))
   const excludeTokens = excludeText ? expandPlaceTokens(excludeText) : []
 
   let included = isBroad
     ? locations
     : locations.filter(l =>
       (utahCounty && UTAH_COUNTY_CITIES.has(cityFromAddress(l.address))) ||
+      (wasatchFront && WASATCH_FRONT_CITIES.has(cityFromAddress(l.address))) ||
       includeTokens.some(t => placeMatchesLocation(t, l)))
 
   if (excludeTokens.length) {

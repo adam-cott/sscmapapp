@@ -79,7 +79,7 @@ src/
 - `contact.phone` stored per-location in `locations[]`, not at deal level
 - `contact.website` is null for all businesses — intentionally left empty for now. Do not ask about this or treat it as a gap to fix. It is a deliberate decision to revisit later.
 - Python geocode scripts read from `C:\Users\adamb\Downloads\starving_student_businesses.csv` (hardcoded path — keep that file in place)
-- **Stats:** 439 deals · 214 businesses · 461 pins (stores that honor each deal, counted once per business) · every deal has at least one pin except online-only HiddenHunts.com
+- **Stats:** 439 deals · 214 businesses · 477 pins (stores that honor each deal, counted once per business) · every deal has at least one pin except online-only HiddenHunts.com
 - **Closed businesses/locations are hidden, not deleted.** A whole business that's gone: set `"active": false` (filtered once at the top of `App.jsx`) plus `"closedReason": "Permanently closed"`. Just one location of a multi-location business closed: move it out of `locations[]` into `closedLocations[]` on each of that business's deals, with its own `closedReason` — the app never reads `closedLocations`, so it's invisible but easy to restore. (Examples: The Yard Milkshake Bar, Sub Zero Ice Cream's downtown Provo store.)
 - **Keep `locationRestriction` wording standardized** — full city names (never "EM", "SF", "PG", "WJ", "Mtn"), "&" between places (comma-separated for 3+: "Orem, Vineyard, Eagle Mountain & Santaquin"), "All ..." for broad scopes ("All Locations", "All Utah County"), and "excluding" for exclusions. The matcher parses this text, so odd wording silently changes which pins show. `locationRestriction` is the only place the restriction lives — `deal.description` holds just the extra conditions ("Carryout Only"), never a "Valid at:" copy; the deal sheet shows the restriction in its own info row. If a restriction has no extra conditions, `description` is `""` and the sheet hides the description paragraph.
 - **`deals.json` edits for data cleanup are allowed**, but only via a dry run: write the cleaned data to a separate file (scratchpad, not the repo), produce a report flagging anything unexpected, show before/after examples, and get Adam's explicit approval before overwriting `src/data/deals.json`.
@@ -103,6 +103,11 @@ The card runs Oct 1 → Oct 1. Each year the whole deal list is replaced from a 
 Parser rules worth knowing: a trailing location on the card line becomes `locationRestriction` (lookup table `TAILS`); text after the offer that looks like a condition becomes `deal.description` ("Details:"); headline = the offer. When one card line has a separate bubble per item (CLAS Ropes Course), split it into one deal per item via an `OVERRIDES` array. When a store is branded with one city but its address is in another (The Picklr "Lehi" in Saratoga Springs), write the restriction as "Lehi/Saratoga Springs" so the matcher finds it.
 
 ---
+
+## Restriction wording (Adam's rules)
+- "All Utah County" = Utah County cities only (plus any city named with it).
+- "Participating Locations" (alone or after named cities) and "All Wasatch Front" = every Wasatch Front store — Utah, Salt Lake, Davis, Weber counties up to Ogden — plus named cities. Heber, Park City, Tooele, Nephi don't count. Assume all stores participate unless told otherwise.
+- "All Locations" / "All Utah Locations" / "All Northern Utah" = every store.
 
 ## Location Search
 Typing a city, venue, or nickname finds deals honored at a store there; full rules in `specs/location-search-plan.md`, logic in `filterDeals` / `parsePlaceQuery` (`src/utils/dealHelpers.js`).
