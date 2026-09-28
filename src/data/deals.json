@@ -7431,7 +7431,7 @@
     "address": "629 Saratoga Rd Bldg 2, Saratoga Springs, UT 84043, USA",
     "lat": 40.3729753,
     "lng": -111.8892777,
-    "locationRestriction": "Lehi/Saratoga Springs & Bluffdale/Herriman",
+    "locationRestriction": "Lehi/Saratoga Springs",
     "deal": {
       "title": "2-4-1! 3 Hour Open Play Session!",
       "description": "",
@@ -7462,16 +7462,19 @@
         "phone": "+13859554217"
       },
       {
-        "lat": 40.4621124,
-        "lng": -111.94853970000001,
-        "address": "15892 S Rockwell Park Cove, Herriman, UT 84065, USA",
-        "phone": "+13853364399"
-      },
-      {
         "lat": 40.593690699999996,
         "lng": -111.83049539999999,
         "address": "8645 Highland Dr, Sandy, UT 84093, USA",
         "phone": "+18017582642"
+      }
+    ],
+    "closedLocations": [
+      {
+        "lat": 40.4621124,
+        "lng": -111.94853970000001,
+        "address": "15892 S Rockwell Park Cove, Herriman, UT 84065, USA",
+        "phone": "+13853364399",
+        "closedReason": "Permanently closed"
       }
     ]
   },
@@ -9143,6 +9146,12 @@
         "lng": -111.66255129999999,
         "address": "353 N Freedom Blvd, Provo, UT 84601, USA",
         "phone": "+18013778400"
+      },
+      {
+        "lat": 40.062713699999996,
+        "lng": -111.66805029999999,
+        "address": "551 N SR-198, Salem, UT 84653, USA",
+        "phone": "+18017970040"
       }
     ]
   },
@@ -9182,6 +9191,12 @@
         "lng": -111.66255129999999,
         "address": "353 N Freedom Blvd, Provo, UT 84601, USA",
         "phone": "+18013778400"
+      },
+      {
+        "lat": 40.062713699999996,
+        "lng": -111.66805029999999,
+        "address": "551 N SR-198, Salem, UT 84653, USA",
+        "phone": "+18017970040"
       }
     ]
   },
@@ -9221,6 +9236,12 @@
         "lng": -111.66255129999999,
         "address": "353 N Freedom Blvd, Provo, UT 84601, USA",
         "phone": "+18013778400"
+      },
+      {
+        "lat": 40.062713699999996,
+        "lng": -111.66805029999999,
+        "address": "551 N SR-198, Salem, UT 84653, USA",
+        "phone": "+18017970040"
       }
     ]
   },
@@ -12937,7 +12958,7 @@
     "address": "629 Saratoga Rd Bldg 2, Saratoga Springs, UT 84043, USA",
     "lat": 40.3729753,
     "lng": -111.8892777,
-    "locationRestriction": "Lehi/Saratoga Springs & Bluffdale/Herriman",
+    "locationRestriction": "Lehi/Saratoga Springs",
     "deal": {
       "title": "FREE! 3 Hour Open Play Session!",
       "description": "",
@@ -12968,16 +12989,19 @@
         "phone": "+13859554217"
       },
       {
-        "lat": 40.4621124,
-        "lng": -111.94853970000001,
-        "address": "15892 S Rockwell Park Cove, Herriman, UT 84065, USA",
-        "phone": "+13853364399"
-      },
-      {
         "lat": 40.593690699999996,
         "lng": -111.83049539999999,
         "address": "8645 Highland Dr, Sandy, UT 84093, USA",
         "phone": "+18017582642"
+      }
+    ],
+    "closedLocations": [
+      {
+        "lat": 40.4621124,
+        "lng": -111.94853970000001,
+        "address": "15892 S Rockwell Park Cove, Herriman, UT 84065, USA",
+        "phone": "+13853364399",
+        "closedReason": "Permanently closed"
       }
     ]
   },
@@ -14552,12 +14576,6 @@
         "phone": "+18016091960"
       },
       {
-        "lat": 40.211436899999995,
-        "lng": -111.6537191,
-        "address": "1712 S E Bay Blvd Ste 200, Provo, UT 84606, USA",
-        "phone": null
-      },
-      {
         "lat": 40.434177299999995,
         "lng": -111.8792644,
         "address": "1820 W Traverse Pkwy, Lehi, UT 84043, USA",
@@ -14568,12 +14586,6 @@
         "lng": -111.63854599999999,
         "address": "694 N 900 E Unit 102, Spanish Fork, UT 84660, USA",
         "phone": "+13854481137"
-      },
-      {
-        "lat": 40.2721124,
-        "lng": -111.7141272,
-        "address": "1350 Sandhill Rd, Orem, UT 84058, USA",
-        "phone": "+13854467771"
       },
       {
         "lat": 40.3732332,
@@ -14675,12 +14687,6 @@
         "phone": "+18016091960"
       },
       {
-        "lat": 40.211436899999995,
-        "lng": -111.6537191,
-        "address": "1712 S E Bay Blvd Ste 200, Provo, UT 84606, USA",
-        "phone": null
-      },
-      {
         "lat": 40.434177299999995,
         "lng": -111.8792644,
         "address": "1820 W Traverse Pkwy, Lehi, UT 84043, USA",
@@ -14691,12 +14697,6 @@
         "lng": -111.63854599999999,
         "address": "694 N 900 E Unit 102, Spanish Fork, UT 84660, USA",
         "phone": "+13854481137"
-      },
-      {
-        "lat": 40.2721124,
-        "lng": -111.7141272,
-        "address": "1350 Sandhill Rd, Orem, UT 84058, USA",
-        "phone": "+13854467771"
       },
       {
         "lat": 40.3732332,
@@ -20010,6 +20010,42 @@
         "lng": -111.9801497,
         "address": "3743 S Jordan Lndg Blvd, West Jordan, UT 84088, USA",
         "phone": "+18012821364"
+      },
+      {
+        "lat": 40.7181269,
+        "lng": -111.9394049,
+        "address": "2450 S Redwood Rd, Salt Lake City, UT 84119, USA",
+        "phone": "+18019739678"
+      },
+      {
+        "lat": 40.6951385,
+        "lng": -112.0924039,
+        "address": "3544 S 8400 W, Magna, UT 84044, USA",
+        "phone": "+18015089941"
+      },
+      {
+        "lat": 40.696384099999996,
+        "lng": -111.98275439999999,
+        "address": "3865 W 3500 S, West Valley City, UT 84120, USA",
+        "phone": "+18019696281"
+      },
+      {
+        "lat": 40.665992200000005,
+        "lng": -111.9863122,
+        "address": "4761 S 4015 W, Kearns, UT 84118, USA",
+        "phone": "+18019667491"
+      },
+      {
+        "lat": 40.8845648,
+        "lng": -111.89161279999999,
+        "address": "495 S 500 W, Bountiful, UT 84010, USA",
+        "phone": "+18012957991"
+      },
+      {
+        "lat": 40.5456608,
+        "lng": -112.2987048,
+        "address": "737 N Main St, Tooele, UT 84074, USA",
+        "phone": "+14358827887"
       }
     ]
   },
@@ -20151,6 +20187,42 @@
         "lng": -111.9801497,
         "address": "3743 S Jordan Lndg Blvd, West Jordan, UT 84088, USA",
         "phone": "+18012821364"
+      },
+      {
+        "lat": 40.7181269,
+        "lng": -111.9394049,
+        "address": "2450 S Redwood Rd, Salt Lake City, UT 84119, USA",
+        "phone": "+18019739678"
+      },
+      {
+        "lat": 40.6951385,
+        "lng": -112.0924039,
+        "address": "3544 S 8400 W, Magna, UT 84044, USA",
+        "phone": "+18015089941"
+      },
+      {
+        "lat": 40.696384099999996,
+        "lng": -111.98275439999999,
+        "address": "3865 W 3500 S, West Valley City, UT 84120, USA",
+        "phone": "+18019696281"
+      },
+      {
+        "lat": 40.665992200000005,
+        "lng": -111.9863122,
+        "address": "4761 S 4015 W, Kearns, UT 84118, USA",
+        "phone": "+18019667491"
+      },
+      {
+        "lat": 40.8845648,
+        "lng": -111.89161279999999,
+        "address": "495 S 500 W, Bountiful, UT 84010, USA",
+        "phone": "+18012957991"
+      },
+      {
+        "lat": 40.5456608,
+        "lng": -112.2987048,
+        "address": "737 N Main St, Tooele, UT 84074, USA",
+        "phone": "+14358827887"
       }
     ]
   },
