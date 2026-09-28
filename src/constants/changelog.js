@@ -1,4 +1,4 @@
 export const LATEST_UPDATE = {
-  version: '2.1.3',
-  description: "The map's category counts now only include deals that show up on the map.",
+  version: '2.1.4',
+  description: "Fixed searching on the Map tab (the first letter no longer disappears), and added Guru's Cafe at UVU.",
 }

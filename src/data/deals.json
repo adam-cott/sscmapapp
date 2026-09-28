@@ -599,6 +599,13 @@
         "lng": -111.6578233564704,
         "address": "45 E Center St, Provo, UT 84606",
         "phone": "+18013754878"
+      },
+      {
+        "lat": 40.2814762,
+        "lng": -111.7177799,
+        "address": "815 College Dr, Orem, UT 84058, USA",
+        "phone": "+13854298411",
+        "venue": "UVU"
       }
     ]
   },
@@ -3260,6 +3267,13 @@
         "lng": -111.6578233564704,
         "address": "45 E Center St, Provo, UT 84606",
         "phone": "+18013754878"
+      },
+      {
+        "lat": 40.2814762,
+        "lng": -111.7177799,
+        "address": "815 College Dr, Orem, UT 84058, USA",
+        "phone": "+13854298411",
+        "venue": "UVU"
       }
     ]
   },
@@ -3293,6 +3307,13 @@
         "lng": -111.6578233564704,
         "address": "45 E Center St, Provo, UT 84606",
         "phone": "+18013754878"
+      },
+      {
+        "lat": 40.2814762,
+        "lng": -111.7177799,
+        "address": "815 College Dr, Orem, UT 84058, USA",
+        "phone": "+13854298411",
+        "venue": "UVU"
       }
     ]
   },
@@ -14960,6 +14981,13 @@
         "lng": -111.6578233564704,
         "address": "45 E Center St, Provo, UT 84606",
         "phone": "+18013754878"
+      },
+      {
+        "lat": 40.2814762,
+        "lng": -111.7177799,
+        "address": "815 College Dr, Orem, UT 84058, USA",
+        "phone": "+13854298411",
+        "venue": "UVU"
       }
     ]
   },

@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import './App.css'
 import { useAuth } from './hooks/useAuth'
 import AuthScreen from './components/Auth/AuthScreen'
@@ -101,12 +101,15 @@ function AppShell() {
   useOverlayHistory(showAbout, () => setShowAbout(false))
   useOverlayHistory(showCardYear, () => setShowCardYear(false))
 
-  // Leaving Home resets its filtered-list state, so it's never left running
+  // Switching tabs resets the search/filter state, so it's never left running
   // in the background — otherwise a later back press on a different tab
-  // could silently consume a history entry with no visible change.
+  // could silently consume a history entry with no visible change. Only on
+  // the switch itself: searching on the Map tab must not clear its own query.
+  const prevTab = useRef(activeTab)
   useEffect(() => {
-    if (activeTab !== 'home' && isListMode) clearFilters()
-  }, [activeTab, isListMode, clearFilters])
+    if (prevTab.current !== activeTab) clearFilters()
+    prevTab.current = activeTab
+  }, [activeTab, clearFilters])
 
   // "View on map" focus is a one-shot overlay tied to the moment it was
   // triggered — leaving the Map tab (by any route) always exits it, so
