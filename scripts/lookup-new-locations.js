@@ -1,4 +1,3 @@
-/* global process */
 // Looks up locations for businesses the card import couldn't carry over from
 // last year (new businesses, plus LOOKUP_AGAIN), via Google Places Text Search.
 // Writes data-archive/new-locations-2026-27.json, which scripts/import-card.js

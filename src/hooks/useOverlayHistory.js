@@ -72,9 +72,12 @@ function ensureListener() {
 // history stack never grows unbounded.
 export function useOverlayHistory(isOpen, close) {
   const closeRef = useRef(close)
-  closeRef.current = close
   const entryRef = useRef(null)
   const wasOpen = useRef(isOpen)
+
+  useEffect(() => {
+    closeRef.current = close
+  })
 
   useEffect(() => {
     ensureListener()

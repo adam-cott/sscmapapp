@@ -29,6 +29,7 @@ export function useFilters(deals, userCoords) {
   // the user has not already made an explicit sort selection.
   useEffect(() => {
     if (userCoords && !userHasPickedSort.current) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setSortByState('nearest')
     }
   }, [userCoords])

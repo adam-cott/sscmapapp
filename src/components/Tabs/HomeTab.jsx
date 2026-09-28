@@ -162,7 +162,7 @@ export default function HomeTab({
   deals, filteredDeals, usageLog, userCoords, onSelectDeal, onSelectLocation,
   searchQuery, onSearchChange, activeCategories, onCategoryToggle,
   onClearFilters, sortBy, setSortBy, categoryCounts,
-  permissionDenied, geoLoading, hasCoords, onNearestRequest, dealCount,
+  permissionDenied, geoLoading, hasCoords, onNearestRequest,
   featuredIds, faves, pinnedIds, isListMode,
   onShowCategory, onShowPinned, onShowAllNearest, onNavigateFaves,
 }) {

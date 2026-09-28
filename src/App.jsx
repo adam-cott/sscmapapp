@@ -111,7 +111,9 @@ function AppShell() {
   // coming back to Map later shows the normal, unfocused map.
   const exitMapFocus = () => setMapFocus(null)
   useEffect(() => {
-    if (activeTab !== 'map') exitMapFocus()
+    // Tab changes can come from the back button, not just handleTabChange.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    if (activeTab !== 'map') setMapFocus(null)
   }, [activeTab])
 
   // Tapping Home while already on Home resets to the carousel view, since
@@ -121,14 +123,17 @@ function AppShell() {
     setActiveTab(id)
   }
 
+  // Location arrives (or is denied) asynchronously, after the Nearest tap.
   useEffect(() => {
     if (coords && pendingNearest) {
       setSortBy('nearest')
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setPendingNearest(false)
     }
-  }, [coords, pendingNearest])
+  }, [coords, pendingNearest, setSortBy])
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     if (permissionDenied) setPendingNearest(false)
   }, [permissionDenied])
 
@@ -247,7 +252,6 @@ function AppShell() {
               geoLoading={geoLoading}
               hasCoords={!!coords}
               onNearestRequest={handleNearestRequest}
-              dealCount={filteredDeals.length}
               featuredIds={featuredIds}
               faves={faves}
               pinnedIds={pinnedIds}

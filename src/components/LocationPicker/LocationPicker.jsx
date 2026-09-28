@@ -61,14 +61,6 @@ export default function LocationPicker({ location, onSelectDeal, onClose }) {
     return () => document.removeEventListener('keydown', handleKey)
   }, [onClose])
 
-  const backdrop = (
-    <div
-      className="fixed inset-0 animate-fade-in"
-      style={{ backgroundColor: 'rgba(15,23,42,0.5)', backdropFilter: 'blur(3px)' }}
-      onClick={onClose}
-    />
-  )
-
   const businessName = items[0].deal.name
 
   const header = (

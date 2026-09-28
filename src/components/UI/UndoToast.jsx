@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 
 export default function UndoToast({ message, onUndo, onDismiss, duration = 4000 }) {
   const [progress, setProgress] = useState(100)
-  const startRef = useRef(Date.now())
+  const startRef = useRef(0)
   const rafRef = useRef(null)
 
   useEffect(() => {

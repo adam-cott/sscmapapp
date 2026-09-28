@@ -4,6 +4,8 @@ import { ChevronRight } from 'lucide-react'
 export default function SwipeToConfirm({ onConfirm, disabled = false, label = 'Slide to Redeem' }) {
   const [offset, setOffset] = useState(0)
   const [dragging, setDragging] = useState(false)
+  // Track width, measured on touch-down (refs can't be read during render).
+  const [maxOffset, setMaxOffset] = useState(0)
   const trackRef = useRef(null)
   const startXRef = useRef(0)
   const confirmedRef = useRef(false)
@@ -20,6 +22,7 @@ export default function SwipeToConfirm({ onConfirm, disabled = false, label = 'S
     if (disabled || confirmedRef.current) return
     e.preventDefault()
     startXRef.current = e.clientX - offset
+    setMaxOffset(getMaxOffset())
     setDragging(true)
     trackRef.current?.setPointerCapture(e.pointerId)
   }
@@ -48,7 +51,7 @@ export default function SwipeToConfirm({ onConfirm, disabled = false, label = 'S
     }
   }
 
-  const progress = getMaxOffset() > 0 ? offset / getMaxOffset() : 0
+  const progress = maxOffset > 0 ? offset / maxOffset : 0
 
   return (
     <div

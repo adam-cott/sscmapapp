@@ -476,8 +476,8 @@ async function main() {
     if (r.buf) fs.writeFileSync(path.join(LOGOS_DIR, `${r.slug}.png`), r.buf)
     done++
     if (done % 20 === 0) console.log(`  ...${done}/${queue.length}`)
-    const { buf, ...rest } = r
-    return rest
+    delete r.buf
+    return r
   })
 
   const tally = (s) => results.filter((r) => r.status === s).length

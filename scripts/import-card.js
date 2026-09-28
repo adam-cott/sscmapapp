@@ -1,4 +1,3 @@
-/* global process */
 // Converts a year's card transcription CSV into src/data/deals.json.
 //
 //   node scripts/import-card.js           dry run: writes reports/card-import-2026-27.md
