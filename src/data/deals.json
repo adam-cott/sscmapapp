@@ -2993,9 +2993,9 @@
     "id": "2627-restaurants-051",
     "name": "Chubby's",
     "category": "restaurants",
-    "address": "955 N 1400 W, Salt Lake City, UT 84116, USA",
-    "lat": 40.7905574,
-    "lng": -111.9314652,
+    "address": "336 S Main St, Pleasant Grove, UT 84062",
+    "lat": 40.3597587,
+    "lng": -111.74224799999999,
     "locationRestriction": "All Locations",
     "deal": {
       "title": "FREE! Order of Scones with Any Purchase!",
@@ -3015,10 +3015,73 @@
     ],
     "locations": [
       {
+        "lat": 40.52809,
+        "lng": -112.0137864,
+        "address": "12271 Herriman Main St Unit B, Herriman, UT 84096",
+        "phone": "+18014490060"
+      },
+      {
+        "lat": 40.522681299999995,
+        "lng": -111.92863460000001,
+        "address": "1276 W 12600 S, Riverton, UT 84065",
+        "phone": "+18019994783"
+      },
+      {
+        "lat": 40.5106892,
+        "lng": -111.4130098,
+        "address": "220 N Main St, Heber City, UT 84032",
+        "phone": "+14353153252"
+      },
+      {
+        "lat": 40.427524,
+        "lng": -111.8685651,
+        "address": "3156 N 1200 W Suite 100, Lehi, UT 84043",
+        "phone": "+13853520401"
+      },
+      {
+        "lat": 40.384988799999995,
+        "lng": -111.9146799,
+        "address": "1284 N Redwood Rd, Saratoga Springs, UT 84045",
+        "phone": "+13853527143"
+      },
+      {
+        "lat": 40.3597587,
+        "lng": -111.74224799999999,
+        "address": "336 S Main St, Pleasant Grove, UT 84062",
+        "phone": "+18017851503"
+      },
+      {
+        "lat": 40.307374599999996,
+        "lng": -111.737078,
+        "address": "576 N Mill Rd, Vineyard, UT 84058",
+        "phone": "+18019225254"
+      },
+      {
+        "lat": 40.2770947,
+        "lng": -111.6769674,
+        "address": "1087 S 750 E, Orem, UT 84097",
+        "phone": "+13852412258"
+      },
+      {
+        "lat": 40.1613938,
+        "lng": -111.62390939999999,
+        "address": "698 W 400 S, Springville, UT 84663",
+        "phone": "+18014770761"
+      },
+      {
+        "lat": 40.0309837,
+        "lng": -111.7530417,
+        "address": "855 Turf Farm Rd, Payson, UT 84651",
+        "phone": "+18016585566"
+      }
+    ],
+    "closedLocations": [
+      {
         "lat": 40.7905574,
         "lng": -111.9314652,
         "address": "955 N 1400 W, Salt Lake City, UT 84116, USA",
-        "phone": "+18015962070"
+        "phone": "+18015962070",
+        "closedReason": "Wrong business — Chubby's Mexican Restaurant, not Chubby's Cafe"
       }
     ]
   },
@@ -3797,6 +3860,12 @@
         "lng": -111.6874409,
         "address": "327 E 1200 S Unit # 3, Orem, UT 84058, USA",
         "phone": "+18017010021"
+      },
+      {
+        "lat": 40.354929,
+        "lng": -111.7368415,
+        "address": "205 E 700 S Unit C, Pleasant Grove, UT 84062",
+        "phone": "+18016071126"
       }
     ]
   },
@@ -3830,6 +3899,12 @@
         "lng": -111.6874409,
         "address": "327 E 1200 S Unit # 3, Orem, UT 84058, USA",
         "phone": "+18017010021"
+      },
+      {
+        "lat": 40.354929,
+        "lng": -111.7368415,
+        "address": "205 E 700 S Unit C, Pleasant Grove, UT 84062",
+        "phone": "+18016071126"
       }
     ]
   },
@@ -4973,6 +5048,12 @@
         "lng": -111.660417,
         "address": "1600 N Freedom Blvd, Provo, UT 84604",
         "phone": "+18019609048"
+      },
+      {
+        "lat": 40.6643227,
+        "lng": -111.83957629999999,
+        "address": "4828 Highland Dr, Salt Lake City, UT 84117",
+        "phone": "+18019994243"
       }
     ]
   },
@@ -8136,6 +8217,12 @@
         "lng": -111.6564837,
         "address": "955 N Main St, Spanish Fork, UT 84660",
         "phone": "+18016092440"
+      },
+      {
+        "lat": 41.25994370000001,
+        "lng": -111.97255659999999,
+        "address": "145 N Harrisville Rd, Ogden, UT 84404",
+        "phone": "+18013462118"
       }
     ]
   },
@@ -8749,6 +8836,24 @@
         "lng": -111.870219,
         "address": "723 E 2100 S, Salt Lake City, UT 84106",
         "phone": "+18016947234"
+      },
+      {
+        "lat": 40.693297099999995,
+        "lng": -111.95526509999999,
+        "address": "3601 Constitution Blvd, West Valley City, UT 84119",
+        "phone": "+18013470417"
+      },
+      {
+        "lat": 40.6750386,
+        "lng": -111.8661265,
+        "address": "4436 900 E, Millcreek, UT 84124",
+        "phone": "+18016735811"
+      },
+      {
+        "lat": 40.275128099999996,
+        "lng": -111.6818143,
+        "address": "575 E University Pkwy, Orem, UT 84097",
+        "phone": "+14357042355"
       }
     ]
   },
@@ -10868,6 +10973,24 @@
         "lng": -111.870219,
         "address": "723 E 2100 S, Salt Lake City, UT 84106",
         "phone": "+18016947234"
+      },
+      {
+        "lat": 40.693297099999995,
+        "lng": -111.95526509999999,
+        "address": "3601 Constitution Blvd, West Valley City, UT 84119",
+        "phone": "+18013470417"
+      },
+      {
+        "lat": 40.6750386,
+        "lng": -111.8661265,
+        "address": "4436 900 E, Millcreek, UT 84124",
+        "phone": "+18016735811"
+      },
+      {
+        "lat": 40.275128099999996,
+        "lng": -111.6818143,
+        "address": "575 E University Pkwy, Orem, UT 84097",
+        "phone": "+14357042355"
       }
     ]
   },
@@ -16440,6 +16563,12 @@
         "lng": -111.6874409,
         "address": "327 E 1200 S Unit # 3, Orem, UT 84058, USA",
         "phone": "+18017010021"
+      },
+      {
+        "lat": 40.354929,
+        "lng": -111.7368415,
+        "address": "205 E 700 S Unit C, Pleasant Grove, UT 84062",
+        "phone": "+18016071126"
       }
     ]
   },
@@ -18840,6 +18969,12 @@
         "lng": -111.91237319999999,
         "address": "1076 Park Ln Suite 120, Farmington, UT 84025, USA",
         "phone": "+18014479300"
+      },
+      {
+        "lat": 40.086612699999996,
+        "lng": -111.5934965,
+        "address": "3660 US-6, Spanish Fork, UT 84660",
+        "phone": "+18014416844"
       }
     ]
   },
@@ -18903,6 +19038,12 @@
         "lng": -111.91237319999999,
         "address": "1076 Park Ln Suite 120, Farmington, UT 84025, USA",
         "phone": "+18014479300"
+      },
+      {
+        "lat": 40.086612699999996,
+        "lng": -111.5934965,
+        "address": "3660 US-6, Spanish Fork, UT 84660",
+        "phone": "+18014416844"
       }
     ]
   },
