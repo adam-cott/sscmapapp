@@ -1,4 +1,4 @@
 export const LATEST_UPDATE = {
-  version: '2.1.4',
-  description: "Fixed searching on the Map tab (the first letter no longer disappears), and added Guru's Cafe at UVU.",
+  version: '2.1.5',
+  description: "Added MTECH Cosmetology's Lehi campus to the map, so searching Lehi now zooms right to Lehi.",
 }
