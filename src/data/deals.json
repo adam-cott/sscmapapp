@@ -1479,6 +1479,138 @@
         "lng": -111.79539039999999,
         "address": "76 N 100 E, American Fork, UT 84003, USA",
         "phone": "+18017569696"
+      },
+      {
+        "lat": 41.306150599999995,
+        "lng": -111.9709529,
+        "address": "332 E 2600 N, Ogden, UT 84414",
+        "phone": "+18017371578"
+      },
+      {
+        "lat": 41.2590456,
+        "lng": -111.96997809999999,
+        "address": "205 Washington Blvd, Ogden, UT 84404",
+        "phone": "+18016273000"
+      },
+      {
+        "lat": 41.1764584,
+        "lng": -112.0265646,
+        "address": "4795 S 1900 W, Roy, UT 84067",
+        "phone": "+18017732000"
+      },
+      {
+        "lat": 41.1762808,
+        "lng": -111.94988699999999,
+        "address": "4789 Harrison Blvd, Ogden, UT 84403",
+        "phone": "+18014797200"
+      },
+      {
+        "lat": 41.1453816,
+        "lng": -112.0650641,
+        "address": "2201 N 2000 W, Clinton, UT 84015",
+        "phone": "+18017731750"
+      },
+      {
+        "lat": 41.1031349,
+        "lng": -111.9729124,
+        "address": "2996 N Hill Field Rd, Layton, UT 84041",
+        "phone": "+18017731000"
+      },
+      {
+        "lat": 41.0387264,
+        "lng": -111.9396443,
+        "address": "265 N Main St, Kaysville, UT 84037",
+        "phone": "+18014515300"
+      },
+      {
+        "lat": 40.8832124,
+        "lng": -111.8850332,
+        "address": "529 S 200 W, Bountiful, UT 84010",
+        "phone": "+18012988844"
+      },
+      {
+        "lat": 40.7719385,
+        "lng": -111.91433029999999,
+        "address": "804 W North Temple St, Salt Lake City, UT 84116",
+        "phone": "+18013636300"
+      },
+      {
+        "lat": 40.7257027,
+        "lng": -111.86952889999999,
+        "address": "731 E 2100 S, Salt Lake City, UT 84106",
+        "phone": "+18014877676"
+      },
+      {
+        "lat": 40.6996752,
+        "lng": -111.8248478,
+        "address": "3304 S 2300 E, Salt Lake City, UT 84109",
+        "phone": "+18014855888"
+      },
+      {
+        "lat": 40.698506900000005,
+        "lng": -112.0252222,
+        "address": "3390 S 5600 W, West Valley City, UT 84120",
+        "phone": "+18019651919"
+      },
+      {
+        "lat": 40.69698890000001,
+        "lng": -111.9589647,
+        "address": "2730 W 3500 S, West Valley City, UT 84119",
+        "phone": "+18019649696"
+      },
+      {
+        "lat": 40.6961703,
+        "lng": -112.0847421,
+        "address": "8095 W 3500 S Ste 1, Magna, UT 84044",
+        "phone": "+18015089070"
+      },
+      {
+        "lat": 40.666900999999996,
+        "lng": -111.9429354,
+        "address": "1929 W 4700 S, West Valley City, UT 84118",
+        "phone": "+18019669229"
+      },
+      {
+        "lat": 40.6525197,
+        "lng": -112.0019598,
+        "address": "4655 W 5415 S, Kearns, UT 84118",
+        "phone": "+18019692400"
+      },
+      {
+        "lat": 40.6520777,
+        "lng": -111.8878663,
+        "address": "5467 S State St, Murray, UT 84107",
+        "phone": "+18012699990"
+      },
+      {
+        "lat": 40.6098636,
+        "lng": -112.02327799999999,
+        "address": "5526 W 7800 S, West Jordan, UT 84081",
+        "phone": "+13858878062"
+      },
+      {
+        "lat": 40.6090534,
+        "lng": -111.95657369999999,
+        "address": "2641 W 7800 S A, West Jordan, UT 84088",
+        "phone": "+18015666111"
+      },
+      {
+        "lat": 40.5602063,
+        "lng": -111.8537647,
+        "address": "10500 S 1300 E, Sandy, UT 84094",
+        "phone": "+18015727788"
+      },
+      {
+        "lat": 40.526291799999996,
+        "lng": -111.88659829999999,
+        "address": "148 E 12300 S, Draper, UT 84020",
+        "phone": "+18015720300"
+      },
+      {
+        "lat": 40.5112234,
+        "lng": -112.0256598,
+        "address": "13284 S 5600 W, Herriman, UT 84065",
+        "phone": "+18013029110"
       }
     ]
   },
@@ -1560,6 +1692,138 @@
         "lng": -111.79539039999999,
         "address": "76 N 100 E, American Fork, UT 84003, USA",
         "phone": "+18017569696"
+      },
+      {
+        "lat": 41.306150599999995,
+        "lng": -111.9709529,
+        "address": "332 E 2600 N, Ogden, UT 84414",
+        "phone": "+18017371578"
+      },
+      {
+        "lat": 41.2590456,
+        "lng": -111.96997809999999,
+        "address": "205 Washington Blvd, Ogden, UT 84404",
+        "phone": "+18016273000"
+      },
+      {
+        "lat": 41.1764584,
+        "lng": -112.0265646,
+        "address": "4795 S 1900 W, Roy, UT 84067",
+        "phone": "+18017732000"
+      },
+      {
+        "lat": 41.1762808,
+        "lng": -111.94988699999999,
+        "address": "4789 Harrison Blvd, Ogden, UT 84403",
+        "phone": "+18014797200"
+      },
+      {
+        "lat": 41.1453816,
+        "lng": -112.0650641,
+        "address": "2201 N 2000 W, Clinton, UT 84015",
+        "phone": "+18017731750"
+      },
+      {
+        "lat": 41.1031349,
+        "lng": -111.9729124,
+        "address": "2996 N Hill Field Rd, Layton, UT 84041",
+        "phone": "+18017731000"
+      },
+      {
+        "lat": 41.0387264,
+        "lng": -111.9396443,
+        "address": "265 N Main St, Kaysville, UT 84037",
+        "phone": "+18014515300"
+      },
+      {
+        "lat": 40.8832124,
+        "lng": -111.8850332,
+        "address": "529 S 200 W, Bountiful, UT 84010",
+        "phone": "+18012988844"
+      },
+      {
+        "lat": 40.7719385,
+        "lng": -111.91433029999999,
+        "address": "804 W North Temple St, Salt Lake City, UT 84116",
+        "phone": "+18013636300"
+      },
+      {
+        "lat": 40.7257027,
+        "lng": -111.86952889999999,
+        "address": "731 E 2100 S, Salt Lake City, UT 84106",
+        "phone": "+18014877676"
+      },
+      {
+        "lat": 40.6996752,
+        "lng": -111.8248478,
+        "address": "3304 S 2300 E, Salt Lake City, UT 84109",
+        "phone": "+18014855888"
+      },
+      {
+        "lat": 40.698506900000005,
+        "lng": -112.0252222,
+        "address": "3390 S 5600 W, West Valley City, UT 84120",
+        "phone": "+18019651919"
+      },
+      {
+        "lat": 40.69698890000001,
+        "lng": -111.9589647,
+        "address": "2730 W 3500 S, West Valley City, UT 84119",
+        "phone": "+18019649696"
+      },
+      {
+        "lat": 40.6961703,
+        "lng": -112.0847421,
+        "address": "8095 W 3500 S Ste 1, Magna, UT 84044",
+        "phone": "+18015089070"
+      },
+      {
+        "lat": 40.666900999999996,
+        "lng": -111.9429354,
+        "address": "1929 W 4700 S, West Valley City, UT 84118",
+        "phone": "+18019669229"
+      },
+      {
+        "lat": 40.6525197,
+        "lng": -112.0019598,
+        "address": "4655 W 5415 S, Kearns, UT 84118",
+        "phone": "+18019692400"
+      },
+      {
+        "lat": 40.6520777,
+        "lng": -111.8878663,
+        "address": "5467 S State St, Murray, UT 84107",
+        "phone": "+18012699990"
+      },
+      {
+        "lat": 40.6098636,
+        "lng": -112.02327799999999,
+        "address": "5526 W 7800 S, West Jordan, UT 84081",
+        "phone": "+13858878062"
+      },
+      {
+        "lat": 40.6090534,
+        "lng": -111.95657369999999,
+        "address": "2641 W 7800 S A, West Jordan, UT 84088",
+        "phone": "+18015666111"
+      },
+      {
+        "lat": 40.5602063,
+        "lng": -111.8537647,
+        "address": "10500 S 1300 E, Sandy, UT 84094",
+        "phone": "+18015727788"
+      },
+      {
+        "lat": 40.526291799999996,
+        "lng": -111.88659829999999,
+        "address": "148 E 12300 S, Draper, UT 84020",
+        "phone": "+18015720300"
+      },
+      {
+        "lat": 40.5112234,
+        "lng": -112.0256598,
+        "address": "13284 S 5600 W, Herriman, UT 84065",
+        "phone": "+18013029110"
       }
     ]
   },
@@ -1641,6 +1905,138 @@
         "lng": -111.79539039999999,
         "address": "76 N 100 E, American Fork, UT 84003, USA",
         "phone": "+18017569696"
+      },
+      {
+        "lat": 41.306150599999995,
+        "lng": -111.9709529,
+        "address": "332 E 2600 N, Ogden, UT 84414",
+        "phone": "+18017371578"
+      },
+      {
+        "lat": 41.2590456,
+        "lng": -111.96997809999999,
+        "address": "205 Washington Blvd, Ogden, UT 84404",
+        "phone": "+18016273000"
+      },
+      {
+        "lat": 41.1764584,
+        "lng": -112.0265646,
+        "address": "4795 S 1900 W, Roy, UT 84067",
+        "phone": "+18017732000"
+      },
+      {
+        "lat": 41.1762808,
+        "lng": -111.94988699999999,
+        "address": "4789 Harrison Blvd, Ogden, UT 84403",
+        "phone": "+18014797200"
+      },
+      {
+        "lat": 41.1453816,
+        "lng": -112.0650641,
+        "address": "2201 N 2000 W, Clinton, UT 84015",
+        "phone": "+18017731750"
+      },
+      {
+        "lat": 41.1031349,
+        "lng": -111.9729124,
+        "address": "2996 N Hill Field Rd, Layton, UT 84041",
+        "phone": "+18017731000"
+      },
+      {
+        "lat": 41.0387264,
+        "lng": -111.9396443,
+        "address": "265 N Main St, Kaysville, UT 84037",
+        "phone": "+18014515300"
+      },
+      {
+        "lat": 40.8832124,
+        "lng": -111.8850332,
+        "address": "529 S 200 W, Bountiful, UT 84010",
+        "phone": "+18012988844"
+      },
+      {
+        "lat": 40.7719385,
+        "lng": -111.91433029999999,
+        "address": "804 W North Temple St, Salt Lake City, UT 84116",
+        "phone": "+18013636300"
+      },
+      {
+        "lat": 40.7257027,
+        "lng": -111.86952889999999,
+        "address": "731 E 2100 S, Salt Lake City, UT 84106",
+        "phone": "+18014877676"
+      },
+      {
+        "lat": 40.6996752,
+        "lng": -111.8248478,
+        "address": "3304 S 2300 E, Salt Lake City, UT 84109",
+        "phone": "+18014855888"
+      },
+      {
+        "lat": 40.698506900000005,
+        "lng": -112.0252222,
+        "address": "3390 S 5600 W, West Valley City, UT 84120",
+        "phone": "+18019651919"
+      },
+      {
+        "lat": 40.69698890000001,
+        "lng": -111.9589647,
+        "address": "2730 W 3500 S, West Valley City, UT 84119",
+        "phone": "+18019649696"
+      },
+      {
+        "lat": 40.6961703,
+        "lng": -112.0847421,
+        "address": "8095 W 3500 S Ste 1, Magna, UT 84044",
+        "phone": "+18015089070"
+      },
+      {
+        "lat": 40.666900999999996,
+        "lng": -111.9429354,
+        "address": "1929 W 4700 S, West Valley City, UT 84118",
+        "phone": "+18019669229"
+      },
+      {
+        "lat": 40.6525197,
+        "lng": -112.0019598,
+        "address": "4655 W 5415 S, Kearns, UT 84118",
+        "phone": "+18019692400"
+      },
+      {
+        "lat": 40.6520777,
+        "lng": -111.8878663,
+        "address": "5467 S State St, Murray, UT 84107",
+        "phone": "+18012699990"
+      },
+      {
+        "lat": 40.6098636,
+        "lng": -112.02327799999999,
+        "address": "5526 W 7800 S, West Jordan, UT 84081",
+        "phone": "+13858878062"
+      },
+      {
+        "lat": 40.6090534,
+        "lng": -111.95657369999999,
+        "address": "2641 W 7800 S A, West Jordan, UT 84088",
+        "phone": "+18015666111"
+      },
+      {
+        "lat": 40.5602063,
+        "lng": -111.8537647,
+        "address": "10500 S 1300 E, Sandy, UT 84094",
+        "phone": "+18015727788"
+      },
+      {
+        "lat": 40.526291799999996,
+        "lng": -111.88659829999999,
+        "address": "148 E 12300 S, Draper, UT 84020",
+        "phone": "+18015720300"
+      },
+      {
+        "lat": 40.5112234,
+        "lng": -112.0256598,
+        "address": "13284 S 5600 W, Herriman, UT 84065",
+        "phone": "+18013029110"
       }
     ]
   },
@@ -2991,6 +3387,36 @@
         "lng": -111.89125,
         "address": "10590 S State St, Sandy, UT 84070, USA",
         "phone": "+18015721206"
+      },
+      {
+        "lat": 41.1788741,
+        "lng": -111.99784059999999,
+        "address": "779 W Riverdale Rd, Riverdale, UT 84405",
+        "phone": "+18013922434"
+      },
+      {
+        "lat": 41.0902593,
+        "lng": -112.00211329999999,
+        "address": "2028 N Main St, Layton, UT 84041",
+        "phone": "+18016099256"
+      },
+      {
+        "lat": 40.744371699999995,
+        "lng": -111.90004929999999,
+        "address": "1120 S 300 W, Salt Lake City, UT 84101",
+        "phone": "+18013630863"
+      },
+      {
+        "lat": 40.6679868,
+        "lng": -111.9856372,
+        "address": "3964 W 4700 S, West Valley City, UT 84120",
+        "phone": "+13855093999"
+      },
+      {
+        "lat": 40.6099193,
+        "lng": -111.9783435,
+        "address": "3692 W 7800 S, West Jordan, UT 84088",
+        "phone": "+18012828684"
       }
     ]
   },
@@ -10685,6 +11111,36 @@
         "lng": -111.89125,
         "address": "10590 S State St, Sandy, UT 84070, USA",
         "phone": "+18015721206"
+      },
+      {
+        "lat": 41.1788741,
+        "lng": -111.99784059999999,
+        "address": "779 W Riverdale Rd, Riverdale, UT 84405",
+        "phone": "+18013922434"
+      },
+      {
+        "lat": 41.0902593,
+        "lng": -112.00211329999999,
+        "address": "2028 N Main St, Layton, UT 84041",
+        "phone": "+18016099256"
+      },
+      {
+        "lat": 40.744371699999995,
+        "lng": -111.90004929999999,
+        "address": "1120 S 300 W, Salt Lake City, UT 84101",
+        "phone": "+18013630863"
+      },
+      {
+        "lat": 40.6679868,
+        "lng": -111.9856372,
+        "address": "3964 W 4700 S, West Valley City, UT 84120",
+        "phone": "+13855093999"
+      },
+      {
+        "lat": 40.6099193,
+        "lng": -111.9783435,
+        "address": "3692 W 7800 S, West Jordan, UT 84088",
+        "phone": "+18012828684"
       }
     ]
   },
@@ -11933,6 +12389,138 @@
         "lng": -111.79539039999999,
         "address": "76 N 100 E, American Fork, UT 84003, USA",
         "phone": "+18017569696"
+      },
+      {
+        "lat": 41.306150599999995,
+        "lng": -111.9709529,
+        "address": "332 E 2600 N, Ogden, UT 84414",
+        "phone": "+18017371578"
+      },
+      {
+        "lat": 41.2590456,
+        "lng": -111.96997809999999,
+        "address": "205 Washington Blvd, Ogden, UT 84404",
+        "phone": "+18016273000"
+      },
+      {
+        "lat": 41.1764584,
+        "lng": -112.0265646,
+        "address": "4795 S 1900 W, Roy, UT 84067",
+        "phone": "+18017732000"
+      },
+      {
+        "lat": 41.1762808,
+        "lng": -111.94988699999999,
+        "address": "4789 Harrison Blvd, Ogden, UT 84403",
+        "phone": "+18014797200"
+      },
+      {
+        "lat": 41.1453816,
+        "lng": -112.0650641,
+        "address": "2201 N 2000 W, Clinton, UT 84015",
+        "phone": "+18017731750"
+      },
+      {
+        "lat": 41.1031349,
+        "lng": -111.9729124,
+        "address": "2996 N Hill Field Rd, Layton, UT 84041",
+        "phone": "+18017731000"
+      },
+      {
+        "lat": 41.0387264,
+        "lng": -111.9396443,
+        "address": "265 N Main St, Kaysville, UT 84037",
+        "phone": "+18014515300"
+      },
+      {
+        "lat": 40.8832124,
+        "lng": -111.8850332,
+        "address": "529 S 200 W, Bountiful, UT 84010",
+        "phone": "+18012988844"
+      },
+      {
+        "lat": 40.7719385,
+        "lng": -111.91433029999999,
+        "address": "804 W North Temple St, Salt Lake City, UT 84116",
+        "phone": "+18013636300"
+      },
+      {
+        "lat": 40.7257027,
+        "lng": -111.86952889999999,
+        "address": "731 E 2100 S, Salt Lake City, UT 84106",
+        "phone": "+18014877676"
+      },
+      {
+        "lat": 40.6996752,
+        "lng": -111.8248478,
+        "address": "3304 S 2300 E, Salt Lake City, UT 84109",
+        "phone": "+18014855888"
+      },
+      {
+        "lat": 40.698506900000005,
+        "lng": -112.0252222,
+        "address": "3390 S 5600 W, West Valley City, UT 84120",
+        "phone": "+18019651919"
+      },
+      {
+        "lat": 40.69698890000001,
+        "lng": -111.9589647,
+        "address": "2730 W 3500 S, West Valley City, UT 84119",
+        "phone": "+18019649696"
+      },
+      {
+        "lat": 40.6961703,
+        "lng": -112.0847421,
+        "address": "8095 W 3500 S Ste 1, Magna, UT 84044",
+        "phone": "+18015089070"
+      },
+      {
+        "lat": 40.666900999999996,
+        "lng": -111.9429354,
+        "address": "1929 W 4700 S, West Valley City, UT 84118",
+        "phone": "+18019669229"
+      },
+      {
+        "lat": 40.6525197,
+        "lng": -112.0019598,
+        "address": "4655 W 5415 S, Kearns, UT 84118",
+        "phone": "+18019692400"
+      },
+      {
+        "lat": 40.6520777,
+        "lng": -111.8878663,
+        "address": "5467 S State St, Murray, UT 84107",
+        "phone": "+18012699990"
+      },
+      {
+        "lat": 40.6098636,
+        "lng": -112.02327799999999,
+        "address": "5526 W 7800 S, West Jordan, UT 84081",
+        "phone": "+13858878062"
+      },
+      {
+        "lat": 40.6090534,
+        "lng": -111.95657369999999,
+        "address": "2641 W 7800 S A, West Jordan, UT 84088",
+        "phone": "+18015666111"
+      },
+      {
+        "lat": 40.5602063,
+        "lng": -111.8537647,
+        "address": "10500 S 1300 E, Sandy, UT 84094",
+        "phone": "+18015727788"
+      },
+      {
+        "lat": 40.526291799999996,
+        "lng": -111.88659829999999,
+        "address": "148 E 12300 S, Draper, UT 84020",
+        "phone": "+18015720300"
+      },
+      {
+        "lat": 40.5112234,
+        "lng": -112.0256598,
+        "address": "13284 S 5600 W, Herriman, UT 84065",
+        "phone": "+18013029110"
       }
     ]
   },
@@ -12217,6 +12805,54 @@
         "lng": -111.85506529999999,
         "address": "1283 E Draper Pkwy, Draper, UT 84020, USA",
         "phone": "+18014328516"
+      },
+      {
+        "lat": 41.1784115,
+        "lng": -112.06342719999999,
+        "address": "4671 S Midland Dr, West Haven, UT 84401",
+        "phone": "+18016487421"
+      },
+      {
+        "lat": 40.768370499999996,
+        "lng": -111.88922009999999,
+        "address": "28 State St #114, Salt Lake City, UT 84111",
+        "phone": "+18013632884"
+      },
+      {
+        "lat": 40.64318,
+        "lng": -111.88992499999999,
+        "address": "47 E 5900 S, Murray, UT 84107",
+        "phone": "+18012619606"
+      },
+      {
+        "lat": 40.612922499999996,
+        "lng": -111.980567,
+        "address": "7612 S Campus View Dr #110, West Jordan, UT 84084",
+        "phone": "+13856955977"
+      },
+      {
+        "lat": 40.5613481,
+        "lng": -111.979647,
+        "address": "3721 S Jordan Pkwy W #100, South Jordan, UT 84009",
+        "phone": "+13852184363"
+      },
+      {
+        "lat": 40.550011,
+        "lng": -111.89261239999999,
+        "address": "11078 S State St Ste 101, Sandy, UT 84070",
+        "phone": "+18014328709"
+      },
+      {
+        "lat": 40.5226548,
+        "lng": -111.98160569999999,
+        "address": "12575 S Rhetski Ln, Riverton, UT 84065",
+        "phone": "+18016668870"
+      },
+      {
+        "lat": 40.5104385,
+        "lng": -112.0250444,
+        "address": "13322 S 5600 W, Herriman, UT 84096",
+        "phone": "+13855289978"
       }
     ]
   },
@@ -15207,13 +15843,6 @@
         "phone": "+18012828393"
       },
       {
-        "lat": 40.2485515,
-        "lng": -111.6472221,
-        "address": "Brigham Young University, Provo, UT 84602, USA",
-        "phone": "+18014229976",
-        "venue": "BYU"
-      },
-      {
         "lat": 40.4320628,
         "lng": -111.88815029999999,
         "address": "3601 Digital Dr Ste 206, Lehi, UT 84043, USA",
@@ -15242,6 +15871,16 @@
         "lng": -111.9868421,
         "address": "14728 Marketplace Dr Ste. A, Herriman, UT 84096, USA",
         "phone": "+18019014101"
+      }
+    ],
+    "closedLocations": [
+      {
+        "lat": 40.2485515,
+        "lng": -111.6472221,
+        "address": "Brigham Young University, Provo, UT 84602, USA",
+        "phone": "+18014229976",
+        "venue": "BYU",
+        "closedReason": "BYU campus location — doesn't take the card"
       }
     ]
   },
@@ -15296,13 +15935,6 @@
         "phone": "+18012828393"
       },
       {
-        "lat": 40.2485515,
-        "lng": -111.6472221,
-        "address": "Brigham Young University, Provo, UT 84602, USA",
-        "phone": "+18014229976",
-        "venue": "BYU"
-      },
-      {
         "lat": 40.4320628,
         "lng": -111.88815029999999,
         "address": "3601 Digital Dr Ste 206, Lehi, UT 84043, USA",
@@ -15331,6 +15963,16 @@
         "lng": -111.9868421,
         "address": "14728 Marketplace Dr Ste. A, Herriman, UT 84096, USA",
         "phone": "+18019014101"
+      }
+    ],
+    "closedLocations": [
+      {
+        "lat": 40.2485515,
+        "lng": -111.6472221,
+        "address": "Brigham Young University, Provo, UT 84602, USA",
+        "phone": "+18014229976",
+        "venue": "BYU",
+        "closedReason": "BYU campus location — doesn't take the card"
       }
     ]
   },
@@ -16442,6 +17084,54 @@
         "lng": -111.85506529999999,
         "address": "1283 E Draper Pkwy, Draper, UT 84020, USA",
         "phone": "+18014328516"
+      },
+      {
+        "lat": 41.1784115,
+        "lng": -112.06342719999999,
+        "address": "4671 S Midland Dr, West Haven, UT 84401",
+        "phone": "+18016487421"
+      },
+      {
+        "lat": 40.768370499999996,
+        "lng": -111.88922009999999,
+        "address": "28 State St #114, Salt Lake City, UT 84111",
+        "phone": "+18013632884"
+      },
+      {
+        "lat": 40.64318,
+        "lng": -111.88992499999999,
+        "address": "47 E 5900 S, Murray, UT 84107",
+        "phone": "+18012619606"
+      },
+      {
+        "lat": 40.612922499999996,
+        "lng": -111.980567,
+        "address": "7612 S Campus View Dr #110, West Jordan, UT 84084",
+        "phone": "+13856955977"
+      },
+      {
+        "lat": 40.5613481,
+        "lng": -111.979647,
+        "address": "3721 S Jordan Pkwy W #100, South Jordan, UT 84009",
+        "phone": "+13852184363"
+      },
+      {
+        "lat": 40.550011,
+        "lng": -111.89261239999999,
+        "address": "11078 S State St Ste 101, Sandy, UT 84070",
+        "phone": "+18014328709"
+      },
+      {
+        "lat": 40.5226548,
+        "lng": -111.98160569999999,
+        "address": "12575 S Rhetski Ln, Riverton, UT 84065",
+        "phone": "+18016668870"
+      },
+      {
+        "lat": 40.5104385,
+        "lng": -112.0250444,
+        "address": "13322 S 5600 W, Herriman, UT 84096",
+        "phone": "+13855289978"
       }
     ]
   },
@@ -17709,6 +18399,192 @@
         "lng": -111.85257539999999,
         "address": "10273 S 1300 E, Sandy, UT 84094, USA",
         "phone": "+18015721577"
+      },
+      {
+        "lat": 41.307079699999996,
+        "lng": -112.0226635,
+        "address": "1814 W 2700 N, Farr West, UT 84404",
+        "phone": "+18017379194"
+      },
+      {
+        "lat": 41.3045525,
+        "lng": -111.968233,
+        "address": "2560 N 400 E St, North Ogden, UT 84414",
+        "phone": "+13854923323"
+      },
+      {
+        "lat": 41.2439631,
+        "lng": -111.97315019999999,
+        "address": "275 12th St, Ogden, UT 84404",
+        "phone": "+18013936871"
+      },
+      {
+        "lat": 41.202211899999995,
+        "lng": -111.9712199,
+        "address": "3385 Washington Blvd, Ogden, UT 84401",
+        "phone": "+18013923941"
+      },
+      {
+        "lat": 41.187985399999995,
+        "lng": -112.05031849999999,
+        "address": "4180 S Midland Dr, Roy, UT 84067",
+        "phone": "+18016487176"
+      },
+      {
+        "lat": 41.177339499999995,
+        "lng": -111.94873179999999,
+        "address": "4740 Harrison Blvd, Ogden, UT 84403",
+        "phone": "+18014798910"
+      },
+      {
+        "lat": 41.1644551,
+        "lng": -112.0255814,
+        "address": "5424 S 1900 W, Roy, UT 84067",
+        "phone": "+18017747362"
+      },
+      {
+        "lat": 41.1414914,
+        "lng": -112.06387679999999,
+        "address": "1896 N 2000 W, Clinton, UT 84015",
+        "phone": "+18017737337"
+      },
+      {
+        "lat": 41.090447999999995,
+        "lng": -112.00191919999999,
+        "address": "2030 N Main St, W Antelope Dr, Layton, UT 84041",
+        "phone": "+18017764488"
+      },
+      {
+        "lat": 41.08824,
+        "lng": -112.0651477,
+        "address": "1766 S 2000 W, Syracuse, UT 84075",
+        "phone": "+18016487231"
+      },
+      {
+        "lat": 41.07419,
+        "lng": -111.9505624,
+        "address": "987 N Fairfield Rd, Layton, UT 84040",
+        "phone": "+18015930244"
+      },
+      {
+        "lat": 41.0385464,
+        "lng": -111.94661789999999,
+        "address": "225 N 400 W, Kaysville, UT 84037",
+        "phone": "+18015936059"
+      },
+      {
+        "lat": 40.9205605,
+        "lng": -111.8895992,
+        "address": "355 N 800 W, Centerville, UT 84014",
+        "phone": "+18012988473"
+      },
+      {
+        "lat": 40.862673099999995,
+        "lng": -111.8950065,
+        "address": "2489 S Main St, Bountiful, UT 84010",
+        "phone": "+18012929438"
+      },
+      {
+        "lat": 40.7698621,
+        "lng": -111.94026129999999,
+        "address": "25 N Redwood Rd, Salt Lake City, UT 84116",
+        "phone": "+18012391100"
+      },
+      {
+        "lat": 40.7337163,
+        "lng": -111.8886405,
+        "address": "1650 S State St, Salt Lake City, UT 84115",
+        "phone": "+18014862903"
+      },
+      {
+        "lat": 40.7335658,
+        "lng": -111.93993169999999,
+        "address": "1685 S Redwood Rd, Salt Lake City, UT 84104",
+        "phone": "+18019725052"
+      },
+      {
+        "lat": 40.6962396,
+        "lng": -111.9680047,
+        "address": "3215 W 3500 S, West Valley City, UT 84119",
+        "phone": "+18019665152"
+      },
+      {
+        "lat": 40.6957844,
+        "lng": -112.0242646,
+        "address": "3535 S 5600 W, West Valley City, UT 84120",
+        "phone": "+18019656600"
+      },
+      {
+        "lat": 40.695001,
+        "lng": -112.0909629,
+        "address": "3575 S 8400 W, Magna, UT 84044",
+        "phone": "+18012500332"
+      },
+      {
+        "lat": 40.6867514,
+        "lng": -111.82508059999999,
+        "address": "2284 E 3900 S, Salt Lake City, UT 84124",
+        "phone": "+18012721513"
+      },
+      {
+        "lat": 40.6685789,
+        "lng": -111.95751059999999,
+        "address": "4663 S 2700 W, West Valley City, UT 84119",
+        "phone": "+18019651939"
+      },
+      {
+        "lat": 40.6685164,
+        "lng": -111.86473819999999,
+        "address": "4673 S 900 E, Salt Lake City, UT 84117",
+        "phone": "+18012652495"
+      },
+      {
+        "lat": 40.6534615,
+        "lng": -111.94223199999999,
+        "address": "1870 W 5400 S, Taylorsville, UT 84118",
+        "phone": "+18019696284"
+      },
+      {
+        "lat": 40.640446,
+        "lng": -112.0239556,
+        "address": "6095 S 5600 W, Kearns, UT 84118",
+        "phone": "+18019559021"
+      },
+      {
+        "lat": 40.622091,
+        "lng": -111.9110953,
+        "address": "7121 Bingham Jct Blvd, Midvale, UT 84047",
+        "phone": "+18015663055"
+      },
+      {
+        "lat": 40.6216218,
+        "lng": -111.87039019999999,
+        "address": "741 East Fort Union Blvd, Midvale, UT 84047",
+        "phone": "+18012558684"
+      },
+      {
+        "lat": 40.6091978,
+        "lng": -111.9599736,
+        "address": "2819 W 7800 S, West Jordan, UT 84088",
+        "phone": "+18015613271"
+      },
+      {
+        "lat": 40.5875728,
+        "lng": -111.8954095,
+        "address": "129 W 9000 S, Sandy, UT 84070",
+        "phone": "+18015663791"
+      },
+      {
+        "lat": 40.5380831,
+        "lng": -112.0197867,
+        "address": "5414 W Daybreak Pkwy Ste C6, South Jordan, UT 84009",
+        "phone": "+18014450045"
+      },
+      {
+        "lat": 40.5220194,
+        "lng": -111.9395291,
+        "address": "1731 W 12600 S, Riverton, UT 84065",
+        "phone": "+18014469300"
       }
     ]
   },
@@ -17796,6 +18672,192 @@
         "lng": -111.85257539999999,
         "address": "10273 S 1300 E, Sandy, UT 84094, USA",
         "phone": "+18015721577"
+      },
+      {
+        "lat": 41.307079699999996,
+        "lng": -112.0226635,
+        "address": "1814 W 2700 N, Farr West, UT 84404",
+        "phone": "+18017379194"
+      },
+      {
+        "lat": 41.3045525,
+        "lng": -111.968233,
+        "address": "2560 N 400 E St, North Ogden, UT 84414",
+        "phone": "+13854923323"
+      },
+      {
+        "lat": 41.2439631,
+        "lng": -111.97315019999999,
+        "address": "275 12th St, Ogden, UT 84404",
+        "phone": "+18013936871"
+      },
+      {
+        "lat": 41.202211899999995,
+        "lng": -111.9712199,
+        "address": "3385 Washington Blvd, Ogden, UT 84401",
+        "phone": "+18013923941"
+      },
+      {
+        "lat": 41.187985399999995,
+        "lng": -112.05031849999999,
+        "address": "4180 S Midland Dr, Roy, UT 84067",
+        "phone": "+18016487176"
+      },
+      {
+        "lat": 41.177339499999995,
+        "lng": -111.94873179999999,
+        "address": "4740 Harrison Blvd, Ogden, UT 84403",
+        "phone": "+18014798910"
+      },
+      {
+        "lat": 41.1644551,
+        "lng": -112.0255814,
+        "address": "5424 S 1900 W, Roy, UT 84067",
+        "phone": "+18017747362"
+      },
+      {
+        "lat": 41.1414914,
+        "lng": -112.06387679999999,
+        "address": "1896 N 2000 W, Clinton, UT 84015",
+        "phone": "+18017737337"
+      },
+      {
+        "lat": 41.090447999999995,
+        "lng": -112.00191919999999,
+        "address": "2030 N Main St, W Antelope Dr, Layton, UT 84041",
+        "phone": "+18017764488"
+      },
+      {
+        "lat": 41.08824,
+        "lng": -112.0651477,
+        "address": "1766 S 2000 W, Syracuse, UT 84075",
+        "phone": "+18016487231"
+      },
+      {
+        "lat": 41.07419,
+        "lng": -111.9505624,
+        "address": "987 N Fairfield Rd, Layton, UT 84040",
+        "phone": "+18015930244"
+      },
+      {
+        "lat": 41.0385464,
+        "lng": -111.94661789999999,
+        "address": "225 N 400 W, Kaysville, UT 84037",
+        "phone": "+18015936059"
+      },
+      {
+        "lat": 40.9205605,
+        "lng": -111.8895992,
+        "address": "355 N 800 W, Centerville, UT 84014",
+        "phone": "+18012988473"
+      },
+      {
+        "lat": 40.862673099999995,
+        "lng": -111.8950065,
+        "address": "2489 S Main St, Bountiful, UT 84010",
+        "phone": "+18012929438"
+      },
+      {
+        "lat": 40.7698621,
+        "lng": -111.94026129999999,
+        "address": "25 N Redwood Rd, Salt Lake City, UT 84116",
+        "phone": "+18012391100"
+      },
+      {
+        "lat": 40.7337163,
+        "lng": -111.8886405,
+        "address": "1650 S State St, Salt Lake City, UT 84115",
+        "phone": "+18014862903"
+      },
+      {
+        "lat": 40.7335658,
+        "lng": -111.93993169999999,
+        "address": "1685 S Redwood Rd, Salt Lake City, UT 84104",
+        "phone": "+18019725052"
+      },
+      {
+        "lat": 40.6962396,
+        "lng": -111.9680047,
+        "address": "3215 W 3500 S, West Valley City, UT 84119",
+        "phone": "+18019665152"
+      },
+      {
+        "lat": 40.6957844,
+        "lng": -112.0242646,
+        "address": "3535 S 5600 W, West Valley City, UT 84120",
+        "phone": "+18019656600"
+      },
+      {
+        "lat": 40.695001,
+        "lng": -112.0909629,
+        "address": "3575 S 8400 W, Magna, UT 84044",
+        "phone": "+18012500332"
+      },
+      {
+        "lat": 40.6867514,
+        "lng": -111.82508059999999,
+        "address": "2284 E 3900 S, Salt Lake City, UT 84124",
+        "phone": "+18012721513"
+      },
+      {
+        "lat": 40.6685789,
+        "lng": -111.95751059999999,
+        "address": "4663 S 2700 W, West Valley City, UT 84119",
+        "phone": "+18019651939"
+      },
+      {
+        "lat": 40.6685164,
+        "lng": -111.86473819999999,
+        "address": "4673 S 900 E, Salt Lake City, UT 84117",
+        "phone": "+18012652495"
+      },
+      {
+        "lat": 40.6534615,
+        "lng": -111.94223199999999,
+        "address": "1870 W 5400 S, Taylorsville, UT 84118",
+        "phone": "+18019696284"
+      },
+      {
+        "lat": 40.640446,
+        "lng": -112.0239556,
+        "address": "6095 S 5600 W, Kearns, UT 84118",
+        "phone": "+18019559021"
+      },
+      {
+        "lat": 40.622091,
+        "lng": -111.9110953,
+        "address": "7121 Bingham Jct Blvd, Midvale, UT 84047",
+        "phone": "+18015663055"
+      },
+      {
+        "lat": 40.6216218,
+        "lng": -111.87039019999999,
+        "address": "741 East Fort Union Blvd, Midvale, UT 84047",
+        "phone": "+18012558684"
+      },
+      {
+        "lat": 40.6091978,
+        "lng": -111.9599736,
+        "address": "2819 W 7800 S, West Jordan, UT 84088",
+        "phone": "+18015613271"
+      },
+      {
+        "lat": 40.5875728,
+        "lng": -111.8954095,
+        "address": "129 W 9000 S, Sandy, UT 84070",
+        "phone": "+18015663791"
+      },
+      {
+        "lat": 40.5380831,
+        "lng": -112.0197867,
+        "address": "5414 W Daybreak Pkwy Ste C6, South Jordan, UT 84009",
+        "phone": "+18014450045"
+      },
+      {
+        "lat": 40.5220194,
+        "lng": -111.9395291,
+        "address": "1731 W 12600 S, Riverton, UT 84065",
+        "phone": "+18014469300"
       }
     ]
   },
@@ -19223,13 +20285,6 @@
         "phone": "+18012828393"
       },
       {
-        "lat": 40.2485515,
-        "lng": -111.6472221,
-        "address": "Brigham Young University, Provo, UT 84602, USA",
-        "phone": "+18014229976",
-        "venue": "BYU"
-      },
-      {
         "lat": 40.4320628,
         "lng": -111.88815029999999,
         "address": "3601 Digital Dr Ste 206, Lehi, UT 84043, USA",
@@ -19258,6 +20313,16 @@
         "lng": -111.9868421,
         "address": "14728 Marketplace Dr Ste. A, Herriman, UT 84096, USA",
         "phone": "+18019014101"
+      }
+    ],
+    "closedLocations": [
+      {
+        "lat": 40.2485515,
+        "lng": -111.6472221,
+        "address": "Brigham Young University, Provo, UT 84602, USA",
+        "phone": "+18014229976",
+        "venue": "BYU",
+        "closedReason": "BYU campus location — doesn't take the card"
       }
     ]
   },
@@ -20893,6 +21958,312 @@
         "lng": -111.6418648,
         "address": "1739 W 400 S, Springville, UT 84663, USA",
         "phone": "+18014916810"
+      },
+      {
+        "lat": 41.307365399999995,
+        "lng": -112.02130819999999,
+        "address": "1750 W 2700 N, Farr West, UT 84404",
+        "phone": "+18017379686"
+      },
+      {
+        "lat": 41.3051819,
+        "lng": -111.9682854,
+        "address": "2594 N Washington Rd Blvd, North Ogden, UT 84414",
+        "phone": "+18017375511"
+      },
+      {
+        "lat": 41.244726,
+        "lng": -111.9694979,
+        "address": "1176 Washington Blvd, Ogden, UT 84404",
+        "phone": "+18016278144"
+      },
+      {
+        "lat": 41.17680670000001,
+        "lng": -112.0056716,
+        "address": "1096 W Riverdale Rd, Riverdale, UT 84405",
+        "phone": "+18016272523"
+      },
+      {
+        "lat": 41.1604601,
+        "lng": -112.0253709,
+        "address": "5654 S 1900 W, Roy, UT 84067",
+        "phone": "+13852499832"
+      },
+      {
+        "lat": 41.158864799999996,
+        "lng": -111.9391045,
+        "address": "5710 Harrison Blvd, Ogden, UT 84403",
+        "phone": "+18014750212"
+      },
+      {
+        "lat": 41.1414076,
+        "lng": -112.06496849999999,
+        "address": "1903 N 2000 W, Clinton, UT 84015",
+        "phone": "+18015259900"
+      },
+      {
+        "lat": 41.100778299999995,
+        "lng": -111.9413683,
+        "address": "1344 UT-193, Layton, UT 84040",
+        "phone": "+18017710748"
+      },
+      {
+        "lat": 41.0937451,
+        "lng": -112.00632429999999,
+        "address": "1350 State St, Clearfield, UT 84015",
+        "phone": "+18017280811"
+      },
+      {
+        "lat": 41.090618,
+        "lng": -112.0651522,
+        "address": "1598 S 2000 W, Syracuse, UT 84075",
+        "phone": "+18012173112"
+      },
+      {
+        "lat": 41.076174699999996,
+        "lng": -111.97409259999999,
+        "address": "1105 N 400 W, Layton, UT 84041",
+        "phone": "+18015447640"
+      },
+      {
+        "lat": 41.037715600000006,
+        "lng": -111.9450533,
+        "address": "353 W 200 N, Kaysville, UT 84037",
+        "phone": "+18015931668"
+      },
+      {
+        "lat": 40.985749999999996,
+        "lng": -111.91112779999999,
+        "address": "1044 Park Ln, Farmington, UT 84025",
+        "phone": "+13859881122"
+      },
+      {
+        "lat": 40.9205416,
+        "lng": -111.8883065,
+        "address": "363 N Marketplace Dr, Centerville, UT 84014",
+        "phone": "+18013971964"
+      },
+      {
+        "lat": 40.8844926,
+        "lng": -111.8863622,
+        "address": "210 W 500 S, Bountiful, UT 84010",
+        "phone": "+18012962449"
+      },
+      {
+        "lat": 40.8598863,
+        "lng": -111.899723,
+        "address": "1005 N 500 E, North Salt Lake, UT 84054",
+        "phone": "+18012957833"
+      },
+      {
+        "lat": 40.77683,
+        "lng": -112.0244539,
+        "address": "5580 W Amelia Earhart Dr, Salt Lake City, UT 84116",
+        "phone": "+18012778602"
+      },
+      {
+        "lat": 40.7710259,
+        "lng": -111.9417498,
+        "address": "1783 W North Temple St, Salt Lake City, UT 84116",
+        "phone": "+18013633995"
+      },
+      {
+        "lat": 40.760266800000004,
+        "lng": -111.87472079999999,
+        "address": "562 E 400 S, Salt Lake City, UT 84102",
+        "phone": "+18013280821"
+      },
+      {
+        "lat": 40.7455996,
+        "lng": -111.900195,
+        "address": "1090 S 300 W, Salt Lake City, UT 84101",
+        "phone": "+18013553407"
+      },
+      {
+        "lat": 40.7413391,
+        "lng": -111.8262199,
+        "address": "1309 S Foothill Dr, Salt Lake City, UT 84108",
+        "phone": "+18015831514"
+      },
+      {
+        "lat": 40.724787,
+        "lng": -111.5431345,
+        "address": "1620 W Ute Blvd, Park City, UT 84098",
+        "phone": "+14356582382"
+      },
+      {
+        "lat": 40.7223396,
+        "lng": -111.8542233,
+        "address": "2240 S 1300 E, Salt Lake City, UT 84106",
+        "phone": "+18014841921"
+      },
+      {
+        "lat": 40.700217099999996,
+        "lng": -111.80175129999999,
+        "address": "3259 E 3300 S, Salt Lake City, UT 84109",
+        "phone": "+18014879933"
+      },
+      {
+        "lat": 40.699058799999996,
+        "lng": -112.0243177,
+        "address": "3367 S 5600 W, West Valley City, UT 84120",
+        "phone": "+18019645714"
+      },
+      {
+        "lat": 40.696836399999995,
+        "lng": -112.082832,
+        "address": "3490 S 8000 W, Magna, UT 84044",
+        "phone": "+18015080600"
+      },
+      {
+        "lat": 40.696331,
+        "lng": -111.96671520000001,
+        "address": "3149 W 3500 S, West Valley City, UT 84119",
+        "phone": "+18019660477"
+      },
+      {
+        "lat": 40.6749657,
+        "lng": -111.90508299999999,
+        "address": "484 W 4500 S, Murray, UT 84123",
+        "phone": "+18013130867"
+      },
+      {
+        "lat": 40.6739415,
+        "lng": -111.84305459999999,
+        "address": "1714 E 4500 S, Salt Lake City, UT 84117",
+        "phone": "+18012740077"
+      },
+      {
+        "lat": 40.6672982,
+        "lng": -111.9405474,
+        "address": "1789 W 4700 S, Taylorsville, UT 84129",
+        "phone": "+18019672996"
+      },
+      {
+        "lat": 40.6534116,
+        "lng": -111.9862497,
+        "address": "3988 W 5400 S, Taylorsville, UT 84129",
+        "phone": "+18019670424"
+      },
+      {
+        "lat": 40.6480799,
+        "lng": -111.8662865,
+        "address": "5648 S 900 E, Murray, UT 84121",
+        "phone": "+18013131620"
+      },
+      {
+        "lat": 40.6273771,
+        "lng": -111.9393298,
+        "address": "6828 S Redwood Rd, West Jordan, UT 84084",
+        "phone": "+18015651170"
+      },
+      {
+        "lat": 40.623505099999996,
+        "lng": -111.8654804,
+        "address": "7035 S 900 E, Midvale, UT 84047",
+        "phone": "+18015666710"
+      },
+      {
+        "lat": 40.6108565,
+        "lng": -111.9805942,
+        "address": "7729 S Campus View Dr, West Jordan, UT 84084",
+        "phone": "+18012805787"
+      },
+      {
+        "lat": 40.607341999999996,
+        "lng": -112.0247248,
+        "address": "7914 S 5695 W, West Jordan, UT 84081",
+        "phone": "+13855253435"
+      },
+      {
+        "lat": 40.5890148,
+        "lng": -111.9381224,
+        "address": "8935 S Redwood Rd, West Jordan, UT 84088",
+        "phone": "+18015650822"
+      },
+      {
+        "lat": 40.588256,
+        "lng": -111.9889051,
+        "address": "4114 W 9000 S, West Jordan, UT 84088",
+        "phone": "+18012829097"
+      },
+      {
+        "lat": 40.582585,
+        "lng": -111.8727576,
+        "address": "9286 S 700 E, Sandy, UT 84070",
+        "phone": "+18012551961"
+      },
+      {
+        "lat": 40.5808487,
+        "lng": -111.83352359999999,
+        "address": "2025 E 9400 S, Sandy, UT 84093",
+        "phone": "+18017338880"
+      },
+      {
+        "lat": 40.55770330000001,
+        "lng": -111.8933923,
+        "address": "10665 S Auto Mall Dr, Sandy, UT 84070",
+        "phone": "+18015716005"
+      },
+      {
+        "lat": 40.5434376,
+        "lng": -111.9860092,
+        "address": "11503 4000 W, South Jordan, UT 84095",
+        "phone": "+18014466024"
+      },
+      {
+        "lat": 40.537378,
+        "lng": -112.0232511,
+        "address": "11744 S Trl Xing Dr, South Jordan, UT 84009",
+        "phone": "+13858870876"
+      },
+      {
+        "lat": 40.5227289,
+        "lng": -111.9433011,
+        "address": "1938 W 12600 S, Riverton, UT 84065",
+        "phone": "+18014463884"
+      },
+      {
+        "lat": 40.508291199999995,
+        "lng": -112.0240876,
+        "address": "5592 13400 S, Herriman, UT 84096",
+        "phone": "+18013021500"
+      },
+      {
+        "lat": 40.5030278,
+        "lng": -111.88627319999999,
+        "address": "147 E 13800 S, Draper, UT 84020",
+        "phone": "+18013841990"
+      },
+      {
+        "lat": 40.49906,
+        "lng": -111.93797099999999,
+        "address": "13883 S Redwood Rd, Bluffdale, UT 84065",
+        "phone": "+13853544024"
+      },
+      {
+        "lat": 40.497788799999995,
+        "lng": -111.4143778,
+        "address": "800 S Main St, Heber City, UT 84032",
+        "phone": "+14356547458"
+      },
+      {
+        "lat": 40.121342399999996,
+        "lng": -111.63829630000001,
+        "address": "929 E 800 N, Spanish Fork, UT 84660",
+        "phone": "+18017982425"
+      },
+      {
+        "lat": 40.0984584,
+        "lng": -111.65581089999999,
+        "address": "866 B S Main St, Spanish Fork, UT 84660",
+        "phone": "+18017949999"
+      },
+      {
+        "lat": 40.0320958,
+        "lng": -111.7593088,
+        "address": "1522 W 800 S, Payson, UT 84651",
+        "phone": "+18014657600"
       }
     ]
   },
@@ -21005,6 +22376,312 @@
         "lng": -111.6418648,
         "address": "1739 W 400 S, Springville, UT 84663, USA",
         "phone": "+18014916810"
+      },
+      {
+        "lat": 41.307365399999995,
+        "lng": -112.02130819999999,
+        "address": "1750 W 2700 N, Farr West, UT 84404",
+        "phone": "+18017379686"
+      },
+      {
+        "lat": 41.3051819,
+        "lng": -111.9682854,
+        "address": "2594 N Washington Rd Blvd, North Ogden, UT 84414",
+        "phone": "+18017375511"
+      },
+      {
+        "lat": 41.244726,
+        "lng": -111.9694979,
+        "address": "1176 Washington Blvd, Ogden, UT 84404",
+        "phone": "+18016278144"
+      },
+      {
+        "lat": 41.17680670000001,
+        "lng": -112.0056716,
+        "address": "1096 W Riverdale Rd, Riverdale, UT 84405",
+        "phone": "+18016272523"
+      },
+      {
+        "lat": 41.1604601,
+        "lng": -112.0253709,
+        "address": "5654 S 1900 W, Roy, UT 84067",
+        "phone": "+13852499832"
+      },
+      {
+        "lat": 41.158864799999996,
+        "lng": -111.9391045,
+        "address": "5710 Harrison Blvd, Ogden, UT 84403",
+        "phone": "+18014750212"
+      },
+      {
+        "lat": 41.1414076,
+        "lng": -112.06496849999999,
+        "address": "1903 N 2000 W, Clinton, UT 84015",
+        "phone": "+18015259900"
+      },
+      {
+        "lat": 41.100778299999995,
+        "lng": -111.9413683,
+        "address": "1344 UT-193, Layton, UT 84040",
+        "phone": "+18017710748"
+      },
+      {
+        "lat": 41.0937451,
+        "lng": -112.00632429999999,
+        "address": "1350 State St, Clearfield, UT 84015",
+        "phone": "+18017280811"
+      },
+      {
+        "lat": 41.090618,
+        "lng": -112.0651522,
+        "address": "1598 S 2000 W, Syracuse, UT 84075",
+        "phone": "+18012173112"
+      },
+      {
+        "lat": 41.076174699999996,
+        "lng": -111.97409259999999,
+        "address": "1105 N 400 W, Layton, UT 84041",
+        "phone": "+18015447640"
+      },
+      {
+        "lat": 41.037715600000006,
+        "lng": -111.9450533,
+        "address": "353 W 200 N, Kaysville, UT 84037",
+        "phone": "+18015931668"
+      },
+      {
+        "lat": 40.985749999999996,
+        "lng": -111.91112779999999,
+        "address": "1044 Park Ln, Farmington, UT 84025",
+        "phone": "+13859881122"
+      },
+      {
+        "lat": 40.9205416,
+        "lng": -111.8883065,
+        "address": "363 N Marketplace Dr, Centerville, UT 84014",
+        "phone": "+18013971964"
+      },
+      {
+        "lat": 40.8844926,
+        "lng": -111.8863622,
+        "address": "210 W 500 S, Bountiful, UT 84010",
+        "phone": "+18012962449"
+      },
+      {
+        "lat": 40.8598863,
+        "lng": -111.899723,
+        "address": "1005 N 500 E, North Salt Lake, UT 84054",
+        "phone": "+18012957833"
+      },
+      {
+        "lat": 40.77683,
+        "lng": -112.0244539,
+        "address": "5580 W Amelia Earhart Dr, Salt Lake City, UT 84116",
+        "phone": "+18012778602"
+      },
+      {
+        "lat": 40.7710259,
+        "lng": -111.9417498,
+        "address": "1783 W North Temple St, Salt Lake City, UT 84116",
+        "phone": "+18013633995"
+      },
+      {
+        "lat": 40.760266800000004,
+        "lng": -111.87472079999999,
+        "address": "562 E 400 S, Salt Lake City, UT 84102",
+        "phone": "+18013280821"
+      },
+      {
+        "lat": 40.7455996,
+        "lng": -111.900195,
+        "address": "1090 S 300 W, Salt Lake City, UT 84101",
+        "phone": "+18013553407"
+      },
+      {
+        "lat": 40.7413391,
+        "lng": -111.8262199,
+        "address": "1309 S Foothill Dr, Salt Lake City, UT 84108",
+        "phone": "+18015831514"
+      },
+      {
+        "lat": 40.724787,
+        "lng": -111.5431345,
+        "address": "1620 W Ute Blvd, Park City, UT 84098",
+        "phone": "+14356582382"
+      },
+      {
+        "lat": 40.7223396,
+        "lng": -111.8542233,
+        "address": "2240 S 1300 E, Salt Lake City, UT 84106",
+        "phone": "+18014841921"
+      },
+      {
+        "lat": 40.700217099999996,
+        "lng": -111.80175129999999,
+        "address": "3259 E 3300 S, Salt Lake City, UT 84109",
+        "phone": "+18014879933"
+      },
+      {
+        "lat": 40.699058799999996,
+        "lng": -112.0243177,
+        "address": "3367 S 5600 W, West Valley City, UT 84120",
+        "phone": "+18019645714"
+      },
+      {
+        "lat": 40.696836399999995,
+        "lng": -112.082832,
+        "address": "3490 S 8000 W, Magna, UT 84044",
+        "phone": "+18015080600"
+      },
+      {
+        "lat": 40.696331,
+        "lng": -111.96671520000001,
+        "address": "3149 W 3500 S, West Valley City, UT 84119",
+        "phone": "+18019660477"
+      },
+      {
+        "lat": 40.6749657,
+        "lng": -111.90508299999999,
+        "address": "484 W 4500 S, Murray, UT 84123",
+        "phone": "+18013130867"
+      },
+      {
+        "lat": 40.6739415,
+        "lng": -111.84305459999999,
+        "address": "1714 E 4500 S, Salt Lake City, UT 84117",
+        "phone": "+18012740077"
+      },
+      {
+        "lat": 40.6672982,
+        "lng": -111.9405474,
+        "address": "1789 W 4700 S, Taylorsville, UT 84129",
+        "phone": "+18019672996"
+      },
+      {
+        "lat": 40.6534116,
+        "lng": -111.9862497,
+        "address": "3988 W 5400 S, Taylorsville, UT 84129",
+        "phone": "+18019670424"
+      },
+      {
+        "lat": 40.6480799,
+        "lng": -111.8662865,
+        "address": "5648 S 900 E, Murray, UT 84121",
+        "phone": "+18013131620"
+      },
+      {
+        "lat": 40.6273771,
+        "lng": -111.9393298,
+        "address": "6828 S Redwood Rd, West Jordan, UT 84084",
+        "phone": "+18015651170"
+      },
+      {
+        "lat": 40.623505099999996,
+        "lng": -111.8654804,
+        "address": "7035 S 900 E, Midvale, UT 84047",
+        "phone": "+18015666710"
+      },
+      {
+        "lat": 40.6108565,
+        "lng": -111.9805942,
+        "address": "7729 S Campus View Dr, West Jordan, UT 84084",
+        "phone": "+18012805787"
+      },
+      {
+        "lat": 40.607341999999996,
+        "lng": -112.0247248,
+        "address": "7914 S 5695 W, West Jordan, UT 84081",
+        "phone": "+13855253435"
+      },
+      {
+        "lat": 40.5890148,
+        "lng": -111.9381224,
+        "address": "8935 S Redwood Rd, West Jordan, UT 84088",
+        "phone": "+18015650822"
+      },
+      {
+        "lat": 40.588256,
+        "lng": -111.9889051,
+        "address": "4114 W 9000 S, West Jordan, UT 84088",
+        "phone": "+18012829097"
+      },
+      {
+        "lat": 40.582585,
+        "lng": -111.8727576,
+        "address": "9286 S 700 E, Sandy, UT 84070",
+        "phone": "+18012551961"
+      },
+      {
+        "lat": 40.5808487,
+        "lng": -111.83352359999999,
+        "address": "2025 E 9400 S, Sandy, UT 84093",
+        "phone": "+18017338880"
+      },
+      {
+        "lat": 40.55770330000001,
+        "lng": -111.8933923,
+        "address": "10665 S Auto Mall Dr, Sandy, UT 84070",
+        "phone": "+18015716005"
+      },
+      {
+        "lat": 40.5434376,
+        "lng": -111.9860092,
+        "address": "11503 4000 W, South Jordan, UT 84095",
+        "phone": "+18014466024"
+      },
+      {
+        "lat": 40.537378,
+        "lng": -112.0232511,
+        "address": "11744 S Trl Xing Dr, South Jordan, UT 84009",
+        "phone": "+13858870876"
+      },
+      {
+        "lat": 40.5227289,
+        "lng": -111.9433011,
+        "address": "1938 W 12600 S, Riverton, UT 84065",
+        "phone": "+18014463884"
+      },
+      {
+        "lat": 40.508291199999995,
+        "lng": -112.0240876,
+        "address": "5592 13400 S, Herriman, UT 84096",
+        "phone": "+18013021500"
+      },
+      {
+        "lat": 40.5030278,
+        "lng": -111.88627319999999,
+        "address": "147 E 13800 S, Draper, UT 84020",
+        "phone": "+18013841990"
+      },
+      {
+        "lat": 40.49906,
+        "lng": -111.93797099999999,
+        "address": "13883 S Redwood Rd, Bluffdale, UT 84065",
+        "phone": "+13853544024"
+      },
+      {
+        "lat": 40.497788799999995,
+        "lng": -111.4143778,
+        "address": "800 S Main St, Heber City, UT 84032",
+        "phone": "+14356547458"
+      },
+      {
+        "lat": 40.121342399999996,
+        "lng": -111.63829630000001,
+        "address": "929 E 800 N, Spanish Fork, UT 84660",
+        "phone": "+18017982425"
+      },
+      {
+        "lat": 40.0984584,
+        "lng": -111.65581089999999,
+        "address": "866 B S Main St, Spanish Fork, UT 84660",
+        "phone": "+18017949999"
+      },
+      {
+        "lat": 40.0320958,
+        "lng": -111.7593088,
+        "address": "1522 W 800 S, Payson, UT 84651",
+        "phone": "+18014657600"
       }
     ]
   },

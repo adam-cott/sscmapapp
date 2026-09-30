@@ -1,4 +1,4 @@
 export const LATEST_UPDATE = {
-  version: '2.1.6',
-  description: "Added MTECH Cosmetology's Lehi campus to the map (searching Lehi now zooms right to Lehi), and fixed where Rocky Mountain Chocolate Factory's caramel apple deal is valid.",
+  version: '2.1.7',
+  description: "Pizza Hut, Wendy's, Arby's, Roxberry and El Pollo Loco now show their stores all along the Wasatch Front, from Pleasant View to Santaquin — over 100 new spots on the map.",
 }

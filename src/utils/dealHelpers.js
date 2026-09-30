@@ -126,9 +126,9 @@ const UTAH_COUNTY_CITIES = new Set([
 ])
 
 // "Participating Locations" and "All Wasatch Front" mean every store on the
-// Wasatch Front — Utah, Salt Lake, Davis and Weber counties up to Ogden — plus
-// any city named alongside (Adam, Sept 2026). Heber City and Park City count
-// too; Tooele and Nephi don't.
+// Wasatch Front — Utah, Salt Lake, Davis and Weber counties up to Pleasant View
+// — plus any city named alongside (Adam, Sept 2026). Heber City and Park City
+// count too; Tooele and Nephi don't.
 const WASATCH_FRONT = /\bparticipating\b|\b(all )?wasatch front\b/i
 const WASATCH_FRONT_CITIES = new Set([
   ...UTAH_COUNTY_CITIES,
@@ -136,8 +136,9 @@ const WASATCH_FRONT_CITIES = new Set([
   'Millcreek', 'Murray', 'Riverton', 'Salt Lake City', 'Sandy', 'South Jordan', 'South Salt Lake',
   'Taylorsville', 'West Jordan', 'West Valley City',
   'Bountiful', 'Centerville', 'Clearfield', 'Clinton', 'Farmington', 'Fruit Heights', 'Kaysville',
-  'Layton', 'North Salt Lake', 'Syracuse', 'West Bountiful', 'Woods Cross',
-  'North Ogden', 'Ogden', 'Riverdale', 'Roy', 'South Ogden', 'Washington Terrace',
+  'Layton', 'North Salt Lake', 'South Weber', 'Sunset', 'Syracuse', 'West Bountiful', 'West Point', 'Woods Cross',
+  'Farr West', 'Harrisville', 'Hooper', 'Marriott-Slaterville', 'North Ogden', 'Ogden', 'Plain City',
+  'Pleasant View', 'Riverdale', 'Roy', 'South Ogden', 'Uintah', 'Washington Terrace', 'West Haven',
   'Heber City', 'Park City',
 ])
 
