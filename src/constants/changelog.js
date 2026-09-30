@@ -1,4 +1,4 @@
 export const LATEST_UPDATE = {
-  version: '2.1.7',
-  description: "Pizza Hut, Wendy's, Arby's, Roxberry and El Pollo Loco now show their stores all along the Wasatch Front, from Pleasant View to Santaquin — over 100 new spots on the map.",
+  version: '2.1.8',
+  description: "Over 200 new spots on the map! Chains like Wingstop, Carl's Jr, Sonic, Wendy's, Pizza Hut and Arby's now show their stores all along the Wasatch Front, from Pleasant View to Santaquin.",
 }
