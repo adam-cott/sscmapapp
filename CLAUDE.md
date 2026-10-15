@@ -79,7 +79,7 @@ src/
 - `contact.phone` stored per-location in `locations[]`, not at deal level
 - `contact.website` is null for all businesses — intentionally left empty for now. Do not ask about this or treat it as a gap to fix. It is a deliberate decision to revisit later.
 - Python geocode scripts read from `C:\Users\adamb\Downloads\starving_student_businesses.csv` (hardcoded path — keep that file in place)
-- **Stats:** 439 deals · 214 businesses · 710 pins (stores that honor each deal, counted once per business) · every deal has at least one pin except online-only HiddenHunts.com
+- **Stats:** 439 deals · 214 businesses · 710 pins (stores that honor each deal, counted once per business) · every deal has at least one pin except online-only HiddenHunts.com (on purpose) and SSCDeals.com (hidden)
 - **Closed businesses/locations are hidden, not deleted.** A whole business that's gone: set `"active": false` (filtered once at the top of `App.jsx`) plus `"closedReason": "Permanently closed"`. Just one location of a multi-location business closed: move it out of `locations[]` into `closedLocations[]` on each of that business's deals, with its own `closedReason` — the app never reads `closedLocations`, so it's invisible but easy to restore. (Examples: The Yard Milkshake Bar, Sub Zero Ice Cream's downtown Provo store.)
 - **Keep `locationRestriction` wording standardized** — full city names (never "EM", "SF", "PG", "WJ", "Mtn"), "&" between places (comma-separated for 3+: "Orem, Vineyard, Eagle Mountain & Santaquin"), "All ..." for broad scopes ("All Locations", "All Utah County"), and "excluding" for exclusions. The matcher parses this text, so odd wording silently changes which pins show. `locationRestriction` is the only place the restriction lives — `deal.description` holds just the extra conditions ("Carryout Only"), never a "Valid at:" copy; the deal sheet shows the restriction in its own info row. If a restriction has no extra conditions, `description` is `""` and the sheet hides the description paragraph.
 - **`deals.json` edits for data cleanup are allowed**, but only via a dry run: write the cleaned data to a separate file (scratchpad, not the repo), produce a report flagging anything unexpected, show before/after examples, and get Adam's explicit approval before overwriting `src/data/deals.json`.
@@ -150,7 +150,8 @@ The "Est. Savings" stat card has been intentionally removed from the Rewards tab
 ```bash
 npm run dev          # Start dev server
 npm run build        # Production build
-npm test             # Run Vitest tests
+npm test             # Run Vitest tests (or `npx vitest run` for a single pass)
+npx eslint .         # Lint — currently 0 problems; keep it there
 
 # Push to deploy
 git add -A && git commit -m "..." && git push
@@ -159,7 +160,7 @@ git add -A && git commit -m "..." && git push
 ---
 
 ## Push Workflow (REQUIRED — do this every time before pushing)
-1. **Bump the patch version** in `package.json` (e.g. `1.0.3` → `1.0.4`)
+1. **Bump the patch version** in `package.json` (e.g. `1.0.3` → `1.0.4`) — minor for new features (`2.1.0`), major for card-year switches (`2.0.0`)
 2. **Update `src/constants/changelog.js`** — set `version` to match and write a short, friendly, user-facing `description` of what changed (not a commit message — something a student would actually want to read)
 3. Then commit and push as normal
 
@@ -167,7 +168,15 @@ This keeps the About screen version and What's New section accurate without any 
 
 ---
 
+## Gotchas
+- The Google Maps key lives in the repo's `.env` (gitignored — never commit or print it). A local hook blocks any shell command that *mentions* `.env`; scripts load it with `process.loadEnvFile`, so just run them normally (`node scripts/audit-pins.js`).
+- Provo Canyon Adventures' pin (on US-189 near their turnoff) is "good enough" — don't raise it again.
+
+## Parked (only if Adam asks)
+- **Logo padding:** ~47 of the logo files have lots of built-in white padding (wide wordmarks like `scratch-miniature-golf.png`, `cold-stone-creamery.png`, `curry-pizza.png`) and look small in the square tile. It's a source-image issue, not CSS; cropping risks cutting logos off. Adam was going to send a list.
+- **Home tab scroll jank:** needs a screen recording from Adam's phone before investigating.
+
 ## Browser Testing
-- **Never drive the Claude in Chrome browser tools against this app without asking first** — Adam tests on his own phone after each deploy and would rather do that than have the app clicked through on his behalf
+- **Never drive the Claude in Chrome browser tools against this app without asking first** — Adam tests on his own phone (Galaxy A36) after each deploy and would rather do that than have the app clicked through on his behalf
 - Even when he says yes, keep it minimal — verify the one thing in question, don't wander into unrelated flows or edge cases on your own initiative
 - This app requires sign-in against a real Firestore test account (see README) — any state changed during a browser session (profile name, usage log, etc.) is real, persists, and needs to be reverted before moving on
