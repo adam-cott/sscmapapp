@@ -8,9 +8,18 @@ export default function MapFilterMenu({ activeCategories, onToggle, onClear, cat
   const cardClass = 'relative flex flex-col items-center justify-center gap-2 rounded-2xl transition-all'
 
   return (
+    // Same centering as RedemptionScreen: stays inside the desktop phone panel
+    // (App.css's --app-panel-width) instead of covering the whole window.
     <div
-      className="fixed inset-0 z-[1000] flex flex-col px-4 pt-4"
-      style={{ backgroundColor: '#f0f4f8', paddingBottom: 'calc(16px + env(safe-area-inset-bottom))' }}
+      className="fixed top-0 bottom-0 z-[1000] flex flex-col px-4 pt-4"
+      style={{
+        left: '50%',
+        transform: 'translateX(-50%)',
+        width: '100%',
+        maxWidth: 'var(--app-panel-width)',
+        backgroundColor: '#f0f4f8',
+        paddingBottom: 'calc(16px + env(safe-area-inset-bottom))',
+      }}
     >
       <div className="flex items-center justify-between mb-3">
         <h2 className="text-lg font-bold" style={{ fontFamily: 'Sora, sans-serif', color: '#0f172a' }}>Categories</h2>
