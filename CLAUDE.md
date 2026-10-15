@@ -171,6 +171,7 @@ This keeps the About screen version and What's New section accurate without any 
 ## Gotchas
 - The Google Maps key lives in the repo's `.env` (gitignored — never commit or print it). A local hook blocks any shell command that *mentions* `.env`; scripts load it with `process.loadEnvFile`, so just run them normally (`node scripts/audit-pins.js`).
 - Provo Canyon Adventures' pin (on US-189 near their turnoff) is "good enough" — don't raise it again.
+- Marnell's Country Dance's pin (480 N 900 E, Provo — just north of Vasa Fitness) is correct; Adam has seen it in person. Their website says "488 N 800 E", which is wrong — don't move the pin to match it.
 
 ## Parked (only if Adam asks)
 - **Logo padding:** ~47 of the logo files have lots of built-in white padding (wide wordmarks like `scratch-miniature-golf.png`, `cold-stone-creamery.png`, `curry-pizza.png`) and look small in the square tile. It's a source-image issue, not CSS; cropping risks cutting logos off. Adam was going to send a list.

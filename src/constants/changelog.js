@@ -1,4 +1,4 @@
 export const LATEST_UPDATE = {
-  version: '2.1.10',
-  description: "Moved Marnell's Country Dance to its current spot at 488 N 800 E in Provo, plus more stores on the map along the Wasatch Front.",
+  version: '2.1.11',
+  description: "Fixed Marnell's Country Dance's pin — it's back next to Vasa Fitness on 900 E in Provo.",
 }

@@ -7695,9 +7695,9 @@
     "id": "2627-entertainment-150",
     "name": "Marnell's Country Dance",
     "category": "entertainment",
-    "address": "488 N 800 E, Provo, UT 84606",
-    "lat": 40.2402778,
-    "lng": -111.644614,
+    "address": "480 N 900 E, Provo, UT 84606",
+    "lat": 40.240702,
+    "lng": -111.6421774,
     "locationRestriction": "All Locations",
     "deal": {
       "title": "2-4-1! Admission to Open Dance Night!",
@@ -7717,9 +7717,9 @@
     ],
     "locations": [
       {
-        "lat": 40.2402778,
-        "lng": -111.644614,
-        "address": "488 N 800 E, Provo, UT 84606",
+        "lat": 40.240702,
+        "lng": -111.6421774,
+        "address": "480 N 900 E, Provo, UT 84606",
         "phone": "+18054056756"
       }
     ]
@@ -12462,9 +12462,9 @@
     "id": "2627-free-259",
     "name": "Marnell's Country Dance",
     "category": "free",
-    "address": "488 N 800 E, Provo, UT 84606",
-    "lat": 40.2402778,
-    "lng": -111.644614,
+    "address": "480 N 900 E, Provo, UT 84606",
+    "lat": 40.240702,
+    "lng": -111.6421774,
     "locationRestriction": "All Locations",
     "deal": {
       "title": "FREE! Admission to Open Dance Night!",
@@ -12484,9 +12484,9 @@
     ],
     "locations": [
       {
-        "lat": 40.2402778,
-        "lng": -111.644614,
-        "address": "488 N 800 E, Provo, UT 84606",
+        "lat": 40.240702,
+        "lng": -111.6421774,
+        "address": "480 N 900 E, Provo, UT 84606",
         "phone": "+18054056756"
       }
     ]
