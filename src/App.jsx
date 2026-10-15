@@ -8,7 +8,7 @@ import AboutScreen from './components/Settings/AboutScreen'
 import CardYearScreen from './components/Settings/CardYearScreen'
 import { useCardYear } from './hooks/useCardYear'
 import dealsData from './data/deals.json'
-import { getMapFocusLocations } from './utils/dealHelpers'
+import { getMapFocusLocations, NEAR_ME_MILES } from './utils/dealHelpers'
 import { useDeals } from './hooks/useDeals'
 import { useFilters } from './hooks/useFilters'
 import { useOverlayHistory } from './hooks/useOverlayHistory'
@@ -152,6 +152,30 @@ function AppShell() {
     if (!geoLoading) requestLocation()
   }
 
+  // Map tab "Near Me" switch. Turning it on without a location asks for one;
+  // if that lookup ends without coords (denied or failed), it switches back off.
+  const [nearMe, setNearMe] = useState(false)
+  const [nearMeMessage, setNearMeMessage] = useState(false)
+
+  const handleNearMeToggle = () => {
+    if (nearMe) return setNearMe(false)
+    setNearMe(true)
+    if (!coords && !geoLoading) requestLocation()
+  }
+
+  useEffect(() => {
+    if (!nearMe || coords || geoLoading) return
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setNearMe(false)
+    setNearMeMessage(true)
+  }, [nearMe, coords, geoLoading])
+
+  useEffect(() => {
+    if (!nearMeMessage) return
+    const t = setTimeout(() => setNearMeMessage(false), 4000)
+    return () => clearTimeout(t)
+  }, [nearMeMessage])
+
   const handleReset = () => setShowResetConfirm(true)
 
   const confirmReset = () => {
@@ -233,7 +257,16 @@ function AppShell() {
     onClearFilters: clearFilters,
     dealCount: filteredDeals.length,
     categoryCounts: mapCategoryCounts,
+    nearMe: nearMe && !!coords,
+    nearMeLoading: nearMe && !coords,
+    nearMeMessage,
+    onNearMeToggle: handleNearMeToggle,
   }
+
+  // Near Me zooms to its circle unless a "View on map" focus or place search is driving the map.
+  const nearCenter = nearMe && coords && !mapFocus ? coords : null
+  const nearLat = NEAR_ME_MILES / 69
+  const nearLng = nearCenter ? NEAR_ME_MILES / (69 * Math.cos(nearCenter.lat * Math.PI / 180)) : 0
 
   const isMapTab = activeTab === 'map'
 
@@ -290,10 +323,13 @@ function AppShell() {
                 onSelectLocation={handleSelectLocation}
                 usageMap={usageMap}
                 userCoords={coords}
+                nearCenter={nearCenter}
                 focusPoints={mapFocus
                   ? mapFocus.deal.locations.map(l => [l.lat, l.lng])
-                  : searchPlace ? filteredDeals.flatMap(d => (getMapFocusLocations(d) ?? []).map(l => [l.lat, l.lng])) : undefined}
-                fitKey={mapFocus ? undefined : searchPlace}
+                  : searchPlace ? filteredDeals.flatMap(d => (getMapFocusLocations(d) ?? []).map(l => [l.lat, l.lng]))
+                  : nearCenter ? [[nearCenter.lat - nearLat, nearCenter.lng - nearLng], [nearCenter.lat + nearLat, nearCenter.lng + nearLng]]
+                  : undefined}
+                fitKey={mapFocus ? undefined : searchPlace ?? (nearCenter ? 'near-me' : undefined)}
               />
             </div>
 

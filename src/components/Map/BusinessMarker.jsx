@@ -3,7 +3,7 @@ import { Marker, Popup } from 'react-leaflet'
 import { createMarkerIcon } from '../../utils/markerIcons'
 import { CATEGORY_COLORS, CATEGORY_LABELS, CATEGORY_LIGHT } from '../../utils/categoryColors'
 
-const BusinessMarker = memo(function BusinessMarker({ loc, items, primaryCategory, isSelected, onSelectDeal, onSelectLocation }) {
+const BusinessMarker = memo(function BusinessMarker({ loc, items, primaryCategory, isSelected, dimmed, onSelectDeal, onSelectLocation }) {
   const isSingle = items.length === 1
   const { deal, usageState } = items[0]
 
@@ -38,6 +38,7 @@ const BusinessMarker = memo(function BusinessMarker({ loc, items, primaryCategor
     <Marker
       position={[loc.lat, loc.lng]}
       icon={icon}
+      opacity={dimmed ? 0.5 : 1}
       eventHandlers={eventHandlers}
     >
       <Popup>

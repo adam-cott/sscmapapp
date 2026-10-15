@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useRef } from 'react'
-import { MapContainer, TileLayer, useMap, useMapEvents, Marker } from 'react-leaflet'
+import { MapContainer, TileLayer, useMap, useMapEvents, Marker, Circle } from 'react-leaflet'
 import MarkerClusterGroup from 'react-leaflet-cluster'
 import L from 'leaflet'
 import BusinessMarker from './BusinessMarker'
-import { getDealUsageState, getPrimaryCategory, getMapFocusLocations } from '../../utils/dealHelpers'
+import { getDealUsageState, getPrimaryCategory, getMapFocusLocations, haversineDistance, NEAR_ME_MILES } from '../../utils/dealHelpers'
 import allDealsRaw from '../../data/deals.json'
 import 'react-leaflet-cluster/dist/assets/MarkerCluster.css'
 import 'react-leaflet-cluster/dist/assets/MarkerCluster.Default.css'
@@ -30,11 +30,14 @@ const PROVO_CENTER = [40.2468, -111.6490]
 const DEFAULT_ZOOM = 13
 const MAX_ZOOM = 19
 
+// A cluster fades only when every pin in it is outside the Near Me circle,
+// so a bubble hiding even one nearby store stays solid.
 function createClusterIcon(cluster) {
   const count = cluster.getChildCount()
   const [tier, size] = count < 10 ? ['sm', 34] : count < 40 ? ['md', 42] : ['lg', 50]
+  const dim = cluster.getAllChildMarkers().every(m => m.options.opacity < 1) ? 'opacity:0.5;' : ''
   return L.divIcon({
-    html: `<div class="ssc-cluster ssc-cluster-${tier}" style="width:${size}px;height:${size}px;">${count}</div>`,
+    html: `<div class="ssc-cluster ssc-cluster-${tier}" style="width:${size}px;height:${size}px;${dim}">${count}</div>`,
     className: '',
     iconSize: [size, size],
     iconAnchor: [size / 2, size / 2],
@@ -87,7 +90,7 @@ const LOCATION_ICON = L.divIcon({
   iconAnchor: [16, 16],
 })
 
-export default function MapView({ deals, selectedDeal, onSelectDeal, onSelectLocation, usageMap, userCoords, focusPoints, fitKey }) {
+export default function MapView({ deals, selectedDeal, onSelectDeal, onSelectLocation, usageMap, userCoords, nearCenter, focusPoints, fitKey }) {
   // Group pins by unique coordinate — one pin per physical location
   const pins = useMemo(() => {
     const byCoord = new Map()
@@ -110,8 +113,15 @@ export default function MapView({ deals, selectedDeal, onSelectDeal, onSelectLoc
         byCoord.get(key).items.push({ deal, usageState })
       })
     })
-    return [...byCoord.values()]
-  }, [deals, usageMap])
+    return [...byCoord.values()].map(pin => ({
+      ...pin,
+      far: !!nearCenter && haversineDistance(nearCenter.lat, nearCenter.lng, pin.loc.lat, pin.loc.lng) > NEAR_ME_MILES,
+    }))
+  }, [deals, usageMap, nearCenter])
+
+  // Cluster icons are built once per cluster, so remount the group when Near Me
+  // changes to redraw bubbles with the right fade.
+  const clusterKey = nearCenter ? `near-${nearCenter.lat.toFixed(3)},${nearCenter.lng.toFixed(3)}` : 'all'
 
   return (
     <div style={{ height: '100%', width: '100%', position: 'relative' }}>
@@ -136,7 +146,16 @@ export default function MapView({ deals, selectedDeal, onSelectDeal, onSelectLoc
             zIndexOffset={1000}
           />
         )}
+        {nearCenter && (
+          <Circle
+            center={[nearCenter.lat, nearCenter.lng]}
+            radius={NEAR_ME_MILES * 1609.34}
+            interactive={false}
+            pathOptions={{ color: '#0170B9', weight: 1.5, fillColor: '#0170B9', fillOpacity: 0.05 }}
+          />
+        )}
         <MarkerClusterGroup
+          key={clusterKey}
           iconCreateFunction={createClusterIcon}
           chunkedLoading
           maxClusterRadius={60}
@@ -145,11 +164,12 @@ export default function MapView({ deals, selectedDeal, onSelectDeal, onSelectLoc
           removeOutsideVisibleBounds={false}
           circleSpiralSwitchover={1}
         >
-          {pins.map(({ loc, items, key }) => (
+          {pins.map(({ loc, items, key, far }) => (
             <BusinessMarker
               key={key}
               loc={loc}
               items={items}
+              dimmed={far}
               primaryCategory={getPrimaryCategory(items.map(i => i.deal))}
               isSelected={items.some(i => i.deal.id === selectedDeal?.id)}
               onSelectDeal={onSelectDeal}

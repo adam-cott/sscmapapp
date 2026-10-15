@@ -15,6 +15,9 @@ export function formatPhone(raw) {
 
 const EARTH_RADIUS_MILES = 3958.8
 
+// Radius of the Map tab's "Near Me" circle; pins farther out are dimmed.
+export const NEAR_ME_MILES = 3
+
 export function haversineDistance(lat1, lng1, lat2, lng2) {
   const toRad = deg => deg * Math.PI / 180
   const dLat = toRad(lat2 - lat1)
