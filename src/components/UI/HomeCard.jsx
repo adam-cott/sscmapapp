@@ -29,7 +29,6 @@ export default function HomeCard({ deal, dealCount = 1, onClick }) {
       <BusinessLogo
         name={deal.name}
         size="100%"
-        radius={18}
         padding={0}
         align="center"
         bare
