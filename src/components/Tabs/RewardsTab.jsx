@@ -1,4 +1,26 @@
+import { useEffect, useState } from 'react'
 import { Trophy } from 'lucide-react'
+
+const reduceMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+// Counts up from 0 to `value` with an ease-out, a bit longer for bigger numbers.
+function CountUp({ value }) {
+  const [n, setN] = useState(() => (reduceMotion() ? value : 0))
+  useEffect(() => {
+    if (reduceMotion()) return
+    const duration = Math.min(1000, 400 + value * 40)
+    let frame, start
+    const tick = t => {
+      start ??= t
+      const p = Math.min((t - start) / duration, 1)
+      setN(Math.round(value * (1 - (1 - p) ** 3)))
+      if (p < 1) frame = requestAnimationFrame(tick)
+    }
+    frame = requestAnimationFrame(tick)
+    return () => cancelAnimationFrame(frame)
+  }, [value])
+  return n
+}
 
 function formatDate(iso) {
   const d = new Date(iso)
@@ -12,6 +34,9 @@ function formatDate(iso) {
 export default function RewardsTab({ usageLog, dealsWithUsage, usageMap }) {
   const dealById = Object.fromEntries(dealsWithUsage.map(d => [d.id, d]))
   const totalRedemptions = Object.values(usageMap).reduce((a, b) => a + b, 0)
+  const placesVisited = new Set(
+    Object.keys(usageMap).filter(id => usageMap[id] > 0).map(id => dealById[id]?.name ?? id)
+  ).size
 
   // usageLog only exists from when logging was added. usageMap has ALL usage
   // including deals used before the log existed. Build a combined history:
@@ -48,15 +73,22 @@ export default function RewardsTab({ usageLog, dealsWithUsage, usageMap }) {
 
       <div className="flex-1 overflow-y-auto ssc-scroll px-4 pb-4 space-y-4">
 
-        {/* Stats card */}
-        <div className="rounded-2xl bg-white p-4 shadow-sm" style={{ border: '1px solid #f1f5f9' }}>
-          <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-1" style={{ fontFamily: 'var(--font-display)', fontSize: '9px', letterSpacing: '0.1em' }}>
-            Deals Used
-          </p>
-          <p className="text-3xl font-bold" style={{ fontFamily: 'var(--font-display)', color: 'var(--ssc-blue)' }}>
-            {totalRedemptions}
-          </p>
-          <p className="text-xs text-gray-400 mt-0.5">redemption{totalRedemptions !== 1 ? 's' : ''} this year</p>
+        {/* Stats cards */}
+        <div className="grid grid-cols-2 gap-3">
+          {[
+            { label: 'Deals Used', value: totalRedemptions, sub: `redemption${totalRedemptions !== 1 ? 's' : ''} this year` },
+            { label: 'Places Visited', value: placesVisited, sub: `different business${placesVisited !== 1 ? 'es' : ''}` },
+          ].map(s => (
+            <div key={s.label} className="rounded-2xl bg-white p-4 shadow-sm" style={{ border: '1px solid #f1f5f9' }}>
+              <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-1" style={{ fontFamily: 'var(--font-display)', fontSize: '9px', letterSpacing: '0.1em' }}>
+                {s.label}
+              </p>
+              <p className="text-3xl font-bold" style={{ fontFamily: 'var(--font-display)', color: 'var(--ssc-blue)', fontVariantNumeric: 'tabular-nums' }}>
+                <CountUp value={s.value} />
+              </p>
+              <p className="text-xs text-gray-400 mt-0.5">{s.sub}</p>
+            </div>
+          ))}
         </div>
 
         {/* Usage history */}
