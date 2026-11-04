@@ -4,14 +4,14 @@
 starvingstudentcardmapapp — Interactive map of Starving Student Discount Card deals for Utah County students
 
 ## Stack
-- Vite + React 19, react-leaflet v4 + react-leaflet-cluster, Tailwind CSS v3
-- Static JSON data (no backend), localStorage for usage persistence
+- Vite + React 19, react-leaflet v5 + react-leaflet-cluster v4, Tailwind CSS v3
+- Static JSON data; usage, favorites and history in localStorage + Firestore (cross-device sync), keyed by card year
 - Deployed on Vercel via GitHub (push to master = auto-deploy)
 
 ## Structure
 ```
 src/
-  data/deals.json        # Source of truth — 440 deals (439 active), 500+ map pins
+  data/deals.json        # Source of truth — 440 deals (439 active), 710 map pins
   components/            # UI components (Map, Sidebar, Modal, BottomSheet, etc.)
   hooks/                 # useDeals, useFilters, useLocalStorage
   utils/                 # categoryColors, dealHelpers, markerIcons
@@ -33,4 +33,5 @@ docs/
 - src/data/ is sensitive — ask before editing deals.json
 - Map pins come from locations[] array on each deal, not top-level lat/lng
 - FALLBACK_COORDS in MapView.jsx filters city-level geocoding fallbacks (threshold: 8+ businesses at same coord)
-- Usage state is localStorage only — no backend, no sync across devices
+- Usage state syncs via Firestore (signed-in users) — see CLAUDE.md
+- CLAUDE.md is the full, current project guide; docs/ROADMAP.md is from March 2026 and out of date

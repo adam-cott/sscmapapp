@@ -2,14 +2,15 @@
 
 A mobile-first PWA that turns the physical Starving Student Discount Card into an interactive map and deal tracker for Utah County college students (BYU/UVU).
 
-The official app lists 400+ deals as a flat category list with no map, and chains with multiple locations get split across categories or duplicated — making it hard to tell what's actually nearby. This app fixes that: **439 deals, 214 businesses, 500+ map pins**, all browsable on a live, clustered map.
+The official app lists 400+ deals as a flat category list with no map, and chains with multiple locations get split across categories or duplicated — making it hard to tell what's actually nearby. This app fixes that: **439 deals, 214 businesses, 710 map pins**, all browsable on a live, clustered map.
 
 **Live app:** https://sscmapapp.vercel.app/
 
 ## Features
 
 - Interactive, clustered map of every deal location (react-leaflet)
-- Category filters
+- Category filters (Map tab: full-screen Filter menu, multi-select)
+- "Near Me" on the map: highlights deals within 3 miles
 - Nearest-first sort with location permission
 - Per-deal usage tracking with undo
 - Favorites tab

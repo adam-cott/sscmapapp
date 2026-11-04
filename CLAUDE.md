@@ -1,7 +1,7 @@
 # Starving Student Card Map App
 
 ## What This Is
-A mobile-first PWA for Utah County college students. Turns the physical Starving Student Discount Card into an interactive deal finder — 439 deals, 214 businesses, 500+ map pins (2026–27 card). Users browse via Home tab carousels/search or the Map tab's pins, filter by category, and track deal usage per card.
+A mobile-first PWA for Utah County college students. Turns the physical Starving Student Discount Card into an interactive deal finder — 439 deals, 214 businesses, 710 map pins (2026–27 card). Users browse via Home tab carousels/search or the Map tab's pins (Filter menu + Near Me), filter by category, and track deal usage per card.
 
 **Live:** Vercel via GitHub auto-deploy (`master` branch)
 **Repo:** https://github.com/adam-cott/sscmapapp
@@ -38,6 +38,8 @@ A mobile-first PWA for Utah County college students. Turns the physical Starving
 - Same family of mistake: **don't use percentage heights to force a square** — but CSS `aspect-ratio` isn't the fix either. Once a real `<img>` loads inside it, Chrome lets the image's own intrinsic ratio win over the declared `aspect-ratio`, silently forcing the box back to the image's shape (reproduced on the live production page). Use the padding-top-percentage trick instead: it always resolves against the box's own width, so it can't be hijacked by a loaded image (see `BusinessLogo.jsx`).
 - `BusinessLogo`'s alignment is controlled by its `align` prop (defaults to `flex-start` for DealCard rows, `center` for HomeCard) — don't hardcode `alignSelf` inside the component.
 - Logos use `object-fit: contain`, not `cover` — they should never be cropped.
+- **Logo tiles are iPhone-style squircles** (Home cards and deal lists; map pins stay round). `border-radius` can't draw one, so `BusinessLogo.jsx` masks each layer with an SVG superellipse. A mask clips `box-shadow` and `border` too, so the shadow is a `filter: drop-shadow` on the outer box and the hairline border is a squircle "frame" layer with the tile inset 1px. List tiles use `padding={0}` — any padding shows a full-color logo as a square inside a white squircle.
+- **Overlays on the desktop phone panel:** on desktop the app is a centered 480px panel (`--app-panel-width` in `App.css`). A `position: fixed` overlay must use `left: 50%; transform: translateX(-50%); max-width: var(--app-panel-width)` (see `RedemptionScreen.jsx`, `MapFilterMenu.jsx`), not `inset: 0`, or it covers the whole browser window.
 - **Debugging rule:** if a style change doesn't appear to take effect, verify which file actually renders the element before editing again — don't assume and re-edit blind.
 - **A thin accent bar can't match a panel's corner radius by giving it the same `border-radius` value.** CSS clamps a box's radius to half its own dimension, so a 4px-tall bar's vertical radius silently clamps to 2px regardless of what you set — it'll never visually match a 16-20px panel curve, leaving a sliver. The working pattern (see `DealModal.jsx`, `LocationPrompt.jsx`, `UndoToast.jsx`): `overflow: hidden` + `border-radius` on the panel, no radius on the bar — the bar just gets clipped to whatever shape the panel is.
 - **A static (`position: static`, the default) element always paints BEHIND any sibling with `position: absolute`/`relative`/etc., even with no `z-index` set and even if the static element comes later in the DOM.** This isn't a bug in any one component, it's plain CSS stacking order. It cost real damage once: the Map tab's `Header` (app title, deal-count pill, a map/list toggle, a Reset button) was a static element sitting before `position: absolute; inset: 0` map/list panels — so the map's opaque tiles painted directly over the entire header strip, on every screen size, for as long as that layout existed. The toggle and Reset button were completely unclickable and nobody noticed because nothing looked visually "broken" — the map just filled the screen like it was supposed to. When overlaying `position: absolute` content near a static header/toolbar, either give the static element `position: relative` (or a real stacking context) too, or don't assume "it renders in the JSX before the overlay" means "it renders on top."
@@ -49,7 +51,7 @@ A mobile-first PWA for Utah County college students. Turns the physical Starving
 src/
   data/deals.json              # 440 deals (439 active), all with coords + locations[]
   components/
-    Sidebar/                   # SearchBar, FilterPanel — map's compact filter bar (no sort; map pins aren't ordered)
+    Sidebar/                   # Sidebar = Map tab top bar (SearchBar + Near Me / Filter buttons); MapFilterMenu = full-screen category grid; FilterPanel = Home tab's chip row
     Map/MapView.jsx            # Map + clustering + spiderfy
     Map/BusinessMarker.jsx     # Pins — React.memo wrapped
     ListView/                  # DealCard list
@@ -96,7 +98,7 @@ The card runs Oct 1 → Oct 1. Each year the whole deal list is replaced from a 
 2. **Archive** last year's `src/data/deals.json` as `data-archive/deals-YYYY-YY.json` (the converter reads last year from here, never from `src/data`).
 3. **Update `scripts/import-card.js`** constants (file names, `ID_PREFIX`, `EXPIRES`), `RENAMES`/`MERGED` (ask Adam which dropped/new pairs are the same business), and add `OVERRIDES` for lines the parser gets wrong. It matches businesses ignoring punctuation and carries over `locations[]`, `closedLocations[]`, contact info and logos.
 4. `node scripts/import-card.js` (dry run) → `node scripts/lookup-new-locations.js` (Google Places for new businesses; needs `GOOGLE_MAPS_API_KEY` in `.env`; ~60 requests) → `node scripts/import-card.js` again. Review `reports/card-import-YYYY-YY.md` (every card line → headline / valid at / details / value / uses, plus flags). If re-running the lookup, delete its output file first.
-5. **Logos:** add the new businesses to `scripts/domains-output.json`, run `node scripts/fetch-logos.js --live`, then eyeball them — about 1 in 6 auto-fetched logos is wrong (photos, badges, blank). Delete bad ones; a missing logo shows a placeholder icon. Hand-picked files go in `scripts/manual-logos/`.
+5. **Logos:** add the new businesses to `scripts/domains-output.json`, run `node scripts/fetch-logos.js --live`, then eyeball them — about 1 in 6 auto-fetched logos is wrong (photos, badges, blank). Delete bad ones; a missing logo shows a placeholder icon. Hand-picked files go in `scripts/manual-logos/` — they beat every scraped source, so the ~70 logos polished in Nov 2026 survive re-runs. Only run `--force` on specific businesses (`--only=`), never everything. See "Logos" below for fixing individual logos.
 6. `DEALS_FILE=reports/card-import-YYYY-YY.preview.json npx vitest run` must pass (`src/data/deals.test.js`: every deal has a pin, no abbreviations, etc.).
 7. **Pin audit:** `DEALS_FILE=reports/card-import-YYYY-YY.preview.json node scripts/audit-pins.js` (~750 Google requests) → read `reports/pin-audit.md`. Continuing businesses keep last year's pins, so wrong or closed stores carry over unless this catches them (the Sept 2026 audit found 53 wrong-address pins and 9 closed stores). Fix "Misplaced" and "Closed" with a dry run + Adam's approval; `--snap` moves 50–150 m near-misses onto Google's spot.
 8. **Switch:** `node scripts/import-card.js --write`, bump `CARD_YEAR` in `src/constants/storageKeys.js` (resets everyone's usage/history/favorites; old data stays under the old keys/fields, never deleted), update counts (About screen, README, this file), push. Old Featured picks stop matching any deal and vanish from Home on their own; Adam re-picks in the Admin tab.
@@ -130,6 +132,8 @@ Typing a city, venue, or nickname finds deals honored at a store there; full rul
 
 ---
 
+- **Map tab top bar (v2.2.0):** search, then **Near Me** and **Filter** buttons. Filter opens `MapFilterMenu` (7 category cards, multi-select, Clear all, Back to map); the button shows the category name in its color when one is picked, "Filter · N" for several. **Near Me** is a toggle: asks for location if needed (shows "Turn on location to use Near Me" if that fails), zooms to a 3-mile circle (`NEAR_ME_MILES` in `dealHelpers.js`), and fades pins outside it to 50%. A cluster bubble fades only if *every* pin in it is far; the cluster group remounts on toggle so bubbles redraw. Priority for the map's auto-zoom: "View on map" focus > place search > Near Me. The Home tab still uses the old chip row (Adam may move it to the Filter button later).
+
 ## Navigation (Bottom Nav — 5 tabs)
 `home` · `map` · `faves` · `rewards` · `settings`
 
@@ -148,7 +152,7 @@ The "Est. Savings" stat card has been intentionally removed from the Rewards tab
 
 ## Common Commands
 ```bash
-npm run dev          # Start dev server
+npm run dev          # Start dev server (in the desktop app: preview "dev" from .claude/launch.json)
 npm run build        # Production build
 npm test             # Run Vitest tests (or `npx vitest run` for a single pass)
 npx eslint .         # Lint — currently 0 problems; keep it there
@@ -173,9 +177,24 @@ This keeps the About screen version and What's New section accurate without any 
 - Provo Canyon Adventures' pin (on US-189 near their turnoff) is "good enough" — don't raise it again.
 - Marnell's Country Dance's pin (480 N 900 E, Provo — just north of Vasa Fitness) is correct; Adam has seen it in person. Their website says "488 N 800 E", which is wrong — don't move the pin to match it.
 
+## Logos
+Every logo is a 512×512 PNG in `public/logos/<slug>.png` (slug = `slugify(name)`), shown in a squircle. In Nov 2026 Adam went category by category and ~70 were fixed (v2.2.3, v2.2.4). Workflow for a logo Adam flags:
+1. Look at the file. Common problems: a colored band letterboxed between white bars, a tiny mark with lots of padding, a mark cut off at the edge, a photo or banner instead of a logo, white artwork on a transparent background (vanishes on white).
+2. Re-frame locally: `node scripts/reframe-logos.js <scratchDir> '<spec>'` (fit-to-background-color, zoom, or banner crop — see the script header), then `node scripts/logo-preview.js <sheet.png> before.png after.png …` and show Adam the squircle before/after sheet.
+3. If the file itself is bad, find a better source: the business's own website header logo, or its App Store icon via Apple's free search (`https://itunes.apple.com/search?term=<name>&entity=software&country=us` → `artworkUrl512`). **Ask Adam before downloading** (filename, source, size). White-on-transparent art goes on a dark slate (`#1f2937`) or its brand color.
+4. After Adam OKs: copy the final file into **both** `public/logos/` and `scripts/manual-logos/` (remove any older `.jpg`/`.avif` of the same slug there), commit per category, push with the patch bump.
+
+Adam's logo decisions: Bahama Buck's and Voltage eBike use icon-only marks (snow cone, blue "V") on purpose — the name shows beside the logo. Zipline Utah uses the **Utah Adventure Park** logo (that's what ziplineutah.com shows). Carrabba's image is fine as is (its big cropped "C" is the design).
+
+## Where things stand (Nov 4, 2026)
+- **Live:** v2.2.4 on `master`. No open work: everything Adam asked for in the Oct–Nov sessions is shipped. Adam phone-checked through v2.1.11 and reviewed v2.2.x on the dev server; a phone check of the v2.2.x Map buttons and logos is still his to do.
+- Recent releases: v2.1.5–2.1.11 data fixes (MTECH Lehi pin, Wasatch Front store sweep — ~230 stores added, Chubby's Cafe, Marnell's pin), v2.2.0 Map Filter menu + Near Me, v2.2.2 squircle logos, v2.2.3–2.2.4 logo polish.
+- `docs/ROADMAP.md` is from March 2026 and out of date — this file is the current guide.
+
 ## Parked (only if Adam asks)
-- **Logo padding:** ~47 of the logo files have lots of built-in white padding (wide wordmarks like `scratch-miniature-golf.png`, `cold-stone-creamery.png`, `curry-pizza.png`) and look small in the square tile. It's a source-image issue, not CSS; cropping risks cutting logos off. Adam was going to send a list.
 - **Home tab scroll jank:** needs a screen recording from Adam's phone before investigating.
+- **Home tab Filter button:** Adam may want the Map tab's Filter menu on Home too, eventually ("not yet").
+- **Near Me radius:** 3 miles, to be tested on phone; may need tuning for students outside Provo/Orem.
 
 ## Browser Testing
 - **Never drive the Claude in Chrome browser tools against this app without asking first** — Adam tests on his own phone (Galaxy A36) after each deploy and would rather do that than have the app clicked through on his behalf
