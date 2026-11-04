@@ -1,4 +1,4 @@
 export const LATEST_UPDATE = {
-  version: '2.2.6',
-  description: "Logo touch-ups for Magleby's Fresh, Thai Evergreen, El Pollo Loco, Bajio, Buffalo Wild Wings and Ganesh, and Craving's Bistro now shows its real heart logo.",
+  version: '2.2.7',
+  description: "More logo touch-ups: Cinnabon, Yogurtland, Auntie Anne's, Improv Broadway, G.O.A.T. Haircuts, Brazuca Pizza and Game Grid, plus the real logo for Cravings Alisha's Cupcakes.",
 }
