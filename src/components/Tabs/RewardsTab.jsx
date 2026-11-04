@@ -1,5 +1,15 @@
 import { useEffect, useState } from 'react'
-import { Trophy } from 'lucide-react'
+import { Trophy, Utensils, Repeat, Target, Compass, HeartHandshake } from 'lucide-react'
+import { STORAGE_KEYS } from '../../constants/storageKeys'
+
+// stat: which number from the usage counts toward the badge.
+const BADGES = [
+  { id: 'first-bite',  name: 'First Bite',  hint: 'Use a deal',               stat: 'total',      goal: 1,  Icon: Utensils,       color: '#ea580c' },
+  { id: 'regular',     name: 'Regular',     hint: 'Use 5 deals',              stat: 'total',      goal: 5,  Icon: Repeat,         color: '#0170B9' },
+  { id: 'deal-hunter', name: 'Deal Hunter', hint: 'Use 25 deals',             stat: 'total',      goal: 25, Icon: Target,         color: '#7c3aed' },
+  { id: 'explorer',    name: 'Explorer',    hint: '4 different categories',   stat: 'categories', goal: 4,  Icon: Compass,        color: '#059669' },
+  { id: 'loyal',       name: 'Loyal',       hint: 'Same place 3 times',       stat: 'topPlace',   goal: 3,  Icon: HeartHandshake, color: '#db2777' },
+]
 
 const reduceMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
@@ -34,9 +44,65 @@ function formatDate(iso) {
 export default function RewardsTab({ usageLog, dealsWithUsage, usageMap }) {
   const dealById = Object.fromEntries(dealsWithUsage.map(d => [d.id, d]))
   const totalRedemptions = Object.values(usageMap).reduce((a, b) => a + b, 0)
-  const placesVisited = new Set(
-    Object.keys(usageMap).filter(id => usageMap[id] > 0).map(id => dealById[id]?.name ?? id)
-  ).size
+  const usesByPlace = {}
+  const categories = new Set()
+  for (const [id, n] of Object.entries(usageMap)) {
+    const deal = dealById[id]
+    if (!deal || n <= 0) continue
+    usesByPlace[deal.name] = (usesByPlace[deal.name] ?? 0) + n
+    categories.add(deal.category)
+  }
+  const placesVisited = Object.keys(usesByPlace).length
+  const stats = { total: totalRedemptions, categories: categories.size, topPlace: Math.max(0, ...Object.values(usesByPlace)) }
+
+  // Badges earned since the tab was last opened get a one-time shine and buzz.
+  const earnedKey = BADGES.filter(b => stats[b.stat] >= b.goal).map(b => b.id).join(',')
+  const [fresh] = useState(() => {
+    const seen = JSON.parse(localStorage.getItem(STORAGE_KEYS.badgesSeen) || '[]')
+    return earnedKey.split(',').filter(id => id && !seen.includes(id))
+  })
+  useEffect(() => {
+    localStorage.setItem(STORAGE_KEYS.badgesSeen, JSON.stringify(earnedKey.split(',').filter(Boolean)))
+  }, [earnedKey])
+  useEffect(() => {
+    if (fresh.length) navigator.vibrate?.([15, 60, 15])
+  }, [fresh])
+
+  const badgeSection = (
+    <div className="w-full text-left">
+      <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2 px-1" style={{ fontFamily: 'var(--font-display)', fontSize: '9px', letterSpacing: '0.1em' }}>
+        Badges
+      </p>
+      <div className="grid grid-cols-3 gap-2">
+        {BADGES.map(({ id, name, hint, stat, goal, Icon, color }) => {
+          const have = Math.min(stats[stat], goal)
+          const earned = have >= goal
+          return (
+            <div key={id} className="rounded-2xl bg-white p-3 flex flex-col items-center text-center shadow-sm" style={{ border: '1px solid #f1f5f9' }}>
+              <div
+                className={fresh.includes(id) ? 'badge-new' : undefined}
+                style={{
+                  position: 'relative', overflow: 'hidden',
+                  width: 44, height: 44, borderRadius: '50%',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  backgroundColor: earned ? color : '#f1f5f9',
+                  boxShadow: earned ? `0 4px 12px ${color}55` : 'none',
+                }}
+              >
+                <Icon size={20} strokeWidth={2.2} color={earned ? '#fff' : '#cbd5e1'} />
+              </div>
+              <p className="text-xs font-bold mt-2 leading-tight" style={{ fontFamily: 'var(--font-display)', color: earned ? '#0f172a' : '#94a3b8' }}>
+                {name}
+              </p>
+              <p className="mt-0.5 leading-tight" style={{ fontSize: '10px', color: earned ? color : '#94a3b8', fontWeight: earned ? 600 : 400 }}>
+                {fresh.includes(id) ? 'New!' : earned ? 'Earned' : goal > 1 ? `${have} of ${goal}` : hint}
+              </p>
+            </div>
+          )
+        })}
+      </div>
+    </div>
+  )
 
   // usageLog only exists from when logging was added. usageMap has ALL usage
   // including deals used before the log existed. Build a combined history:
@@ -55,10 +121,11 @@ export default function RewardsTab({ usageLog, dealsWithUsage, usageMap }) {
 
   if (totalRedemptions === 0) {
     return (
-      <div className="flex flex-col items-center justify-center h-full text-center px-8">
-        <Trophy size={48} strokeWidth={1.5} color="#e2e8f0" />
+      <div className="flex flex-col items-center justify-center h-full text-center px-4 overflow-y-auto ssc-scroll" style={{ backgroundColor: '#f0f4f8' }}>
+        <Trophy size={48} strokeWidth={1.5} color="#cbd5e1" />
         <p className="text-lg font-bold mt-4 text-gray-700" style={{ fontFamily: 'var(--font-display)' }}>No deals used yet</p>
-        <p className="text-sm text-gray-400 mt-1">Your usage history will appear here</p>
+        <p className="text-sm text-gray-400 mt-1 mb-6">Use your first deal to start earning badges</p>
+        {badgeSection}
       </div>
     )
   }
@@ -90,6 +157,8 @@ export default function RewardsTab({ usageLog, dealsWithUsage, usageMap }) {
             </div>
           ))}
         </div>
+
+        {badgeSection}
 
         {/* Usage history */}
         <div>

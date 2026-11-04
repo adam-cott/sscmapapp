@@ -288,3 +288,21 @@ h1, h2, h3, h4, h5 {
   .fave-pop, .fave-burst i { animation: none; }
   .fave-burst { display: none; }
 }
+
+/* Rewards: a newly earned badge pops in and a shine sweeps across it. */
+@keyframes badgeEarn {
+  0%   { transform: scale(0.5); opacity: 0.3; }
+  60%  { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(1); }
+}
+@keyframes badgeShine { to { transform: translateX(120%); } }
+.badge-new { animation: badgeEarn 0.6s 0.2s cubic-bezier(0.34, 1.4, 0.64, 1) both; }
+.badge-new::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(115deg, transparent 30%, rgba(255,255,255,0.8) 50%, transparent 70%);
+  transform: translateX(-120%);
+  animation: badgeShine 0.9s 0.6s ease-out forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  .badge-new, .badge-new::after { animation: none; }
+}
