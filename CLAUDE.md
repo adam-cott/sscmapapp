@@ -184,11 +184,11 @@ Every logo is a 512×512 PNG in `public/logos/<slug>.png` (slug = `slugify(name)
 3. If the file itself is bad, find a better source: the business's own website header logo, or its App Store icon via Apple's free search (`https://itunes.apple.com/search?term=<name>&entity=software&country=us` → `artworkUrl512`). **Ask Adam before downloading** (filename, source, size). White-on-transparent art goes on a dark slate (`#1f2937`) or its brand color.
 4. After Adam OKs: copy the final file into **both** `public/logos/` and `scripts/manual-logos/` (remove any older `.jpg`/`.avif` of the same slug there), commit per category, push with the patch bump.
 
-Adam's logo decisions: Bahama Buck's and Voltage eBike use icon-only marks (snow cone, blue "V") on purpose — the name shows beside the logo. Zipline Utah uses the **Utah Adventure Park** logo (that's what ziplineutah.com shows). Carrabba's image is fine as is (its big cropped "C" is the design).
+Adam's logo decisions: Bahama Buck's and Voltage eBike use icon-only marks (snow cone, blue "V") on purpose — the name shows beside the logo. Zipline Utah uses the **Utah Adventure Park** logo (that's what ziplineutah.com shows). Carrabba's image is fine as is (its big cropped "C" is the design). The Place Pizza has no square logo (its App Store icon is the same banner); it's the banner full-width on black, per Adam.
 
 ## Where things stand (Nov 4, 2026)
-- **Live:** v2.2.4 on `master`. No open work: everything Adam asked for in the Oct–Nov sessions is shipped. Adam phone-checked through v2.1.11 and reviewed v2.2.x on the dev server; a phone check of the v2.2.x Map buttons and logos is still his to do.
-- Recent releases: v2.1.5–2.1.11 data fixes (MTECH Lehi pin, Wasatch Front store sweep — ~230 stores added, Chubby's Cafe, Marnell's pin), v2.2.0 Map Filter menu + Near Me, v2.2.2 squircle logos, v2.2.3–2.2.4 logo polish.
+- **Live:** v2.2.5 on `master`. No open work: everything Adam asked for in the Oct–Nov sessions is shipped. Adam phone-checked through v2.1.11 and reviewed v2.2.x on the dev server; a phone check of the v2.2.x Map buttons and logos is still his to do.
+- Recent releases: v2.1.5–2.1.11 data fixes (MTECH Lehi pin, Wasatch Front store sweep — ~230 stores added, Chubby's Cafe, Marnell's pin), v2.2.0 Map Filter menu + Near Me, v2.2.2 squircle logos, v2.2.3–2.2.4 logo polish, v2.2.5 GetOut/Domino's/The Place Pizza logos + PNG home-screen icons (`public/icons/` — regenerate the PNGs from `icon.svg` with sharp if the icon ever changes; iOS ignores SVG touch icons).
 - `docs/ROADMAP.md` is from March 2026 and out of date — this file is the current guide.
 
 ## Parked (only if Adam asks)
