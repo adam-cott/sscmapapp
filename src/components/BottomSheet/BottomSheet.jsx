@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-import { Heart, MapPin, Clock, Phone, Globe, Calendar, Map as MapIcon } from 'lucide-react'
+import { MapPin, Clock, Phone, Globe, Calendar, Map as MapIcon } from 'lucide-react'
+import FaveButton from '../UI/FaveButton'
 import { CATEGORY_COLORS, CATEGORY_LIGHT, CATEGORY_LABELS, CATEGORY_ICON } from '../../utils/categoryColors'
 import { formatPhone, getDisplayValue, getMapFocusLocations, getDirectionsLocation } from '../../utils/dealHelpers'
 import UsageTracker from '../UI/UsageTracker'
@@ -77,13 +78,7 @@ export default function BottomSheet({ deal, onUse, onClose, isFave, onToggleFave
               </div>
             </div>
             <div className="flex items-center gap-2 flex-shrink-0">
-              <button
-                onClick={() => onToggleFave(deal.id)}
-                className="flex items-center justify-center rounded-full"
-                style={{ width: '30px', height: '30px', backgroundColor: '#f1f5f9', border: 'none', cursor: 'pointer' }}
-              >
-                <Heart size={14} strokeWidth={2} fill={isFave ? '#ef4444' : 'none'} color={isFave ? '#ef4444' : '#94a3b8'} />
-              </button>
+              <FaveButton isFave={isFave} onToggle={() => onToggleFave(deal.id)} size={30} />
               <button
                 onClick={onClose}
                 className="flex items-center justify-center rounded-full"

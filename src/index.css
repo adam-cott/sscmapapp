@@ -265,3 +265,26 @@ h1, h2, h3, h4, h5 {
   .nav-indicator { transition: none; }
   .nav-pop { animation: none; }
 }
+
+/* Fave heart: pops when added, with a small burst of dots. */
+@keyframes favePop {
+  0%   { transform: scale(0.6); }
+  50%  { transform: scale(1.35); }
+  100% { transform: scale(1); }
+}
+.fave-pop { animation: favePop 0.42s cubic-bezier(0.34, 1.4, 0.64, 1); }
+.fave-burst { position: absolute; inset: 0; pointer-events: none; }
+.fave-burst i {
+  position: absolute; left: 50%; top: 50%;
+  width: 4px; height: 4px; margin: -2px 0 0 -2px;
+  border-radius: 50%; background: #ef4444;
+  animation: faveBurst 0.5s ease-out forwards;
+}
+@keyframes faveBurst {
+  from { transform: rotate(var(--a)) translateY(-6px) scale(1);   opacity: 1; }
+  to   { transform: rotate(var(--a)) translateY(-19px) scale(0.3); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fave-pop, .fave-burst i { animation: none; }
+  .fave-burst { display: none; }
+}

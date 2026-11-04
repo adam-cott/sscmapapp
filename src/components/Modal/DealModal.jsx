@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-import { Heart, Map as MapIcon } from 'lucide-react'
+import { Map as MapIcon } from 'lucide-react'
+import FaveButton from '../UI/FaveButton'
 import { CATEGORY_COLORS, CATEGORY_LIGHT, CATEGORY_LABELS, CATEGORY_ICON } from '../../utils/categoryColors'
 import { formatPhone, getDisplayValue, getMapFocusLocations, getDirectionsLocation } from '../../utils/dealHelpers'
 import UsageTracker from '../UI/UsageTracker'
@@ -78,15 +79,7 @@ export default function DealModal({ deal, onUse, onClose, isFave, onToggleFave, 
               </div>
             </div>
             <div className="flex items-center gap-2 flex-shrink-0">
-              <button
-                onClick={() => onToggleFave(deal.id)}
-                className="flex items-center justify-center rounded-full transition-colors"
-                style={{ width: '32px', height: '32px', backgroundColor: '#f1f5f9', border: 'none', cursor: 'pointer' }}
-                onMouseEnter={e => e.currentTarget.style.backgroundColor = '#e2e8f0'}
-                onMouseLeave={e => e.currentTarget.style.backgroundColor = '#f1f5f9'}
-              >
-                <Heart size={15} strokeWidth={2} fill={isFave ? '#ef4444' : 'none'} color={isFave ? '#ef4444' : '#94a3b8'} />
-              </button>
+              <FaveButton isFave={isFave} onToggle={() => onToggleFave(deal.id)} size={32} />
               <button
                 onClick={onClose}
                 className="flex items-center justify-center rounded-full transition-colors"
