@@ -11,7 +11,7 @@ function PillButton({ onClick, active, color = BLUE, children }) {
   return (
     <button
       onClick={onClick}
-      className="flex-1 flex items-center justify-center gap-1.5 text-sm font-semibold rounded-full py-2 transition-all"
+      className="flex-1 flex items-center justify-center gap-1.5 text-sm font-semibold rounded-full py-2 transition-all press"
       style={{
         fontFamily: 'Sora, sans-serif',
         backgroundColor: active ? color : 'white',

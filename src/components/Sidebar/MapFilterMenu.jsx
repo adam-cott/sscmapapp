@@ -5,7 +5,7 @@ import { CATEGORY_COLORS, CATEGORY_LIGHT, CATEGORY_LABELS, CATEGORY_ICON } from 
 // Full-screen category picker for the Map tab: 7 category cards + "Back to map".
 // Cards toggle independently (multi-select); the map filters live behind it.
 export default function MapFilterMenu({ activeCategories, onToggle, onClear, categoryCounts = {}, onClose }) {
-  const cardClass = 'relative flex flex-col items-center justify-center gap-2 rounded-2xl transition-all'
+  const cardClass = 'relative flex flex-col items-center justify-center gap-2 rounded-2xl transition-all press'
 
   return (
     // Same centering as RedemptionScreen: stays inside the desktop phone panel

@@ -24,7 +24,7 @@ export default function FilterPanel({ activeCategories, onToggle, onClear, categ
             <button
               key={key}
               onClick={key === 'all' ? onClear : () => onToggle(key)}
-              className="flex-shrink-0 flex items-center gap-1 text-xs font-semibold rounded-full px-3 py-1.5 transition-all"
+              className="flex-shrink-0 flex items-center gap-1 text-xs font-semibold rounded-full px-3 py-1.5 transition-all press"
               style={{
                 fontFamily: 'Sora, sans-serif',
                 backgroundColor: isActive ? color : 'transparent',

@@ -174,7 +174,7 @@ export default function BottomSheet({ deal, onUse, onClose, isFave, onToggleFave
           </div>
           <button
             onClick={onClose}
-            className="w-full font-semibold rounded-xl py-3.5 text-sm"
+            className="w-full font-semibold rounded-xl py-3.5 text-sm press"
             style={{ fontFamily: 'Sora, sans-serif', backgroundColor: '#f1f5f9', color: '#475569', border: 'none' }}
           >
             Close

@@ -189,7 +189,7 @@ export default function DealModal({ deal, onUse, onClose, isFave, onToggleFave, 
           </div>
           <button
             onClick={onClose}
-            className="w-full font-semibold rounded-xl transition-colors text-sm py-3"
+            className="w-full font-semibold rounded-xl transition-colors text-sm py-3 press"
             style={{
               fontFamily: 'Sora, sans-serif',
               backgroundColor: '#f1f5f9',

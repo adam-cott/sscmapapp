@@ -18,7 +18,7 @@ export default function DealCard({ deal, onClick, userCoords }) {
   return (
     <button
       onClick={onClick}
-      className="w-full text-left rounded-xl transition-all duration-200 group"
+      className="w-full text-left rounded-xl transition-all duration-200 group press"
       style={{
         backgroundColor: isExhausted ? '#f8fafc' : '#ffffff',
         boxShadow: '0 1px 3px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.04)',

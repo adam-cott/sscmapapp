@@ -7,6 +7,7 @@ export default function HomeCard({ deal, dealCount = 1, onClick }) {
   return (
     <button
       onClick={onClick}
+      className="press"
       style={{
         // Square tile height == this width, so this also sets the card's
         // vertical footprint. Scaled down from the old 4:3 tile's

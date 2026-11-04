@@ -9,6 +9,7 @@ function DealRow({ deal, usageState, loc, onSelect }) {
   return (
     <button
       onClick={() => onSelect({ ...deal, lat: loc.lat, lng: loc.lng, address: loc.address, contact: { ...deal.contact, phone: loc.phone ?? deal.contact?.phone } })}
+      className="press"
       style={{
         display: 'block',
         width: '100%',
