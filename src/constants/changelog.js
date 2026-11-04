@@ -1,4 +1,4 @@
 export const LATEST_UPDATE = {
-  version: '2.2.3',
-  description: "Sharper business logos: Pizza and Restaurant logos are resized to fill their tiles, Brazuca, Chili's and Rancherito's have new logos, and full-color logos in lists now fill their rounded tiles.",
+  version: '2.2.4',
+  description: "26 more business logos cleaned up across Sandwiches, Treats, Free Stuff, Entertainment and Retail. Several, like Tous les Jours, CLAS Ropes Course, Oil Rig and Voltage eBike, now use their real logos.",
 }
