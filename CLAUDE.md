@@ -51,7 +51,7 @@ A mobile-first PWA for Utah County college students. Turns the physical Starving
 src/
   data/deals.json              # 440 deals (439 active), all with coords + locations[]
   components/
-    Sidebar/                   # Sidebar = Map tab top bar (SearchBar + Near Me / Filter buttons); MapFilterMenu = full-screen category grid; FilterPanel = Home tab's chip row
+    Sidebar/                   # Sidebar = Map and Home top bar (SearchBar + Near Me / Filter buttons); MapFilterMenu = full-screen category grid
     Map/MapView.jsx            # Map + clustering + spiderfy
     Map/BusinessMarker.jsx     # Pins — React.memo wrapped
     ListView/                  # DealCard list
@@ -132,7 +132,7 @@ Typing a city, venue, or nickname finds deals honored at a store there; full rul
 
 ---
 
-- **Map tab top bar (v2.2.0):** search, then **Near Me** and **Filter** buttons. Filter opens `MapFilterMenu` (7 category cards, multi-select, Clear all, Back to map); the button shows the category name in its color when one is picked, "Filter · N" for several. **Near Me** is a toggle: asks for location if needed (shows "Turn on location to use Near Me" if that fails), zooms to a 3-mile circle (`NEAR_ME_MILES` in `dealHelpers.js`), and fades pins outside it to 50%. A cluster bubble fades only if *every* pin in it is far; the cluster group remounts on toggle so bubbles redraw. Priority for the map's auto-zoom: "View on map" focus > place search > Near Me. The Home tab still uses the old chip row (Adam may move it to the Filter button later).
+- **Map tab top bar (v2.2.0):** search, then **Near Me** and **Filter** buttons. Filter opens `MapFilterMenu` (7 category cards, multi-select, Clear all, Back to map); the button shows the category name in its color when one is picked, "Filter · N" for several. **Near Me** is a toggle: asks for location if needed (shows "Turn on location to use Near Me" if that fails), zooms to a 3-mile circle (`NEAR_ME_MILES` in `dealHelpers.js`), and fades pins outside it to 50%. A cluster bubble fades only if *every* pin in it is far; the cluster group remounts on toggle so bubbles redraw. Priority for the map's auto-zoom: "View on map" focus > place search > Near Me. **Home (v2.4.0)** uses the same bar: there Near Me turns Home into a list of deals with an honoring store within 3 miles, nearest first ("Within 3 miles" label), and the menu says "Back to deals". Switching tabs, Home's back arrow, re-tapping Home, or the phone's back button reset search, Filter and Near Me together (`resetFilters` in `App.jsx`).
 
 ## Navigation (Bottom Nav — 5 tabs)
 `home` · `map` · `faves` · `rewards` · `settings`
@@ -196,7 +196,6 @@ Built one step per commit so each can be reverted alone: `.press` tap squish (`i
 
 ## Parked (only if Adam asks)
 - **Home tab scroll jank:** needs a screen recording from Adam's phone before investigating.
-- **Home tab Filter button:** Adam may want the Map tab's Filter menu on Home too, eventually ("not yet").
 - **Near Me radius:** 3 miles, to be tested on phone; may need tuning for students outside Provo/Orem.
 
 ## Browser Testing

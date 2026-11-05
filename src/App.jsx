@@ -8,7 +8,7 @@ import AboutScreen from './components/Settings/AboutScreen'
 import CardYearScreen from './components/Settings/CardYearScreen'
 import { useCardYear } from './hooks/useCardYear'
 import dealsData from './data/deals.json'
-import { getMapFocusLocations, NEAR_ME_MILES } from './utils/dealHelpers'
+import { getMapFocusLocations, getNearestDistance, NEAR_ME_MILES } from './utils/dealHelpers'
 import { useDeals } from './hooks/useDeals'
 import { useFilters } from './hooks/useFilters'
 import { useOverlayHistory } from './hooks/useOverlayHistory'
@@ -79,19 +79,34 @@ function AppShell() {
     setSortBy,
     categoryCounts,
     mapCategoryCounts,
-    pinnedIds,
     showCategory,
     showPinned,
     showAllNearest,
     isListMode,
   } = useFilters(dealsWithUsage, coords)
 
+  // "Near Me" switch (Map and Home). Turning it on without a location asks for
+  // one; if that lookup ends without coords (denied or failed), it switches back off.
+  const [nearMe, setNearMe] = useState(false)
+  const [nearMeMessage, setNearMeMessage] = useState(false)
+  const nearActive = nearMe && !!coords
+
+  // On Home, Near Me turns the page into a list of deals within NEAR_ME_MILES.
+  const homeNearMe = activeTab === 'home' && nearActive
+  const homeDeals = homeNearMe
+    ? filteredDeals.filter(d => (getNearestDistance(d, coords) ?? Infinity) <= NEAR_ME_MILES)
+    : filteredDeals
+  const resetFilters = useCallback(() => {
+    clearFilters()
+    setNearMe(false)
+  }, [clearFilters])
+
   // Back (hardware button, edge-swipe, or the browser's own back control)
   // closes whichever of these is topmost instead of leaving the app. See
   // useOverlayHistory for how a physical back press only closes one layer
   // at a time when several are open (e.g. a deal opened from Home's
   // filtered list).
-  useOverlayHistory(isListMode, clearFilters)
+  useOverlayHistory(isListMode || homeNearMe, resetFilters)
   useOverlayHistory(!!selectedDeal, () => setSelectedDeal(null))
   useOverlayHistory(!!selectedLocation, () => setSelectedLocation(null))
   useOverlayHistory(!!mapFocus, () => setMapFocus(null))
@@ -107,9 +122,10 @@ function AppShell() {
   // the switch itself: searching on the Map tab must not clear its own query.
   const prevTab = useRef(activeTab)
   useEffect(() => {
-    if (prevTab.current !== activeTab) clearFilters()
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    if (prevTab.current !== activeTab) resetFilters()
     prevTab.current = activeTab
-  }, [activeTab, clearFilters])
+  }, [activeTab, resetFilters])
 
   // "View on map" focus is a one-shot overlay tied to the moment it was
   // triggered — leaving the Map tab (by any route) always exits it, so
@@ -124,7 +140,7 @@ function AppShell() {
   // Tapping Home while already on Home resets to the carousel view, since
   // switching to an already-active tab is otherwise a no-op.
   const handleTabChange = (id) => {
-    if (id === 'home' && activeTab === 'home') clearFilters()
+    if (id === 'home' && activeTab === 'home') resetFilters()
     setActiveTab(id)
   }
 
@@ -152,14 +168,10 @@ function AppShell() {
     if (!geoLoading) requestLocation()
   }
 
-  // Map tab "Near Me" switch. Turning it on without a location asks for one;
-  // if that lookup ends without coords (denied or failed), it switches back off.
-  const [nearMe, setNearMe] = useState(false)
-  const [nearMeMessage, setNearMeMessage] = useState(false)
-
   const handleNearMeToggle = () => {
     if (nearMe) return setNearMe(false)
     setNearMe(true)
+    if (activeTab === 'home') setSortBy('nearest')
     if (!coords && !geoLoading) requestLocation()
   }
 
@@ -257,7 +269,7 @@ function AppShell() {
     onClearFilters: clearFilters,
     dealCount: filteredDeals.length,
     categoryCounts: mapCategoryCounts,
-    nearMe: nearMe && !!coords,
+    nearMe: nearActive,
     nearMeLoading: nearMe && !coords,
     nearMeMessage,
     onNearMeToggle: handleNearMeToggle,
@@ -278,16 +290,13 @@ function AppShell() {
           <div className="flex flex-col flex-1 min-h-0 overflow-hidden">
             <HomeTab
               deals={dealsWithUsage}
-              filteredDeals={filteredDeals}
+              filteredDeals={homeDeals}
               usageLog={usageLog}
               userCoords={coords}
               onSelectDeal={handleSelectDeal}
               onSelectLocation={handleSelectLocation}
-              searchQuery={searchQuery}
-              onSearchChange={setSearchQuery}
-              activeCategories={activeCategories}
-              onCategoryToggle={toggleCategory}
-              onClearFilters={clearFilters}
+              filterBar={sidebarProps}
+              onExitList={resetFilters}
               sortBy={sortBy}
               setSortBy={handleSetSortBy}
               categoryCounts={categoryCounts}
@@ -297,8 +306,7 @@ function AppShell() {
               onNearestRequest={handleNearestRequest}
               featuredIds={featuredIds}
               faves={faves}
-              pinnedIds={pinnedIds}
-              isListMode={isListMode}
+              isListMode={isListMode || homeNearMe}
               onShowCategory={showCategory}
               onShowPinned={showPinned}
               onShowAllNearest={showAllNearest}

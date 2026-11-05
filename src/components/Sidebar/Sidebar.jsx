@@ -35,6 +35,7 @@ export default function Sidebar({
   nearMeLoading,
   nearMeMessage,
   onNearMeToggle,
+  backLabel,
 }) {
   const [menuOpen, setMenuOpen] = useState(false)
   const single = activeCategories.length === 1 ? activeCategories[0] : null
@@ -65,6 +66,7 @@ export default function Sidebar({
           onClear={onClearFilters}
           categoryCounts={categoryCounts}
           onClose={() => setMenuOpen(false)}
+          backLabel={backLabel}
         />,
         document.body,
       )}

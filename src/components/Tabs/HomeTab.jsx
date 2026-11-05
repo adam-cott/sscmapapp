@@ -1,10 +1,9 @@
 import { useState } from 'react'
 import { ChevronRight, ChevronLeft } from 'lucide-react'
 import { useCardYear } from '../../hooks/useCardYear'
-import { getNearestDistance, getNearestLocation } from '../../utils/dealHelpers'
+import { getNearestDistance, getNearestLocation, NEAR_ME_MILES } from '../../utils/dealHelpers'
 import HomeCard from '../UI/HomeCard'
-import SearchBar from '../Sidebar/SearchBar'
-import FilterPanel from '../Sidebar/FilterPanel'
+import Sidebar from '../Sidebar/Sidebar'
 import SortControl from '../Sidebar/SortControl'
 import ListView from '../ListView/ListView'
 
@@ -160,22 +159,23 @@ const CATEGORY_SECTIONS = [
 
 export default function HomeTab({
   deals, filteredDeals, usageLog, userCoords, onSelectDeal, onSelectLocation,
-  searchQuery, onSearchChange, activeCategories, onCategoryToggle,
-  onClearFilters, sortBy, setSortBy, categoryCounts,
+  filterBar, onExitList, sortBy, setSortBy, categoryCounts,
   permissionDenied, geoLoading, hasCoords, onNearestRequest,
-  featuredIds, faves, pinnedIds, isListMode,
+  featuredIds, faves, isListMode,
   onShowCategory, onShowPinned, onShowAllNearest, onNavigateFaves,
 }) {
   const { daysRemaining, isExpired, isExpiring } = useCardYear()
   const showBanner = isExpired || isExpiring
 
-  // Label shown above the list when it's not obvious from the category
-  // chips alone what's being shown (a "See all" card was tapped). Cleared
-  // whenever the user interacts with the chips directly, since those
-  // already say what's active.
+  // Label shown above the list when it's not obvious from the Filter button
+  // alone what's being shown (a "See all" card was tapped). Cleared whenever
+  // the user changes the filters directly, since the button already says
+  // what's active.
   const [listLabel, setListLabel] = useState(null)
-  const handleCategoryToggle = (category) => { setListLabel(null); onCategoryToggle(category) }
-  const handleClearFilters = () => { setListLabel(null); onClearFilters() }
+  const handleCategoryToggle = (category) => { setListLabel(null); filterBar.onCategoryToggle(category) }
+  const handleClearFilters = () => { setListLabel(null); filterBar.onClearFilters() }
+  const handleExitList = () => { setListLabel(null); onExitList() }
+  const shownLabel = listLabel ?? (filterBar.nearMe ? `Within ${NEAR_ME_MILES} miles` : null)
 
   const activeDeals = deals.filter(d => d.usage.status !== 'exhausted')
 
@@ -306,14 +306,13 @@ export default function HomeTab({
             </span>
           </a>
         )}
-        <div style={{ padding: '0 12px 14px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
-          <SearchBar value={searchQuery} onChange={onSearchChange} />
-          <FilterPanel
-            activeCategories={activeCategories}
-            onToggle={handleCategoryToggle}
-            onClear={handleClearFilters}
+        <div style={{ padding: '0 12px 12px' }}>
+          <Sidebar
+            {...filterBar}
             categoryCounts={categoryCounts}
-            pinnedActive={!!pinnedIds}
+            onCategoryToggle={handleCategoryToggle}
+            onClearFilters={handleClearFilters}
+            backLabel="Back to deals"
           />
         </div>
       </div>
@@ -323,7 +322,7 @@ export default function HomeTab({
         <>
           <div style={{ flexShrink: 0, padding: '10px 12px 0', backgroundColor: '#ffffff', display: 'flex', alignItems: 'center', gap: '4px' }}>
             <button
-              onClick={handleClearFilters}
+              onClick={handleExitList}
               aria-label="Back to Home"
               style={{
                 background: 'none', border: 'none', cursor: 'pointer', padding: '4px',
@@ -332,9 +331,9 @@ export default function HomeTab({
             >
               <ChevronLeft size={20} />
             </button>
-            {listLabel && (
+            {shownLabel && (
               <span style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '13px', color: '#0f172a' }}>
-                {listLabel}
+                {shownLabel}
               </span>
             )}
           </div>

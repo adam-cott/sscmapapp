@@ -2,9 +2,9 @@ import { Check, Undo2 } from 'lucide-react'
 import { ALL_CATEGORIES } from '../../constants/categories'
 import { CATEGORY_COLORS, CATEGORY_LIGHT, CATEGORY_LABELS, CATEGORY_ICON } from '../../utils/categoryColors'
 
-// Full-screen category picker for the Map tab: 7 category cards + "Back to map".
-// Cards toggle independently (multi-select); the map filters live behind it.
-export default function MapFilterMenu({ activeCategories, onToggle, onClear, categoryCounts = {}, onClose }) {
+// Full-screen category picker (Map and Home tabs): 7 category cards + a back button.
+// Cards toggle independently (multi-select); the results filter live behind it.
+export default function MapFilterMenu({ activeCategories, onToggle, onClear, categoryCounts = {}, onClose, backLabel = 'Back to map' }) {
   const cardClass = 'relative flex flex-col items-center justify-center gap-2 rounded-2xl transition-all press'
 
   return (
@@ -71,7 +71,7 @@ export default function MapFilterMenu({ activeCategories, onToggle, onClear, cat
           style={{ backgroundColor: 'white', border: '2px solid #e2e8f0' }}
         >
           <Undo2 size={28} color="#0170B9" />
-          <span className="text-sm font-bold" style={{ fontFamily: 'Sora, sans-serif', color: '#0170B9' }}>Back to map</span>
+          <span className="text-sm font-bold" style={{ fontFamily: 'Sora, sans-serif', color: '#0170B9' }}>{backLabel}</span>
         </button>
       </div>
     </div>
