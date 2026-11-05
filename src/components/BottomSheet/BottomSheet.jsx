@@ -1,28 +1,11 @@
-import { useEffect, useState } from 'react'
-import { MapPin, Clock, Phone, Globe, Calendar, Map as MapIcon } from 'lucide-react'
-import FaveButton from '../UI/FaveButton'
-import { CATEGORY_COLORS, CATEGORY_LIGHT, CATEGORY_LABELS, CATEGORY_ICON } from '../../utils/categoryColors'
-import { formatPhone, getDisplayValue, getMapFocusLocations, getDirectionsLocation } from '../../utils/dealHelpers'
-import UsageTracker from '../UI/UsageTracker'
-import SwipeToConfirm from '../UI/SwipeToConfirm'
+import { useState } from 'react'
+import { CATEGORY_COLORS } from '../../utils/categoryColors'
+import DealDetails from '../UI/DealDetails'
 import RedemptionScreen from '../UI/RedemptionScreen'
 
-export default function BottomSheet({ deal, onUse, onClose, isFave, onToggleFave, onViewOnMap, userCoords }) {
-  const { usage } = deal
-  const isExhausted = usage.status === 'exhausted'
+export default function BottomSheet({ deal, onUse, onClose, ...detailProps }) {
+  const isExhausted = deal.usage.status === 'exhausted'
   const [showRedemption, setShowRedemption] = useState(false)
-  const catColor = CATEGORY_COLORS[deal.category] || '#0170B9'
-  const catLight = CATEGORY_LIGHT[deal.category] || '#f0f9ff'
-  const CategoryIcon = CATEGORY_ICON[deal.category]
-  const displayValue = getDisplayValue(deal)
-  const canViewOnMap = !!getMapFocusLocations(deal)?.length
-  const directionsLocation = getDirectionsLocation(deal, userCoords)
-
-  useEffect(() => {
-    const handleKey = (e) => { if (e.key === 'Escape') onClose() }
-    document.addEventListener('keydown', handleKey)
-    return () => document.removeEventListener('keydown', handleKey)
-  }, [onClose])
 
   return (
     <>
@@ -44,137 +27,17 @@ export default function BottomSheet({ deal, onUse, onClose, isFave, onToggleFave
           overflow: 'hidden',
         }}
       >
-        {/* Category bar */}
-        <div style={{ height: '4px', background: isExhausted ? '#e2e8f0' : catColor }} />
-
-        {/* Drag handle */}
-        <div className="flex justify-center pt-3 pb-1">
+        <div style={{ height: '4px', background: isExhausted ? '#e2e8f0' : (CATEGORY_COLORS[deal.category] || '#0170B9') }} />
+        <div className="flex justify-center pt-3">
           <div style={{ width: '36px', height: '4px', backgroundColor: '#e2e8f0', borderRadius: '99px' }} />
         </div>
-
-        {/* Header */}
-        <div style={{ padding: '8px 20px 16px' }}>
-          <div className="flex items-start justify-between gap-3">
-            <div className="flex items-start gap-3 min-w-0">
-              <div
-                className="flex items-center justify-center rounded-xl flex-shrink-0"
-                style={{ width: '40px', height: '40px', backgroundColor: isExhausted ? '#f1f5f9' : catLight }}
-              >
-                {CategoryIcon && <CategoryIcon size={18} color={isExhausted ? '#94a3b8' : catColor} />}
-              </div>
-              <div className="min-w-0">
-                <h2
-                  className="font-bold leading-snug"
-                  style={{ fontFamily: 'Sora, sans-serif', fontSize: '17px', color: '#0f172a' }}
-                >
-                  {deal.name}
-                </h2>
-                <div
-                  className="text-xs font-semibold uppercase tracking-wider"
-                  style={{ fontFamily: 'Sora, sans-serif', color: isExhausted ? '#94a3b8' : catColor, letterSpacing: '0.08em' }}
-                >
-                  {CATEGORY_LABELS[deal.category]}
-                </div>
-              </div>
-            </div>
-            <div className="flex items-center gap-2 flex-shrink-0">
-              <FaveButton isFave={isFave} onToggle={() => onToggleFave(deal.id)} size={30} />
-              <button
-                onClick={onClose}
-                className="flex items-center justify-center rounded-full"
-                style={{ width: '30px', height: '30px', backgroundColor: '#f1f5f9', color: '#64748b', border: 'none', cursor: 'pointer' }}
-              >
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                  <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* Scrollable body */}
-        <div className="flex-1 overflow-y-auto ssc-scroll" style={{ padding: '0 20px' }}>
-          {/* Deal value hero */}
-          <div
-            className="rounded-xl p-4 mb-4"
-            style={{ backgroundColor: isExhausted ? '#f8fafc' : catLight, border: `1px solid ${isExhausted ? '#e2e8f0' : catColor + '25'}` }}
-          >
-            <div
-              className={displayValue ? 'font-bold mb-1' : 'font-bold'}
-              style={{ fontFamily: 'Sora, sans-serif', fontSize: displayValue ? '14px' : '18px', color: isExhausted ? '#94a3b8' : '#0f172a' }}
-            >
-              {deal.deal.title}
-            </div>
-            {displayValue && (
-              <div
-                className="font-bold"
-                style={{ fontFamily: 'Sora, sans-serif', fontSize: '22px', color: isExhausted ? '#94a3b8' : catColor }}
-              >
-                {displayValue}
-              </div>
-            )}
-          </div>
-
-          {deal.deal.description && (
-            <p className="text-sm mb-4" style={{ color: '#64748b', lineHeight: '1.6' }}>
-              <span className="font-semibold" style={{ color: '#475569' }}>Details:</span> {deal.deal.description}
-            </p>
-          )}
-
-          {/* Usage */}
-          <div className="rounded-xl p-4 mb-4" style={{ backgroundColor: '#f8fafc', border: '1px solid #f1f5f9' }}>
-            <div
-              className="text-xs font-bold uppercase tracking-widest mb-3"
-              style={{ fontFamily: 'Sora, sans-serif', color: '#94a3b8', fontSize: '9px' }}
-            >
-              Usage Tracker
-            </div>
-            <UsageTracker used={usage.usedCount} maxUses={deal.deal.maxUses} />
-          </div>
-
-          {/* Info */}
-          <div className="space-y-3 mb-4">
-            {[
-              directionsLocation && { Icon: MapPin, text: directionsLocation.address, href: `https://www.google.com/maps/dir/?api=1&destination=${directionsLocation.lat},${directionsLocation.lng}`, external: true },
-              canViewOnMap && { Icon: MapIcon, text: 'View on map', onClick: onViewOnMap },
-              deal.locationRestriction && { Icon: MapPin, text: `Valid at: ${deal.locationRestriction}` },
-              deal.contact?.hours && { Icon: Clock, text: deal.contact.hours },
-              deal.contact?.phone && { Icon: Phone, text: formatPhone(deal.contact.phone), href: `tel:${deal.contact.phone}` },
-              deal.contact?.website && { Icon: Globe, text: deal.contact.website.replace(/^https?:\/\//, ''), href: deal.contact.website, external: true },
-              deal.deal.expiresAt && { Icon: Calendar, text: `Expires ${deal.deal.expiresAt}` },
-            ].filter(Boolean).map((row, i) => (
-              <div key={i} className="flex items-start gap-2.5">
-                <row.Icon size={13} color="#94a3b8" className="flex-shrink-0 mt-0.5" />
-                {row.href ? (
-                  <a href={row.href} target={row.external ? '_blank' : undefined}
-                    rel={row.external ? 'noopener noreferrer' : undefined}
-                    className="text-sm" style={{ color: '#0170B9' }}>{row.text}</a>
-                ) : row.onClick ? (
-                  <button onClick={row.onClick} className="text-sm text-left" style={{ color: '#0170B9', background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}>{row.text}</button>
-                ) : (
-                  <span className="text-sm" style={{ color: '#475569' }}>{row.text}</span>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Actions */}
-        <div style={{ padding: '14px 20px 24px', borderTop: '1px solid #f1f5f9' }}>
-          <div style={{ marginBottom: '10px' }}>
-            <SwipeToConfirm
-              onConfirm={() => setShowRedemption(true)}
-              disabled={isExhausted}
-            />
-          </div>
-          <button
-            onClick={onClose}
-            className="w-full font-semibold rounded-xl py-3.5 text-sm press"
-            style={{ fontFamily: 'Sora, sans-serif', backgroundColor: '#f1f5f9', color: '#475569', border: 'none' }}
-          >
-            Close
-          </button>
-        </div>
+        <DealDetails
+          deal={deal}
+          onClose={onClose}
+          onRedeem={() => setShowRedemption(true)}
+          footerStyle={{ paddingBottom: 'calc(20px + env(safe-area-inset-bottom))' }}
+          {...detailProps}
+        />
       </div>
 
       {showRedemption && (

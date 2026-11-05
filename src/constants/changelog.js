@@ -1,4 +1,4 @@
 export const LATEST_UPDATE = {
-  version: '2.3.0',
-  description: "The app feels more alive: buttons respond when you tap, hearts pop when you fave a deal, and the Rewards tab now counts up your stats and has 5 badges to earn. Can you get them all?",
+  version: '2.3.1',
+  description: "Deal pages got a cleaner look: each one now shows the business logo, how many uses you have left right next to the deal, and big Directions, Call and On map buttons.",
 }

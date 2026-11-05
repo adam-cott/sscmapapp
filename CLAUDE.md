@@ -60,7 +60,7 @@ src/
     BottomNav/                 # 5-tab bottom navigation
     Tabs/                      # HomeTab, FavesTab, RewardsTab, SettingsTab
     LocationPicker/            # Multi-deal picker per business
-    UI/                        # Badge, UsageTracker, Toast, UpdatePrompt, etc.
+    UI/                        # DealDetails (shared deal sheet/popup body), FaveButton, BusinessLogo, Toast, etc.
   hooks/
     useDeals.js                # Merges deals + localStorage usage
     useFilters.js              # Search + category filter + categoryCounts
