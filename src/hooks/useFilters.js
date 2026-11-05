@@ -1,11 +1,9 @@
-import { useState, useMemo, useCallback, useEffect, useRef } from 'react'
+import { useState, useMemo, useCallback } from 'react'
 import { filterDeals, getNearestDistance, searchCities, parsePlaceQuery, getMapFocusLocations } from '../utils/dealHelpers'
-import { CATEGORY_LABELS } from '../utils/categoryColors'
 
 export function useFilters(deals, userCoords) {
   const [searchQuery, setSearchQuery] = useState('')
   const [activeCategories, setActiveCategories] = useState([])
-  const [sortBy, setSortByState] = useState('az')
   // Non-null = show only these deal ids, ignoring activeCategories (used by
   // Home tab "See all" cards for sections with no category equivalent, e.g.
   // Featured, Use Again, Unlimited Deals).
@@ -15,24 +13,6 @@ export function useFilters(deals, userCoords) {
   // own — e.g. "Deals Near Me" See all, which is just everything sorted by
   // distance with no restriction at all.
   const [listMode, setListMode] = useState(false)
-
-  // Track whether the user has explicitly chosen a sort mode so that a
-  // late-resolving geolocation result doesn't override their explicit choice.
-  const userHasPickedSort = useRef(false)
-
-  const setSortBy = useCallback((val) => {
-    userHasPickedSort.current = true
-    setSortByState(val)
-  }, [])
-
-  // When coords first become available, default to 'nearest' — but only if
-  // the user has not already made an explicit sort selection.
-  useEffect(() => {
-    if (userCoords && !userHasPickedSort.current) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      setSortByState('nearest')
-    }
-  }, [userCoords])
 
   const toggleCategory = useCallback((category) => {
     setPinnedIds(null)
@@ -68,13 +48,11 @@ export function useFilters(deals, userCoords) {
     setListMode(true)
   }, [])
 
-  // "Deals Near Me" See all: every deal, nearest first, no restriction.
+  // "Deals Near Me" See all: every deal, no restriction (lists are always nearest first).
   const showAllNearest = useCallback(() => {
     setSearchQuery('')
     setActiveCategories([])
     setPinnedIds(null)
-    userHasPickedSort.current = true
-    setSortByState('nearest')
     setListMode(true)
   }, [])
 
@@ -106,7 +84,8 @@ export function useFilters(deals, userCoords) {
     const filtered = filterDeals(base, searchQuery, pinnedIds ? [] : activeCategories, cities)
     const sorted = [...filtered]
 
-    if (sortBy === 'nearest') {
+    // Nearest first when we know where the user is, otherwise A-Z.
+    if (userCoords) {
       sorted.sort((a, b) => {
         const da = getNearestDistance(a, userCoords)
         const db = getNearestDistance(b, userCoords)
@@ -116,15 +95,7 @@ export function useFilters(deals, userCoords) {
         if (da !== db) return da - db
         return a.name.localeCompare(b.name)
       })
-    } else if (sortBy === 'category') {
-      sorted.sort((a, b) => {
-        const la = CATEGORY_LABELS[a.category] || a.category
-        const lb = CATEGORY_LABELS[b.category] || b.category
-        if (la !== lb) return la.localeCompare(lb)
-        return a.name.localeCompare(b.name)
-      })
     } else {
-      // 'az'
       sorted.sort((a, b) => {
         const nc = a.name.localeCompare(b.name)
         if (nc !== 0) return nc
@@ -133,7 +104,7 @@ export function useFilters(deals, userCoords) {
     }
 
     return sorted
-  }, [deals, searchQuery, activeCategories, pinnedIds, sortBy, userCoords, cities])
+  }, [deals, searchQuery, activeCategories, pinnedIds, userCoords, cities])
 
   const isListMode = listMode || searchQuery.trim().length > 0 || activeCategories.length > 0
 
@@ -145,8 +116,6 @@ export function useFilters(deals, userCoords) {
     clearFilters,
     filteredDeals,
     searchPlace,
-    sortBy,
-    setSortBy,
     categoryCounts,
     mapCategoryCounts,
     pinnedIds,

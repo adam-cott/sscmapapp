@@ -4,7 +4,6 @@ import { useCardYear } from '../../hooks/useCardYear'
 import { getNearestDistance, getNearestLocation, NEAR_ME_MILES } from '../../utils/dealHelpers'
 import HomeCard from '../UI/HomeCard'
 import Sidebar from '../Sidebar/Sidebar'
-import SortControl from '../Sidebar/SortControl'
 import ListView from '../ListView/ListView'
 
 
@@ -159,8 +158,7 @@ const CATEGORY_SECTIONS = [
 
 export default function HomeTab({
   deals, filteredDeals, usageLog, userCoords, onSelectDeal, onSelectLocation,
-  filterBar, onExitList, sortBy, setSortBy, categoryCounts,
-  permissionDenied, geoLoading, hasCoords, onNearestRequest,
+  filterBar, onExitList, categoryCounts,
   featuredIds, faves, isListMode,
   onShowCategory, onShowPinned, onShowAllNearest, onNavigateFaves,
 }) {
@@ -318,9 +316,9 @@ export default function HomeTab({
       </div>
 
       {isListMode ? (
-        /* SEARCH MODE — sort controls + full deal list */
+        /* SEARCH MODE — full deal list (nearest first) */
         <>
-          <div style={{ flexShrink: 0, padding: '10px 12px 0', backgroundColor: '#ffffff', display: 'flex', alignItems: 'center', gap: '4px' }}>
+          <div style={{ flexShrink: 0, padding: '10px 12px', backgroundColor: '#ffffff', borderBottom: '1px solid #e8edf3', display: 'flex', alignItems: 'center', gap: '4px' }}>
             <button
               onClick={handleExitList}
               aria-label="Back to Home"
@@ -336,16 +334,6 @@ export default function HomeTab({
                 {shownLabel}
               </span>
             )}
-          </div>
-          <div style={{ flexShrink: 0, padding: '10px 12px', backgroundColor: '#ffffff', borderBottom: '1px solid #e8edf3' }}>
-            <SortControl
-              sortBy={sortBy}
-              setSortBy={setSortBy}
-              permissionDenied={permissionDenied}
-              geoLoading={geoLoading}
-              hasCoords={hasCoords}
-              onNearestRequest={onNearestRequest}
-            />
           </div>
           <div style={{ flex: 1, overflowY: 'auto', overscrollBehaviorY: 'contain' }}>
             <ListView deals={filteredDeals} onSelectDeal={onSelectDeal} userCoords={userCoords} />

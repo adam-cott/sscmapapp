@@ -57,7 +57,6 @@ function AppShell() {
   const { isExpired, isExpiring } = useCardYear()
   const [showUseToast, setShowUseToast] = useState(false)
   const [lastUsedDealId, setLastUsedDealId] = useState(null)
-  const [pendingNearest, setPendingNearest] = useState(false)
 
   const { dealsWithUsage, usageMap, recordUse, undoUse, resetAll } = useDeals(dealsData.filter(d => d.active !== false))
   const { faves, toggleFave, isFave } = useFaves()
@@ -65,7 +64,7 @@ function AppShell() {
 
   useFirestoreSync(user.uid, usageMap, faves, usageLog)
 
-  const { coords, loading: geoLoading, permissionDenied, hasRequested, requestLocation, decline } = useGeolocation()
+  const { coords, loading: geoLoading, hasRequested, requestLocation, decline } = useGeolocation()
 
   const {
     searchQuery,
@@ -75,8 +74,6 @@ function AppShell() {
     clearFilters,
     filteredDeals,
     searchPlace,
-    sortBy,
-    setSortBy,
     categoryCounts,
     mapCategoryCounts,
     showCategory,
@@ -144,34 +141,9 @@ function AppShell() {
     setActiveTab(id)
   }
 
-  // Location arrives (or is denied) asynchronously, after the Nearest tap.
-  useEffect(() => {
-    if (coords && pendingNearest) {
-      setSortBy('nearest')
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      setPendingNearest(false)
-    }
-  }, [coords, pendingNearest, setSortBy])
-
-  useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    if (permissionDenied) setPendingNearest(false)
-  }, [permissionDenied])
-
-  const handleSetSortBy = (val) => {
-    if (val !== 'nearest') setPendingNearest(false)
-    setSortBy(val)
-  }
-
-  const handleNearestRequest = () => {
-    setPendingNearest(true)
-    if (!geoLoading) requestLocation()
-  }
-
   const handleNearMeToggle = () => {
     if (nearMe) return setNearMe(false)
     setNearMe(true)
-    if (activeTab === 'home') setSortBy('nearest')
     if (!coords && !geoLoading) requestLocation()
   }
 
@@ -297,13 +269,7 @@ function AppShell() {
               onSelectLocation={handleSelectLocation}
               filterBar={sidebarProps}
               onExitList={resetFilters}
-              sortBy={sortBy}
-              setSortBy={handleSetSortBy}
               categoryCounts={categoryCounts}
-              permissionDenied={permissionDenied}
-              geoLoading={geoLoading}
-              hasCoords={!!coords}
-              onNearestRequest={handleNearestRequest}
               featuredIds={featuredIds}
               faves={faves}
               isListMode={isListMode || homeNearMe}
