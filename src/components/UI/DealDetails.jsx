@@ -24,7 +24,7 @@ export default function DealDetails({ deal, onClose, onRedeem, isFave, onToggleF
   const displayValue = getDisplayValue(deal)
   const uses = usesLabel(deal.usage.usedCount, deal.deal.maxUses)
   const directions = getDirectionsLocation(deal, userCoords)
-  const canViewOnMap = !!getMapFocusLocations(deal)?.length
+  const canViewOnMap = onViewOnMap && !!getMapFocusLocations(deal)?.length
   const phone = deal.contact?.phone
 
   useEffect(() => {

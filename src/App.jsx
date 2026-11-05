@@ -435,12 +435,12 @@ function AppShell() {
       {/* ── Overlays (shared across all tabs) ───────────── */}
       {selectedDeal && (
         <div className="hidden md:block">
-          <DealModal deal={selectedDeal} onUse={() => handleUse(selectedDeal.id)} onClose={() => setSelectedDeal(null)} isFave={isFave(selectedDeal.id)} onToggleFave={toggleFave} onViewOnMap={() => handleViewOnMap(selectedDeal.id)} userCoords={coords} />
+          <DealModal deal={selectedDeal} onUse={() => handleUse(selectedDeal.id)} onClose={() => setSelectedDeal(null)} isFave={isFave(selectedDeal.id)} onToggleFave={toggleFave} onViewOnMap={isMapTab ? null : () => handleViewOnMap(selectedDeal.id)} userCoords={coords} />
         </div>
       )}
       {selectedDeal && (
         <div className="md:hidden">
-          <BottomSheet deal={selectedDeal} onUse={() => handleUse(selectedDeal.id)} onClose={() => setSelectedDeal(null)} isFave={isFave(selectedDeal.id)} onToggleFave={toggleFave} onViewOnMap={() => handleViewOnMap(selectedDeal.id)} userCoords={coords} />
+          <BottomSheet deal={selectedDeal} onUse={() => handleUse(selectedDeal.id)} onClose={() => setSelectedDeal(null)} isFave={isFave(selectedDeal.id)} onToggleFave={toggleFave} onViewOnMap={isMapTab ? null : () => handleViewOnMap(selectedDeal.id)} userCoords={coords} />
         </div>
       )}
       {showResetConfirm && (
