@@ -1,4 +1,4 @@
 export const LATEST_UPDATE = {
-  version: '2.3.1',
-  description: "Deal pages got a cleaner look: each one now shows the business logo, how many uses you have left right next to the deal, and big Directions, Call and On map buttons.",
+  version: '2.3.2',
+  description: "Deal pages are a little tidier: every deal on this year's card is good through Oct 1, 2027, so that date now lives once on the About screen instead of on every deal.",
 }

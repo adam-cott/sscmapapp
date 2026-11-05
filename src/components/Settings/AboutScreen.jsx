@@ -24,6 +24,9 @@ export default function AboutScreen({ onBack }) {
         <div style={{ fontSize: '13px', color: '#94a3b8', marginTop: '4px' }}>
           Version {pkg.version}
         </div>
+        <div style={{ display: 'inline-block', fontSize: '12px', fontWeight: 600, color: 'var(--ssc-blue)', backgroundColor: 'var(--ssc-blue-light)', borderRadius: '99px', padding: '4px 12px', marginTop: '10px' }}>
+          2026–27 card · Deals valid through Oct 1, 2027
+        </div>
         <p style={{ fontSize: '14px', color: '#475569', lineHeight: '1.6', marginTop: '14px', maxWidth: '300px', margin: '14px auto 0' }}>
           Your guide to every deal on the Starving Student Discount Card — 439 deals, 214 local businesses, all on one interactive map built for Utah County students.
         </p>

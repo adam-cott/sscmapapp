@@ -1,16 +1,10 @@
 import { useEffect } from 'react'
-import { MapPin, Clock, Globe, Calendar, Navigation, Phone, Map as MapIcon } from 'lucide-react'
+import { MapPin, Clock, Globe, Navigation, Phone, Map as MapIcon } from 'lucide-react'
 import BusinessLogo from './BusinessLogo'
 import FaveButton from './FaveButton'
 import SwipeToConfirm from './SwipeToConfirm'
 import { CATEGORY_COLORS, CATEGORY_LIGHT, CATEGORY_LABELS } from '../../utils/categoryColors'
 import { getDisplayValue, getMapFocusLocations, getDirectionsLocation } from '../../utils/dealHelpers'
-
-// "2027-10-01" -> "Oct 1, 2027" (built from parts so it isn't shifted a day by UTC parsing)
-function formatDate(iso) {
-  const [y, m, d] = iso.split('-').map(Number)
-  return new Date(y, m - 1, d).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
-}
 
 function usesLabel(used, maxUses) {
   if (maxUses === null) return { text: 'Unlimited uses', color: '#047857', bg: '#d1fae5' }
@@ -50,7 +44,6 @@ export default function DealDetails({ deal, onClose, onRedeem, isFave, onToggleF
     deal.locationRestriction && { Icon: MapPin, text: `Valid at: ${deal.locationRestriction}` },
     deal.contact?.hours && { Icon: Clock, text: deal.contact.hours },
     deal.contact?.website && { Icon: Globe, text: deal.contact.website.replace(/^https?:\/\//, '') },
-    deal.deal.expiresAt && { Icon: Calendar, text: `Expires ${formatDate(deal.deal.expiresAt)}` },
   ].filter(Boolean)
 
   const actionStyle = {
