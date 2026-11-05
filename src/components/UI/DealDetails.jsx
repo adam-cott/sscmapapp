@@ -1,5 +1,5 @@
-import { useEffect } from 'react'
-import { MapPin, Clock, Globe, Navigation, Phone, Map as MapIcon } from 'lucide-react'
+import { useEffect, useState } from 'react'
+import { MapPin, Clock, Globe, Copy, Check, Navigation, Phone, Map as MapIcon } from 'lucide-react'
 import BusinessLogo from './BusinessLogo'
 import FaveButton from './FaveButton'
 import SwipeToConfirm from './SwipeToConfirm'
@@ -26,6 +26,13 @@ export default function DealDetails({ deal, onClose, onRedeem, isFave, onToggleF
   const directions = getDirectionsLocation(deal, userCoords)
   const canViewOnMap = onViewOnMap && !!getMapFocusLocations(deal)?.length
   const phone = deal.contact?.phone
+  const [copied, setCopied] = useState(false)
+
+  const copyAddress = async (text) => {
+    await navigator.clipboard.writeText(text)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 1500)
+  }
 
   useEffect(() => {
     const handleKey = (e) => { if (e.key === 'Escape') onClose() }
@@ -40,7 +47,7 @@ export default function DealDetails({ deal, onClose, onRedeem, isFave, onToggleF
   ].filter(Boolean)
 
   const details = [
-    directions?.address && { Icon: MapPin, text: directions.address },
+    directions?.address && { Icon: MapPin, text: directions.address, copy: true },
     deal.locationRestriction && { Icon: MapPin, text: `Valid at: ${deal.locationRestriction}` },
     deal.contact?.hours && { Icon: Clock, text: deal.contact.hours },
     deal.contact?.website && { Icon: Globe, text: deal.contact.website.replace(/^https?:\/\//, '') },
@@ -119,12 +126,22 @@ export default function DealDetails({ deal, onClose, onRedeem, isFave, onToggleF
 
         {/* Details */}
         <div className="space-y-1.5 mt-4 mb-4">
-          {details.map(({ Icon, text }) => (
-            <div key={text} className="flex items-start gap-2" style={{ fontSize: '13px', color: '#64748b', lineHeight: 1.4 }}>
-              <Icon size={13} className="flex-shrink-0" style={{ marginTop: '2px', color: '#94a3b8' }} />
-              <span>{text}</span>
-            </div>
-          ))}
+          {details.map(({ Icon, text, copy }) => {
+            const Row = copy ? 'button' : 'div'
+            const CopyIcon = copied ? Check : Copy
+            return (
+              <Row
+                key={text}
+                onClick={copy ? () => copyAddress(text) : undefined}
+                className="flex items-start gap-2 w-full text-left"
+                style={{ fontSize: '13px', color: '#64748b', lineHeight: 1.4, background: 'none', border: 'none', padding: 0, cursor: copy ? 'pointer' : undefined }}
+              >
+                <Icon size={13} className="flex-shrink-0" style={{ marginTop: '2px', color: '#94a3b8' }} />
+                <span className="flex-1">{copy && copied ? 'Address copied' : text}</span>
+                {copy && <CopyIcon size={13} className="flex-shrink-0" style={{ marginTop: '2px', color: copied ? '#047857' : '#94a3b8' }} />}
+              </Row>
+            )
+          })}
         </div>
       </div>
 
