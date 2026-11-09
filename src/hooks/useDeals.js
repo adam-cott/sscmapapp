@@ -33,5 +33,5 @@ export function useDeals(deals) {
     usage: getDealUsageState(deal, usageMap),
   }))
 
-  return { dealsWithUsage, usageMap, recordUse, undoUse, resetAll }
+  return { dealsWithUsage, usageMap, setUsageMap, recordUse, undoUse, resetAll }
 }

@@ -8,6 +8,7 @@ export const STORAGE_KEYS = {
   faves:    `ssc_faves_${CARD_YEAR}`,
   usageLog: `ssc_usage_log_${CARD_YEAR}`,
   badgesSeen: `ssc_badges_seen_${CARD_YEAR}`,
+  synced:   `ssc_synced_${CARD_YEAR}`,
   uid:      'ssc_uid',
 }
 

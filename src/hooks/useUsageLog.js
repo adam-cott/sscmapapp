@@ -17,5 +17,5 @@ export function useUsageLog() {
 
   const clearLog = () => setUsageLog([])
 
-  return { usageLog, logUse, undoLog, clearLog }
+  return { usageLog, setUsageLog, logUse, undoLog, clearLog }
 }

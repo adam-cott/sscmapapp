@@ -189,8 +189,8 @@ Adam's logo decisions: Bahama Buck's and Voltage eBike use icon-only marks (snow
 ## Juice (v2.3.0 — Adam wants "polished & subtle", haptics only at key moments)
 Built one step per commit so each can be reverted alone: `.press` tap squish (`index.css`; apply to cards/main buttons, not full-width rows), bottom-nav sliding highlight + icon pop (`BottomNav.jsx` — every tab renders its own BottomNav, so the highlight's last spot is a module variable), `FaveButton.jsx` heart pop/burst/15ms buzz, Rewards count-up + Places Visited, and 5 Rewards badges (`BADGES` in `RewardsTab.jsx`; seen ones in `ssc_badges_seen_<year>`, so newly earned ones shine + buzz once). Every animation is off under prefers-reduced-motion. Vibration only works on Android. The test account has never used a deal, so its Rewards tab only shows the empty state — check badge logic with a throwaway render test instead of redeeming.
 
-## Where things stand (Nov 4, 2026)
-- **Live:** v2.3.0 on `master`. No open work: everything Adam asked for in the Oct–Nov sessions is shipped. Adam phone-checked through v2.2.7 (logos, Map buttons) and tried the v2.3.0 fave heart before release; a phone check of the rest of v2.3.0 is still his to do.
+## Where things stand (Nov 9, 2026)
+- **Live:** v2.4.3 on `master`. The Nov 2026 code review is in `reports/code-review-2026-11.md` (kept out of git; the repo is public). Batches 1–2 of its fixes are shipped (v2.4.2–2.4.3); next are speed (H5, M7) and redeem-flow polish (M1–M3). Adam phone-checked through v2.2.7 (logos, Map buttons) and tried the v2.3.0 fave heart before release; a phone check of the rest of v2.3.0 is still his to do.
 - Recent releases: v2.1.5–2.1.11 data fixes (MTECH Lehi pin, Wasatch Front store sweep — ~230 stores added, Chubby's Cafe, Marnell's pin), v2.2.0 Map Filter menu + Near Me, v2.2.2 squircle logos, v2.2.3–2.2.4 logo polish, v2.2.5 GetOut/Domino's/The Place Pizza logos + PNG home-screen icons (`public/icons/` — regenerate the PNGs from `icon.svg` with sharp if the icon ever changes; iOS ignores SVG touch icons), v2.2.6–2.2.7 fifteen more logo fixes, v2.3.0 juice (see "Juice" below).
 - `docs/ROADMAP.md` is from March 2026 and out of date — this file is the current guide.
 
@@ -202,3 +202,6 @@ Built one step per commit so each can be reverted alone: `.press` tap squish (`i
 - **Never drive the Claude in Chrome browser tools against this app without asking first** — Adam tests on his own phone (Galaxy A36) after each deploy and would rather do that than have the app clicked through on his behalf
 - Even when he says yes, keep it minimal — verify the one thing in question, don't wander into unrelated flows or edge cases on your own initiative
 - This app requires sign-in against a real Firestore test account (login not kept in the repo; ask Adam) — any state changed during a browser session (profile name, usage log, etc.) is real, persists, and needs to be reverted before moving on
+
+## Sync (v2.4.3)
+`useFirestoreSync` treats the cloud copy as official: each launch reads it and replaces the phone's usage, faves and history. Firestore's offline cache (`firebase.js`) queues changes made with no signal. Saves use `mergeFields` so a whole field is replaced; plain `merge: true` would keep deals removed by Undo. `STORAGE_KEYS.synced` means "this phone holds nothing the cloud lacks"; without it (first launch of a version with this key, or a change made before the launch read finished) the two copies are merged, highest count per deal. Tests: `useFirestoreSync.test.jsx`.

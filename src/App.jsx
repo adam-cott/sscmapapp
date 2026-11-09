@@ -58,11 +58,11 @@ function AppShell() {
   const [showUseToast, setShowUseToast] = useState(false)
   const [lastUsedDealId, setLastUsedDealId] = useState(null)
 
-  const { dealsWithUsage, usageMap, recordUse, undoUse, resetAll } = useDeals(dealsData.filter(d => d.active !== false))
-  const { faves, toggleFave, isFave } = useFaves()
-  const { usageLog, logUse, undoLog, clearLog } = useUsageLog()
+  const { dealsWithUsage, usageMap, setUsageMap, recordUse, undoUse, resetAll } = useDeals(dealsData.filter(d => d.active !== false))
+  const { faves, setFaves, toggleFave, isFave } = useFaves()
+  const { usageLog, setUsageLog, logUse, undoLog, clearLog } = useUsageLog()
 
-  useFirestoreSync(user.uid, usageMap, faves, usageLog)
+  useFirestoreSync(user.uid, [usageMap, setUsageMap], [faves, setFaves], [usageLog, setUsageLog])
 
   const { coords, loading: geoLoading, hasRequested, requestLocation, decline } = useGeolocation()
 

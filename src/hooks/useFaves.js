@@ -12,5 +12,5 @@ export function useFaves() {
 
   const isFave = (dealId) => faves.includes(dealId)
 
-  return { faves, toggleFave, isFave }
+  return { faves, setFaves, toggleFave, isFave }
 }
