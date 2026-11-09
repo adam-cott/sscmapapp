@@ -3,7 +3,7 @@ import { CATEGORY_COLORS } from '../../utils/categoryColors'
 import DealDetails from '../UI/DealDetails'
 import RedemptionScreen from '../UI/RedemptionScreen'
 
-export default function BottomSheet({ deal, onUse, onClose, ...detailProps }) {
+export default function BottomSheet({ deal, onUse, onRedeemDone, onClose, ...detailProps }) {
   const isExhausted = deal.usage.status === 'exhausted'
   const [showRedemption, setShowRedemption] = useState(false)
 
@@ -34,7 +34,7 @@ export default function BottomSheet({ deal, onUse, onClose, ...detailProps }) {
         <DealDetails
           deal={deal}
           onClose={onClose}
-          onRedeem={() => setShowRedemption(true)}
+          onRedeem={() => { onUse(); setShowRedemption(true) }}
           footerStyle={{ paddingBottom: 'calc(20px + env(safe-area-inset-bottom))' }}
           {...detailProps}
         />
@@ -44,8 +44,8 @@ export default function BottomSheet({ deal, onUse, onClose, ...detailProps }) {
         <RedemptionScreen
           deal={deal}
           onDone={() => {
-            onUse()
             setShowRedemption(false)
+            onRedeemDone()
           }}
         />
       )}

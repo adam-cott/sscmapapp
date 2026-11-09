@@ -8,7 +8,7 @@ import AboutScreen from './components/Settings/AboutScreen'
 import CardYearScreen from './components/Settings/CardYearScreen'
 import { useCardYear } from './hooks/useCardYear'
 import dealsData from './data/deals.json'
-import { getMapFocusLocations, getNearestDistance, NEAR_ME_MILES } from './utils/dealHelpers'
+import { getDealUsageState, getMapFocusLocations, getNearestDistance, NEAR_ME_MILES } from './utils/dealHelpers'
 import { useDeals } from './hooks/useDeals'
 import { useFilters } from './hooks/useFilters'
 import { useOverlayHistory } from './hooks/useOverlayHistory'
@@ -171,32 +171,10 @@ function AppShell() {
     setShowResetConfirm(false)
   }
 
-  // A deal opened from a place search is a narrowed copy (only its stores in
-  // that city/venue), so look it up in the current results first to keep
-  // Directions and "View on map" on those stores.
-  const findDeal = (dealId) => filteredDeals.find(d => d.id === dealId) ?? dealsWithUsage.find(d => d.id === dealId)
-
   const handleUse = (dealId) => {
     recordUse(dealId)
     logUse(dealId)
-    setSelectedDeal(prev => {
-      if (!prev) return null
-      const updated = findDeal(dealId)
-      if (!updated) return prev
-      const newUsedCount = (usageMap[dealId] ?? 0) + 1
-      const isUnlimited = updated.deal.maxUses === null
-      const newRemaining = isUnlimited ? null : Math.max(0, updated.deal.maxUses - newUsedCount)
-      return {
-        ...updated,
-        usage: {
-          usedCount: newUsedCount,
-          remaining: newRemaining,
-          status: (!isUnlimited && newRemaining === 0) ? 'exhausted' : 'partial',
-        },
-      }
-    })
     setLastUsedDealId(dealId)
-    setShowUseToast(true)
   }
 
   const handleUndoUse = () => {
@@ -248,6 +226,19 @@ function AppShell() {
   const nearLng = nearCenter ? NEAR_ME_MILES / (69 * Math.cos(nearCenter.lat * Math.PI / 180)) : 0
 
   const isMapTab = activeTab === 'map'
+
+  // The sheet shows live usage, so a redemption or Undo updates it right away.
+  const openDeal = selectedDeal && { ...selectedDeal, usage: getDealUsageState(selectedDeal, usageMap) }
+  const dealSheetProps = openDeal && {
+    deal: openDeal,
+    onUse: () => handleUse(openDeal.id),
+    onRedeemDone: () => setShowUseToast(true),
+    onClose: () => setSelectedDeal(null),
+    isFave: isFave(openDeal.id),
+    onToggleFave: toggleFave,
+    onViewOnMap: isMapTab ? null : () => handleViewOnMap(openDeal.id),
+    userCoords: coords,
+  }
 
   return (
     <div className="flex flex-col h-full min-h-0 overflow-hidden" style={{ backgroundColor: '#f0f4f8' }}>
@@ -404,12 +395,12 @@ function AppShell() {
       {/* ── Overlays (shared across all tabs) ───────────── */}
       {selectedDeal && (
         <div className="hidden md:block">
-          <DealModal deal={selectedDeal} onUse={() => handleUse(selectedDeal.id)} onClose={() => setSelectedDeal(null)} isFave={isFave(selectedDeal.id)} onToggleFave={toggleFave} onViewOnMap={isMapTab ? null : () => handleViewOnMap(selectedDeal.id)} userCoords={coords} />
+          <DealModal {...dealSheetProps} />
         </div>
       )}
       {selectedDeal && (
         <div className="md:hidden">
-          <BottomSheet deal={selectedDeal} onUse={() => handleUse(selectedDeal.id)} onClose={() => setSelectedDeal(null)} isFave={isFave(selectedDeal.id)} onToggleFave={toggleFave} onViewOnMap={isMapTab ? null : () => handleViewOnMap(selectedDeal.id)} userCoords={coords} />
+          <BottomSheet {...dealSheetProps} />
         </div>
       )}
       {showResetConfirm && (

@@ -3,7 +3,7 @@ import { CATEGORY_COLORS } from '../../utils/categoryColors'
 import DealDetails from '../UI/DealDetails'
 import RedemptionScreen from '../UI/RedemptionScreen'
 
-export default function DealModal({ deal, onUse, onClose, ...detailProps }) {
+export default function DealModal({ deal, onUse, onRedeemDone, onClose, ...detailProps }) {
   const isExhausted = deal.usage.status === 'exhausted'
   const [showRedemption, setShowRedemption] = useState(false)
 
@@ -33,7 +33,7 @@ export default function DealModal({ deal, onUse, onClose, ...detailProps }) {
         <DealDetails
           deal={deal}
           onClose={onClose}
-          onRedeem={() => setShowRedemption(true)}
+          onRedeem={() => { onUse(); setShowRedemption(true) }}
           bodyStyle={{ maxHeight: '55vh' }}
           {...detailProps}
         />
@@ -43,8 +43,8 @@ export default function DealModal({ deal, onUse, onClose, ...detailProps }) {
         <RedemptionScreen
           deal={deal}
           onDone={() => {
-            onUse()
             setShowRedemption(false)
+            onRedeemDone()
           }}
         />
       )}

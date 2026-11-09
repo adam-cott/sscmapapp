@@ -1,4 +1,4 @@
 export const LATEST_UPDATE = {
-  version: '2.4.4',
-  description: "The app is snappier: opening deals and searching take less work, and long deal lists now show up right away.",
+  version: '2.4.5',
+  description: "Redeeming is more reliable: your deal counts the moment you slide, and you can use a deal again right away. Tapping a map pin now shows that exact store, and new versions ask before reloading.",
 }

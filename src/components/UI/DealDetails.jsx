@@ -23,8 +23,11 @@ export default function DealDetails({ deal, onClose, onRedeem, isFave, onToggleF
   const catLight = isExhausted ? '#f8fafc' : (CATEGORY_LIGHT[deal.category] || '#f0f9ff')
   const displayValue = getDisplayValue(deal)
   const uses = usesLabel(deal.usage.usedCount, deal.deal.maxUses)
-  const directions = getDirectionsLocation(deal, userCoords)
-  const canViewOnMap = onViewOnMap && !!getMapFocusLocations(deal)?.length
+  const honoring = getMapFocusLocations(deal)
+  // A tapped pin wins, as long as that store honors this deal.
+  const tapped = deal.tappedStore && honoring?.find(l => l.lat === deal.tappedStore.lat && l.lng === deal.tappedStore.lng)
+  const directions = tapped ?? getDirectionsLocation(deal, userCoords)
+  const canViewOnMap = onViewOnMap && !!honoring?.length
   const phone = directions?.phone
   const [copied, setCopied] = useState(false)
 
@@ -147,7 +150,7 @@ export default function DealDetails({ deal, onClose, onRedeem, isFave, onToggleF
 
       {/* Footer */}
       <div style={{ padding: '14px 20px 20px', borderTop: '1px solid #f1f5f9', ...footerStyle }}>
-        <SwipeToConfirm onConfirm={onRedeem} disabled={isExhausted} />
+        <SwipeToConfirm key={deal.usage.usedCount} onConfirm={onRedeem} disabled={isExhausted} />
       </div>
     </>
   )
