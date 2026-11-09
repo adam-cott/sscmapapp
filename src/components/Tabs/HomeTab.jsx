@@ -297,7 +297,7 @@ export default function HomeTab({
             }}
           >
             <span style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '13px', color: isExpired ? '#dc2626' : '#ea580c' }}>
-              {isExpired ? 'Your card has expired! ' : `Card expires in ${daysRemaining} day${daysRemaining === 1 ? '' : 's'}! `}
+              {isExpired ? 'Your card has expired! ' : daysRemaining === 0 ? 'Card expires today! ' : `Card expires in ${daysRemaining} day${daysRemaining === 1 ? '' : 's'}! `}
             </span>
             <span style={{ fontSize: '13px', color: isExpired ? '#dc2626' : '#ea580c' }}>
               Grab next year's card at sscdeals.com →

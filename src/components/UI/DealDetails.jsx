@@ -25,7 +25,7 @@ export default function DealDetails({ deal, onClose, onRedeem, isFave, onToggleF
   const uses = usesLabel(deal.usage.usedCount, deal.deal.maxUses)
   const directions = getDirectionsLocation(deal, userCoords)
   const canViewOnMap = onViewOnMap && !!getMapFocusLocations(deal)?.length
-  const phone = deal.contact?.phone
+  const phone = directions?.phone
   const [copied, setCopied] = useState(false)
 
   const copyAddress = async (text) => {

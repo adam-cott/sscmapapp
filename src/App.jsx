@@ -204,14 +204,7 @@ function AppShell() {
     setLastUsedDealId(null)
   }
 
-  const handleSelectDeal = useCallback((deal) => {
-    if (!deal.contact?.phone && deal.locations?.length) {
-      const phone = deal.locations.find(l => l.phone)?.phone ?? null
-      setSelectedDeal({ ...deal, contact: { ...deal.contact, phone } })
-    } else {
-      setSelectedDeal(deal)
-    }
-  }, [])
+  const handleSelectDeal = useCallback((deal) => { setSelectedDeal(deal) }, [])
   const handleSelectLocation = useCallback((location) => { setSelectedLocation(location) }, [])
   const handleSelectFromPicker = useCallback((deal) => {
     setSelectedLocation(null)

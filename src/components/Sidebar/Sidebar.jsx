@@ -4,6 +4,7 @@ import { LocateFixed, SlidersHorizontal } from 'lucide-react'
 import SearchBar from './SearchBar'
 import MapFilterMenu from './MapFilterMenu'
 import { CATEGORY_COLORS, CATEGORY_LABELS } from '../../utils/categoryColors'
+import { useOverlayHistory } from '../../hooks/useOverlayHistory'
 
 const BLUE = '#0170B9'
 
@@ -38,6 +39,7 @@ export default function Sidebar({
   backLabel,
 }) {
   const [menuOpen, setMenuOpen] = useState(false)
+  useOverlayHistory(menuOpen, () => setMenuOpen(false), true)
   const single = activeCategories.length === 1 ? activeCategories[0] : null
   const filterLabel = single ? CATEGORY_LABELS[single] : activeCategories.length ? `Filter · ${activeCategories.length}` : 'Filter'
 

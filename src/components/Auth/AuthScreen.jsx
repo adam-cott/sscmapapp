@@ -2,17 +2,19 @@ import { useState } from 'react'
 import { useAuth } from '../../hooks/useAuth'
 
 export default function AuthScreen() {
-  const { signIn, signUp } = useAuth()
+  const { signIn, signUp, resetPassword } = useAuth()
   const [isSignUp, setIsSignUp] = useState(false)
   const [firstName, setFirstName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
+  const [notice, setNotice] = useState('')
   const [submitting, setSubmitting] = useState(false)
 
   async function handleSubmit(e) {
     e.preventDefault()
     setError('')
+    setNotice('')
     setSubmitting(true)
     try {
       if (isSignUp) {
@@ -25,6 +27,19 @@ export default function AuthScreen() {
     } finally {
       setSubmitting(false)
     }
+  }
+
+  async function handleForgotPassword() {
+    setError('')
+    setNotice('')
+    if (!email.trim()) return setError('Enter your email above, then tap Forgot password.')
+    try {
+      await resetPassword(email.trim())
+    } catch (err) {
+      // An unknown email gets the same message, so this can't be used to check who has an account.
+      if (err.code !== 'auth/user-not-found') return setError(friendlyError(err.code))
+    }
+    setNotice('If that email has an account, a reset link is on its way. Check your spam folder too.')
   }
 
   function friendlyError(code) {
@@ -82,8 +97,21 @@ export default function AuthScreen() {
             style={inputStyle}
           />
 
+          {!isSignUp && (
+            <button
+              type="button"
+              onClick={handleForgotPassword}
+              style={{ alignSelf: 'flex-end', background: 'none', border: 'none', padding: 0, fontSize: '13px', fontWeight: 600, color: 'var(--ssc-blue)', cursor: 'pointer' }}
+            >
+              Forgot password?
+            </button>
+          )}
+
           {error && (
             <p style={{ fontSize: '13px', color: '#ef4444', textAlign: 'center', margin: 0 }}>{error}</p>
+          )}
+          {notice && (
+            <p style={{ fontSize: '13px', color: '#047857', textAlign: 'center', margin: 0 }}>{notice}</p>
           )}
 
           <button
@@ -104,7 +132,7 @@ export default function AuthScreen() {
         <p style={{ textAlign: 'center', fontSize: '13px', color: '#64748b', marginTop: '20px' }}>
           {isSignUp ? 'Already have an account?' : "Don't have an account?"}{' '}
           <span
-            onClick={() => { setIsSignUp(v => !v); setError('') }}
+            onClick={() => { setIsSignUp(v => !v); setError(''); setNotice('') }}
             style={{ color: 'var(--ssc-blue)', fontWeight: 600, cursor: 'pointer' }}
           >
             {isSignUp ? 'Sign in' : 'Sign up'}

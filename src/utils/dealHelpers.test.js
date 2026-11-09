@@ -77,6 +77,21 @@ describe('matchLocationsToRestriction', () => {
   })
 })
 
+describe('restrictions that name part of a city', () => {
+  const store = address => ({ address })
+  const addresses = list => list.map(l => l.address)
+
+  it('"All Orem, North Provo" is not every store', () => {
+    const locations = [store('1140 W 800 N, Orem, UT 84057'), store('211 W 1230 N, Provo, UT 84604'), store('1225 S University Ave, Provo, UT 84601'), store('48 S 850 E, Lehi, UT 84043')]
+    expect(addresses(matchLocationsToRestriction(locations, 'All Orem, North Provo & American Fork'))).toEqual(['1140 W 800 N, Orem, UT 84057', '211 W 1230 N, Provo, UT 84604'])
+  })
+
+  it('"South Jordan (Redwood)" keeps only the Redwood Rd store', () => {
+    const locations = [store('2302 N University Pkwy, Provo, UT 84604'), store('11585 District Dr #700, South Jordan, UT 84095'), store('10493 S Redwood Rd, South Jordan, UT 84095')]
+    expect(addresses(matchLocationsToRestriction(locations, 'All Utah County & South Jordan (Redwood)'))).toEqual(['2302 N University Pkwy, Provo, UT 84604', '10493 S Redwood Rd, South Jordan, UT 84095'])
+  })
+})
+
 describe('getMapFocusLocations', () => {
   it('returns all locations when there is no restriction', () => {
     expect(getMapFocusLocations({ locationRestriction: '', locations: [OREM, PROVO] })).toHaveLength(2)

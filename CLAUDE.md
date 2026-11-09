@@ -201,4 +201,4 @@ Built one step per commit so each can be reverted alone: `.press` tap squish (`i
 ## Browser Testing
 - **Never drive the Claude in Chrome browser tools against this app without asking first** — Adam tests on his own phone (Galaxy A36) after each deploy and would rather do that than have the app clicked through on his behalf
 - Even when he says yes, keep it minimal — verify the one thing in question, don't wander into unrelated flows or edge cases on your own initiative
-- This app requires sign-in against a real Firestore test account (see README) — any state changed during a browser session (profile name, usage log, etc.) is real, persists, and needs to be reverted before moving on
+- This app requires sign-in against a real Firestore test account (login not kept in the repo; ask Adam) — any state changed during a browser session (profile name, usage log, etc.) is real, persists, and needs to be reverted before moving on

@@ -52,11 +52,7 @@ App runs at http://localhost:5173
 
 ### Test Account
 
-For manual testing (the app requires sign-in):
-
-- Name: Test
-- Email: test123@gmail.com
-- Password: test1234
+The app requires sign-in. Use your own account, or ask Adam for the test login (it is deliberately not kept in this public repo).
 
 ### Other Scripts
 

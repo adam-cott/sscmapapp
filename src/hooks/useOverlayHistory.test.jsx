@@ -27,7 +27,7 @@ describe('useOverlayHistory', () => {
     rerender()
     await flushMicrotasks()
     // history.back() dispatches popstate asynchronously
-    await new Promise(resolve => setTimeout(resolve, 0))
+    await new Promise(resolve => setTimeout(resolve, 20))
     expect(close).not.toHaveBeenCalled() // closed via in-app path, not popstate
   })
 
@@ -96,7 +96,7 @@ describe('useOverlayHistory', () => {
     modalOpen = true
     rerender()
     await flushMicrotasks()
-    await new Promise(resolve => setTimeout(resolve, 0))
+    await new Promise(resolve => setTimeout(resolve, 20))
 
     // Net depth should be unchanged (replaceState swap, not back()+pushState)
     expect(window.history.length).toBe(lengthWithPickerOpen)
@@ -108,5 +108,56 @@ describe('useOverlayHistory', () => {
     window.dispatchEvent(new PopStateEvent('popstate'))
     expect(closeModal).toHaveBeenCalledTimes(1)
     expect(closePicker).not.toHaveBeenCalled()
+  })
+
+  it('an in-app close of a lower overlay leaves the top one open', async () => {
+    const closeLower = vi.fn()
+    const closeTop = vi.fn()
+    let lowerOpen = false
+    let topOpen = false
+    const { rerender } = renderHook(() => {
+      useOverlayHistory(lowerOpen, closeLower)
+      useOverlayHistory(topOpen, closeTop)
+    })
+    lowerOpen = true
+    rerender()
+    await flushMicrotasks()
+    topOpen = true
+    rerender()
+    await flushMicrotasks()
+
+    lowerOpen = false
+    rerender()
+    await flushMicrotasks()
+    await new Promise(resolve => setTimeout(resolve, 20))
+    expect(closeTop).not.toHaveBeenCalled()
+
+    window.dispatchEvent(new PopStateEvent('popstate'))
+    expect(closeTop).toHaveBeenCalledTimes(1)
+    expect(closeLower).not.toHaveBeenCalled()
+  })
+
+  it('an onTop overlay closes first even if something opened behind it', async () => {
+    const closeMenu = vi.fn()
+    const closeList = vi.fn()
+    let menuOpen = false
+    let listOpen = false
+    const { rerender } = renderHook(() => {
+      useOverlayHistory(menuOpen, closeMenu, true)
+      useOverlayHistory(listOpen, closeList)
+    })
+    menuOpen = true
+    rerender()
+    await flushMicrotasks()
+    listOpen = true
+    rerender()
+    await flushMicrotasks()
+
+    window.dispatchEvent(new PopStateEvent('popstate'))
+    expect(closeMenu).toHaveBeenCalledTimes(1)
+    expect(closeList).not.toHaveBeenCalled()
+
+    window.dispatchEvent(new PopStateEvent('popstate'))
+    expect(closeList).toHaveBeenCalledTimes(1)
   })
 })

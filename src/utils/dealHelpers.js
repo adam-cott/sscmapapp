@@ -113,9 +113,10 @@ export function getDealUsageState(deal, usageMap) {
 // deals.json. See reports/map-focus-restrictions-report.md for the data audit.
 
 // Wording that means "every location honors this deal" rather than naming
-// specific cities: starts with "All" ("All Locations", "All Utah County"),
-// starts with "Participating", or mentions a county-level scope.
-export const BROAD_RESTRICTION = /^all\b|^participating\b|county/i
+// specific cities: "All Locations", "All Utah ...", "All Wasatch ...", "All
+// Northern ...", starts with "Participating", or mentions a county-level scope.
+// "All Orem, North Provo, ..." is NOT broad: it names cities.
+export const BROAD_RESTRICTION = /^all\s+(locations|utah|wasatch|northern)\b|^participating\b|county/i
 
 // "All Utah County" is narrower than the business's full locations[] (many
 // chains also have Salt Lake County or Tooele stores), so it matches these
@@ -193,7 +194,14 @@ const VENUES = {
   'traverse mountain': /Traverse Pkwy|Digital Dr/i,
 }
 
+// Places that are only part of a city, so the city name alone would over-match.
+const STORE_HINTS = {
+  'north provo': /1230 N/i,
+  'south jordan redwood': /Redwood Rd/i,
+}
+
 function placeMatchesLocation(placeToken, location) {
+  if (STORE_HINTS[placeToken]) return STORE_HINTS[placeToken].test(location.address)
   const c = normalizePlace(cityFromAddress(location.address) || '')
   return (!!c && (c.includes(placeToken) || placeToken.includes(c))) ||
     !!VENUES[placeToken]?.test(location.address) ||

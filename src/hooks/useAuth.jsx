@@ -3,6 +3,7 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut as firebaseSignOut,
+  sendPasswordResetEmail,
   onAuthStateChanged,
   updateEmail,
   updatePassword,
@@ -23,38 +24,54 @@ export function AuthProvider({ children }) {
 
   useEffect(() => {
     return onAuthStateChanged(auth, async (firebaseUser) => {
-      if (firebaseUser) {
-        const snap = await getDoc(doc(db, 'users', firebaseUser.uid))
-        setFirstName(snap.exists() ? snap.data().firstName : '')
-
-        // Seed localStorage from Firestore when this is a new or different device.
-        // Must happen before setUser so AppShell's hooks initialize with the right data.
-        const storedUid = localStorage.getItem(STORAGE_KEYS.uid)
-        if (storedUid !== firebaseUser.uid) {
-          if (snap.exists()) {
-            const data = snap.data()
-            if (data[F.usage] !== undefined) localStorage.setItem(STORAGE_KEYS.usage, JSON.stringify(data[F.usage]))
-            if (data[F.faves] !== undefined) localStorage.setItem(STORAGE_KEYS.faves, JSON.stringify(data[F.faves]))
-            if (data[F.usageLog] !== undefined) localStorage.setItem(STORAGE_KEYS.usageLog, JSON.stringify(data[F.usageLog]))
-          }
-          localStorage.setItem(STORAGE_KEYS.uid, firebaseUser.uid)
-        } else if (snap.exists() && snap.data()[F.usage] === undefined) {
-          // Same device, but Firestore has no usage data yet — this user predates the sync
-          // feature. Upload their existing local data once so other devices can see it.
-          const localUsage = JSON.parse(localStorage.getItem(STORAGE_KEYS.usage) || '{}')
-          const localFaves = JSON.parse(localStorage.getItem(STORAGE_KEYS.faves) || '[]')
-          const localLog = JSON.parse(localStorage.getItem(STORAGE_KEYS.usageLog) || '[]')
-          if (Object.keys(localUsage).length || localFaves.length || localLog.length) {
-            setDoc(doc(db, 'users', firebaseUser.uid), { [F.usage]: localUsage, [F.faves]: localFaves, [F.usageLog]: localLog }, { merge: true })
-          }
-        }
-
-        setUser(firebaseUser)
-      } else {
+      if (!firebaseUser) {
         setUser(null)
         setFirstName('')
+        setLoading(false)
+        return
       }
-      setLoading(false)
+
+      const showApp = () => {
+        setUser(firebaseUser)
+        setLoading(false)
+      }
+
+      // A returning device already has everything saved, so open right away;
+      // a bad connection must never hold up (or blank out) the app.
+      const returningDevice = localStorage.getItem(STORAGE_KEYS.uid) === firebaseUser.uid
+      if (returningDevice) showApp()
+
+      let snap
+      try {
+        snap = await getDoc(doc(db, 'users', firebaseUser.uid))
+      } catch {
+        // Offline. A new device stays unmarked, so it seeds on the next launch.
+        if (!returningDevice) showApp()
+        return
+      }
+      setFirstName(snap.exists() ? snap.data().firstName : '')
+
+      if (!returningDevice) {
+        // Seed localStorage from Firestore when this is a new or different device.
+        // Must happen before setUser so AppShell's hooks initialize with the right data.
+        if (snap.exists()) {
+          const data = snap.data()
+          if (data[F.usage] !== undefined) localStorage.setItem(STORAGE_KEYS.usage, JSON.stringify(data[F.usage]))
+          if (data[F.faves] !== undefined) localStorage.setItem(STORAGE_KEYS.faves, JSON.stringify(data[F.faves]))
+          if (data[F.usageLog] !== undefined) localStorage.setItem(STORAGE_KEYS.usageLog, JSON.stringify(data[F.usageLog]))
+        }
+        localStorage.setItem(STORAGE_KEYS.uid, firebaseUser.uid)
+        showApp()
+      } else if (snap.exists() && snap.data()[F.usage] === undefined) {
+        // Same device, but Firestore has no usage data yet — this user predates the sync
+        // feature. Upload their existing local data once so other devices can see it.
+        const localUsage = JSON.parse(localStorage.getItem(STORAGE_KEYS.usage) || '{}')
+        const localFaves = JSON.parse(localStorage.getItem(STORAGE_KEYS.faves) || '[]')
+        const localLog = JSON.parse(localStorage.getItem(STORAGE_KEYS.usageLog) || '[]')
+        if (Object.keys(localUsage).length || localFaves.length || localLog.length) {
+          setDoc(doc(db, 'users', firebaseUser.uid), { [F.usage]: localUsage, [F.faves]: localFaves, [F.usageLog]: localLog }, { merge: true })
+        }
+      }
     })
   }, [])
 
@@ -66,6 +83,10 @@ export function AuthProvider({ children }) {
 
   async function signIn(email, password) {
     await signInWithEmailAndPassword(auth, email, password)
+  }
+
+  async function resetPassword(email) {
+    await sendPasswordResetEmail(auth, email)
   }
 
   async function signOut() {
@@ -94,7 +115,7 @@ export function AuthProvider({ children }) {
   }
 
   return (
-    <AuthContext.Provider value={{ user, firstName, loading, signUp, signIn, signOut, updateFirstName, updateCredentials, deleteAccount }}>
+    <AuthContext.Provider value={{ user, firstName, loading, signUp, signIn, resetPassword, signOut, updateFirstName, updateCredentials, deleteAccount }}>
       {children}
     </AuthContext.Provider>
   )

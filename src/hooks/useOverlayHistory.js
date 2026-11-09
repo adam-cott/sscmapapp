@@ -15,7 +15,7 @@ let listenerBound = false
 // close and an open recorded in the same microtask are batched here and
 // resolved as one replaceState swap (net stack depth unchanged, no real
 // back-navigation) instead of racing a back() against a pushState().
-let pendingClose = null
+let pendingCloses = []
 let pendingOpens = []
 let flushScheduled = false
 
@@ -25,28 +25,37 @@ function scheduleFlush() {
   queueMicrotask(flush)
 }
 
+function removeEntry(entry) {
+  overlayStack.splice(overlayStack.lastIndexOf(entry), 1)
+}
+
+// An onTop entry (the full-screen Filter menu) stays first in line for back,
+// even if something opens behind it while it's up.
+function addEntry(entry) {
+  const end = overlayStack.length
+  overlayStack.splice(overlayStack[end - 1]?.onTop ? end - 1 : end, 0, entry)
+}
+
 function flush() {
   flushScheduled = false
-  const close = pendingClose
-  const opens = pendingOpens
-  pendingClose = null
+  const closes = pendingCloses.filter(entry => overlayStack.includes(entry))
+  const opens = pendingOpens.filter(entry => !entry.closed)
+  pendingCloses = []
   pendingOpens = []
 
-  if (close && opens.length) {
-    const idx = overlayStack.lastIndexOf(close)
-    if (idx !== -1) overlayStack.splice(idx, 1)
-    overlayStack.push(...opens)
-    window.history.replaceState({ sscOverlay: true }, '')
-  } else if (close) {
-    // Left in overlayStack until the resulting popstate's listener removes
-    // it below — that keeps the array in lockstep with the real history
-    // depth, since the browser hasn't actually traversed back yet.
-    window.history.back()
-  } else if (opens.length) {
-    for (const entry of opens) {
-      overlayStack.push(entry)
-      window.history.pushState({ sscOverlay: true }, '')
-    }
+  const swaps = Math.min(closes.length, opens.length)
+  closes.slice(0, swaps).forEach(removeEntry)
+  opens.slice(0, swaps).forEach(addEntry)
+  if (swaps) window.history.replaceState({ sscOverlay: true }, '')
+
+  // Left in overlayStack until the resulting popstate's listener removes
+  // them — that keeps the array in lockstep with the real history depth,
+  // since the browser hasn't actually traversed back yet.
+  if (closes.length > swaps) window.history.go(swaps - closes.length)
+
+  for (const entry of opens.slice(swaps)) {
+    addEntry(entry)
+    window.history.pushState({ sscOverlay: true }, '')
   }
 }
 
@@ -54,11 +63,16 @@ function ensureListener() {
   if (listenerBound) return
   listenerBound = true
   window.addEventListener('popstate', () => {
+    // Entries already marked closed mean this popstate came from our own
+    // history.go() (an in-app close consuming its entry), not a real back
+    // gesture — remove exactly those, even if something else is on top.
+    const consumed = overlayStack.filter(entry => entry.closed)
+    if (consumed.length) {
+      consumed.forEach(removeEntry)
+      return
+    }
     const top = overlayStack.pop()
-    // `top.closed` is already true when this popstate was caused by our
-    // own programmatic history.back() (an in-app close consuming its
-    // entry) rather than a real back gesture — skip re-closing in that case.
-    if (top && !top.closed) {
+    if (top) {
       top.closed = true
       top.close()
     }
@@ -70,7 +84,7 @@ function ensureListener() {
 // calls `close` instead of leaving the app. Closing via in-app UI (an X
 // button, a "clear filters" tap, etc.) consumes the same entry so the
 // history stack never grows unbounded.
-export function useOverlayHistory(isOpen, close) {
+export function useOverlayHistory(isOpen, close, onTop = false) {
   const closeRef = useRef(close)
   const entryRef = useRef(null)
   const wasOpen = useRef(isOpen)
@@ -85,7 +99,7 @@ export function useOverlayHistory(isOpen, close) {
 
   useEffect(() => {
     if (isOpen && !wasOpen.current) {
-      const entry = { closed: false, close: () => closeRef.current() }
+      const entry = { closed: false, onTop, close: () => closeRef.current() }
       entryRef.current = entry
       pendingOpens.push(entry)
       scheduleFlush()
@@ -94,10 +108,10 @@ export function useOverlayHistory(isOpen, close) {
       entryRef.current = null
       if (entry && !entry.closed) {
         entry.closed = true
-        pendingClose = entry
+        pendingCloses.push(entry)
         scheduleFlush()
       }
     }
     wasOpen.current = isOpen
-  }, [isOpen])
+  }, [isOpen, onTop])
 }

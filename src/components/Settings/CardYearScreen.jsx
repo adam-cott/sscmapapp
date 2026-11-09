@@ -8,7 +8,7 @@ function formatDate(date) {
 export default function CardYearScreen({ onBack }) {
   const { startYear, expiryDate, daysRemaining, isExpired, isExpiring } = useCardYear()
 
-  const startDate = new Date(startYear, 7, 1)
+  const startDate = new Date(startYear, 9, 1)
 
   const statusColor = isExpired ? '#ef4444' : isExpiring ? '#f97316' : '#22c55e'
   const statusText = isExpired
