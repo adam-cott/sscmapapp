@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef } from 'react'
+import { useState, useEffect, useCallback, useRef, useMemo } from 'react'
 import './App.css'
 import { useAuth } from './hooks/useAuth'
 import AuthScreen from './components/Auth/AuthScreen'
@@ -34,6 +34,8 @@ import { useFeaturedDeals } from './hooks/useFeaturedDeals'
 import AdminTab from './components/Tabs/AdminTab'
 import { ADMIN_UID } from './constants/admin'
 
+const ACTIVE_DEALS = dealsData.filter(d => d.active !== false)
+
 export default function App() {
   const { user, loading } = useAuth()
   if (loading) return null
@@ -58,7 +60,7 @@ function AppShell() {
   const [showUseToast, setShowUseToast] = useState(false)
   const [lastUsedDealId, setLastUsedDealId] = useState(null)
 
-  const { dealsWithUsage, usageMap, setUsageMap, recordUse, undoUse, resetAll } = useDeals(dealsData.filter(d => d.active !== false))
+  const { dealsWithUsage, usageMap, setUsageMap, recordUse, undoUse, resetAll } = useDeals(ACTIVE_DEALS)
   const { faves, setFaves, toggleFave, isFave } = useFaves()
   const { usageLog, setUsageLog, logUse, undoLog, clearLog } = useUsageLog()
 
@@ -90,9 +92,9 @@ function AppShell() {
 
   // On Home, Near Me turns the page into a list of deals within NEAR_ME_MILES.
   const homeNearMe = activeTab === 'home' && nearActive
-  const homeDeals = homeNearMe
+  const homeDeals = useMemo(() => (homeNearMe
     ? filteredDeals.filter(d => (getNearestDistance(d, coords) ?? Infinity) <= NEAR_ME_MILES)
-    : filteredDeals
+    : filteredDeals), [homeNearMe, filteredDeals, coords])
   const resetFilters = useCallback(() => {
     clearFilters()
     setNearMe(false)

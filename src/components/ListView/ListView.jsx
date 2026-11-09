@@ -29,8 +29,8 @@ export default function ListView({ deals, onSelectDeal, userCoords }) {
       {deals.map((deal, i) => (
         <div
           key={deal.id}
-          className="animate-slide-up"
-          style={{ animationDelay: `${i * 30}ms` }}
+          className={i < 10 ? 'animate-slide-up' : undefined}
+          style={i < 10 ? { animationDelay: `${i * 30}ms` } : undefined}
         >
           <DealCard deal={deal} onClick={() => onSelectDeal(deal)} userCoords={userCoords} />
         </div>

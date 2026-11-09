@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { ChevronRight, ChevronLeft } from 'lucide-react'
 import { useCardYear } from '../../hooks/useCardYear'
 import { getNearestDistance, getNearestLocation, NEAR_ME_MILES } from '../../utils/dealHelpers'
@@ -175,59 +175,69 @@ export default function HomeTab({
   const handleExitList = () => { setListLabel(null); onExitList() }
   const shownLabel = listLabel ?? (filterBar.nearMe ? `Within ${NEAR_ME_MILES} miles` : null)
 
-  const activeDeals = deals.filter(d => d.usage.status !== 'exhausted')
+  // Only recalculated when the deals, location or the student's own lists change.
+  const {
+    activeDeals, nearbyCards, usedDealIds, usedCards, featuredCards, favesCards,
+    categoryCards, unlimitedCards, unlimitedIds,
+  } = useMemo(() => {
+    const activeDeals = deals.filter(d => d.usage.status !== 'exhausted')
 
-  // Candidate pools are built wider than the 8-card cap, then deduped by
-  // business (see buildHomeCards) BEFORE slicing to 8 — otherwise a business
-  // with several deals clustered together could crowd out other businesses.
-  const nearbyPool = userCoords
-    ? [...activeDeals]
-        .map(d => ({ deal: d, dist: getNearestDistance(d, userCoords) }))
-        .filter(({ dist }) => dist !== null)
-        .sort((a, b) => a.dist - b.dist)
-        .map(({ deal }) => deal)
-    : spreadAcrossCategories(activeDeals, 100, 8)
-  const nearbyCards = buildHomeCards(nearbyPool, userCoords, 8)
+    // Candidate pools are built wider than the 8-card cap, then deduped by
+    // business (see buildHomeCards) BEFORE slicing to 8 — otherwise a business
+    // with several deals clustered together could crowd out other businesses.
+    const nearbyPool = userCoords
+      ? [...activeDeals]
+          .map(d => ({ deal: d, dist: getNearestDistance(d, userCoords) }))
+          .filter(({ dist }) => dist !== null)
+          .sort((a, b) => a.dist - b.dist)
+          .map(({ deal }) => deal)
+      : spreadAcrossCategories(activeDeals, 100, 8)
+    const nearbyCards = buildHomeCards(nearbyPool, userCoords, 8)
 
-  const seenIds = new Set()
-  const usedDealIds = [...usageLog].reverse().map(e => e.dealId).filter(id => {
-    if (seenIds.has(id)) return false
-    seenIds.add(id)
-    return true
-  })
-  const usedPool = usedDealIds
-    .map(id => activeDeals.find(d => d.id === id))
-    .filter(Boolean)
-  const usedCards = buildHomeCards(usedPool, userCoords, 8)
+    const seenIds = new Set()
+    const usedDealIds = [...usageLog].reverse().map(e => e.dealId).filter(id => {
+      if (seenIds.has(id)) return false
+      seenIds.add(id)
+      return true
+    })
+    const usedPool = usedDealIds
+      .map(id => activeDeals.find(d => d.id === id))
+      .filter(Boolean)
+    const usedCards = buildHomeCards(usedPool, userCoords, 8)
 
-  const featuredPool = (featuredIds ?? [])
-    .map(id => activeDeals.find(d => d.id === id))
-    .filter(Boolean)
-  const featuredCards = buildHomeCards(featuredPool, userCoords)
+    const featuredPool = (featuredIds ?? [])
+      .map(id => activeDeals.find(d => d.id === id))
+      .filter(Boolean)
+    const featuredCards = buildHomeCards(featuredPool, userCoords)
 
-  // Most-recently-favorited first — faves is stored oldest-to-newest.
-  const favesPool = [...(faves ?? [])].reverse()
-    .map(id => activeDeals.find(d => d.id === id))
-    .filter(Boolean)
-  const favesCards = buildHomeCards(favesPool, userCoords, 8)
+    // Most-recently-favorited first — faves is stored oldest-to-newest.
+    const favesPool = [...(faves ?? [])].reverse()
+      .map(id => activeDeals.find(d => d.id === id))
+      .filter(Boolean)
+    const favesCards = buildHomeCards(favesPool, userCoords, 8)
 
-  const categorySections = CATEGORY_SECTIONS.map(({ category, title }) => {
-    const pool = sortByDistance(activeDeals.filter(d => d.category === category), userCoords)
+    const categoryCards = CATEGORY_SECTIONS.map(({ category, title }) => {
+      const pool = sortByDistance(activeDeals.filter(d => d.category === category), userCoords)
+      return { key: category, title, cards: buildHomeCards(pool, userCoords, 8), seeAllCount: pool.length }
+    })
+
+    // maxUses === null can never be exhausted, so this is already the full
+    // set regardless of activeDeals' exhausted filter — no separate
+    // "unfiltered" pool needed the way Use Again/Featured need one below.
+    const unlimitedPool = sortByDistance(activeDeals.filter(d => d.deal.maxUses === null), userCoords)
+    const unlimitedCards = buildHomeCards(unlimitedPool, userCoords, 8)
+    const unlimitedIds = unlimitedPool.map(d => d.id)
+
     return {
-      key: category,
-      title,
-      cards: buildHomeCards(pool, userCoords, 8),
-      seeAllCount: pool.length,
-      onSeeAll: () => { setListLabel(null); onShowCategory(category) },
+      activeDeals, nearbyCards, usedDealIds, usedCards, featuredCards, favesCards,
+      categoryCards, unlimitedCards, unlimitedIds,
     }
-  })
+  }, [deals, usageLog, featuredIds, faves, userCoords])
 
-  // maxUses === null can never be exhausted, so this is already the full
-  // set regardless of activeDeals' exhausted filter — no separate
-  // "unfiltered" pool needed the way Use Again/Featured need one below.
-  const unlimitedPool = sortByDistance(activeDeals.filter(d => d.deal.maxUses === null), userCoords)
-  const unlimitedCards = buildHomeCards(unlimitedPool, userCoords, 8)
-  const unlimitedIds = unlimitedPool.map(d => d.id)
+  const categorySections = categoryCards.map(section => ({
+    ...section,
+    onSeeAll: () => { setListLabel(null); onShowCategory(section.key) },
+  }))
 
   // Sections with no cards (new user, nothing used/favorited yet, no
   // Firestore-set Featured items) are dropped entirely rather than shown

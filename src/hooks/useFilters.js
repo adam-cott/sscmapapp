@@ -86,9 +86,10 @@ export function useFilters(deals, userCoords) {
 
     // Nearest first when we know where the user is, otherwise A-Z.
     if (userCoords) {
+      const distances = new Map(filtered.map(d => [d, getNearestDistance(d, userCoords)]))
       sorted.sort((a, b) => {
-        const da = getNearestDistance(a, userCoords)
-        const db = getNearestDistance(b, userCoords)
+        const da = distances.get(a)
+        const db = distances.get(b)
         if (da === null && db === null) return a.name.localeCompare(b.name)
         if (da === null) return 1
         if (db === null) return -1

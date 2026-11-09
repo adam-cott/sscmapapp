@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { doc, onSnapshot } from 'firebase/firestore'
 import { db } from '../firebase'
 
@@ -21,6 +21,6 @@ export function useFeaturedDeals() {
     return unsub
   }, [])
 
-  const featuredIds = featuredItems.map(item => item.id)
+  const featuredIds = useMemo(() => featuredItems.map(item => item.id), [featuredItems])
   return { featuredIds, featuredItems, loading }
 }

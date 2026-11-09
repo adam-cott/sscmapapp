@@ -1,4 +1,4 @@
-import { useCallback } from 'react'
+import { useCallback, useMemo } from 'react'
 import { useLocalStorage } from './useLocalStorage'
 import { getDealUsageState } from '../utils/dealHelpers'
 import { STORAGE_KEYS } from '../constants/storageKeys'
@@ -28,10 +28,10 @@ export function useDeals(deals) {
     setUsageMap({})
   }, [setUsageMap])
 
-  const dealsWithUsage = deals.map(deal => ({
+  const dealsWithUsage = useMemo(() => deals.map(deal => ({
     ...deal,
     usage: getDealUsageState(deal, usageMap),
-  }))
+  })), [deals, usageMap])
 
   return { dealsWithUsage, usageMap, setUsageMap, recordUse, undoUse, resetAll }
 }
