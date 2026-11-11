@@ -5,6 +5,7 @@ Matches each deal's business name to the CSV, picks the best location
 based on the deal's locationRestriction city, then geocodes by street address.
 """
 import json, csv, re, time, urllib.request, urllib.parse, os
+from ssc_guard import write_deals_file
 
 SCRIPT_DIR   = os.path.dirname(os.path.abspath(__file__))
 JSON_PATH    = os.path.join(SCRIPT_DIR, 'src', 'data', 'deals.json')
@@ -213,8 +214,7 @@ def main():
         if needs_sleep:
             time.sleep(1)
 
-    with open(JSON_PATH, 'w', encoding='utf-8') as f:
-        json.dump(deals, f, ensure_ascii=False, indent=2)
+    write_deals_file(JSON_PATH, json.dumps(deals, ensure_ascii=False, indent=2), 'geocode_from_csv.py')
 
     still_null = sum(1 for d in deals if d['lat'] is None)
     print(f'\nUpdated:   {updated}')

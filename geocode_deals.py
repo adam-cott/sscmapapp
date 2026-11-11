@@ -7,6 +7,7 @@ Geocode all deals using Nominatim (free, no API key).
 - Writes geocode_review.csv so you can spot-check and manually fix any misses
 """
 import json, csv, time, urllib.request, urllib.parse, os
+from ssc_guard import write_deals_file
 
 SCRIPT_DIR  = os.path.dirname(os.path.abspath(__file__))
 JSON_PATH   = os.path.join(SCRIPT_DIR, 'src', 'data', 'deals.json')
@@ -153,8 +154,7 @@ def main():
         else:                    missing_count  += 1
 
     # Save updated JSON
-    with open(JSON_PATH, 'w', encoding='utf-8') as f:
-        json.dump(deals, f, ensure_ascii=False, indent=2)
+    write_deals_file(JSON_PATH, json.dumps(deals, ensure_ascii=False, indent=2), 'geocode_deals.py')
     print(f"\nUpdated {JSON_PATH}")
 
     # Write review CSV (one row per unique target)

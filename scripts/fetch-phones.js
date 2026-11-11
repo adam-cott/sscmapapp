@@ -1,21 +1,24 @@
 #!/usr/bin/env node
 // Usage (PowerShell):
 //   $env:GOOGLE_MAPS_API_KEY="your_key"
-//   node scripts/fetch-phones.js --dry-run
-//   node scripts/fetch-phones.js --skip-low-confidence
-//   node scripts/fetch-phones.js
+//   node scripts/fetch-phones.js                 (dry run: shows what would be called, makes no requests)
+//   node scripts/fetch-phones.js --live          (calls Google, writes phones-output.json only)
+//   node scripts/fetch-phones.js --live --write  (also writes phones into deals.json)
+//   add --skip-low-confidence to leave out low-confidence matches
 
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
+import { approvePaidRun, writeDealsFile } from './lib/guard.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
-const DRY_RUN = process.argv.includes('--dry-run')
+const LIVE = process.argv.includes('--live')
+const DRY_RUN = !process.argv.includes('--write')
 const SKIP_LOW = process.argv.includes('--skip-low-confidence')
 const API_KEY = process.env.GOOGLE_MAPS_API_KEY
 
-if (!API_KEY) {
+if (!API_KEY && LIVE) {
   console.error('Error: GOOGLE_MAPS_API_KEY environment variable is not set.')
   process.exit(1)
 }
@@ -26,6 +29,8 @@ const REQUEST_CAP = 3000  // Covers all 1,438 locations with two-pass fallback
 const DELAY_MS = 200
 
 let requestCount = 0
+let budget
+const FIELDS = 'places.displayName,places.location,places.nationalPhoneNumber,places.id'
 
 const CATEGORY_HINTS = {
   pizza: 'pizza',
@@ -109,6 +114,7 @@ function scoreResult(place, bizName, targetLat, targetLng) {
 async function placesSearch(query, lat, lng, radius) {
   if (requestCount >= REQUEST_CAP) return null
   requestCount++
+  budget.spend('text-search-enterprise')
   const body = {
     textQuery: query,
     locationBias: { circle: { center: { latitude: lat, longitude: lng }, radius } },
@@ -120,7 +126,7 @@ async function placesSearch(query, lat, lng, radius) {
       headers: {
         'Content-Type': 'application/json',
         'X-Goog-Api-Key': API_KEY,
-        'X-Goog-FieldMask': 'places.displayName,places.location,places.nationalPhoneNumber,places.id',
+        'X-Goog-FieldMask': FIELDS,
       },
       body: JSON.stringify(body),
     })
@@ -159,7 +165,19 @@ async function main() {
   const deals = JSON.parse(fs.readFileSync(DEALS_PATH, 'utf8'))
   console.log(`Loaded ${deals.length} deals.`)
 
-  const mode = DRY_RUN ? 'dry-run' : SKIP_LOW ? 'live-skip-low-confidence' : 'live'
+  const needPhone = deals.reduce((n, d) => n + (d.locations ?? []).filter((l) => l.phone == null).length, 0)
+  const maxCalls = Math.min(needPhone * 2, REQUEST_CAP)
+  if (!LIVE) {
+    console.log(`Dry run: ${needPhone} locations lack a phone. A live run would make up to ${maxCalls} Places Text Search (Enterprise) calls (fields: ${FIELDS}). No requests made. Add --live to run.`)
+    return
+  }
+  if (maxCalls === 0) {
+    console.log('Every location already has a phone; nothing to look up.')
+    return
+  }
+  budget = await approvePaidRun({ script: 'fetch-phones.js', calls: { 'text-search-enterprise': maxCalls }, fields: FIELDS })
+
+  const mode = DRY_RUN ? 'no-write' : SKIP_LOW ? 'live-skip-low-confidence' : 'live'
   console.log(`Mode: ${mode}`)
   console.log(`Request cap: ${REQUEST_CAP}\n`)
 
@@ -277,8 +295,9 @@ async function main() {
   console.log(`\nWrote output to ${OUTPUT_PATH}`)
 
   if (!DRY_RUN) {
-    fs.writeFileSync(DEALS_PATH, JSON.stringify(deals, null, 2))
-    console.log(`Patched deals.json`)
+    await writeDealsFile({ script: 'fetch-phones.js', file: DEALS_PATH, text: JSON.stringify(deals, null, 2) })
+  } else {
+    console.log('Dry run: not writing deals.json (add --write)')
   }
 
   console.log('\n========================================')

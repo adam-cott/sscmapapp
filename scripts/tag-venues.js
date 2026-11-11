@@ -5,15 +5,18 @@
 // address alone. Hand fixes live in scripts/venue-overrides.json and are
 // applied every run, so re-tagging each card year keeps them.
 //
-//   node scripts/tag-venues.js           (dry run → reports/venue-tags.md; needs GOOGLE_MAPS_API_KEY in .env)
-//   node scripts/tag-venues.js --write   (also writes the tags to deals.json)
+//   node scripts/tag-venues.js                  (dry run: shows what would be called, makes no requests)
+//   node scripts/tag-venues.js --live           (calls Google → reports/venue-tags.md; needs GOOGLE_MAPS_API_KEY in .env)
+//   node scripts/tag-venues.js --live --write   (also writes the tags to deals.json)
 import { readFileSync, writeFileSync } from 'node:fs'
+import { approvePaidRun, writeDealsFile } from './lib/guard.js'
 import { SEARCH_VENUES, cityFromAddress } from '../src/utils/dealHelpers.js'
 
 const ROOT = new URL('../', import.meta.url)
 const FILE = process.env.DEALS_FILE ?? 'src/data/deals.json'
 const REPORT = 'reports/venue-tags.md'
 const WRITE = process.argv.includes('--write')
+const LIVE = process.argv.includes('--live')
 const REQUEST_CAP = 800
 
 // What Google calls each venue, or a building on it.
@@ -28,10 +31,6 @@ const GOOGLE_NAMES = {
   'Fashion Place': /fashion place/i,
 }
 
-process.loadEnvFile(new URL('.env', ROOT))
-const KEY = process.env.GOOGLE_MAPS_API_KEY
-if (!KEY) throw new Error('GOOGLE_MAPS_API_KEY is not set in .env')
-
 const km = (a, b) => {
   const r = d => d * Math.PI / 180
   const h = Math.sin(r(b.lat - a.lat) / 2) ** 2 + Math.cos(r(a.lat)) * Math.cos(r(b.lat)) * Math.sin(r(b.lng - a.lng) / 2) ** 2
@@ -45,9 +44,11 @@ const sameName = (ours, google) => words(ours).some(w => words(google).includes(
 const sleep = ms => new Promise(r => setTimeout(r, ms))
 
 let requests = 0
-async function google(url, init) {
+let budget
+async function google(url, init, sku) {
   for (let attempt = 0; ; attempt++) {
     if (++requests > REQUEST_CAP) throw new Error(`request cap ${REQUEST_CAP} reached`)
+    budget.spend(sku)
     const json = await (await fetch(url, init)).json()
     if (!json.error) return json
     if (attempt === 3) throw new Error(JSON.stringify(json.error))
@@ -70,20 +71,34 @@ for (const d of deals.filter(d => d.active !== false)) {
 const containerNames = new Map()
 async function containerName(id) {
   if (!containerNames.has(id)) {
-    const json = await google(`https://places.googleapis.com/v1/places/${id}`, { headers: headers('displayName') })
+    const json = await google(`https://places.googleapis.com/v1/places/${id}`, { headers: headers('displayName') }, 'place-details-pro')
     containerNames.set(id, json.displayName?.text ?? '')
   }
   return containerNames.get(id)
 }
 const found = []
 const all = [...stores.values()]
+const maxSearch = Math.min(all.length, REQUEST_CAP)
+const maxDetails = Math.min(all.length * 2, REQUEST_CAP)
+if (!LIVE) {
+  console.log(`Dry run: ${all.length} stores in ${FILE}. A live run would make up to ${maxSearch} Places Text Search calls (fields: places.displayName,places.formattedAddress,places.location,places.containingPlaces) and up to ${maxDetails} Place Details calls (field: displayName). No requests made. Add --live to run.`)
+  process.exit(0)
+}
+process.loadEnvFile(new URL('.env', ROOT))
+const KEY = process.env.GOOGLE_MAPS_API_KEY
+if (!KEY) throw new Error('GOOGLE_MAPS_API_KEY is not set in .env')
+budget = await approvePaidRun({
+  script: 'tag-venues.js',
+  calls: { 'text-search-pro': maxSearch, 'place-details-pro': maxDetails },
+  fields: 'Text Search: places.displayName,places.formattedAddress,places.location,places.containingPlaces; Place Details: displayName',
+})
 for (let i = 0; i < all.length; i += 3) {
   await Promise.all(all.slice(i, i + 3).map(async s => {
     const json = await google('https://places.googleapis.com/v1/places:searchText', {
       method: 'POST',
       headers: headers('places.displayName,places.formattedAddress,places.location,places.containingPlaces'),
       body: JSON.stringify({ textQuery: `${s.name}, ${s.address}`, pageSize: 5, locationBias: { circle: { center: { latitude: s.lat, longitude: s.lng }, radius: 1000 } } }),
-    })
+    }, 'text-search-pro')
     const g = (json.places ?? []).find(p => sameName(s.name, p.displayName?.text ?? '') && km(s, { lat: p.location.latitude, lng: p.location.longitude }) < 0.15)
     if (!g) return
     const inside = await Promise.all((g.containingPlaces ?? []).map(c => containerName(c.id)))
@@ -109,7 +124,7 @@ if (WRITE) {
     const venue = byStore.get(`${d.name}|${l.address}`)
     if (venue) l.venue = venue
   }
-  writeFileSync(new URL(FILE, ROOT), JSON.stringify(deals, null, 2) + '\n')
+  await writeDealsFile({ script: 'tag-venues.js', file: FILE, text: JSON.stringify(deals, null, 2) + '\n' })
 }
 
 const sections = SEARCH_VENUES.map(({ venue }) => {

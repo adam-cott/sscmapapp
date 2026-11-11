@@ -2,29 +2,28 @@
 // still open, and not a city-center or shared-spot fallback? Writes
 // reports/pin-audit.md. Read-only unless --snap is passed.
 //
-//   node scripts/audit-pins.js                 (needs GOOGLE_MAPS_API_KEY in .env; ~750 requests)
-//   node scripts/audit-pins.js --snap          (also moves pins 50-150 m off onto Google's exact spot)
+//   node scripts/audit-pins.js                 (dry run: shows what would be called, makes no requests)
+//   node scripts/audit-pins.js --live          (needs GOOGLE_MAPS_API_KEY in .env; ~750 requests)
+//   node scripts/audit-pins.js --live --snap   (also moves pins 50-150 m off onto Google's exact spot)
 //   DEALS_FILE=reports/card-import-2026-27.preview.json node scripts/audit-pins.js   (check an import first)
 //
 // Run it at every card switch, after the import. Fix anything under
 // "Misplaced" or "Closed" by hand (dry run + approval, as with any deals.json edit).
 import { readFileSync, writeFileSync } from 'node:fs'
+import { approvePaidRun, writeDealsFile } from './lib/guard.js'
 import { cityFromAddress } from '../src/utils/dealHelpers.js'
 
 const ROOT = new URL('../', import.meta.url)
 const FILE = process.env.DEALS_FILE ?? 'src/data/deals.json'
 const REPORT = 'reports/pin-audit.md'
 const SNAP = process.argv.includes('--snap')
+const LIVE = process.argv.includes('--live')
 const REQUEST_CAP = 1500
 const ON_BUILDING_M = 50
 const NEAR_M = 150
 const CITY_CENTER_M = 300
 // Real businesses Google Maps doesn't list; their pins can't be checked here.
 const NOT_ON_GOOGLE = ['Provo Canyon Adventures']
-
-process.loadEnvFile(new URL('.env', ROOT))
-const KEY = process.env.GOOGLE_MAPS_API_KEY
-if (!KEY) throw new Error('GOOGLE_MAPS_API_KEY is not set in .env')
 
 const km = (a, b) => {
   const r = d => d * Math.PI / 180
@@ -41,9 +40,11 @@ const sameName = (ours, google) => words(ours).some(w => words(google).includes(
 const sleep = ms => new Promise(r => setTimeout(r, ms))
 
 let requests = 0
-async function google(url, init) {
+let budget
+async function google(url, init, sku) {
   for (let attempt = 0; ; attempt++) {
     if (++requests > REQUEST_CAP) throw new Error(`request cap ${REQUEST_CAP} reached`)
+    budget.spend(sku)
     const json = await (await fetch(url, init)).json()
     if (!json.error && !json.error_message) return json
     if (attempt === 3) throw new Error(JSON.stringify(json.error ?? json.error_message))
@@ -59,7 +60,7 @@ async function searchPlaces(textQuery, near, radius, pageSize) {
       'X-Goog-FieldMask': 'places.displayName,places.formattedAddress,places.location,places.businessStatus',
     },
     body: JSON.stringify({ textQuery, pageSize, locationBias: { circle: { center: { latitude: near.lat, longitude: near.lng }, radius } } }),
-  })
+  }, 'text-search-pro')
   return (json.places ?? []).map(p => ({
     name: p.displayName?.text ?? '', address: p.formattedAddress, status: p.businessStatus,
     lat: p.location.latitude, lng: p.location.longitude, m: meters(near, { lat: p.location.latitude, lng: p.location.longitude }),
@@ -78,6 +79,21 @@ for (const d of deals.filter(d => d.active !== false)) {
 
 // Pass 1: "<business>, <address>" near the pin. Pass 2 (misses only): "<business> <city> UT", wider.
 const all = [...pins.values()]
+const cities = new Set(all.map(p => cityFromAddress(p.address)).filter(Boolean))
+const maxSearch = Math.min(all.length * 2, REQUEST_CAP)
+const maxGeocode = Math.max(1, Math.min(cities.size, REQUEST_CAP))
+if (!LIVE) {
+  console.log(`Dry run: ${all.length} pins in ${FILE}. A live run would make up to ${maxSearch} Places Text Search calls (fields: places.displayName,places.formattedAddress,places.location,places.businessStatus) and up to ${maxGeocode} Geocoding calls. No requests made. Add --live to run.`)
+  process.exit(0)
+}
+process.loadEnvFile(new URL('.env', ROOT))
+const KEY = process.env.GOOGLE_MAPS_API_KEY
+if (!KEY) throw new Error('GOOGLE_MAPS_API_KEY is not set in .env')
+budget = await approvePaidRun({
+  script: 'audit-pins.js',
+  calls: { 'text-search-pro': maxSearch, geocoding: maxGeocode },
+  fields: 'places.displayName,places.formattedAddress,places.location,places.businessStatus + Geocoding (address → coordinates)',
+})
 async function check(p) {
   const pass1 = await searchPlaces(p.address ? `${p.name}, ${p.address}` : `${p.name} Utah`, p, 3000, 5)
   let match = pass1.filter(g => sameName(p.name, g.name)).sort((a, b) => a.m - b.m)[0]
@@ -97,7 +113,7 @@ for (let i = 0; i < all.length; i += 3) {
 // City centers, from Google Geocoding
 const centers = {}
 for (const c of new Set(results.map(r => cityFromAddress(r.address)).filter(Boolean))) {
-  const json = await google(`https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(`${c}, UT`)}&key=${KEY}`)
+  const json = await google(`https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(`${c}, UT`)}&key=${KEY}`, undefined, 'geocoding')
   const g = json.results?.[0]
   if (g?.types.includes('locality')) centers[c] = g.geometry.location
 }
@@ -121,7 +137,7 @@ if (SNAP) {
       for (const l of [...d.locations, d]) if (l.lat === r.lat && l.lng === r.lng) Object.assign(l, { lat: r.match.lat, lng: r.match.lng })
     }
   }
-  writeFileSync(new URL(FILE, ROOT), JSON.stringify(deals, null, 2) + '\n')
+  await writeDealsFile({ script: 'audit-pins.js', file: FILE, text: JSON.stringify(deals, null, 2) + '\n' })
 }
 
 const row = r => `| ${r.name} | ${r.address || '(blank)'} | ${r.match ? `${r.match.m} m — ${r.match.name}, ${r.match.address}` : `no match (nearest place: ${r.top ? `${r.top.name}, ${r.top.m} m` : 'none'})`} |`

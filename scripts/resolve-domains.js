@@ -14,6 +14,7 @@
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath, pathToFileURL } from 'url'
+import { approvePaidRun } from './lib/guard.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
@@ -300,28 +301,19 @@ function readJson(p, fallback) {
   }
 }
 
+// Read-only: scripts/lib/guard.js owns this file and counts every paid call.
 function readUsage() {
-  const usage = readJson(USAGE_PATH, null)
-  if (usage && usage.months) return usage
-  return {
-    _note: 'Shared Google Places call tally, keyed by UTC calendar month then SKU tier. Any script that calls Places should add its counts here. Only scripts that write to this file are reflected.',
-    months: {},
-  }
+  return readJson(USAGE_PATH, {})
 }
 
 function usedThisMonth(usage) {
-  return usage.months[monthKey()]?.[SKU] ?? 0
-}
-
-function recordUsage(usage, count) {
-  const m = monthKey()
-  usage.months[m] = usage.months[m] || {}
-  usage.months[m][SKU] = (usage.months[m][SKU] || 0) + count
-  fs.writeFileSync(USAGE_PATH, JSON.stringify(usage, null, 2))
+  const month = usage[monthKey()] ?? {}
+  return (month['text-search-enterprise'] ?? 0) + (month[SKU] ?? 0)
 }
 
 let callsMade = 0
 let budget = 0
+let guardBudget
 const API_KEY = process.env.GOOGLE_MAPS_API_KEY
 
 async function placesSearch(query, lat, lng, radius) {
@@ -336,6 +328,7 @@ async function placesSearch(query, lat, lng, radius) {
   }
 
   for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
+    guardBudget.spend('text-search-enterprise')
     try {
       const res = await fetch('https://places.googleapis.com/v1/places:searchText', {
         method: 'POST',
@@ -507,15 +500,17 @@ async function main() {
   console.log(`REQUEST_CAP:         ${REQUEST_CAP}`)
   console.log('')
   console.log(`Monthly tally:       ${alreadyUsed} of ~${MONTHLY_ALLOWANCE} ${SKU} calls used in ${monthKey()}`)
-  console.log('  WARNING: this tally only counts scripts that write to .places-usage.json.')
-  console.log('  fetch-phones.js also calls Text Search and does NOT yet report here,')
-  console.log('  so real monthly usage is higher than shown.')
+  console.log('  (Every paid script adds to this tally through scripts/lib/guard.js; Google Cloud console usage is not included.)')
   console.log('')
 
   if (maxPlanned > maxCalls) {
     console.error(`Refusing to start: worst case ${maxPlanned} calls exceeds --max-calls=${maxCalls}.`)
     console.error(`  Raise --max-calls (up to REQUEST_CAP=${REQUEST_CAP}), or raise REQUEST_CAP first.`)
     process.exit(1)
+  }
+
+  if (liveFlag && maxCalls > 0) {
+    guardBudget = await approvePaidRun({ script: 'resolve-domains.js', calls: { 'text-search-enterprise': maxCalls }, fields: FIELD_MASK })
   }
 
   const results = []
@@ -674,9 +669,7 @@ async function main() {
 
   if (liveFlag) {
     fs.writeFileSync(OUTPUT_PATH, JSON.stringify({ summary, results, needsReview }, null, 2))
-    recordUsage(usage, callsMade)
     console.log(`\nWrote ${path.relative(process.cwd(), OUTPUT_PATH)}`)
-    console.log(`Updated ${path.relative(process.cwd(), USAGE_PATH)}`)
   } else {
     console.log('DRY RUN — nothing written. Re-run with --live to execute.')
   }

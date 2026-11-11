@@ -4,6 +4,7 @@ Generate deals_complete.csv and src/data/deals.json
 from the 418 raw Provo Starving Student Card deals.
 """
 import json, csv, re, os
+from ssc_guard import write_deals_file
 
 SECTION_MAP = {
     1: 'pizza',
@@ -587,8 +588,7 @@ if __name__ == '__main__':
     print(f'Parsed {len(deals)} deals')
 
     # Write JSON
-    with open(json_path, 'w', encoding='utf-8') as f:
-        json.dump(deals, f, ensure_ascii=False, indent=2)
+    write_deals_file(json_path, json.dumps(deals, ensure_ascii=False, indent=2), 'generate_deals.py', extra_warning='This rebuilds the WHOLE deal list from the old 2025-26 card text in this file. It would wipe out the current card.')
     print(f'Wrote {json_path}')
 
     # Write CSV

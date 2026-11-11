@@ -10,6 +10,7 @@ Matches by (business name, city_used) and updates all deals
 for that business+city combo.
 """
 import json, csv, os
+from ssc_guard import write_deals_file
 
 SCRIPT_DIR   = os.path.dirname(os.path.abspath(__file__))
 JSON_PATH    = os.path.join(SCRIPT_DIR, 'src', 'data', 'deals.json')
@@ -99,8 +100,7 @@ def main():
             updated += 1
 
     # Save
-    with open(JSON_PATH, 'w', encoding='utf-8') as f:
-        json.dump(deals, f, ensure_ascii=False, indent=2)
+    write_deals_file(JSON_PATH, json.dumps(deals, ensure_ascii=False, indent=2), 'patch_coords.py')
 
     still_missing = sum(1 for d in deals if d['lat'] is None)
     print(f"Updated {updated} deals")

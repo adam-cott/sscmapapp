@@ -3,16 +3,17 @@
 // and adds qualifying HIGH CONFIDENCE locations to deals.json.
 //
 // Usage:
-//   node scripts/add-missing-locations.js --dry-run
-//   node scripts/add-missing-locations.js
+//   node scripts/add-missing-locations.js          (dry run: shows what would be added)
+//   node scripts/add-missing-locations.js --write  (adds them to deals.json)
 
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { writeDealsFile } from './lib/guard.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const DRY_RUN = process.argv.includes('--dry-run');
+const DRY_RUN = !process.argv.includes('--write');
 const MAX_KM = 90;
 const PROVO = { lat: 40.2969, lng: -111.6942 };
 
@@ -86,9 +87,8 @@ for (const [businessName, items] of byBusiness.entries()) {
 }
 
 if (!DRY_RUN) {
-  fs.writeFileSync(DEALS_PATH, JSON.stringify(deals, null, 2));
+  await writeDealsFile({ script: 'add-missing-locations.js', file: DEALS_PATH, text: JSON.stringify(deals, null, 2) });
   console.log(`\nAdded ${totalAdded} location entries across deals.json`);
-  console.log(`Written to ${DEALS_PATH}`);
 } else {
-  console.log(`\n--dry-run: would add ~${totalAdded} location entries. Run without --dry-run to apply.`);
+  console.log(`\nDry run: not writing deals.json (add --write). Would add ~${totalAdded} location entries.`);
 }

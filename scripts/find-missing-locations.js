@@ -1,21 +1,24 @@
 #!/usr/bin/env node
 // Usage:
-//   GOOGLE_MAPS_API_KEY=your_key node scripts/find-missing-locations.js --dry-run
-//   GOOGLE_MAPS_API_KEY=your_key node scripts/find-missing-locations.js
+//   node scripts/find-missing-locations.js                (dry run: lists the queries, makes no requests)
+//   GOOGLE_MAPS_API_KEY=your_key node scripts/find-missing-locations.js --live
 
 import https from 'https';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { approvePaidRun } from './lib/guard.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const DRY_RUN = process.argv.includes('--dry-run');
+const DRY_RUN = !process.argv.includes('--live');
 const API_KEY = process.env.GOOGLE_MAPS_API_KEY;
 const DEALS_PATH = path.join(__dirname, '../src/data/deals.json');
 const OUTPUT_PATH = path.join(__dirname, 'missing-locations-output.json');
 const REQUEST_CAP = 2400;
 const DELAY_MS = 200;
+const FIELDS = 'places.displayName,places.formattedAddress,places.location,places.types';
+let budget;
 
 if (!API_KEY && !DRY_RUN) {
   console.error('Error: GOOGLE_MAPS_API_KEY environment variable is not set.');
@@ -69,6 +72,7 @@ function nameSimilarity(businessName, placeName) {
 }
 
 function placesSearch(query) {
+  budget.spend('text-search-pro');
   return new Promise((resolve, reject) => {
     const body = JSON.stringify({
       textQuery: query,
@@ -88,7 +92,7 @@ function placesSearch(query) {
       headers: {
         'Content-Type': 'application/json',
         'X-Goog-Api-Key': API_KEY,
-        'X-Goog-FieldMask': 'places.displayName,places.formattedAddress,places.location,places.types',
+        'X-Goog-FieldMask': FIELDS,
         'Content-Length': Buffer.byteLength(body),
       },
     };
@@ -157,11 +161,16 @@ async function main() {
       const query = `${chain.name} ${hint} Utah County`;
       console.log(`  [${chain.category.padEnd(13)}] ${chain.name.padEnd(40)} → "${query}"`);
     }
-    console.log('\n--dry-run complete. No API calls made.');
+    console.log('\nDry run complete. No API calls made. Add --live to run for real.');
     return;
   }
 
   // --- Live run ---
+  budget = await approvePaidRun({
+    script: 'find-missing-locations.js',
+    calls: { 'text-search-pro': Math.min(chains.length, REQUEST_CAP) },
+    fields: FIELDS,
+  });
   let requestCount = 0;
   let businessesChecked = 0;
   let businessesSkipped = 0;
@@ -188,6 +197,7 @@ async function main() {
     try {
       results = await placesSearch(query);
     } catch (e) {
+      if (e.message.startsWith('guard:')) throw e;
       console.error(`  ERROR searching for ${chain.name}: ${e.message}`);
       results = [];
     }

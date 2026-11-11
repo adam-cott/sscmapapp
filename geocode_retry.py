@@ -4,6 +4,7 @@ Retry geocoding for deals whose coordinates don't match the expected address fro
 Tries full address first, then stripped address (no suite/bldg), then city-only fallback.
 """
 import json, csv, re, time, urllib.request, urllib.parse, os
+from ssc_guard import write_deals_file
 
 SCRIPT_DIR     = os.path.dirname(os.path.abspath(__file__))
 JSON_PATH      = os.path.join(SCRIPT_DIR, 'src', 'data', 'deals.json')
@@ -228,8 +229,7 @@ def main():
         else:
             skipped += 1
 
-    with open(JSON_PATH, 'w', encoding='utf-8') as f:
-        json.dump(deals, f, ensure_ascii=False, indent=2)
+    write_deals_file(JSON_PATH, json.dumps(deals, ensure_ascii=False, indent=2), 'geocode_retry.py')
 
     null_count = sum(1 for d in deals if d['lat'] is None)
     status_counts = {}

@@ -5,6 +5,7 @@ ALL CSV addresses for that business (geocoded), so every valid
 location shows as a separate map pin.
 """
 import json, csv, re, time, urllib.request, urllib.parse, os
+from ssc_guard import write_deals_file
 
 SCRIPT_DIR     = os.path.dirname(os.path.abspath(__file__))
 JSON_PATH      = os.path.join(SCRIPT_DIR, 'src', 'data', 'deals.json')
@@ -177,8 +178,7 @@ def main():
             else:
                 d['locations'] = []
 
-    with open(JSON_PATH, 'w', encoding='utf-8') as f:
-        json.dump(deals, f, ensure_ascii=False, indent=2)
+    write_deals_file(JSON_PATH, json.dumps(deals, ensure_ascii=False, indent=2), 'add_locations.py')
 
     total_pins = sum(len(d['locations']) for d in deals)
     multi = [(d['name'], len(d['locations'])) for d in deals if len(d.get('locations', [])) > 1]

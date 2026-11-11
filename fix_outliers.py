@@ -4,6 +4,7 @@ Fix deals that were geocoded to wrong Utah cities.
 Re-geocodes them using their actual street addresses.
 """
 import json, time, urllib.request, urllib.parse, os
+from ssc_guard import write_deals_file
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 JSON_PATH  = os.path.join(SCRIPT_DIR, 'src', 'data', 'deals.json')
@@ -99,8 +100,7 @@ def main():
                 d['lng'] = lng
                 updated += 1
 
-    with open(JSON_PATH, 'w', encoding='utf-8') as f:
-        json.dump(deals, f, ensure_ascii=False, indent=2)
+    write_deals_file(JSON_PATH, json.dumps(deals, ensure_ascii=False, indent=2), 'fix_outliers.py')
 
     # Report remaining outliers
     still_out = [(d['name'], d['lat'], d['lng']) for d in deals

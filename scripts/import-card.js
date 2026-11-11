@@ -11,6 +11,7 @@
 // empty locations[] for scripts/find-missing-locations.js to fill.
 import { readFileSync, writeFileSync, existsSync, copyFileSync } from 'node:fs'
 import { slugify, matchLocationsToRestriction } from '../src/utils/dealHelpers.js'
+import { writeDealsFile } from './lib/guard.js'
 
 const ROOT = new URL('../', import.meta.url)
 const CARD_CSV = 'data-archive/ssc_2026-27_card_transcription.csv'
@@ -437,7 +438,7 @@ console.log(L.slice(4, 10).join('\n'))
 console.log('Flag groups:', Object.fromEntries(Object.entries(flagGroups).map(([k, v]) => [k, v.length])))
 
 if (WRITE) {
-  writeFileSync(new URL('src/data/deals.json', ROOT), JSON.stringify(clean, null, 2) + '\n')
+  await writeDealsFile({ script: 'import-card.js', file: 'src/data/deals.json', text: JSON.stringify(clean, null, 2) + '\n', extraWarning: 'This replaces the whole deal list with the new card.' })
   for (const [o, n] of renamedLogos) {
     if (logoExists(o) && !logoExists(n)) copyFileSync(new URL(`public/logos/${o}.png`, ROOT), new URL(`public/logos/${n}.png`, ROOT))
   }

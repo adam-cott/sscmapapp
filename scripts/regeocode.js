@@ -1,22 +1,27 @@
 #!/usr/bin/env node
 // Usage:
-//   GOOGLE_MAPS_API_KEY=your_key node scripts/regeocode.js --dry-run
-//   GOOGLE_MAPS_API_KEY=your_key node scripts/regeocode.js
+//   node scripts/regeocode.js                          (dry run: shows what would be called, makes no requests)
+//   GOOGLE_MAPS_API_KEY=your_key node scripts/regeocode.js --live            (calls Google, reports only)
+//   GOOGLE_MAPS_API_KEY=your_key node scripts/regeocode.js --live --write    (also writes deals.json)
 
 import https from 'https';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { approvePaidRun, writeDealsFile } from './lib/guard.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const DRY_RUN = process.argv.includes('--dry-run');
+const LIVE = process.argv.includes('--live');
+const DRY_RUN = !process.argv.includes('--write');
 const API_KEY = process.env.GOOGLE_MAPS_API_KEY;
 const DEALS_PATH = path.join(__dirname, '../src/data/deals.json');
 const THRESHOLD_METERS = 50;
+const REQUEST_CAP = 3000;
+let budget;
 const DELAY_MS = 110; // ~9 req/sec, safely under 10/sec limit
 
-if (!API_KEY) {
+if (!API_KEY && LIVE) {
   console.error('Error: GOOGLE_MAPS_API_KEY environment variable is not set.');
   process.exit(1);
 }
@@ -33,6 +38,7 @@ function haversine(lat1, lng1, lat2, lng2) {
 }
 
 function geocode(query) {
+  budget.spend('geocoding');
   return new Promise((resolve, reject) => {
     const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(query)}&key=${API_KEY}`;
     https.get(url, (res) => {
@@ -63,7 +69,16 @@ async function main() {
   console.log(`Reading: ${DEALS_PATH}`);
   const raw = fs.readFileSync(DEALS_PATH, 'utf8');
   const deals = JSON.parse(raw);
-  console.log(`Loaded ${deals.length} deals. Starting geocode check...`);
+  console.log(`Loaded ${deals.length} deals.`);
+
+  const toCheck = deals.reduce((n, d) => n + (d.locations ?? []).filter((l) => l.address && l.lat != null && l.lng != null).length, 0);
+  const maxCalls = Math.min(toCheck * 2, REQUEST_CAP);
+  if (!LIVE) {
+    console.log(`Dry run: ${toCheck} locations to check. A live run would make up to ${maxCalls} Geocoding calls (address -> coordinates). No requests made. Add --live to run.`);
+    return;
+  }
+  budget = await approvePaidRun({ script: 'regeocode.js', calls: { geocoding: maxCalls }, fields: 'Geocoding (address → coordinates)' });
+  console.log('Starting geocode check...');
 
   let totalChecked = 0;
   let totalPatched = 0;
@@ -144,9 +159,10 @@ async function main() {
     }
   }
 
-  if (!DRY_RUN && totalPatched > 0) {
-    fs.writeFileSync(DEALS_PATH, JSON.stringify(deals, null, 2));
-    console.log(`\nWrote patched data to ${DEALS_PATH}`);
+  if (DRY_RUN) {
+    console.log('\nDry run: not writing deals.json (add --write)');
+  } else if (totalPatched > 0) {
+    await writeDealsFile({ script: 'regeocode.js', file: DEALS_PATH, text: JSON.stringify(deals, null, 2) });
   }
 }
 

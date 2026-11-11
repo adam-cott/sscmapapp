@@ -4,20 +4,19 @@
 // reads. Never touches deals.json.
 //
 //   node scripts/import-card.js              (builds reports/card-import-2026-27.preview.json)
-//   node scripts/lookup-new-locations.js     (needs GOOGLE_MAPS_API_KEY in .env)
+//   node scripts/lookup-new-locations.js          (dry run: shows what would be called, makes no requests)
+//   node scripts/lookup-new-locations.js --live   (needs GOOGLE_MAPS_API_KEY in .env)
 import { readFileSync, writeFileSync } from 'node:fs'
+import { approvePaidRun } from './lib/guard.js'
 import { BROAD_RESTRICTION, splitRestrictionClauses, expandPlaceTokens } from '../src/utils/dealHelpers.js'
 
 const ROOT = new URL('../', import.meta.url)
 const PREVIEW = 'reports/card-import-2026-27.preview.json'
 const OUTPUT = 'data-archive/new-locations-2026-27.json'
 const REQUEST_CAP = 150
+const LIVE = process.argv.includes('--live')
 // Continuing businesses whose saved locations don't include the cities the card names.
 const LOOKUP_AGAIN =['Game Grid', 'High Country Adventure', 'The Picklr']
-
-process.loadEnvFile(new URL('.env', ROOT))
-const KEY = process.env.GOOGLE_MAPS_API_KEY
-if (!KEY) throw new Error('GOOGLE_MAPS_API_KEY is not set in .env')
 
 const PROVO = { lat: 40.2969, lng: -111.6942 }
 const MAX_KM = 80 // Utah County plus the Salt Lake valley; excludes St. George, Logan, etc.
@@ -41,9 +40,11 @@ const sameBusiness = (business, place) => {
 const REQUIRE_IN_NAME = { 'Buffalo Wild Wings GO': /\bGO\b/, "Magleby's Fresh": /\bFresh\b/i }
 
 let requests = 0
+let budget
 async function search(textQuery) {
   if (requests >= REQUEST_CAP) throw new Error(`request cap ${REQUEST_CAP} reached`)
   requests++
+  budget.spend('text-search-enterprise')
   const res = await fetch('https://places.googleapis.com/v1/places:searchText', {
     method: 'POST',
     headers: {
@@ -68,6 +69,17 @@ for (const d of deals) {
     expandPlaceTokens(splitRestrictionClauses(r).includeText).forEach(c => t.cities.add(c))
   targets.set(d.name, t)
 }
+
+const FIELDS = 'places.displayName,places.formattedAddress,places.location,places.internationalPhoneNumber,places.businessStatus,places.websiteUri'
+const maxCalls = Math.min([...targets.values()].reduce((n, t) => n + 1 + t.cities.size, 0), REQUEST_CAP)
+if (!LIVE) {
+  console.log(`Dry run: ${targets.size} businesses. A live run would make up to ${maxCalls} Places Text Search (Enterprise) calls (fields: ${FIELDS}). No requests made. Add --live to run.`)
+  process.exit(0)
+}
+process.loadEnvFile(new URL('.env', ROOT))
+const KEY = process.env.GOOGLE_MAPS_API_KEY
+if (!KEY) throw new Error('GOOGLE_MAPS_API_KEY is not set in .env')
+budget = await approvePaidRun({ script: 'lookup-new-locations.js', calls: { 'text-search-enterprise': maxCalls }, fields: FIELDS })
 
 const out = {}
 for (const [name, { cities }] of targets) {
