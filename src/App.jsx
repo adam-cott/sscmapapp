@@ -146,7 +146,7 @@ function AppShell() {
   const handleNearMeToggle = () => {
     if (nearMe) return setNearMe(false)
     setNearMe(true)
-    if (!coords && !geoLoading) requestLocation()
+    if (!geoLoading) requestLocation({ maximumAge: 60000 })
   }
 
   useEffect(() => {
@@ -422,7 +422,7 @@ function AppShell() {
           onDismiss={() => setShowUseToast(false)}
         />
       )}
-      {!hasRequested && activeTab === 'map' && <LocationPrompt onAllow={requestLocation} onDecline={decline} />}
+      {!hasRequested && activeTab === 'map' && <LocationPrompt onAllow={() => requestLocation()}onDecline={decline} />}
       <UpdatePrompt />
       {showDeleteDialog && <DeleteAccountDialog onCancel={() => setShowDeleteDialog(false)} />}
     </div>
