@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Download a logo per business into public/logos/{slug}.png, using the domains
+// Download a logo per business into public/logos/{slug}.webp, using the domains
 // resolved by scripts/resolve-domains.js. No Google API involved — these are
 // plain fetches to each business's own site.
 //
@@ -316,7 +316,7 @@ async function render(c) {
     const out = await sharp(c.buf, { density: 300 })
       .resize(OUT_SIZE, OUT_SIZE, { fit: 'contain', background: bg })
       .flatten({ background: bg })
-      .png({ compressionLevel: 9, palette: true, quality: 90 })
+      .webp({ quality: 85 })
       .toBuffer()
     const stats = await sharp(out).stats()
     const brightness = Math.round(stats.channels.slice(0, 3).reduce((s, c2) => s + c2.mean, 0) / 3)
@@ -447,10 +447,10 @@ async function main() {
   }
 
   fs.mkdirSync(LOGOS_DIR, { recursive: true })
-  const existing = new Set(fs.readdirSync(LOGOS_DIR).filter((f) => f.endsWith('.png')))
+  const existing = new Set(fs.readdirSync(LOGOS_DIR).filter((f) => f.endsWith('.webp')))
   const overwrite = force || Boolean(only)
-  const skipped = overwrite ? [] : targets.filter((t) => existing.has(`${t.slug}.png`))
-  const queue = (overwrite ? targets : targets.filter((t) => !existing.has(`${t.slug}.png`))).slice(0, limit)
+  const skipped = overwrite ? [] : targets.filter((t) => existing.has(`${t.slug}.webp`))
+  const queue = (overwrite ? targets : targets.filter((t) => !existing.has(`${t.slug}.webp`))).slice(0, limit)
 
   console.log('========================================')
   console.log('LOGO FETCH — PLAN')
@@ -459,7 +459,7 @@ async function main() {
   console.log(`Businesses w/ domain: ${targets.length}`)
   console.log(`  already on disk: ${skipped.length}${overwrite ? ' (will be overwritten)' : ' (skipped)'}`)
   console.log(`  to fetch:        ${queue.length}`)
-  console.log(`Output:            public/logos/{slug}.png @ ${OUT_SIZE}x${OUT_SIZE} on white`)
+  console.log(`Output:            public/logos/{slug}.webp @ ${OUT_SIZE}x${OUT_SIZE} on white`)
   console.log(`Concurrency:       ${CONCURRENCY}`)
   console.log('')
 
@@ -473,7 +473,7 @@ async function main() {
   let done = 0
   const results = await mapLimit(queue, CONCURRENCY, async (t) => {
     const r = await resolveLogo(t)
-    if (r.buf) fs.writeFileSync(path.join(LOGOS_DIR, `${r.slug}.png`), r.buf)
+    if (r.buf) fs.writeFileSync(path.join(LOGOS_DIR, `${r.slug}.webp`), r.buf)
     done++
     if (done % 20 === 0) console.log(`  ...${done}/${queue.length}`)
     delete r.buf

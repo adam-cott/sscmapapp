@@ -397,7 +397,7 @@ const newBusinesses = [...new Set(deals.filter(d => !d._continuing).map(d => d.n
 const renamedLogos = [...new Set(deals.filter(d => d._continuing).map(d => d.name))]
   .map(n => [slugify(oldFor(n)[0].name), slugify(n)])
   .filter(([o, n]) => o !== n)
-const logoExists = slug => existsSync(new URL(`public/logos/${slug}.png`, ROOT))
+const logoExists = slug => existsSync(new URL(`public/logos/${slug}.webp`, ROOT))
 const missingLogos = [...new Set(deals.map(d => d.name))].filter(n => {
   const slug = slugify(n)
   return !logoExists(slug) && !renamedLogos.some(([o, nw]) => nw === slug && logoExists(o))
@@ -424,7 +424,7 @@ for (const [group, items] of Object.entries(flagGroups)) {
   items.forEach(([d, msg]) => L.push(`- \`${d.id}\` ${d.name} — ${d.deal.title}${group.startsWith('New') ? '' : ` — ${msg}`}`))
   L.push('')
 }
-L.push(`## Logos needed (${missingLogos.length})`, '', missingLogos.map(n => `- ${n} (\`public/logos/${slugify(n)}.png\`)`).join('\n'), '')
+L.push(`## Logos needed (${missingLogos.length})`, '', missingLogos.map(n => `- ${n} (\`public/logos/${slugify(n)}.webp\`)`).join('\n'), '')
 L.push('## Every deal: card text → app', '')
 L.push('| # | Business | Card text | Headline | Valid at | Details | Value | Uses |')
 L.push('|---|---|---|---|---|---|---|---|')
@@ -440,7 +440,7 @@ console.log('Flag groups:', Object.fromEntries(Object.entries(flagGroups).map(([
 if (WRITE) {
   await writeDealsFile({ script: 'import-card.js', file: 'src/data/deals.json', text: JSON.stringify(clean, null, 2) + '\n', extraWarning: 'This replaces the whole deal list with the new card.' })
   for (const [o, n] of renamedLogos) {
-    if (logoExists(o) && !logoExists(n)) copyFileSync(new URL(`public/logos/${o}.png`, ROOT), new URL(`public/logos/${n}.png`, ROOT))
+    if (logoExists(o) && !logoExists(n)) copyFileSync(new URL(`public/logos/${o}.webp`, ROOT), new URL(`public/logos/${n}.webp`, ROOT))
   }
   console.log('Wrote src/data/deals.json and copied renamed logos.')
 }

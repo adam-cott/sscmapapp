@@ -15,7 +15,7 @@
 //   { zoom: 1.1 }               center-crop zoom, for photo/texture backgrounds.
 //   { crop: [x, y, w, h], fit } photo banners: keep that rectangle sharp and
 //                               centered over a blurred copy of itself.
-// Any entry may set src to read a different file than public/logos/<slug>.png
+// Any entry may set src to read a different file than public/logos/<slug>.webp
 // (e.g. a downloaded source image). Example:
 //   node scripts/reframe-logos.js out '{"culver-s":{"fit":0.88,"bg":[6,150],"region":[0,140,512,370]}}'
 
@@ -24,7 +24,7 @@ import sharp from 'sharp'
 const [, , outDir, spec] = process.argv
 
 for (const [slug, o] of Object.entries(JSON.parse(spec))) {
-  const src = o.src ?? `public/logos/${slug}.png`
+  const src = o.src ?? `public/logos/${slug}.webp`
   let img
   if (o.crop) {
     const [x, y, w, h] = o.crop
@@ -54,5 +54,5 @@ for (const [slug, o] of Object.entries(JSON.parse(spec))) {
       .extend({ top: Math.floor((side - h) / 2), bottom: Math.ceil((side - h) / 2), left: Math.floor((side - w) / 2), right: Math.ceil((side - w) / 2), background })
       .toBuffer())
   }
-  await img.resize(512, 512, { kernel: 'lanczos3' }).png({ compressionLevel: 9 }).toFile(`${outDir}/${slug}.png`)
+  await img.resize(512, 512, { kernel: 'lanczos3' }).webp({ quality: 85 }).toFile(`${outDir}/${slug}.webp`)
 }

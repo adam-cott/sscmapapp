@@ -33,6 +33,17 @@ export default defineConfig({
         // Don't apply navigateFallback to OSM tile requests
         navigateFallbackDenylist: [/^\/api/, /tile\.openstreetmap\.org/],
         runtimeCaching: [
+          // Logos — shown instantly from the phone (and offline), refreshed in
+          // the background so a fixed logo appears on the next open.
+          {
+            urlPattern: ({ url }) => url.pathname.startsWith('/logos/'),
+            handler: 'StaleWhileRevalidate',
+            options: {
+              cacheName: 'logos',
+              expiration: { maxEntries: 400 },
+              cacheableResponse: { statuses: [200] },
+            },
+          },
           // Google Fonts CSS — CacheFirst, 1 year
           {
             urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,

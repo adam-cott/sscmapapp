@@ -25,7 +25,7 @@ function aspectRatioToPercent(ratio) {
 
 export default function BusinessLogo({ name, size = 56, iconSize, padding = 6, maxWidth, align = 'flex-start', bare = false, background, shadow = false, aspectRatio = '1 / 1' }) {
   const [failed, setFailed] = useState(false)
-  const src = `/logos/${slugify(name)}.png`
+  const src = `/logos/${slugify(name)}.webp`
   const fallbackIconSize = iconSize ?? (typeof size === 'number' ? Math.round(size * 0.4) : 28)
   const isFixedSize = typeof size === 'number'
 
