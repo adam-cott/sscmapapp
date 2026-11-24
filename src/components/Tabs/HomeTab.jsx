@@ -173,7 +173,13 @@ export default function HomeTab({
   const handleCategoryToggle = (category) => { setListLabel(null); filterBar.onCategoryToggle(category) }
   const handleClearFilters = () => { setListLabel(null); filterBar.onClearFilters() }
   const handleExitList = () => { setListLabel(null); onExitList() }
-  const shownLabel = listLabel ?? (filterBar.nearMe ? `Within ${NEAR_ME_MILES} miles` : null)
+  // However the list closes (back arrow, phone's back button, tab switch), its title goes with it.
+  const [wasListMode, setWasListMode] = useState(isListMode)
+  if (wasListMode !== isListMode) {
+    setWasListMode(isListMode)
+    if (!isListMode) setListLabel(null)
+  }
+  const shownLabel = [listLabel, filterBar.nearMe && `Within ${NEAR_ME_MILES} miles`].filter(Boolean).join(' · ') || null
 
   // Only recalculated when the deals, location or the student's own lists change.
   const {
