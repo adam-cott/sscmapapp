@@ -122,7 +122,7 @@ export default function EditProfileScreen({ onBack }) {
 
       {/* Header — fixed */}
       <div style={{ flexShrink: 0, display: 'flex', alignItems: 'center', padding: '16px 16px 12px', backgroundColor: '#fff', borderBottom: '1px solid #e8edf3' }}>
-        <button onClick={onBack} style={{ background: 'none', border: 'none', cursor: 'pointer', padding: '4px', marginRight: '8px', color: '#0f172a' }}>
+        <button onClick={onBack} aria-label="Back" style={{ background: 'none', border: 'none', cursor: 'pointer', padding: '4px', marginRight: '8px', color: '#0f172a' }}>
           <ArrowLeft size={20} />
         </button>
         <h2 style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '17px', color: '#0f172a', margin: 0 }}>
@@ -161,7 +161,7 @@ export default function EditProfileScreen({ onBack }) {
         {/* Name */}
         <form onSubmit={handleSaveName} style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: '12px', borderBottom: '1px solid #f1f5f9' }}>
           <label style={labelStyle}>First Name</label>
-          <input
+          <input aria-label="First name"
             type="text"
             value={name}
             onChange={e => { setName(e.target.value); setNameStatus(null) }}
@@ -178,7 +178,7 @@ export default function EditProfileScreen({ onBack }) {
         {/* Email */}
         <form onSubmit={handleSaveEmail} style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
           <label style={labelStyle}>Email</label>
-          <input
+          <input aria-label="New email address"
             type="email"
             value={newEmail}
             onChange={e => { setNewEmail(e.target.value); setEmailStatus(null) }}
@@ -186,7 +186,7 @@ export default function EditProfileScreen({ onBack }) {
             required
             style={inputStyle}
           />
-          <input
+          <input aria-label="Current password to confirm"
             type="password"
             value={emailPass}
             onChange={e => { setEmailPass(e.target.value); setEmailStatus(null) }}
@@ -207,7 +207,7 @@ export default function EditProfileScreen({ onBack }) {
       <div className="mx-4 rounded-2xl bg-white shadow-sm overflow-hidden">
         <form onSubmit={handleSavePassword} style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
           <label style={labelStyle}>Change Password</label>
-          <input
+          <input aria-label="New password"
             type="password"
             value={newPass}
             onChange={e => { setNewPass(e.target.value); setPassStatus(null) }}
@@ -215,7 +215,7 @@ export default function EditProfileScreen({ onBack }) {
             required
             style={inputStyle}
           />
-          <input
+          <input aria-label="Confirm new password"
             type="password"
             value={confirmPass}
             onChange={e => { setConfirmPass(e.target.value); setPassStatus(null) }}
@@ -223,7 +223,7 @@ export default function EditProfileScreen({ onBack }) {
             required
             style={inputStyle}
           />
-          <input
+          <input aria-label="Current password to confirm"
             type="password"
             value={passCurrentPass}
             onChange={e => { setPassCurrentPass(e.target.value); setPassStatus(null) }}

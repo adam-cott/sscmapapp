@@ -17,10 +17,11 @@ import { STORAGE_KEYS, FIRESTORE_FIELDS as F } from '../constants/storageKeys'
 
 const AuthContext = createContext(null)
 
-// Everything saved for the signed-in person. The location-prompt answer belongs
-// to the phone, not the account, so it survives sign-out.
+// Everything saved for the signed-in person. The location-prompt answer and
+// Accessibility options belong to the phone, not the account, so they survive sign-out.
+const PHONE_SETTINGS = ['locationAsked', 'accessibility']
 const clearAccountData = () => Object.entries(STORAGE_KEYS)
-  .forEach(([name, key]) => { if (name !== 'locationAsked') localStorage.removeItem(key) })
+  .forEach(([name, key]) => { if (!PHONE_SETTINGS.includes(name)) localStorage.removeItem(key) })
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null)

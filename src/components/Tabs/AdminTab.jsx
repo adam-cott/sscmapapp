@@ -108,7 +108,7 @@ export default function AdminTab({ deals }) {
         <div style={{ fontSize: '11px', fontWeight: 700, color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '8px' }}>
           Add a Deal
         </div>
-        <input
+        <input aria-label="Search by business or deal name"
           type="text"
           placeholder="Search by business or deal name..."
           value={search}

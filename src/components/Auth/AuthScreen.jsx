@@ -71,7 +71,7 @@ export default function AuthScreen() {
 
         <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
           {isSignUp && (
-            <input
+            <input aria-label="First name"
               type="text"
               placeholder="First name"
               value={firstName}
@@ -80,7 +80,7 @@ export default function AuthScreen() {
               style={inputStyle}
             />
           )}
-          <input
+          <input aria-label="Email"
             type="email"
             placeholder="Email"
             value={email}
@@ -88,7 +88,7 @@ export default function AuthScreen() {
             required
             style={inputStyle}
           />
-          <input
+          <input aria-label="Password"
             type="password"
             placeholder="Password"
             value={password}
@@ -131,12 +131,13 @@ export default function AuthScreen() {
 
         <p style={{ textAlign: 'center', fontSize: '13px', color: '#64748b', marginTop: '20px' }}>
           {isSignUp ? 'Already have an account?' : "Don't have an account?"}{' '}
-          <span
+          <button
+            type="button"
             onClick={() => { setIsSignUp(v => !v); setError(''); setNotice('') }}
-            style={{ color: 'var(--ssc-blue)', fontWeight: 600, cursor: 'pointer' }}
+            style={{ font: 'inherit', color: 'var(--ssc-blue)', fontWeight: 600, cursor: 'pointer', background: 'none', border: 'none', padding: 0 }}
           >
             {isSignUp ? 'Sign in' : 'Sign up'}
-          </span>
+          </button>
         </p>
       </div>
     </div>

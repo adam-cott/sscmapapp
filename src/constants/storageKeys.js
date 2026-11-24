@@ -11,6 +11,7 @@ export const STORAGE_KEYS = {
   synced:   `ssc_synced_${CARD_YEAR}`,
   uid:      'ssc_uid',
   locationAsked: 'ssc_location_asked',
+  accessibility: 'ssc_accessibility',
 }
 
 // Field names on users/{uid} in Firestore.

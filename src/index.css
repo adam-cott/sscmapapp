@@ -308,3 +308,9 @@ h1, h2, h3, h4, h5 {
 @media (prefers-reduced-motion: reduce) {
   .badge-new, .badge-new::after { animation: none; }
 }
+
+/* Pinch-zoom is allowed (accessibility), so iPhones would auto-zoom into any
+   text box under 16px when tapped. iPhone-only rule; Android/desktop unchanged. */
+@supports (-webkit-touch-callout: none) {
+  input, textarea, select { font-size: 16px !important; }
+}

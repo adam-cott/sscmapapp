@@ -1,5 +1,6 @@
-import { useState, useRef, useCallback } from 'react'
+import { useState, useRef, useCallback, useEffect } from 'react'
 import { ChevronRight } from 'lucide-react'
+import { STORAGE_KEYS } from '../../constants/storageKeys'
 
 export default function SwipeToConfirm({ onConfirm, disabled = false, label = 'Slide to Redeem' }) {
   const [offset, setOffset] = useState(0)
@@ -9,6 +10,22 @@ export default function SwipeToConfirm({ onConfirm, disabled = false, label = 'S
   const trackRef = useRef(null)
   const startXRef = useRef(0)
   const confirmedRef = useRef(false)
+
+  // Accessibility options (Settings): a two-tap button for anyone who can't swipe.
+  const [showTap] = useState(() => { try { return localStorage.getItem(STORAGE_KEYS.accessibility) === '1' } catch { return false } })
+  const [armed, setArmed] = useState(false)
+  useEffect(() => {
+    if (!armed) return
+    const t = setTimeout(() => setArmed(false), 4000)
+    return () => clearTimeout(t)
+  }, [armed])
+  const handleTap = () => {
+    if (disabled || confirmedRef.current) return
+    if (!armed) return setArmed(true)
+    confirmedRef.current = true
+    setOffset(getMaxOffset())
+    onConfirm()
+  }
 
   const HANDLE_SIZE = 48
   const THRESHOLD = 0.92
@@ -54,8 +71,10 @@ export default function SwipeToConfirm({ onConfirm, disabled = false, label = 'S
   const progress = maxOffset > 0 ? offset / maxOffset : 0
 
   return (
+    <>
     <div
       ref={trackRef}
+      aria-hidden={showTap || undefined}
       onPointerDown={handlePointerDown}
       onPointerMove={handlePointerMove}
       onPointerUp={handlePointerUp}
@@ -139,5 +158,19 @@ export default function SwipeToConfirm({ onConfirm, disabled = false, label = 'S
         />
       </div>
     </div>
+    {showTap && !disabled && (
+      <button
+        onClick={handleTap}
+        className="press"
+        style={{
+          width: '100%', marginTop: '8px', padding: '12px', borderRadius: '28px',
+          fontFamily: 'Sora, sans-serif', fontWeight: 600, fontSize: '14px', cursor: 'pointer',
+          border: '1.5px solid #059669', color: armed ? '#fff' : '#059669', backgroundColor: armed ? '#059669' : '#fff',
+        }}
+      >
+        {armed ? 'Tap again to confirm' : 'Tap to redeem'}
+      </button>
+    )}
+    </>
   )
 }

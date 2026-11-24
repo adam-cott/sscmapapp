@@ -77,6 +77,7 @@ export default function LocationPicker({ location, onSelectDeal, onClose }) {
         </div>
         <button
           onClick={onClose}
+          aria-label="Close"
           style={{ flexShrink: 0, width: '30px', height: '30px', borderRadius: '50%', backgroundColor: '#f1f5f9', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#64748b' }}
         >
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">

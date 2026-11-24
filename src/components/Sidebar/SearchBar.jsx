@@ -8,7 +8,7 @@ export default function SearchBar({ value, onChange }) {
       >
         <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
       </svg>
-      <input
+      <input aria-label="Search businesses or deals"
         type="text"
         placeholder="Search businesses or deals…"
         value={value}
@@ -26,6 +26,7 @@ export default function SearchBar({ value, onChange }) {
       {value && (
         <button
           onClick={() => onChange('')}
+          aria-label="Clear search"
           className="absolute right-2.5 top-1/2 -translate-y-1/2 w-5 h-5 flex items-center justify-center rounded-full transition-colors"
           style={{ color: '#94a3b8', backgroundColor: '#e2e8f0' }}
         >

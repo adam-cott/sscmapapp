@@ -70,7 +70,7 @@ export default function DeleteAccountDialog({ onCancel }) {
         <p style={{ fontSize: '14px', color: '#64748b', lineHeight: '1.5', marginBottom: '14px' }}>
           Type your current password to permanently delete your account.
         </p>
-        <input
+        <input aria-label="Current password"
           type="password"
           value={password}
           onChange={e => { setPassword(e.target.value); setError('') }}

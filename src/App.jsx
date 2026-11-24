@@ -330,6 +330,7 @@ function AppShell() {
                   </span>
                   <button
                     onClick={exitMapFocus}
+                    aria-label="Show all deals"
                     className="flex items-center justify-center rounded-full flex-shrink-0 ml-auto"
                     style={{ width: '26px', height: '26px', backgroundColor: '#f1f5f9', color: '#64748b', border: 'none', cursor: 'pointer' }}
                   >
