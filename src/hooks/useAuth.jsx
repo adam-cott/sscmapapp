@@ -17,6 +17,11 @@ import { STORAGE_KEYS, FIRESTORE_FIELDS as F } from '../constants/storageKeys'
 
 const AuthContext = createContext(null)
 
+// Everything saved for the signed-in person. The location-prompt answer belongs
+// to the phone, not the account, so it survives sign-out.
+const clearAccountData = () => Object.entries(STORAGE_KEYS)
+  .forEach(([name, key]) => { if (name !== 'locationAsked') localStorage.removeItem(key) })
+
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null)
   const [firstName, setFirstName] = useState('')
@@ -54,6 +59,8 @@ export function AuthProvider({ children }) {
       if (!returningDevice) {
         // Seed localStorage from Firestore when this is a new or different device.
         // Must happen before setUser so AppShell's hooks initialize with the right data.
+        // Clear first so a different account never inherits the last person's data.
+        clearAccountData()
         if (snap.exists()) {
           const data = snap.data()
           if (data[F.usage] !== undefined) localStorage.setItem(STORAGE_KEYS.usage, JSON.stringify(data[F.usage]))
@@ -90,7 +97,7 @@ export function AuthProvider({ children }) {
   }
 
   async function signOut() {
-    Object.values(STORAGE_KEYS).forEach(key => localStorage.removeItem(key))
+    clearAccountData()
     await firebaseSignOut(auth)
   }
 
@@ -110,7 +117,7 @@ export function AuthProvider({ children }) {
     const credential = EmailAuthProvider.credential(user.email, currentPassword)
     await reauthenticateWithCredential(auth.currentUser, credential)
     await deleteDoc(doc(db, 'users', user.uid))
-    Object.values(STORAGE_KEYS).forEach(key => localStorage.removeItem(key))
+    clearAccountData()
     await deleteUser(auth.currentUser)
   }
 
