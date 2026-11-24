@@ -8,7 +8,7 @@ import AboutScreen from './components/Settings/AboutScreen'
 import CardYearScreen from './components/Settings/CardYearScreen'
 import { useCardYear } from './hooks/useCardYear'
 import dealsData from './data/deals.json'
-import { getDealUsageState, getMapFocusLocations, getNearestDistance, NEAR_ME_MILES } from './utils/dealHelpers'
+import { getDealUsageState, getMapFocusLocations, getNearestDistance, getNearestLocation, NEAR_ME_MILES } from './utils/dealHelpers'
 import { useDeals } from './hooks/useDeals'
 import { useFilters } from './hooks/useFilters'
 import { useOverlayHistory } from './hooks/useOverlayHistory'
@@ -224,6 +224,12 @@ function AppShell() {
   const nearCenter = nearMe && coords && !mapFocus ? coords : null
   const nearLat = NEAR_ME_MILES / 69
   const nearLng = nearCenter ? NEAR_ME_MILES / (69 * Math.cos(nearCenter.lat * Math.PI / 180)) : 0
+  // "On map" for a chain: every honoring store stays pinned, but the view
+  // zooms to the nearest one plus the student. Location off: fit them all.
+  const focusNearest = mapFocus?.deal.locations.length > 1 && getNearestLocation(mapFocus.deal, coords)
+  const mapFocusPoints = mapFocus && (focusNearest
+    ? [[focusNearest.lat, focusNearest.lng], [coords.lat, coords.lng]]
+    : mapFocus.deal.locations.map(l => [l.lat, l.lng]))
 
   const isMapTab = activeTab === 'map'
   // The map wakes (is built the first time, catches up after that) only once
@@ -296,11 +302,11 @@ function AppShell() {
                 userCoords={coords}
                 nearCenter={nearCenter}
                 focusPoints={mapFocus
-                  ? mapFocus.deal.locations.map(l => [l.lat, l.lng])
+                  ? mapFocusPoints
                   : searchPlace ? filteredDeals.flatMap(d => (getMapFocusLocations(d) ?? []).map(l => [l.lat, l.lng]))
                   : nearCenter ? [[nearCenter.lat - nearLat, nearCenter.lng - nearLng], [nearCenter.lat + nearLat, nearCenter.lng + nearLng]]
                   : undefined}
-                fitKey={mapFocus ? undefined : searchPlace ?? (nearCenter ? 'near-me' : undefined)}
+                fitKey={mapFocus ? `focus-${mapFocus.deal.id}` : searchPlace ?? (nearCenter ? 'near-me' : undefined)}
               />}
             </div>
 
