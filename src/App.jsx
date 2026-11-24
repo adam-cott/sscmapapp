@@ -226,9 +226,16 @@ function AppShell() {
   const nearLng = nearCenter ? NEAR_ME_MILES / (69 * Math.cos(nearCenter.lat * Math.PI / 180)) : 0
 
   const isMapTab = activeTab === 'map'
-  // Built on the first Map visit, then only hidden, so it keeps its pan/zoom.
+  // The map wakes (is built the first time, catches up after that) only once
+  // the bottom-nav slide has finished, so the slide never stalls. After the
+  // first build it's only hidden, so it keeps its pan/zoom.
+  const [mapAwake, setMapAwake] = useState(false)
+  useEffect(() => {
+    const t = setTimeout(() => setMapAwake(isMapTab), isMapTab ? 350 : 0)
+    return () => clearTimeout(t)
+  }, [isMapTab])
   const [mapBuilt, setMapBuilt] = useState(false)
-  if (isMapTab && !mapBuilt) setMapBuilt(true)
+  if (mapAwake && !mapBuilt) setMapBuilt(true)
 
   // The sheet shows live usage, so a redemption or Undo updates it right away.
   const openDeal = selectedDeal && { ...selectedDeal, usage: getDealUsageState(selectedDeal, usageMap) }
@@ -273,14 +280,14 @@ function AppShell() {
       )}
 
       {/* ── Map tab ─────────────────────────────────────── */}
-      {mapBuilt && (
+      {(mapBuilt || isMapTab) && (
         <div className="flex flex-col flex-1 overflow-hidden" style={{ display: isMapTab ? undefined : 'none' }}>
         <div className="flex flex-1 overflow-hidden relative">
           <main className="flex-1 relative overflow-hidden">
             {/* Map */}
             <div className="absolute inset-0">
-              <MapView
-                hidden={!isMapTab}
+              {mapBuilt && <MapView
+                hidden={!isMapTab || !mapAwake}
                 deals={mapFocus ? [mapFocus.deal] : filteredDeals}
                 selectedDeal={selectedDeal}
                 onSelectDeal={handleSelectDeal}
@@ -294,7 +301,7 @@ function AppShell() {
                   : nearCenter ? [[nearCenter.lat - nearLat, nearCenter.lng - nearLng], [nearCenter.lat + nearLat, nearCenter.lng + nearLng]]
                   : undefined}
                 fitKey={mapFocus ? undefined : searchPlace ?? (nearCenter ? 'near-me' : undefined)}
-              />
+              />}
             </div>
 
             {/* Compact filter bar over map — no sort control, map pins aren't ordered.
