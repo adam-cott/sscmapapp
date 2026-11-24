@@ -8,7 +8,7 @@ import allDealsRaw from '../../data/deals.json'
 import 'react-leaflet-cluster/dist/assets/MarkerCluster.css'
 import 'react-leaflet-cluster/dist/assets/MarkerCluster.Default.css'
 
-// Pre-compute fallback coordinates: coords shared by 4+ different businesses
+// Pre-compute fallback coordinates: coords shared by 8+ different businesses
 // are city-level geocoding fallbacks, not real locations. Computed once from
 // the full dataset so filtering doesn't affect the detection.
 const FALLBACK_COORDS = (() => {
