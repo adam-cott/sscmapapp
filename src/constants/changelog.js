@@ -1,4 +1,4 @@
 export const LATEST_UPDATE = {
-  version: '2.4.9',
-  description: "Business logos are now about 70% lighter, so Home loads faster and uses less data. Logos also stay saved on your phone, so they show up instantly, even with no signal.",
+  version: '2.4.10',
+  description: "The map now remembers where you left it. Switch to another tab and back, and it's right where you were, with no waiting for it to reload.",
 }

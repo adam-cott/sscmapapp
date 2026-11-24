@@ -226,6 +226,9 @@ function AppShell() {
   const nearLng = nearCenter ? NEAR_ME_MILES / (69 * Math.cos(nearCenter.lat * Math.PI / 180)) : 0
 
   const isMapTab = activeTab === 'map'
+  // Built on the first Map visit, then only hidden, so it keeps its pan/zoom.
+  const [mapBuilt, setMapBuilt] = useState(false)
+  if (isMapTab && !mapBuilt) setMapBuilt(true)
 
   // The sheet shows live usage, so a redemption or Undo updates it right away.
   const openDeal = selectedDeal && { ...selectedDeal, usage: getDealUsageState(selectedDeal, usageMap) }
@@ -270,13 +273,14 @@ function AppShell() {
       )}
 
       {/* ── Map tab ─────────────────────────────────────── */}
-      {isMapTab && (
-        <div className="flex flex-col flex-1 overflow-hidden">
+      {mapBuilt && (
+        <div className="flex flex-col flex-1 overflow-hidden" style={{ display: isMapTab ? undefined : 'none' }}>
         <div className="flex flex-1 overflow-hidden relative">
           <main className="flex-1 relative overflow-hidden">
             {/* Map */}
             <div className="absolute inset-0">
               <MapView
+                hidden={!isMapTab}
                 deals={mapFocus ? [mapFocus.deal] : filteredDeals}
                 selectedDeal={selectedDeal}
                 onSelectDeal={handleSelectDeal}
@@ -295,7 +299,7 @@ function AppShell() {
 
             {/* Compact filter bar over map — no sort control, map pins aren't ordered.
                 Replaced with a dismissible chip while "View on map" focus is active. */}
-            <div className="absolute top-0 left-0 right-0 z-[500] bg-white border-b border-gray-100 px-3 py-2 shadow-sm">
+            {isMapTab && <div className="absolute top-0 left-0 right-0 z-[500] bg-white border-b border-gray-100 px-3 py-2 shadow-sm">
               {mapFocus ? (
                 <div className="flex items-center gap-2">
                   <span
@@ -317,13 +321,13 @@ function AppShell() {
               ) : (
                 <Sidebar {...sidebarProps} />
               )}
-            </div>
+            </div>}
           </main>
 
           {/* Nav floats over map */}
-          <div className="absolute bottom-0 left-0 right-0 z-[600]">
+          {isMapTab && <div className="absolute bottom-0 left-0 right-0 z-[600]">
             <BottomNav activeTab={activeTab} onTabChange={handleTabChange} isMapTab settingsBadge={isExpired || isExpiring} isAdmin={isAdmin} />
-          </div>
+          </div>}
         </div>
         </div>
       )}

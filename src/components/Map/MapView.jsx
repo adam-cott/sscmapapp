@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef } from 'react'
+import { memo, useEffect, useMemo, useRef } from 'react'
 import { MapContainer, TileLayer, useMap, useMapEvents, Marker, Circle } from 'react-leaflet'
 import MarkerClusterGroup from 'react-leaflet-cluster'
 import L from 'leaflet'
@@ -83,6 +83,14 @@ function FitBounds({ points, fitKey }) {
   return null
 }
 
+// Leaflet measures 0x0 while hidden, so re-measure when the Map tab shows again
+// (declared before FitBounds so a "View on map" fit uses the real size).
+function ResizeOnShow({ hidden }) {
+  const map = useMap()
+  useEffect(() => { if (!hidden) map.invalidateSize() }, [hidden, map])
+  return null
+}
+
 const LOCATION_ICON = L.divIcon({
   className: '',
   html: '<div class="loc-ring"></div><div class="loc-dot"></div>',
@@ -90,7 +98,11 @@ const LOCATION_ICON = L.divIcon({
   iconAnchor: [16, 16],
 })
 
-export default function MapView({ deals, selectedDeal, onSelectDeal, onSelectLocation, usageMap, userCoords, nearCenter, focusPoints, fitKey }) {
+// While hidden on another tab, skip re-renders (Home's search shares the deal
+// list), and catch up in one go when the Map tab shows again.
+export default memo(MapView, (prev, next) => prev.hidden && next.hidden)
+
+function MapView({ hidden, deals, selectedDeal, onSelectDeal, onSelectLocation, usageMap, userCoords, nearCenter, focusPoints, fitKey }) {
   // Group pins by unique coordinate — one pin per physical location
   const pins = useMemo(() => {
     const byCoord = new Map()
@@ -137,6 +149,7 @@ export default function MapView({ deals, selectedDeal, onSelectDeal, onSelectLoc
           maxZoom={MAX_ZOOM}
         />
         <AutoSpiderfy />
+        <ResizeOnShow hidden={hidden} />
         {focusPoints?.length > 0 && <FitBounds points={focusPoints} fitKey={fitKey} />}
         {userCoords && (
           <Marker
