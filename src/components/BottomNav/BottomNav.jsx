@@ -54,7 +54,8 @@ export default function BottomNav({ activeTab, onTabChange, isMapTab, settingsBa
         <div
           className="nav-indicator"
           style={{
-            position: 'absolute', left: pill.left, top: pill.top, zIndex: -1,
+            position: 'absolute', left: 0, top: 0, zIndex: -1,
+            transform: `translate(${pill.left}px, ${pill.top}px)`,
             width: '40px', height: '28px', borderRadius: '14px',
             background: 'var(--ssc-blue-light)',
           }}

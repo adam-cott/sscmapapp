@@ -254,7 +254,9 @@ h1, h2, h3, h4, h5 {
 }
 
 /* Bottom nav: highlight slides between tabs; the new tab's icon pops. */
-.nav-indicator { transition: left 0.32s cubic-bezier(0.34, 1.3, 0.64, 1), top 0.32s ease; }
+/* transform, not left/top: it animates off the main thread, so the Map tab's
+   catch-up work can't stall the slide. */
+.nav-indicator { transition: transform 0.32s cubic-bezier(0.34, 1.3, 0.64, 1); will-change: transform; }
 @keyframes navPop {
   0%   { transform: scale(0.78); }
   55%  { transform: scale(1.15); }
