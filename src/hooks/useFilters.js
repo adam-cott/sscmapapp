@@ -30,6 +30,10 @@ export function useFilters(deals, userCoords) {
     setListMode(false)
   }, [])
 
+  // The Filter menu's "Clear all": categories only, so search and any
+  // "See all" list behind the menu stay put.
+  const clearCategories = useCallback(() => setActiveCategories([]), [])
+
   // Set exactly one active category, replacing whatever filter state was
   // there before (used by category-section "See all" cards).
   const showCategory = useCallback((category) => {
@@ -115,6 +119,7 @@ export function useFilters(deals, userCoords) {
     activeCategories,
     toggleCategory,
     clearFilters,
+    clearCategories,
     filteredDeals,
     searchPlace,
     categoryCounts,

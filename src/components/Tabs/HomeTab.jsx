@@ -171,7 +171,7 @@ export default function HomeTab({
   // what's active.
   const [listLabel, setListLabel] = useState(null)
   const handleCategoryToggle = (category) => { setListLabel(null); filterBar.onCategoryToggle(category) }
-  const handleClearFilters = () => { setListLabel(null); filterBar.onClearFilters() }
+  const handleClearFilters = () => filterBar.onClearFilters()
   const handleExitList = () => { setListLabel(null); onExitList() }
   // However the list closes (back arrow, phone's back button, tab switch), its title goes with it.
   const [wasListMode, setWasListMode] = useState(isListMode)
@@ -183,7 +183,7 @@ export default function HomeTab({
 
   // Only recalculated when the deals, location or the student's own lists change.
   const {
-    activeDeals, nearbyCards, usedDealIds, usedCards, featuredCards, favesCards,
+    nearbyCards, usedDealIds, usedCards, featuredCards, favesCards,
     categoryCards, unlimitedCards, unlimitedIds,
   } = useMemo(() => {
     const activeDeals = deals.filter(d => d.usage.status !== 'exhausted')
@@ -235,7 +235,7 @@ export default function HomeTab({
     const unlimitedIds = unlimitedPool.map(d => d.id)
 
     return {
-      activeDeals, nearbyCards, usedDealIds, usedCards, featuredCards, favesCards,
+      nearbyCards, usedDealIds, usedCards, featuredCards, favesCards,
       categoryCards, unlimitedCards, unlimitedIds,
     }
   }, [deals, usageLog, featuredIds, faves, userCoords])
@@ -251,15 +251,13 @@ export default function HomeTab({
   const sections = [
     {
       key: 'near-me', title: 'Deals Near Me', cards: nearbyCards,
-      // seeAllCount uses activeDeals directly rather than nearbyPool, since
-      // nearbyPool is sampled (spreadAcrossCategories) when there's no
-      // location fix — the See all tap always shows every active deal.
-      seeAllCount: activeDeals.length,
+      // The See all list shows every deal (used-up ones included), so count them all.
+      seeAllCount: deals.length,
       onSeeAll: () => { setListLabel('Deals Near Me'); onShowAllNearest() },
     },
     {
       key: 'featured', title: 'Featured Deals', cards: featuredCards,
-      seeAllCount: (featuredIds ?? []).length,
+      seeAllCount: (featuredIds ?? []).filter(id => deals.some(d => d.id === id)).length,
       onSeeAll: () => { setListLabel('Featured Deals'); onShowPinned(featuredIds ?? []) },
     },
     {

@@ -11,6 +11,9 @@ export default function RedemptionScreen({ deal, onDone }) {
   const hasFiredRef = useRef(false)
   const intervalRef = useRef(null)
   const displayValue = getDisplayValue(deal)
+  // Latest onDone without restarting the countdown when the parent re-renders.
+  const onDoneRef = useRef(onDone)
+  useEffect(() => { onDoneRef.current = onDone })
 
   useEffect(() => {
     intervalRef.current = setInterval(() => {
@@ -20,7 +23,7 @@ export default function RedemptionScreen({ deal, onDone }) {
           if (!hasFiredRef.current) {
             hasFiredRef.current = true
             // Defer to avoid setState-during-render in parent
-            setTimeout(onDone, 0)
+            setTimeout(() => onDoneRef.current(), 0)
           }
           return 0
         }
@@ -29,7 +32,7 @@ export default function RedemptionScreen({ deal, onDone }) {
     }, 1000)
 
     return () => clearInterval(intervalRef.current)
-  }, [onDone])
+  }, [])
 
   const handleDone = () => {
     if (hasFiredRef.current) return

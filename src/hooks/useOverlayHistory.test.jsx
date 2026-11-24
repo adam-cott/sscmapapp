@@ -6,6 +6,16 @@ function flushMicrotasks() {
   return new Promise(resolve => queueMicrotask(resolve))
 }
 
+// history.back() fires popstate later, at the browser's pace. Wait for that event
+// (or 300 ms when no back() happens) instead of guessing with a fixed delay.
+function settleHistory() {
+  return new Promise(resolve => {
+    const done = () => { clearTimeout(t); window.removeEventListener('popstate', done); setTimeout(resolve, 0) }
+    const t = setTimeout(done, 300)
+    window.addEventListener('popstate', done)
+  })
+}
+
 describe('useOverlayHistory', () => {
   beforeEach(() => {
     // Reset to a clean history stack for each test.
@@ -27,7 +37,7 @@ describe('useOverlayHistory', () => {
     rerender()
     await flushMicrotasks()
     // history.back() dispatches popstate asynchronously
-    await new Promise(resolve => setTimeout(resolve, 20))
+    await settleHistory()
     expect(close).not.toHaveBeenCalled() // closed via in-app path, not popstate
   })
 
@@ -96,7 +106,7 @@ describe('useOverlayHistory', () => {
     modalOpen = true
     rerender()
     await flushMicrotasks()
-    await new Promise(resolve => setTimeout(resolve, 20))
+    await settleHistory()
 
     // Net depth should be unchanged (replaceState swap, not back()+pushState)
     expect(window.history.length).toBe(lengthWithPickerOpen)
@@ -129,7 +139,7 @@ describe('useOverlayHistory', () => {
     lowerOpen = false
     rerender()
     await flushMicrotasks()
-    await new Promise(resolve => setTimeout(resolve, 20))
+    await settleHistory()
     expect(closeTop).not.toHaveBeenCalled()
 
     window.dispatchEvent(new PopStateEvent('popstate'))

@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef, useMemo } from 'react'
+import { useState, useEffect, useCallback, useRef, useMemo, useSyncExternalStore } from 'react'
 import './App.css'
 import { useAuth } from './hooks/useAuth'
 import AuthScreen from './components/Auth/AuthScreen'
@@ -35,6 +35,11 @@ import AdminTab from './components/Tabs/AdminTab'
 import { ADMIN_UID } from './constants/admin'
 
 const ACTIVE_DEALS = dealsData.filter(d => d.active !== false)
+
+// Desktop gets the centered popup, phones the bottom sheet; only one is built.
+const DESKTOP = '(min-width: 768px)'
+const watchDesktop = cb => { const m = matchMedia(DESKTOP); m.addEventListener('change', cb); return () => m.removeEventListener('change', cb) }
+const isDesktopNow = () => matchMedia(DESKTOP).matches
 
 export default function App() {
   const { user, loading } = useAuth()
@@ -74,6 +79,7 @@ function AppShell() {
     activeCategories,
     toggleCategory,
     clearFilters,
+    clearCategories,
     filteredDeals,
     searchPlace,
     categoryCounts,
@@ -211,7 +217,7 @@ function AppShell() {
     onSearchChange: setSearchQuery,
     activeCategories,
     onCategoryToggle: toggleCategory,
-    onClearFilters: clearFilters,
+    onClearFilters: clearCategories,
     dealCount: filteredDeals.length,
     categoryCounts: mapCategoryCounts,
     nearMe: nearActive,
@@ -232,6 +238,7 @@ function AppShell() {
     : mapFocus.deal.locations.map(l => [l.lat, l.lng]))
 
   const isMapTab = activeTab === 'map'
+  const isDesktop = useSyncExternalStore(watchDesktop, isDesktopNow)
   // The map wakes (is built the first time, catches up after that) only once
   // the bottom-nav slide has finished, so the slide never stalls. After the
   // first build it's only hidden, so it keeps its pan/zoom.
@@ -410,16 +417,7 @@ function AppShell() {
       )}
 
       {/* ── Overlays (shared across all tabs) ───────────── */}
-      {selectedDeal && (
-        <div className="hidden md:block">
-          <DealModal {...dealSheetProps} />
-        </div>
-      )}
-      {selectedDeal && (
-        <div className="md:hidden">
-          <BottomSheet {...dealSheetProps} />
-        </div>
-      )}
+      {selectedDeal && (isDesktop ? <DealModal {...dealSheetProps} /> : <BottomSheet {...dealSheetProps} />)}
       {showResetConfirm && (
         <ConfirmDialog
           title="Reset all deal usage?"

@@ -31,9 +31,9 @@ export default function DealDetails({ deal, onClose, onRedeem, isFave, onToggleF
   const phone = directions?.phone
   const [copied, setCopied] = useState(false)
 
+  // copied: false, 'ok', or 'failed' (the phone refused clipboard access).
   const copyAddress = async (text) => {
-    await navigator.clipboard.writeText(text)
-    setCopied(true)
+    setCopied(await navigator.clipboard.writeText(text).then(() => 'ok', () => 'failed'))
     setTimeout(() => setCopied(false), 1500)
   }
 
@@ -131,7 +131,7 @@ export default function DealDetails({ deal, onClose, onRedeem, isFave, onToggleF
         <div className="space-y-1.5 mt-4 mb-4">
           {details.map(({ Icon, text, copy }) => {
             const Row = copy ? 'button' : 'div'
-            const CopyIcon = copied ? Check : Copy
+            const CopyIcon = copied === 'ok' ? Check : Copy
             return (
               <Row
                 key={text}
@@ -140,8 +140,8 @@ export default function DealDetails({ deal, onClose, onRedeem, isFave, onToggleF
                 style={{ fontSize: '13px', color: '#64748b', lineHeight: 1.4, background: 'none', border: 'none', padding: 0, cursor: copy ? 'pointer' : undefined }}
               >
                 <Icon size={13} className="flex-shrink-0" style={{ marginTop: '2px', color: '#94a3b8' }} />
-                <span className="flex-1">{copy && copied ? 'Address copied' : text}</span>
-                {copy && <CopyIcon size={13} className="flex-shrink-0" style={{ marginTop: '2px', color: copied ? '#047857' : '#94a3b8' }} />}
+                <span className="flex-1">{copy && copied ? (copied === 'ok' ? 'Address copied' : "Couldn't copy the address") : text}</span>
+                {copy && <CopyIcon size={13} className="flex-shrink-0" style={{ marginTop: '2px', color: { ok: '#047857', failed: '#dc2626' }[copied] ?? '#94a3b8' }} />}
               </Row>
             )
           })}

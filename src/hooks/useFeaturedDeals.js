@@ -14,7 +14,8 @@ export function useFeaturedDeals() {
     const unsub = onSnapshot(doc(db, 'config', 'featured'), (snap) => {
       const items = snap.exists() ? (snap.data().items ?? []) : []
       const now = new Date()
-      const active = items.filter(item => !item.until || new Date(item.until) > now)
+      // "until" is a plain date and includes that whole day (phone's local time).
+      const active = items.filter(item => !item.until || new Date(`${item.until}T23:59:59`) > now)
       setFeaturedItems(active)
       setLoading(false)
     })

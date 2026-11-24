@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Trophy, Utensils, Repeat, Target, Compass, HeartHandshake } from 'lucide-react'
 import { STORAGE_KEYS } from '../../constants/storageKeys'
+import { useAuth } from '../../hooks/useAuth'
 
 // stat: which number from the usage counts toward the badge.
 const BADGES = [
@@ -56,14 +57,18 @@ export default function RewardsTab({ usageLog, dealsWithUsage, usageMap }) {
   const stats = { total: totalRedemptions, categories: categories.size, topPlace: Math.max(0, ...Object.values(usesByPlace)) }
 
   // Badges earned since the tab was last opened get a one-time shine and buzz.
+  // Seen badges are saved per account (sign-out keeps them, so they don't
+  // shine again on the next sign-in). Falls back to the older shared key once.
+  const { user } = useAuth()
+  const seenKey = `${STORAGE_KEYS.badgesSeen}_${user.uid}`
   const earnedKey = BADGES.filter(b => stats[b.stat] >= b.goal).map(b => b.id).join(',')
   const [fresh] = useState(() => {
-    const seen = JSON.parse(localStorage.getItem(STORAGE_KEYS.badgesSeen) || '[]')
+    const seen = JSON.parse(localStorage.getItem(seenKey) ?? localStorage.getItem(STORAGE_KEYS.badgesSeen) ?? '[]')
     return earnedKey.split(',').filter(id => id && !seen.includes(id))
   })
   useEffect(() => {
-    localStorage.setItem(STORAGE_KEYS.badgesSeen, JSON.stringify(earnedKey.split(',').filter(Boolean)))
-  }, [earnedKey])
+    localStorage.setItem(seenKey, JSON.stringify(earnedKey.split(',').filter(Boolean)))
+  }, [earnedKey, seenKey])
   useEffect(() => {
     if (fresh.length) navigator.vibrate?.([15, 60, 15])
   }, [fresh])

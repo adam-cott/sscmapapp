@@ -14,12 +14,12 @@ function getUntil(days) {
   if (days === null) return null
   const d = new Date()
   d.setDate(d.getDate() + days)
-  return d.toISOString().slice(0, 10)
+  return d.toLocaleDateString('en-CA') // YYYY-MM-DD in local time (toISOString would use UTC)
 }
 
 function formatUntil(until) {
   if (!until) return 'Permanent'
-  return `Until ${new Date(until).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}`
+  return `Until ${new Date(`${until}T00:00`).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}`
 }
 
 async function saveItems(items) {
@@ -76,8 +76,8 @@ export default function AdminTab({ deals }) {
           <div style={{ fontSize: '13px', color: '#cbd5e1', padding: '12px 0' }}>None yet — add some below.</div>
         )}
         {featuredItems.map(item => {
-          const deal = deals.find(d => d.id === item.id)
-          if (!deal) return null
+          // A pick whose deal is gone still gets a row, so it can be removed.
+          const deal = deals.find(d => d.id === item.id) ?? { name: 'Deal no longer on the card', deal: { title: item.id } }
           return (
             <div key={item.id} style={{
               display: 'flex', alignItems: 'center', justifyContent: 'space-between',
